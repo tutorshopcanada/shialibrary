@@ -97,9 +97,11 @@ ranking:
     work: 2.0
     section: 1.8
     item: 1.0
-  # Exact matches: "strict" lists all beginner records first, then intermediate,
-  # then advanced, each sorted by relevance. "boost" uses the multipliers below.
-  exact_group_order: strict
+  # Exact matches: "boost" multiplies relevance by the level multipliers below, so a
+  # beginner record wins when relevance is similar, but a page that actually contains the
+  # searched words is not buried under easier pages that only share its topic.
+  # "strict" lists every beginner record first, then intermediate, then advanced.
+  exact_group_order: boost
   # Related results always use multipliers, so a loosely related beginner item
   # cannot jump over a closely related advanced one by level alone.
   level_boost:              # used when the order is "beginner"
