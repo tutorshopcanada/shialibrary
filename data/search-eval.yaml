@@ -1,0 +1,24 @@
+# Test queries for the search page. Run: python3 scripts/build_index.py && node scripts/eval_search.mjs
+# expect_any: the query passes if at least one of these records is in the results shown.
+# expect_group: exact | related | any. expect_none: true means the honest "no close match"
+# fallback is the right outcome for now (the catalog has nothing on it yet).
+queries:
+  - {query: "how do shias pray in congregation", expect_any: [sistani-qa-congregational-prayers, sistani-qa-15487], expect_group: any, note: "curated question"}
+  - {query: "congregational prayer", expect_any: [sistani-qa-congregational-prayers], expect_group: exact, note: ""}
+  - {query: "jamaat", expect_any: [sistani-qa-congregational-prayers, sistani-qa-15487], expect_group: any, note: "transliteration via alt terms / sample questions"}
+  - {query: "who can lead the prayer", expect_any: [sistani-qa-14997], expect_group: any, note: ""}
+  - {query: "can a shia pray behind a sunni imam", expect_any: [sistani-qa-14998, sistani-qa-15488], expect_group: any, note: ""}
+  - {query: "pray on a plane", expect_any: [sistani-west-salat-general-rules], expect_group: any, note: ""}
+  - {query: "namaz", expect_any: [sistani-west-salat-general-rules, sistani-qa-congregational-prayers, sistani-west-salat-introduction], expect_group: any, note: "Persian/Urdu term maps to the Prayer heading"}
+  - {query: "صلاة", expect_any: [sistani-west-salat-general-rules, sistani-qa-congregational-prayers, sistani-west-salat-introduction], expect_group: any, note: "Arabic term maps to the Prayer heading"}
+  - {query: "salat", expect_any: [sistani-west-salat-introduction, sistani-west-salat-general-rules], expect_group: any, note: ""}
+  - {query: "qibla direction travelling", expect_any: [sistani-west-salat-general-rules], expect_group: any, note: ""}
+  - {query: "sistani", expect_any: [sistani-qa, sistani-code-of-practice-west], expect_group: any, note: "scholar name"}
+  - {query: "seestani", expect_any: [sistani-qa, sistani-code-of-practice-west], expect_group: any, note: "scholar name variant from the authority file"}
+  - {query: "muslims in the west", expect_any: [sistani-code-of-practice-west], expect_group: exact, note: ""}
+  - {query: "turbah", expect_any: [sistani-qa-15488], expect_group: any, note: ""}
+  - {query: "fiqh", expect_any: [sistani-qa, sistani-code-of-practice-west], expect_group: any, note: "parent heading returns children"}
+  - {query: "what is khums", expect_none: true, note: "nothing cataloged on khums yet; should fall back honestly. Change to expect_any once records exist."}
+  - {query: "who is the mahdi", expect_none: true, note: "nothing cataloged yet"}
+  - {query: "why do shia cry on ashura", expect_none: true, note: "nothing cataloged yet"}
+  - {query: "xyzzy qwerty", expect_none: true, note: "nonsense query"}

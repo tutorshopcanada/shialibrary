@@ -1,0 +1,59 @@
+# Starter questions in plain language. ALL DRAFTS: written by the cataloging agent, not yet
+# reviewed by the owner or a scholar. Each maps to headings and to records that exist.
+# No learning paths yet: paths must start with a beginner overview, and the catalog has no
+# beginner-level records until al-islam.org (or another introductory source) can be cataloged.
+questions:
+  - id: q-pray-in-congregation
+    question: "How do Shias pray in congregation?"
+    alt_phrasings: ["how to pray jamaat", "congregational prayer", "praying together in a group", "how does jamaah prayer work"]
+    headings: [prayer]
+    top_records: [sistani-qa-congregational-prayers, sistani-qa-15487, sistani-west-salat-general-rules]
+    draft: true
+  - id: q-who-can-lead-prayer
+    question: "Who can lead the prayer?"
+    alt_phrasings: ["conditions for a prayer leader", "who can be imam of prayer", "qualifications of imam jamaat"]
+    headings: [prayer]
+    top_records: [sistani-qa-14997, sistani-qa-congregational-prayers]
+    draft: true
+  - id: q-pray-behind-sunni-imam
+    question: "Can a Shia pray behind a Sunni imam?"
+    alt_phrasings: ["praying in a sunni mosque", "shia praying behind sunni", "can i join prayer at a sunni mosque"]
+    headings: [prayer]
+    top_records: [sistani-qa-14998, sistani-qa-15488]
+    draft: true
+  - id: q-congregation-or-alone
+    question: "Is it better to pray in congregation or alone?"
+    alt_phrasings: ["pray at the mosque or at home", "is congregational prayer better", "should women pray in congregation"]
+    headings: [prayer]
+    top_records: [sistani-qa-15001, sistani-qa-25307, sistani-qa-congregational-prayers]
+    draft: true
+  - id: q-pray-on-plane
+    question: "How do I pray on a plane or while travelling?"
+    alt_phrasings: ["prayer on an airplane", "praying in a car or train", "finding the qiblah when travelling", "travel prayer", "qasr prayer"]
+    headings: [prayer]
+    top_records: [sistani-west-salat-general-rules, sistani-west-salat-questions-answers]
+    draft: true
+  - id: q-pray-at-work
+    question: "How do I keep up my prayers at work or university?"
+    alt_phrasings: ["praying at work", "prayer time at my job", "prayer at school", "no time to pray at work"]
+    headings: [prayer, muslims-in-west]
+    top_records: [sistani-west-salat-questions-answers]
+    draft: true
+  - id: q-why-prayer-matters
+    question: "Why is prayer so important in Islam?"
+    alt_phrasings: ["why do muslims pray", "importance of salah", "why pray"]
+    headings: [prayer]
+    top_records: [sistani-west-salat-introduction]
+    draft: true
+  - id: q-living-in-west
+    question: "How do I practise Islam while living in a non-Muslim country?"
+    alt_phrasings: ["muslim in the west", "islamic rules for living in the west", "rulings for muslims in western countries"]
+    headings: [muslims-in-west]
+    top_records: [sistani-code-of-practice-west]
+    draft: true
+  - id: q-sistani-rulings
+    question: "Where can I look up Ayatollah Sistani's rulings?"
+    alt_phrasings: ["sistani fatwa", "sistani question and answer", "ask sistani", "sistani rulings in english"]
+    headings: [fiqh]
+    top_records: [sistani-qa, sistani-code-of-practice-west]
+    draft: true

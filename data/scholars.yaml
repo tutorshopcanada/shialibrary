@@ -1,0 +1,101 @@
+# Authority file: one entry per scholar or author, with every name spelling verified
+# on an approved source. Records refer to these ids in `authors`, `instructors`, `marja`.
+# Arabic/Persian forms are added to alt_names only when verified from an approved page.
+scholars:
+  - id: sistani
+    name: "Sayyid Ali al-Sistani"
+    role: marja
+    alt_names:
+      - "Sistani"
+      - "al-Sistani"
+      - "Sayyid Ali Sistani"
+      - "Ayatollah Sistani"
+      - "al-Sayyid al-Sistani"
+      - "as-Sayyid 'Ali al-Hussaini as-Seestani"
+      - "Seestani"
+      - "Ayatullah Sistani"
+    notes: "Spellings as they appear on sistani.org English pages and in CLAUDE.md."
+    needs_review: true
+
+  - id: khamenei
+    name: "Sayyid Ali Khamenei"
+    role: marja
+    alt_names:
+      - "Khamenei"
+      - "Khamene'i"
+      - "Seyyed Ali Khamenei"
+      - "Ayatollah Khamenei"
+      - "Imam Khamenei"
+    notes: >
+      Starter spellings from the project brief. No approved source for his rulings has been
+      named yet, so none of these are verified against a page. Re-check when a source is added.
+    needs_review: true
+
+  - id: abdul-hadi-al-hakim
+    name: "Sayyid Abdul Hadi al-Hakim"
+    role: author
+    alt_names:
+      - "as-Sayyid Abdul Hadi al-Hakim"
+      - "Sayyid 'Abdul Hadi al-Hakim"
+      - "Hujjatul Islam Sayyid 'Abdul Hadi al-Hakim"
+    notes: >
+      Named as the author of "A Code of Practice For Muslims in the West" (al-Fiqh lil
+      Mughtaribin) in the book's Editor's Note and Translator's Preface on sistani.org
+      (book/46/2019, book/46/2020). The book presents the rulings of Sayyid Sistani.
+    needs_review: true
+
+  # ── Added during the thaqalayn.net pilot (2026-11-10). Compilers/authors as named on the
+  # site's book pages. Spellings are only those seen on the fetched pages. Not yet reviewed.
+  - id: kulayni
+    name: "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī"
+    role: author
+    alt_names:
+      - "Shaykh Kulayni"
+      - "Shaykh al-Kulaynī"
+      - "al-Kulaynī"
+    notes: "Named as compiler of Al-Kāfi on https://thaqalayn.com/book/1 (verified 2026-11-10)."
+    needs_review: true
+
+  - id: saduq
+    name: "Shaykh Muḥammad b. ʿAlī al-Ṣaduq"
+    role: author
+    alt_names:
+      - "Shaykh Saduq"
+      - "Shaykh al-Ṣadūq"
+      - "al-Saduq"
+    notes: >
+      Named as author of Al-Tawḥīd on https://thaqalayn.com/book/14 and of Al-Khiṣāl on
+      https://thaqalayn.com/book/10 (verified 2026-11-10). The site itself spells the name
+      both "al-Ṣaduq" and "al-Ṣadūq".
+    needs_review: true
+
+  - id: ibn-qulawayh
+    name: "Shaykh Jaʿfar b. Muḥammad al-Qummī"
+    role: author
+    alt_names:
+      - "Ibn Qulawayh"
+      - "Ibn Qūlawayh al-Qummī"
+    notes: >
+      Named as author of Kāmil al-Ziyārāt on https://thaqalayn.com/book/24 (verified
+      2026-11-10). The page heading uses "Shaykh Jaʿfar b. Muḥammad al-Qummī"; the page title
+      and description use "Ibn Qulawayh".
+    needs_review: true
+
+  - id: sharif-al-radi
+    name: "al-Sharīf al-Raḍī"
+    role: author
+    alt_names:
+      - "Sharif al-Radi"
+      - "al-Raḍī"
+    notes: "Named as compiler of Nahj al-Balāgha on https://thaqalayn.com/book/32 (verified 2026-11-10)."
+    needs_review: true
+
+  - id: tusi
+    name: "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī"
+    role: author
+    alt_names:
+      - "Shaykh Tusi"
+      - "al-Shaykh al-Ṭūsī"
+      - "al-Ṭūsī"
+    notes: "Named as author of Kitāb al-Ghayba on https://thaqalayn.com/book/27 (verified 2026-11-10)."
+    needs_review: true

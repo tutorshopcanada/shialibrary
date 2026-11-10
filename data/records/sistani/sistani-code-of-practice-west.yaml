@@ -1,0 +1,35 @@
+id: sistani-code-of-practice-west
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: A Code of Practice For Muslims in the West
+title_original: al-Fiqh lil Mughtaribin
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/
+language: en
+date: ''
+description: A book of practical Islamic rulings (fiqh) written for Muslims living in non-Muslim countries,
+  following the views of Sayyid Ali al-Sistani. Each chapter has a short introduction, general rules,
+  and questions and answers, on topics such as prayer, fasting, food, work, marriage and medical issues.
+sample_questions:
+- How do I practise Islam while living in the West?
+- Is there a book of Islamic rules for Muslims in non-Muslim countries?
+- Where can I read Ayatollah Sistani's rulings for Muslims in the West?
+- What does Islam say about everyday life in a non-Muslim country?
+- Where do I find Shia rulings on food, work and marriage in the West?
+headings:
+- muslims-in-west
+- fiqh
+access: free
+location: ''
+needs_review: true
+review_note: 'Level: the Editor''s Note says the book aims to make fiqh easier for the layman, so intermediate
+  was chosen rather than advanced; reviewer to confirm. Author is the compiler (Sayyid Abdul Hadi al-Hakim);
+  rulings are Sayyid Sistani''s, recorded in `marja`. title_original is the transliterated Arabic title
+  given in the Author''s Preface.'
+cataloged_on: '2026-11-10'
