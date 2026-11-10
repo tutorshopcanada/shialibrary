@@ -1,16 +1,18 @@
 /* Calm, readable reference styling. Mobile first. No external fonts or images. */
 
 :root {
-  --bg: #f6f4ee;
+  --bg: #f2f4f8;
   --surface: #ffffff;
-  --surface-2: #efece3;
-  --ink: #1d2729;
-  --muted: #56646a;
-  --border: #d8d3c5;
-  --accent: #0e5a5a;
+  --surface-2: #e8ecf4;
+  --ink: #14203f;
+  --muted: #55607a;
+  --border: #d3d9e6;
+  --accent: #1b2f6b;
+  --gold: #c58a1a;
+  --band: #14224f;
   --accent-ink: #ffffff;
-  --accent-soft: #e2efec;
-  --link: #0b5563;
+  --accent-soft: #e6ebf7;
+  --link: #1d4ba0;
   --focus: #b4530a;
   --warn-bg: #fdf3d8;
   --warn-ink: #6b4a00;
@@ -25,21 +27,23 @@
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --radius: 10px;
+  --radius: 6px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111719;
-    --surface: #192124;
-    --surface-2: #212b2e;
-    --ink: #e7eae7;
-    --muted: #a6b3b5;
-    --border: #334145;
-    --accent: #86d3c6;
-    --accent-ink: #0c1f1e;
-    --accent-soft: #1d3231;
-    --link: #8fd0dd;
+    --bg: #0e1426;
+    --surface: #162040;
+    --surface-2: #1d2a52;
+    --ink: #e9edf8;
+    --muted: #a9b4d0;
+    --border: #2e3c69;
+    --accent: #9db6ff;
+    --gold: #e4b04a;
+    --band: #0a1030;
+    --accent-ink: #0b1230;
+    --accent-soft: #1a2755;
+    --link: #a8c4ff;
     --focus: #ffb86b;
     --warn-bg: #3a3014;
     --warn-ink: #f2d98b;
@@ -68,7 +72,7 @@ body {
   overflow-wrap: break-word;
 }
 
-.wrap { max-width: 50rem; margin: 0 auto; padding: 0 1rem; }
+.wrap { max-width: 52rem; margin: 0 auto; padding: 0 1rem; }
 
 a { color: var(--link); text-underline-offset: 0.15em; }
 a:hover { text-decoration-thickness: 2px; }
@@ -91,42 +95,47 @@ p { margin: 0 0 0.75rem; }
 .skip-link:focus { top: 0.5rem; }
 
 /* Header and footer */
-.site-header { border-bottom: 1px solid var(--border); background: var(--surface); }
-.header-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.25rem; }
-.brand { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
-.site-header nav a { font-size: 0.95rem; padding: 0.75rem 0; display: inline-block; }
+.site-header { background: var(--band); color: #fff; }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: #fff; text-decoration: none; }
+.site-header nav a { font-size: 0.95rem; padding: 0.75rem 0; display: inline-block; color: #dbe3ff; }
 
-.site-footer { margin-top: 3rem; border-top: 1px solid var(--border); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.92rem; }
+.site-footer { margin-top: 3rem; border-top: 3px solid var(--gold); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.92rem; }
 
-/* Hero and search */
-.hero { padding: 2.25rem 0 0.5rem; }
-.hero h1 { font-size: clamp(1.6rem, 6vw, 2.3rem); margin-bottom: 0.6rem; }
-.lede { color: var(--muted); max-width: 38rem; margin-bottom: 1.25rem; }
-.has-results .hero { padding-top: 1rem; }
+/* Hero: a lapis band with an eight-point star lattice, the one bold move */
+.hero-band {
+  background-color: var(--band); color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1'%3E%3Crect x='14' y='14' width='28' height='28'/%3E%3Crect x='14' y='14' width='28' height='28' transform='rotate(45 28 28)'/%3E%3C/g%3E%3C/svg%3E");
+  border-bottom: 3px solid var(--gold);
+}
+.hero { padding: 2.75rem 0 2.25rem; }
+.hero h1 { font-size: clamp(1.9rem, 7vw, 3rem); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 0.75rem; max-width: 30rem; }
+.lede { color: #cbd5f3; max-width: 36rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
+.has-results .hero { padding: 1.1rem 0 1.25rem; }
 .has-results .hero h1, .has-results .lede { display: none; }
 
-.search-form { display: flex; gap: 0.5rem; }
+.search-form { display: flex; gap: 0; box-shadow: 0 0 0 3px rgba(255,255,255,0.12); border-radius: var(--radius); }
 .search-form input {
   flex: 1 1 auto; min-width: 0;
-  font: inherit; color: var(--ink); background: var(--surface);
-  border: 2px solid var(--border); border-radius: var(--radius);
-  padding: 0.7rem 0.85rem; min-height: 3rem;
+  font: inherit; font-size: 1.15rem; color: #14203f; background: #fff;
+  border: 0; border-radius: var(--radius) 0 0 var(--radius);
+  padding: 0.8rem 1rem; min-height: 3.5rem;
 }
-.search-form input:focus { border-color: var(--accent); outline-offset: 1px; }
-.search-form input::placeholder { color: var(--muted); opacity: 1; }
+.search-form input:focus-visible { outline: 3px solid var(--gold); outline-offset: 0; }
+.search-form input::placeholder { color: #5d6882; opacity: 1; }
 .search-form button {
-  font: inherit; font-weight: 600; cursor: pointer;
-  background: var(--accent); color: var(--accent-ink);
-  border: 0; border-radius: var(--radius); padding: 0 1.15rem; min-height: 3rem;
+  font: inherit; font-weight: 700; cursor: pointer;
+  background: var(--gold); color: #1b1300;
+  border: 0; border-radius: 0 var(--radius) var(--radius) 0; padding: 0 1.4rem; min-height: 3.5rem;
 }
-.search-form button:hover { filter: brightness(1.1); }
+.search-form button:hover { filter: brightness(1.08); }
 
 .status { color: var(--muted); font-size: 0.95rem; min-height: 1.5rem; margin: 0.6rem 0 0.25rem; }
 .loading { color: var(--muted); }
 
 /* Blocks on the front page */
 .block { margin-top: 2.25rem; }
-.block > h2 { font-size: 1.3rem; margin-bottom: 0.75rem; }
+.block > h2 { font-size: 1.45rem; margin-bottom: 0.75rem; }
 
 .question-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
 .question-list li {
@@ -185,9 +194,9 @@ a.tile .tile-count { color: var(--link); }
 /* Results */
 .results-head { margin-top: 0.5rem; }
 .results-title { font-size: 1.4rem; margin-bottom: 0.75rem; }
-.eyebrow { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; font-weight: 700; color: var(--muted); margin: 0 0 0.25rem; }
+.eyebrow { font-size: 0.9rem; font-weight: 600; color: var(--muted); margin: 0 0 0.25rem; }
 
-.curated { background: var(--accent-soft); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 1rem; margin-bottom: 1.25rem; }
+.curated { background: var(--accent-soft); border: 1px solid var(--border); border-left: 5px solid var(--gold); border-radius: var(--radius); padding: 1rem; margin-bottom: 1.25rem; }
 .curated h2 { font-size: 1.25rem; margin-bottom: 0.6rem; }
 .curated .eyebrow:not(:first-child) { margin-top: 1rem; }
 .curated .path-title { font-size: 1.1rem; }
@@ -205,7 +214,7 @@ a.tile .tile-count { color: var(--link); }
   background: var(--surface); color: var(--ink); border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.85rem;
 }
 .chip:hover:not(:disabled) { border-color: var(--accent); }
-.chip.on { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 600; }
+.chip.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
 .chip:disabled { opacity: 0.5; cursor: default; }
 .chip-count { color: var(--muted); font-variant-numeric: tabular-nums; }
 .chip.on .chip-count { color: inherit; opacity: 0.8; }
@@ -222,19 +231,25 @@ a.tile .tile-count { color: var(--link); }
 .pill:hover { border-color: var(--accent); }
 
 .group { margin-top: 1.75rem; }
-.group-title { font-size: 1.2rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--border); margin-bottom: 0.5rem; }
+.group-title { font-size: 1.3rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); margin-bottom: 0.5rem; }
 .group-title .count { font-family: var(--sans); font-weight: 400; color: var(--muted); font-size: 1rem; }
 .group-note { color: var(--muted); font-size: 0.9rem; }
 .honest { background: var(--surface-2); border-radius: var(--radius); padding: 0.75rem 0.9rem; }
 
 .results { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
 
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.95rem 1rem; }
+.card { background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; }
+.card:has(.tag-fiqh) { border-left-color: var(--tag-fiqh-ink); }
+.card:has(.tag-hadith) { border-left-color: var(--tag-hadith-ink); }
+.card:has(.tag-book) { border-left-color: var(--tag-book-ink); }
+.card:has(.tag-article) { border-left-color: var(--tag-article-ink); }
+.card:has(.tag-course) { border-left-color: var(--tag-course-ink); }
+.card:has(.tag-lecture) { border-left-color: var(--tag-lecture-ink); }
 .card > :last-child { margin-bottom: 0; }
 .card.compact { padding: 0.75rem 0.85rem; }
 .badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; }
 .badge { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 700; border-radius: 6px; padding: 0.15rem 0.5rem; line-height: 1.4; }
-.tag { text-transform: uppercase; letter-spacing: 0.04em; }
+.tag { letter-spacing: 0.01em; }
 .tag-fiqh { background: var(--tag-fiqh-bg); color: var(--tag-fiqh-ink); }
 .tag-hadith { background: var(--tag-hadith-bg); color: var(--tag-hadith-ink); }
 .tag-book { background: var(--tag-book-bg); color: var(--tag-book-ink); }
@@ -247,7 +262,7 @@ a.tile .tile-count { color: var(--link); }
 .dot { width: 0.42rem; height: 0.42rem; border-radius: 50%; border: 1px solid var(--muted); }
 .dot.on { background: var(--muted); }
 
-.card-title { font-size: 1.15rem; margin-bottom: 0.3rem; }
+.card-title { font-size: 1.25rem; margin-bottom: 0.3rem; }
 .card.compact .card-title { font-size: 1.05rem; }
 .card-title a { color: var(--ink); text-decoration-color: var(--border); }
 .card-title a:hover { color: var(--link); text-decoration-color: currentColor; }
