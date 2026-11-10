@@ -9,8 +9,8 @@ steps:
   why: 'A brief overview of Shia Islam: its beginnings, sources, beliefs and practices.'
 - record: al-islam-how-i-found-right-path
   why: A personal story of someone who came to Shia Islam.
-- record: al-islam-meaning-origins-shiism
-  why: A fuller look at what the word Shia means and where it began.
 - record: al-islam-plea-islamic-unity
   why: A short piece on unity among Muslims.
+- record: al-islam-meaning-origins-shiism
+  why: A fuller look at what the word Shia means and where it began.
 draft: true
