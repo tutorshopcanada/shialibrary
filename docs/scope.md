@@ -22,6 +22,10 @@ itself only retrieves and ranks those records.
   answers, and books or pages whose purpose is to state or explain legal rulings.
   A fiqh record names whose rulings it follows. Fiqh records describe what a page is
   about; they never restate the ruling.
+- **Hadith is never fiqh.** Anything that is a hadith collection carries the Hadith label,
+  whatever its subject. Narrations about prayer, fasting or law are not rulings on their own,
+  so they are not covered by the two-marja' restriction. They are tagged under the Hadith
+  headings, not the Fiqh ones.
 - **Everything else** (history, theology, ethics, Quran, hadith, biography and so on) is in
   scope whatever the author, provided the source is approved, the content is Twelver and it
   is in English.
@@ -41,8 +45,6 @@ itself only retrieves and ranks those records.
 
 - Works that mix fiqh with other material: cataloged only if the main purpose is clearly not
   fiqh, and flagged for review.
-- Hadith volumes whose subject is legal (for example the prayer chapters of a hadith
-  collection): currently cataloged as hadith, not as rulings, and flagged for review.
 - Whether fiqh-subject courses are limited to those based on Sistani's or Khamenei's rulings.
 - An official source for Sayyid Khamenei's rulings.
 - Who reviews starter questions, learning paths and the subject headings. Until then they

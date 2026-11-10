@@ -25,10 +25,9 @@ sample_questions:
 - Where can I read volume 3 of Al-Kafi in English?
 headings:
 - hadith-collections
+- legal-hadith
 access: free
 location: Volume 3 of 8
-needs_review: true
-review_note: This volume's subject is legal hadith (narrations about practical law). It is cataloged as a hadith
-  collection, not as rulings, and is tagged only with hadith-collections; a reviewer should confirm how to classify
-  it. The page lists five titled books plus one section shown as '(Without Title)'.
+needs_review: false
+review_note: ''
 cataloged_on: '2026-11-10'

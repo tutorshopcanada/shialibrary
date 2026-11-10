@@ -221,6 +221,11 @@ headings:
     parent: hadith
     alt_terms: ["ilm al-hadith", "rijal", "ilm al-rijal", "diraya", "isnad", "chain of narration", "is this hadith authentic", "sahih", "علم الحديث", "رجال"]
     notes: ""
+  - id: legal-hadith
+    label: "Hadith on worship and law (narrations, not rulings)"
+    parent: hadith
+    alt_terms: ["hadith about prayer", "hadith about fasting", "hadith on purity", "ahadith al-ahkam", "furu al-kafi", "legal narrations", "أحاديث الأحكام"]
+    notes: "For hadith volumes whose subject is worship or law. These are narrations (content tag Hadith), not fiqh rulings; owner decision 2026-11-10."
   - id: nahj-al-balagha
     label: "Nahj al-Balagha and sayings of Imam Ali"
     parent: hadith

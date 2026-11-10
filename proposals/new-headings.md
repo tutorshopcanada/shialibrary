@@ -15,3 +15,6 @@ Suggestions from cataloging sessions. Nothing here is in `data/vocabulary.yaml` 
   - **suggested parent:** `ethics` (or `beliefs`; owner to choose)
   - **why:** Al-Kāfi vol. 1 opens with books on intelligence and ignorance and on the virtue of knowledge; no existing heading covers this.
   - **needed by:** `thaqalayn-al-kafi-vol-1`
+
+
+> 2026-11-10: `legal-hadith` was added to the vocabulary following the owner's decision that hadith always carry the Hadith label. `intellect-knowledge` is still only a proposal.
