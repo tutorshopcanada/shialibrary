@@ -608,13 +608,20 @@ export function createEngine(index) {
     const boosted = (h) => h.score * (Number(boost[h.record.level]) || 1);
     const strict = config.ranking.exact_group_order === 'strict';
     const strip = ({ doc, ...rest }) => rest;
+    // Scores within 5% of each other count as a tie; the shorter (more general) title wins,
+    // so "Fasting" comes before "Fasting - Long Days".
+    const nearTie = (a, b) => {
+      const hi = Math.max(a.score, b.score) || 1;
+      if (Math.abs(a.score - b.score) / hi > 0.05) return b.score - a.score;
+      return String(a.record.title).length - String(b.record.title).length || (b.score - a.score);
+    };
 
     const exact = kept.filter((h) => h.exact).map(strip);
     const related = kept.filter((h) => !h.exact).map(strip);
     exact.sort((a, b) =>
       (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) ||
       (a.pinned && b.pinned ? 0 :
-        strict ? (levelRank(a.record.level, order) - levelRank(b.record.level, order)) || (b.score - a.score)
+        strict ? (levelRank(a.record.level, order) - levelRank(b.record.level, order)) || nearTie(a, b)
           : boosted(b) - boosted(a)));
     related.sort((a, b) => boosted(b) - boosted(a));
 
