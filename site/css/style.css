@@ -285,7 +285,7 @@ a.tile .tile-count { color: var(--link); }
 }
 .expand:hover { border-color: var(--accent); }
 
-.fallback, .notice { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-top: 0.5rem; }
+.fallback, .notice, .external-search { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-top: 0.5rem; }
 .fallback h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 .fallback > :last-child, .notice > :last-child { margin-bottom: 0; }
 
@@ -310,3 +310,10 @@ a.tile .tile-count { color: var(--link); }
   .search-form, .controls, .site-header nav, .report, .skip-link { display: none; }
   body { background: #fff; }
 }
+
+.external-search { margin-top: 1.5rem; }
+.external-search h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.external-search > :last-child { margin-bottom: 0; }
+.external-search .small { font-size: 0.85rem; color: var(--muted, inherit); }
+.button-link { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid currentColor; border-radius: var(--radius); font-weight: 600; text-decoration: none; }
+.button-link:hover, .button-link:focus-visible { text-decoration: underline; }
