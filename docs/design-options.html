@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design options</title>
+<style>
+:root{--bg:#e9eaee;--ink:#1a1d27}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.intro{max-width:60rem;margin:0 auto;padding:1.5rem 1rem 0}
+.intro h1{margin:0 0 .25rem;font-size:1.6rem}
+.intro p{margin:0 0 1rem;color:#4a5063}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--bg);padding:.6rem 1rem;border-bottom:1px solid #c9ccd6;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+nav.jump a{padding:.4rem .8rem;border:1px solid #aab;border-radius:99px;text-decoration:none;color:var(--ink);font-size:.9rem;background:#fff}
+nav.jump a:focus-visible{outline:3px solid #b4530a}
+.opt{max-width:64rem;margin:2rem auto;padding:0 1rem}
+.opt>header{display:flex;flex-wrap:wrap;gap:.25rem 1rem;align-items:baseline;margin-bottom:.5rem}
+.opt>header h2{margin:0;font-size:1.2rem}
+.opt>header p{margin:0;color:#4a5063;font-size:.95rem;flex:1 1 20rem}
+.frame{border-radius:10px;overflow:hidden;box-shadow:0 2px 14px rgba(20,25,50,.18)}
+.frame a{color:inherit}
+.frame .bar,.frame .hero,.frame main{padding-left:clamp(1rem,5vw,3rem);padding-right:clamp(1rem,5vw,3rem)}
+.bar{display:flex;justify-content:space-between;align-items:center;min-height:3.25rem}
+.bar a{text-decoration:none}
+.hero{padding-top:2.5rem;padding-bottom:2.25rem}
+.hero h3{margin:0 0 .6rem;max-width:30rem}
+.hero p{margin:0 0 1.25rem;max-width:34rem}
+form{display:flex}
+input{flex:1;min-width:0;font:inherit;border:0;padding:.8rem 1rem;min-height:3.25rem}
+button{font:inherit;font-weight:700;border:0;padding:0 1.3rem;cursor:pointer}
+main{padding-top:1.75rem;padding-bottom:2rem}
+main h4{margin:0 0 .75rem;font-size:1.15rem}
+.qs{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.qs li{padding:.7rem .9rem}
+.tiles{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}
+.tiles li{padding:.8rem .9rem}
+.tiles b{display:block}
+.tiles span{font-size:.85rem;opacity:.75}
+.card{padding:1rem 1.1rem}
+.badge{display:inline-block;font-size:.78rem;font-weight:700;padding:.1rem .5rem;margin-right:.3rem}
+.card h5{margin:.5rem 0 .3rem;font-size:1.15rem}
+.card p{margin:0;font-size:.95rem}
+
+/* 1 Lapis */
+.s1{background:#f2f4f8;color:#14203f}
+.s1 .bar{background:#14224f;color:#fff}
+.s1 .hero{background:#14224f;color:#fff;border-bottom:3px solid #c58a1a;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.09'%3E%3Crect x='14' y='14' width='28' height='28'/%3E%3Crect x='14' y='14' width='28' height='28' transform='rotate(45 28 28)'/%3E%3C/g%3E%3C/svg%3E")}
+.s1 h3,.s1 h4,.s1 h5,.s1 .brand{font-family:Palatino,"Palatino Linotype",Georgia,serif}
+.s1 h3{font-size:2.4rem;line-height:1.1}
+.s1 form{border-radius:6px;overflow:hidden}.s1 button{background:#c58a1a;color:#1b1300}
+.s1 .qs li,.s1 .tiles li,.s1 .card{background:#fff;border:1px solid #d3d9e6;border-radius:6px}
+.s1 .card{border-left:5px solid #0b4f45}.s1 .badge{background:#dcefe9;color:#0b4f45;border-radius:4px}
+
+/* 2 Index card */
+.s2{background:#fbfbf8;color:#222;font-family:Georgia,serif}
+.s2 .bar{border-bottom:2px solid #222}
+.s2 .hero{border-bottom:1px solid #222}
+.s2 h3{font-size:2.2rem;line-height:1.15;font-weight:400}
+.s2 form{border:2px solid #222}.s2 input{background:#fff;font-family:inherit}.s2 button{background:#222;color:#fbfbf8;font-family:inherit}
+.s2 .qs li,.s2 .tiles li{border-bottom:1px solid #999;padding-left:0}
+.s2 .qs{gap:0 2rem}.s2 .tiles{gap:0 2rem}
+.s2 .card{background:#fff;border:1px solid #222;position:relative;background-image:linear-gradient(#fff 1.9rem,#c9d3e6 1.9rem,#c9d3e6 calc(1.9rem + 1px),#fff calc(1.9rem + 1px));background-size:100% 2rem;box-shadow:4px 4px 0 #222}
+.s2 .card:before{content:"";position:absolute;left:.8rem;top:-1px;width:3rem;height:1.2rem;background:#fff;border:1px solid #222;border-top:0}
+.s2 .badge{border:1px solid #222;font-family:system-ui}
+
+/* 3 Minimal */
+.s3{background:#fff;color:#111;}
+.s3 .bar{color:#111}.s3 .brand{font-weight:800;letter-spacing:-.02em}
+.s3 .hero{padding-top:4.5rem;padding-bottom:3rem;text-align:center}
+.s3 h3{font-size:3.2rem;line-height:1.05;letter-spacing:-.035em;margin-left:auto;margin-right:auto;max-width:36rem}
+.s3 .hero p{margin-left:auto;margin-right:auto;color:#555}
+.s3 form{max-width:38rem;margin:0 auto;border:2px solid #111;border-radius:99px;overflow:hidden}
+.s3 input{padding-left:1.4rem}.s3 button{background:#0a7d6e;color:#fff;border-radius:0}
+.s3 .qs li{border:1px solid #ddd;border-radius:99px;padding:.55rem 1rem}
+.s3 .tiles li{border-top:3px solid #111;padding:.8rem 0}
+.s3 .card{border:1px solid #ddd;border-radius:14px}.s3 .badge{background:#e3f4f1;color:#0a5f54;border-radius:99px}
+
+/* 4 Warm */
+.s4{background:#eef3ee;color:#2a2a33}
+.s4 .bar{color:#3b2a4d}.s4 .brand{font-weight:700;font-size:1.1rem}
+.s4 .hero{margin:1rem clamp(.75rem,3vw,2rem);border-radius:28px;background:linear-gradient(160deg,#4b2e63,#6b3f7a);color:#fff;padding-left:clamp(1.25rem,5vw,3rem);padding-right:clamp(1.25rem,5vw,3rem)}
+.s4 h3{font-size:2.3rem;line-height:1.15;font-family:ui-rounded,"Segoe UI",system-ui}
+.s4 form{background:#fff;border-radius:99px;overflow:hidden;padding:.25rem}.s4 input{border-radius:99px}.s4 button{background:#e08a3c;color:#2b1700;border-radius:99px}
+.s4 .qs li{background:#fff;border-radius:18px;padding:.9rem 1.1rem;box-shadow:0 1px 0 #cfdccf}
+.s4 .tiles li{background:#dfeadf;border-radius:18px;padding:1rem}
+.s4 .card{background:#fff;border-radius:22px}.s4 .badge{background:#efe3f5;color:#4b2e63;border-radius:99px}
+
+/* 5 Night */
+.s5{background:#12100f;color:#ece6dc}
+.s5 .bar{border-bottom:1px solid #2c2724}
+.s5 .hero{background:radial-gradient(ellipse at 80% 0,#3a1515 0,#12100f 60%)}
+.s5 h3{font-family:Palatino,Georgia,serif;font-size:2.6rem;line-height:1.1;font-weight:500}
+.s5 .hero p{color:#b9b0a3}
+.s5 form{border:1px solid #6b5c4a;border-radius:4px;overflow:hidden}.s5 input{background:#1b1816;color:#ece6dc}.s5 input::placeholder{color:#8d8478}
+.s5 button{background:#9b2c2c;color:#fff}
+.s5 .qs li,.s5 .tiles li{background:#1b1816;border:1px solid #2c2724;border-radius:4px}
+.s5 .card{background:#1b1816;border:1px solid #2c2724;border-left:3px solid #c9a24d;border-radius:4px}
+.s5 .badge{background:#2d2411;color:#e4c26f;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="intro">
+  <h1>Design options for the Shia catalog</h1>
+  <p>Five directions for the front page and a result card. They use the real starter questions and topic names from the catalog. Fonts are system fonts only, as the site requires. Pick one, or mix parts of several.</p>
+</div>
+<nav class="jump" aria-label="Options"></nav>
+<div id="opts"></div>
+<script>
+const qs=["How do Shias pray in congregation?","Why is prayer so important in Islam?","What is Al-Kafi?","How do I practise Islam while living in a non-Muslim country?"];
+const topics=[["New to Shia Islam","First steps and basics"],["Beliefs and theology","Tawhid, Adl, Nubuwwah"],["Fiqh","Practical rulings"],["History and biography","Ahl al-Bayt, Karbala"],["Hadith","Collections and sciences"],["Ethics and spirituality","Growth and self-purification"]];
+const opts=[
+["s1","1. Lapis and gold","Current first pass. Deep blue band, tile-pattern lattice, gold accent. Formal and trustworthy, a little ornamental."],
+["s2","2. Library index card","Paper and ink, serif type, hairline rules, results as index cards. Looks like what it is: a catalog. Quiet and scholarly."],
+["s3","3. Plain and search-first","White, huge type, one pill search box, one green accent. Fast and neutral, least tied to any tradition."],
+["s4","4. Friendly guide","Soft shapes, plum and sage, rounded cards. Warmest for a nervous newcomer, but less formal."],
+["s5","5. Night reading room","Dark, ivory text, muted crimson and brass. Serious and contemplative; suits Ashura-related content, may feel heavy on the front door."]];
+const nav=document.querySelector('.jump'),root=document.getElementById('opts');
+for(const [c,t,d] of opts){
+ nav.insertAdjacentHTML('beforeend',`<a href="#${c}">${t}</a>`);
+ root.insertAdjacentHTML('beforeend',`<section class="opt" id="${c}"><header><h2>${t}</h2><p>${d}</p></header>
+ <div class="frame ${c}">
+  <div class="bar"><a class="brand" href="#${c}">Shia Resource Finder</a><a href="#${c}">About and scope</a></div>
+  <div class="hero"><h3>Find where to learn about Shia Islam</h3><p>Type a topic or a question. We point you to pages on approved Shia websites. We do not host or write the content.</p>
+   <form onsubmit="return false"><input aria-label="Search" placeholder="For example: how to pray, Karbala, al-Kafi"><button>Search</button></form></div>
+  <main><h4>Not sure what to type? Start with a question</h4><ul class="qs">${qs.map(q=>`<li>${q}</li>`).join('')}</ul>
+  <h4>Browse by topic</h4><ul class="tiles">${topics.map(([a,b])=>`<li><b>${a}</b><span>${b}</span></li>`).join('')}</ul>
+  <h4>A result</h4><div class="card"><span class="badge">Fiqh</span><span class="badge">Intermediate</span><h5>Prayer</h5><p>A topic page of questions and answers about the daily prayer (salat), from Sayyid Ali al-Sistani's office.</p></div></main>
+ </div></section>`);
+}
+</script>
+</body>
+</html>
