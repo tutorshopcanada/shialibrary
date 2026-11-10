@@ -156,3 +156,82 @@ questions:
     headings: [sunni-shia]
     top_records: [al-islam-mystery-of-the-shia]
     draft: true
+  - id: q-who-is-prophet-muhammad
+    question: "Who is the Prophet Muhammad?"
+    alt_phrasings: ["life of the prophet", "biography of muhammad", "story of prophet muhammad", "seerah"]
+    headings: [prophet-muhammad]
+    top_records: [al-islam-prophet-muhammad-brief-biography, al-islam-glance-life-holy-prophet]
+    draft: true
+  - id: q-what-is-ghadir
+    question: "What happened at Ghadir Khumm?"
+    alt_phrasings: ["what is eid al-ghadir", "ghadir sermon", "event of ghadir"]
+    headings: [ghadir-succession]
+    top_records: [al-islam-ghadir-sermon, al-islam-glance-life-holy-prophet]
+    draft: true
+  - id: q-why-follow-imams
+    question: "Why do Shias follow the Imams?"
+    alt_phrasings: ["what is imamate", "what is an imam in shia islam", "why do shias believe in imams"]
+    headings: [imamate]
+    top_records: [al-islam-imamate-and-the-imams, al-islam-islamic-teachings-in-brief]
+    draft: true
+  - id: q-why-mourn-husayn
+    question: "Why do Shias mourn for Imam Husayn?"
+    alt_phrasings: ["why do shias cry in muharram", "why mourning for hussain", "azadari", "is mourning allowed"]
+    headings: [karbala-ashura]
+    path: path-karbala-and-ashura
+    top_records: [al-islam-quran-and-mourning-for-husayn, al-islam-karbala-chain-of-events, sistani-qa-azadari]
+    draft: true
+  - id: q-is-god-just
+    question: "Is God fair? What about suffering and free will?"
+    alt_phrasings: ["divine justice", "why does god allow suffering", "do we have free will", "adl"]
+    headings: [adl]
+    top_records: [al-islam-lets-learn-about-divine-justice, al-islam-divine-justice-mutahhari]
+    draft: true
+  - id: q-life-after-death
+    question: "What happens after we die?"
+    alt_phrasings: ["day of judgement", "life after death", "afterlife in islam", "heaven and hell"]
+    headings: [maad]
+    top_records: [al-islam-day-of-judgement-rizvi]
+    draft: true
+  - id: q-how-to-make-dua
+    question: "How do I make dua (call on God)?"
+    alt_phrasings: ["what is dua", "how to supplicate", "praying to god in my own words"]
+    headings: [duas]
+    top_records: [al-islam-dua-amrohi, al-islam-in-the-presence-of-the-beloved]
+    draft: true
+  - id: q-how-to-repent
+    question: "How do I repent from my sins?"
+    alt_phrasings: ["tawbah", "will god forgive me", "repentance in islam", "how to ask forgiveness"]
+    headings: [spirituality]
+    top_records: [al-islam-repentance-cradle-of-mercy]
+    draft: true
+  - id: q-what-is-hadith
+    question: "What is a hadith and how do we know it is reliable?"
+    alt_phrasings: ["hadith sciences", "are hadith authentic", "how were hadith collected", "what are hadith"]
+    headings: [hadith-sciences]
+    top_records: [al-islam-sciences-of-hadith-leghaei, al-islam-al-hadith-analysis-overview]
+    draft: true
+  - id: q-what-is-khums
+    question: "What is khums?"
+    alt_phrasings: ["khums rules", "do i have to pay khums", "the one fifth payment"]
+    headings: [khums-zakat]
+    top_records: [sistani-qa-khums]
+    draft: true
+  - id: q-fasting-ramadan
+    question: "What are the rules of fasting in Ramadan?"
+    alt_phrasings: ["how to fast", "who does not have to fast", "what breaks the fast", "ramadan fasting"]
+    headings: [fasting]
+    top_records: [sistani-west-fasting-general-rules, sistani-qa-fasting]
+    draft: true
+  - id: q-halal-food-west
+    question: "What can I eat in a non-Muslim country?"
+    alt_phrasings: ["is supermarket meat halal", "halal food in the west", "eating at restaurants", "can i eat food made by non-muslims"]
+    headings: [food-drink]
+    top_records: [sistani-west-food-general-rules, sistani-qa-eating-drinking, sistani-qa-meat]
+    draft: true
+  - id: q-what-is-taqlid
+    question: "What is taqlid, and do I need to follow a marja?"
+    alt_phrasings: ["following a mujtahid", "how to choose a marja", "what is a marja"]
+    headings: [taqlid]
+    top_records: [sistani-west-taqlid-introduction, sistani-west-taqlid-general-rules, sistani-qa-following-a-mujtahid]
+    draft: true

@@ -45,3 +45,8 @@ queries:
   - {query: "fasting while pregnant", expect_any: [sistani-qa-fasting-pregnancy], expect_group: any, note: ""}
   - {query: "prayer", expect_any: [sistani-qa-prayer, sistani-west-salat-general-rules, al-islam-discovering-islam], expect_group: any, note: "broad query should lead with overviews, not single questions"}
   - {query: "roza", expect_any: [sistani-qa-fasting, sistani-west-fasting-general-rules], expect_group: any, note: "Urdu/Persian term for fasting"}
+  - {query: "life of the prophet", expect_any: [al-islam-prophet-muhammad-brief-biography], expect_group: any, note: ""}
+  - {query: "ghadir", expect_any: [al-islam-ghadir-sermon], expect_group: any, note: ""}
+  - {query: "why does god allow suffering", expect_any: [al-islam-lets-learn-about-divine-justice, al-islam-divine-justice-mutahhari], expect_group: any, note: "plain-English alt term of the Adl heading"}
+  - {query: "tawbah", expect_any: [al-islam-repentance-cradle-of-mercy], expect_group: any, note: ""}
+  - {query: "what happens after we die", expect_any: [al-islam-day-of-judgement-rizvi], expect_group: any, note: ""}

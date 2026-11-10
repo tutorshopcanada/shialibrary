@@ -405,6 +405,52 @@
    "expect_none": false,
    "expect_group": "any",
    "note": "Urdu/Persian term for fasting"
+  },
+  {
+   "query": "life of the prophet",
+   "expect_any": [
+    "al-islam-prophet-muhammad-brief-biography"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "ghadir",
+   "expect_any": [
+    "al-islam-ghadir-sermon"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "why does god allow suffering",
+   "expect_any": [
+    "al-islam-lets-learn-about-divine-justice",
+    "al-islam-divine-justice-mutahhari"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "plain-English alt term of the Adl heading"
+  },
+  {
+   "query": "tawbah",
+   "expect_any": [
+    "al-islam-repentance-cradle-of-mercy"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "what happens after we die",
+   "expect_any": [
+    "al-islam-day-of-judgement-rizvi"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
   }
  ]
 }

@@ -247,3 +247,113 @@ scholars:
     alt_names: []
     notes: "Named as compiler of Al-Imāma wa'l-Tabṣira min al-Ḥayra on https://thaqalayn.com/book/45, which describes him as the father of Shaykh al-Ṣadūq (verified 2026-11-10)."
     needs_review: true
+
+  - id: al-balagh-foundation
+    name: "Al-Balagh Foundation"
+    role: author
+    alt_names: []
+    notes: "An organization named as author of Prophet Muhammad (s), A Brief Biography on https://al-islam.org/prophet-muhammad-a-brief-biography-al-balagh (read 2026-11-10)."
+    needs_review: true
+
+  - id: dar-rah-haqq
+    name: "Dar Rah Haqq's Board of Writers"
+    role: author
+    alt_names:
+      - "Dar Rah-e Haqq"
+    notes: "Named as author of A Glance At The Life Of The Holy Prophet Of Islam on https://al-islam.org/a-glance-at-life-holy-prophet-islam; the translator is N. Tawheedi (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayyid-muhammad-rizvi
+    name: "Sayyid Muhammad Rizvi"
+    role: author
+    alt_names: []
+    notes: "Named as compiler of Imam Husayn, The Saviour Of Islam on https://al-islam.org/imam-husayn-saviour-islam (read 2026-11-10)."
+    needs_review: true
+
+  - id: saeed-akhtar-rizvi
+    name: "Sayyid Sa'eed Akhtar Rizvi"
+    role: author
+    alt_names: []
+    notes: "Named as author of Day of Judgement on https://al-islam.org/day-of-judgement-sayyid-akhtar-rizvi (read 2026-11-10). Not assumed to be the same person as Sayyid Muhammad Rizvi."
+    needs_review: true
+
+  - id: makarem-shirazi
+    name: "Naser Makarem Shirazi"
+    role: author
+    alt_names:
+      - "Nasir Makarim Shirazi"
+    notes: "Named as author of Let's Learn About Divine Justice on https://al-islam.org/lets-learn-about-divine-justice-naser-makarem-shirazi (read 2026-11-10)."
+    needs_review: true
+
+  - id: amrohi
+    name: "Sayyid Zafar Hasan Amrohi"
+    role: author
+    alt_names: []
+    notes: "Named as author of Du'a on https://al-islam.org/dua-supplication-sayyid-zafar-hasan-amrohi (read 2026-11-10)."
+    needs_review: true
+
+  - id: husayn-ansariyan
+    name: "Husayn Ansariyan"
+    role: author
+    alt_names: []
+    notes: "Named as author of Repentance: The Cradle of Mercy on https://al-islam.org/repentance-cradle-mercy-husayn-ansariyan (read 2026-11-10)."
+    needs_review: true
+
+  - id: mansour-leghaei
+    name: "Mansour Leghaei"
+    role: author
+    alt_names: []
+    notes: "Named as author of Sciences of Hadith on https://al-islam.org/sciences-hadith-mansour-leghaei (read 2026-11-10)."
+    needs_review: true
+
+  - id: ibrahim-amini
+    name: "Ibrahim Amini"
+    role: author
+    alt_names:
+      - "Ayatullah Ibrahim Amini"
+    notes: "Named as author of Imamate and The Imams on https://al-islam.org/imamate-and-imams-ibrahim-amini (read 2026-11-10)."
+    needs_review: true
+
+  - id: vahid-majd
+    name: "Vahid Majd"
+    role: author
+    alt_names: []
+    notes: "Named as author and translator of Ghadir Sermon on https://al-islam.org/ghadir-sermon (read 2026-11-10)."
+    needs_review: true
+
+  - id: misbah-yazdi
+    name: "Muhammad Taqi Misbah Yazdi"
+    role: author
+    alt_names:
+      - "Professor Muhammad Taqi Misbah Yazdi"
+      - "Ayatollah Muhammad Taqi Misbah Yazdi"
+    notes: "Named as author of In the Presence of the Beloved on https://al-islam.org/presence-beloved-muhammad-taqi-misbah-yazdi (read 2026-11-10)."
+    needs_review: true
+
+  - id: jafar-ali-asil
+    name: "Jafar Ali Asil"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Qur'an And Mourning For Husayn ('A) on https://al-islam.org/quran-and-mourning-husayn-jafar-ali-asil (read 2026-11-10)."
+    needs_review: true
+
+  - id: ali-asghar-ridwani
+    name: "Ali Asghar Ridwani"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Uprising of Ashura and Responses to Doubts on https://al-islam.org/uprising-ashura-and-responses-doubts-ali-asghar-ridwani (read 2026-11-10)."
+    needs_review: true
+
+  - id: mutahhari
+    name: "Murtadha Mutahhari"
+    role: author
+    alt_names: []
+    notes: "Named as author of Divine Justice on https://al-islam.org/divine-justice-murtadha-mutahhari (read 2026-11-10)."
+    needs_review: true
+
+  - id: a-s-hashim
+    name: "A.S. Hashim"
+    role: author
+    alt_names: []
+    notes: "Named as author of Al-Hadith, Analysis and an Overview on https://al-islam.org/articles/al-hadith-analysis-and-overview-hashim (read 2026-11-10)."
+    needs_review: true

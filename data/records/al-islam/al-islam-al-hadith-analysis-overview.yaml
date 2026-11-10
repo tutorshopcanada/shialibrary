@@ -1,0 +1,34 @@
+id: al-islam-al-hadith-analysis-overview
+type: article
+content_tag: article
+granularity: work
+parent: ''
+level: intermediate
+title: Al-Hadith, Analysis and an Overview
+title_original: ''
+authors:
+- a-s-hashim
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/articles/al-hadith-analysis-and-overview-hashim
+language: en
+date: ''
+description: An article explaining what hadith is and how reports were collected. It covers forged hadiths,
+  the way Sunni and Shia collections developed, the main Shia sources, and how hadith was passed on.
+sample_questions:
+- What is hadith?
+- What are forged hadiths?
+- How were hadiths collected?
+- What are the main Shia hadith books?
+- What is the difference between Sunni and Shia hadith collections?
+- Who compiled Al-Kafi?
+headings:
+- hadith-sciences
+- hadith
+access: free
+location: ''
+needs_review: true
+review_note: Level is not stated on the page; intermediate chosen as the cautious option. Compares Sunni
+  and Shia collection of hadith and touches on the early caliphs, a historically contested area; a reviewer
+  should confirm the description stays neutral.
+cataloged_on: '2026-11-10'

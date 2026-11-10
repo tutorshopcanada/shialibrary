@@ -37,7 +37,7 @@ itself only retrieves and ranks those records.
 |---|---|---|
 | thaqalayn.net | Hadith collections, one record per collection or volume | Active |
 | sistani.org | Books of rulings (book and page level) and the Q&A area (topic and single-question level) | Active |
-| al-islam.org | Books and articles, beginner material first | Approved, but the site currently refuses automated access; nothing cataloged yet |
+| al-islam.org | Books and articles, beginner material first | Active |
 | YouTube channels | One record per video | Waiting for the owner's channel list |
 | Institute courses | One record per course | Waiting for the owner's list of institute websites |
 
