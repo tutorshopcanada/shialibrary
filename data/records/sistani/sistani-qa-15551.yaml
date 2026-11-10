@@ -1,0 +1,29 @@
+id: sistani-qa-15551
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-beard
+level: intermediate
+title: If a person commits harãm by shaving his beard by razor baled on day one, is it permissible for
+  him to do the same on the second, the third, the fourth day and so on?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01136/#15551
+language: en
+date: ''
+description: A question about a person who shaves his beard with a razor on the first day, asking whether
+  he may do the same on the following days.
+sample_questions:
+- Can I keep shaving after the first time?
+- Can I shave again on the second day?
+- Is shaving each day treated separately?
+headings:
+- dress-appearance
+access: free
+location: Beard, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

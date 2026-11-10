@@ -1,0 +1,32 @@
+id: sistani-qa-chess-backgammon
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Chess & Backgammon
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01161/
+language: en
+date: ''
+description: A topic page of questions and answers about playing chess and backgammon (board games). Questions
+  cover playing with the usual pieces without betting, playing online with a friend, and playing against
+  a computer or phone.
+sample_questions:
+- Can I play chess?
+- Can I play backgammon?
+- Can I play chess online?
+- Can I play chess against the computer?
+- Is chess allowed without betting?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Chess & Backgammon'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

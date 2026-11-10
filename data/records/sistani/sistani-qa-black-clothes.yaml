@@ -1,0 +1,31 @@
+id: sistani-qa-black-clothes
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Black Clothes
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01134/
+language: en
+date: ''
+description: A topic page of questions and answers about wearing and using black clothes. Questions cover
+  draping a mosque in black, women wearing black coats and scarves outside Muharram and Safar, black Ihram
+  (the pilgrim's garments), black for mourning, and wearing black on ordinary days.
+sample_questions:
+- Can I wear black during Muharram?
+- Is it makrooh to wear black?
+- Can women wear a black scarf all year?
+- Can I wear black ihram?
+- Why do Shias wear black?
+headings:
+- dress-appearance
+access: free
+location: 'Q&A topic: Black Clothes'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

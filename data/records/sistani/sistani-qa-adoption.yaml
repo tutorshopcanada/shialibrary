@@ -1,0 +1,31 @@
+id: sistani-qa-adoption
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Adoption
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01122/
+language: en
+date: ''
+description: A topic page of questions and answers about adopting children. Questions cover treating an
+  adopted child as one's own and how the mahram rules (who one may or may not be alone with or marry)
+  apply to a child raised in the family.
+sample_questions:
+- Can Muslims adopt a child?
+- Is the adopted child my real child?
+- Do I have to cover in front of an adopted child?
+- What is a mahram?
+- Can I adopt a baby in Islam?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Adoption'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

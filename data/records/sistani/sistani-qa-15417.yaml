@@ -1,0 +1,30 @@
+id: sistani-qa-15417
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-depositing-money
+level: intermediate
+title: It is permissible to deposit [money] in non-Muslim (private or state-owned) banks? Even if with
+  the intention of gaining interest?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01176/#15417
+language: en
+date: ''
+description: A question asking whether depositing money in non-Muslim private or state-owned banks is
+  allowed, even with the intention of gaining interest.
+sample_questions:
+- Can I deposit money in a non-Muslim bank?
+- Can I earn interest at a bank?
+- Is a bank savings account okay?
+headings:
+- transactions-work
+- khums-zakat
+access: free
+location: Depositing Money, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

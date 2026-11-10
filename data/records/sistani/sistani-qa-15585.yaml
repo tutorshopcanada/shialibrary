@@ -1,0 +1,30 @@
+id: sistani-qa-15585
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-adultery
+level: intermediate
+title: What is the meaning of the expression used by the jurists that “there is no waiting period (‘idda)
+  for an adulterous woman because of her adultery”?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01129/#15585
+language: en
+date: ''
+description: A question asking about the meaning of the jurists' expression that there is no waiting period
+  ('idda, a period before a woman can remarry) for an adulterous woman.
+sample_questions:
+- Is there an idda after adultery?
+- What does the jurists' saying about idda mean?
+- What is the waiting period for a woman?
+headings:
+- marriage-family
+- social-conduct-rulings
+access: free
+location: Adultery, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,33 @@
+id: sistani-qa-ahl-e-kitab
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Ahl-e Kitab
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01120/
+language: en
+date: ''
+description: A topic page of questions and answers about the Ahl-e Kitab (People of the Book, a term for
+  followers of earlier revealed religions such as Christians and Jews). Questions cover food prepared
+  by them, their ritual purity, and which groups are counted among them.
+sample_questions:
+- Who are the People of the Book?
+- Can I eat food made by Christians?
+- Are Jews and Christians ritually pure?
+- Are Sikhs and Buddhists People of the Book?
+- What does Ahl-e Kitab mean?
+headings:
+- food-drink
+- fiqh
+access: free
+location: 'Q&A topic: Ahl-e Kitab'
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

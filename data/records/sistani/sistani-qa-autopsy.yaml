@@ -1,0 +1,31 @@
+id: sistani-qa-autopsy
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Autopsy
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01126/
+language: en
+date: ''
+description: A topic page of questions and answers about autopsy (a medical examination of a dead body).
+  Questions cover autopsy of a deceased Muslim and requests by government agencies to establish a cause
+  of death.
+sample_questions:
+- Is autopsy allowed in Islam?
+- Can doctors do an autopsy on a Muslim?
+- What if the police ask for an autopsy?
+- Can the family refuse an autopsy?
+headings:
+- death-burial
+- medical-ethics
+access: free
+location: 'Q&A topic: Autopsy'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

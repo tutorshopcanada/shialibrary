@@ -1,0 +1,29 @@
+id: sistani-qa-15470
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-cheese
+level: intermediate
+title: What about imported cheese from non-Muslim countries, if I do not exactly know the way it was made
+  and its ingredients?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01159/#15470
+language: en
+date: ''
+description: A question about imported cheese from non-Muslim countries when one does not know exactly
+  how it was made or what it contains.
+sample_questions:
+- Can I eat cheese if I don't know how it is made?
+- Is imported cheese okay?
+- What if the ingredients are unclear?
+headings:
+- food-drink
+access: free
+location: Cheese, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-qa-blood
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Blood
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01147/
+language: en
+date: ''
+description: A topic page of questions and answers about blood and ritual purity. Questions cover blood
+  mixed with saliva when brushing teeth and blood seen in an egg.
+sample_questions:
+- Is blood in my saliva najis?
+- What if I see blood in an egg?
+- Is blood ritually impure?
+- Can I eat an egg with a blood spot?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Blood'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

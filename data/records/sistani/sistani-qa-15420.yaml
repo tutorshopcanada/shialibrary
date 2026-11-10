@@ -1,0 +1,28 @@
+id: sistani-qa-15420
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-dues
+level: intermediate
+title: I want to pay my religious dues, who should I pay them to?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01174/#15420
+language: en
+date: ''
+description: A question from a person who wants to pay his religious dues, asking who they should be paid
+  to.
+sample_questions:
+- Who do I pay khums to?
+- How do I pay my religious dues?
+- Where do my religious dues go?
+headings:
+- khums-zakat
+access: free
+location: Dues, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

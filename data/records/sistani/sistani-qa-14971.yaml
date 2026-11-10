@@ -1,0 +1,31 @@
+id: sistani-qa-14971
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ahl-e-kitab
+level: intermediate
+title: Are the Sikhs considered to be among the followers of the past revealed religions like the Jews
+  and the Christians?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01120/#14971
+language: en
+date: ''
+description: A question asking whether Sikhs are counted among the followers of earlier revealed religions,
+  like Jews and Christians.
+sample_questions:
+- Are Sikhs People of the Book?
+- Is Sikhism an Ahl-e Kitab religion?
+- Who counts as Ahl-e Kitab?
+headings:
+- food-drink
+- fiqh
+access: free
+location: Ahl-e Kitab, question 5
+needs_review: true
+review_note: Concerns the religious status of another faith; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

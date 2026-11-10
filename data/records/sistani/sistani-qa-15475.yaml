@@ -1,0 +1,29 @@
+id: sistani-qa-15475
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-crescent-sighting
+level: intermediate
+title: If Ramadhan crescent is sighted in one city would it suffice the sighting in another city?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01157/#15475
+language: en
+date: ''
+description: A question asking whether the sighting of the Ramadan crescent in one city is enough for
+  another city.
+sample_questions:
+- Does a moon sighting in one city count for others?
+- Do all cities start Ramadan on the same day?
+- What if the moon is seen elsewhere?
+headings:
+- fasting
+- islamic-calendar
+access: free
+location: Crescent Sighting, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

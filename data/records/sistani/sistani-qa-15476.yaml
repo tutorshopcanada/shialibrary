@@ -1,0 +1,28 @@
+id: sistani-qa-15476
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-crescent-sighting
+level: intermediate
+title: What is the way of knowing that the new lunar month has started?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01157/#15476
+language: en
+date: ''
+description: A question asking how one can know that a new lunar month has started.
+sample_questions:
+- How do I know a new month has begun?
+- How is the start of the month known?
+- How do I know when Eid is?
+headings:
+- fasting
+- islamic-calendar
+access: free
+location: Crescent Sighting, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

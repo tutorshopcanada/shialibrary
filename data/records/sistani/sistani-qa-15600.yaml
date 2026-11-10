@@ -1,0 +1,29 @@
+id: sistani-qa-15600
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ahl-e-kitab
+level: intermediate
+title: What is the fatwa about Ahlul Kitab? Are they ritually pure (Tahir)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01120/#15600
+language: en
+date: ''
+description: A question asking for the fatwa (religious ruling) concerning the Ahlul Kitab and whether
+  they are ritually pure (Tahir).
+sample_questions:
+- Are Christians ritually pure?
+- Are Jews najis?
+- What is the ruling on touching People of the Book?
+headings:
+- purity
+- fiqh
+access: free
+location: Ahl-e Kitab, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

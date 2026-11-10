@@ -1,0 +1,33 @@
+id: sistani-qa-depositing-money
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Depositing Money
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01176/
+language: en
+date: ''
+description: A topic page of questions and answers about depositing money in banks. Questions cover salaries
+  paid directly into a bank account and whether khums (a religious payment on savings) applies to it,
+  depositing money in national banks, and depositing in non-Muslim banks with the intention of gaining
+  interest.
+sample_questions:
+- Can I keep my money in a bank?
+- Do I pay khums on my bank balance?
+- Can I deposit money in a non-Muslim bank?
+- Can I earn interest on my savings?
+- Is a salary paid into the bank subject to khums?
+headings:
+- transactions-work
+- khums-zakat
+access: free
+location: 'Q&A topic: Depositing Money'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

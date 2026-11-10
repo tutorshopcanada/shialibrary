@@ -1,0 +1,30 @@
+id: sistani-qa-15200
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-cheating
+level: intermediate
+title: Is it permissible to cheat [in the exams] at public schools, colleges and universities? Is it permissible
+  to cheat [in the exams] at the private Islamic and non-Islamic schools?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01155/#15200
+language: en
+date: ''
+description: A question asking whether cheating in exams at public schools, colleges and universities,
+  and at private Islamic and non-Islamic schools, is allowed.
+sample_questions:
+- Can I cheat in an exam?
+- Is cheating at university allowed?
+- Is cheating at an Islamic school different?
+headings:
+- transactions-work
+- youth-rulings
+access: free
+location: Cheating, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

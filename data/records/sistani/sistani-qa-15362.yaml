@@ -1,0 +1,27 @@
+id: sistani-qa-15362
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ahl-e-kitab
+level: intermediate
+title: Can I eat Christians' foods that contain meat?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01120/#15362
+language: en
+date: ''
+description: A question about eating foods made by Christians that contain meat.
+sample_questions:
+- Can I eat meat cooked by Christians?
+- Can I eat at a Christian friend's home?
+- Is meat from a Christian shop okay?
+headings:
+- food-drink
+access: free
+location: Ahl-e Kitab, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

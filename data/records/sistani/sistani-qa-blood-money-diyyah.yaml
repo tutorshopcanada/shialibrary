@@ -1,0 +1,32 @@
+id: sistani-qa-blood-money-diyyah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Blood money - (Diyyah)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01171/
+language: en
+date: ''
+description: A topic page of questions and answers about diyyah (blood money, financial compensation for
+  causing physical harm or death). Questions cover compensation for beating someone and leaving a scar,
+  and for aborting a child.
+sample_questions:
+- What is blood money (diyyah)?
+- What is compensation for injuring someone?
+- Who receives blood money?
+- What is blood money for abortion?
+headings:
+- social-conduct-rulings
+- fiqh
+access: free
+location: 'Q&A topic: Blood money - (Diyyah)'
+needs_review: true
+review_note: Concerns penalties and compensation; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

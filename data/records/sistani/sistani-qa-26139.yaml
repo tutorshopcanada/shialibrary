@@ -1,0 +1,28 @@
+id: sistani-qa-26139
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-contraceptives-birth-control
+level: intermediate
+title: Is it permissible to use condoms during sexual intercourse?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01139/#26139
+language: en
+date: ''
+description: A question asking whether using condoms during sexual intercourse is allowed.
+sample_questions:
+- Can a couple use condoms?
+- Are condoms allowed in Islam?
+- Is a condom okay for birth control?
+headings:
+- marriage-family
+- medical-ethics
+access: free
+location: Contraceptives - Birth Control, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

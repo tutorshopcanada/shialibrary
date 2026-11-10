@@ -1,0 +1,28 @@
+id: sistani-qa-15543
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-blood-donation
+level: intermediate
+title: Is it okay to donate blood?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01137/#15543
+language: en
+date: ''
+description: A question asking whether donating blood is okay.
+sample_questions:
+- Can I donate blood?
+- Is blood donation allowed in Islam?
+- Can Muslims give blood?
+headings:
+- medical-ethics
+- purity
+access: free
+location: Blood Donation, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

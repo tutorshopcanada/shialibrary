@@ -1,0 +1,31 @@
+id: sistani-qa-15602
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-autopsy
+level: intermediate
+title: In certain cases, some governmental agencies demand that autopsy be performed on the body of the
+  deceased to establish the cause of death. When is it permissible to agree to their demand and when is
+  it not?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01126/#15602
+language: en
+date: ''
+description: A question about government agencies that require an autopsy to establish the cause of death,
+  asking when agreeing to this is and is not allowed.
+sample_questions:
+- Can I agree to a government autopsy?
+- When is an autopsy required?
+- What if the police want an autopsy?
+headings:
+- death-burial
+- medical-ethics
+access: free
+location: Autopsy, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

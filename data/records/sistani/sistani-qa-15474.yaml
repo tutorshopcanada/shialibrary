@@ -1,0 +1,29 @@
+id: sistani-qa-15474
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-crescent-sighting
+level: intermediate
+title: What is the ruling on the sighting of the crescent and determining the 1st day of the month?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01157/#15474
+language: en
+date: ''
+description: A question asking about the ruling on sighting the crescent and determining the first day
+  of the month.
+sample_questions:
+- How is the first day of the month decided?
+- Why do we sight the moon?
+- When does Ramadan start?
+headings:
+- fasting
+- islamic-calendar
+access: free
+location: Crescent Sighting, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

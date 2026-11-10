@@ -1,0 +1,32 @@
+id: sistani-qa-crescent-sighting
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Crescent Sighting
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01157/
+language: en
+date: ''
+description: A topic page of questions and answers about sighting the new crescent moon to determine the
+  start of a lunar month such as Ramadan (the fasting month). Questions cover how the first day of a month
+  is determined, whether sighting in one city suffices for another, and what counts as evidence.
+sample_questions:
+- How do I know when Ramadan starts?
+- Does the moon sighting in one city count for another?
+- How do I know a new month has started?
+- What counts as evidence of the new moon?
+- Can we use astronomy to find the start of the month?
+headings:
+- fasting
+- islamic-calendar
+access: free
+location: 'Q&A topic: Crescent Sighting'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

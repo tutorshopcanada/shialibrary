@@ -1,0 +1,29 @@
+id: sistani-qa-15549
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-beard
+level: intermediate
+title: Some men shave their beard and leave some hair on the chin alone. Is this sufficient according
+  to Shariah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01136/#15549
+language: en
+date: ''
+description: A question about men who shave their beard but leave some hair on the chin, asking whether
+  this is sufficient according to Shariah.
+sample_questions:
+- Can I leave just a bit of hair on the chin?
+- Is a chin strap beard enough?
+- Does a small chin beard count?
+headings:
+- dress-appearance
+access: free
+location: Beard, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,27 @@
+id: sistani-qa-15622
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-adoption
+level: intermediate
+title: Are we allowed to adopt children and consider them as our own children?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01122/#15622
+language: en
+date: ''
+description: A question asking whether adopting children and treating them as one's own children is allowed.
+sample_questions:
+- Can I adopt a child in Islam?
+- Is an adopted child like my own child?
+- Can I give an adopted child my name?
+headings:
+- marriage-family
+access: free
+location: Adoption, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

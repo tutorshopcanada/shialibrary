@@ -1,0 +1,31 @@
+id: sistani-qa-cheese
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Cheese
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01159/
+language: en
+date: ''
+description: A topic page of questions and answers about cheese and dairy products imported from non-Muslim
+  countries. Questions cover cheese containing rennet (anfahah, an enzyme from a calf's stomach), cheese
+  whose ingredients are unknown, and milk products made by people of various faiths.
+sample_questions:
+- Can I eat imported cheese?
+- What is rennet?
+- Can I eat cheese if I don't know the ingredients?
+- Is yoghurt or ice cream from non-Muslim countries okay?
+- Does cheese contain animal enzymes?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Cheese'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

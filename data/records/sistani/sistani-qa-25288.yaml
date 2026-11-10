@@ -1,0 +1,27 @@
+id: sistani-qa-25288
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-copyrights
+level: intermediate
+title: Is it permissible to sell pirated programs, DVDS, and software?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01153/#25288
+language: en
+date: ''
+description: A question asking whether selling pirated programs, DVDs and software is allowed.
+sample_questions:
+- Can I sell pirated DVDs?
+- Is selling pirated software allowed?
+- Can I sell copied programs?
+headings:
+- transactions-work
+access: free
+location: Copyrights, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-qa-25304
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-blood-money-diyyah
+level: intermediate
+title: What is the blood money for aborting a child? Who is the blood money given to? Who receives the
+  blood money?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01171/#25304
+language: en
+date: ''
+description: A question asking what the blood money for aborting a child is, and who gives and receives
+  it.
+sample_questions:
+- What is diyyah for abortion?
+- Who receives blood money for an abortion?
+- Who pays compensation for an abortion?
+headings:
+- medical-ethics
+- social-conduct-rulings
+access: free
+location: Blood money - (Diyyah), question 2
+needs_review: true
+review_note: Sensitive medical and ethical topic with penalties; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15560
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-black-clothes
+level: intermediate
+title: Is it permissible to wear black Ihram?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01134/#15560
+language: en
+date: ''
+description: A question asking about wearing a black Ihram (the unstitched garments worn by pilgrims).
+sample_questions:
+- Can I wear black ihram?
+- What colour should ihram be?
+- Is black ihram allowed for Hajj?
+headings:
+- dress-appearance
+- hajj
+access: free
+location: Black Clothes, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

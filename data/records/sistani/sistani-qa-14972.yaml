@@ -1,0 +1,29 @@
+id: sistani-qa-14972
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ahl-e-kitab
+level: intermediate
+title: Are the Bhuddhists among the Ahlul Kitab?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01120/#14972
+language: en
+date: ''
+description: A question asking whether Buddhists are counted among the Ahlul Kitab.
+sample_questions:
+- Are Buddhists People of the Book?
+- Is Buddhism an Ahl-e Kitab religion?
+- Who counts as Ahl-e Kitab?
+headings:
+- food-drink
+- fiqh
+access: free
+location: Ahl-e Kitab, question 6
+needs_review: true
+review_note: Concerns the religious status of another faith; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

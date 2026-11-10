@@ -1,0 +1,29 @@
+id: sistani-qa-dues
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Dues
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01174/
+language: en
+date: ''
+description: A topic page of questions and answers about religious dues (payments such as khums and zakat).
+  It contains a question about who religious dues should be paid to.
+sample_questions:
+- Who do I pay my religious dues to?
+- What are religious dues?
+- How do I pay khums?
+- Where can I send zakat?
+headings:
+- khums-zakat
+access: free
+location: 'Q&A topic: Dues'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

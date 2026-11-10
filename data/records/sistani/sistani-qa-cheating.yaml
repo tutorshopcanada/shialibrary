@@ -1,0 +1,31 @@
+id: sistani-qa-cheating
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Cheating
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01155/
+language: en
+date: ''
+description: A topic page of questions and answers about cheating. Questions cover cheating in exams at
+  public, private, Islamic and non-Islamic schools, writing a thesis for another person, and holding a
+  job with a degree obtained by cheating.
+sample_questions:
+- Can I cheat in an exam?
+- Can I write someone's thesis for them?
+- Can I work with a degree I got by cheating?
+- What does Islam say about cheating at school?
+headings:
+- transactions-work
+- youth-rulings
+access: free
+location: 'Q&A topic: Cheating'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15581
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-animals
+level: intermediate
+title: Can I keep a cat, hamster, and rabbit in my house?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01130/#15581
+language: en
+date: ''
+description: A question asking about keeping a cat, hamster and rabbit in the house.
+sample_questions:
+- Can I keep a cat at home?
+- Can Muslims have pets?
+- Can I keep a rabbit or hamster?
+headings:
+- purity
+- food-drink
+access: free
+location: Animals, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

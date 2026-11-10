@@ -1,0 +1,32 @@
+id: sistani-qa-black-magic
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Black Magic
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01138/
+language: en
+date: ''
+description: A topic page of questions and answers about magic. Questions cover practising magic for good
+  purposes, 'white magic' as opposed to black magic, and a person who believes he is affected by black
+  magic and asks for duas (supplications).
+sample_questions:
+- Is magic allowed in Islam?
+- What is white magic?
+- What can I do if I think I have black magic on me?
+- Are there duas against black magic?
+headings:
+- social-conduct-rulings
+- fiqh
+access: free
+location: 'Q&A topic: Black Magic'
+needs_review: true
+review_note: Concerns magic and superstition-related practices; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

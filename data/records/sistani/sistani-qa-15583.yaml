@@ -1,0 +1,27 @@
+id: sistani-qa-15583
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-animals
+level: intermediate
+title: Is it permissible to keep a dog as a pet in my house?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01130/#15583
+language: en
+date: ''
+description: A question asking whether keeping a dog as a pet in the house is allowed.
+sample_questions:
+- Can I keep a dog at home?
+- Can Muslims have dogs as pets?
+- Is it okay to have a pet dog?
+headings:
+- social-conduct-rulings
+access: free
+location: Animals, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

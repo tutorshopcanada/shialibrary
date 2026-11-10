@@ -1,0 +1,29 @@
+id: sistani-qa-15589
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-adultery
+level: intermediate
+title: If a married woman commits adultery with a man, what would be the ruling about them.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01129/#15589
+language: en
+date: ''
+description: A question asking about the ruling for two people when a married woman commits adultery with
+  a man.
+sample_questions:
+- What happens if a married woman commits adultery?
+- What is the ruling on adultery with a married woman?
+- Can they marry afterwards?
+headings:
+- marriage-family
+- social-conduct-rulings
+access: free
+location: Adultery, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

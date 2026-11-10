@@ -1,0 +1,30 @@
+id: sistani-qa-cologne-perfume
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Cologne & Perfume
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01149/
+language: en
+date: ''
+description: A topic page of questions and answers about cologne and perfume. Questions cover a woman
+  wearing perfume when going out and the purity of cologne in relation to prayer.
+sample_questions:
+- Can a woman wear perfume outside?
+- Is cologne pure?
+- Can I pray wearing cologne?
+- Can I wear perfume in Islam?
+headings:
+- dress-appearance
+- purity
+access: free
+location: 'Q&A topic: Cologne & Perfume'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

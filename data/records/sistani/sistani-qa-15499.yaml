@@ -1,0 +1,27 @@
+id: sistani-qa-15499
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-copyrights
+level: intermediate
+title: Can I use cracked apps , which I have not done myself?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01153/#15499
+language: en
+date: ''
+description: A question asking whether one can use cracked apps that one has not cracked oneself.
+sample_questions:
+- Can I use cracked apps?
+- Can I download pirated software?
+- Is a cracked app okay if someone else cracked it?
+headings:
+- transactions-work
+access: free
+location: Copyrights, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

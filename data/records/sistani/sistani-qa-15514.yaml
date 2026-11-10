@@ -1,0 +1,30 @@
+id: sistani-qa-15514
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-business
+level: intermediate
+title: A Muslim works in a non-Muslim country, in a private office, or in a government office, or on contract
+  for a specific project where he is paid by the hour....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01146/#15514
+language: en
+date: ''
+description: A question about a Muslim working in a non-Muslim country, paid by the hour, asking whether
+  wasting hours, working negligently or delaying the job is allowed, and whether he deserves full wages.
+sample_questions:
+- Can I waste time at work and still get paid?
+- Do I deserve full wages if I work slowly?
+- What does Islam say about work ethics?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Business, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

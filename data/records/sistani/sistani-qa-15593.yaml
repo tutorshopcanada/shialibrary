@@ -1,0 +1,28 @@
+id: sistani-qa-15593
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-artificial-insemination
+level: intermediate
+title: What is the general ruling regards to artificial insemination?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01128/#15593
+language: en
+date: ''
+description: A question asking for the general ruling on artificial insemination.
+sample_questions:
+- Is artificial insemination allowed?
+- Is IVF allowed in Islam?
+- What does Sistani say about fertility treatment?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Artificial Insemination, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

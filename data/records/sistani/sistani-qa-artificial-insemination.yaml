@@ -1,0 +1,32 @@
+id: sistani-qa-artificial-insemination
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Artificial Insemination
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01128/
+language: en
+date: ''
+description: A topic page of questions and answers about artificial insemination (conceiving a child by
+  medical means) and surrogacy (another woman carrying the pregnancy). Questions cover the general rules
+  and a couple who cannot conceive naturally.
+sample_questions:
+- Is IVF allowed in Islam?
+- Can we use a surrogate mother?
+- What is artificial insemination?
+- Can a couple who cannot conceive use medical help?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: 'Q&A topic: Artificial Insemination'
+needs_review: true
+review_note: Sensitive medical and ethical topic touching on sexual matters; described neutrally, reviewer
+  should confirm the classification and wording.
+cataloged_on: '2026-11-10'

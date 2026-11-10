@@ -1,0 +1,31 @@
+id: sistani-qa-clothing
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Clothing
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01152/
+language: en
+date: ''
+description: A topic page of questions and answers about clothing. Questions cover women's trousers with
+  long bottoms, men wearing silk and silk neckties, clothes with pictures of alcoholic drinks, and doubts
+  about whether a cheap item is really silk when praying in it.
+sample_questions:
+- Can women wear long trousers?
+- Can men wear silk?
+- Can I wear a silk tie?
+- Can I wear a shirt with a beer logo?
+- Can I pray in clothes that might be silk?
+headings:
+- dress-appearance
+access: free
+location: 'Q&A topic: Clothing'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'
