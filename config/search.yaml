@@ -1,0 +1,134 @@
+# Search settings for the static search page.
+#
+# scripts/build_index.py copies this file into site/data/index.json, and
+# site/js/search.js reads it from there. Nothing here involves a model:
+# every number is a plain threshold or weight used by hand-written rules.
+# After changing anything, rebuild the index and run:
+#     python3 scripts/build_index.py && node scripts/eval_search.mjs
+
+# ---------------------------------------------------------------------------
+# Layer 1: curated starter questions and topic headings
+# ---------------------------------------------------------------------------
+layer1:
+  # How alike the query and a starter question (or one of its alt_phrasings)
+  # must be to count as a strong match. Measured as the overlap of their key
+  # words (0 = nothing shared, 1 = same key words). Raise to be stricter.
+  question_min_similarity: 0.8
+  # A topic heading matches when the whole query is one of its labels or
+  # alternate terms (after normalization). No number to tune.
+  # How many starter questions to list under a matched topic heading.
+  heading_max_questions: 4
+
+# ---------------------------------------------------------------------------
+# Layer 2: keyword search (BM25-style ranking)
+# ---------------------------------------------------------------------------
+layer2:
+  # How much a keyword hit counts in each part of a record.
+  # Rule from the project brief: title > sample_questions > description.
+  field_weights:
+    title: 3.0              # the record's title / the question as shown on the page
+    sample_questions: 2.0   # beginner questions written by the cataloger
+    headings: 1.5           # labels + alternate terms of the record's own subject headings
+    scholars: 1.5           # author / marja names and all their spelling variants
+    description: 1.0        # the 1-3 sentence description
+    ancestor_headings: 0.6  # labels + alternate terms of parent headings (inherited upward)
+    context: 0.5            # titles of the parent section and work
+    other: 0.3              # source name, location, original-language title, provider
+  # Standard BM25 constants. k1: how quickly repeated words stop adding score.
+  # b: how much long fields are penalised (0 = not at all, 1 = fully).
+  bm25:
+    k1: 1.2
+    b: 0.75
+  # Prefix matching: "pray" also finds "prayer", at a reduced weight.
+  prefix:
+    enabled: true
+    min_length: 3           # do not prefix-expand words shorter than this
+    weight: 0.4             # a prefix hit counts this fraction of a whole-word hit
+    max_expansions: 40      # cap on how many longer words one prefix may expand to
+  # Bonus for records tagged with a heading (or written by a scholar) that the
+  # query names through any of its alternate terms. Multiplied by the number of
+  # query words the alternate term covers.
+  concept_weight: 2.5
+  # Score multiplier when the whole query appears word-for-word in the title,
+  # sample questions or description.
+  phrase_boost: 1.6
+  # Pass rule. Layer 2 is "confident" only when BOTH hold for the best result;
+  # otherwise the page falls through to Layer 4 (graceful fallback).
+  min_score: 1.0            # lowest acceptable score for the best result
+  min_term_coverage: 0.5    # best result must match at least this share of the query's key words
+  min_results: 1            # at least this many results must be found
+  # A result must match at least this share of the query's key words to be
+  # listed at all. Stops long questions pulling in records that share one word.
+  min_result_coverage: 0.34
+  # Never show more than this many results for one query.
+  max_results: 150
+
+# ---------------------------------------------------------------------------
+# Exact matches vs related results (plain rules, no model)
+# ---------------------------------------------------------------------------
+exact:
+  # Very common words are ignored when deciding what the "key terms" are.
+  stopwords: [a, an, the, of, in, on, at, to, "for", from, by, with, about, and, or,
+              is, are, was, were, be, been, am, do, does, did, can, could, should,
+              would, will, may, i, we, you, they, he, she, it, my, our, your, their,
+              me, us, what, why, how, who, whom, when, where, which, that, this,
+              these, those, there, if, as, so, not, "no", any, some, have, has, had,
+              get, "one"]
+  # Words that describe the whole catalog. Every record is about Shia Islam, so
+  # these are not required to appear in a title for a result to count as exact.
+  # (They are still used for ranking.)
+  generic_terms: [shia, shias, "shi'a", shiite, shiites, shii, shiism, islam,
+                  islamic, muslim, muslims, twelver, twelvers]
+
+# ---------------------------------------------------------------------------
+# Ranking: beginner-first ordering
+# ---------------------------------------------------------------------------
+ranking:
+  # Which order the page uses until the visitor changes the toggle.
+  # beginner = "I'm new" (simpler material first); deeper = deeper material first.
+  default_order: beginner
+  # Exact matches: "strict" lists all beginner records first, then intermediate,
+  # then advanced, each sorted by relevance. "boost" uses the multipliers below.
+  exact_group_order: strict
+  # Related results always use multipliers, so a loosely related beginner item
+  # cannot jump over a closely related advanced one by level alone.
+  level_boost:              # used when the order is "beginner"
+    beginner: 1.5
+    intermediate: 1.2
+    advanced: 1.0
+  deeper_boost:             # used when the order is "deeper"
+    beginner: 1.0
+    intermediate: 1.2
+    advanced: 1.5
+
+# ---------------------------------------------------------------------------
+# Content tag chips
+# ---------------------------------------------------------------------------
+tags:
+  # Left-to-right order of the tag chips (after "All").
+  order: [fiqh, hadith, book, article, course, lecture, other]
+  # Text shown on the badge and chip for each content_tag.
+  labels:
+    fiqh: Fiqh
+    hadith: Hadith
+    book: Book
+    article: Article
+    course: Course
+    lecture: Lecture
+    other: Other
+
+# Text shown on the level badge.
+levels:
+  order: [beginner, intermediate, advanced]
+  labels:
+    beginner: Beginner
+    intermediate: Intermediate
+    advanced: Advanced
+
+# ---------------------------------------------------------------------------
+# Hierarchy grouping
+# ---------------------------------------------------------------------------
+grouping:
+  # When at least this many items (e.g. Q&A) from the same section match, they
+  # are collapsed under the section, best match first, with an expand control.
+  min_items: 3
