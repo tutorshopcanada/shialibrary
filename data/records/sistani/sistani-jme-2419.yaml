@@ -1,0 +1,30 @@
+id: sistani-jme-2419
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-jme
+level: beginner
+title: Dialogue on religious endowments
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/49/2419/
+language: en
+date: ''
+description: 'A dialogue on waqf (religious endowment): how a person dedicates property for a public or
+  private purpose, who looks after it, and related questions on lifelong use of property.'
+sample_questions:
+- What is a waqf?
+- How do I endow property for charity?
+- Who manages a public endowment?
+- Can an endowed item be rented out?
+headings:
+- transactions-work
+- fiqh
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'
