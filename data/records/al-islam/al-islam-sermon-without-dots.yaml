@@ -1,0 +1,31 @@
+id: al-islam-sermon-without-dots
+type: article
+content_tag: article
+granularity: work
+parent: ''
+level: intermediate
+title: 'Personalities: A Sermon Without Dots'
+title_original: ''
+authors: []
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/articles/personalities-sermon-without-dots
+language: en
+date: ''
+description: A short page about a sermon attributed to Imam Ali that is composed without using any letters
+  that carry dots in Arabic. It gives the Arabic sermon and answers questions such as what is special
+  about it and how Imam Ali could have composed it.
+sample_questions:
+- What is the sermon without dots?
+- Why is Imam Ali's sermon special?
+- Who was Imam Ali?
+- Are there other such sermons?
+- How could Imam Ali compose a sermon without dots?
+headings:
+- imam-ali
+access: free
+location: ''
+needs_review: true
+review_note: The page states no description, audience or level; intermediate chosen as the cautious option.
+  Page credits the library project, not a person, as author, so authors left empty.
+cataloged_on: '2026-11-10'

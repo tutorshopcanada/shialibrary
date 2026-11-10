@@ -539,3 +539,56 @@ scholars:
     alt_names: []
     notes: "Named as author on https://al-islam.org/articles/ghadir-khumm-one-islamic-historys-best-kept-secrets-yasin-t-al-jibouri (read 2026-11-10)."
     needs_review: true
+
+  - id: hasnain-mohamedali
+    name: "Hasnain Mohamedali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/imam-jafar-al-sadiqs-contribution-sciences-hasnain-mohamedali (read 2026-11-10); the page says the article is extracts from a translated book."
+    needs_review: true
+
+  - id: ali-reza-wasii
+    name: "Sayyid 'Ali Reza Wasi'i"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/causes-enmity-imam-ali-light-nahjul-balaghah-sayyid-ali-reza-wasii (read 2026-11-10); translated by Sayyid 'Ali Shahbaz."
+    needs_review: true
+
+  - id: ali-naqi-naqvi
+    name: "Sayyid Ali Naqi Naqvi"
+    role: author
+    alt_names:
+      - "Ali Naqi-un-Naqvi"
+    notes: "Named as author on https://al-islam.org/articles/preface-nahjul-balaghah-sayyid-ali-naqi-naqvi (read 2026-11-10); the heading gives 'Sayyid Ali Naqi Naqvi' and the preface is signed 'Ali Naqi-un-Naqvi'."
+    needs_review: true
+
+  - id: wahid-akhtar
+    name: "Sayyid Wahid Akhtar"
+    role: author
+    alt_names:
+      - "Prof. Waheed Akhtar"
+    notes: "Named as author on https://al-islam.org/articles/concept-freedom-nahjul-balaghah-sayyid-wahid-akhtar (read 2026-11-10); page metadata says 'Sayyid Wahid Akhtar', the body byline 'Prof. Waheed Akhtar'. Not assumed to be the same person as Sayyid Saeed Akhtar Rizvi."
+    needs_review: true
+
+  - id: mahdi-jafari
+    name: "Sayyid Muhammad Mahdi Ja'fari"
+    role: author
+    alt_names:
+      - "Dr. Sayyid Muhammad Mahdi Ja'fari"
+    notes: "Named as author on https://al-islam.org/articles/sayyid-razi-life-and-work-sayyid-muhammad-mahdi-jafari (read 2026-11-10); translated by Mahdi Chamanzar."
+    needs_review: true
+
+  - id: adil-haider
+    name: "Adil Haider"
+    role: author
+    alt_names: []
+    notes: "Named as compiler ('Complied by Adil Haider') on https://al-islam.org/articles/governance-model-imam-ali-quick-glance-adil-haider (read 2026-11-10)."
+    needs_review: true
+
+  - id: nihad-al-fayyad
+    name: "Nihad al-Fayyad"
+    role: author
+    alt_names:
+      - "Shaykh Nihād al-Fayyāḍ"
+    notes: "Named as author on https://al-islam.org/articles/immunity-prophets-imams-physical-deficiencies-nihad-al-fayyad (read 2026-11-10); translated by Amir Al-Zabidi."
+    needs_review: true
