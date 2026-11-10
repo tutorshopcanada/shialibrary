@@ -1,0 +1,34 @@
+id: sistani-hajj-rituals
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: advanced
+title: Hajj Rituals
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/47/
+language: en
+date: ''
+description: A manual of the rulings (fiqh) for performing Hajj and Umrah, the pilgrimage to Mecca, presented
+  as numbered rules on the site of Sayyid Ali al-Sistani. It runs from who must perform Hajj, through
+  each stage of the pilgrimage, to recommended acts and supplications.
+sample_questions:
+- Where can I find the rules for performing Hajj?
+- What are the steps of the Hajj pilgrimage?
+- Where can I read Sayyid Sistani's rulings on Umrah?
+- What is the difference between the types of Hajj?
+- Is there a book that explains the rituals of Hajj?
+headings:
+- hajj
+- fiqh
+access: free
+location: ''
+needs_review: true
+review_note: No foreword, preface or author line on the contents page or the first page (https://www.sistani.org/english/book/47/2082/),
+  so the author or compiler is not named (authors left empty; marja is sistani because the book is published
+  on sistani.org). Level set to advanced because the book calls itself brief but gives no statement of
+  intended audience; it is a detailed, numbered rule manual. Reviewer to confirm.
+cataloged_on: '2026-11-10'
