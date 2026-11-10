@@ -1,0 +1,32 @@
+id: sistani-west-appendix-sistani-answers
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Appendices » Ingredients and preservatives in food products
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2077/
+language: en
+date: ''
+description: An appendix whose visible text introduces a specimen of Sayyid Sistani's answers to some
+  questions in the book. The page carries the same title as another appendix on food ingredients.
+sample_questions:
+- Where can I see Sayyid Sistani's original answers?
+- Does the book include samples of the answers of Ayatullah Sistani?
+- Where are the questions sent to the office of Sayyid Sistani?
+- Where do I find questions that were put to Sayyid Sistani?
+headings:
+- fiqh
+- muslims-in-west
+access: free
+location: 'Back matter: Appendix (specimen of answers)'
+needs_review: true
+review_note: The index title repeats the title of the food-ingredients appendix (page 2079), but the visible
+  text introduces a specimen of Sayyid Sistani's answers. Content (possibly scanned pages) could not be
+  read; reviewer to confirm what this page holds.
+cataloged_on: '2026-11-10'

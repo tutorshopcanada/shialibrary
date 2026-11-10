@@ -1,0 +1,30 @@
+id: sistani-west-medical-general-rules
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Medical issues » General Rules
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2059/
+language: en
+date: ''
+description: A short set of general rules on medical issues. Topics include autopsy on a Muslim body and
+  transplanting organs from animals to humans.
+sample_questions:
+- What does Islam say about autopsy?
+- Can organs from animals be used in transplants?
+- Is a transplanted organ pure for prayer?
+- What are the medical rules in Islam?
+headings:
+- medical-ethics
+- fiqh
+access: free
+location: 'Chapter: Medical issues, General Rules'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

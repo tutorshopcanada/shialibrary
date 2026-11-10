@@ -1,0 +1,31 @@
+id: sistani-west-epilogue
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Epilogue » Epilogue
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2076/
+language: en
+date: ''
+description: The author's closing words. He says the book is a first attempt at presenting Islamic laws
+  for Muslims in non-Muslim countries and invites evaluation. He lists what the book contains, including
+  three appendices.
+sample_questions:
+- Is this book a complete guide for Muslims in the West?
+- What do the appendices in this book contain?
+- How can I give feedback on this book?
+- What does the author say at the end of the book?
+headings:
+- fiqh
+- muslims-in-west
+access: free
+location: 'Back matter: Epilogue'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

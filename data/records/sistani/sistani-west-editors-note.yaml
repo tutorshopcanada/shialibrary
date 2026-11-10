@@ -1,0 +1,31 @@
+id: sistani-west-editors-note
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Introduction » Editor's Note
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2019/
+language: en
+date: ''
+description: A short note from the editor of the English edition. It explains how the book fits with the
+  author's earlier work and mentions changes made to the title and to the translator's footnotes, which
+  were gathered into a glossary.
+sample_questions:
+- Who edited this English book on Muslims in the West?
+- What changes were made to the English edition?
+- Is there a glossary of Islamic terms in this book?
+- Who published this book?
+headings:
+- fiqh
+- muslims-in-west
+access: free
+location: 'Front matter: Editor''s Note'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

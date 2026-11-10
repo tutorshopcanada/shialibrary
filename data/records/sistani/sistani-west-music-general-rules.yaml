@@ -1,0 +1,30 @@
+id: sistani-west-music-general-rules
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Music, singing & dancing » General Rules
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2071/
+language: en
+date: ''
+description: General rules on music, singing and dancing. Topics include the kinds of music discussed
+  by jurists, what is meant by music suited to entertainment gatherings, songs, and related points.
+sample_questions:
+- Is all music treated the same in Islam?
+- What kind of music do jurists discuss?
+- What does Islam say about singing?
+- What does Islam say about dancing?
+headings:
+- music-entertainment
+- fiqh
+access: free
+location: 'Chapter: Music, singing & dancing, General Rules'
+needs_review: true
+review_note: Music is a contested topic among scholars; reviewer to confirm classification.
+cataloged_on: '2026-11-10'

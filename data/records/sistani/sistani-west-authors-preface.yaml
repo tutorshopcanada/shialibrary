@@ -1,0 +1,31 @@
+id: sistani-west-authors-preface
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Introduction » Author's Preface
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2021/
+language: en
+date: ''
+description: The author's preface, explaining why he wrote an Islamic law book for Muslims who have settled
+  in non-Muslim countries and how the book is organised into parts and chapters. It also thanks those
+  who helped with the work.
+sample_questions:
+- Who wrote A Code of Practice For Muslims in the West?
+- Why was this book written for Muslims in non-Muslim countries?
+- How is the book organised?
+- Whose views does this book follow?
+headings:
+- fiqh
+- muslims-in-west
+access: free
+location: 'Front matter: Author''s Preface'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

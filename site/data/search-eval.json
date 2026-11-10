@@ -333,6 +333,48 @@
    "expect_none": false,
    "expect_group": "any",
    "note": "legal-hadith heading; exact volume depends on its description"
+  },
+  {
+   "query": "can i get a mortgage",
+   "expect_any": [
+    "sistani-west-work-questions-answers"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "is music haram",
+   "expect_any": [
+    "sistani-west-music-general-rules",
+    "sistani-west-music-questions-answers",
+    "sistani-qa-music"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "alt term of the music heading"
+  },
+  {
+   "query": "halal meat in the west",
+   "expect_any": [
+    "sistani-west-food-general-rules",
+    "sistani-west-food-questions-answers",
+    "sistani-qa-islamic-slaughtering"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "taqlid",
+   "expect_any": [
+    "sistani-west-taqlid-general-rules",
+    "sistani-west-taqlid-introduction",
+    "sistani-qa-following-a-mujtahid"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
   }
  ]
 }
