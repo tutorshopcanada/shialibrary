@@ -33,9 +33,9 @@ The audience has mixed levels of knowledge, but the **goal is to help people who
 
 | Source | Type | Catalog level |
 |---|---|---|
-| **thaqalayn.net** | Hadith collections | One record per collection/book/volume (e.g., "Al-Kafi, Vol. 1"). Do NOT catalog every individual hadith unless the owner asks. |
-| **al-islam.org** | Shia books, articles, lectures, Q&A | One record per book or article. Optionally one per major chapter. Prioritize introductory and beginner material. |
-| **sistani.org** | Fiqh: rulings and Q&A of Sayyid Sistani | **Three levels** (see section 5, hierarchy): the book/work, its chapters/sections, and the individual Q&A items, each with a deep link to its exact page. Every record from this source has `content_tag: fiqh`. |
+| **thaqalayn.net** (now redirects to thaqalayn.com; same site) | Hadith collections | One record per collection/book/volume (e.g., "Al-Kafi, Vol. 1"). Do NOT catalog every individual hadith unless the owner asks. |
+| **al-islam.org** | Shia books, articles, lectures, Q&A | One record per book or article. Optionally one per major chapter. Prioritize introductory and beginner material. **Currently `status: blocked`:** the site refuses automated requests (Cloudflare). Do not fetch it until the owner arranges access. |
+| **sistani.org** | Fiqh: rulings and Q&A of Sayyid Sistani | Books: the book (work) and each of its pages (section); rulings inside a book page have no links of their own. Q&A area: the area (work), each topic (section), and each question (item, with its own anchor link). See `docs/sistani-structure.md`. Every record from this source has `content_tag: fiqh` and `marja: sistani`. |
 | **Whitelisted YouTube channels** | Lectures | One record per video. Channel list to be supplied by the owner. Backlog until supplied. |
 | **Shia institutes (courses)** | Course listings from approved Shia institutes (the owner named the Shia Research Institute and Tasneem Institute as examples) | One record per course (not per lesson). Every record gets `type: course` and `content_tag: course`. The owner must supply each institute's exact website before you touch it. |
 | **Others** | TBD | Owner adds them to `config/sources.yaml` before you touch them. An official source for Sayyid Khamenei's fiqh has not been named yet; ask the owner which site to use. |
@@ -43,8 +43,10 @@ The audience has mixed levels of knowledge, but the **goal is to help people who
 **Rule: never catalog a source that is not listed in `config/sources.yaml`.** If you think a source belongs, propose it in `proposals/new-sources.md` and wait for approval.
 
 ### sistani.org specifics
-- The owner described the main resource there as the book of rulings for Muslims living in the West ("Rulings in the West"). **Do not assume its exact title or structure.** Before cataloging, inspect the site, report how it is organized (books, chapters, numbered rulings, Q&A pages, URL patterns, whether each Q&A has its own stable URL or anchor), and wait for the owner to confirm which book(s) to catalog first.
-- Catalog that main book first. Other sistani.org books and sections come after.
+- Structure was inspected on 2026-11-10 and is written up in `docs/sistani-structure.md`. Read it before cataloging.
+- The main resource the owner described ("Rulings in the West") is titled **A Code of Practice For Muslims in the West** on the site (`/english/book/46/`). Its author is Sayyid Abdul Hadi al-Hakim; it presents Sayyid Sistani's rulings. Catalog it first, at book and page level.
+- The site's **Question & Answer** area is the only part with a stable link per question. Item-level records come from there, one topic at a time.
+- Other sistani.org books (Islamic Laws, Jurisprudence Made Easy, and so on) come after, when the owner says which.
 
 ---
 
@@ -70,7 +72,7 @@ The audience has mixed levels of knowledge, but the **goal is to help people who
 
 ### Practical effects of this scope
 - On al-islam.org and elsewhere, apply the fiqh rule first: catalog fiqh items only if they are by Sistani or Khamenei. Non-fiqh books and articles from any author are in scope, subject to the other rules.
-- Decide fiqh vs non-fiqh by the item's main purpose and its headings. A record with any heading under the **Fiqh** branch of the vocabulary is a fiqh record and must have an author of `sistani` or `khamenei`.
+- Decide fiqh vs non-fiqh by the item's main purpose and its headings. A record with any heading under the **Fiqh** branch of the vocabulary is a fiqh record and must set `marja` to `sistani` or `khamenei` (whose rulings it presents). `authors` stays truthful: a book of Sistani's rulings compiled by someone else lists the compiler as author and Sistani as `marja`.
 - `data/scholars.yaml` starts with these two entries and grows as you catalog non-fiqh works by other authors (add each new author with all verifiable name variants and flag for review). Entries for Sistani and Khamenei include all English spellings and titles that appear on approved sources, e.g. Sistani / al-Sistani / Sayyid Ali Sistani / Ayatollah Sistani; Khamenei / Khamene'i / Sayyid Ali Khamenei / Seyyed Ali Khamenei / Ayatollah Khamenei / Imam Khamenei (use only spellings that actually appear on approved sources). Add Arabic and Persian name forms as alternate terms only, and only if verified from an approved page.
 - Because non-fiqh content can come from many authors, make sure every record's `authors` field and the scholar filter work cleanly, including for authors with several spellings.
 
@@ -111,6 +113,7 @@ config/sources.yaml  ->  fetch pages  ->  YOU create catalog records  ->  valida
   docs/
     scope.md                 published scope + inclusion criteria
     cataloging-guide.md      detailed rules (expand from section 6)
+    sistani-structure.md     how sistani.org is organized (books, Q&A, URL patterns)
   proposals/
     new-headings.md
     new-sources.md
@@ -122,6 +125,7 @@ config/sources.yaml  ->  fetch pages  ->  YOU create catalog records  ->  valida
     list_urls.py             sitemap/RSS URL listers (no AI)
   progress/
     done-<source>.txt        URLs already cataloged, so work can resume
+    failed-<source>.txt      pages that could not be fetched (date | URL | what happened)
   site/                      search UI
 ```
 
@@ -147,6 +151,8 @@ level: beginner                # beginner | intermediate | advanced (see level r
 title: ""                      # the title/heading as shown on the page; never the answer text
 title_original: ""             # Arabic/Persian/Urdu title if the page gives it
 authors: [scholar-id]          # IDs from scholars.yaml (may be empty if page gives none)
+marja: ""                      # sistani | khamenei. Required on fiqh records: whose rulings the item presents.
+                               # Blank on everything else. The author may be a different person (a compiler).
 source: sistani.org            # must match an entry in config/sources.yaml
 url: ""                        # deep link to the exact page or anchor for this record
 language: en                   # ISO code
@@ -191,12 +197,12 @@ Every item links to its section, and every section links to its work. This lets 
 3. **Descriptions are neutral, factual and written for a newcomer.** 1-3 sentences in your own words: what it is, what it covers, and who it is for. Use plain English and briefly explain any term a beginner wouldn't know (e.g., "khums, a religious payment"). No endorsement, no criticism, no sectarian commentary.
 4. **Do not copy content.** Don't paste passages, full texts, or full hadith. A short description and a link is the whole record.
 5. **Resolve scholars through `scholars.yaml`.** If an author already exists, use the ID. If not, add an entry (all name spellings you can verify from the page) and flag it for review. Do not guess identities or titles.
-6. **Contested or sensitive classification gets flagged.** For fiqh rulings, theology, history disputes, or anything debatable, set `needs_review: true` and explain why. A knowledgeable human decides these, not you.
+6. **Contested or sensitive classification gets flagged.** When how to classify or describe an item is debatable (a sensitive ruling topic, theology, history disputes, Shia-Sunni matters), set `needs_review: true` and explain why. An ordinary fiqh record whose topic is clear does not need the flag just for being fiqh; otherwise the flag would be on every sistani.org record and mean nothing. A knowledgeable human decides these, not you.
 7. **No duplicates.** Check for an existing record with the same URL before creating one.
 8. **Keep IDs and URLs stable.** Never rename or delete existing records unless asked.
 9. **Respect scope.** If a page is outside the agreed scope (`docs/scope.md`), skip it and note it in `review-flags.md`.
 10. **Never modify `vocabulary.yaml` or `scope.md` directly** unless the owner tells you to. Propose changes in `proposals/`.
-11. **Apply the fiqh rule on every record.** If the item is fiqh, the author must be Sistani or Khamenei, otherwise skip it and log it. Non-fiqh items have no author restriction.
+11. **Apply the fiqh rule on every record.** If the item is fiqh, it must present the rulings of Sistani or Khamenei (recorded in `marja`), otherwise skip it and log it. Non-fiqh items have no author restriction.
 12. **Courses are time-sensitive.** Copy dates, prices, levels and delivery format only as the page states them. Record the date you cataloged it. Don't catalog a course the page marks as ended unless the owner asks. If a course's main subject is fiqh, skip and log it (section 3).
 13. **Fiqh records describe the topic, never restate the ruling.** For rulings and Q&A items, the description says what the question or section is about (e.g., "Covers how prayer is performed on an airplane"), not what the ruling is. Restating a ruling in your own words risks getting it wrong and amounts to issuing a ruling. The user reads the ruling on the source page. The same goes for the `title` field: use the heading or question as shown on the page, never the answer.
 14. **Write `sample_questions` in beginner language.** 3-8 short questions a newcomer might actually type that this record helps answer (e.g., "How do Shias pray?", "What is khums?"). Base them on what the page covers, not on outside knowledge. These improve search and later become test data.
@@ -353,7 +359,7 @@ If there are no exact matches, say so honestly ("No exact matches. Here are rela
 - Records match the schema, and required fields are present.
 - Every `headings` ID exists in `vocabulary.yaml`; every `authors` ID exists in `scholars.yaml`; `source` is in `config/sources.yaml`.
 - `level` is present and one of beginner / intermediate / advanced; `description` and `sample_questions` are present (3-8 questions).
-- Any record with a heading under the Fiqh branch has authors only from `sistani` and `khamenei`.
+- Any record with a heading under the Fiqh branch has `marja` set to `sistani` or `khamenei`; `marja` is blank on non-fiqh records.
 - `content_tag` is present and one of fiqh / hadith / book / article / course / lecture / other. For non-course records, `content_tag` is `fiqh` if and only if the record has a heading under the Fiqh branch, and every `sistani.org` record is `fiqh`.
 - `type: course` records have `content_tag: course` and a `provider` that matches an approved institute; course dates are valid; flag courses whose `start_date` has passed.
 - **Hierarchy:** `granularity` is work, section or item; every section and item has an existing `parent`; the parent's granularity is higher (item -> section -> work); no cycles; parent and child share the same `source`.

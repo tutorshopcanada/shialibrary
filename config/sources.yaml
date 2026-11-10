@@ -1,0 +1,50 @@
+# Approved sources. Nothing is cataloged unless it is listed here with status: active.
+# Only the owner adds sources. Proposals go in proposals/new-sources.md.
+# status: active (may be cataloged) | blocked (approved, but the site refuses automated
+#         access; do not fetch until the owner resolves it) | backlog (waiting on the owner)
+sources:
+  - id: thaqalayn.net
+    name: "Thaqalayn"
+    type: hadith-collections
+    base_url: "https://thaqalayn.net/"
+    status: active
+    catalog_level: "One record per collection/book/volume. No per-hadith records."
+    notes: >
+      thaqalayn.net permanently redirects to thaqalayn.com (checked 2026-11-10); record URLs
+      use the address the site actually serves. robots.txt allows everything except /api/
+      and /super/, and publishes a sitemap.
+
+  - id: al-islam.org
+    name: "Al-Islam.org (Ahlul Bayt Digital Islamic Library Project)"
+    type: library
+    base_url: "https://www.al-islam.org/"
+    status: blocked
+    catalog_level: "One record per book or article. Beginner material first."
+    notes: >
+      Approved by the owner, but on 2026-11-10 the site's Cloudflare protection refused
+      automated requests (including robots.txt). Per the fetching rules we do not work
+      around blocks. Nothing is cataloged from here until the owner arranges access
+      (for example, by asking the site owners). See progress/failed-al-islam.txt.
+
+  - id: sistani.org
+    name: "Office of Sayyid Ali al-Sistani"
+    type: fiqh
+    base_url: "https://www.sistani.org/english/"
+    status: active
+    catalog_level: "Work, section (one page), and item (single Q&A with its own URL)."
+    notes: >
+      robots.txt has no disallow rules (checked 2026-11-10). Structure report:
+      docs/sistani-structure.md. Every record from this source is content_tag fiqh.
+
+  - id: youtube
+    name: "Whitelisted YouTube channels"
+    type: video
+    base_url: "https://www.youtube.com/"
+    status: backlog
+    catalog_level: "One record per video."
+    channels: []          # owner supplies channel IDs; nothing is harvested until then
+    notes: "Backlog. No channel list yet."
+
+# Institutes offering courses. The owner named the Shia Research Institute and Tasneem
+# Institute as examples but has not supplied their websites. Do not guess addresses.
+institutes: []

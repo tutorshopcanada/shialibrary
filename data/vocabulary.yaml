@@ -1,0 +1,284 @@
+# Controlled vocabulary of subject headings (like PubMed's MeSH).
+# DRAFT for scholar review. Drafted by the cataloging agent; not yet reviewed by anyone.
+# Records may only use ids from this file. Changes are proposed in proposals/new-headings.md.
+# alt_terms: spelling variants, transliterations, Arabic/Persian/Urdu terms, and the
+# plain-English phrasings a beginner would type. Searching a parent also returns its children.
+draft: true
+headings:
+  # ── New to Shia Islam ────────────────────────────────────────────────────────────
+  - id: new-to-shia-islam
+    label: "New to Shia Islam"
+    parent: ""
+    alt_terms: ["introduction to shia islam", "what is shia islam", "shia basics", "shiism for beginners", "who are the shia", "what do shias believe", "shi'a", "shia", "shiite", "shi'ite", "twelver", "ithna ashari", "شيعة", "شیعه"]
+    notes: "Entry area for basics and overviews."
+  - id: becoming-muslim
+    label: "Becoming Muslim and first steps"
+    parent: new-to-shia-islam
+    alt_terms: ["convert to islam", "converting", "revert", "how to become shia", "shahada", "new muslim", "first steps"]
+    notes: ""
+  - id: sunni-shia
+    label: "Shia and Sunni: similarities and differences"
+    parent: new-to-shia-islam
+    alt_terms: ["difference between sunni and shia", "sunni vs shia", "shia sunni differences", "why are there shia and sunni"]
+    notes: "Contested area. Records here should be flagged for review."
+
+  # ── Beliefs and theology ────────────────────────────────────────────────────────
+  - id: beliefs
+    label: "Beliefs and theology"
+    parent: ""
+    alt_terms: ["aqaid", "aqidah", "usul al-din", "roots of religion", "theology", "kalam", "what do shias believe", "عقائد", "اصول دین"]
+    notes: ""
+  - id: tawhid
+    label: "God and His oneness (Tawhid)"
+    parent: beliefs
+    alt_terms: ["tawheed", "tauhid", "oneness of god", "who is allah", "belief in god", "monotheism", "توحيد"]
+    notes: ""
+  - id: adl
+    label: "Divine justice (Adl)"
+    parent: beliefs
+    alt_terms: ["adalah", "justice of god", "is god fair", "free will", "predestination", "why does god allow suffering", "عدل"]
+    notes: ""
+  - id: nubuwwah
+    label: "Prophethood (Nubuwwah)"
+    parent: beliefs
+    alt_terms: ["nubuwwat", "prophets", "prophethood", "why did god send prophets", "messengers", "نبوة", "نبوت"]
+    notes: ""
+  - id: imamate
+    label: "Imamate (leadership after the Prophet)"
+    parent: beliefs
+    alt_terms: ["imamah", "imamat", "imams", "why do shias follow imams", "succession to the prophet", "wilayah", "إمامة", "امامت"]
+    notes: ""
+  - id: maad
+    label: "Resurrection and the afterlife (Ma'ad)"
+    parent: beliefs
+    alt_terms: ["maad", "qiyamah", "day of judgement", "day of judgment", "life after death", "heaven and hell", "afterlife", "معاد", "قيامة"]
+    notes: ""
+
+  # ── Fiqh ────────────────────────────────────────────────────────────────────────
+  # Any record with a heading in this branch is a fiqh record: it must follow the rulings
+  # of Sayyid Sistani or Sayyid Khamenei, and its description never restates a ruling.
+  - id: fiqh
+    label: "Fiqh (practical rulings)"
+    parent: ""
+    alt_terms: ["islamic law", "rulings", "ahkam", "jurisprudence", "fatwa", "fatawa", "halal and haram", "is it allowed", "is it permissible", "sharia", "shariah", "masail", "فقه", "احکام", "أحكام"]
+    notes: "Restricted to the rulings of Sayyid Ali al-Sistani and Sayyid Ali Khamenei."
+  - id: taqlid
+    label: "Following a jurist (Taqlid)"
+    parent: fiqh
+    alt_terms: ["taqleed", "marja", "marja'", "marjaiyyah", "mujtahid", "following a scholar", "who should i follow", "choosing a marja", "تقليد", "تقلید"]
+    notes: ""
+  - id: purity
+    label: "Ritual purity (Taharah): wudu, ghusl, impurities"
+    parent: fiqh
+    alt_terms: ["taharat", "tahara", "najasat", "najasah", "najis", "wudu", "wudhu", "wuzu", "ablution", "ghusl", "tayammum", "how to do wudu", "ritual washing", "طهارة", "وضو", "غسل"]
+    notes: ""
+  - id: prayer
+    label: "Prayer (Salah)"
+    parent: fiqh
+    alt_terms: ["salah", "salat", "namaz", "how to pray", "how do shias pray", "praying", "daily prayers", "qibla", "adhan", "congregational prayer", "jamaat", "friday prayer", "qasr", "prayer while travelling", "صلاة", "نماز"]
+    notes: ""
+  - id: fasting
+    label: "Fasting (Sawm)"
+    parent: fiqh
+    alt_terms: ["sawm", "siyam", "roza", "ramadan", "ramadhan", "ramazan", "how to fast", "what breaks the fast", "moon sighting", "صوم", "روزه"]
+    notes: ""
+  - id: hajj
+    label: "Pilgrimage (Hajj and Umrah)"
+    parent: fiqh
+    alt_terms: ["hajj", "haj", "umrah", "umra", "pilgrimage to mecca", "ihram", "tawaf", "حج", "عمرة"]
+    notes: ""
+  - id: khums-zakat
+    label: "Khums and Zakat (religious payments)"
+    parent: fiqh
+    alt_terms: ["khums", "khoms", "zakat", "zakah", "religious tax", "what is khums", "one fifth", "sahm al-imam", "charity obligations", "خمس", "زكاة"]
+    notes: ""
+  - id: food-drink
+    label: "Food and drink (halal and haram)"
+    parent: fiqh
+    alt_terms: ["halal food", "halal meat", "haram food", "can i eat", "zabiha", "dhabiha", "alcohol", "gelatin", "seafood", "eating at restaurants", "أطعمة"]
+    notes: ""
+  - id: dress-appearance
+    label: "Dress and appearance"
+    parent: fiqh
+    alt_terms: ["hijab", "clothing", "modest dress", "beard", "gold for men", "silk", "what to wear", "حجاب"]
+    notes: ""
+  - id: marriage-family
+    label: "Marriage and family"
+    parent: fiqh
+    alt_terms: ["nikah", "marriage", "mutah", "mut'ah", "temporary marriage", "divorce", "talaq", "mahr", "getting married", "parents rights", "زواج", "نكاح", "ازدواج"]
+    notes: ""
+  - id: women-rulings
+    label: "Rulings specific to women"
+    parent: fiqh
+    alt_terms: ["women's issues", "hayd", "haydh", "menstruation", "nifas", "istihadha", "women in islam rulings"]
+    notes: ""
+  - id: death-burial
+    label: "Death, burial and funeral rites"
+    parent: fiqh
+    alt_terms: ["funeral", "janazah", "burial", "ghusl mayyit", "kafan", "salat al-mayyit", "what to do when someone dies", "autopsy", "will", "wasiyyah", "جنازة"]
+    notes: ""
+  - id: transactions-work
+    label: "Money, work and transactions"
+    parent: fiqh
+    alt_terms: ["muamalat", "business", "interest", "riba", "bank", "mortgage", "loans", "insurance", "investment", "jobs", "buying and selling", "معاملات"]
+    notes: ""
+  - id: medical-ethics
+    label: "Medical issues"
+    parent: fiqh
+    alt_terms: ["medicine", "organ donation", "abortion", "contraception", "ivf", "blood donation", "doctor", "medical treatment"]
+    notes: ""
+  - id: social-conduct-rulings
+    label: "Social life and dealing with others (rulings)"
+    parent: fiqh
+    alt_terms: ["non-muslims", "ahl al-kitab", "people of the book", "shaking hands", "neighbours", "gender interaction", "mixed gatherings", "social life"]
+    notes: ""
+  - id: muslims-in-west
+    label: "Living as a Muslim in non-Muslim countries"
+    parent: fiqh
+    alt_terms: ["muslims in the west", "living in the west", "migration", "hijrah", "immigration", "local laws", "law of the land", "minority fiqh", "non-muslim countries"]
+    notes: ""
+  - id: music-entertainment
+    label: "Music, entertainment and recreation"
+    parent: fiqh
+    alt_terms: ["music", "singing", "dancing", "is music haram", "movies", "games", "chess", "ghina", "غناء"]
+    notes: ""
+  - id: youth-rulings
+    label: "Questions of young people (rulings)"
+    parent: fiqh
+    alt_terms: ["youth", "teenagers", "bulugh", "puberty", "young muslims", "students"]
+    notes: ""
+
+  # ── History ─────────────────────────────────────────────────────────────────────
+  - id: history
+    label: "History and biography"
+    parent: ""
+    alt_terms: ["islamic history", "shia history", "sirah", "biography", "tarikh", "تاريخ", "تاریخ"]
+    notes: ""
+  - id: prophet-muhammad
+    label: "The Prophet Muhammad"
+    parent: history
+    alt_terms: ["muhammad", "mohammad", "mohammed", "rasulullah", "the holy prophet", "seerah", "life of the prophet", "who is muhammad", "محمد"]
+    notes: ""
+  - id: ahl-al-bayt
+    label: "Ahl al-Bayt (the Prophet's family)"
+    parent: history
+    alt_terms: ["ahlul bayt", "ahlulbayt", "ahl ul bayt", "ahle bait", "family of the prophet", "household of the prophet", "who are the ahlul bayt", "أهل البيت", "اهل بیت"]
+    notes: ""
+  - id: twelve-imams
+    label: "The Twelve Imams"
+    parent: ahl-al-bayt
+    alt_terms: ["12 imams", "twelve imams", "who are the imams", "names of the imams", "aimmah", "الأئمة"]
+    notes: ""
+  - id: imam-ali
+    label: "Imam Ali"
+    parent: twelve-imams
+    alt_terms: ["ali ibn abi talib", "ali b. abi talib", "amir al-muminin", "ameerul momineen", "imam ali", "who is ali", "علي", "علی"]
+    notes: ""
+  - id: fatimah
+    label: "Lady Fatimah al-Zahra"
+    parent: ahl-al-bayt
+    alt_terms: ["fatima", "fatimah", "fatema", "zahra", "al-zahra", "bibi fatima", "daughter of the prophet", "فاطمة", "فاطمه"]
+    notes: ""
+  - id: imam-husayn
+    label: "Imam Husayn"
+    parent: twelve-imams
+    alt_terms: ["husayn", "hussain", "hussein", "husain", "Ḥusayn", "imam hussain", "sayyid al-shuhada", "who is hussain", "حسين", "حسین"]
+    notes: ""
+  - id: karbala-ashura
+    label: "Karbala, Ashura and Muharram"
+    parent: history
+    alt_terms: ["karbala", "kerbala", "ashura", "ashoora", "muharram", "moharram", "azadari", "mourning", "majlis", "why do shias mourn", "why do shia cry on ashura", "arbaeen", "arbain", "كربلاء", "عاشوراء", "عاشورا"]
+    notes: ""
+  - id: imam-mahdi
+    label: "Imam al-Mahdi and the occultation (Ghaybah)"
+    parent: twelve-imams
+    alt_terms: ["mahdi", "mehdi", "al-mahdi", "twelfth imam", "12th imam", "imam zaman", "imam of the time", "ghaybah", "ghaybat", "occultation", "who is the mahdi", "reappearance", "zuhur", "المهدي", "مهدی", "غيبة"]
+    notes: ""
+  - id: ghadir-succession
+    label: "Ghadir Khumm and the succession"
+    parent: history
+    alt_terms: ["ghadir", "ghadeer", "ghadir khumm", "eid al-ghadir", "saqifah", "caliphate", "khilafah", "who succeeded the prophet", "غدير"]
+    notes: "Contested area. Records here should be flagged for review."
+  - id: companions-scholars
+    label: "Companions, scholars and notable figures"
+    parent: history
+    alt_terms: ["sahaba", "companions", "ulama", "shia scholars", "biographies of scholars", "salman", "abu dharr"]
+    notes: ""
+
+  # ── Hadith ──────────────────────────────────────────────────────────────────────
+  - id: hadith
+    label: "Hadith (narrations)"
+    parent: ""
+    alt_terms: ["hadith", "hadeeth", "ahadith", "narrations", "traditions", "riwayat", "sayings of the prophet", "sayings of the imams", "what is a hadith", "حديث", "حدیث", "روايات"]
+    notes: ""
+  - id: hadith-collections
+    label: "Hadith collections"
+    parent: hadith
+    alt_terms: ["hadith books", "shia hadith books", "four books", "al-kutub al-arba'a", "kutub arba'a", "al-kafi", "kafi", "man la yahduruhu al-faqih", "tahdhib al-ahkam", "al-istibsar", "bihar al-anwar", "الكتب الأربعة"]
+    notes: ""
+  - id: hadith-sciences
+    label: "Hadith sciences (authenticity, narrators)"
+    parent: hadith
+    alt_terms: ["ilm al-hadith", "rijal", "ilm al-rijal", "diraya", "isnad", "chain of narration", "is this hadith authentic", "sahih", "علم الحديث", "رجال"]
+    notes: ""
+  - id: nahj-al-balagha
+    label: "Nahj al-Balagha and sayings of Imam Ali"
+    parent: hadith
+    alt_terms: ["nahjul balagha", "nahj al-balaghah", "peak of eloquence", "sermons of imam ali", "letters of imam ali", "نهج البلاغة"]
+    notes: ""
+
+  # ── Quran ───────────────────────────────────────────────────────────────────────
+  - id: quran
+    label: "Quran and tafsir"
+    parent: ""
+    alt_terms: ["quran", "qur'an", "koran", "holy book", "قرآن"]
+    notes: ""
+  - id: tafsir
+    label: "Quran commentary (Tafsir)"
+    parent: quran
+    alt_terms: ["tafseer", "tafsir", "commentary", "exegesis", "meaning of verses", "what does this verse mean", "تفسير", "تفسیر"]
+    notes: ""
+  - id: quran-sciences
+    label: "About the Quran (history, recitation, sciences)"
+    parent: quran
+    alt_terms: ["ulum al-quran", "tajwid", "tajweed", "recitation", "compilation of the quran", "how to read the quran", "علوم القرآن"]
+    notes: ""
+
+  # ── Ethics and spirituality ─────────────────────────────────────────────────────
+  - id: ethics
+    label: "Ethics and spirituality"
+    parent: ""
+    alt_terms: ["akhlaq", "akhlak", "morals", "character", "manners", "self improvement", "how to be a better person", "اخلاق", "أخلاق"]
+    notes: ""
+  - id: spirituality
+    label: "Spiritual growth and self-purification"
+    parent: ethics
+    alt_terms: ["irfan", "tazkiyah", "tazkiyat al-nafs", "suluk", "getting closer to god", "sincerity", "repentance", "tawbah", "sins", "تزكية", "عرفان"]
+    notes: ""
+  - id: family-social-ethics
+    label: "Family and social ethics"
+    parent: ethics
+    alt_terms: ["rights of parents", "raising children", "parenting", "rights of others", "huquq", "neighbours", "community", "risalat al-huquq", "treatise on rights"]
+    notes: ""
+
+  # ── Duas and ziyarat ────────────────────────────────────────────────────────────
+  - id: duas-ziyarat
+    label: "Duas and ziyarat (supplications and visitations)"
+    parent: ""
+    alt_terms: ["dua", "du'a", "duas", "supplication", "prayers to recite", "ziyarat", "ziyarah", "visiting shrines", "دعاء", "دعا", "زيارة", "زیارت"]
+    notes: ""
+  - id: duas
+    label: "Duas (supplications)"
+    parent: duas-ziyarat
+    alt_terms: ["dua kumayl", "dua kumail", "sahifa sajjadiyya", "sahifah sajjadiyyah", "munajat", "how to make dua", "mafatih al-jinan", "دعاء كميل"]
+    notes: ""
+  - id: ziyarat
+    label: "Ziyarat (visitation of the Prophet and Imams)"
+    parent: duas-ziyarat
+    alt_terms: ["ziyarat ashura", "ziyarah", "pilgrimage to karbala", "visiting najaf", "mashhad", "shrines", "زيارة عاشوراء"]
+    notes: ""
+  - id: islamic-calendar
+    label: "Islamic calendar and special occasions"
+    parent: duas-ziyarat
+    alt_terms: ["islamic months", "eid", "eid al-fitr", "eid al-adha", "laylat al-qadr", "night of power", "shaban", "rajab", "important dates", "amaal", "a'mal"]
+    notes: ""

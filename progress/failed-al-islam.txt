@@ -1,0 +1,2 @@
+# Pages that could not be fetched. One line per attempt: date | URL | what happened
+2026-11-10 | https://www.al-islam.org/robots.txt | HTTP 403, Cloudflare "you have been blocked" page. Stopped; no other al-islam.org page was requested. Source set to status: blocked in config/sources.yaml until the owner arranges access.
