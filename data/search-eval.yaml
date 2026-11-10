@@ -50,3 +50,8 @@ queries:
   - {query: "why does god allow suffering", expect_any: [al-islam-lets-learn-about-divine-justice, al-islam-divine-justice-mutahhari], expect_group: any, note: "plain-English alt term of the Adl heading"}
   - {query: "tawbah", expect_any: [al-islam-repentance-cradle-of-mercy], expect_group: any, note: ""}
   - {query: "what happens after we die", expect_any: [al-islam-day-of-judgement-rizvi], expect_group: any, note: ""}
+  - {query: "stories of the prophets", expect_any: [al-islam-stories-of-the-prophets], expect_group: any, note: ""}
+  - {query: "lady zaynab", expect_any: [al-islam-lady-zaynab], expect_group: any, note: ""}
+  - {query: "dua kumayl", expect_any: [al-islam-dua-kumayl-translation-commentary], expect_group: any, note: ""}
+  - {query: "raising children", expect_any: [al-islam-raising-children], expect_group: any, note: ""}
+  - {query: "tafsir", expect_any: [al-islam-introduction-science-tafsir], expect_group: any, note: "alt term of the Tafsir heading"}

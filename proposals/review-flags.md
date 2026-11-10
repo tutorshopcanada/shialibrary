@@ -11,3 +11,6 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
   under Congregational Prayers). Both are cataloged. Keep both, or keep one?
 - Translators are not recorded (the schema has no field). The Code of Practice names
   Sayyid Mohammad Rizvi as translator.
+
+## Skipped (polemical)
+- 2026-11-10 | The Twelve Successors of the Holy Prophet (Sayyid Murtadha al-'Askari) | https://al-islam.org/twelve-successors-holy-prophet-sayyid-murtadha-al-askari | Chapters such as "The Twelve Imams According to the School of the Caliphate" and "Bewildering Interpretations" compare and argue against other groups' readings; borderline polemic on the succession question. Owner may want to reconsider.

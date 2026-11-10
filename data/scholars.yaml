@@ -430,3 +430,11 @@ scholars:
     alt_names: []
     notes: "Credited as 'Contributed by' on https://al-islam.org/articles/brief-introduction-islam (read 2026-11-10); may be the contributor, not the original author."
     needs_review: true
+
+  - id: imam-zayn-al-abidin
+    name: "Imam Ali Zayn al-Abidin"
+    role: author
+    alt_names:
+      - "Imam Ali Ibn Hussein (as)"
+    notes: "Named as author of the Sahifa extracts on https://al-islam.org/15-whispered-prayers-sahifa-al-kamila-sajjadiyyah (read 2026-11-10)."
+    needs_review: true
