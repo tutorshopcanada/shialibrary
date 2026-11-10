@@ -17,14 +17,18 @@ sources:
   - id: al-islam.org
     name: "Al-Islam.org (Ahlul Bayt Digital Islamic Library Project)"
     type: library
-    base_url: "https://www.al-islam.org/"
-    status: blocked
+    base_url: "https://al-islam.org/"
+    status: active
+    crawl_delay_seconds: 10
     catalog_level: "One record per book or article. Beginner material first."
     notes: >
-      Approved by the owner, but on 2026-11-10 the site's Cloudflare protection refused
-      automated requests (including robots.txt). Per the fetching rules we do not work
-      around blocks. Nothing is cataloged from here until the owner arranges access
-      (for example, by asking the site owners). See progress/failed-al-islam.txt.
+      robots.txt (read 2026-11-10) allows book and article pages, disallows /search/, /admin/,
+      /user/ and similar, and asks for a 10-second delay between requests. Plain scripted
+      requests (curl) from the build machine are refused by the site's Cloudflare protection,
+      so pages are read one at a time with the standard web-fetch tool, never faster than the
+      crawl delay, and candidate pages are found through a web search limited to this site
+      (the site's own /search/ is off limits). Do not use /book/export/ or /printpdf/ URLs
+      as record URLs; use the book's normal page.
 
   - id: sistani.org
     name: "Office of Sayyid Ali al-Sistani"

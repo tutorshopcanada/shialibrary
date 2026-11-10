@@ -99,3 +99,54 @@ scholars:
       - "al-Ṭūsī"
     notes: "Named as author of Kitāb al-Ghayba on https://thaqalayn.com/book/27 (verified 2026-11-10)."
     needs_review: true
+
+  - id: shomali
+    name: "Mohammad Ali Shomali"
+    role: author
+    alt_names:
+      - "Shomali"
+    notes: "Named as author on https://al-islam.org/discovering-shii-islam-mohammad-ali-shomali (read 2026-11-10)."
+    needs_review: true
+
+  - id: moustafa-al-qazwini
+    name: "Sayyid Moustafa Al-Qazwini"
+    role: author
+    alt_names:
+      - "Moustafa Al-Qazwini"
+      - "Sayyid Moustafa al-Qazwini"
+      - "Sayed Moustafa Al-Qazwini"
+    notes: "Named as author on https://al-islam.org/discovering-islam-sayyid-moustafa-al-qazwini (read 2026-11-10)."
+    needs_review: true
+
+  - id: beheshti
+    name: "Sayyid Muhammad Husayni Beheshti"
+    role: author
+    alt_names:
+      - "Ayatullah Dr. Beheshti"
+      - "Beheshti"
+    notes: "Named as author on https://al-islam.org/basic-teachings-islam-sayyid-muhammad-husayni-beheshti (read 2026-11-10)."
+    needs_review: true
+
+  - id: fadhil-milani
+    name: "Sayyid Fadhil Milani"
+    role: author
+    alt_names:
+      - "Ayatollah Sayyid Fadhel Hosseini Milani"
+      - "Fadhel Milani"
+    notes: "Named as author on https://al-islam.org/core-islam-sayyid-fadhil-milani (read 2026-11-10)."
+    needs_review: true
+
+  - id: mateen-charbonneau
+    name: "Mateen Charbonneau"
+    role: author
+    alt_names:
+      - "Mateen J. Charbonneau"
+    notes: "Named as author on https://al-islam.org/mystery-shia-mateen-charbonneau (read 2026-11-10)."
+    needs_review: true
+
+  - id: ramzan-sabir
+    name: "Ramzan Sabir"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/karbala-chain-events (read 2026-11-10)."
+    needs_review: true
