@@ -1,0 +1,31 @@
+id: sistani-qa-eid-crescent
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Eid Crescent
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01177/
+language: en
+date: ''
+description: A topic page of questions and answers about sighting the new moon (the crescent) at the start
+  of an Islamic month, including the month of Eid. It has two questions, on how the first day of a month
+  is determined and on what counts as evidence of sighting.
+sample_questions:
+- How do Shias decide when Eid is?
+- How is the start of the Islamic month decided?
+- What counts as seeing the new moon?
+- Why do Eid dates differ between countries?
+headings:
+- islamic-calendar
+- fiqh
+access: free
+location: 'Q&A topic: Eid Crescent'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

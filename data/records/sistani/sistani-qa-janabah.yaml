@@ -1,0 +1,31 @@
+id: sistani-qa-janabah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Janabah
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01229/
+language: en
+date: ''
+description: A topic page of questions and answers about janabah (a state of ritual impurity after sexual
+  activity, which calls for a full ritual wash, ghusl). Questions cover whether sweat is najis (ritually
+  impure), and when a woman or a man enters the state.
+sample_questions:
+- What is janabah?
+- When do I need ghusl janabah?
+- Is sweat najis after intimacy?
+- When does a woman enter janabah?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Janabah'
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

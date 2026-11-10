@@ -1,0 +1,27 @@
+id: sistani-qa-15290
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-games
+level: intermediate
+title: Are playing wrestling, boxing, Taekwando, or Karate as a sport allowed?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01199/#15290
+language: en
+date: ''
+description: A question asking whether playing wrestling, boxing, Taekwondo or Karate as a sport is allowed.
+sample_questions:
+- Can I do martial arts?
+- Is boxing allowed in Islam?
+- Can I do karate or taekwondo?
+headings:
+- music-entertainment
+access: free
+location: Games, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

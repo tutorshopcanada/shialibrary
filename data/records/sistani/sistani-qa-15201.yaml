@@ -1,0 +1,31 @@
+id: sistani-qa-15201
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-insurance
+level: intermediate
+title: A Muslim deliberately torches his insured house so that he may receive compensation from the non-Muslim
+  insurance company. Is he allowed to do this? And is it permissible for him to receive the compensation?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01221/#15201
+language: en
+date: ''
+description: A question about a Muslim who deliberately sets his insured house on fire to receive compensation
+  from a non-Muslim insurance company.
+sample_questions:
+- Can I claim insurance after burning my house?
+- Is insurance fraud okay?
+- Can I take compensation from an insurer?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Insurance, question 1
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

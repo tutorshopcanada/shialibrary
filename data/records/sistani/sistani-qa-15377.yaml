@@ -1,0 +1,28 @@
+id: sistani-qa-15377
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-endowment-waqf
+level: intermediate
+title: Can a person who gives something in waqf appoint a trustee for it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01183/#15377
+language: en
+date: ''
+description: A question about whether a person who gives property as waqf (an endowment) can appoint a
+  trustee for it.
+sample_questions:
+- Can I choose a trustee for my waqf?
+- Who can be the trustee of a waqf?
+- Can the donor appoint a manager for waqf?
+headings:
+- transactions-work
+access: free
+location: Endowment - Waqf, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

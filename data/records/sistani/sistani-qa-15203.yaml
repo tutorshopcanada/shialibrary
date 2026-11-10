@@ -1,0 +1,31 @@
+id: sistani-qa-15203
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-insurance
+level: intermediate
+title: A Muslim in the West claims that he used to drive in his country for many years and supports his
+  claim with a document from a given source so that he gets a preferable rate for his insurance premium....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01221/#15203
+language: en
+date: ''
+description: A question about a Muslim in the West who supports a claim of years of driving with a document
+  in order to get a lower insurance premium, including through equivocation (tawriya).
+sample_questions:
+- Can I change facts on an insurance form?
+- Can I lie about driving history?
+- Can I help someone give wrong insurance information?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Insurance, question 3
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

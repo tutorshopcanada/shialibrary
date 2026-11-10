@@ -1,0 +1,31 @@
+id: sistani-qa-15129
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-lottery
+level: intermediate
+title: '[Lottery] is a well-known game in America and is the closest thing to [yanasib], if it is not
+  exactly the same....'
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01240/#15129
+language: en
+date: ''
+description: A question about selling lottery tickets with special machines in America, with the justification
+  of taking wealth out of the hands of unbelievers.
+sample_questions:
+- Can I sell lottery tickets in America?
+- Can I run a lottery machine?
+- Is selling lottery to non-Muslims allowed?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: Lottery, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

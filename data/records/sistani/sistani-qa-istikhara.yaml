@@ -1,0 +1,32 @@
+id: sistani-qa-istikhara
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Istikhara
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01216/
+language: en
+date: ''
+description: A topic page of questions and answers about istikhara (a practice of seeking guidance from
+  Allah before a decision). Questions cover its basis in the shari'ah, repeating it, when it is used,
+  and what to do if it is said to come out badly for a marriage proposal.
+sample_questions:
+- What is istikhara?
+- When should I do istikhara?
+- Can I repeat istikhara?
+- What if istikhara comes out bad?
+- Do I have to do istikhara for marriage?
+headings:
+- spirituality
+- fiqh
+access: free
+location: 'Q&A topic: Istikhara'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

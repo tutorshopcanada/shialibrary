@@ -1,0 +1,31 @@
+id: sistani-qa-15383
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-legal-issues
+level: intermediate
+title: A person has entered a country as a visitor and his passport was stamped that he was not allowed
+  to work. If he works illegally and gets the money 'under the table', is it halal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01179/#15383
+language: en
+date: ''
+description: A question about a visitor whose passport is stamped as not allowed to work and who works
+  illegally for cash, asking whether the money is halal (lawful).
+sample_questions:
+- Can I work illegally on a visitor visa?
+- Is money from illegal work halal?
+- Can I work cash in hand?
+headings:
+- social-conduct-rulings
+- muslims-in-west
+access: free
+location: Legal Issues, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

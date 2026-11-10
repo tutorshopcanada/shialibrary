@@ -1,0 +1,31 @@
+id: sistani-qa-15202
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-insurance
+level: intermediate
+title: Is it permissible to cheat insurance companies in non-Muslim countries when one is confident that
+  it would not tarnish the image of Islam and Muslims?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01221/#15202
+language: en
+date: ''
+description: A question about cheating insurance companies in non-Muslim countries when one is confident
+  it will not tarnish the image of Islam.
+sample_questions:
+- Can I cheat an insurance company?
+- Is insurance fraud allowed in the West?
+- Can I lie to an insurer?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Insurance, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

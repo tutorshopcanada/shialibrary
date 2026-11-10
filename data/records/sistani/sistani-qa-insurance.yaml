@@ -1,0 +1,31 @@
+id: sistani-qa-insurance
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Insurance
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01221/
+language: en
+date: ''
+description: A topic page of questions and answers about insurance. Questions cover claiming compensation
+  from insurance companies, giving false information to insurers in non-Muslim countries, and life insurance.
+sample_questions:
+- Is life insurance allowed?
+- Can I make an insurance claim?
+- Can I give false information to an insurer?
+- Can I get car insurance?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: 'Q&A topic: Insurance'
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

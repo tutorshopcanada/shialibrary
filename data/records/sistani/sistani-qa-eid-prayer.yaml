@@ -1,0 +1,31 @@
+id: sistani-qa-eid-prayer
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Eid Prayer
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01180/
+language: en
+date: ''
+description: A topic page of questions and answers about the Eid prayer, the special congregational prayer
+  held on Eid al-Fitr (the festival after Ramadan) and Eid al-Adha. Questions cover its timing, who leads
+  it, joining late, praying it alone, and its relation to Friday prayer.
+sample_questions:
+- How do Shias pray Eid prayer?
+- When is Eid prayer?
+- Can I pray Eid prayer at home?
+- What if Eid falls on a Friday?
+- Who can lead Eid prayer?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Eid Prayer'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

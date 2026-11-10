@@ -1,0 +1,30 @@
+id: sistani-qa-14866
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hajj-pilgrimage
+level: intermediate
+title: Is it permissible to offer congregational prayers behind a Sunni prayer leader during the pilgrimage
+  in Haram of Mecca and Medina?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01206/#14866
+language: en
+date: ''
+description: A question asking about praying in congregation behind a Sunni prayer leader during the pilgrimage
+  in the Haram of Mecca and Medina.
+sample_questions:
+- Can I pray behind a Sunni imam at hajj?
+- Can I join Sunni prayers in Mecca?
+- Do Shias pray with Sunnis at the Haram?
+headings:
+- hajj
+access: free
+location: Hajj - Pilgrimage, question 1
+needs_review: true
+review_note: Touches on Shia-Sunni practice; sensitive, so a reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

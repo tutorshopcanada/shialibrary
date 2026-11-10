@@ -1,0 +1,28 @@
+id: sistani-qa-15365
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friendship
+level: intermediate
+title: Is it permissible for a boy of fifteen years to have a girlfriend?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01186/#15365
+language: en
+date: ''
+description: A question asking about a fifteen-year-old boy having a girlfriend.
+sample_questions:
+- Can a teenager have a girlfriend?
+- Is dating allowed for young people?
+- Can a 15 year old have a girlfriend?
+headings:
+- social-conduct-rulings
+access: free
+location: Friendship, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

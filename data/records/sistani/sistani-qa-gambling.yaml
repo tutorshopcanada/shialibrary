@@ -1,0 +1,30 @@
+id: sistani-qa-gambling
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Gambling
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01202/
+language: en
+date: ''
+description: A topic page of questions and answers about gambling and games of chance. Questions cover betting on horse races, which games fall under the rules, trading in chess, cards and similar items, dice, and online games with or without betting.
+sample_questions:
+- What is gambling in Islam?
+- Can I play card games?
+- Can I bet on a horse race?
+- Can I play Monopoly?
+- Are online games of chance allowed?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: 'Q&A topic: Gambling'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

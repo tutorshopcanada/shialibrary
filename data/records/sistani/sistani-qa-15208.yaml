@@ -1,0 +1,30 @@
+id: sistani-qa-15208
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-interest
+level: intermediate
+title: If I know that the bank will give me interest even without stipulating the conditions, is it permissible
+  for me to deposit in a savings account that takes the form of a term-deposit?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01220/#15208
+language: en
+date: ''
+description: A question about depositing money in a term-deposit savings account when the bank will give
+  interest even without stating it as a condition.
+sample_questions:
+- Can I use a savings account?
+- Can I put money in a term deposit?
+- Is bank interest on savings okay?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Interest, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

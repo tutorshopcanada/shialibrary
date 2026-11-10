@@ -1,0 +1,29 @@
+id: sistani-qa-15368
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friendship
+level: intermediate
+title: Is it permissible to exchange greetings and gifts with a non-Muslim, if he is a neighbour or a
+  co-worker, etc.?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01186/#15368
+language: en
+date: ''
+description: A question about exchanging greetings and gifts with a non-Muslim who is a neighbour or co-worker.
+sample_questions:
+- Can I greet my non-Muslim neighbour?
+- Can I give gifts to non-Muslim co-workers?
+- Can I accept a gift from a non-Muslim?
+headings:
+- social-conduct-rulings
+access: free
+location: Friendship, question 3
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

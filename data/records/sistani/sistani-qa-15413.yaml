@@ -1,0 +1,28 @@
+id: sistani-qa-15413
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eid-prayer
+level: intermediate
+title: If Eid al-Fitr coincided with the day of Friday, can we pray both Friday and Eid prayers?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01180/#15413
+language: en
+date: ''
+description: A question about the Eid prayer and Friday prayer when Eid al-Fitr (the festival after Ramadan)
+  falls on a Friday.
+sample_questions:
+- What if Eid is on a Friday?
+- Do we pray Jumu'ah and Eid prayer together?
+- Eid on Friday, what do I pray?
+headings:
+- prayer
+access: free
+location: Eid Prayer, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-hajj-ability
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Hajj - Ability
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02763/
+language: en
+date: ''
+description: A topic page of questions and answers about the ability to perform hajj (the pilgrimage to
+  Mecca). Questions cover the conditions of being financially and physically able, hajj while owing loan
+  installments, and hajj compared with marriage or exams.
+sample_questions:
+- Who must go for hajj?
+- How do I know if I'm able to go to hajj?
+- Can I do hajj if I have a loan?
+- Should I do hajj or marry first?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Hajj - Ability'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

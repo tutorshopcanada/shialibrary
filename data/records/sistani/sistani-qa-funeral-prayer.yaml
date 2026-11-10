@@ -1,0 +1,30 @@
+id: sistani-qa-funeral-prayer
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Funeral Prayer
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01193/
+language: en
+date: ''
+description: A topic page with one question and answer about the funeral prayer (the prayer for the dead).
+  The question asks about mustahab (recommended) acts after a funeral ceremony.
+sample_questions:
+- What is funeral prayer?
+- What should I do after a funeral?
+- What are recommended acts after a funeral?
+- How do Shias pray for the dead?
+headings:
+- death-burial
+- prayer
+access: free
+location: 'Q&A topic: Funeral Prayer'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

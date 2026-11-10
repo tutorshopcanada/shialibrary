@@ -1,0 +1,30 @@
+id: sistani-qa-investment
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Investment
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01227/
+language: en
+date: ''
+description: A topic page of questions and answers about investment and loans. Questions cover investing
+  in companies with partly impermissible business, repaying a loan when the value of money changes, and
+  investing in the stock market.
+sample_questions:
+- Can I invest in the stock market?
+- Can I buy shares in a company that sells alcohol?
+- How do I repay a loan if money loses value?
+- Is investing allowed in Islam?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Investment'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

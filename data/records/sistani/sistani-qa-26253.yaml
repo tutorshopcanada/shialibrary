@@ -1,0 +1,27 @@
+id: sistani-qa-26253
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eid-prayer
+level: intermediate
+title: Can an Imam of prayer, lead two separate Eid prayers?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01180/#26253
+language: en
+date: ''
+description: A question asking whether one imam (prayer leader) can lead two separate Eid prayers.
+sample_questions:
+- Can an imam lead Eid prayer twice?
+- Can one person lead two Eid prayers?
+- Can two Eid prayers be held with the same imam?
+headings:
+- prayer
+access: free
+location: Eid Prayer, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

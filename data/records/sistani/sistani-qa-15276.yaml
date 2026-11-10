@@ -1,0 +1,28 @@
+id: sistani-qa-15276
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gelatin
+level: intermediate
+title: What is your ruling on having foods that contain gelatin?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01201/#15276
+language: en
+date: ''
+description: A question asking about the ruling on eating foods that contain gelatin (a setting agent
+  made from animal parts).
+sample_questions:
+- Is gelatin halal?
+- Can I eat gummy sweets?
+- What about foods with gelatin?
+headings:
+- food-drink
+access: free
+location: Gelatin, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

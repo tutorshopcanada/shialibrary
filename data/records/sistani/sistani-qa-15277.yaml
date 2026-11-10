@@ -1,0 +1,30 @@
+id: sistani-qa-15277
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gifts
+level: intermediate
+title: If a person gives me a gift from which he has not paid Khums, is it necessary for me to pay Khums
+  on it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01197/#15277
+language: en
+date: ''
+description: A question about whether khums (a religious payment on wealth) must be paid on a gift when
+  the giver has not paid khums on it.
+sample_questions:
+- Do I pay khums on a gift?
+- What if the giver didn't pay khums?
+- Is a gift from someone who didn't pay khums okay?
+headings:
+- transactions-work
+- khums-zakat
+access: free
+location: Gifts, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

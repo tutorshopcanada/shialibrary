@@ -1,0 +1,31 @@
+id: sistani-qa-interest
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Interest
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01220/
+language: en
+date: ''
+description: A topic page of questions and answers about interest (riba). Questions cover loans from non-Muslim
+  banks, taking interest from non-believers, savings accounts and term deposits, and Muslim banks.
+sample_questions:
+- Is bank interest allowed?
+- Can I take a loan from a bank?
+- Can I put money in a savings account?
+- What is riba?
+- Can I take interest from non-Muslims?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: 'Q&A topic: Interest'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

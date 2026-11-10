@@ -1,0 +1,28 @@
+id: sistani-qa-15274
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gambling
+level: intermediate
+title: Is it permissible to play with a dice on its own?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01202/#15274
+language: en
+date: ''
+description: A question asking about playing with a dice on its own.
+sample_questions:
+- Can I play with a dice?
+- Are dice okay?
+- Is rolling dice allowed?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: Gambling, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

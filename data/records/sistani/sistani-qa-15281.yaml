@@ -1,0 +1,28 @@
+id: sistani-qa-15281
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-films-and-movies
+level: intermediate
+title: What is the ruling about watching films with sexual content?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01195/#15281
+language: en
+date: ''
+description: A question asking about the ruling on watching films with sexual content.
+sample_questions:
+- Can I watch movies with sexual scenes?
+- What are the rules for films?
+- Is watching adult films allowed?
+headings:
+- music-entertainment
+access: free
+location: Films and movies, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

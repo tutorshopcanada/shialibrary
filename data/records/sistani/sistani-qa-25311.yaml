@@ -1,0 +1,27 @@
+id: sistani-qa-25311
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fish
+level: intermediate
+title: Can we eat a fish that has died in water?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01184/#25311
+language: en
+date: ''
+description: A question about eating a fish that has died in the water.
+sample_questions:
+- Can I eat fish that died in the water?
+- Is a dead fish halal?
+- What if the fish died by itself?
+headings:
+- food-drink
+access: free
+location: Fish, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

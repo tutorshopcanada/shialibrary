@@ -1,0 +1,31 @@
+id: sistani-qa-holy-names
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Holy Names
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01214/
+language: en
+date: ''
+description: A topic page of questions and answers about papers and items carrying the name of Allah or
+  other holy figures, such as wedding invitation cards. Both questions ask how such papers may be disposed
+  of, including by recycling.
+sample_questions:
+- What do I do with paper that has Allah's name?
+- Can I recycle papers with holy names?
+- How do I dispose of wedding cards with Allah's name?
+- What should I do with old religious papers?
+headings:
+- social-conduct-rulings
+- fiqh
+access: free
+location: 'Q&A topic: Holy Names'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

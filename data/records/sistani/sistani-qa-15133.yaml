@@ -1,0 +1,31 @@
+id: sistani-qa-15133
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-loan
+level: intermediate
+title: Some trading and manufacturing companies get loans from private or state banks in Muslim countries
+  and also from other [non-Muslim] institutions with the condition of interest; and they also earn interest
+  on the deposits they leave in those banks....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01239/#15133
+language: en
+date: ''
+description: A question about trading and manufacturing companies that take interest-based loans and earn
+  interest on deposits, asking whether one may buy shares in them or become their partner.
+sample_questions:
+- Can I buy shares in a company with interest loans?
+- Can I partner with a company that takes loans?
+- Are shares in banks-linked companies okay?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Loan, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

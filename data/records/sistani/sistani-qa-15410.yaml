@@ -1,0 +1,29 @@
+id: sistani-qa-15410
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ejaculation
+level: intermediate
+title: Does Ghusl Janaba become obligatory immediately when ejaculation takes place?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01181/#15410
+language: en
+date: ''
+description: A question asking whether ghusl janabah (the full ritual wash after sexual impurity) becomes
+  required immediately when ejaculation happens.
+sample_questions:
+- When do I have to do ghusl janabah?
+- Do I need ghusl right after ejaculation?
+- Is ghusl needed immediately?
+headings:
+- purity
+access: free
+location: Ejaculation, question 2
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

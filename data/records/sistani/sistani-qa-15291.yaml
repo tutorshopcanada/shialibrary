@@ -1,0 +1,27 @@
+id: sistani-qa-15291
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-games
+level: intermediate
+title: Is it permissible to watch or engage in sports games?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01199/#15291
+language: en
+date: ''
+description: A question asking whether one may watch or take part in sports games.
+sample_questions:
+- Can Shias play sports?
+- Can I watch sports?
+- Are sports games allowed?
+headings:
+- music-entertainment
+access: free
+location: Games, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

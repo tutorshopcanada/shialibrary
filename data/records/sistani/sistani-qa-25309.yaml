@@ -1,0 +1,28 @@
+id: sistani-qa-25309
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ejaculation
+level: intermediate
+title: Is precum impure? Precum is the pre-ejaculate fluid.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01181/#25309
+language: en
+date: ''
+description: A question asking whether pre-ejaculate fluid (precum) is najis (ritually impure).
+sample_questions:
+- Is precum najis?
+- Does pre-ejaculate fluid make me impure?
+- What is the status of precum?
+headings:
+- purity
+access: free
+location: Ejaculation, question 3
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

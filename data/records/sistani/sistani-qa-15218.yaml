@@ -1,0 +1,29 @@
+id: sistani-qa-15218
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-inheritance
+level: intermediate
+title: Does a temporary wife inherit her husband? What about the child from the temporary marriage?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01217/#15218
+language: en
+date: ''
+description: A question asking whether a temporary wife inherits from her husband, and about the child
+  of a temporary marriage.
+sample_questions:
+- Does a temporary wife inherit?
+- Does a child of mutah inherit?
+- What is inheritance in temporary marriage?
+headings:
+- marriage-family
+- transactions-work
+access: free
+location: Inheritance, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

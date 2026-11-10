@@ -1,0 +1,29 @@
+id: sistani-qa-horse-riding
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Horse Riding
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01211/
+language: en
+date: ''
+description: A topic page with one question and answer about women riding horses.
+sample_questions:
+- Can women ride horses?
+- Can a girl go horse riding?
+- Is horse riding allowed for women?
+- Can women do sports like riding?
+headings:
+- youth-rulings
+- women-rulings
+access: free
+location: 'Q&A topic: Horse Riding'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

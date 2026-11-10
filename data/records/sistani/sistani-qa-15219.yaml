@@ -1,0 +1,30 @@
+id: sistani-qa-15219
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-inheritance
+level: intermediate
+title: My aunt had received a house from her mother, brothers and sisters by mutual consent from their
+  inheritances....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01217/#15219
+language: en
+date: ''
+description: A worked inheritance question asking how a deceased woman's estate is shared among her married
+  daughter, her son's widow and two grandsons.
+sample_questions:
+- How is an estate divided among relatives?
+- Who inherits from an aunt?
+- How much does a grandson inherit?
+headings:
+- marriage-family
+- transactions-work
+access: free
+location: Inheritance, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

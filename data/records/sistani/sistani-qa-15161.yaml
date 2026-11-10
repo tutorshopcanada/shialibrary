@@ -1,0 +1,28 @@
+id: sistani-qa-15161
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-janabah
+level: intermediate
+title: Is the sweat of sexual intercourse Najis?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01229/#15161
+language: en
+date: ''
+description: A question asking whether the sweat of sexual intercourse is najis (ritually impure).
+sample_questions:
+- Is sweat after intimacy najis?
+- Does sweat from intercourse make clothes impure?
+- What is the status of sweat in janabah?
+headings:
+- purity
+access: free
+location: Janabah, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

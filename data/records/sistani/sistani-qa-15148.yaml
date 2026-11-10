@@ -1,0 +1,29 @@
+id: sistani-qa-15148
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-kissing
+level: intermediate
+title: Can a man kiss another man?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01233/#15148
+language: en
+date: ''
+description: A question asking whether one man may kiss another man.
+sample_questions:
+- Can men kiss each other?
+- Can I kiss my friend?
+- Is kissing between men allowed?
+headings:
+- social-conduct-rulings
+- marriage-family
+access: free
+location: Kissing, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

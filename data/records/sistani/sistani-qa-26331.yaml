@@ -1,0 +1,28 @@
+id: sistani-qa-26331
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-haydh-menstruation
+level: intermediate
+title: Up to what age does the ruling of Haydh apply for women?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01212/#26331
+language: en
+date: ''
+description: A question asking up to what age the rulings of haydh apply to women.
+sample_questions:
+- When does haydh end in life?
+- At what age does menopause change the rules?
+- Up to what age is haydh?
+headings:
+- women-rulings
+- purity
+access: free
+location: Haydh - Menstruation / Monthly Period, question 12
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-15504
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gold
+level: intermediate
+title: 1. If a man's watch strap is made of gold, is it permissible for him to wear it and perform prayers
+  while wearing it? 2....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01196/#15504
+language: en
+date: ''
+description: A multi-part question about men wearing watches that have gold straps, gold parts, gold plating
+  or a gold engine, and about praying while wearing them.
+sample_questions:
+- Can a man wear a gold watch?
+- Can I pray in a watch with gold parts?
+- What about a gold-plated watch?
+- Can men wear watches with gold details?
+headings:
+- dress-appearance
+access: free
+location: Gold, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

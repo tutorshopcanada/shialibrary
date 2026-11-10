@@ -1,0 +1,28 @@
+id: sistani-qa-15160
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-justice
+level: intermediate
+title: Can I follow a prayer leader, if I do not know that he is Adil?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01232/#15160
+language: en
+date: ''
+description: A question about following a prayer leader when one does not know whether he is 'adil (just).
+sample_questions:
+- Can I pray behind an imam I don't know?
+- What if I don't know the imam is just?
+- Must the imam be 'adil?
+headings:
+- fiqh
+- prayer
+access: free
+location: Justice, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

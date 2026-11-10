@@ -1,0 +1,32 @@
+id: sistani-qa-looking
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Looking
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01241/
+language: en
+date: ''
+description: A topic page of questions and answers about looking at members of the opposite sex. Questions
+  cover mixed swimming pools, looking at one's mother's face, and looking at a woman one may marry in
+  order to judge suitability.
+sample_questions:
+- Can I look at a woman I might marry?
+- Can I go to a mixed pool?
+- Can I look at members of the opposite sex?
+- Is looking at my mother worship?
+headings:
+- social-conduct-rulings
+- marriage-family
+access: free
+location: 'Q&A topic: Looking'
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

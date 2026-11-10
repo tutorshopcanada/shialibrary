@@ -1,0 +1,28 @@
+id: sistani-qa-15163
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-janabah
+level: intermediate
+title: When does a man enter the state of Janabah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01229/#15163
+language: en
+date: ''
+description: A question asking when a man enters the state of janabah.
+sample_questions:
+- When does a man become in janabah?
+- What causes janabah?
+- When do I need ghusl janabah?
+headings:
+- purity
+access: free
+location: Janabah, question 3
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

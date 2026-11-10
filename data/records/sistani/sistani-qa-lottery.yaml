@@ -1,0 +1,30 @@
+id: sistani-qa-lottery
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Lottery
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01240/
+language: en
+date: ''
+description: 'A topic page of questions and answers about lotteries. Both questions ask about selling
+  lottery tickets: one from a person at an exchange office, and one about lottery machines in America.'
+sample_questions:
+- Can I sell lottery tickets?
+- Is the lottery allowed in Islam?
+- Can I work where lottery is sold?
+- Can I buy a lottery ticket?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: 'Q&A topic: Lottery'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

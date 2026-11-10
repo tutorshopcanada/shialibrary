@@ -1,0 +1,29 @@
+id: sistani-qa-15136
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-lying
+level: intermediate
+title: Can I lie to my future husband about my past?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01238/#15136
+language: en
+date: ''
+description: A question asking whether a woman may lie to her future husband about her past.
+sample_questions:
+- Can I lie to my future husband?
+- Do I have to tell my fiancé about my past?
+- Can I hide my past before marriage?
+headings:
+- social-conduct-rulings
+- ethics
+access: free
+location: Lying, question 2
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

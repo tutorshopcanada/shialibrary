@@ -1,0 +1,31 @@
+id: sistani-qa-friendship
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Friendship
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01186/
+language: en
+date: ''
+description: A topic page of questions and answers about friendships, including friendships between boys
+  and girls and friendships with non-Muslims. Questions cover exchanging greetings and gifts with neighbours
+  and co-workers and expressing feelings to someone one may marry.
+sample_questions:
+- Can I have a non-Muslim friend?
+- Can a teenager have a girlfriend?
+- Can I give gifts to non-Muslim neighbours?
+- Can I say hello to non-Muslims?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Friendship'
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

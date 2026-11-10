@@ -1,0 +1,33 @@
+id: sistani-qa-legal-issues
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Legal Issues
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01179/
+language: en
+date: ''
+description: A topic page of questions and answers about legal matters, mostly for Muslims in the West.
+  Questions cover tampering with an electricity meter, working illegally on a visitor passport, giving
+  false information to government departments, and taking from non-believers.
+sample_questions:
+- Can I break the law in a non-Muslim country?
+- Can I work illegally?
+- Can I lie to the government?
+- Can I steal electricity?
+- Can I cheat non-Muslims?
+headings:
+- social-conduct-rulings
+- muslims-in-west
+access: free
+location: 'Q&A topic: Legal Issues'
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

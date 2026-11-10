@@ -1,0 +1,30 @@
+id: sistani-qa-15376
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-endowment-waqf
+level: intermediate
+title: I am searching for information regarding the governing of Waqf and the terms by which such property
+  under the Waqf can be distributed and whether there has to be a trustee for a Waqf property....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01183/#15376
+language: en
+date: ''
+description: A question asking for information on how a waqf is governed, the terms of its distribution,
+  and whether it needs a trustee.
+sample_questions:
+- How is a waqf managed?
+- Does waqf need a trustee?
+- How is waqf property distributed?
+- Who runs a waqf?
+headings:
+- transactions-work
+access: free
+location: Endowment - Waqf, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

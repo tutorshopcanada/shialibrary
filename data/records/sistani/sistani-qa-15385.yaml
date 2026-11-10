@@ -1,0 +1,29 @@
+id: sistani-qa-15385
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-legal-issues
+level: intermediate
+title: Is it permissible to steal from the unbelievers in their countries, or defraud them?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01179/#15385
+language: en
+date: ''
+description: A question asking whether one may steal from, or defraud, unbelievers in their countries.
+sample_questions:
+- Can I steal from non-Muslims?
+- Can I cheat non-Muslims?
+- Is fraud against non-believers allowed?
+headings:
+- social-conduct-rulings
+- muslims-in-west
+access: free
+location: Legal Issues, question 4
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

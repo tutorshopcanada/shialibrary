@@ -1,0 +1,29 @@
+id: sistani-qa-15250
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hajj-pilgrimage
+level: intermediate
+title: It has been said that some parts or the entire area of slaughtering in Mina is outside the boundary.
+  Is it therefore obligatory upon us to ascertain the fact before the slaughtering?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01206/#15250
+language: en
+date: ''
+description: A question about whether pilgrims must check that the slaughtering area in Mina is within
+  the required boundary.
+sample_questions:
+- How do I know I'm in the right slaughter area?
+- Must I check Mina's boundary?
+- What if the slaughter area is outside the boundary?
+headings:
+- hajj
+access: free
+location: Hajj - Pilgrimage, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'
