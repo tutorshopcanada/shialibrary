@@ -599,3 +599,85 @@ scholars:
     alt_names: []
     notes: "Named as author on https://al-islam.org/articles/history-and-philosophy-aza-imam-husayn-bashir-hassanali-rahim (read 2026-11-10)."
     needs_review: true
+
+  - id: farhat-fatima
+    name: "Syeda Farhat Fatima"
+    role: author
+    alt_names:
+      - "Dr. Farhat Fatima"
+    notes: "Named as author on https://al-islam.org/articles/allahs-bounty-baqiyatullah-syeda-farhat-fatima (read 2026-11-10); the byline reads 'By Dr. Farhat Fatima'."
+    needs_review: true
+
+  - id: muhammad-rida-hakimi
+    name: "Muhammad Rida Hakimi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/ashura-tenth-muharram-muhammad-rida-hakimi (read 2026-11-10); the page also shows the name Hasan Muhammad Al-Najafi without stating his role."
+    needs_review: true
+
+  - id: abbas-ali-shameli
+    name: "Abbas Ali Shameli"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/engendered-islamic-culture-development-abbas-ali-shameli (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-taqi-jafari
+    name: "Muhammad Taqi Ja'fari"
+    role: author
+    alt_names:
+      - "Allamah Muhammad Taqi Ja'fari"
+    notes: "Named as author on https://al-islam.org/articles/essence-evolutionary-culture-muhammad-taqi-jafari (read 2026-11-10); the page header gives 'Muhammad Taqi Ja'fari' and the byline 'Allamah Muhammad Taqi Ja'fari'."
+    needs_review: true
+
+  - id: askari-hussain
+    name: "Askari Hussain"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/holy-month-ramadhan-brief-poem-askari-hussain (read 2026-11-10); the page describes him as a student in the 2nd grade of an Islamic school and says it was contributed by Shaheen Khan."
+    needs_review: true
+
+  - id: zeeshan-haider-jawadi
+    name: "Syed Zeeshan Haider Jawadi"
+    role: author
+    alt_names:
+      - "Allama Zeeshan Haider Jawadi"
+    notes: "Named as author on https://al-islam.org/articles/importance-dua-islam-and-method-supplicating-syed-zeeshan-haider-jawadi (read 2026-11-10); the page calls the text an extract from Nuqoosh Ismat."
+    needs_review: true
+
+  - id: mehdi-golshani
+    name: "Mehdi Golshani"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/modern-science-and-challenges-some-islamic-theological-doctrines-mehdi-golshani (read 2026-11-10)."
+    needs_review: true
+
+  - id: fatemah-meghji
+    name: "Fatemah Meghji"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/opening-our-eyes-light-quran-fatemah-meghji (read 2026-11-10); the page says it was originally published in Al-Sidrah."
+    needs_review: true
+
+  - id: abd-al-husayn-amini
+    name: "Abd Al-Husayn Amini"
+    role: author
+    alt_names:
+      - "al-'Allama al-Sheikh Abd al-Husayn Amini"
+    notes: "Named as author on https://al-islam.org/articles/our-husayn-mourning-him-and-his-karbala-abd-al-husayn-amini (read 2026-11-10); translated by Shaun Astarabadi. Not assumed to be the same person as Ibrahim Amini."
+    needs_review: true
+
+  - id: mohsin-jaffery
+    name: "Mohsin Jaffery"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/satan-angel-or-not-grammatical-analysis-quran-7-11-mohsin-jaffery (read 2026-11-10)."
+    needs_review: true
+
+  - id: saleem-bhimji
+    name: "Saleem Bhimji"
+    role: author
+    alt_names:
+      - "Shaikh Saleem Bhimji"
+    notes: "Named as author on https://al-islam.org/articles/spiritual-fitness-saleem-bhimji and https://al-islam.org/articles/spiritual-migration-saleem-bhimji (read 2026-11-10); the article text gives 'Shaikh Saleem Bhimji'."
+    needs_review: true
