@@ -1,0 +1,31 @@
+id: sistani-qa-15564
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: I am running a store and I have non-Muslim customers who want me to sell them alcoholic drinks.
+  Can a Muslim buy and sell intoxicating alcohol to non-Muslims?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15564
+language: en
+date: ''
+description: A question from a store owner whose non-Muslim customers want alcoholic drinks, asking whether
+  a Muslim can buy and sell intoxicating alcohol to non-Muslims.
+sample_questions:
+- Can I sell alcohol to non-Muslims?
+- Can a Muslim shop sell alcohol?
+- Is selling alcohol to non-Muslims allowed?
+- Can I run a store that sells drinks with alcohol?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 6
+needs_review: true
+review_note: Concerns dealings with non-Muslims in business; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

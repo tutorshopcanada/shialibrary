@@ -1,0 +1,31 @@
+id: sistani-qa-15373
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friday-prayer
+level: intermediate
+title: Is it correct to say that the Friday prayer is of two Rak`ats, just like Fajr prayer, however,
+  after Surat-al-Hamd for each Rak`ah we read Surat al-Jum'ah (in the first Rak`ah) and Surat al-Munafiqun
+  (in the second Rak`ah). Is this correct?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/#15373
+language: en
+date: ''
+description: A question asking whether it is correct that Friday prayer has two rak'ats like Fajr, with
+  Surat al-Jum'ah and Surat al-Munafiqun recited after al-Hamd.
+sample_questions:
+- How many rakats is Friday prayer?
+- Which surahs are read in Jumuah prayer?
+- What is the format of the Friday prayer?
+- Is Jumuah prayer like Fajr?
+headings:
+- prayer
+access: free
+location: Friday Prayer (Jumu'ah), question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

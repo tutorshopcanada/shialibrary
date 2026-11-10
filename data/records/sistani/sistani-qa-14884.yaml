@@ -1,0 +1,27 @@
+id: sistani-qa-14884
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-zakat
+level: intermediate
+title: Is it permissible for a wife to pay Zakat to her husband, if its obligatory upon her to pay Zakat?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01358/#14884
+language: en
+date: ''
+description: A question asking whether a wife who owes zakat is allowed to pay it to her husband.
+sample_questions:
+- Can a wife give zakat to her husband?
+- Who can't I give zakat to?
+- Can I pay zakat to my spouse?
+headings:
+- khums-zakat
+access: free
+location: Zakat, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

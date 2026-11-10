@@ -148,10 +148,12 @@
   },
   {
    "query": "what is khums",
-   "expect_any": [],
-   "expect_none": true,
+   "expect_any": [
+    "sistani-qa-khums"
+   ],
+   "expect_none": false,
    "expect_group": "any",
-   "note": "nothing cataloged on khums yet; should fall back honestly. Change to expect_any once records exist."
+   "note": "topic page should lead; a beginner explainer should outrank it once cataloged"
   },
   {
    "query": "who is the mahdi",
@@ -211,12 +213,15 @@
    "query": "hadith",
    "expect_any": [
     "thaqalayn-al-kafi-vol-1",
+    "thaqalayn-al-kafi-vol-6",
+    "thaqalayn-al-kafi-vol-7",
+    "thaqalayn-tahdhib-al-ahkam-vol-1",
     "thaqalayn-al-tawhid",
     "thaqalayn-al-khisal"
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "parent heading returns child-heading records"
+   "note": "parent heading returns child-heading records; any hadith volume near the top passes"
   },
   {
    "query": "why do shia cry on ashura",
@@ -298,6 +303,36 @@
    "expect_none": true,
    "expect_group": "any",
    "note": "nonsense query"
+  },
+  {
+   "query": "tahdhib al-ahkam",
+   "expect_any": [
+    "thaqalayn-tahdhib-al-ahkam-vol-1"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": ""
+  },
+  {
+   "query": "man la yahduruhu al-faqih",
+   "expect_any": [
+    "thaqalayn-man-la-yahduruh-al-faqih-vol-1"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "spelling variant via alt terms"
+  },
+  {
+   "query": "hadith about fasting",
+   "expect_any": [
+    "thaqalayn-al-kafi-vol-4",
+    "thaqalayn-man-la-yahduruh-al-faqih-vol-2",
+    "thaqalayn-tahdhib-al-ahkam-vol-4",
+    "thaqalayn-al-kafi-vol-3"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "legal-hadith heading; exact volume depends on its description"
   }
  ]
 }

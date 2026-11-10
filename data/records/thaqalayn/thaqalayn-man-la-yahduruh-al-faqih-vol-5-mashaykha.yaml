@@ -1,0 +1,34 @@
+id: thaqalayn-man-la-yahduruh-al-faqih-vol-5-mashaykha
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Man Lā Yaḥḍuruh al-Faqīh (Vol. 5 Mashaykha): He who is without Jurist'
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/38
+language: en
+date: ''
+description: Volume 5 of 5 (titled 'Mashaykha' on the site) of Man La Yahduruh al-Faqih, a hadith collection compiled
+  by Shaykh al-Saduq, shown with an English translation by Bab Ul Qaim Publications. Its chapter titles are 'clarifications
+  of the transmission chain' (the line of narrators) for many reports. It is a specialist primary source for readers
+  interested in how hadith were passed down.
+sample_questions:
+- What is Man La Yahduruh al-Faqih?
+- What is a transmission chain (isnad) of a hadith?
+- Where can I read the chains of narrators for Al-Faqih?
+- What is the Mashaykha section?
+- Who compiled Man La Yahduruh al-Faqih?
+headings:
+- hadith-collections
+- hadith-sciences
+access: free
+location: Volume 5 of 5
+needs_review: true
+review_note: Volume's chapter titles are all 'Clarification of the Transmission Chain...'; the page does not state what
+  'Mashaykha' means, so heading hadith-sciences is a best guess. Reviewer should confirm.
+cataloged_on: '2026-11-10'

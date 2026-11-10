@@ -1,0 +1,28 @@
+id: sistani-qa-25646
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-khums
+level: intermediate
+title: Is Khums payable on my last year's bank balance?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01234/#25646
+language: en
+date: ''
+description: A question asking whether khums is payable on last year's bank balance.
+sample_questions:
+- Do I pay khums on my bank balance?
+- Is khums due on savings?
+- Is last year's money subject to khums?
+- How does khums work on bank savings?
+headings:
+- khums-zakat
+access: free
+location: Khums, question 11
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

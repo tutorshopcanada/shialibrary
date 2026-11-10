@@ -244,7 +244,6 @@ scholars:
   - id: ali-ibn-babawayh
     name: "ʿAlī ibn Bābawayh"
     role: author
-    alt_names:
-      - "ʿAlī ibn Bābawayh (d. 329 AH)"
+    alt_names: []
     notes: "Named as compiler of Al-Imāma wa'l-Tabṣira min al-Ḥayra on https://thaqalayn.com/book/45, which describes him as the father of Shaykh al-Ṣadūq (verified 2026-11-10)."
     needs_review: true

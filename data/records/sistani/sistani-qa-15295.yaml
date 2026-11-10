@@ -1,0 +1,28 @@
+id: sistani-qa-15295
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ghusl
+level: intermediate
+title: How is a Tartibi (sequential) Ghusl done?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01198/#15295
+language: en
+date: ''
+description: A question asking how a Tartibi (sequential) ghusl is done.
+sample_questions:
+- How do I do ghusl step by step?
+- What is sequential ghusl?
+- How do I perform tartibi ghusl?
+- What are the steps of a ritual bath?
+headings:
+- purity
+access: free
+location: Ghusl - Ritual Bath, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

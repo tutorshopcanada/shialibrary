@@ -1,0 +1,31 @@
+id: sistani-qa-adhan-iqamah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Adhan and Iqamah
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01131/
+language: en
+date: ''
+description: A topic page of questions and answers about the adhan (the call to prayer) and the iqamah
+  (the second call said just before the prayer begins). Questions cover whether they are required, their
+  wording, and saying them when praying at home.
+sample_questions:
+- What is the adhan?
+- What is the iqamah?
+- Do I say the adhan when praying at home?
+- What are the words of the Shia adhan?
+- Is the adhan required before each prayer?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Adhan and Iqamah'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

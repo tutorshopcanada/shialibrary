@@ -1,0 +1,31 @@
+id: sistani-qa-islamic-slaughtering
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Islamic Slaughtering
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01228/
+language: en
+date: ''
+description: A topic page of questions and answers about Islamic slaughtering of animals for meat. Questions
+  cover buying meat in shops, machine slaughter of poultry, and meat labelled halal or slaughtered according
+  to Islamic law in Muslim and non-Muslim countries.
+sample_questions:
+- How do I know if meat is halal?
+- Can I buy halal-labelled meat in a supermarket?
+- Is machine-slaughtered chicken halal?
+- Does the halal label on meat matter?
+- What is Islamic slaughter?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Islamic Slaughtering'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

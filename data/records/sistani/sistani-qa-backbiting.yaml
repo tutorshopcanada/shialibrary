@@ -1,0 +1,31 @@
+id: sistani-qa-backbiting
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Backbiting
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01135/
+language: en
+date: ''
+description: A topic page of questions and answers about backbiting (ghiba or gheebah, speaking about
+  someone in their absence). Questions cover its definition, dealing with people who do it, giving a reference
+  about someone, and putting things right afterwards.
+sample_questions:
+- What is backbiting in Islam?
+- What should I do if someone is backbiting around me?
+- Can I tell someone about a person's faults?
+- How do I seek forgiveness for backbiting?
+- Is gheebah a sin?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Backbiting'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15296
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ghusl
+level: intermediate
+title: Is it necessary to clean the body from impurities before performing an obligatory Ghusl?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01198/#15296
+language: en
+date: ''
+description: A question asking whether the body needs to be cleaned of impurities before performing an
+  obligatory ghusl.
+sample_questions:
+- Do I wash off impurity before ghusl?
+- Should my body be clean before ghusl?
+- Is cleaning needed before a ritual bath?
+headings:
+- purity
+access: free
+location: Ghusl - Ritual Bath, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

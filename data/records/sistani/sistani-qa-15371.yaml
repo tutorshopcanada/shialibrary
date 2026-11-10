@@ -1,0 +1,30 @@
+id: sistani-qa-15371
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friday-prayer
+level: intermediate
+title: Does performing Friday (jumu'ah) prayer compensate for midday (Dhuhr) prayer or not? Is Friday
+  prayer superior to the midday prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/#15371
+language: en
+date: ''
+description: A question asking whether performing Friday prayer replaces the midday (Dhuhr) prayer, and
+  whether Friday prayer is superior to Dhuhr.
+sample_questions:
+- Does Friday prayer replace Dhuhr?
+- Do I pray Dhuhr after Jumuah?
+- Is Jumuah better than Dhuhr?
+- What is the difference between Friday prayer and Dhuhr?
+headings:
+- prayer
+access: free
+location: Friday Prayer (Jumu'ah), question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

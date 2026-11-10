@@ -1,0 +1,35 @@
+id: thaqalayn-maani-al-akhbar
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Maʿānī al-ʾAkhbār: The Meanings of Reports'
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/28
+language: en
+date: ''
+description: A collection of 809 hadith (reported sayings of the Prophet and the Imams) compiled by Shaykh al-Saduq,
+  shown with an English translation by Basel Kadem. The site says it explains about 500 terms and concepts from the Quran,
+  hadith, theology and law, and groups its content into Quranic, legal, theological, ethical and historical hadith. It
+  is a primary source for readers with some background.
+sample_questions:
+- What is Ma'ani al-Akhbar?
+- What is the meaning of Bismillah according to the Imams?
+- What do the Imams say about the meaning of Allah?
+- Who compiled Ma'ani al-Akhbar?
+- Where can I find hadith explaining difficult terms?
+headings:
+- hadith-collections
+- tafsir
+- tawhid
+access: free
+location: ''
+needs_review: true
+review_note: Mixed subjects (Quran, law, theology, ethics, history) with no single fitting heading; closest headings
+  used.
+cataloged_on: '2026-11-10'

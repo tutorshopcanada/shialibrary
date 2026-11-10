@@ -1,0 +1,31 @@
+id: sistani-qa-friday-prayer
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Friday Prayer (Jumu'ah)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/
+language: en
+date: ''
+description: A topic page of questions and answers about Friday (Jumu'ah) congregational prayer. Questions
+  cover whether it is obligatory, how it relates to the midday (Dhuhr) prayer, how it is performed, and
+  holding it in more than one nearby mosque.
+sample_questions:
+- Is Friday prayer required?
+- How many rakats is Jumuah prayer?
+- Does Friday prayer replace Dhuhr?
+- How do Shias pray on Fridays?
+- Can I attend Friday prayer at a Sunni mosque?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Friday Prayer (Jumu''ah)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-15003
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-azadari
+level: intermediate
+title: Is mourning for Imam Hussain and other Infallibles (a.s.) recommended?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01125/#15003
+language: en
+date: ''
+description: A question asking whether mourning for Imam Husayn and the other Infallibles (the Prophet's
+  family held to be free from sin) is recommended.
+sample_questions:
+- Is it recommended to mourn for the Imams?
+- Why do Shias cry for Imam Hussain?
+- Is mourning for Ahlul Bayt encouraged?
+- Should we grieve for the Infallibles?
+headings:
+- fiqh
+- karbala-ashura
+access: free
+location: Azadari (Lamentation), question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

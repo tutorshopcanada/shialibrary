@@ -1,0 +1,30 @@
+id: sistani-qa-15369
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friday-prayer
+level: intermediate
+title: There are two mosques in one city and Friday prayer is held in both of them? Given that they are
+  very close to each other, is the prayer valid?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/#15369
+language: en
+date: ''
+description: A question about two nearby mosques in one city that both hold Friday prayer, asking whether
+  the prayer is valid in that situation.
+sample_questions:
+- Can two mosques hold Friday prayer near each other?
+- Is Jumuah valid in two close mosques?
+- What is the distance between Friday prayers?
+- Are two Friday prayers in one city a problem?
+headings:
+- prayer
+access: free
+location: Friday Prayer (Jumu'ah), question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

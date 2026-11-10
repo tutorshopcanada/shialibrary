@@ -1,0 +1,31 @@
+id: sistani-qa-eating-drinking
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Eating & Drinking
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01178/
+language: en
+date: ''
+description: A topic page of questions and answers about eating and drinking. Questions cover food in
+  Western shops when the ingredients are unknown, gelatin, fish oils, wine vinegar, food handled or cooked
+  by non-Muslims, mushrooms, and food and drink served in other countries.
+sample_questions:
+- Can I eat food if I don't know the ingredients?
+- What about gelatin?
+- Can I eat food cooked by a non-Muslim?
+- Is wine vinegar okay?
+- Is mushroom halal?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Eating & Drinking'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

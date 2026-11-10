@@ -1,0 +1,28 @@
+id: sistani-qa-15401
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eating-drinking
+level: intermediate
+title: What is the ruling about drinking tea or milk or juices served to us in India?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01178/#15401
+language: en
+date: ''
+description: A question about drinking tea, milk or juices that are served in India.
+sample_questions:
+- Can I drink tea served in India?
+- Is juice served by others okay?
+- Can I drink what I'm offered at someone's home?
+headings:
+- food-drink
+access: free
+location: Eating & Drinking, question 9
+needs_review: true
+review_note: The question is short and its context (why drinks served in India raise a question) is unclear;
+  reviewer should confirm.
+cataloged_on: '2026-11-10'

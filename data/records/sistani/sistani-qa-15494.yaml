@@ -1,0 +1,27 @@
+id: sistani-qa-15494
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: What is the ruling about using perfume containing alcohol?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15494
+language: en
+date: ''
+description: A question about using perfume that contains alcohol.
+sample_questions:
+- Can I wear perfume with alcohol?
+- Is alcohol-based perfume okay?
+- What about body spray with alcohol?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

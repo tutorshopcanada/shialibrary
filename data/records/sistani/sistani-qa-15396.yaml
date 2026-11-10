@@ -1,0 +1,28 @@
+id: sistani-qa-15396
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eating-drinking
+level: intermediate
+title: Can we eat the food that has been cooked by a Hindu?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01178/#15396
+language: en
+date: ''
+description: A question asking whether food cooked by a Hindu can be eaten.
+sample_questions:
+- Can I eat food cooked by a Hindu?
+- Can I eat at a Hindu restaurant?
+- Is Hindu-cooked food halal?
+headings:
+- food-drink
+access: free
+location: Eating & Drinking, question 6
+needs_review: true
+review_note: Concerns food prepared by people of another faith; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

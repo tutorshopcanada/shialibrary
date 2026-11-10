@@ -1,0 +1,30 @@
+id: sistani-qa-15280
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-khums
+level: intermediate
+title: If a person acquires wealth without having worked for it , like, if someone gives him a gift, and
+  that wealth exceeds his own annual expenses, does he have to pay Khums from the excess.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01234/#15280
+language: en
+date: ''
+description: A question asking about khums on wealth received without work, such as a gift, that exceeds
+  a person's annual expenses.
+sample_questions:
+- Do I pay khums on a gift?
+- Is khums due on money I didn't earn?
+- Does khums apply to presents or inheritance?
+- What counts as khums-able income?
+headings:
+- khums-zakat
+access: free
+location: Khums, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

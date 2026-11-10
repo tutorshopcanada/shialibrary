@@ -1,0 +1,27 @@
+id: sistani-qa-25644
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-khums
+level: intermediate
+title: Can I give Khums to my parents?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01234/#25644
+language: en
+date: ''
+description: A question asking whether khums can be given to one's parents.
+sample_questions:
+- Can I give khums to my parents?
+- Can khums support my mother and father?
+- Who cannot receive khums?
+headings:
+- khums-zakat
+access: free
+location: Khums, question 9
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

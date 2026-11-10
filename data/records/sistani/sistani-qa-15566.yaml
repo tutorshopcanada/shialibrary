@@ -1,0 +1,30 @@
+id: sistani-qa-15566
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: My question is related to selling and consumption of ice-cream containing less than 0.5% ethanol
+  type of alcohol....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15566
+language: en
+date: ''
+description: A question from an ice-cream business owner asking whether ice-cream made with a syrup containing
+  less than 0.5% ethanol can be sold or eaten.
+sample_questions:
+- Can I eat ice cream with a tiny amount of alcohol?
+- Is trace ethanol in food a problem?
+- Can I sell products with 0.5% alcohol?
+- Does a small amount of alcohol in syrup matter?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -18,14 +18,14 @@ queries:
   - {query: "muslims in the west", expect_any: [sistani-code-of-practice-west], expect_group: exact, note: ""}
   - {query: "turbah", expect_any: [sistani-qa-15488], expect_group: any, note: ""}
   - {query: "fiqh", expect_any: [sistani-qa, sistani-code-of-practice-west], expect_group: any, note: "parent heading returns children"}
-  - {query: "what is khums", expect_none: true, note: "nothing cataloged on khums yet; should fall back honestly. Change to expect_any once records exist."}
+  - {query: "what is khums", expect_any: [sistani-qa-khums], expect_group: any, note: "topic page should lead; a beginner explainer should outrank it once cataloged"}
   - {query: "who is the mahdi", expect_any: [al-islam-fazail-ul-mahdi], expect_group: any, note: ""}
   - {query: "al kafi", expect_any: [thaqalayn-al-kafi-vol-1], expect_group: exact, note: "diacritics stripped: Al-Kāfi"}
   - {query: "nahjul balagha", expect_any: [thaqalayn-nahj-al-balagha], expect_group: any, note: "spelling variant via alt terms"}
   - {query: "sayings of imam ali", expect_any: [thaqalayn-nahj-al-balagha], expect_group: any, note: ""}
   - {query: "kulayni", expect_any: [thaqalayn-al-kafi-vol-1], expect_group: any, note: "author name"}
   - {query: "ziyarat imam hussain", expect_any: [thaqalayn-kamil-al-ziyarat], expect_group: any, note: "Hussain/Husayn variants"}
-  - {query: "hadith", expect_any: [thaqalayn-al-kafi-vol-1, thaqalayn-al-tawhid, thaqalayn-al-khisal], expect_group: any, note: "parent heading returns child-heading records"}
+  - {query: "hadith", expect_any: [thaqalayn-al-kafi-vol-1, thaqalayn-al-kafi-vol-6, thaqalayn-al-kafi-vol-7, thaqalayn-tahdhib-al-ahkam-vol-1, thaqalayn-al-tawhid, thaqalayn-al-khisal], expect_group: any, note: "parent heading returns child-heading records; any hadith volume near the top passes"}
   - {query: "why do shia cry on ashura", expect_any: [al-islam-karbala-chain-of-events], expect_group: any, note: "curated phrasing"}
   - {query: "what is shia islam", expect_any: [al-islam-discovering-shii-islam, al-islam-discovering-islam], expect_group: any, note: "beginner record should lead"}
   - {query: "how do shias pray", expect_any: [al-islam-discovering-islam, sistani-west-salat-general-rules], expect_group: any, note: ""}
@@ -35,3 +35,6 @@ queries:
   - {query: "karbala", expect_any: [al-islam-karbala-chain-of-events], expect_group: exact, note: ""}
   - {query: "how do i become a muslim", expect_any: [al-islam-discovering-islam], expect_group: any, note: ""}
   - {query: "xyzzy qwerty", expect_none: true, note: "nonsense query"}
+  - {query: "tahdhib al-ahkam", expect_any: [thaqalayn-tahdhib-al-ahkam-vol-1], expect_group: exact, note: ""}
+  - {query: "man la yahduruhu al-faqih", expect_any: [thaqalayn-man-la-yahduruh-al-faqih-vol-1], expect_group: any, note: "spelling variant via alt terms"}
+  - {query: "hadith about fasting", expect_any: [thaqalayn-al-kafi-vol-4, thaqalayn-man-la-yahduruh-al-faqih-vol-2, thaqalayn-tahdhib-al-ahkam-vol-4, thaqalayn-al-kafi-vol-3], expect_group: any, note: "legal-hadith heading; exact volume depends on its description"}

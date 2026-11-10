@@ -1,0 +1,34 @@
+id: thaqalayn-fadail-al-shia
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Faḍaʾil al-Shīʿa: Virtues of the Shia'
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/25
+language: en
+date: ''
+description: A short collection of 45 selected hadith (reported sayings of the Imams) compiled by Shaykh al-Saduq, shown
+  with an English translation by Badr Shahin. The site says the narrations describe the standing of the Shia community
+  and its place among followers of the Prophet. It is a primary source for readers with some background.
+sample_questions:
+- What is Fadail al-Shia?
+- What do the Imams say about the virtues of the Shia?
+- Who compiled Fadail al-Shia?
+- What hadith are there about loving the Ahl al-Bayt?
+- How many hadith are in Fadail al-Shia?
+headings:
+- hadith-collections
+- ahl-al-bayt
+access: free
+location: ''
+needs_review: true
+review_note: The site's blurb says the hadith affirm the Shia as 'the only followers' who faithfully follow the Prophet's
+  path; this is a sectarian claim made by the source, not by the catalog. Reviewer should confirm the description and
+  headings.
+cataloged_on: '2026-11-10'

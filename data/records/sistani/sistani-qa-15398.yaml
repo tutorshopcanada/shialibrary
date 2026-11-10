@@ -1,0 +1,27 @@
+id: sistani-qa-15398
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eating-drinking
+level: intermediate
+title: Is mushroom a Halal vegetable?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01178/#15398
+language: en
+date: ''
+description: A question asking whether mushroom is a halal vegetable.
+sample_questions:
+- Is mushroom halal?
+- Can I eat mushrooms?
+- Are mushrooms allowed in Islam?
+headings:
+- food-drink
+access: free
+location: Eating & Drinking, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

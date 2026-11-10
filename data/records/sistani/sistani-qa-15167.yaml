@@ -1,0 +1,33 @@
+id: sistani-qa-15167
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-islamic-slaughtering
+level: intermediate
+title: On the package of meat that is produced in Muslim countries by non-Muslim companies, it says, “slaughtered
+  according to Islamic laws”. Are we allowed to eat that meat? Can we eat that meat, if it comes from
+  Muslim companies in non-Muslim countries?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01228/#15167
+language: en
+date: ''
+description: A question about meat labelled 'slaughtered according to Islamic laws' that is produced by
+  non-Muslim companies in Muslim countries, by Muslim companies in non-Muslim countries, or by non-Muslim
+  companies in non-Muslim countries, asking whether it can be eaten in each case.
+sample_questions:
+- Can I eat halal-labelled meat from non-Muslim companies?
+- Does the producer's religion matter for halal meat?
+- Is meat from a Muslim country always halal?
+- Imported meat labelled halal?
+headings:
+- food-drink
+access: free
+location: Islamic Slaughtering, question 4
+needs_review: true
+review_note: Concerns meat produced by non-Muslim companies (other faiths); reviewer should confirm the
+  classification and wording.
+cataloged_on: '2026-11-10'

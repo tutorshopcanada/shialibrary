@@ -1,0 +1,27 @@
+id: sistani-qa-14822
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qibla
+level: intermediate
+title: If a person goes to the moon, to which direction should he pray?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01300/#14822
+language: en
+date: ''
+description: A question asking which direction a person would face to pray while on the moon.
+sample_questions:
+- Which way do astronauts pray?
+- How do you pray on the moon?
+- What is the qibla in space?
+headings:
+- prayer
+access: free
+location: Qibla, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

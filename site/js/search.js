@@ -45,6 +45,7 @@ export const DEFAULT_CONFIG = {
     exact_group_order: 'strict',
     level_boost: { beginner: 1.5, intermediate: 1.2, advanced: 1.0 },
     deeper_boost: { beginner: 1.0, intermediate: 1.2, advanced: 1.5 },
+    granularity_boost: { work: 1.6, section: 1.3, item: 1.0 },
   },
   tags: {
     order: ['fiqh', 'hadith', 'book', 'article', 'course', 'lecture', 'other'],
@@ -551,6 +552,7 @@ export function createEngine(index) {
       if (cov < L2.min_result_coverage) continue;
       let s = score[d];
       if (qa.phrase && (doc.tq.includes(qa.phrase) || doc.desc.includes(qa.phrase))) s *= L2.phrase_boost;
+      s *= Number((config.ranking.granularity_boost || {})[doc.record.granularity]) || 1;
       hits.push({ doc, record: doc.record, score: s, coverage: cov, exact: isExact(qa, doc) });
     }
     hits.sort((a, b) => b.score - a.score);

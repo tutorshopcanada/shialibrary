@@ -1,0 +1,33 @@
+id: thaqalayn-tahdhib-al-ahkam-vol-2
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Tahdhīb al-Aḥkām (Vol. 2): The Refinement of Laws'
+title_original: ''
+authors:
+- tusi
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/42
+language: en
+date: ''
+description: Volume 2 of 4 of Tahdhib al-Ahkam, a hadith collection (reported sayings of the Prophet and the Imams) compiled
+  by Shaykh al-Tusi and shown with an English translation by Haydar Ali Shaykh ibn Muhammad. The site says it focuses
+  on practical rulings. This volume contains the Book of Salat (prayer), including prayer times, the qiblah and prayer
+  while travelling. It is a primary source.
+sample_questions:
+- What hadith are there about prayer times?
+- What hadith are there about the qiblah?
+- What hadith are there about prayer while travelling?
+- What is Tahdhib al-Ahkam?
+- Who compiled Tahdhib al-Ahkam?
+headings:
+- hadith-collections
+- legal-hadith
+access: free
+location: Volume 2 of 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

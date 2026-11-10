@@ -1,0 +1,36 @@
+id: thaqalayn-mujam-al-ahadith-al-mutabara
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Muʿjam al-Aḥādīth al-Muʿtabara: Compilation of Authenticated Narrations'
+title_original: ''
+authors:
+- muhsini
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/9
+language: en
+date: ''
+description: A hadith collection (reported sayings of the Prophet and the Imams) compiled by Shaykh Muhammad Asif al-Muhsini,
+  shown with an English translation by Ammaar Muslim. The site says he gathered narrations he judged reliable, using
+  criteria it describes, and notes that some scholars may differ with his judgments. Chapters cover intellect and knowledge,
+  principles of jurisprudence, narrators, divine unity and the Quran.
+sample_questions:
+- What is Mu'jam al-Ahadith al-Mu'tabara?
+- Who compiled Mu'jam al-Ahadith al-Mu'tabara?
+- What hadith are there about intellect and knowledge?
+- What hadith are there about the oneness of God?
+- What hadith are there about the Quran?
+headings:
+- hadith-collections
+- tawhid
+- quran
+access: free
+location: ''
+needs_review: true
+review_note: The site titles this 'Compilation of Authenticated Narrations' and describes the compiler's own criteria
+  for reliability; the record only reports this as the site's description and makes no claim about authenticity. Mixed
+  subjects (intellect, jurisprudence principles, narrators, tawhid, Quran); headings are the closest fit.
+cataloged_on: '2026-11-10'

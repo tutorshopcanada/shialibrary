@@ -1,0 +1,29 @@
+id: sistani-qa-14944
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-zakat
+level: intermediate
+title: If someone dies and owes both a debt and Zakat, but leaves behind enough to cover either, which
+  one should take precedence?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01358/#14944
+language: en
+date: ''
+description: A question asking which takes precedence when someone dies owing both a debt and zakat and
+  leaves enough to cover only one of them.
+sample_questions:
+- Debt or zakat first after someone dies?
+- What if the deceased owed zakat and a debt?
+- Are zakat debts paid from the estate?
+headings:
+- khums-zakat
+access: free
+location: Zakat, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,33 @@
+id: thaqalayn-tahdhib-al-ahkam-vol-4
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Tahdhīb al-Aḥkām (Vol. 4): The Refinement of Laws'
+title_original: ''
+authors:
+- tusi
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/44
+language: en
+date: ''
+description: Volume 4 of 4 of Tahdhib al-Ahkam, a hadith collection (reported sayings of the Prophet and the Imams) compiled
+  by Shaykh al-Tusi and shown with an English translation by Haydar Ali Shaykh ibn Muhammad. The site says it focuses
+  on practical rulings. This volume contains the Book of Zakat (a religious charity payment) and the Book of Fasting.
+  It is a primary source.
+sample_questions:
+- What hadith are there about zakat?
+- What is zakat on gold and silver?
+- What hadith are there about fasting?
+- What is Tahdhib al-Ahkam?
+- Who compiled Tahdhib al-Ahkam?
+headings:
+- hadith-collections
+- legal-hadith
+access: free
+location: Volume 4 of 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

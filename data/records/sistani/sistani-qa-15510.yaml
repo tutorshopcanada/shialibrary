@@ -1,0 +1,28 @@
+id: sistani-qa-15510
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-following-a-mujtahid
+level: intermediate
+title: Why is it necessary to follow a Mujtahid?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01191/#15510
+language: en
+date: ''
+description: A question asking why it is necessary to follow a mujtahid.
+sample_questions:
+- Why do Shias follow a marja?
+- Why do I need a marja?
+- Why can't I just read the Quran myself?
+- Why is taqlid needed?
+headings:
+- taqlid
+access: free
+location: Following a Mujtahid, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

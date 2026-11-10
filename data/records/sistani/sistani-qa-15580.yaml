@@ -1,0 +1,29 @@
+id: sistani-qa-15580
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-adhan-iqamah
+level: intermediate
+title: If any one is praying at home, does he require to call Adhan for each prayer followed by Iqamah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01131/#15580
+language: en
+date: ''
+description: A question asking whether a person praying at home needs to call the adhan followed by the
+  iqamah for each prayer.
+sample_questions:
+- Do I say adhan when I pray at home?
+- Is adhan needed for each prayer at home?
+- Can I pray alone without adhan and iqamah?
+- Do I say the iqamah when praying alone?
+headings:
+- prayer
+access: free
+location: Adhan and Iqamah, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

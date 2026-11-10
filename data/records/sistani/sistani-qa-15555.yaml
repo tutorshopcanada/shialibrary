@@ -1,0 +1,29 @@
+id: sistani-qa-15555
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-backbiting
+level: intermediate
+title: What is the proper definition of 'backbiting'? Please, give some references from the Quran and
+  Hadith also.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01135/#15555
+language: en
+date: ''
+description: A question asking for the definition of backbiting, with references from the Quran and hadith.
+sample_questions:
+- What is backbiting in Islam?
+- How is gheebah defined?
+- What does the Quran say about backbiting?
+- What is the meaning of gheebah?
+headings:
+- social-conduct-rulings
+access: free
+location: Backbiting, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

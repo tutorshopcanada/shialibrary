@@ -1,0 +1,28 @@
+id: sistani-qa-15372
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friday-prayer
+level: intermediate
+title: Is Friday prayer obligatory?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/#15372
+language: en
+date: ''
+description: A question asking whether Friday prayer is obligatory.
+sample_questions:
+- Is Friday prayer wajib?
+- Do Shias have to pray Jumuah?
+- Is Jumuah prayer compulsory?
+- Do I need to attend Friday prayer?
+headings:
+- prayer
+access: free
+location: Friday Prayer (Jumu'ah), question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-qa-25504
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friday-prayer
+level: intermediate
+title: Is Friday Prayer behind a Sunni prayer leader sufficient for Dhuhr?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/#25504
+language: en
+date: ''
+description: A question asking whether Friday prayer behind a Sunni prayer leader is sufficient in place
+  of the Dhuhr (midday) prayer.
+sample_questions:
+- Does praying Jumuah behind a Sunni imam count as Dhuhr?
+- Can I pray Friday prayer at a Sunni mosque?
+- Do I still pray Dhuhr after a Sunni Friday prayer?
+headings:
+- prayer
+access: free
+location: Friday Prayer (Jumu'ah), question 2
+needs_review: true
+review_note: Touches on Shia-Sunni practice (praying behind a Sunni imam); sensitive, so a reviewer should
+  confirm the classification and wording.
+cataloged_on: '2026-11-10'
