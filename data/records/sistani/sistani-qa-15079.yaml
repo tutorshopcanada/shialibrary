@@ -1,0 +1,28 @@
+id: sistani-qa-15079
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the rule on intentionally infecting others with the AIDS virus?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15079
+language: en
+date: ''
+description: A question about the ruling on intentionally infecting others with the AIDS virus.
+sample_questions:
+- What does Islam say about deliberately infecting others?
+- Is spreading illness discussed in Islamic law?
+- What is said about harming others?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 10
+needs_review: true
+review_note: Touches on sin and penalties; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

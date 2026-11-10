@@ -1,0 +1,31 @@
+id: sistani-qa-15109
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-temporary-marriage-mutah
+level: intermediate
+title: Is it permissible for a Muslim man to marry a non-Muslim woman who is still married to a non-Muslim
+  man? Is there an ‘idda period for her when she separates from her non-Muslim husband? What is the period
+  of that ‘idda?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01245/#15109
+language: en
+date: ''
+description: A question about a Muslim man marrying a non-Muslim woman who is still married, the iddah
+  (waiting period) after separating from her husband, and relations during it or after she embraces Islam.
+sample_questions:
+- What is iddah for a non-Muslim woman?
+- Can I marry a woman who is still married?
+- What if she becomes Muslim?
+headings:
+- marriage-family
+access: free
+location: Temporary Marriage - Mutah, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

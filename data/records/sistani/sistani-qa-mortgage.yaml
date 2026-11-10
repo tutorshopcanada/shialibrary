@@ -1,0 +1,30 @@
+id: sistani-qa-mortgage
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Mortgage
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01256/
+language: en
+date: ''
+description: A topic page of questions and answers about mortgages (bank loans for buying a home, repaid
+  with interest). Questions come from people living in Western countries.
+sample_questions:
+- Can I take a mortgage?
+- What does Islam say about mortgages in the West?
+- What is riba (interest)?
+- How can I buy a house without a mortgage?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: 'Q&A topic: Mortgage'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

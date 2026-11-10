@@ -1,0 +1,27 @@
+id: sistani-qa-26944
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-vinegar
+level: intermediate
+title: Can I purchase and consume vinegar, which states "wine vinegar"?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02907/#26944
+language: en
+date: ''
+description: A question asking whether vinegar labelled 'wine vinegar' can be bought and consumed.
+sample_questions:
+- Can I eat wine vinegar?
+- Is vinegar made from wine halal?
+- Can I buy wine vinegar?
+headings:
+- food-drink
+access: free
+location: Vinegar, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

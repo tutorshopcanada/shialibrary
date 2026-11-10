@@ -1,0 +1,29 @@
+id: sistani-qa-network-marketing
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Network Marketing
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02673/
+language: en
+date: ''
+description: A topic page with one question about network marketing and pyramid companies, a type of business
+  where people earn by recruiting others.
+sample_questions:
+- Is network marketing okay in Islam?
+- What does Islam say about pyramid schemes?
+- Can I work for a multi-level marketing company?
+- Is it halal to earn from recruiting?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Network Marketing'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

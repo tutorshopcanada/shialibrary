@@ -1,0 +1,31 @@
+id: sistani-qa-tattoos
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Tattoos
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01336/
+language: en
+date: ''
+description: A topic page of questions and answers about tattoos. Questions cover tattoos for men and
+  women, eyebrow tattoos and whether tattoos affect wudhu (ritual wash before prayer) and ghusl (full
+  ritual wash).
+sample_questions:
+- Can I get a tattoo?
+- Do tattoos affect wudhu?
+- Can a woman tattoo her eyebrows?
+- Does a temporary tattoo affect ghusl?
+headings:
+- dress-appearance
+- purity
+access: free
+location: 'Q&A topic: Tattoos'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

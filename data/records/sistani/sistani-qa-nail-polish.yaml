@@ -1,0 +1,30 @@
+id: sistani-qa-nail-polish
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Nail Polish
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01269/
+language: en
+date: ''
+description: A topic page of questions and answers about nail polish and ritual washing (wudhu and ghusl).
+  Questions cover whether water reaches the nails.
+sample_questions:
+- Can I do wudhu with nail polish on?
+- Does nail polish affect ghusl?
+- What is halal nail polish?
+- How do I know water reaches my nails?
+headings:
+- purity
+- women-rulings
+access: free
+location: 'Q&A topic: Nail Polish'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

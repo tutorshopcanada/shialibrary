@@ -1,0 +1,33 @@
+id: sistani-qa-people-of-the-book
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: People of the Book
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01294/
+language: en
+date: ''
+description: A topic page of questions and answers about Ahlul Kitab (People of the Book, such as Jews
+  and Christians). Questions cover who counts as one, ritual purity of their homes and food, and eating
+  food prepared by them.
+sample_questions:
+- Who are the People of the Book?
+- Can I eat food made by Christians?
+- Are Buddhists People of the Book?
+- Is a house rented from a non-Muslim clean?
+- Are Sikhs People of the Book?
+headings:
+- social-conduct-rulings
+- food-drink
+access: free
+location: 'Q&A topic: People of the Book'
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

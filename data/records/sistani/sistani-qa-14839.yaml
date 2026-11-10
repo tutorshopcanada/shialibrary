@@ -1,0 +1,29 @@
+id: sistani-qa-14839
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-polytheism
+level: intermediate
+title: Is it permissible to marry a woman who believes in a partner for God.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01295/#14839
+language: en
+date: ''
+description: A question about marrying a woman who believes in a partner for God.
+sample_questions:
+- Can I marry a polytheist?
+- What does Islam say about marrying non-believers?
+- What is shirk?
+headings:
+- marriage-family
+- social-conduct-rulings
+access: free
+location: Polytheism, question 1
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

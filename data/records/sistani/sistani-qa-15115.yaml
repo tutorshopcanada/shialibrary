@@ -1,0 +1,28 @@
+id: sistani-qa-15115
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-masturbation
+level: intermediate
+title: Is it permissible to use sex toys, in its various types, for sexual pleasure?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01244/#15115
+language: en
+date: ''
+description: A question about the use of sex toys of various types for sexual pleasure.
+sample_questions:
+- Are sex toys discussed in Islamic law?
+- What does Shia law say about sex toys?
+- Can married people use them?
+headings:
+- social-conduct-rulings
+access: free
+location: Masturbation, question 5
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

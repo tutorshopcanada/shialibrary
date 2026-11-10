@@ -1,0 +1,27 @@
+id: sistani-qa-15104
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-matches
+level: intermediate
+title: Is earning from professional sports Halal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01247/#15104
+language: en
+date: ''
+description: A question asking whether money earned from professional sports is halal (religiously lawful).
+sample_questions:
+- Is a sports salary halal?
+- Can I become a professional athlete?
+- Is prize money from sports lawful?
+headings:
+- transactions-work
+access: free
+location: Matches, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,27 @@
+id: sistani-qa-14985
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-moon-sighting
+level: intermediate
+title: What is the proof of sighting the moon?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01266/#14985
+language: en
+date: ''
+description: A question asking about the proof needed for sighting the new moon.
+sample_questions:
+- How do you prove the moon is sighted?
+- How is the new moon confirmed?
+- What counts as moon sighting?
+headings:
+- fasting
+access: free
+location: Moon Sighting, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

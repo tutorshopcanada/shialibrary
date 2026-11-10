@@ -1,0 +1,29 @@
+id: sistani-qa-14840
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-polytheism
+level: intermediate
+title: Are polytheists ritually impure?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01295/#14840
+language: en
+date: ''
+description: A question asking whether polytheists are ritually impure (najis).
+sample_questions:
+- Are polytheists najis?
+- What is ritual purity?
+- Are non-Muslims unclean?
+headings:
+- purity
+- social-conduct-rulings
+access: free
+location: Polytheism, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

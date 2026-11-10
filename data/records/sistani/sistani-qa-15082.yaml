@@ -1,0 +1,29 @@
+id: sistani-qa-15082
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: In the process of fertilization in a lab, more than one ovum is fertilized at a time. Secured in
+  the knowkolge that implanting all fertilized ova in the mother’s womb will endanger her life....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15082
+language: en
+date: ''
+description: A question about lab fertilization (IVF) where several eggs are fertilized and not all can
+  be placed in the womb, asking about the status of the remaining ones.
+sample_questions:
+- What does Islam say about IVF?
+- What happens to extra fertilized eggs?
+- Is fertility treatment discussed?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 13
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

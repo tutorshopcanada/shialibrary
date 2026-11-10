@@ -1,0 +1,29 @@
+id: sistani-qa-movies
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Movies
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01264/
+language: en
+date: ''
+description: A topic page with one question on watching films. It is about films containing sexual content.
+sample_questions:
+- Can I watch any movie?
+- What does Islam say about watching films?
+- Are movies discussed in Islamic law?
+- What is said about films with sexual content?
+headings:
+- music-entertainment
+access: free
+location: 'Q&A topic: Movies'
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

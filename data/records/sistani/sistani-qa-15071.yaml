@@ -1,0 +1,29 @@
+id: sistani-qa-15071
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: When a person is diagnosed as having ADIS, is it permissible for the doctor or is it obligatory
+  on him to inform the patient’s relatives, especially their spouse?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15071
+language: en
+date: ''
+description: A question about a doctor's duty to inform a patient's relatives, especially the spouse,
+  when a person is diagnosed with AIDS.
+sample_questions:
+- Does a doctor tell the family about AIDS?
+- Is patient confidentiality discussed?
+- Who is told about an AIDS diagnosis?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-palmistry
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Palmistry
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01285/
+language: en
+date: ''
+description: A topic page with one question on palmistry (reading the hand to predict the future).
+sample_questions:
+- What does Islam say about fortune telling?
+- Can I go to a palm reader?
+- Is palmistry discussed?
+- Can a palmist predict the future?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Palmistry'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

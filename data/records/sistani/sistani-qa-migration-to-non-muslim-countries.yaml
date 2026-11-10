@@ -1,0 +1,31 @@
+id: sistani-qa-migration-to-non-muslim-countries
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Migration to non-Muslim Countries
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01248/
+language: en
+date: ''
+description: A topic page of questions and answers about living in non-Muslim countries. Questions cover
+  a religious term for leaving Muslim lands, the temptations of life in the West, and feeling distant
+  from a religious environment.
+sample_questions:
+- Can I live in a non-Muslim country?
+- What is Ta'arrub Ba'd al-Hijra?
+- What if I feel far from religious life in the West?
+- Should I move to a Muslim country?
+- What does Shia law say about living in the West?
+headings:
+- muslims-in-west
+access: free
+location: 'Q&A topic: Migration to non-Muslim Countries'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

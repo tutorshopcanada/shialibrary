@@ -1,0 +1,29 @@
+id: sistani-qa-14832
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qaza-prayers-and-fasts
+level: intermediate
+title: Is it obligatory upon a deceased man's son to give the qaza of his father's prayers?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01297/#14832
+language: en
+date: ''
+description: A question asking whether a deceased man's son has a duty to make up his father's missed
+  prayers.
+sample_questions:
+- Does a son pray for his dead father?
+- Who makes up missed prayers after death?
+- What is qaza for the dead?
+headings:
+- prayer
+- death-burial
+access: free
+location: Qaza Prayers and Fasts, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

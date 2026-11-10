@@ -1,0 +1,31 @@
+id: sistani-qa-15132
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-mosque
+level: intermediate
+title: A mosque has a number of floors, including the prayer room, basement, kitchen, storage, bathroom
+  facilities, are all these parts of the building considered as a mosque, and have the rulings of the
+  mosque?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01267/#15132
+language: en
+date: ''
+description: A question asking whether all floors and rooms of a mosque building (prayer room, basement,
+  kitchen, toilets) have the rulings of a mosque, and about women in ritual impurity using other floors.
+sample_questions:
+- Is the whole mosque building treated as a mosque?
+- Can a woman on her period enter other floors?
+- Are mosque kitchens and bathrooms part of the mosque?
+headings:
+- prayer
+- women-rulings
+access: free
+location: Mosque, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

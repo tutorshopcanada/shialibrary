@@ -1,0 +1,31 @@
+id: sistani-qa-masturbation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Masturbation
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01244/
+language: en
+date: ''
+description: A topic page of questions and answers about masturbation, a sensitive personal matter. Questions
+  cover it within marriage, when marriage is not possible, for medical reasons, and the use of sex toys.
+sample_questions:
+- What does Shia law say about masturbation?
+- What do I do if I have committed a sin and want to repent?
+- Is masturbation discussed for medical reasons?
+- What is tawbah (repentance)?
+- What does Islam say about sex toys?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Masturbation'
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

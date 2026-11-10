@@ -1,0 +1,29 @@
+id: sistani-qa-14889
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-pre-marital-relation
+level: intermediate
+title: Is pre-marital relation permissible between a boy and a girl?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01287/#14889
+language: en
+date: ''
+description: A question asking about pre-marital relations between a boy and a girl.
+sample_questions:
+- What does Islam say about premarital relations?
+- Is a relationship before marriage discussed?
+- What are the rules for unmarried couples?
+headings:
+- youth-rulings
+- marriage-family
+access: free
+location: Pre-marital Relation, question 3
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

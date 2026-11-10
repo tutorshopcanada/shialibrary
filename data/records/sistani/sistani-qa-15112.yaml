@@ -1,0 +1,31 @@
+id: sistani-qa-15112
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-temporary-marriage-mutah
+level: intermediate
+title: A Muslim couple got separated for a long time. Is it permissible for him to marry, temporarily
+  or permanently, a woman from Ahlul Kitab without the knowledge of his Muslim wife?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01245/#15112
+language: en
+date: ''
+description: A question about a separated Muslim man marrying, temporarily or permanently, a woman from
+  the People of the Book without his Muslim wife's knowledge or with her permission. The same question
+  text also appears under another link on the site.
+sample_questions:
+- Can a Muslim marry a Christian woman?
+- Does a second marriage need the first wife's permission?
+- Can a separated man remarry?
+headings:
+- marriage-family
+access: free
+location: Temporary Marriage - Mutah, question 5
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

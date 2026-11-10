@@ -1,0 +1,31 @@
+id: sistani-qa-15226
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-masturbation
+level: intermediate
+title: What does Islam say about masturbation? If a man is doing this, what type of punishment will he
+  deserve and how can he do Tawbah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01244/#15226
+language: en
+date: ''
+description: A question about what Islam says on masturbation, including the penalty involved and how
+  a person can repent (tawbah, returning to God).
+sample_questions:
+- What does Islam say about masturbation?
+- How do I repent after a sin?
+- Is there a penalty for it?
+- What is tawbah?
+headings:
+- social-conduct-rulings
+access: free
+location: Masturbation, question 2
+needs_review: true
+review_note: Touches on sin and penalties; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

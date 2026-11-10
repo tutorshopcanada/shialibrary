@@ -1,0 +1,31 @@
+id: sistani-qa-make-up
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Make-up
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01265/
+language: en
+date: ''
+description: A topic page of questions and answers about make-up and adornment for women. Questions cover
+  everyday make-up and jewelry in public and light make-up in front of non-mahram men (men outside close
+  family).
+sample_questions:
+- Can a woman wear make-up outside?
+- What is said about wearing make-up in public?
+- Do I cover light make-up from non-mahram men?
+- What does hijab say about jewelry?
+headings:
+- dress-appearance
+- women-rulings
+access: free
+location: 'Q&A topic: Make-up'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

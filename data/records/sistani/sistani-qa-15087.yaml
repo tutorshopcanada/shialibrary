@@ -1,0 +1,30 @@
+id: sistani-qa-15087
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: If an organ of an atheist is transplanted in a Muslim’s body, would it be considered ritually pure
+  (tãhir) when it is considered, after transplantation, as part of the Muslim’s body?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15087
+language: en
+date: ''
+description: A question about whether an organ transplanted from an atheist into a Muslim's body is considered
+  ritually pure (tahir, clean for prayer) once it becomes part of the Muslim's body.
+sample_questions:
+- Is a transplanted organ from a non-believer clean?
+- What is ritual purity of organs?
+- What does Islam say about organ transplants?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 18
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

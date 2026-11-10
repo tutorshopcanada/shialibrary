@@ -1,0 +1,31 @@
+id: sistani-qa-14926
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-maintenance
+level: intermediate
+title: A woman, who is not obedient to her husband and does not carry out her matrimonial obligations,
+  had, without his consent, left her matrimonial home and stayed with her parents for seven months....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01273/#14926
+language: en
+date: ''
+description: A question about a wife who left the matrimonial home for months, went to a non-Islamic court
+  for divorce, maintenance and custody, asking about her rights from her husband.
+sample_questions:
+- What are a wife's rights if she leaves home?
+- Can I get maintenance after leaving my husband?
+- What about custody and divorce in civil courts?
+- Rights of a separated wife?
+headings:
+- marriage-family
+access: free
+location: Maintenance, question 4
+needs_review: true
+review_note: Touches on a marital dispute and use of a non-Islamic court; a reviewer should confirm the
+  classification and wording.
+cataloged_on: '2026-11-10'

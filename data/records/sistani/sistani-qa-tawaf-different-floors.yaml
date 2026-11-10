@@ -1,0 +1,30 @@
+id: sistani-qa-tawaf-different-floors
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Tawaf - Different floors
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02423/
+language: en
+date: ''
+description: A topic page of questions and answers about performing Tawaf (the ritual walk around the
+  Kaaba) on the upper floors of the Haram. Questions cover the first floor, second floor and rooftop,
+  including for elderly people using a wheelchair.
+sample_questions:
+- Can I do Tawaf on the upper floor?
+- Can I do Tawaf in a wheelchair upstairs?
+- Where do I pray after Tawaf?
+- Is Tawaf on the roof accepted?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Tawaf - Different floors'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

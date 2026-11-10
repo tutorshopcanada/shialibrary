@@ -1,0 +1,29 @@
+id: sistani-qa-nafilah-prayer
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Nafilah Prayer
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01270/
+language: en
+date: ''
+description: A topic page of questions and answers about nafilah (recommended extra) prayers. Questions
+  cover finding midnight and the night prayer (Salatul Layl).
+sample_questions:
+- How do I know when midnight is?
+- What is Salatul Layl?
+- Can I pray the night prayer early?
+- What are nafilah prayers?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Nafilah Prayer'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

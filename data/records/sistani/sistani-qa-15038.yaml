@@ -1,0 +1,29 @@
+id: sistani-qa-15038
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-miscellaneous
+level: intermediate
+title: Is it right to say ya Ali madad?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01253/#15038
+language: en
+date: ''
+description: A question asking whether it is right to say 'Ya Ali Madad' (an invocation seeking help through
+  Imam Ali).
+sample_questions:
+- What is Ya Ali Madad?
+- Is it right to say Ya Ali Madad?
+- Can I ask Imam Ali for help?
+headings:
+- fiqh
+access: free
+location: Miscellaneous, question 1
+needs_review: true
+review_note: Touches on a devotional practice (seeking help through Imam Ali); sensitive, so a reviewer
+  should confirm the classification and wording.
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-15081
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: Is it permissible to engage in embellishing the face and the body [of another person]?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15081
+language: en
+date: ''
+description: A question asking about embellishing (beautifying) another person's face and body; the question
+  stands alone with no clear link to its topic.
+sample_questions:
+- Is beautifying someone's face discussed?
+- What is said about cosmetic work on others?
+- Can a beautician do this job?
+headings:
+- dress-appearance
+- medical-ethics
+access: free
+location: Medical Issues, question 12
+needs_review: true
+review_note: The question is brief and its link to the Medical Issues topic is unclear; a reviewer should
+  confirm the classification.
+cataloged_on: '2026-11-10'

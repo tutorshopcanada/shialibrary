@@ -1,0 +1,30 @@
+id: sistani-qa-25302
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-organ-donation
+level: intermediate
+title: Is it permissible to remove a life-support machine attached to a dying person, and the doctors
+  state there is no hope in his recovery, with certainty that he will die shortly later?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01277/#25302
+language: en
+date: ''
+description: A question about removing a life-support machine from a dying person whom doctors say has
+  no hope of recovery.
+sample_questions:
+- Can life support be removed?
+- What does Islam say about switching off a ventilator?
+- What is said about a dying patient on a machine?
+headings:
+- medical-ethics
+- death-burial
+access: free
+location: Organ Donation, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

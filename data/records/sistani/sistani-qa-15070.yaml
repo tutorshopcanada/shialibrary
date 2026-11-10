@@ -1,0 +1,30 @@
+id: sistani-qa-15070
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: If a Muslim knows that contracted AIDS, is it permissible on him to engage in sexual relations
+  with his wife? Is it obligatory for him to inform his wife about it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15070
+language: en
+date: ''
+description: A question about a Muslim with AIDS and sexual relations with his wife, and whether he has
+  to tell her of his illness.
+sample_questions:
+- Does a person with AIDS tell his wife?
+- Rules on marriage relations with an AIDS patient?
+- Must I disclose an illness to my spouse?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

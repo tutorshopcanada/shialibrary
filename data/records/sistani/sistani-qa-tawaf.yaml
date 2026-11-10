@@ -1,0 +1,29 @@
+id: sistani-qa-tawaf
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Tawaf
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01331/
+language: en
+date: ''
+description: A topic page with one question about Tawaf al-Nisa, a ritual walk around the Kaaba that is
+  part of Umrah and Hajj.
+sample_questions:
+- What is Tawaf al-Nisa?
+- What if I forgot Tawaf al-Nisa?
+- What do I do if I left Makkah without it?
+- Is Tawaf al-Nisa part of Umrah?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Tawaf'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

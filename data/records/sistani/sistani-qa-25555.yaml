@@ -1,0 +1,29 @@
+id: sistani-qa-25555
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-tashahhud
+level: intermediate
+title: Is it permissible to recite the third testimony (Shahadat Thalitha) in Tashahhud?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01337/#25555
+language: en
+date: ''
+description: A question asking whether the third testimony (Shahadat Thalitha, a phrase about Imam Ali)
+  can be recited within the tashahhud of prayer.
+sample_questions:
+- What is the third shahada?
+- Can I say the third testimony in prayer?
+- What is recited in tashahhud?
+headings:
+- prayer
+access: free
+location: Tashahhud, question 1
+needs_review: true
+review_note: Touches on a devotional phrase said by Shias that differs from Sunni practice; a reviewer
+  should confirm the classification and wording.
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-14870
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer-timings
+level: intermediate
+title: When can a person start offering his prayers when he is not certain about the time of prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01289/#14870
+language: en
+date: ''
+description: A question asking when a person can start praying when he is not certain about the prayer
+  time.
+sample_questions:
+- When can I start praying if unsure of the time?
+- What if I am not sure the time has come?
+- How do I know prayer time has started?
+headings:
+- prayer
+access: free
+location: Prayer Timings, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-qa-14929
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-night-prayer
+level: intermediate
+title: How can we know the time of mid-night? Do 00.00 hours the point of mid-night as it is commonly
+  held by some people?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01274/#14929
+language: en
+date: ''
+description: A question asking how to know the time of midnight, and whether 00:00 hours counts as midnight
+  as some people hold. The same question text also appears under another link on the site.
+sample_questions:
+- When is midnight for prayer?
+- Is midnight 12:00?
+- How do I find the time of midnight?
+headings:
+- prayer
+access: free
+location: Night Prayer, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

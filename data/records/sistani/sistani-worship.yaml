@@ -1,0 +1,36 @@
+id: sistani-worship
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: advanced
+title: Summary of the Rules of Worship
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/26890/
+language: en
+date: ''
+description: A concise treatise on the main rulings (fiqh) of worship, prepared by the office of Sayyid
+  Ali al-Sistani in line with his fatwas. It covers prayer, fasting, Hajj, zakat and khums (religious
+  payments), with selected rulings on purity, taqlid (following a jurist) and enjoining good and forbidding
+  evil.
+sample_questions:
+- Is there a short summary of Sayyid Sistani's rulings on worship?
+- Where can I read the main rules of prayer, fasting and Hajj in one place?
+- Where can I find a brief guide to the rules of purity and prayer?
+- What does a short manual of Shia worship cover?
+- Where do I find the basics of zakat and khums rulings?
+headings:
+- fiqh
+- prayer
+- purity
+access: free
+location: ''
+needs_review: true
+review_note: 'No individual author is named: the Introduction (https://www.sistani.org/english/book/26890/8476/)
+  says the treatise was prepared by the Office of Al-Sayyid Al-Sistani in accordance with his fatwas,
+  so authors is empty. Level set to advanced because the Introduction describes a summary of the most
+  important rulings but does not state an audience or level; reviewer to confirm (intermediate may fit).'
+cataloged_on: '2026-11-10'

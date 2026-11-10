@@ -1,0 +1,31 @@
+id: sistani-qa-maintenance
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Maintenance
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01273/
+language: en
+date: ''
+description: A topic page of questions and answers about maintenance (nafaqah), the financial support
+  within marriage. Questions cover a wife's money and her husband's debts, the extent of a husband's duties,
+  support during the waiting period (iddah) and a wife who leaves home.
+sample_questions:
+- What does a husband owe his wife financially?
+- Does a wife pay her husband's debts?
+- What is nafaqah?
+- What is the iddah (waiting period) after divorce?
+- Can a wife demand maintenance after leaving home?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Maintenance'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

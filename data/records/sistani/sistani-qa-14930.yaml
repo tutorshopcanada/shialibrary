@@ -1,0 +1,28 @@
+id: sistani-qa-14930
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-night-prayer
+level: intermediate
+title: Is it enough for night prayers to read only Salat al-Shif` & al-Witr?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01274/#14930
+language: en
+date: ''
+description: A question asking whether reciting only Salat al-Shaf' and al-Witr (the final prayers of
+  the night prayer) is enough for the night prayer.
+sample_questions:
+- What are Shaf and Witr?
+- Can I just pray Witr?
+- What is in the night prayer?
+headings:
+- prayer
+access: free
+location: Night Prayer, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

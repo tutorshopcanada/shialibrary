@@ -1,0 +1,29 @@
+id: sistani-qa-15146
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-quran
+level: intermediate
+title: Can a man or woman who is in the state of Janabah read the Quran?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01296/#15146
+language: en
+date: ''
+description: A question asking whether a man or woman in a state of janabah (ritual impurity after sexual
+  relations) can read the Quran.
+sample_questions:
+- Can I read the Quran in janabah?
+- What is janabah?
+- Can I touch the Quran without ghusl?
+headings:
+- purity
+- quran
+access: free
+location: Quran, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

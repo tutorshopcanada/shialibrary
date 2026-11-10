@@ -1,0 +1,29 @@
+id: sistani-qa-25300
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-organ-donation
+level: intermediate
+title: Is mercy killing allowed?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01277/#25300
+language: en
+date: ''
+description: A question asking about mercy killing (ending a patient's life to relieve suffering).
+sample_questions:
+- What does Islam say about mercy killing?
+- Is euthanasia discussed in Islamic law?
+- Can a doctor end a patient's life?
+headings:
+- medical-ethics
+- death-burial
+access: free
+location: Organ Donation, question 2
+needs_review: true
+review_note: Touches on sin and penalties; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

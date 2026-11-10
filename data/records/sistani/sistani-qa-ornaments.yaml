@@ -1,0 +1,30 @@
+id: sistani-qa-ornaments
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Ornaments
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01276/
+language: en
+date: ''
+description: A topic page of questions and answers about ornaments and jewelry. Questions cover collyrium
+  (kohl) and rings in front of non-mahram men, and men wearing gold, silver, cuff-links, pins and earrings.
+sample_questions:
+- Can men wear gold?
+- Can men wear earrings?
+- Can women wear rings in front of non-mahram men?
+- What is said about silver jewelry?
+- Can men wear cuff-links?
+headings:
+- dress-appearance
+access: free
+location: 'Q&A topic: Ornaments'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

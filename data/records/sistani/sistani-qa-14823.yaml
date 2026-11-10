@@ -1,0 +1,28 @@
+id: sistani-qa-14823
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qasam
+level: intermediate
+title: What are the conditions for validity of an oath?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01299/#14823
+language: en
+date: ''
+description: A question asking about the conditions for the validity of an oath (a promise made in God's
+  name). The same question text also appears under another link on the site.
+sample_questions:
+- What are the conditions of an oath?
+- When does an oath count?
+- How do I make an oath?
+headings:
+- social-conduct-rulings
+access: free
+location: Qasam, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

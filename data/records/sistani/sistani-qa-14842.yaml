@@ -1,0 +1,29 @@
+id: sistani-qa-14842
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-people-of-the-book
+level: intermediate
+title: Are the Bhuddhists among the Ahlul Kitab?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01294/#14842
+language: en
+date: ''
+description: A question asking whether Buddhists are among the People of the Book.
+sample_questions:
+- Are Buddhists People of the Book?
+- Who counts as Ahlul Kitab?
+- What faiths are People of the Book?
+headings:
+- social-conduct-rulings
+- food-drink
+access: free
+location: People of the Book, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

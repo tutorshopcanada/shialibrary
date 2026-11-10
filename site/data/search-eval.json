@@ -60,6 +60,7 @@
   {
    "query": "namaz",
    "expect_any": [
+    "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
     "sistani-west-salat-introduction"
@@ -71,6 +72,7 @@
   {
    "query": "صلاة",
    "expect_any": [
+    "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
     "sistani-west-salat-introduction"

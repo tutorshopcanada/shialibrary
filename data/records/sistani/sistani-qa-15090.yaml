@@ -1,0 +1,31 @@
+id: sistani-qa-15090
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: The medical profession demands that the doctor checks his female patients carefully; and since
+  getting undressed for medical check up is common in some European countries, is it permissible to engage
+  in medical practice here in such circumstances?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15090
+language: en
+date: ''
+description: A question about the medical profession in Europe, where examining female patients may involve
+  undressing, asking about practising medicine in such circumstances.
+sample_questions:
+- Can a Muslim work as a doctor in the West?
+- What is said about medical examination of patients?
+- Can a male doctor examine a woman?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 21
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

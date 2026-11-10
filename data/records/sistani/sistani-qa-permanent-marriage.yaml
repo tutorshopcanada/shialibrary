@@ -1,0 +1,32 @@
+id: sistani-qa-permanent-marriage
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Permanent Marriage
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01284/
+language: en
+date: ''
+description: A topic page of questions and answers about permanent marriage. Questions cover a woman marrying
+  without her father's consent, marriage to women of other faiths, marriage between a Muslim and a non-Muslim
+  and temporary marriage.
+sample_questions:
+- Does a woman need her father's permission to marry?
+- Can a Muslim marry someone of another faith?
+- Can a woman seek divorce if her husband has left?
+- What is permanent marriage?
+- Can I marry a Sunni?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Permanent Marriage'
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

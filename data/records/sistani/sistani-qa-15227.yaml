@@ -1,0 +1,29 @@
+id: sistani-qa-15227
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-masturbation
+level: intermediate
+title: When I am unable to do Muta’h (temporary marriage), am I allowed to masturbate?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01244/#15227
+language: en
+date: ''
+description: A question asking about masturbation for a person who cannot enter a temporary marriage (muta'h,
+  a fixed-term marriage contract).
+sample_questions:
+- What if I cannot get married?
+- What does Islam say to unmarried people about this?
+- What is muta'h?
+headings:
+- social-conduct-rulings
+access: free
+location: Masturbation, question 3
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

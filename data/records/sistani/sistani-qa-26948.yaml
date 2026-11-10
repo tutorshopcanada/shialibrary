@@ -1,0 +1,27 @@
+id: sistani-qa-26948
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-tawaf-different-floors
+level: intermediate
+title: Is it permissible to perform Tawaf from the second floor?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02423/#26948
+language: en
+date: ''
+description: A question asking about performing Tawaf from the second floor.
+sample_questions:
+- Can I do Tawaf on the second floor?
+- Can Tawaf be done upstairs?
+- Is upper floor Tawaf accepted?
+headings:
+- hajj
+access: free
+location: Tawaf - Different floors, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

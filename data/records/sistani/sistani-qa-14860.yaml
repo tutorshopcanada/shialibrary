@@ -1,0 +1,28 @@
+id: sistani-qa-14860
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-pork
+level: intermediate
+title: Is it permissible to work in a store or company that sells pork?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01293/#14860
+language: en
+date: ''
+description: A question about working in a store or company that sells pork.
+sample_questions:
+- Can I work where pork is sold?
+- Can I work in a supermarket?
+- Is a job involving pork discussed?
+headings:
+- food-drink
+- transactions-work
+access: free
+location: Pork, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

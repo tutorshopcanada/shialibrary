@@ -1,0 +1,30 @@
+id: sistani-qa-25503
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-tawaf
+level: intermediate
+title: I did not know that Tawaf al-Nisa was obligatory for every individual who performs Umrah or Hajj
+  al-Tamattu'. I have not performed it. What should I do know given the fact that I have left Makkah for
+  my country?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01331/#25503
+language: en
+date: ''
+description: A question from a person who did not know Tawaf al-Nisa was required for Umrah or Hajj al-Tamattu',
+  has not performed it and has left Makkah, asking what to do.
+sample_questions:
+- What if I forgot Tawaf al-Nisa?
+- I left Makkah without Tawaf al-Nisa, what now?
+- Is Tawaf al-Nisa required?
+headings:
+- hajj
+access: free
+location: Tawaf, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

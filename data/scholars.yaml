@@ -357,3 +357,34 @@ scholars:
     alt_names: []
     notes: "Named as author of Al-Hadith, Analysis and an Overview on https://al-islam.org/articles/al-hadith-analysis-and-overview-hashim (read 2026-11-10)."
     needs_review: true
+
+  - id: jafar-subhani
+    name: "Ja'far Subhani"
+    role: author
+    alt_names:
+      - "Ayatullah Ja'far Subhani"
+    notes: "Named as author on https://al-islam.org/introduction-science-tafsir-quran-jafar-subhani (read 2026-11-10); translator Saleem Bhimji."
+    needs_review: true
+
+  - id: badr-shahin
+    name: "Badr Shahin"
+    role: author
+    alt_names: []
+    notes: "Named as compiler on https://al-islam.org/lady-zaynab-badr-shahin (read 2026-11-10)."
+    needs_review: true
+
+  - id: baqir-sharif-al-qurashi
+    name: "Baqir Sharif al-Qurashi"
+    role: author
+    alt_names:
+      - "Baqir Shareef al-Qurashi"
+      - "Shaykh Baqir Sharif al-Qarashi"
+    notes: "Named as author on https://al-islam.org/life-imam-jafar-al-sadiq-baqir-shareef-al-qurashi (read 2026-11-10); translator M. Majid Asadi."
+    needs_review: true
+
+  - id: ahmed-ali-khan
+    name: "Ahmed Ali Khan"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/what-ashoora-ahmed-ali-khan (read 2026-11-10)."
+    needs_review: true

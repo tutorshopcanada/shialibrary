@@ -1,0 +1,28 @@
+id: sistani-qa-15102
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-migration-to-non-muslim-countries
+level: intermediate
+title: What is the meaning of Ta'arrub Ba'd al-Hijra which is one of the major sins?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01248/#15102
+language: en
+date: ''
+description: A question asking the meaning of Ta'arrub Ba'd al-Hijra, a term listed among the major sins
+  (kaba'ir).
+sample_questions:
+- What is Ta'arrub Ba'd al-Hijra?
+- What are the major sins?
+- What does returning to a former way of life mean here?
+headings:
+- muslims-in-west
+access: free
+location: Migration to non-Muslim Countries, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

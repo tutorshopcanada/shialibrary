@@ -1,0 +1,31 @@
+id: sistani-qa-14984
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-mosque
+level: intermediate
+title: Is it permissible for the people of Ahlul Kitãb and other non-Muslims to enter the mosques (masjid)
+  and other Islamic places of worship [like husayniyya or imambargah which are not masjid]?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01267/#14984
+language: en
+date: ''
+description: A question about whether people of the Book (Jews and Christians) and other non-Muslims may
+  enter mosques and Islamic places of worship such as a husayniyya, and about hijab for non-Muslim women.
+sample_questions:
+- Can non-Muslims enter a mosque?
+- Do non-Muslim women cover in a mosque?
+- What is a husayniyya or imambargah?
+headings:
+- prayer
+- women-rulings
+access: free
+location: Mosque, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

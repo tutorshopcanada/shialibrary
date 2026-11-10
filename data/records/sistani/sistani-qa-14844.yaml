@@ -1,0 +1,30 @@
+id: sistani-qa-14844
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-people-of-the-book
+level: intermediate
+title: What is the fatwa about Ahlul Kitab? Are they clean or unclean?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01294/#14844
+language: en
+date: ''
+description: A question asking for the fatwa (religious ruling) about Ahlul Kitab and whether they are
+  considered clean or unclean.
+sample_questions:
+- Are People of the Book clean?
+- What is the fatwa on Ahlul Kitab?
+- Is shaking hands with a Christian discussed?
+headings:
+- purity
+- social-conduct-rulings
+access: free
+location: People of the Book, question 4
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

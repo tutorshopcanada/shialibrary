@@ -1,0 +1,27 @@
+id: sistani-qa-15075
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the ruling concerning the right of the non-infected spouse in seeking separation?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15075
+language: en
+date: ''
+description: A question about the right of a healthy spouse to seek separation from a spouse who has AIDS.
+sample_questions:
+- Can I seek divorce if my spouse has AIDS?
+- What are a spouse's rights in illness?
+- What is said about separation for illness?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

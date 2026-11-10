@@ -1,0 +1,27 @@
+id: sistani-qa-14964
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-night-prayer
+level: intermediate
+title: Can I offer Salatul Layl before midnight?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01274/#14964
+language: en
+date: ''
+description: A question asking whether Salatul Layl (the night prayer) can be offered before midnight.
+sample_questions:
+- Can I pray Salatul Layl early?
+- When is the night prayer prayed?
+- Can I pray it before midnight?
+headings:
+- prayer
+access: free
+location: Night Prayer, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'
