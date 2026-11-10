@@ -1,7 +1,5 @@
 # Starter questions in plain language. ALL DRAFTS: written by the cataloging agent, not yet
 # reviewed by the owner or a scholar. Each maps to headings and to records that exist.
-# No learning paths yet: paths must start with a beginner overview, and the catalog has no
-# beginner-level records until al-islam.org (or another introductory source) can be cataloged.
 questions:
   - id: q-pray-in-congregation
     question: "How do Shias pray in congregation?"
@@ -92,4 +90,69 @@ questions:
     alt_phrasings: ["treatise on rights", "risalat al-huquq", "rights of parents and neighbours", "duties to others in islam"]
     headings: [family-social-ethics]
     top_records: [thaqalayn-risalat-al-huquq]
+    draft: true
+  - id: q-what-is-shia-islam
+    question: "What is Shia Islam?"
+    alt_phrasings: ["who are the shia", "what do shias believe", "introduction to shia islam", "shia islam for beginners", "what does shia mean"]
+    headings: [new-to-shia-islam]
+    path: path-new-to-shia-islam
+    top_records: [al-islam-discovering-shii-islam, al-islam-discovering-islam, al-islam-islamic-teachings-in-brief]
+    draft: true
+  - id: q-how-to-become-muslim
+    question: "I'm new to Islam. Where do I start?"
+    alt_phrasings: ["how do i become a muslim", "new muslim where to start", "converting to islam", "what is islam"]
+    headings: [becoming-muslim, new-to-shia-islam]
+    path: path-new-to-shia-islam
+    top_records: [al-islam-discovering-islam, al-islam-discovering-shii-islam]
+    draft: true
+  - id: q-how-do-shias-pray
+    question: "How do Shias pray?"
+    alt_phrasings: ["how to pray", "how to perform salah", "shia prayer", "learn to pray", "daily prayers"]
+    headings: [prayer]
+    path: path-learning-about-prayer
+    top_records: [al-islam-discovering-islam, sistani-west-salat-general-rules, sistani-qa-congregational-prayers]
+    draft: true
+  - id: q-who-is-imam-ali
+    question: "Who is Imam Ali?"
+    alt_phrasings: ["who was ali", "ali ibn abi talib", "first imam", "life of imam ali"]
+    headings: [imam-ali]
+    path: path-imam-ali
+    top_records: [al-islam-nahjul-balagah-revisited-imam-ali, al-islam-brief-history-fourteen-infallibles, thaqalayn-nahj-al-balagha]
+    draft: true
+  - id: q-who-are-the-twelve-imams
+    question: "Who are the Twelve Imams?"
+    alt_phrasings: ["names of the 12 imams", "the twelve imams", "who are the fourteen infallibles", "ahlul bayt"]
+    headings: [twelve-imams]
+    top_records: [al-islam-brief-history-fourteen-infallibles, al-islam-discovering-islam]
+    draft: true
+  - id: q-what-happened-at-karbala
+    question: "What happened at Karbala?"
+    alt_phrasings: ["what is ashura", "why do shias mourn", "why do shia cry on ashura", "why was imam hussain killed", "story of karbala", "muharram"]
+    headings: [karbala-ashura]
+    path: path-karbala-and-ashura
+    top_records: [al-islam-karbala-chain-of-events, al-islam-from-resolution-to-revolution]
+    draft: true
+  - id: q-who-is-the-mahdi
+    question: "Who is the Mahdi?"
+    alt_phrasings: ["who is imam mahdi", "the twelfth imam", "the hidden imam", "what is the occultation", "imam zaman"]
+    headings: [imam-mahdi]
+    top_records: [al-islam-fazail-ul-mahdi, thaqalayn-kitab-al-ghayba-tusi]
+    draft: true
+  - id: q-who-is-fatimah
+    question: "Who is Lady Fatimah?"
+    alt_phrasings: ["fatima zahra", "daughter of the prophet", "life of fatimah"]
+    headings: [fatimah]
+    top_records: [al-islam-fatima-the-gracious, al-islam-brief-history-fourteen-infallibles]
+    draft: true
+  - id: q-what-is-the-quran
+    question: "What is the Quran and how was it revealed?"
+    alt_phrasings: ["introduction to the quran", "about the quran", "how was the quran revealed"]
+    headings: [quran]
+    top_records: [al-islam-quran-in-islam-its-impact-and-influence]
+    draft: true
+  - id: q-why-pray-on-turbah
+    question: "Why do Shias pray on a clay tablet?"
+    alt_phrasings: ["turbah", "why do shias pray differently", "shia prayer stone", "mohr"]
+    headings: [sunni-shia]
+    top_records: [al-islam-mystery-of-the-shia]
     draft: true

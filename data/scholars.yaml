@@ -150,3 +150,101 @@ scholars:
     alt_names: []
     notes: "Named as author on https://al-islam.org/articles/karbala-chain-events (read 2026-11-10)."
     needs_review: true
+
+  # ── Added during the al-islam.org beginner batch (2026-11-10). Names are only those seen on the
+  # fetched pages. Not yet reviewed.
+  - id: jaffer
+    name: "Asgharali M. M. Jaffer"
+    role: author
+    alt_names:
+      - "Mulla Asgharali M M Jaffer"
+      - "Asgharali M M Jaffer"
+    notes: "Named as author on https://al-islam.org/nahjul-balagah-revisited-introducing-imam-ali-ibn-abu-talib-asgharali-m-m-jaffer (read 2026-11-10)."
+    needs_review: true
+
+  - id: ordoni
+    name: "Abu Muhammad Ordoni"
+    role: author
+    alt_names:
+      - "Abu Muhammad Ordoni"
+    notes: "Named as author on https://al-islam.org/fatima-gracious-abu-muhammad-ordoni (read 2026-11-10)."
+    needs_review: true
+
+  - id: tabatabai
+    name: "Sayyid Muhammad Husayn Tabataba'i"
+    role: author
+    alt_names:
+      - "Sayyid Muhammad Husayn Tabataba'i"
+    notes: "Named as author on https://al-islam.org/islamic-teachings-brief-sayyid-muhammad-husayn-tabatabai and https://al-islam.org/quran-islam-its-impact-and-influence-life-muslims-sayyid-muhammad-husayn-tabatabai (read 2026-11-10)."
+    needs_review: true
+
+  - id: talaafi
+    name: "Ali Akbar Talaafi"
+    role: author
+    alt_names:
+      - "Ali Akbar Talafi"
+    notes: "Named as author on https://al-islam.org/fazail-ul-mahdi-ali-akbar-talaafi (read 2026-11-10). The page spells the name both 'Talaafi' and 'Talafi'."
+    needs_review: true
+
+  - id: wofis
+    name: "World Organization for Islamic Services (WOFIS)"
+    role: author
+    alt_names:
+      - "WOFIS"
+    notes: "Named as author (an organization, not a person) on https://al-islam.org/brief-history-fourteen-infallibles (read 2026-11-10). Page gives no individual author."
+    needs_review: true
+
+  - id: mufid
+    name: "Shaykh Muḥammad b. Muḥammad al-Mufīd"
+    role: author
+    alt_names:
+      - "Shaykh Mufid"
+      - "al-Shaykh al-Mufīd"
+    notes: "Named as author of Al-Amālī on https://thaqalayn.com/book/13 (verified 2026-11-10)."
+    needs_review: true
+
+  - id: muhsini
+    name: "Shaykh Muḥammad Āṣif al-Muḥsinī"
+    role: author
+    alt_names:
+      - "Shaykh Asif Mohseni"
+      - "Shaykh Muḥammad Āṣif Muḥsinī"
+      - "Shaykh Muḥsinī"
+    notes: "Named as compiler of Muʿjam al-Aḥādīth al-Muʿtabara on https://thaqalayn.com/book/9 (verified 2026-11-10)."
+    needs_review: true
+
+  - id: ghadairi
+    name: "Abū al-Ḥusayn Aḥmad b. al-Ḥusayn al-Ghaḍā'irī"
+    role: author
+    alt_names:
+      - "Ibn al-Ghada'iri"
+      - "Aḥmad b. al-Ḥusayn b. ʿUbaydullah al-Ghaḍāʾirī"
+      - "Ibn al-Ghaḍāʾirī"
+    notes: "Named as author of Kitāb al-Ḍuʿafāʾ on https://thaqalayn.com/book/17, which also says the book's authorship was disputed among scholars (verified 2026-11-10)."
+    needs_review: true
+
+  - id: numani
+    name: "Abū ʿAbd Allah Muḥammad b. Ibrāhīm al-Nuʿmānī"
+    role: author
+    alt_names:
+      - "Shaykh Nu'mani"
+      - "al-Shaykh Muḥammad b. Ibrāhīm al-Nuʿmānī"
+    notes: "Named as author of Kitāb al-Ghayba on https://thaqalayn.com/book/22 (verified 2026-11-10)."
+    needs_review: true
+
+  - id: husayn-b-said-al-ahwazi
+    name: "Ḥusayn b. Saʿīd al-Ahwāzī"
+    role: author
+    alt_names:
+      - "Husayn ibn Sa'id al-Ahwazi"
+      - "al-Ḥusayn b. Saʿīd al-Ahwāzī"
+    notes: "Named as author of Kitāb al-Muʾmin and Kitāb al-Zuhd on https://thaqalayn.com/book/30 and /book/31 (verified 2026-11-10)."
+    needs_review: true
+
+  - id: ali-ibn-babawayh
+    name: "ʿAlī ibn Bābawayh"
+    role: author
+    alt_names:
+      - "ʿAlī ibn Bābawayh (d. 329 AH)"
+    notes: "Named as compiler of Al-Imāma wa'l-Tabṣira min al-Ḥayra on https://thaqalayn.com/book/45, which describes him as the father of Shaykh al-Ṣadūq (verified 2026-11-10)."
+    needs_review: true

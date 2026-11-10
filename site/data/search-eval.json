@@ -156,11 +156,11 @@
   {
    "query": "who is the mahdi",
    "expect_any": [
-    "thaqalayn-kitab-al-ghayba-tusi"
+    "al-islam-fazail-ul-mahdi"
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "only an advanced hadith source exists so far; a beginner record should outrank it once cataloged"
+   "note": ""
   },
   {
    "query": "al kafi",
@@ -220,10 +220,77 @@
   },
   {
    "query": "why do shia cry on ashura",
-   "expect_any": [],
-   "expect_none": true,
+   "expect_any": [
+    "al-islam-karbala-chain-of-events"
+   ],
+   "expect_none": false,
    "expect_group": "any",
-   "note": "nothing cataloged yet"
+   "note": "curated phrasing"
+  },
+  {
+   "query": "what is shia islam",
+   "expect_any": [
+    "al-islam-discovering-shii-islam",
+    "al-islam-discovering-islam"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "beginner record should lead"
+  },
+  {
+   "query": "how do shias pray",
+   "expect_any": [
+    "al-islam-discovering-islam",
+    "sistani-west-salat-general-rules"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "who is imam ali",
+   "expect_any": [
+    "al-islam-nahjul-balagah-revisited-imam-ali"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "12 imams",
+   "expect_any": [
+    "al-islam-brief-history-fourteen-infallibles"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "alt term"
+  },
+  {
+   "query": "fatima",
+   "expect_any": [
+    "al-islam-fatima-the-gracious"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "karbala",
+   "expect_any": [
+    "al-islam-karbala-chain-of-events"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": ""
+  },
+  {
+   "query": "how do i become a muslim",
+   "expect_any": [
+    "al-islam-discovering-islam"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
   },
   {
    "query": "xyzzy qwerty",
