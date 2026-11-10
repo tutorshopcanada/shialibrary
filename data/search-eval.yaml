@@ -19,6 +19,12 @@ queries:
   - {query: "turbah", expect_any: [sistani-qa-15488], expect_group: any, note: ""}
   - {query: "fiqh", expect_any: [sistani-qa, sistani-code-of-practice-west], expect_group: any, note: "parent heading returns children"}
   - {query: "what is khums", expect_none: true, note: "nothing cataloged on khums yet; should fall back honestly. Change to expect_any once records exist."}
-  - {query: "who is the mahdi", expect_none: true, note: "nothing cataloged yet"}
+  - {query: "who is the mahdi", expect_any: [thaqalayn-kitab-al-ghayba-tusi], expect_group: any, note: "only an advanced hadith source exists so far; a beginner record should outrank it once cataloged"}
+  - {query: "al kafi", expect_any: [thaqalayn-al-kafi-vol-1], expect_group: exact, note: "diacritics stripped: Al-Kāfi"}
+  - {query: "nahjul balagha", expect_any: [thaqalayn-nahj-al-balagha], expect_group: any, note: "spelling variant via alt terms"}
+  - {query: "sayings of imam ali", expect_any: [thaqalayn-nahj-al-balagha], expect_group: any, note: ""}
+  - {query: "kulayni", expect_any: [thaqalayn-al-kafi-vol-1], expect_group: any, note: "author name"}
+  - {query: "ziyarat imam hussain", expect_any: [thaqalayn-kamil-al-ziyarat], expect_group: any, note: "Hussain/Husayn variants"}
+  - {query: "hadith", expect_any: [thaqalayn-al-kafi-vol-1, thaqalayn-al-tawhid, thaqalayn-al-khisal], expect_group: any, note: "parent heading returns child-heading records"}
   - {query: "why do shia cry on ashura", expect_none: true, note: "nothing cataloged yet"}
   - {query: "xyzzy qwerty", expect_none: true, note: "nonsense query"}

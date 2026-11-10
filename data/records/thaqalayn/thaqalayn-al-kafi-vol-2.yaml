@@ -1,0 +1,34 @@
+id: thaqalayn-al-kafi-vol-2
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Al-Kāfi (Vol. 2): The Sufficient'
+title_original: ''
+authors:
+- kulayni
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/2
+language: en
+date: ''
+description: Al-Kafi is a collection of hadith (reported sayings of the Prophet and the Imams) compiled by Shaykh
+  al-Kulayni, shown here in Arabic with an English translation by Muhammad Sarwar. Volume 2 of 8 gathers narrations
+  on belief and disbelief, supplication (dua, calling on God), the excellence of the Quran, and social manners.
+  It is a primary source, best suited to readers who already know the basics.
+sample_questions:
+- What do Shia hadith say about faith and disbelief?
+- What hadith are there about making dua?
+- What do the Imams say about the Quran's merits?
+- What hadith are there about good manners with other people?
+- Where can I read volume 2 of Al-Kafi in English?
+headings:
+- hadith-collections
+- duas
+- ethics
+access: free
+location: Volume 2 of 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

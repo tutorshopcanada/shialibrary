@@ -57,3 +57,39 @@ questions:
     headings: [fiqh]
     top_records: [sistani-qa, sistani-code-of-practice-west]
     draft: true
+  - id: q-what-is-al-kafi
+    question: "What is Al-Kafi?"
+    alt_phrasings: ["al kafi hadith book", "shia hadith books", "main shia hadith collection", "usul al-kafi"]
+    headings: [hadith-collections]
+    top_records: [thaqalayn-al-kafi-vol-1, thaqalayn-al-kafi-vol-2]
+    draft: true
+  - id: q-nahj-al-balagha
+    question: "Where can I read the sermons and sayings of Imam Ali?"
+    alt_phrasings: ["what is nahjul balagha", "nahj al-balagha in english", "sayings of imam ali", "letters of imam ali"]
+    headings: [nahj-al-balagha, imam-ali]
+    top_records: [thaqalayn-nahj-al-balagha]
+    draft: true
+  - id: q-hadith-on-god
+    question: "What do the Imams say about God?"
+    alt_phrasings: ["hadith about tawhid", "shia hadith on the oneness of god", "narrations about allah"]
+    headings: [tawhid]
+    top_records: [thaqalayn-al-tawhid, thaqalayn-al-kafi-vol-1]
+    draft: true
+  - id: q-hadith-on-mahdi-occultation
+    question: "Where can I read hadith about the twelfth Imam being hidden?"
+    alt_phrasings: ["hadith about the mahdi", "occultation of the imam", "ghaybah hadith", "book about the occultation"]
+    headings: [imam-mahdi]
+    top_records: [thaqalayn-kitab-al-ghayba-tusi]
+    draft: true
+  - id: q-ziyarat-imam-husayn
+    question: "What do hadith say about visiting the shrine of Imam Husayn?"
+    alt_phrasings: ["ziyarat of imam hussain", "visiting karbala", "hadith about ziyarat", "kamil al-ziyarat"]
+    headings: [ziyarat, imam-husayn]
+    top_records: [thaqalayn-kamil-al-ziyarat]
+    draft: true
+  - id: q-rights-of-others
+    question: "What rights do other people have over me?"
+    alt_phrasings: ["treatise on rights", "risalat al-huquq", "rights of parents and neighbours", "duties to others in islam"]
+    headings: [family-social-ethics]
+    top_records: [thaqalayn-risalat-al-huquq]
+    draft: true

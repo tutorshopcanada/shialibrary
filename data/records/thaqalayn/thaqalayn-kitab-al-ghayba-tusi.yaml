@@ -1,0 +1,35 @@
+id: thaqalayn-kitab-al-ghayba-tusi
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Kitāb al-Ghayba: The Book of Occultation'
+title_original: ''
+authors:
+- tusi
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/27
+language: en
+date: ''
+description: A book by Shaykh al-Tusi on the occultation (ghayba, meaning being hidden from view) of the twelfth
+  Imam, al-Mahdi; shown in Arabic with an English translation by Sayyid Athar Husain S. H. Rizvi. According to the
+  site it combines arguments and hadith (reported sayings of the Prophet and the Imams) on the occultation, the
+  Imam's deputies and the signs of his return. It is a detailed primary source for readers with some background.
+sample_questions:
+- Who is the Mahdi?
+- What is the occultation of the twelfth Imam?
+- What are the signs of the Mahdi's reappearance?
+- Who were the deputies of Imam al-Mahdi?
+- What hadith are there about the hidden Imam?
+headings:
+- hadith-collections
+- imam-mahdi
+access: free
+location: ''
+needs_review: true
+review_note: Level set to advanced by default for a primary source. The site lists two different books titled 'Kitāb
+  al-Ghayba' (this one by al-Ṭūsī at /book/27 and one by al-Nuʿmānī at /book/22); the id carries the author's name
+  to keep them apart. The site describes the book as responding to other sects; a reviewer should confirm the headings.
+cataloged_on: '2026-11-10'

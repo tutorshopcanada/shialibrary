@@ -1,0 +1,17 @@
+# Proposed new headings
+
+Suggestions from cataloging sessions. Nothing here is in `data/vocabulary.yaml` until the owner approves it.
+
+## 2026-11-10: thaqalayn.net pilot
+
+- **id:** `legal-hadith`
+  - **label:** "Hadith on legal topics (narrations about worship and practical law)"
+  - **suggested parent:** `hadith` (NOT under `fiqh`, so these stay hadith records and do not trip the fiqh rule)
+  - **why:** Several hadith volumes on the site are about legal subjects (purity, prayer, zakat and so on). They are primary-source narrations, not rulings, so they cannot take a Fiqh heading, and at the moment they can only be tagged `hadith-collections`, which makes them hard to find by subject.
+  - **needed by:** `thaqalayn-al-kafi-vol-3` now; later Al-Kāfi vols 4-7, Man Lā Yaḥḍuruh al-Faqīh and Tahdhīb al-Aḥkām volumes if cataloged.
+
+- **id:** `intellect-knowledge`
+  - **label:** "Intellect and seeking knowledge"
+  - **suggested parent:** `ethics` (or `beliefs`; owner to choose)
+  - **why:** Al-Kāfi vol. 1 opens with books on intelligence and ignorance and on the virtue of knowledge; no existing heading covers this.
+  - **needed by:** `thaqalayn-al-kafi-vol-1`
