@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-illness
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Illness
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02655/
+language: en
+date: ''
+description: A topic page of questions about fasting for people who are ill, including a person with a
+  kidney problem.
+sample_questions:
+- Can I fast if I'm sick?
+- What if fasting harms my health?
+- What are the fasting rules for illness?
+- Do I fast with a kidney problem?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Illness'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

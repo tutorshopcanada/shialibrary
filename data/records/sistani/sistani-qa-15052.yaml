@@ -1,0 +1,29 @@
+id: sistani-qa-15052
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: Is it permissible to eat Halal food which has been steam cooked with the steam of meat not slaughtered
+  according to Islamic laws?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15052
+language: en
+date: ''
+description: A question asking whether halal food that has been steam cooked with the steam of meat not
+  slaughtered according to Islamic law can be eaten.
+sample_questions:
+- Can I eat halal food steamed with non-halal meat?
+- Does steam from non-halal meat affect food?
+- Is food cooked in the same steamer as haram meat okay?
+headings:
+- food-drink
+access: free
+location: Meat, question 14
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

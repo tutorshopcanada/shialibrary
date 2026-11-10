@@ -1,0 +1,28 @@
+id: sistani-qa-25367
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting
+level: intermediate
+title: Can a person who is fasting in the holy month of Ramadhan serve food to non-Muslims?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02662/#25367
+language: en
+date: ''
+description: A question asking whether a person who is fasting in Ramadan can serve food to non-Muslims.
+sample_questions:
+- Can I give food to a non-Muslim in Ramadan?
+- Can I cook for non-Muslims while fasting?
+- Can a fasting person serve non-Muslim guests?
+headings:
+- fasting
+access: free
+location: Fasting, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

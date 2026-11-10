@@ -1,0 +1,33 @@
+id: sistani-qa-25378
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting
+level: intermediate
+title: I am a married woman, and my husband is of another sect, he requests that I break my fast and have
+  Iftar in accordance to his Maghreb (sunset), which is usually 15 minutes before our Maghreb prayer,
+  can I break my fast with him?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02662/#25378
+language: en
+date: ''
+description: A question from a married woman whose husband is of another sect and asks her to break her
+  fast at his sunset time, usually fifteen minutes before her own Maghrib prayer, asking whether she can
+  break her fast with him.
+sample_questions:
+- Can I break my fast with my husband's Sunni time?
+- When do I break my fast if my spouse is Sunni?
+- Can I eat iftar earlier with my husband?
+- Iftar time differences between Sunni and Shia?
+headings:
+- fasting
+access: free
+location: Fasting, question 9
+needs_review: true
+review_note: Touches on Shia-Sunni practice; sensitive, so a reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15116
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: Is it okay to delay prayer (Namaaz) for a Majlis or Matam?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#15116
+language: en
+date: ''
+description: A question asking whether it is okay to delay a prayer for a majlis (religious gathering)
+  or matam (mourning).
+sample_questions:
+- Can I delay Namaz for a majlis?
+- Can I postpone prayer for Muharram gatherings?
+- Is it okay to pray late because of matam?
+headings:
+- prayer
+access: free
+location: Prayer, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

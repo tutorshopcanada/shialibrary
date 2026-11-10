@@ -1,0 +1,28 @@
+id: sistani-qa-25370
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-janabah
+level: intermediate
+title: If a person ejaculates in his sleep, does his fast become void?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02663/#25370
+language: en
+date: ''
+description: A question asking whether a person's fast becomes void if he ejaculates in his sleep.
+sample_questions:
+- Does a wet dream break the fast?
+- Does nocturnal emission affect my fast?
+- What if I wake up with a wet dream during Ramadan?
+headings:
+- fasting
+access: free
+location: Fasting - Janabah, question 2
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

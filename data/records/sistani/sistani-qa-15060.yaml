@@ -1,0 +1,30 @@
+id: sistani-qa-15060
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Is it sufficient for a non-Arab to pronounce the marriage formula in Arabic without understanding
+  the meaning of the words, even though we know that the purpose for uttering those words is to solemnize
+  the marriage in the right way?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15060
+language: en
+date: ''
+description: A question asking whether it is enough for a non-Arab to say the marriage formula in Arabic
+  without understanding it, and whether it has to be in Arabic rather than another language.
+sample_questions:
+- Does the marriage formula have to be in Arabic?
+- Can I say the nikah in English?
+- Is it enough to say Arabic words I don't understand?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

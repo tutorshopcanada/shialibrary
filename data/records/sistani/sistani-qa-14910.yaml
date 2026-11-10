@@ -1,0 +1,30 @@
+id: sistani-qa-14910
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: What should be the minimum distance between a woman and a man while both are performing prayers
+  (salat)? whether both can offer prayers within the same room?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14910
+language: en
+date: ''
+description: A question asking what the minimum distance is between a woman and a man who are both praying,
+  and whether both can pray in the same room.
+sample_questions:
+- How far apart should men and women pray?
+- Can a man and woman pray in the same room?
+- Can my wife pray next to me?
+- What is the distance between a man and a woman in salat?
+headings:
+- prayer
+access: free
+location: Prayer, question 24
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

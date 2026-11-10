@@ -1,0 +1,33 @@
+id: sistani-qa-15437
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-purity
+level: intermediate
+title: Can Muslim, who rents a fully furnished house in the West, consider everything in it to be ritually
+  pure as long as he does not find any trace of impure things in it, even if the previous occupant was
+  from a non-Muslim, and kept a dog at home?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01281/#15437
+language: en
+date: ''
+description: A question about a Muslim renting a fully furnished house in the West, asking whether everything
+  in it can be considered pure if no trace of impurity is found, even if the previous occupant was a non-Muslim
+  who kept a dog.
+sample_questions:
+- Is a rented house pure if the last tenant had a dog?
+- Do I clean a furnished rental before using it?
+- Does the previous occupant's dog matter?
+headings:
+- purity
+- muslims-in-west
+access: free
+location: Purity, question 3
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

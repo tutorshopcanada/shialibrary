@@ -1,0 +1,28 @@
+id: sistani-qa-fasting-intimacy
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Intimacy
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02660/
+language: en
+date: ''
+description: A topic page with a question about physical intimacy between spouses during a fast.
+sample_questions:
+- Does foreplay affect the fast?
+- What spouse activities affect fasting?
+- Can married couples be intimate during Ramadan days?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Intimacy'
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

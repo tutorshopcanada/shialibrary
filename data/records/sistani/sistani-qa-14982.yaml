@@ -1,0 +1,31 @@
+id: sistani-qa-14982
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: Can the clothes washed with liquid detergent in laundry facilities owned by a non-Muslim be considered
+  tahir while knowing that Muslims as well as non-Muslims wash their clothes there?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14982
+language: en
+date: ''
+description: A question about clothes washed with liquid detergent in non-Muslim-owned laundry facilities
+  used by both Muslims and non-Muslims, asking whether they can be considered tahir.
+sample_questions:
+- Are clothes from a public laundry pure?
+- Can I pray in clothes washed in a non-Muslim laundromat?
+- Is a shared laundry okay?
+headings:
+- purity
+- muslims-in-west
+access: free
+location: Najasat, question 12
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

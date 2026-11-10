@@ -1,0 +1,30 @@
+id: sistani-qa-25299
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-divorce
+level: intermediate
+title: My husband is Sunni and I want to separate from him. If he divorces me without the presence of
+  any witnesses, is the divorce valid.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01166/#25299
+language: en
+date: ''
+description: A question from a woman with a Sunni husband who wants to separate, asking whether a divorce
+  he pronounces without witnesses is valid.
+sample_questions:
+- Is a Sunni husband's divorce valid for a Shia woman?
+- Does divorce need witnesses if my husband is Sunni?
+- How do I separate from a Sunni husband?
+headings:
+- marriage-family
+access: free
+location: Divorce, question 7
+needs_review: true
+review_note: Touches on Shia-Sunni practice; sensitive, so a reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

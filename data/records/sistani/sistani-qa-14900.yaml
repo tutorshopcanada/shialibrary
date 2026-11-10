@@ -1,0 +1,30 @@
+id: sistani-qa-14900
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-purity
+level: intermediate
+title: What is the hokm (ruling) about Ahlul Kitab (people of the Book)? Are they clean? How should we
+  deal with them?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01281/#14900
+language: en
+date: ''
+description: A question asking for the ruling about Ahlul Kitab (People of the Book), whether they are
+  clean, and how to deal with them.
+sample_questions:
+- Are Christians and Jews najis?
+- Are People of the Book ritually clean?
+- How do I deal with Ahlul Kitab?
+headings:
+- purity
+access: free
+location: Purity, question 10
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

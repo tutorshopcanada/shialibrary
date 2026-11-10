@@ -1,0 +1,29 @@
+id: sistani-qa-14816
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: What is the ruling in the matter of the meat or hide of an animal sold by Muslims, especially,
+  when it is not known it was ritually slaughtered?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#14816
+language: en
+date: ''
+description: A question about the meat or hide of an animal sold by Muslims when it is not known whether
+  it was ritually slaughtered.
+sample_questions:
+- Can I buy meat from a Muslim seller if I don't know how it was slaughtered?
+- Is meat sold by Muslims halal by default?
+- What about hides sold by Muslims?
+headings:
+- food-drink
+access: free
+location: Meat, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

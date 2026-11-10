@@ -1,0 +1,28 @@
+id: sistani-qa-15041
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: What kind of marine animals are Halal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15041
+language: en
+date: ''
+description: A question asking which kinds of marine animals are halal.
+sample_questions:
+- Which seafood is halal?
+- What fish can Shias eat?
+- Are all sea animals halal?
+- Which marine animals are halal?
+headings:
+- food-drink
+access: free
+location: Meat, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

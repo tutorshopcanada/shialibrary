@@ -1,0 +1,28 @@
+id: sistani-qa-15064
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Can a Sayyid girl marry a non-Sayyid man?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15064
+language: en
+date: ''
+description: A question asking whether a Sayyid girl can marry a man who is not a Sayyid.
+sample_questions:
+- Can a sayyida marry a non-sayyid?
+- Can I marry outside the sayyid family?
+- Is it okay for a Sayyid woman to marry a non-Sayyid?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 3
+needs_review: true
+review_note: Concerns marriage across social descent groups, a sensitive family matter; reviewer should
+  confirm the classification and wording.
+cataloged_on: '2026-11-10'

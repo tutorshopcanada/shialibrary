@@ -1,0 +1,27 @@
+id: sistani-qa-14829
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qasr-prayers
+level: intermediate
+title: Is it necessary for a hunter who goes out hunting to shorten his prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01298/#14829
+language: en
+date: ''
+description: A question asking whether a hunter who goes out hunting needs to shorten his prayer.
+sample_questions:
+- Do hunters pray qasr?
+- Do I shorten prayers on a hunting trip?
+- Is hunting travel counted for qasr?
+headings:
+- prayer
+access: free
+location: Qasr Prayers, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

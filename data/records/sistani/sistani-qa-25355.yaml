@@ -1,0 +1,27 @@
+id: sistani-qa-25355
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-old-age
+level: intermediate
+title: What is the Islamic law about someone who cannot fast due to old age?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02654/#25355
+language: en
+date: ''
+description: A question about the Islamic law for someone who cannot fast because of old age.
+sample_questions:
+- Do old people have to fast?
+- What if I am too old to fast?
+- What can an elderly person do instead of fasting?
+headings:
+- fasting
+access: free
+location: Fasting - Old Age, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

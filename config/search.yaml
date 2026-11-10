@@ -94,8 +94,8 @@ ranking:
   # Whole books and topic pages rank above single questions of equal relevance, so a broad
   # search ("prayer", "khums") leads with the overview and not with one narrow question.
   granularity_boost:
-    work: 1.6
-    section: 1.3
+    work: 2.0
+    section: 1.8
     item: 1.0
   # Exact matches: "strict" lists all beginner records first, then intermediate,
   # then advanced, each sorted by relevance. "boost" uses the multipliers below.

@@ -1,0 +1,31 @@
+id: sistani-qa-purity
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Purity
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01281/
+language: en
+date: ''
+description: A topic page of questions and answers about ritual purity (taharah). Questions cover leather
+  products of unknown source, cleanliness after urinating, rented furnished houses, shared laundries,
+  glued carpets, dog saliva, car tyres and the status of the People of the Book.
+sample_questions:
+- How do I know if leather is pure?
+- How do I clean myself after urinating?
+- Are public laundries pure?
+- How do I purify things in a rented home?
+- Are People of the Book najis?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Purity'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

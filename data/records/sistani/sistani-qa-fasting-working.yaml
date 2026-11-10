@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-working
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Working
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02650/
+language: en
+date: ''
+description: A topic page with a question about fasting while doing physically demanding work in long,
+  hot days.
+sample_questions:
+- Can I skip fasting because of my job?
+- Can I fast if I do hard physical work?
+- Is heavy work an excuse not to fast?
+- Can I make up fasts I miss for work?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Working'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

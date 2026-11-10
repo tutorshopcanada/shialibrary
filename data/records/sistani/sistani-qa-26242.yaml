@@ -1,0 +1,29 @@
+id: sistani-qa-26242
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-divorce
+level: intermediate
+title: Can one recite a divorce, whilst the two witnesses are not actually present, rather are listening
+  on the phone?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01166/#26242
+language: en
+date: ''
+description: A question asking whether a divorce can be recited when the two witnesses are not present
+  but are listening on the phone.
+sample_questions:
+- Can witnesses listen to a divorce by phone?
+- Is a divorce valid with phone witnesses?
+- Do witnesses need to be physically present for divorce?
+headings:
+- marriage-family
+access: free
+location: Divorce, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,27 @@
+id: sistani-qa-25357
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-pregnancy
+level: intermediate
+title: I am pregnant and would like to know whether I should fast or not.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02656/#25357
+language: en
+date: ''
+description: A question from a pregnant woman asking whether she fasts or not.
+sample_questions:
+- Should I fast if I'm pregnant?
+- Do pregnant women have to fast?
+- Can I skip fasting during pregnancy?
+headings:
+- fasting
+access: free
+location: Fasting - Pregnancy, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-qa-14954
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: One of the famous trousers these days is the one known as jeans. It is made in non-Muslim countries.
+  It has a piece of leather used as a label....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14954
+language: en
+date: ''
+description: A question about jeans made in non-Muslim countries with a leather label of unknown source,
+  asking whether salat can be said wearing them.
+sample_questions:
+- Can I pray in jeans?
+- Is a leather label on jeans a problem for prayer?
+- Can I pray in clothes with unknown leather?
+- Praying in clothes made abroad?
+headings:
+- prayer
+- purity
+access: free
+location: Prayer, question 18
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

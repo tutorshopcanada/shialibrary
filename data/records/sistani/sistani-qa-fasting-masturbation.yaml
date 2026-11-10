@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-masturbation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Masturbation
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02659/
+language: en
+date: ''
+description: A topic page of questions about masturbation during Ramadan, asked in connection with the
+  validity of fasts.
+sample_questions:
+- What if I broke my fast through masturbation?
+- How do I handle past fasts if I didn't know the rule?
+- What is the penalty in Ramadan?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Masturbation'
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

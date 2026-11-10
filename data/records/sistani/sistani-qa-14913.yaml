@@ -1,0 +1,27 @@
+id: sistani-qa-14913
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: Is it allowed for a man's wife or daughter to pray next to him in Prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14913
+language: en
+date: ''
+description: A question asking whether it is allowed for a man's wife or daughter to pray next to him.
+sample_questions:
+- Can my wife pray beside me?
+- Can a daughter stand next to her father in prayer?
+- Can women and men pray side by side in the family?
+headings:
+- prayer
+access: free
+location: Prayer, question 27
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

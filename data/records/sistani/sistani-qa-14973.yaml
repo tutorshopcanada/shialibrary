@@ -1,0 +1,34 @@
+id: sistani-qa-14973
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: Can Muslim, who rents a fully furnished house in the West, consider everything in it to be ritually
+  pure as long as he does not find any trace of impure things in it, even if the previous occupant was
+  from Ahlul Kitab, i.e., a Christian or a Jew?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14973
+language: en
+date: ''
+description: A question about a Muslim renting a fully furnished house in the West, asking whether everything
+  in it can be considered pure if no trace of impurity is found, even if the previous occupant was a Christian,
+  Jew, Buddhist or atheist.
+sample_questions:
+- Is a rented furnished house pure?
+- Do I need to clean everything in a rented home?
+- Does the previous tenant's religion matter?
+- How do I know a rented house is pure?
+headings:
+- purity
+- muslims-in-west
+access: free
+location: Najasat, question 5
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

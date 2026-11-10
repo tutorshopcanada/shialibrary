@@ -1,0 +1,30 @@
+id: sistani-qa-15061
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Is it permissible for us to give the Imam’s portion of khums for the marriage of a believer (mo’min)
+  in the West...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15061
+language: en
+date: ''
+description: A question asking whether the Imam's share of khums can be given for the marriage of a believer
+  in the West, given that the same money could help several marriages or needy believers in Muslim countries.
+sample_questions:
+- Can khums pay for a wedding?
+- Can Sahm-e Imam be used for marriage?
+- Who should receive the Imam's share?
+headings:
+- marriage-family
+- khums-zakat
+access: free
+location: Marriage, question 9
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

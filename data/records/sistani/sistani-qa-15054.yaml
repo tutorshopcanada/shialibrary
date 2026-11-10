@@ -1,0 +1,28 @@
+id: sistani-qa-15054
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: I am a virgin girl, do I need to seek my father's permission for temporary or permanent marriage?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15054
+language: en
+date: ''
+description: A question from a virgin girl asking whether she needs to seek her father's permission for
+  a temporary or a permanent marriage.
+sample_questions:
+- Do I need my father's permission for marriage?
+- Does a girl need permission for mutah?
+- Can I marry without my father's approval?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

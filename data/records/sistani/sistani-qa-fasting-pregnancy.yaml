@@ -1,0 +1,28 @@
+id: sistani-qa-fasting-pregnancy
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Pregnancy
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02656/
+language: en
+date: ''
+description: A topic page with a question from a pregnant woman about fasting.
+sample_questions:
+- Do pregnant women fast?
+- Can I fast while pregnant?
+- What if fasting affects my pregnancy?
+- Fasting rules for expecting mothers?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Pregnancy'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

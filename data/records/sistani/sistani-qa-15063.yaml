@@ -1,0 +1,27 @@
+id: sistani-qa-15063
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Can a Muslim marry his/her own cousin?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15063
+language: en
+date: ''
+description: A question asking whether a Muslim can marry his or her own cousin.
+sample_questions:
+- Can I marry my cousin?
+- Is cousin marriage allowed in Islam?
+- Is marrying a relative acceptable?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 11
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

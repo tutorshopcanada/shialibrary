@@ -1,0 +1,30 @@
+id: sistani-qa-25351
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-education
+level: intermediate
+title: I am a student and have to attend my classes in the month of Ramadhan. I also have important exams
+  in this month. If I have to fast, I will not be able to concentrate on my studies....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02652/#25351
+language: en
+date: ''
+description: A question from a student who has classes and important exams in Ramadan and worries fasting
+  will affect concentration, asking whether he still has to fast.
+sample_questions:
+- Do I fast during exams?
+- Can I skip fasting because I'm a student?
+- Does fasting affect my studying?
+- Fasting during university exams?
+headings:
+- fasting
+access: free
+location: Fasting - Education, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

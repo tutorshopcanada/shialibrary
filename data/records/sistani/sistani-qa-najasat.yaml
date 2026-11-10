@@ -1,0 +1,31 @@
+id: sistani-qa-najasat
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Najasat
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/
+language: en
+date: ''
+description: A topic page of questions and answers about najasat (ritual impurity). Questions cover purifying
+  items touched by a dog, car tyres, carpets, items in rented furnished houses, pig-derived bristles and
+  fat, impurity of drinks and eggs, and laundry done by non-Muslims.
+sample_questions:
+- What makes something najis?
+- How do I purify clothes a dog licked?
+- Is beer najis?
+- How do I clean a carpet that is najis?
+- Are shared laundry machines pure?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Najasat'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

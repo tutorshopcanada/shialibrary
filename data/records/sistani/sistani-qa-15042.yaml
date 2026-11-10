@@ -1,0 +1,28 @@
+id: sistani-qa-15042
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: Is Kosher meat Halal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15042
+language: en
+date: ''
+description: A question asking whether kosher meat is halal.
+sample_questions:
+- Is kosher meat halal?
+- Can Muslims eat kosher food?
+- Is kosher the same as halal?
+headings:
+- food-drink
+access: free
+location: Meat, question 3
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

@@ -42,3 +42,6 @@ queries:
   - {query: "is music haram", expect_any: [sistani-west-music-general-rules, sistani-west-music-questions-answers, sistani-qa-music], expect_group: any, note: "alt term of the music heading"}
   - {query: "halal meat in the west", expect_any: [sistani-west-food-general-rules, sistani-west-food-questions-answers, sistani-qa-islamic-slaughtering], expect_group: any, note: ""}
   - {query: "taqlid", expect_any: [sistani-west-taqlid-general-rules, sistani-west-taqlid-introduction, sistani-qa-following-a-mujtahid], expect_group: any, note: ""}
+  - {query: "fasting while pregnant", expect_any: [sistani-qa-fasting-pregnancy], expect_group: any, note: ""}
+  - {query: "prayer", expect_any: [sistani-qa-prayer, sistani-west-salat-general-rules, al-islam-discovering-islam], expect_group: any, note: "broad query should lead with overviews, not single questions"}
+  - {query: "roza", expect_any: [sistani-qa-fasting, sistani-west-fasting-general-rules], expect_group: any, note: "Urdu/Persian term for fasting"}

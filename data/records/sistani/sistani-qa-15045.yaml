@@ -1,0 +1,31 @@
+id: sistani-qa-15045
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: We enter some supermarkets in Europe and find meat in tin containers produced by a European company
+  with the writing on the package that conveys the sense of it being “Halal” or “slaughtered according
+  to Islamic laws”....
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15045
+language: en
+date: ''
+description: A question about canned meat in European supermarkets, produced by a European company with
+  a label saying it is halal or slaughtered according to Islamic law, asking whether it can be bought
+  and eaten. The site lists this question more than once with separate links.
+sample_questions:
+- Can I trust halal labels on canned meat?
+- Is canned halal meat from a European company okay?
+- Does a halal label count?
+headings:
+- food-drink
+access: free
+location: Meat, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

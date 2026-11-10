@@ -1,0 +1,29 @@
+id: sistani-qa-15236
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-halal-haram-foods
+level: intermediate
+title: Can we eat a meal that has been cooked by a non-Muslim whose religion we do not know?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01210/#15236
+language: en
+date: ''
+description: A question asking whether a meal cooked by a non-Muslim whose religion is unknown can be
+  eaten.
+sample_questions:
+- Can I eat a meal from someone whose religion I don't know?
+- Can I eat at a non-Muslim's home?
+- Is it okay to eat food cooked by a stranger?
+headings:
+- food-drink
+access: free
+location: Halal & Haram Foods, question 2
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

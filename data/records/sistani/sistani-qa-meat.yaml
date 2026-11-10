@@ -1,0 +1,31 @@
+id: sistani-qa-meat
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Meat
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/
+language: en
+date: ''
+description: A topic page of questions and answers about meat and fish. Questions cover which marine animals
+  are halal, meat slaughtered by non-Muslims, kosher meat, halal labels on packaged meat, lobster and
+  shrimp, and fish whose type is unclear.
+sample_questions:
+- Which sea animals are halal?
+- Is kosher meat halal?
+- Can I eat meat slaughtered by non-Muslims?
+- Can I trust halal labels on meat?
+- Is lobster halal?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Meat'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

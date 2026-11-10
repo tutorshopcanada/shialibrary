@@ -375,6 +375,36 @@
    "expect_none": false,
    "expect_group": "any",
    "note": ""
+  },
+  {
+   "query": "fasting while pregnant",
+   "expect_any": [
+    "sistani-qa-fasting-pregnancy"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "prayer",
+   "expect_any": [
+    "sistani-qa-prayer",
+    "sistani-west-salat-general-rules",
+    "al-islam-discovering-islam"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "broad query should lead with overviews, not single questions"
+  },
+  {
+   "query": "roza",
+   "expect_any": [
+    "sistani-qa-fasting",
+    "sistani-west-fasting-general-rules"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "Urdu/Persian term for fasting"
   }
  ]
 }

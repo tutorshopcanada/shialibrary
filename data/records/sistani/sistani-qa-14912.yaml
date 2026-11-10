@@ -1,0 +1,31 @@
+id: sistani-qa-14912
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: Can I say congregational prayer with my Sunni brothers? And can I lead prayers when I pray with
+  them?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14912
+language: en
+date: ''
+description: A question asking whether a Shia can say congregational prayer with Sunni Muslims, and whether
+  he can lead the prayer when praying with them.
+sample_questions:
+- Can I pray with Sunnis?
+- Can a Shia lead Sunni prayer?
+- Can I join jamaat at a Sunni mosque?
+- Is it okay to pray with Sunni brothers?
+headings:
+- prayer
+access: free
+location: Prayer, question 26
+needs_review: true
+review_note: Touches on Shia-Sunni practice; sensitive, so a reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

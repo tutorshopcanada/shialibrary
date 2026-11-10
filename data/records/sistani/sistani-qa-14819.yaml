@@ -1,0 +1,28 @@
+id: sistani-qa-14819
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: Is it permissible to eat the meat of an animal which has been slaughtered by a non-Muslim?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#14819
+language: en
+date: ''
+description: A question asking whether it is allowed to eat the meat of an animal slaughtered by a non-Muslim.
+sample_questions:
+- Can I eat meat slaughtered by a non-Muslim?
+- Is a non-Muslim's slaughter acceptable?
+- What meat can I buy from non-Muslim butchers?
+headings:
+- food-drink
+access: free
+location: Meat, question 5
+needs_review: true
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

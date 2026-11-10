@@ -1,0 +1,28 @@
+id: sistani-qa-14897
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-purity
+level: intermediate
+title: If a dog licks my body or clothes, how should I purify it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01281/#14897
+language: en
+date: ''
+description: A question asking how to purify the body or clothes if a dog licks them. The site lists this
+  question twice with separate links.
+sample_questions:
+- How do I clean something a dog licked?
+- What if a dog licks my clothes?
+- Is a dog's lick najis?
+headings:
+- purity
+access: free
+location: Purity, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

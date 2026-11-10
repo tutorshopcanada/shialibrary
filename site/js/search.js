@@ -45,7 +45,7 @@ export const DEFAULT_CONFIG = {
     exact_group_order: 'strict',
     level_boost: { beginner: 1.5, intermediate: 1.2, advanced: 1.0 },
     deeper_boost: { beginner: 1.0, intermediate: 1.2, advanced: 1.5 },
-    granularity_boost: { work: 1.6, section: 1.3, item: 1.0 },
+    granularity_boost: { work: 2.0, section: 1.8, item: 1.0 },
   },
   tags: {
     order: ['fiqh', 'hadith', 'book', 'article', 'course', 'lecture', 'other'],

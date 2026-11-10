@@ -1,0 +1,27 @@
+id: sistani-qa-25380
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-intention
+level: intermediate
+title: Is it necessary to mention the niyah of fasting verbally?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02649/#25380
+language: en
+date: ''
+description: A question asking whether the intention (niyah) of fasting has to be said out loud.
+sample_questions:
+- Do I say the niyyah for fasting aloud?
+- Is it enough to intend in my heart?
+- Do I have to recite the intention?
+headings:
+- fasting
+access: free
+location: Fasting - Intention (Niyah), question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

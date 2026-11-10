@@ -1,0 +1,30 @@
+id: sistani-qa-halal-haram-foods
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Halal & Haram Foods
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01210/
+language: en
+date: ''
+description: A topic page of questions and answers about halal and haram foods. Questions cover food cooked
+  by non-Muslims and People of the Book, fish oils, and food sold in Western shops with unknown ingredients.
+sample_questions:
+- Can I eat food cooked by non-Muslims?
+- What is the rule on food made by Ahl-e Kitab?
+- Can I use fish oil in food?
+- Do I check ingredients in shop food?
+- What foods are halal?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Halal & Haram Foods'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

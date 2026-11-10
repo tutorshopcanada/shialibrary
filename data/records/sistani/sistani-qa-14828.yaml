@@ -1,0 +1,29 @@
+id: sistani-qa-14828
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qasr-prayers
+level: intermediate
+title: If a person intends to commit a sin during his journey and he moves out with such an intention,
+  does he need to offer his prayer as qasr?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01298/#14828
+language: en
+date: ''
+description: A question about a person who sets out on a journey intending to commit a sin, asking whether
+  he prays qasr.
+sample_questions:
+- Do I shorten prayer if my trip is for a sinful purpose?
+- Does the reason for my journey affect qasr?
+- Is qasr prayed on a sinful journey?
+headings:
+- prayer
+access: free
+location: Qasr Prayers, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

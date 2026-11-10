@@ -1,0 +1,30 @@
+id: sistani-qa-15241
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-halal-haram-foods
+level: intermediate
+title: 'We are unaware of the ingredients of food sold in shops in Western countries: it might be free
+  from those ingredients that are forbidden to us or it might contain them....'
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01210/#15241
+language: en
+date: ''
+description: A question about food sold in Western shops whose ingredients are unknown, asking whether
+  it can be eaten without checking the ingredients or enquiring about them. The site lists this question
+  twice with separate links.
+sample_questions:
+- Do I have to check ingredients in shop food?
+- Can I eat food whose ingredients I don't know?
+- Is packaged food in the West okay?
+headings:
+- food-drink
+access: free
+location: Halal & Haram Foods, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

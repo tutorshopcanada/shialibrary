@@ -1,0 +1,28 @@
+id: sistani-qa-25354
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-thirst
+level: intermediate
+title: I become extremely thirsty while fasting. Can that be an excuse for breaking my fast?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02653/#25354
+language: en
+date: ''
+description: A question from someone who becomes extremely thirsty while fasting, asking whether that
+  is an excuse for breaking the fast.
+sample_questions:
+- Can I break my fast if I'm very thirsty?
+- Is thirst a valid excuse for not fasting?
+- What do I do when thirst is unbearable while fasting?
+headings:
+- fasting
+access: free
+location: Fasting - Thirst, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

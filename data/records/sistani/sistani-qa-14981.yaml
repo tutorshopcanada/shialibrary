@@ -1,0 +1,31 @@
+id: sistani-qa-14981
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: Some soaps contain pigs' fat or other animals not slaughtered Islamically. Furthermore, we do not
+  know whether or not chemical change has taken place in the manufacturing process. Can such soaps be
+  considered tahir?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14981
+language: en
+date: ''
+description: A question about soaps that may contain pig fat or fat of animals not slaughtered Islamically,
+  and whether chemical change in manufacturing makes them pure.
+sample_questions:
+- Is soap with animal fat pure?
+- Does soap contain pig fat?
+- Does chemical change purify soap?
+- Can I use soap from unknown ingredients?
+headings:
+- purity
+access: free
+location: Najasat, question 11
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

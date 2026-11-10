@@ -1,0 +1,29 @@
+id: sistani-qa-25365
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-puberty
+level: intermediate
+title: When is a girl considered adult from the viewpoint of Sharia?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02661/#25365
+language: en
+date: ''
+description: A question asking when a girl is considered an adult from the viewpoint of Sharia.
+sample_questions:
+- At what age is a girl an adult in Islam?
+- When must a girl start fasting and praying?
+- When does a girl reach religious adulthood?
+headings:
+- fasting
+- youth-rulings
+- women-rulings
+access: free
+location: Fasting - Puberty, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

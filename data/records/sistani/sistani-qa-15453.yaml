@@ -1,0 +1,27 @@
+id: sistani-qa-15453
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-divorce
+level: intermediate
+title: Is it necessary that there be two witnesses when the formula of divorce is being recited?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01166/#15453
+language: en
+date: ''
+description: A question asking whether two witnesses are needed when the divorce formula is being recited.
+sample_questions:
+- Do I need witnesses for a divorce?
+- How many witnesses are needed for talaq?
+- Can a divorce be done without witnesses?
+headings:
+- marriage-family
+access: free
+location: Divorce, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

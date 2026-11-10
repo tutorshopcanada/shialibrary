@@ -1,0 +1,30 @@
+id: sistani-qa-25368
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-janabah
+level: intermediate
+title: A believer fasts but does not know that intentionally getting into state of janabat invalidates
+  fasting—what should he do [when he finds out]?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02663/#25368
+language: en
+date: ''
+description: A question about a believer who fasts but did not know that intentionally entering janabat
+  invalidates fasting, asking what to do after finding out.
+sample_questions:
+- What if I didn't know janabat invalidates fasting?
+- What do I do about past fasts after janabat?
+- Does intentionally being in janabat affect my fast?
+headings:
+- fasting
+access: free
+location: Fasting - Janabah, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

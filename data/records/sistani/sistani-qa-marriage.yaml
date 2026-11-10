@@ -1,0 +1,31 @@
+id: sistani-qa-marriage
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Marriage
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/
+language: en
+date: ''
+description: A topic page of questions and answers about marriage. Questions cover a guardian's permission,
+  marrying across backgrounds and faiths, looking at a prospective spouse, the marriage formula by phone
+  and in Arabic, and whether marriage is itself compulsory.
+sample_questions:
+- Do I need my father's permission to marry?
+- Can I marry my cousin?
+- Can a Muslim marry a Christian or Jew?
+- Can the marriage contract be said over the phone?
+- Is marriage compulsory?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Marriage'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

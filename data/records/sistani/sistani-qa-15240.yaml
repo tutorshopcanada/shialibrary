@@ -1,0 +1,29 @@
+id: sistani-qa-15240
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-halal-haram-foods
+level: intermediate
+title: Is it permissible to use, in our foods, oils derived from fish that are forbidden to us? What about
+  using such oils for other matters?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01210/#15240
+language: en
+date: ''
+description: A question about using oils derived from forbidden fish in food, and about using such oils
+  for other purposes. The site lists this question twice with separate links.
+sample_questions:
+- Can I use fish oil from any fish?
+- Are fish-oil supplements okay?
+- Can fish oil be used for non-food purposes?
+headings:
+- food-drink
+access: free
+location: Halal & Haram Foods, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

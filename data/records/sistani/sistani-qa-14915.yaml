@@ -1,0 +1,27 @@
+id: sistani-qa-14915
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: Is it makruh to close the eyes during Prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14915
+language: en
+date: ''
+description: A question asking whether it is makruh (disliked) to close the eyes during prayer.
+sample_questions:
+- Can I close my eyes in prayer?
+- Is it disliked to pray with eyes shut?
+- Should my eyes be open in salat?
+headings:
+- prayer
+access: free
+location: Prayer, question 29
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

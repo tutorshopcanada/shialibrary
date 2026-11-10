@@ -1,0 +1,30 @@
+id: sistani-qa-14955
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: Is Salat valid if the person uses cologne? Is cologne ritually pure?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14955
+language: en
+date: ''
+description: A question asking whether salat is valid when the person uses cologne, and whether cologne
+  is ritually pure.
+sample_questions:
+- Can I pray wearing cologne?
+- Is cologne pure?
+- Does perfume affect my prayer?
+- Can I wear aftershave during salat?
+headings:
+- prayer
+- purity
+access: free
+location: Prayer, question 19
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

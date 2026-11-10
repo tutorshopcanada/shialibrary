@@ -1,0 +1,30 @@
+id: sistani-qa-25360
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-masturbation
+level: intermediate
+title: I masturbated in Ramadhan and I did not know that masturbation is haram. How should I go about
+  my previous fasts?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02659/#25360
+language: en
+date: ''
+description: A question from someone who masturbated during Ramadan without knowing it is haram, asking
+  how to go about his previous fasts.
+sample_questions:
+- I did not know masturbation was haram in Ramadan, what now?
+- What do I do about my past fasts?
+- Do I make up fasts if I masturbated unknowingly?
+headings:
+- fasting
+access: free
+location: Fasting - Masturbation, question 1
+needs_review: true
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'
