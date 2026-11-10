@@ -592,3 +592,10 @@ scholars:
       - "Shaykh Nihād al-Fayyāḍ"
     notes: "Named as author on https://al-islam.org/articles/immunity-prophets-imams-physical-deficiencies-nihad-al-fayyad (read 2026-11-10); translated by Amir Al-Zabidi."
     needs_review: true
+
+  - id: bashir-hassanali-rahim
+    name: "Bashir Hassanali Rahim"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/history-and-philosophy-aza-imam-husayn-bashir-hassanali-rahim (read 2026-11-10)."
+    needs_review: true
