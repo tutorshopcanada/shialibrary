@@ -438,3 +438,104 @@ scholars:
       - "Imam Ali Ibn Hussein (as)"
     notes: "Named as author of the Sahifa extracts on https://al-islam.org/15-whispered-prayers-sahifa-al-kamila-sajjadiyyah (read 2026-11-10)."
     needs_review: true
+
+  # ── Added during the al-islam.org articles batch (2026-11-10). Names and spellings are only
+  # those shown on the fetched article pages. Not yet reviewed.
+  - id: ahlul-bayt-dilp
+    name: "Ahlul Bayt Digital Islamic Library Project (DILP)"
+    role: author
+    alt_names: []
+    notes: "Listed as author and compiler organization on https://al-islam.org/articles/diseases-soul-anger (read 2026-11-10). An organization, not a person."
+    needs_review: true
+
+  - id: kathy-kooshesh
+    name: "Kathy (Ma'asumeh) Kooshesh"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/my-story-kathy-maasumeh-kooshesh (read 2026-11-10)."
+    needs_review: true
+
+  - id: diana-beatty
+    name: "Diana Masooma Beatty"
+    role: author
+    alt_names:
+      - "Diana Beatty"
+    notes: "Named as author on https://al-islam.org/articles/how-i-became-muslim-diana-masooma-beatty (read 2026-11-10); the page text is signed 'Diana Beatty'."
+    needs_review: true
+
+  - id: muhammad-legenhausen
+    name: "Muhammad Legenhausen"
+    role: author
+    alt_names:
+      - "Hajj Muhammad Legenhausen"
+    notes: "Named as author on https://al-islam.org/articles/arbaeen-reflecting-upon-imams-stand-muhammad-legenhausen (read 2026-11-10)."
+    needs_review: true
+
+  - id: salim-yusufali
+    name: "Salim S. Yusufali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/how-make-most-ziyarah-ahlul-bayt-salim-s-yusufali (read 2026-11-10)."
+    needs_review: true
+
+  - id: yusuf-fadhl
+    name: "Yusuf Fadhl"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/living-miracle-yusuf-fadhl (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-baqir-majlisi
+    name: "Muhammad Baqir al-Majlisi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/sun-behind-clouds-muhammad-baqir-majlisi (read 2026-11-10); translator Afzal Sumar. The page cites Bihar al-Anwar, vol. 52."
+    needs_review: true
+
+  - id: hanieh-tarkian
+    name: "Hanieh Tarkian"
+    role: author
+    alt_names: []
+    notes: "Named as author ('Sister Hanieh Tarkian') on https://al-islam.org/articles/critical-role-women-karbala-hanieh-tarkian (read 2026-11-10)."
+    needs_review: true
+
+  - id: syed-ali-imran
+    name: "Syed Ali Imran"
+    role: author
+    alt_names:
+      - "Sayyid Ali"
+    notes: "Named as author on https://al-islam.org/articles/obedience-intellection-religion-syed-ali-imran and https://al-islam.org/articles/army-imam-al-hasan-ibn-ali-syed-ali-imran (read 2026-11-10); the first page's byline reads 'by Sayyid Ali'."
+    needs_review: true
+
+  - id: syed-ali-abbass-abdullah-shirazi
+    name: "Syed Ali Abbass Abdullah Shirazi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/fatima-al-zahra-uncovering-resistance-7th-century-syed-ali-abbass-abdullah-shirazi (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayed-jamaluddin-hejazi
+    name: "Sayed Jamaluddin Hejazi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/pursuance-sun-sayed-jamaluddin-hejazi (read 2026-11-10)."
+    needs_review: true
+
+  - id: mirza-jawad-maliki-tabrizi
+    name: "Mirza Jawad Maliki Tabrizi"
+    role: author
+    alt_names:
+      - "Ayatullah Mirza Jawad Tabrizi"
+      - "Mirza Jawad Malaki Tabrizi"
+    notes: >
+      Named as author on https://al-islam.org/articles/concise-treatise-authentic-traditions-regarding-right-divine-leadership-imamate-twelve
+      and https://al-islam.org/articles/greatness-15th-month-shaban-mirza-jawad-maliki-tabrizi (read 2026-11-10).
+      "Ayatullah Mirza Jawad Tabrizi" appears in the first page's URL; "Malaki" appears in the second page's body text.
+    needs_review: true
+
+  - id: yasin-t-al-jibouri
+    name: "Yasin T. Al-Jibouri"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/ghadir-khumm-one-islamic-historys-best-kept-secrets-yasin-t-al-jibouri (read 2026-11-10)."
+    needs_review: true

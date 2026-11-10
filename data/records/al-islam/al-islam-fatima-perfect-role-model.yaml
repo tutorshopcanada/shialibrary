@@ -1,0 +1,33 @@
+id: al-islam-fatima-perfect-role-model
+type: article
+content_tag: article
+granularity: work
+parent: ''
+level: intermediate
+title: Fatima, The Perfect Role Model
+title_original: ''
+authors: []
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/articles/fatima-perfect-role-model
+language: en
+date: ''
+description: A short article presenting Lady Fatimah al-Zahra, the Prophet's daughter, as a role model
+  for both men and women. It lists nine numbered points and ends with a section on Asiya, the wife of
+  the Pharaoh, and was translated with additions by Saleem Bhimji.
+sample_questions:
+- Who was Lady Fatimah?
+- Why is Fatimah a role model?
+- Who is Fatima al-Zahra?
+- Why was one of the fourteen infallibles a woman?
+- What can we learn from Lady Fatimah?
+headings:
+- fatimah
+- ahl-al-bayt
+access: free
+location: ''
+needs_review: true
+review_note: Level is not stated on the page; intermediate chosen as the cautious option. The site's metadata
+  lists Sayyida Fatimah al-Zahra' as author, which looks like a labelling quirk, so authors is left empty.
+  Translator (Saleem Bhimji) is not recorded because the schema has no field.
+cataloged_on: '2026-11-10'
