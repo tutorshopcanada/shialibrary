@@ -148,6 +148,7 @@ questions:
     question: "What is the Quran and how was it revealed?"
     alt_phrasings: ["introduction to the quran", "about the quran", "how was the quran revealed"]
     headings: [quran]
+    path: path-the-prophet-and-the-quran
     top_records: [al-islam-quran-in-islam-its-impact-and-influence]
     draft: true
   - id: q-why-pray-on-turbah
@@ -160,6 +161,7 @@ questions:
     question: "Who is the Prophet Muhammad?"
     alt_phrasings: ["life of the prophet", "biography of muhammad", "story of prophet muhammad", "seerah"]
     headings: [prophet-muhammad]
+    path: path-the-prophet-and-the-quran
     top_records: [al-islam-prophet-muhammad-brief-biography, al-islam-glance-life-holy-prophet]
     draft: true
   - id: q-what-is-ghadir
@@ -172,7 +174,8 @@ questions:
     question: "Why do Shias follow the Imams?"
     alt_phrasings: ["what is imamate", "what is an imam in shia islam", "why do shias believe in imams"]
     headings: [imamate]
-    top_records: [al-islam-imamate-and-the-imams, al-islam-islamic-teachings-in-brief]
+    path: path-the-imams-and-imamate
+    top_records: [al-islam-imamate-and-the-imams, al-islam-lets-learn-about-imamate, al-islam-islamic-teachings-in-brief]
     draft: true
   - id: q-why-mourn-husayn
     question: "Why do Shias mourn for Imam Husayn?"
@@ -197,7 +200,8 @@ questions:
     question: "How do I make dua (call on God)?"
     alt_phrasings: ["what is dua", "how to supplicate", "praying to god in my own words"]
     headings: [duas]
-    top_records: [al-islam-dua-amrohi, al-islam-in-the-presence-of-the-beloved]
+    path: path-dua-and-repentance
+    top_records: [al-islam-importance-of-dua-method-supplicating, al-islam-dua-amrohi, al-islam-in-the-presence-of-the-beloved]
     draft: true
   - id: q-how-to-repent
     question: "How do I repent from my sins?"
@@ -234,4 +238,11 @@ questions:
     alt_phrasings: ["following a mujtahid", "how to choose a marja", "what is a marja"]
     headings: [taqlid]
     top_records: [sistani-west-taqlid-introduction, sistani-west-taqlid-general-rules, sistani-qa-following-a-mujtahid]
+    draft: true
+  - id: q-why-become-shia
+    question: "Why do people become Shia?"
+    alt_phrasings: ["why did you become shia", "converting to shia islam", "how i became shia", "why shia", "convert stories"]
+    headings: [becoming-muslim, sunni-shia]
+    path: path-why-people-become-shia
+    top_records: [al-islam-how-i-found-right-path, al-islam-discovering-shii-islam, al-islam-meaning-origins-shiism]
     draft: true

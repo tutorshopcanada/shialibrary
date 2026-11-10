@@ -1,0 +1,14 @@
+id: path-the-prophet-and-the-quran
+title: The Prophet and the Quran
+intro: Start with the life of the Prophet Muhammad, then the stories of earlier prophets, then an introduction
+  to the Quran itself.
+steps:
+- record: al-islam-prophet-muhammad-brief-biography
+  why: A short, simple account of the Prophet's life.
+- record: al-islam-stories-of-the-prophets
+  why: Simple accounts of earlier prophets, in plain English.
+- record: al-islam-quran-in-islam-its-impact-and-influence
+  why: An introduction to the Quran, how it was revealed and what it teaches.
+- record: al-islam-quranic-lessons
+  why: Lessons drawn from the Quran, for readers who want to go further.
+draft: true
