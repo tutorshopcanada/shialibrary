@@ -40,6 +40,20 @@ sources:
       robots.txt has no disallow rules (checked 2026-11-10). Structure report:
       docs/sistani-structure.md. Every record from this source is content_tag fiqh.
 
+  - id: khamenei.ir
+    name: "Office of Sayyid Ali Khamenei"
+    type: fiqh
+    base_url: "https://khamenei.ir/"
+    status: blocked
+    catalog_level: "To be decided after the site's structure is inspected."
+    notes: >
+      Named by the owner on 2026-11-10 as the likely source for Sayyid Khamenei's rulings
+      ("should work maybe"). Not reachable from the build machine on 2026-11-10: direct
+      requests to khamenei.ir and english.khamenei.ir were reset, and the web-fetch tool got
+      HTTP 503 for robots.txt on both. Nothing has been inspected or cataloged. Before any
+      cataloging: read robots.txt, inspect and report the structure (which section holds the
+      English rulings, URL patterns, per-question links), and confirm with the owner.
+
   - id: youtube
     name: "Whitelisted YouTube channels"
     type: video
