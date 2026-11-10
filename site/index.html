@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shia Resource Finder</title>
+  <meta name="description" content="A free catalog that points you to where Shia resources can be found on approved websites. It links to the original sources and does not host or write the content.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="data/index.json" as="fetch" crossorigin="anonymous">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="./" data-site-name>Shia Resource Finder</a>
+      <nav aria-label="Site">
+        <a href="about.html">About and scope</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" id="hero">
+      <h1 id="hero-title">Find where to learn about Shia Islam</h1>
+      <p class="lede" id="hero-lede">Type a topic or a question. We point you to pages on approved Shia websites. We do not host or write the content.</p>
+
+      <form id="search-form" class="search-form" role="search" action="./" method="get">
+        <label for="q" class="visually-hidden">Search topics and questions</label>
+        <input id="q" name="q" type="search" dir="auto" autocomplete="off" autocapitalize="none"
+               spellcheck="false" enterkeyhint="search" maxlength="200"
+               placeholder="For example: how to pray, Karbala, al-Kafi">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <div id="view">
+      <p class="loading">Loading the catalog…</p>
+    </div>
+
+    <noscript>
+      <p class="notice">This search page needs JavaScript. It runs entirely in your browser: nothing you type is sent anywhere.</p>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>This is a catalog. Every result links to the website where the original is published. We are not the author or publisher of any of it.</p>
+      <p>Search runs in your browser. Nothing you type is sent or stored. No answers are written by AI: results are catalog entries chosen by plain matching rules.</p>
+      <p><a href="about.html">About, scope and sources</a> · <a href="about.html#report">Report a wrong or broken link</a> <span id="build-date" class="muted"></span></p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -27,6 +27,7 @@ export const DEFAULT_CONFIG = {
     min_term_coverage: 0.5,
     min_results: 1,
     min_result_coverage: 0.34,
+    min_relative_score: 0.15,
     max_results: 150,
   },
   exact: {
@@ -172,7 +173,12 @@ export function createEngine(index) {
     headingPhrases.set(h.id, [...keys]);
   }
   for (const s of scholars) {
-    for (const name of [s.name, ...(s.alt_names || [])]) addConcept(name, 'scholars', s.id);
+    for (const name of [s.name, ...(s.alt_names || [])]) {
+      addConcept(name, 'scholars', s.id);
+      // "al-Kulayni" is also found by typing "kulayni" (leading Arabic article dropped).
+      const bare = normalize(name).replace(/^(al|as|el|ash|at) (?=\S)/, '');
+      if (bare !== normalize(name) && bare.length >= 4) addConcept(bare, 'scholars', s.id);
+    }
   }
 
   // ---- Per-record search documents ----
@@ -506,7 +512,7 @@ export function createEngine(index) {
     const qa = analyze(query);
     const result = {
       query: qa.raw.trim(), mode: 'search', layer: 4, order, filters: f, curated: null,
-      exact: [], related: [], fallback: false,
+      exact: [], related: [], fallback: false, emptyTopic: null,
       counts: { exact: 0, related: 0, total: 0, unfiltered: 0, tags: {} },
     };
     for (const t of config.tags.order) result.counts.tags[t] = 0;
@@ -549,6 +555,11 @@ export function createEngine(index) {
     }
     hits.sort((a, b) => b.score - a.score);
     const top = hits[0];
+    // Drop the long tail of results that only share a common word with the query.
+    if (top) {
+      const floor = top.score * (Number(L2.min_relative_score) || 0);
+      hits = hits.filter((h) => h.exact || h.score >= floor);
+    }
     const confident = hits.length >= L2.min_results && !!top &&
       top.score >= L2.min_score && top.coverage >= L2.min_term_coverage;
     hits = hits.slice(0, L2.max_results);
@@ -566,9 +577,20 @@ export function createEngine(index) {
       }
     }
 
-    result.curated = curated;
-    result.layer = curated ? 1 : confident ? 2 : 4;
+    // Layer 1 counts only when it has something to show: a path, curated
+    // records, or (for a topic heading) starter questions or matching records.
+    const curatedUseful = !!curated && (
+      pinned.length > 0 || !!curated.path ||
+      (!!curated.heading && (curated.questions.length > 0 || confident)));
+    result.layer = curatedUseful ? 1 : confident ? 2 : 4;
     result.fallback = result.layer === 4;
+    result.curated = curatedUseful ? curated : null;
+    if (result.fallback) {
+      // Nothing confident: show no results at all rather than loose ones.
+      // If the query named a topic we know but have nothing cataloged for, say so.
+      result.emptyTopic = curated && curated.heading ? curated.heading : null;
+      return result;
+    }
 
     const all = [...pinned, ...hits];
     result.counts.unfiltered = all.length;
@@ -585,8 +607,8 @@ export function createEngine(index) {
     const strict = config.ranking.exact_group_order === 'strict';
     const strip = ({ doc, ...rest }) => rest;
 
-    const exact = kept.filter((h) => h.exact && !result.fallback).map(strip);
-    const related = kept.filter((h) => !(h.exact && !result.fallback)).map(strip);
+    const exact = kept.filter((h) => h.exact).map(strip);
+    const related = kept.filter((h) => !h.exact).map(strip);
     exact.sort((a, b) =>
       (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) ||
       (a.pinned && b.pinned ? 0 :

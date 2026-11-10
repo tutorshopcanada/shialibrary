@@ -60,6 +60,10 @@ layer2:
   # A result must match at least this share of the query's key words to be
   # listed at all. Stops long questions pulling in records that share one word.
   min_result_coverage: 0.34
+  # A related result must also score at least this fraction of the best result's
+  # score. Cuts the long tail of records that only share one common word.
+  # (Exact matches are never cut by this.)
+  min_relative_score: 0.15
   # Never show more than this many results for one query.
   max_results: 150
 

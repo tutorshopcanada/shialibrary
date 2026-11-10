@@ -16,6 +16,8 @@
 //   expect_group: exact   -> in the first n "Exact matches"
 //   expect_group: related -> in the first n "Related results"
 //   expect_group: any     -> in the first n results overall (exact first, then related)
+// An entry with expect_none: true passes when the page would show the honest
+// "We couldn't find a close match" fallback and no results at all.
 // Exit code: 0 all passed (or nothing to run), 1 failures, 2 cannot run.
 
 import { readFileSync, existsSync } from 'node:fs';
@@ -64,12 +66,16 @@ for (const q of queries) {
   const pool = (group === 'exact' ? exact : group === 'related' ? related : [...exact, ...related]).slice(0, topN);
   const expected = q.expect_any || [];
   const found = expected.filter((id) => pool.includes(id));
-  const ok = expected.length === 0 ? true : found.length > 0;
+  const ok = q.expect_none
+    ? (res.fallback && exact.length === 0 && related.length === 0)
+    : expected.length === 0 ? true : found.length > 0;
   if (!ok) failed++;
 
   const summary = `layer ${res.layer}, ${exact.length} exact, ${related.length} related`;
   console.log(`${ok ? 'PASS' : 'FAIL'}  "${q.query}"  (${summary}${res.fallback ? ', fallback shown' : ''})`);
-  if (!ok) {
+  if (!ok && q.expect_none) {
+    console.log('      expected the "no close match" fallback with no results shown');
+  } else if (!ok) {
     const where = (id) => exact.includes(id) ? `exact #${exact.indexOf(id) + 1}`
       : related.includes(id) ? `related #${related.indexOf(id) + 1}` : 'not returned';
     console.log(`      expected one of [${expected.join(', ')}] in ${group === 'any' ? 'the' : group} top ${topN}`);

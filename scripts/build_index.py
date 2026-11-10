@@ -442,13 +442,16 @@ def build_eval(root: Path, record_ids, problems: Problems):
             problems.error(f"{path}: every entry needs a query")
             continue
         expect = [text(r) for r in as_list(raw.get("expect_any"))]
+        expect_none = bool(raw.get("expect_none"))
+        if expect_none and expect:
+            problems.error(f"{path}: query '{raw['query']}' has both expect_any and expect_none")
         for rid in expect:
             if rid not in record_ids:
                 problems.error(f"{path}: query '{raw['query']}' expects unknown record '{rid}'")
         group = text(raw.get("expect_group")) or "any"
         if group not in ("exact", "related", "any"):
             problems.error(f"{path}: query '{raw['query']}' expect_group must be exact, related or any")
-        out.append({"query": text(raw["query"]), "expect_any": expect,
+        out.append({"query": text(raw["query"]), "expect_any": expect, "expect_none": expect_none,
                     "expect_group": group, "note": text(raw.get("note"))})
     return out
 
