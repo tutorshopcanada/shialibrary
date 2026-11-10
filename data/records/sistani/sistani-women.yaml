@@ -1,0 +1,36 @@
+id: sistani-women
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: beginner
+title: Women's Religious Rules
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/26927/
+language: en
+date: ''
+description: A plain-language book on the religious rules that apply to women around menstruation (hayd),
+  irregular bleeding (istihada), postnatal bleeding (nifas), ghusl (a full ritual wash) and tayammum (dry
+  ablution), following Sayyid Sistani's rulings. It is written as conversations between a mother and her
+  teenage daughter.
+sample_questions:
+- Where can I learn the rules about periods in Islam?
+- Is there a simple book on menstruation rules for teenage girls?
+- Where can I read about istihada and nifas?
+- What are the rules of ghusl for women?
+- Where do I find a mother-daughter guide to women's religious rules?
+headings:
+- women-rulings
+- purity
+- fiqh
+access: free
+location: ''
+needs_review: true
+review_note: 'Level beginner is taken from the Preface (https://www.sistani.org/english/book/26927/8537/):
+  written in simple language, mainly for teenage girls. No author or compiler is named and Sayyid Sistani
+  is not named on the pages read, so authors is empty and marja: sistani is based on the book being listed
+  among his books on sistani.org; reviewer to confirm.'
+cataloged_on: '2026-11-10'
