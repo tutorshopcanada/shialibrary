@@ -1,0 +1,30 @@
+id: sistani-laws-2226
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: PLACES WHERE PERFORMING PRAYERS IS DISAPPROVED (MAKRŪH)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2226/
+language: en
+date: ''
+description: Lists places where praying is disapproved (makruh), such as a public bath, salty land, and
+  facing a person.
+sample_questions:
+- Where is it disliked to pray?
+- Can I pray facing someone?
+- Is it makruh to pray in a bathroom?
+- What places should I avoid praying in?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

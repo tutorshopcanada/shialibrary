@@ -1,0 +1,31 @@
+id: sistani-laws-2210
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: THE FRIDAY PRAYER (ṢALĀT AL‑JUMUʿAH) AND ITS LAWS
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2210/
+language: en
+date: ''
+description: 'Covers the Friday prayer (salat al-jumuʿah): its form, the conditions for it to be obligatory,
+  the number of people, the sermons and related laws.'
+sample_questions:
+- What is the Friday prayer?
+- How many people are needed for Friday prayer?
+- Is Friday prayer wajib?
+- How is the Friday prayer different from zuhr?
+- What are the khutbahs of Friday prayer?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

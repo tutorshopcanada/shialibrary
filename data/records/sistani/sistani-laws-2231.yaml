@@ -1,0 +1,30 @@
+id: sistani-laws-2231
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: TAKBĪRAT AL‑IḤRĀM
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2231/
+language: en
+date: ''
+description: Rules on takbirat al-ihram, the opening 'Allahu akbar' that begins the prayer, including
+  how it is said and joined to what follows.
+sample_questions:
+- What is takbirat al-ihram?
+- How do I begin the prayer?
+- How do I say Allahu akbar at the start of prayer?
+- Should I raise my hands at takbir?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

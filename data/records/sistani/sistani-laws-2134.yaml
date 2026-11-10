@@ -1,0 +1,31 @@
+id: sistani-laws-2134
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: IMPURITIES (NAJĀSĀT) » 8. Disbeliever (kāfir)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2134/
+language: en
+date: ''
+description: Rules on how disbelievers (kafir) are treated in the section on impurities, including different
+  categories of people, children, doubts about whether someone is a Muslim, and those who abuse the Imams.
+sample_questions:
+- Who is considered a kafir in purity rules?
+- How are non-Muslims treated in the purity chapter?
+- What is a kitabi?
+- How are children of non-Muslims treated?
+headings:
+- purity
+- fiqh
+access: free
+location: 'Chapter: Purification (Ṭahārah)'
+needs_review: true
+review_note: Concerns the classification of non-Muslims and sectarian matters; the topic is sensitive,
+  so a knowledgeable human should confirm the neutral description and headings.
+cataloged_on: '2026-11-10'

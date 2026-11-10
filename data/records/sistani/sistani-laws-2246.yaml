@@ -1,0 +1,29 @@
+id: sistani-laws-2246
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: ṢALAWĀT
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2246/
+language: en
+date: ''
+description: Short page on salawat, sending blessings on the Prophet when his name is said, heard or written.
+sample_questions:
+- What is salawat?
+- What do I say when I hear the Prophet's name?
+- How is the Prophet's name written?
+- Why do Muslims send blessings on the Prophet?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

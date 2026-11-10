@@ -1,0 +1,29 @@
+id: sistani-laws-8242
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: intermediate
+title: Glossary
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/8242/
+language: en
+date: ''
+description: The book's glossary of Arabic and technical terms used throughout Islamic Laws, with short
+  English explanations. Helpful for newcomers who meet unfamiliar words such as adhan, ghusl or khums.
+sample_questions:
+- What does a term in Islamic law mean?
+- Where can I find a glossary of Arabic fiqh terms?
+- What is the meaning of khums, wajib or mustahabb?
+- What is the meaning of najis?
+- Is there a list of Islamic legal words in English?
+headings:
+- fiqh
+access: free
+location: 'Chapter: Glossary'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

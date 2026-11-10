@@ -388,3 +388,45 @@ scholars:
     alt_names: []
     notes: "Named as author on https://al-islam.org/articles/what-ashoora-ahmed-ali-khan (read 2026-11-10)."
     needs_review: true
+
+  - id: musavi-lari
+    name: "Sayyid Mujtaba Musavi Lari"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/ethics-and-spiritual-growth-sayyid-mujtaba-musavi-lari (read 2026-11-10); translator Ali Quli Qara'i."
+    needs_review: true
+
+  - id: tawhid-institute
+    name: "Tawhid Institute"
+    role: author
+    alt_names: []
+    notes: "An organization listed as author of Stories of The Prophets on https://al-islam.org/stories-prophets (read 2026-11-10); editor Celia S. Ebrahimi, illustrator Charles Crowson."
+    needs_review: true
+
+  - id: ali-shariati
+    name: "Ali Shariati"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/and-once-again-abu-dharr-ali-shariati (read 2026-11-10)."
+    needs_review: true
+
+  - id: husein-rahim
+    name: "Husein A. Rahim"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/dua-kumayl-translation-commentary-husein-rahim (read 2026-11-10)."
+    needs_review: true
+
+  - id: tahera-kassamali
+    name: "Tahera Kassamali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/raising-children-tahera-kassamali (read 2026-11-10)."
+    needs_review: true
+
+  - id: mir-ahmed-ali-khan
+    name: "Mir Ahmed Ali Khan"
+    role: author
+    alt_names: []
+    notes: "Credited as 'Contributed by' on https://al-islam.org/articles/brief-introduction-islam (read 2026-11-10); may be the contributor, not the original author."
+    needs_review: true

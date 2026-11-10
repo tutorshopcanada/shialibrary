@@ -1,0 +1,28 @@
+id: sistani-laws-8243
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: intermediate
+title: 'Appendix 1: Table of Weights, Measures, Values, and Quantities'
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/8243/
+language: en
+date: ''
+description: An appendix table of weights, measures, values and quantities used in the book, such as the
+  dhira, farsakh, kurr and mithqal, with short explanations.
+sample_questions:
+- What is a farsakh?
+- What is a mithqal?
+- What is a kurr of water?
+- Where can I find units of measurement used in fiqh?
+headings:
+- fiqh
+access: free
+location: 'Chapter: Appendix 1: Table of Weights, Measures, Values, and Quantities'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

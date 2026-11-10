@@ -1,0 +1,30 @@
+id: sistani-laws-2242
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: CLOSE SUCCESSION (MUWĀLĀH)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2242/
+language: en
+date: ''
+description: Rules on close succession (muwalah), performing the parts of the prayer one after another
+  without a long pause, including pauses between words and the effect of long recitation.
+sample_questions:
+- Can I pause in the middle of prayer?
+- What is muwalah?
+- Do long surahs break the prayer?
+- What if I pause between words?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

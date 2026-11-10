@@ -1,0 +1,36 @@
+id: al-islam-stories-of-the-prophets
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Stories of The Prophets
+title_original: ''
+authors:
+- tawhid-institute
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/stories-prophets
+language: en
+date: ''
+description: An illustrated collection of short, simply written accounts of the lives of earlier prophets,
+  as the site describes it. Chapters cover Adam, Habil and Qabil (Abel and Cain), Nuh (Noah), Hud, Salih,
+  Ibrahim (Abraham), Ismail, Yaqub, Yusuf (Joseph), Shu'ayb, Yunus (Jonah), Ayyub (Job) and Musa (Moses).
+sample_questions:
+- Who were the prophets in Islam?
+- What is the story of Prophet Adam?
+- What is the story of Prophet Nuh and the ark?
+- What is the story of Prophet Yusuf?
+- Who was Prophet Ibrahim?
+- What is the story of Prophet Musa and Pharaoh?
+- What are some Islamic stories for children?
+headings:
+- nubuwwah
+- quran
+access: free
+location: ''
+needs_review: true
+review_note: The page does not state an audience; beginner level is inferred from the site's description
+  as simple English accounts and from its illustrated, story format. Author is an organisation (Tawhid
+  Institute); the page also names an editor and an illustrator, which the schema has no field for.
+cataloged_on: '2026-11-10'
