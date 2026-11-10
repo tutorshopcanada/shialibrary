@@ -681,3 +681,74 @@ scholars:
       - "Shaikh Saleem Bhimji"
     notes: "Named as author on https://al-islam.org/articles/spiritual-fitness-saleem-bhimji and https://al-islam.org/articles/spiritual-migration-saleem-bhimji (read 2026-11-10); the article text gives 'Shaikh Saleem Bhimji'."
     needs_review: true
+
+  - id: yasser-al-madani
+    name: "Sayyid Yasser al-Madani"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/plea-islamic-unity-yasser-madani (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-yusuf
+    name: "Muhammad Yusuf"
+    role: author
+    alt_names:
+      - "Brother Muhammad Yusuf"
+    notes: "Named as author on https://al-islam.org/articles/how-i-found-right-path-muhammad-yusuf (read 2026-11-10)."
+    needs_review: true
+
+  - id: sachiko-murata
+    name: "Sachiko Murata"
+    role: author
+    alt_names: []
+    notes: "Named as co-author on https://al-islam.org/articles/koran-sachiko-murata-william-c-chittick (read 2026-11-10)."
+    needs_review: true
+
+  - id: william-c-chittick
+    name: "William C. Chittick"
+    role: author
+    alt_names: []
+    notes: "Named as co-author on https://al-islam.org/articles/koran-sachiko-murata-william-c-chittick (read 2026-11-10)."
+    needs_review: true
+
+  - id: mahwash-hirmendi
+    name: "Mahwash Hirmendi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/soldier-allah-mahwash-hirmendi and https://al-islam.org/articles/prayer-mother-mahwash-hirmendi (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayeeda-abid-ali
+    name: "Sayeeda Abid Ali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/ahlul-bayt-sayeeda-abid-ali (read 2026-11-10)."
+    needs_review: true
+
+  - id: kazem-mirjalili
+    name: "Seyyed Kazem MirJalili"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-10-no-4-winter-2010/imam-ali-herald-unity-1-kazem-mirjalili (read 2026-11-10)."
+    needs_review: true
+
+  - id: ali-aqa-nuri
+    name: "Ali Aqa-Nuri"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/al-taqrib/number-6-march-2010/shia-imams-and-muslim-unity-part-1-ali-aqa-nuri (read 2026-11-10)."
+    needs_review: true
+
+  - id: zahra-kashaniha
+    name: "Zahra Kashaniha"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-12-no-2-summer-2011/lady-mary-role-model-quran-and-bible-zahra-kashaniha (read 2026-11-10)."
+    needs_review: true
+
+  - id: arifa-hudda
+    name: "Arifa Hudda"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-14-no-2-summer-2013/forgiveness-munajat-shabaniyyah-arifa-hudda (read 2026-11-10)."
+    needs_review: true
