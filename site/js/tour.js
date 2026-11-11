@@ -68,7 +68,7 @@ export const TOUR = [
   { k: 'today', label: 'Today', title: 'Today', lede: 'Where to go next.',
     groups: [
       { label: 'Go further', lead: true, items: [
-        { href: '#beginners', name: 'Read the day-one shelf', sub: 'Seven introductions, then a plan' },
+        { href: '#beginners', name: 'Read the introductions', sub: 'Seven introductions, then a plan' },
         { href: '#topics', name: 'Browse by topic', sub: 'Eight subjects, easiest first' },
         { href: '#home', ask: true, name: 'Ask a question', sub: 'Search the catalog' }] },
       { label: 'Living today', items: [

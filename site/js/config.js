@@ -86,7 +86,7 @@ export function feedbackHref(kind, message) {
  * Wording on the page that comes from these lists is a draft until the owner reviews it.
  */
 export const START = {
-  // Step 2 of "Start here": the day-one shelf, in reading order.
+  // Step 2 of "Start here": the introductions, in reading order.
   shelf: [
     'al-islam-brief-introduction-to-islam',
     'al-islam-discovering-islam',
@@ -96,9 +96,9 @@ export const START = {
     'al-islam-imamate-and-the-imams',
     'al-islam-nahjul-balagah-revisited-imam-ali',
   ],
-  // Step 3: the plan. `ids: 'shelf'` means "the day-one shelf".
+  // Step 3: the plan. `ids: 'shelf'` means "the introductions".
   stages: [
-    { title: 'Foundations', note: 'Start with the day-one shelf above.', ids: 'shelf' },
+    { title: 'Foundations', note: 'Start with the introductions above.', ids: 'shelf' },
     { title: 'Beliefs and the Imams in depth', note: 'The same ideas, one level deeper.', ids: [
       'al-islam-islamic-teachings-in-brief', 'al-islam-basic-teachings-of-islam', 'al-islam-lets-learn-about-divine-justice',
       'al-islam-brief-history-fourteen-infallibles', 'al-islam-imamate-wilayah-part-1'] },

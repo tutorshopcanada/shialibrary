@@ -123,6 +123,7 @@ Plain, direct and specific; every line should tell a visitor something they can 
 - Calls to action name the destination or the outcome ("All topics", "See the sources"), not "Learn more" or "Click here".
 - Draft notices are one sentence and say what was not reviewed.
 - Placeholders that were notes to the owner ("Sample lists for the layout…") do not appear on the public pages. Developer wording (file names, config keys) never does.
+- Prefer the plain word. "How to read search results" beats "Anatomy of a result"; "Common questions" beats "Questions people start with"; "Coming later" beats "On the way". A subtitle says what the page shows: "See what each part of a result tells you."
 - The tour slides and name pages are draft content written for layout. Their wording is for the owner to replace.
 
 ## Guide
