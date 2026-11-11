@@ -1,0 +1,28 @@
+id: sistani-qa-14877
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-permanent-marriage
+level: intermediate
+title: I want to marry a Muslim girl, but I am Hindu. Is it permissible?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01284/#14877
+language: en
+date: ''
+description: A question from a Hindu man who wants to marry a Muslim woman, asking whether it is allowed.
+sample_questions:
+- Can a non-Muslim marry a Muslim woman?
+- Can a Hindu marry a Muslim?
+- Rules on marrying across faiths?
+headings:
+- marriage-family
+access: free
+location: Permanent Marriage, question 7
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

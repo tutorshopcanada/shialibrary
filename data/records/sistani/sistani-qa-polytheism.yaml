@@ -1,0 +1,30 @@
+id: sistani-qa-polytheism
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Polytheism
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01295/
+language: en
+date: ''
+description: A topic page of questions and answers about polytheists (those who believe in partners with
+  God). Questions cover marriage to such a woman and their ritual purity.
+sample_questions:
+- What is polytheism (shirk)?
+- Can a Muslim marry a polytheist?
+- Are polytheists ritually impure?
+- What does Islam say about non-believers?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Polytheism'
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

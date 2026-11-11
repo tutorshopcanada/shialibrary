@@ -1,0 +1,31 @@
+id: sistani-qa-15207
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-interest
+level: intermediate
+title: Is it permissible to take interest from unbelievers, especially for those who live in a non-Muslim
+  country?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01220/#15207
+language: en
+date: ''
+description: A question about taking interest from non-believers, especially for Muslims living in a non-Muslim
+  country.
+sample_questions:
+- Can I take interest from a non-Muslim bank?
+- Is interest from non-believers allowed?
+- What about interest in the West?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Interest, question 2
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

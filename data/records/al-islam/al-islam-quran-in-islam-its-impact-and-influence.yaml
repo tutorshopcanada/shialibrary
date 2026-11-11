@@ -13,7 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/quran-islam-its-impact-and-influence-life-muslims-sayyid-muhammad-husayn-tabatabai
 language: en
 date: '1998'
-description: 'A short book by Sayyid Muhammad Husayn Tabataba''i about the Qur''an: its value to Muslims, its teachings, how it was revealed, and its relation to the Islamic sciences. The site describes it as a synopsis of a major commentary and calls it an accessible introduction to the Qur''an in English.'
+description: 'A short book by Sayyid Muhammad Husayn Tabataba''i about the Qur''an: its value to Muslims,
+  its teachings, how it was revealed, and its relation to the Islamic sciences. The site describes it
+  as a synopsis of a major commentary and calls it an accessible introduction to the Qur''an in English.'
 sample_questions:
 - What is the Quran?
 - How was the Quran revealed?
@@ -26,6 +28,8 @@ headings:
 - quran-sciences
 access: free
 location: ''
-needs_review: true
-review_note: The page calls it an accessible introduction, but several parts cover Qur'anic sciences in depth, so the level is set to intermediate and should be confirmed. Publication year (1998) is as stated on the page.
+needs_review: false
+review_note: The page calls it an accessible introduction, but several parts cover Qur'anic sciences in
+  depth, so the level is set to intermediate and should be confirmed. Publication year (1998) is as stated
+  on the page.
 cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-qa-musical-instrument
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Musical Instrument
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01263/
+language: en
+date: ''
+description: A topic page of questions and answers about musical instruments. Questions cover children's
+  instruments and drums or pots used at weddings.
+sample_questions:
+- Are musical instruments discussed in Islamic law?
+- Can children play with toy instruments?
+- Can we use a drum at a wedding?
+- Is it okay to sell instruments?
+headings:
+- music-entertainment
+access: free
+location: 'Q&A topic: Musical Instrument'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

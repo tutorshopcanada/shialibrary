@@ -1,0 +1,31 @@
+id: sistani-laws-2162
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: LAWS OF RITUAL IMPURITY (JANĀBAH)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2162/
+language: en
+date: ''
+description: 'Rules on janabah (major ritual impurity): how a person enters this state, and doubts about
+  discharged fluid and its type, for both men and women.'
+sample_questions:
+- What is janabah?
+- How does someone become junub?
+- What if I am unsure about a fluid I notice?
+- What is ritual impurity in Islam?
+headings:
+- purity
+- fiqh
+access: free
+location: 'Chapter: Purification (Ṭahārah)'
+needs_review: false
+review_note: Concerns sexual matters; the description is kept to the topic, so a knowledgeable human should
+  confirm the wording and headings.
+cataloged_on: '2026-11-10'

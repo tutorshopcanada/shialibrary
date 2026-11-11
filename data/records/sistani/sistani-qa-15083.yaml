@@ -1,0 +1,29 @@
+id: sistani-qa-15083
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: There are certain hereditary diseases that are transferred from parents to children and pose a
+  danger to their lives in the future...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15083
+language: en
+date: ''
+description: A question about testing the genes of lab-fertilized eggs to avoid hereditary diseases, and
+  about the remaining eggs not used.
+sample_questions:
+- Can embryos be tested for diseases?
+- What does Islam say about genetic screening?
+- What about hereditary diseases and IVF?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 14
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,17 @@
+id: path-quran-for-beginners
+title: The Quran for beginners
+intro: A reading order from short introductions to the Quran towards its place in Muslim life.
+steps:
+- record: al-islam-holy-quran-some-basic-facts
+  why: A short introduction to basic facts about the Quran.
+- record: al-islam-introduction-to-the-glorious-quran
+  why: A book that introduces the Quran by what the Quran says about itself.
+- record: al-islam-quranic-lessons
+  why: A short lesson-style article on the importance of the Quran.
+- record: al-islam-opening-our-eyes-light-quran
+  why: A short essay on approaching the Quran.
+- record: al-islam-living-miracle
+  why: A booklet on the Quran as a lasting miracle.
+- record: al-islam-quran-in-islam-its-impact-and-influence
+  why: A short book on the Quran and its influence on Muslim life.
+draft: true

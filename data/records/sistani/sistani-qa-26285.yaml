@@ -1,0 +1,31 @@
+id: sistani-qa-26285
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hajj-ability
+level: intermediate
+title: A single young man has become capable to perform hajj; he is also thinking about marriage. Now
+  if he goes for hajj, his marriage ceremony will be delayed for a while. Which of the two is preferable
+  [marriage or pilgrimage]?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02763/#26285
+language: en
+date: ''
+description: A question from a single young man who can afford hajj and is also thinking of marriage,
+  asking which of the two comes first. The same text appears under Hajj - Pilgrimage with a different
+  id.
+sample_questions:
+- Should I do hajj or get married first?
+- Marriage or hajj, which first?
+- Can I delay hajj for marriage?
+headings:
+- hajj
+access: free
+location: Hajj - Ability, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

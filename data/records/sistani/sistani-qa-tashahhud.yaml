@@ -1,0 +1,29 @@
+id: sistani-qa-tashahhud
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Tashahhud
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01337/
+language: en
+date: ''
+description: A topic page with one question about the tashahhud (the testimony recited while sitting in
+  prayer), and a third testimony said by some Shias.
+sample_questions:
+- What is tashahhud?
+- What is the third testimony?
+- What is recited in tashahhud?
+- What is Shahadat Thalitha?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Tashahhud'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

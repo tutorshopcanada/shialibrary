@@ -1,0 +1,32 @@
+id: sistani-qa-sexual-intercourse
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Sexual Intercourse
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01314/
+language: en
+date: ''
+description: A topic page of questions and answers about sexual intercourse. Questions cover relations
+  after a monthly period or during istihadha (irregular bleeding), a wife's refusal and relations between
+  two men.
+sample_questions:
+- What are the rules on marital relations?
+- Can we have relations after my period?
+- What is istihadha?
+- What does Islam say about relations in marriage?
+headings:
+- marriage-family
+- women-rulings
+access: free
+location: 'Q&A topic: Sexual Intercourse'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

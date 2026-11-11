@@ -31,7 +31,7 @@ headings:
 - maad
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not say who the book is for, so the more cautious level (intermediate) was
   chosen; a reviewer may judge it beginner. The edition is given only as '3rd edition 1404 A.H.', so `date`
   is blank.

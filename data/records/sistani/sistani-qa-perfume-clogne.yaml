@@ -1,0 +1,30 @@
+id: sistani-qa-perfume-clogne
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Perfume & Clogne
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01286/
+language: en
+date: ''
+description: A topic page of questions and answers about perfume and cologne. Questions cover women wearing
+  perfume in public, cologne and prayer, and perfume containing alcohol.
+sample_questions:
+- Can a woman wear perfume outside?
+- Can I pray wearing cologne?
+- Is cologne clean?
+- Can I use perfume with alcohol?
+headings:
+- dress-appearance
+- prayer
+access: free
+location: 'Q&A topic: Perfume & Clogne'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

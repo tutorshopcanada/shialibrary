@@ -1,0 +1,32 @@
+id: sistani-qa-14856
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-haydh-menstruation
+level: intermediate
+title: Some women take certain medication to delay their monthly period, especially during Ramadhan and
+  hajj. However, in some cases intermittent blood appears during their period time. This blood does not
+  have the same characteristics of haydh...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01212/#14856
+language: en
+date: ''
+description: A question about women who take medication to delay the period, especially during Ramadan
+  and hajj, and how to treat intermittent blood that does not look like haydh. A near-identical question
+  (slightly different wording) appears elsewhere in this topic with another id.
+sample_questions:
+- What if I bleed while taking period pills?
+- Is irregular blood haydh?
+- How do I treat spotting from medication?
+headings:
+- women-rulings
+- purity
+access: free
+location: Haydh - Menstruation / Monthly Period, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-15211
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-interest
+level: intermediate
+title: Is it permissible to deposit or borrow money from Muslim banks whereby the interest is either received
+  or paid out?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01220/#15211
+language: en
+date: ''
+description: A question about depositing money in, or borrowing from, Muslim banks where interest is received
+  or paid.
+sample_questions:
+- Can I use a Muslim bank?
+- Is interest from a Muslim bank okay?
+- Can I borrow from a Muslim bank?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Interest, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

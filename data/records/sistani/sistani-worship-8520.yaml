@@ -1,0 +1,29 @@
+id: sistani-worship-8520
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-worship
+level: advanced
+title: 'Second Category: Zakāt al-Fiṭr'
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/26890/8520/
+language: en
+date: ''
+description: 'Covers zakat al-fitr (the charity paid at the end of Ramadan): who it applies to, the conditions
+  and how it is given.'
+sample_questions:
+- What is zakat al-fitr?
+- Who pays zakat al-fitr?
+- When is zakat al-fitr paid?
+- What is fitra?
+headings:
+- khums-zakat
+- fiqh
+access: free
+location: 'Chapter: Rules of Zakāt'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

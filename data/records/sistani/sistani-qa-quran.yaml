@@ -1,0 +1,30 @@
+id: sistani-qa-quran
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Quran
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01296/
+language: en
+date: ''
+description: A topic page of questions and answers about the Quran. Questions cover reading it in ritual
+  impurity (janabah, menstruation), giving it to non-Muslims, and disposing of papers carrying holy names.
+sample_questions:
+- Can I read the Quran when in janabah?
+- Can a woman on her period touch the Quran?
+- Can I give a Quran to a non-Muslim?
+- How do I dispose of pages with Allah's name?
+headings:
+- purity
+- fiqh
+access: free
+location: 'Q&A topic: Quran'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

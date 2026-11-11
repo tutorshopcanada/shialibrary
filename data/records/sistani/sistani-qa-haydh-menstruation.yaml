@@ -1,0 +1,35 @@
+id: sistani-qa-haydh-menstruation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Haydh - Menstruation / Monthly Period
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01212/
+language: en
+date: ''
+description: A topic page of questions and answers about haydh (the monthly period) and related states
+  of blood (istihadha, irregular bleeding; nifas, post-childbirth bleeding). Questions cover period-delaying
+  pills, missed prayers and fasts, marital relations, reciting the Quran, visiting shrines, and age and
+  duration questions.
+sample_questions:
+- What is haydh?
+- Can I take pills to delay my period?
+- Do I make up missed prayers after my period?
+- Can I read Quran on my period?
+- Can I visit a shrine on my period?
+- What is istihadha?
+headings:
+- women-rulings
+- purity
+access: free
+location: 'Q&A topic: Haydh - Menstruation / Monthly Period'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

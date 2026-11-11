@@ -1,0 +1,29 @@
+id: sistani-laws-8300
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: CHAPTER TEN » Buying and Selling » CONDITIONS RELATING TO THE COMMODITY AND THE PAYMENT IN EXCHANGE
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/8300/
+language: en
+date: ''
+description: Covers conditions on the commodity and the payment in a transaction, including goods sold
+  by weight or measure, void transactions, endowed (waqf) property and disputes between beneficiaries.
+sample_questions:
+- What conditions apply to the goods in a sale?
+- How are goods sold by weight or measure treated?
+- Can waqf property be sold?
+- What if a transaction is void?
+- What must be known about the price?
+headings:
+- transactions-work
+access: free
+location: 'Chapter: Buying and Selling'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

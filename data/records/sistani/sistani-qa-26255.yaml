@@ -1,0 +1,29 @@
+id: sistani-qa-26255
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fish
+level: intermediate
+title: If I am unsure whether a fish is from the type which has scales or not, is it permissible for me
+  to consume it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01184/#26255
+language: en
+date: ''
+description: A question about what to do when one is unsure whether a fish is of the type that has scales,
+  and so whether it may be eaten.
+sample_questions:
+- How do I know if a fish has scales?
+- What if I am unsure about a fish?
+- Can I eat fish if I don't know the type?
+headings:
+- food-drink
+access: free
+location: Fish, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

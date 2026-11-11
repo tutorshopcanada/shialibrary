@@ -1,0 +1,28 @@
+id: sistani-qa-vinegar
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Vinegar
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02907/
+language: en
+date: ''
+description: A topic page with one question about buying and consuming vinegar labelled as wine vinegar.
+sample_questions:
+- Can I use wine vinegar?
+- Is vinegar halal?
+- Is vinegar from wine clean?
+- Can I buy vinegar made from wine?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Vinegar'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

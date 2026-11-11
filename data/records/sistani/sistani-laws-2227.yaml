@@ -1,0 +1,31 @@
+id: sistani-laws-2227
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: LAWS OF A MOSQUE
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2227/
+language: en
+date: ''
+description: Covers the rules on mosques, including keeping a mosque clean of impurity, purifying it,
+  and related cases.
+sample_questions:
+- Can I bring impurity into a mosque?
+- What if a mosque floor becomes najis?
+- Who must clean the mosque?
+- What are the laws of a mosque?
+- How do I respect a mosque?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

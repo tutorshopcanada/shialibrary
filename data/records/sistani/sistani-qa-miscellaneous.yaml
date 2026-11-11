@@ -1,0 +1,30 @@
+id: sistani-qa-miscellaneous
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Miscellaneous
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01253/
+language: en
+date: ''
+description: A topic page with one question on a devotional phrase. It sits under a general 'Miscellaneous'
+  heading on the site.
+sample_questions:
+- Is it right to say Ya Ali Madad?
+- What does Ya Ali Madad mean?
+- Can Shias call on Imam Ali for help?
+- What is tawassul?
+headings:
+- fiqh
+access: free
+location: 'Q&A topic: Miscellaneous'
+needs_review: false
+review_note: Touches on a devotional practice (seeking help through Imam Ali); sensitive, so a reviewer
+  should confirm the classification and wording.
+cataloged_on: '2026-11-10'

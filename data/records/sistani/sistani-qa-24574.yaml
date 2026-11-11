@@ -1,0 +1,30 @@
+id: sistani-qa-24574
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-nahjul-balaghah
+level: intermediate
+title: Your Eminence is kindly requested to let us know your view in a few sentences regarding Nahjul
+  Balaghah.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02414/#24574
+language: en
+date: ''
+description: A question asking for Sayyid Sistani's view, in a few sentences, regarding Nahjul Balaghah
+  (a collection of sayings and sermons of Imam Ali).
+sample_questions:
+- What is Nahjul Balaghah?
+- What is Sistani's view of Nahjul Balaghah?
+- Is Nahjul Balaghah authentic?
+headings:
+- fiqh
+access: free
+location: Nahjul Balaghah, question 1
+needs_review: false
+review_note: The topic is about a book of sayings rather than a legal ruling, so it may not be fiqh; a
+  reviewer should confirm the classification.
+cataloged_on: '2026-11-10'

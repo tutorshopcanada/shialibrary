@@ -1,0 +1,28 @@
+id: sistani-qa-14846
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-people-of-the-book
+level: intermediate
+title: Is it permissible to eat foods prepared by Christians and Jews?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01294/#14846
+language: en
+date: ''
+description: A question asking about eating foods prepared by Christians and Jews.
+sample_questions:
+- Can I eat food made by Christians?
+- Can I eat food made by Jews?
+- Is food from People of the Book discussed?
+headings:
+- food-drink
+access: free
+location: People of the Book, question 6
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

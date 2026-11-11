@@ -22,7 +22,7 @@ headings:
 - food-drink
 access: free
 location: Eating & Drinking, question 9
-needs_review: true
+needs_review: false
 review_note: The question is short and its context (why drinks served in India raise a question) is unclear;
   reviewer should confirm.
 cataloged_on: '2026-11-10'

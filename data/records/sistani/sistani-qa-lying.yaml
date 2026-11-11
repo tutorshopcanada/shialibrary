@@ -1,0 +1,31 @@
+id: sistani-qa-lying
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Lying
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01238/
+language: en
+date: ''
+description: A topic page of questions and answers about lying. Questions cover lying about qualifications
+  to get a government post, hiding one's past from a future husband, and telling a lie when life is in
+  danger.
+sample_questions:
+- Is lying always haram?
+- Can I lie about my past?
+- Can I lie to save my life?
+- Can I lie on a job application?
+headings:
+- social-conduct-rulings
+- ethics
+access: free
+location: 'Q&A topic: Lying'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

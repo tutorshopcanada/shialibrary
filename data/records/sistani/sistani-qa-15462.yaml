@@ -1,0 +1,28 @@
+id: sistani-qa-15462
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-wrestling
+level: intermediate
+title: Are playing sports such as wrestling and boxing permissible?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01357/#15462
+language: en
+date: ''
+description: A question asking whether playing sports such as wrestling and boxing is acceptable.
+sample_questions:
+- Can I play boxing?
+- Is wrestling allowed in Islam?
+- What sports are discussed in Islamic law?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: Wrestling, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

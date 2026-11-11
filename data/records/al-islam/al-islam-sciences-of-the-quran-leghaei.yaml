@@ -1,0 +1,35 @@
+id: al-islam-sciences-of-the-quran-leghaei
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Sciences of the Qur'an ("Uloom al-Qur'an")
+title_original: ''
+authors:
+- mansour-leghaei
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/sciences-quran-uloom-al-quran-mansour-leghaei
+language: en
+date: ''
+description: 'Twelve lessons on the sciences of the Quran, meaning the subjects studied to understand
+  it: how revelation came, how the Quran was collected, Makki and Madani surahs, reasons for revelation,
+  abrogation, the Quran''s miraculous nature, clear and unclear verses, and tafsir (interpretation).'
+sample_questions:
+- How was the Quran revealed?
+- How was the Quran collected?
+- What are Makki and Madani surahs?
+- What is abrogation in the Quran?
+- Was the Quran distorted?
+- What is tafsir?
+headings:
+- quran-sciences
+- quran
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: Level not stated on the page (audience not stated); set to intermediate pending review. The
+  book includes lessons on claims of distortion of the Quran, a debated topic.
+cataloged_on: '2026-11-11'

@@ -1,0 +1,29 @@
+id: sistani-qa-15131
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-loan
+level: intermediate
+title: What is the [minimum] limit of the difficulty (al-haraj) that lifts the prohibition?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01239/#15131
+language: en
+date: ''
+description: A question asking how much hardship (haraj) is enough to lift a prohibition, including whether
+  a very high price for a halal item justifies buying a cheaper haram one.
+sample_questions:
+- What counts as hardship in fiqh?
+- Can high prices allow a haram item?
+- How do I know when hardship applies?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Loan, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

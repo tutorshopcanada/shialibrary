@@ -29,7 +29,7 @@ headings:
 - beliefs
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: 'Level: the page says it is for Muslims, especially youths, answering common questions; it
   may deserve beginner. Chapter 9 is on prayer; a reviewer should confirm the book''s main purpose is
   not fiqh. Publication year is not clearly labelled on the page, so `date` is blank.'

@@ -1,0 +1,27 @@
+id: sistani-qa-25310
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fish
+level: intermediate
+title: What type of fish is halal to eat.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01184/#25310
+language: en
+date: ''
+description: A question asking which types of fish are halal (lawful) to eat.
+sample_questions:
+- What fish is halal?
+- Which fish can Shias eat?
+- How do I know a fish is halal?
+headings:
+- food-drink
+access: free
+location: Fish, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

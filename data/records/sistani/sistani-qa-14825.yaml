@@ -1,0 +1,27 @@
+id: sistani-qa-14825
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-oath
+level: intermediate
+title: If a person breaks his oath, what is he supposed to do?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01278/#14825
+language: en
+date: ''
+description: A question asking what a person should do if he breaks his oath.
+sample_questions:
+- What if I break an oath?
+- Is there a kaffarah for breaking an oath?
+- What do I do after breaking a promise to God?
+headings:
+- social-conduct-rulings
+access: free
+location: Oath, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

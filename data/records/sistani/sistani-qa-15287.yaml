@@ -1,0 +1,28 @@
+id: sistani-qa-15287
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gold
+level: intermediate
+title: When one must give blood money (Diyyah) what is the Karat of Gold equivalent of Dinar?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01196/#15287
+language: en
+date: ''
+description: A question asking what karat of gold is equivalent to the dinar when blood money (diyyah,
+  compensation for a death or injury) must be given.
+sample_questions:
+- What is a dinar in gold?
+- How much gold is blood money?
+- What karat of gold is used for diyyah?
+headings:
+- dress-appearance
+access: free
+location: Gold, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

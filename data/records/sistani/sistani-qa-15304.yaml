@@ -1,0 +1,29 @@
+id: sistani-qa-15304
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-funeral-prayer
+level: intermediate
+title: What are the Mustahab acts to be done after a funeral ceremony?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01193/#15304
+language: en
+date: ''
+description: A question asking what the mustahab (recommended but not required) acts are after a funeral
+  ceremony.
+sample_questions:
+- What should I do after a funeral?
+- What are the recommended acts after a funeral?
+- What do Shias do after burying someone?
+headings:
+- death-burial
+- prayer
+access: free
+location: Funeral Prayer, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

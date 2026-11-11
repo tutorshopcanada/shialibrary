@@ -1,0 +1,28 @@
+id: sistani-qa-15072
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the virus on considering AIDS as terminal illness?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15072
+language: en
+date: ''
+description: A question asking about the status of AIDS as a terminal illness (the wording of the question
+  is unclear).
+sample_questions:
+- Is AIDS counted as a terminal illness?
+- What rules apply to terminal illness?
+- What does Islam say about AIDS?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 3
+needs_review: false
+review_note: The question text is unclear, so a reviewer should confirm the classification.
+cataloged_on: '2026-11-10'

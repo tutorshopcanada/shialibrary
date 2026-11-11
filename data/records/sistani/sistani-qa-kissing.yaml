@@ -1,0 +1,33 @@
+id: sistani-qa-kissing
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Kissing
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01233/
+language: en
+date: ''
+description: A topic page of questions and answers about kissing and physical affection. Questions cover
+  kissing between men, a girlfriend or fiancé, relatives such as an uncle, and spouses greeting each other
+  in public.
+sample_questions:
+- Can I kiss my girlfriend?
+- Can men kiss each other?
+- Can a husband and wife hug in public?
+- Can I kiss my fiance?
+- Can a niece kiss her uncle?
+headings:
+- social-conduct-rulings
+- marriage-family
+access: free
+location: 'Q&A topic: Kissing'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

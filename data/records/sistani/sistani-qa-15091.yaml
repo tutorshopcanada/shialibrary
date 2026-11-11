@@ -1,0 +1,29 @@
+id: sistani-qa-15091
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: Some people believe that a brain-dead person is a dead person, even if the heart has not yet stopped
+  and that it will definitely stop after that. This is what the doctors say...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15091
+language: en
+date: ''
+description: A question asking whether a brain-dead person is considered dead even if the heart is still
+  beating.
+sample_questions:
+- Is brain death counted as death?
+- What does Islam say about life support?
+- When is a person considered dead?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 22
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

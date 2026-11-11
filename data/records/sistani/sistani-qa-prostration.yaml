@@ -1,0 +1,31 @@
+id: sistani-qa-prostration
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Prostration
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01283/
+language: en
+date: ''
+description: A topic page of questions and answers about prostration (sajdah) in prayer. Questions cover
+  what surfaces can be used, praying in trains and cars, and the obligatory prostration when hearing certain
+  Quran verses.
+sample_questions:
+- What can I prostrate on?
+- Can I pray in a car or train?
+- Can I do sajdah on a carpet?
+- What is obligatory sajdah in the Quran?
+- Can I pray on a prayer mat made of synthetic material?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Prostration'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

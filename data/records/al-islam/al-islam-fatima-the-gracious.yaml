@@ -13,7 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/fatima-gracious-abu-muhammad-ordoni
 language: en
 date: ''
-description: A book by Abu Muhammad Ordoni that the site describes as a biography of Lady Fatimah, the daughter of the Prophet Muhammad. It covers her titles, her family life and her children, and in its later chapters the events after the Prophet's death, including the dispute over Fadak.
+description: A book by Abu Muhammad Ordoni that the site describes as a biography of Lady Fatimah, the
+  daughter of the Prophet Muhammad. It covers her titles, her family life and her children, and in its
+  later chapters the events after the Prophet's death, including the dispute over Fadak.
 sample_questions:
 - Who was Lady Fatimah?
 - Who was the daughter of the Prophet Muhammad?
@@ -26,6 +28,8 @@ headings:
 - ahl-al-bayt
 access: free
 location: ''
-needs_review: true
-review_note: Covers the events after the Prophet's death, including Fadak and the question of succession (disputed between Shia and Sunni accounts). Level is not stated on the page; intermediate chosen as the cautious option. Reviewer should confirm the description stays neutral.
+needs_review: false
+review_note: Covers the events after the Prophet's death, including Fadak and the question of succession
+  (disputed between Shia and Sunni accounts). Level is not stated on the page; intermediate chosen as
+  the cautious option. Reviewer should confirm the description stays neutral.
 cataloged_on: '2026-11-10'

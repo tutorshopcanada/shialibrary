@@ -1,0 +1,29 @@
+id: sistani-jme-2392
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-jme
+level: beginner
+title: Glossary
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/49/2392/
+language: en
+date: ''
+description: The translator's alphabetical glossary of Arabic and fiqh terms with short English definitions.
+  The translator notes it is his own addition and not part of the original book.
+sample_questions:
+- What do fiqh terms like najis and tahir mean?
+- Is there a glossary of Islamic legal words?
+- What is the meaning of mukallaf?
+- Where can I look up Arabic words used in rulings?
+headings:
+- fiqh
+access: free
+location: Front matter
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

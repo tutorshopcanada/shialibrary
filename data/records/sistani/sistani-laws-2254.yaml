@@ -1,0 +1,29 @@
+id: sistani-laws-2254
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: DOUBTS THAT MUST BE DISMISSED » 3. Doubt after the time of prayers
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2254/
+language: en
+date: ''
+description: Covers dismissing doubts that arise after the time for prayers has expired, including doubts
+  about whether a prayer was performed and cases of zuhr and asr.
+sample_questions:
+- What if I doubt after prayer time ended whether I prayed?
+- What if the time passed and I'm not sure I prayed?
+- What about doubts regarding zuhr and asr after time?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

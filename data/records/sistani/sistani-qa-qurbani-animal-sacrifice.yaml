@@ -1,0 +1,30 @@
+id: sistani-qa-qurbani-animal-sacrifice
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Qurbani - Animal Sacrifice
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02825/
+language: en
+date: ''
+description: A topic page with one question about qurbani, the animal sacrifice made on Eid al-Adha (the
+  festival of sacrifice).
+sample_questions:
+- What is qurbani?
+- How do I do qurbani on Eid al-Adha?
+- What are the rules of animal sacrifice?
+- Is qurbani recommended?
+headings:
+- hajj
+- food-drink
+access: free
+location: 'Q&A topic: Qurbani - Animal Sacrifice'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

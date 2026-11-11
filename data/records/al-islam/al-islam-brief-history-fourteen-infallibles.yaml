@@ -13,7 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/brief-history-fourteen-infallibles
 language: en
 date: ''
-description: A book from the World Organization for Islamic Services (WOFIS) that gives a brief history of the Prophet Muhammad, Lady Fatimah and the Twelve Imams, one by one, followed by a chronological list. The page gives no description of the work or its intended audience.
+description: A book from the World Organization for Islamic Services (WOFIS) that gives a brief history
+  of the Prophet Muhammad, Lady Fatimah and the Twelve Imams, one by one, followed by a chronological
+  list. The page gives no description of the work or its intended audience.
 sample_questions:
 - Who are the Fourteen Infallibles?
 - Who are the Twelve Imams?
@@ -27,6 +29,8 @@ headings:
 - fatimah
 access: free
 location: ''
-needs_review: true
-review_note: Presents the Shia belief in the Twelve Imams as successors of the Prophet, a claim on which Shia and Sunni accounts differ. The page gives no description, audience or level; intermediate chosen as the cautious option.
+needs_review: false
+review_note: Presents the Shia belief in the Twelve Imams as successors of the Prophet, a claim on which
+  Shia and Sunni accounts differ. The page gives no description, audience or level; intermediate chosen
+  as the cautious option.
 cataloged_on: '2026-11-10'

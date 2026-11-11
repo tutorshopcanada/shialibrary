@@ -1,0 +1,31 @@
+id: al-islam-in-praise-imam-zaynul-abideen
+type: article
+content_tag: article
+granularity: work
+parent: ''
+level: intermediate
+title: In Praise of Imam Zaynul Abideen (a.s.)
+title_original: ''
+authors: []
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/articles/praise-imam-zaynul-abideen
+language: en
+date: ''
+description: 'A very short page presenting a poem in praise of Imam Zayn al-Abidin, the fourth Imam. The
+  page explains the occasion: during Hajj, the Caliph Hisham ibn Abd al-Malik was overshadowed by the
+  respect people showed the Imam, and the poet Farazdaq then recited an ode.'
+sample_questions:
+- Who was Imam Zayn al-Abidin?
+- What is the poem of Farazdaq about the Imam?
+- How did people respect Imam Zayn al-Abidin at Hajj?
+- Why was the Caliph Hisham offended?
+headings:
+- twelve-imams
+access: free
+location: ''
+needs_review: false
+review_note: The page states no description, audience or level; intermediate chosen as the cautious option.
+  The poem's composer Farazdaq is named in the text; not added to scholars.yaml and authors left empty
+  since the page names no author of the page itself.
+cataloged_on: '2026-11-10'

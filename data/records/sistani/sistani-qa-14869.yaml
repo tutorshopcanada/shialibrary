@@ -1,0 +1,30 @@
+id: sistani-qa-14869
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer-timings
+level: intermediate
+title: If a traveller leaves his home town immediately after the adhan of noon prayer, i.e. without saying
+  that prayer, and reaches his destination after sunset, has he committed a sin? And is it obligatory
+  on him to make up for noon prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01289/#14869
+language: en
+date: ''
+description: A question about a traveller who leaves home just after the call to noon prayer without praying
+  and arrives after sunset, asking if it is a sin and whether the prayer must be made up.
+sample_questions:
+- What if I travel and miss prayer?
+- Do I make up a noon prayer?
+- Can I travel after adhan?
+headings:
+- prayer
+access: free
+location: Prayer Timings, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

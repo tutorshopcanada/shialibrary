@@ -1,0 +1,28 @@
+id: sistani-qa-15135
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-lying
+level: intermediate
+title: Is it permissible to lie about your qualification in order to get a government post?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01238/#15135
+language: en
+date: ''
+description: A question asking whether one may lie about one's qualifications to get a government post.
+sample_questions:
+- Can I lie on a job application?
+- Can I lie about my qualifications?
+- Is lying for a job allowed?
+headings:
+- social-conduct-rulings
+- ethics
+access: free
+location: Lying, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

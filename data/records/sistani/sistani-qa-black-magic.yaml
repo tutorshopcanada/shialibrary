@@ -26,7 +26,7 @@ headings:
 - fiqh
 access: free
 location: 'Q&A topic: Black Magic'
-needs_review: true
+needs_review: false
 review_note: Concerns magic and superstition-related practices; reviewer should confirm the classification
   and wording.
 cataloged_on: '2026-11-10'

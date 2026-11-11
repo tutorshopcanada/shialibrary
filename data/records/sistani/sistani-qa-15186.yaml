@@ -1,0 +1,27 @@
+id: sistani-qa-15186
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-istibra
+level: intermediate
+title: Why should we do Istibra and how is it done?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01226/#15186
+language: en
+date: ''
+description: A question asking why istibra (a step after urinating) is done and how it is carried out.
+sample_questions:
+- What is istibra?
+- How do I do istibra?
+- Why do we do istibra?
+headings:
+- purity
+access: free
+location: Istibra, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

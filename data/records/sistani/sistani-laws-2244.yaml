@@ -1,0 +1,30 @@
+id: sistani-laws-2244
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: TRANSLATION OF PRAYERS
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2244/
+language: en
+date: ''
+description: Gives English translations (with Arabic and transliteration) of the Qur'anic chapters and
+  phrases recited in prayer, such as Surat al-Hamd, so a worshipper can understand them.
+sample_questions:
+- What does Surat al-Fatiha mean?
+- What is the translation of the prayer?
+- What do the words of salah mean in English?
+- What does Surat al-Ikhlas mean?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

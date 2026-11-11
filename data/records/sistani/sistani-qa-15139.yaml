@@ -1,0 +1,30 @@
+id: sistani-qa-15139
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-leather-products
+level: intermediate
+title: One of the famous trousers these days is the one known as jeans. It is made in non-Muslim countries.
+  It has a piece of leather used as a label...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01237/#15139
+language: en
+date: ''
+description: A question about praying in jeans that carry a leather label, when it is not known whether
+  the leather comes from an animal slaughtered Islamically.
+sample_questions:
+- Can I pray in jeans with a leather label?
+- What if I don't know where the leather came from?
+- Does a small leather patch matter for prayer?
+headings:
+- dress-appearance
+- prayer
+access: free
+location: Leather Products, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

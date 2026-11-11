@@ -1,0 +1,29 @@
+id: sistani-qa-15073
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the ruling on the custody of an infected mother with regard to her non-infected baby and
+  also on breast-feeding?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15073
+language: en
+date: ''
+description: A question about custody of a baby and breast-feeding when the mother is infected with AIDS
+  and the baby is not.
+sample_questions:
+- Who has custody if the mother has AIDS?
+- Is breast-feeding discussed for an infected mother?
+- What are a mother's rights if she is ill?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

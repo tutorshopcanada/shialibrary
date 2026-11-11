@@ -27,7 +27,7 @@ headings:
 - fiqh
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: 'Level: the Editor''s Note says the book aims to make fiqh easier for the layman, so intermediate
   was chosen rather than advanced; reviewer to confirm. Author is the compiler (Sayyid Abdul Hadi al-Hakim);
   rulings are Sayyid Sistani''s, recorded in `marja`. title_original is the transliterated Arabic title

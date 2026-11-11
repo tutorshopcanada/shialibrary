@@ -1,0 +1,31 @@
+id: sistani-qa-gold
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Gold
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01196/
+language: en
+date: ''
+description: A topic page of questions and answers about gold, mainly in relation to men wearing it. Questions
+  cover watches, cuff-links, tie pins, rings made of platinum or white and yellow gold, and the gold equivalent
+  of the dinar in blood money.
+sample_questions:
+- Can men wear gold?
+- Can a man wear a gold watch?
+- Can men wear platinum rings?
+- Can men wear white gold?
+- Can I pray wearing gold?
+headings:
+- dress-appearance
+access: free
+location: 'Q&A topic: Gold'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

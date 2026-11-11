@@ -1,0 +1,28 @@
+id: sistani-qa-26945
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-wine
+level: intermediate
+title: Is it permissible to eat at a table that wine is served ?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01355/#26945
+language: en
+date: ''
+description: A question asking whether it is allowed to eat at a table where wine is served.
+sample_questions:
+- Can I eat where wine is served?
+- Can I go to a restaurant that serves alcohol?
+- Can I sit at a table with wine?
+headings:
+- food-drink
+- social-conduct-rulings
+access: free
+location: Wine, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-laws-2147
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: THINGS THAT PURIFY AN IMPURE OBJECT (MUṬAHHIRĀT) » 7. Islam
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2147/
+language: en
+date: ''
+description: Rules on how a person's becoming Muslim relates to purity, including the declaration of the
+  two testimonies (shahadatayn) and what applies to their clothes and body.
+sample_questions:
+- Does accepting Islam change purity rules for a person?
+- What are the shahadatayn?
+- What about the clothes of a new Muslim?
+- What if I'm unsure whether someone became Muslim sincerely?
+headings:
+- purity
+- fiqh
+access: free
+location: 'Chapter: Purification (Ṭahārah)'
+needs_review: false
+review_note: Concerns non-Muslims and conversion; the topic is sensitive, so a knowledgeable human should
+  confirm the neutral description.
+cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-laws-2248
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: THINGS THAT ARE DISAPPROVED (MAKRŪH) IN PRAYERS
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2248/
+language: en
+date: ''
+description: Lists things disapproved (makruh) in prayers, with the rules on each and on similar actions.
+sample_questions:
+- What is makruh during prayer?
+- Can I look around while praying?
+- Can I pray when I need the toilet?
+- What should I avoid in salah?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

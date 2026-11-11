@@ -60,6 +60,7 @@
   {
    "query": "namaz",
    "expect_any": [
+    "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
     "sistani-west-salat-introduction"
@@ -71,6 +72,7 @@
   {
    "query": "صلاة",
    "expect_any": [
+    "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
     "sistani-west-salat-introduction"
@@ -451,6 +453,51 @@
    "expect_none": false,
    "expect_group": "any",
    "note": ""
+  },
+  {
+   "query": "stories of the prophets",
+   "expect_any": [
+    "al-islam-stories-of-the-prophets"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "lady zaynab",
+   "expect_any": [
+    "al-islam-lady-zaynab"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "dua kumayl",
+   "expect_any": [
+    "al-islam-dua-kumayl-translation-commentary"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "raising children",
+   "expect_any": [
+    "al-islam-raising-children"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "tafsir",
+   "expect_any": [
+    "al-islam-introduction-science-tafsir"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "alt term of the Tafsir heading"
   }
  ]
 }

@@ -1,0 +1,28 @@
+id: sistani-qa-15204
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-insurance
+level: intermediate
+title: Is life insurance permissible?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01221/#15204
+language: en
+date: ''
+description: A question asking about life insurance.
+sample_questions:
+- Is life insurance allowed?
+- Can Shias buy life insurance?
+- What is the rule on life insurance?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Insurance, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

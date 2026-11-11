@@ -1,0 +1,31 @@
+id: sistani-qa-moon-sighting
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Moon Sighting
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01266/
+language: en
+date: ''
+description: A topic page of questions and answers about sighting the new moon to start the Islamic month,
+  including Ramadan (the month of fasting). Questions cover proof of sighting, how to know Ramadan has
+  begun and sighting in other cities.
+sample_questions:
+- How do we know Ramadan has started?
+- What is moon sighting?
+- Do I follow another city's moon sighting?
+- How do I know the first day of the month?
+- What proof is needed for the new moon?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Moon Sighting'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

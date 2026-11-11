@@ -1,0 +1,30 @@
+id: sistani-qa-wine
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Wine
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01355/
+language: en
+date: ''
+description: A topic page of questions and answers about wine and drinking alcohol. Questions cover sitting
+  at a table where wine is served.
+sample_questions:
+- Can I sit where wine is served?
+- What does Islam say about alcohol?
+- Can I eat in a restaurant that serves wine?
+- Can I stay in a cafe with someone drinking?
+headings:
+- food-drink
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Wine'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

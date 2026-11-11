@@ -1,0 +1,31 @@
+id: sistani-qa-prayer-timings
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Prayer Timings
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01289/
+language: en
+date: ''
+description: A topic page of questions and answers about prayer times. Questions cover praying at work
+  or university, delaying prayer, finding midnight and travellers who leave after the call to prayer.
+sample_questions:
+- What if prayer time comes while I am at work?
+- Can I pray in a car?
+- When is midnight for prayer?
+- What if I delay my prayer?
+- What if I travel at prayer time?
+- When do I start praying if unsure of the time?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Prayer Timings'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

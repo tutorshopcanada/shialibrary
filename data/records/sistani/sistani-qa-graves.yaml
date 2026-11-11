@@ -1,0 +1,33 @@
+id: sistani-qa-graves
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Graves
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01205/
+language: en
+date: ''
+description: A topic page of questions and answers about graves and burial of Muslims in non-Muslim countries.
+  Questions cover burying in non-Muslim cemeteries, buying a Muslim graveyard, costs of transporting a
+  body, burial without heirs, coffins, and women visiting graveyards.
+sample_questions:
+- Can a Muslim be buried in a non-Muslim cemetery?
+- Who pays to send a body home?
+- Can women visit graveyards?
+- Can a Muslim be buried in a coffin?
+- Who buries a Muslim with no family?
+headings:
+- death-burial
+- muslims-in-west
+access: free
+location: 'Q&A topic: Graves'
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

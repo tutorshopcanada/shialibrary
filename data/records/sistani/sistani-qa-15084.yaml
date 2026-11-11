@@ -1,0 +1,29 @@
+id: sistani-qa-15084
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: Is the process of test-tube babies allowed? In the sense that the wife’s ovum and the husband’s
+  sperm are extracted to be fertilized outside the body, and then placed in the womb [of the wife].
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15084
+language: en
+date: ''
+description: A question asking about test-tube babies, where the wife's egg and husband's sperm are joined
+  outside the body and placed in the wife's womb.
+sample_questions:
+- What does Islam say about test-tube babies?
+- Is IVF with a husband and wife discussed?
+- Can a couple use IVF?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 15
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

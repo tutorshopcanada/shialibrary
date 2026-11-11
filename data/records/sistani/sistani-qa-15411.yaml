@@ -1,0 +1,27 @@
+id: sistani-qa-15411
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eid-prayer
+level: intermediate
+title: Can one lead Eid prayers, if they are a traveller?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01180/#15411
+language: en
+date: ''
+description: A question about whether a traveller can lead the Eid prayer (the special festival prayer).
+sample_questions:
+- Can a traveller lead Eid prayer?
+- Who can be the imam for Eid prayer?
+- Can someone on a journey lead Eid prayer?
+headings:
+- prayer
+access: free
+location: Eid Prayer, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

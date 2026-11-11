@@ -1,0 +1,31 @@
+id: sistani-qa-pre-marital-relation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Pre-marital Relation
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01287/
+language: en
+date: ''
+description: A topic page of questions and answers about relationships before marriage. Questions cover
+  friendship between a boy and a girl and the status of a marriage after earlier relations.
+sample_questions:
+- Can boys and girls be friends?
+- What does Islam say about dating?
+- Can I get to know someone before marriage?
+- What is pre-marital relation?
+headings:
+- youth-rulings
+- marriage-family
+access: free
+location: 'Q&A topic: Pre-marital Relation'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

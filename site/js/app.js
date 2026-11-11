@@ -2,7 +2,7 @@
 // Every piece of catalog text is inserted with textContent, never as HTML.
 
 import { createEngine } from './search.js';
-import { SITE, reportHref } from './config.js';
+import { SITE, reportHref, externalSearchHref } from './config.js';
 
 const $ = (id) => document.getElementById(id);
 const view = $('view');
@@ -487,6 +487,22 @@ function curatedBlock(result) {
   return box;
 }
 
+/** "Ask the source site" box: for questions the catalog does not cover. A plain outbound link. */
+function externalSearchBlock(query) {
+  const href = externalSearchHref(query);
+  if (!href) return null;
+  const name = SITE.externalSearch.name;
+  const box = el('section', { class: 'external-search', 'aria-label': `Search ${name}` });
+  box.append(el('h2', null, 'Have a question we don’t answer?'));
+  box.append(el('p', null, 'We catalog books and articles, not individual questions and answers. ',
+    `${name} has its own question-and-answer section and search, which may have your question.`));
+  box.append(el('p', null, el('a', { class: 'button-link', href, target: '_blank', rel: 'noopener noreferrer' },
+    `Search ${name} for “${String(query).trim()}” ↗`),
+    SITE.externalSearch.askUrl ? el('span', null, ' ', el('a', { href: SITE.externalSearch.askUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Or browse its questions ↗')) : null));
+  box.append(el('p', { class: 'small' }, `This opens ${name} in a new tab and sends your search words to that site. We are not affiliated with it and do not control its results.`));
+  return box;
+}
+
 function fallbackBlock(result) {
   const box = el('section', { class: 'fallback' });
   box.append(el('h2', null, 'We couldn’t find a close match'));
@@ -528,7 +544,7 @@ function renderResults(state) {
   // Fallback (Layer 4): say so plainly, then offer ways forward.
   if (result.fallback) {
     statusEl.textContent = `No close match for “${result.query}”.`;
-    view.append(fallbackBlock(result), ...[topicTiles(), starterQuestions(8)].filter(Boolean));
+    view.append(fallbackBlock(result), ...[externalSearchBlock(result.query), topicTiles(), starterQuestions(8)].filter(Boolean));
     return;
   }
 
@@ -596,6 +612,8 @@ function renderResults(state) {
     relSec.append(entryList(result.related));
     view.append(relSec);
   }
+  const ext = externalSearchBlock(result.query);
+  if (ext) view.append(ext);
 }
 
 function render() {

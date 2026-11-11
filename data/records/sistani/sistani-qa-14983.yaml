@@ -1,0 +1,28 @@
+id: sistani-qa-14983
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-endowment-waqf
+level: intermediate
+title: Does waqf have a particular mechanism?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01183/#14983
+language: en
+date: ''
+description: A question asking whether waqf (an endowment of property for a religious or charitable purpose)
+  has a particular mechanism.
+sample_questions:
+- How does waqf work?
+- What is the procedure for waqf?
+- How do I make something waqf?
+headings:
+- transactions-work
+access: free
+location: Endowment - Waqf, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

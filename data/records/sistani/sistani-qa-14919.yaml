@@ -1,0 +1,27 @@
+id: sistani-qa-14919
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ornaments
+level: intermediate
+title: Is it permissible for men to wear white or yellow gold?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01276/#14919
+language: en
+date: ''
+description: A question about men wearing white or yellow gold.
+sample_questions:
+- Can men wear white gold?
+- Can men wear yellow gold?
+- What are the rules on gold for men?
+headings:
+- dress-appearance
+access: free
+location: Ornaments, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

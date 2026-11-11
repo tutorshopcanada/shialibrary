@@ -12,8 +12,8 @@ source: sistani.org
 url: https://www.sistani.org/english/book/48/2269/
 language: en
 date: ''
-description: Covers the qualifications of the imam (prayer leader) of a congregational prayer, including
-  age, mind, character and creed, and rulings on following imams with excuses or illnesses.
+description: Covers the qualifications of the imam (prayer leader) of a congregational prayer, and rulings
+  on following imams with excuses or illnesses.
 sample_questions:
 - Who can lead the congregational prayer?
 - What qualities does an imam need?
@@ -24,7 +24,7 @@ headings:
 - prayer
 access: free
 location: 'Chapter: Prayer (Ṣalāh)'
-needs_review: true
+needs_review: false
 review_note: Page states conditions on the imam's creed (Twelver Shia), a Shia-Sunni matter; flagged for
   human review.
 cataloged_on: '2026-11-10'

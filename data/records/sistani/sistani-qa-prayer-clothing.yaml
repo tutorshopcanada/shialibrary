@@ -1,0 +1,30 @@
+id: sistani-qa-prayer-clothing
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Prayer - Clothing
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02800/
+language: en
+date: ''
+description: A topic page with one question about clothing worn in prayer, relating to garments claimed
+  to be made of natural silk.
+sample_questions:
+- What can I wear for prayer?
+- Can men pray in silk?
+- What is said about silk clothing?
+- Can I pray in clothes I am unsure about?
+headings:
+- prayer
+- dress-appearance
+access: free
+location: 'Q&A topic: Prayer - Clothing'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

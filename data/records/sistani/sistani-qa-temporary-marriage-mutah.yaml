@@ -1,0 +1,32 @@
+id: sistani-qa-temporary-marriage-mutah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Temporary Marriage - Mutah
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01245/
+language: en
+date: ''
+description: A topic page of questions and answers about mut'ah (temporary marriage, a fixed-term marriage
+  contract). Questions cover marrying women of other faiths, the waiting period (iddah), guardians' permission
+  and ending the contract early.
+sample_questions:
+- What is mut'ah?
+- Can a Muslim man do mut'ah with a non-Muslim woman?
+- What is iddah?
+- Can a woman do mut'ah without her father's permission?
+- Can mut'ah be ended early?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Temporary Marriage - Mutah'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

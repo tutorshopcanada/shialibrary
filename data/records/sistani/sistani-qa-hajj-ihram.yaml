@@ -1,0 +1,29 @@
+id: sistani-qa-hajj-ihram
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Hajj - Ihram
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01222/
+language: en
+date: ''
+description: A topic page with one question and answer about ihram (the pilgrim's sacred state and dress)
+  for hajj, specifically entering it from the city of Jeddah.
+sample_questions:
+- What is ihram?
+- Where do I enter ihram?
+- Can I put on ihram in Jeddah?
+- What if my plane lands in Jeddah?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Hajj - Ihram'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

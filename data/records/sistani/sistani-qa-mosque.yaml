@@ -1,0 +1,30 @@
+id: sistani-qa-mosque
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Mosque
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01267/
+language: en
+date: ''
+description: A topic page of questions and answers about mosques. Questions cover which parts of a mosque
+  building count as the mosque, women in a state of ritual impurity, and visits by non-Muslims.
+sample_questions:
+- What parts of a mosque count as the mosque?
+- Can women on their period enter a mosque?
+- Can non-Muslims enter a mosque?
+- What is a husayniyya?
+headings:
+- prayer
+- women-rulings
+access: free
+location: 'Q&A topic: Mosque'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

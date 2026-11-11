@@ -1,0 +1,27 @@
+id: sistani-qa-14921
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ornaments
+level: intermediate
+title: Is it Haram for men to wear an earring?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01276/#14921
+language: en
+date: ''
+description: A question asking whether it is haram (forbidden) for men to wear an earring.
+sample_questions:
+- Can a man wear an earring?
+- What does Islam say about men and earrings?
+- Are earrings only for women?
+headings:
+- dress-appearance
+access: free
+location: Ornaments, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

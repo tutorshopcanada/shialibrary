@@ -1,0 +1,27 @@
+id: sistani-qa-15292
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-games
+level: intermediate
+title: Some permissible games use dice in them. So is it allowed to play with it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01199/#15292
+language: en
+date: ''
+description: A question about playing games that use dice.
+sample_questions:
+- Can I play board games with dice?
+- Are dice games okay?
+- Can I play with dice?
+headings:
+- music-entertainment
+access: free
+location: Games, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

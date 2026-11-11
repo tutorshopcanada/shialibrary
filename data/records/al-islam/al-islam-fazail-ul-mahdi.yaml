@@ -13,7 +13,10 @@ source: al-islam.org
 url: https://al-islam.org/fazail-ul-mahdi-ali-akbar-talaafi
 language: en
 date: ''
-description: A book by Ali Akbar Talaafi that the site describes as a short biography of Imam al-Mahdi, the twelfth Imam, and a discussion of his reappearance, his lineage and the reasons for his occultation (ghaybah, his absence from public view). It also covers how believers should behave while waiting for him.
+description: A book by Ali Akbar Talaafi that the site describes as a short biography of Imam al-Mahdi,
+  the twelfth Imam, and a discussion of his reappearance, his lineage and the reasons for his occultation
+  (ghaybah, his absence from public view). It also covers how believers should behave while waiting for
+  him.
 sample_questions:
 - Who is Imam al-Mahdi?
 - What is the occultation of the Imam?
@@ -26,6 +29,7 @@ headings:
 - imamate
 access: free
 location: ''
-needs_review: true
-review_note: The belief in the Mahdi and his occultation is a topic on which Shia and Sunni accounts differ. Level is not stated on the page; intermediate chosen as the cautious option.
+needs_review: false
+review_note: The belief in the Mahdi and his occultation is a topic on which Shia and Sunni accounts differ.
+  Level is not stated on the page; intermediate chosen as the cautious option.
 cataloged_on: '2026-11-10'

@@ -1,0 +1,27 @@
+id: sistani-qa-25552
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-tattoos
+level: intermediate
+title: Is it permissible for a man to get a tattoo?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01336/#25552
+language: en
+date: ''
+description: A question asking whether a man may get a tattoo.
+sample_questions:
+- Can a man get a tattoo?
+- Are tattoos haram for men?
+- What does Islam say about tattoos?
+headings:
+- dress-appearance
+access: free
+location: Tattoos, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,37 @@
+id: al-islam-inquiries-about-shia-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Inquiries About Shi'a Islam
+title_original: ''
+authors:
+- moustafa-al-qazwini
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/inquiries-about-shia-islam-sayyid-moustafa-al-qazwini
+language: en
+date: ''
+description: A book that the site says provides an introduction to major doctrines of Shi'a Islam. Chapters
+  cover who the Shia are, the Imamate (leadership after the Prophet), the Ahl al-Bayt (the Prophet's family),
+  infallibility, intercession, Imam al-Mahdi, and points of difference and unity between Shia and other
+  Muslims.
+sample_questions:
+- Who are the Shia?
+- What is the Imamate?
+- Who are the Ahl al-Bayt?
+- What is infallibility in Shia belief?
+- What is taqiyyah?
+- How do Shia and Sunni views differ?
+headings:
+- sunni-shia
+- imamate
+- ahl-al-bayt
+access: free
+location: ''
+needs_review: false
+review_note: Page says it is 'an introduction to major doctrines of Shi'a Islam' but gives no explicit
+  audience; level set to intermediate. Includes Shia-Sunni comparison topics (companions, differences),
+  so flagged for review.
+cataloged_on: '2026-11-11'

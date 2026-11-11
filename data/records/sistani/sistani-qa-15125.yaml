@@ -1,0 +1,30 @@
+id: sistani-qa-15125
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-lottery
+level: intermediate
+title: I work at an exchange office but they also make me sell lottery. Is it permitted to sell lottery
+  in this case?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01240/#15125
+language: en
+date: ''
+description: A question from a person working at an exchange office who is made to sell lottery tickets,
+  asking about selling them.
+sample_questions:
+- Can I sell lottery tickets?
+- Can I work in a shop that sells lottery?
+- What if my job requires selling lottery?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: Lottery, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

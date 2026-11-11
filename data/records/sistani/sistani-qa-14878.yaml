@@ -1,0 +1,28 @@
+id: sistani-qa-14878
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-permanent-marriage
+level: intermediate
+title: Is it allowed to do Mut’ah before permanent marriage?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01284/#14878
+language: en
+date: ''
+description: A question asking whether mut'ah (a fixed-term marriage) can be done before a permanent marriage.
+sample_questions:
+- What is mut'ah?
+- Can I do mut'ah before marriage?
+- Is temporary marriage discussed?
+headings:
+- marriage-family
+access: free
+location: Permanent Marriage, question 8
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

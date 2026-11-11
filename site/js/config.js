@@ -19,6 +19,16 @@ export const SITE = {
     target: 'TODO-OWNER-EMAIL@example.org',
   },
 
+  // For questions we have no catalog entry for, send people to the source site's own
+  // search. This is a plain link the visitor chooses to click; the site's search words are
+  // sent to that site only then. (Its robots.txt only restricts crawlers, not visitors.)
+  // The address pattern was read from the site's own indexed search pages on 2026-11-10.
+  externalSearch: {
+    name: 'Al-Islam.org',
+    url: 'https://al-islam.org/search/site/',
+    askUrl: 'https://al-islam.org/ask',
+  },
+
   // Where the full scope document is published (docs/scope.md in the repository).
   // TODO(owner): set to the public URL of docs/scope.md once the repository is public.
   scopeUrl: '',
@@ -45,4 +55,11 @@ export function reportHref(record) {
     return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
   return `mailto:${SITE.report.target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+/** Link to the source site's own search for a query, or '' if the query is empty. */
+export function externalSearchHref(query) {
+  const q = String(query || '').trim().replace(/\s+/g, ' ');
+  if (!q || !SITE.externalSearch) return '';
+  return SITE.externalSearch.url + encodeURIComponent(q);
 }

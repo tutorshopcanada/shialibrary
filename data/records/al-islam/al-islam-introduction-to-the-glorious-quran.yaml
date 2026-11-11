@@ -1,0 +1,33 @@
+id: al-islam-introduction-to-the-glorious-quran
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: An Introduction to the Glorious Quran
+title_original: ''
+authors:
+- bahram-samii
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/introduction-glorious-quran-bahram-samii
+language: en
+date: ''
+description: A book introducing the Quran by letting the Quran speak about itself. It covers the physical
+  aspects of the Quran, the signs of a pure divine scripture, the Quran as a miracle, whether anything
+  can match it, and a short note about Islam. It includes a glossary and a list of surahs.
+sample_questions:
+- What is the Quran?
+- How is the Quran described in itself?
+- Why is the Quran called a miracle?
+- How was the Quran preserved?
+- Where can a beginner learn about the Quran?
+headings:
+- quran
+- quran-sciences
+access: free
+location: ''
+needs_review: false
+review_note: 'Level from the foreword: meant for ''those who have not had the chance to become familiar
+  with this Great Book''.'
+cataloged_on: '2026-11-11'

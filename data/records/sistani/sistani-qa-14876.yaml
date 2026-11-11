@@ -1,0 +1,31 @@
+id: sistani-qa-14876
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-permanent-marriage
+level: intermediate
+title: I am married to a Sunni girl and it is a secret marriage, which nobody knows of. She has not been
+  married before and we obviously didn’t get her father's permission. Does this mean that the marriage
+  is invalid?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01284/#14876
+language: en
+date: ''
+description: A question from a man married in secret to a Sunni girl without her father's permission,
+  asking about the status of the marriage.
+sample_questions:
+- Is a secret marriage accepted?
+- Can I marry a Sunni girl?
+- Is a father's permission needed?
+headings:
+- marriage-family
+access: free
+location: Permanent Marriage, question 6
+needs_review: false
+review_note: Touches on Shia-Sunni practice; sensitive, so a reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

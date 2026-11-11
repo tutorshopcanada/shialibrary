@@ -1,0 +1,28 @@
+id: sistani-qa-15137
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-lying
+level: intermediate
+title: Is it permissible to tell a lie, when there is a danger threatening your life?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01238/#15137
+language: en
+date: ''
+description: A question asking whether one may tell a lie when there is a danger threatening one's life.
+sample_questions:
+- Can I lie to save my life?
+- Is lying allowed in danger?
+- When can a person lie?
+headings:
+- social-conduct-rulings
+- ethics
+access: free
+location: Lying, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

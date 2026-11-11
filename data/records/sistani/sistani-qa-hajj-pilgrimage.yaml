@@ -1,0 +1,32 @@
+id: sistani-qa-hajj-pilgrimage
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Hajj - Pilgrimage
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01206/
+language: en
+date: ''
+description: A topic page of questions and answers about hajj (the annual pilgrimage to Mecca). Questions
+  cover praying behind Sunni leaders, hajj and marriage or exams, slaughtering in Mina, the boundaries
+  of Arafat and Mina, shaving the head, entering ihram (the pilgrim's state and dress) from Jeddah, and
+  Tawaf al-Nisa.
+sample_questions:
+- What is hajj?
+- Can I pray behind Sunni imams during hajj?
+- Can I postpone hajj?
+- Where do I put on ihram?
+- What is Tawaf al-Nisa?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Hajj - Pilgrimage'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15159
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-justice
+level: intermediate
+title: Who is a Just ('Adil) person?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01232/#15159
+language: en
+date: ''
+description: A question asking who a just ('adil) person is.
+sample_questions:
+- Who is an 'adil person?
+- What does 'adalah mean?
+- What makes someone just in fiqh?
+headings:
+- fiqh
+- prayer
+access: free
+location: Justice, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

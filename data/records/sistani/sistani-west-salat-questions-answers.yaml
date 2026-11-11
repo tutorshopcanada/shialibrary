@@ -31,7 +31,7 @@ headings:
 - muslims-in-west
 access: free
 location: 'Chapter: Salat, Questions and Answers'
-needs_review: true
+needs_review: false
 review_note: The individual questions on this page have no anchors or URLs of their own, so cataloging
   stops at page (section) level for this book. Level set to advanced as detailed rulings.
 cataloged_on: '2026-11-10'

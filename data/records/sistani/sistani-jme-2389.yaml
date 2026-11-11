@@ -1,0 +1,30 @@
+id: sistani-jme-2389
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-jme
+level: beginner
+title: Translator’s Foreword
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/49/2389/
+language: en
+date: ''
+description: 'The English translator''s note on the book: his approach to translation, how Arabic terms
+  and a glossary are used, and the Quran translation consulted. Useful for understanding the terms used
+  in the rest of the book.'
+sample_questions:
+- Who translated Jurisprudence Made Easy into English?
+- Why does the book keep some Arabic terms?
+- Which Quran translation does the book use?
+- Is there a glossary of fiqh terms in this book?
+headings:
+- fiqh
+access: free
+location: Front matter
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-qa-pictures
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Pictures
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01282/
+language: en
+date: ''
+description: A topic page of questions and answers about pictures. Questions cover depicting the Prophet,
+  past prophets or the Imams in film and theatre, and photographing a dead body.
+sample_questions:
+- Can the Prophet be shown in a film?
+- Can the Imams be depicted in drawings?
+- Can I photograph a dead body?
+- What does Islam say about pictures?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Pictures'
+needs_review: false
+review_note: Touches on depicting the Prophet and the Imams; sensitive, so a reviewer should confirm the
+  classification and wording.
+cataloged_on: '2026-11-10'

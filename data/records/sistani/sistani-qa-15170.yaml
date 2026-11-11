@@ -1,0 +1,31 @@
+id: sistani-qa-15170
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-investment
+level: intermediate
+title: A Muslim took a loan from another Muslim. After a while the market value of that amount goes down.
+  How much should he pay back to the creditor? The amount that he got as loan or its equivalent in the
+  market value at the time of payment?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01227/#15170
+language: en
+date: ''
+description: A question about how much a borrower should repay when the market value of the borrowed amount
+  has fallen, and whether it differs if the creditor is non-Muslim.
+sample_questions:
+- How much do I repay if money loses value?
+- Do I repay the same amount I borrowed?
+- Does inflation change a loan repayment?
+headings:
+- transactions-work
+access: free
+location: Investment, question 2
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

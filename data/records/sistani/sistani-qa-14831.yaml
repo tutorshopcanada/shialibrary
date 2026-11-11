@@ -1,0 +1,27 @@
+id: sistani-qa-14831
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qaza-prayers-and-fasts
+level: intermediate
+title: What are the areas where both Qaza of fast and Kaffarah become obligatory?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01297/#14831
+language: en
+date: ''
+description: A question asking in which cases both qaza of a fast and kaffarah (an expiation) become obligatory.
+sample_questions:
+- When do I need qaza and kaffarah?
+- What is kaffarah for fasting?
+- What cases need both?
+headings:
+- fasting
+access: free
+location: Qaza Prayers and Fasts, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

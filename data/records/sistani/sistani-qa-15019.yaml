@@ -4,7 +4,7 @@ content_tag: fiqh
 granularity: item
 parent: sistani-qa-khums
 level: intermediate
-title: Some governments are committed to providing housing for the needy under specific circumstances....
+title: Some governments are committed to providing housing for the needy under specific circumstances...
 title_original: ''
 authors:
 - sistani
@@ -13,8 +13,8 @@ source: sistani.org
 url: https://www.sistani.org/english/qa/01234/#15019
 language: en
 date: ''
-description: A question about government housing support for the needy, asking whether a Muslim can buy
-  a house, live in it briefly, and then rent it out to avoid khums while moving to subsidised housing.
+description: A question about whether a Muslim who buys a house, lives in it briefly and then rents it
+  out, while moving to government-subsidised housing, owes khums on it.
 sample_questions:
 - Can I avoid paying khums by buying a house?
 - Is khums due on a house I live in for a short time?
@@ -24,7 +24,7 @@ headings:
 - khums-zakat
 access: free
 location: Khums, question 2
-needs_review: true
+needs_review: false
 review_note: Question's intent is unclear and may be read as asking about avoiding a payment; reviewer
   should confirm the wording.
 cataloged_on: '2026-11-10'

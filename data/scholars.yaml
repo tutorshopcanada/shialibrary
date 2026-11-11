@@ -357,3 +357,697 @@ scholars:
     alt_names: []
     notes: "Named as author of Al-Hadith, Analysis and an Overview on https://al-islam.org/articles/al-hadith-analysis-and-overview-hashim (read 2026-11-10)."
     needs_review: true
+
+  - id: jafar-subhani
+    name: "Ja'far Subhani"
+    role: author
+    alt_names:
+      - "Ayatullah Ja'far Subhani"
+    notes: "Named as author on https://al-islam.org/introduction-science-tafsir-quran-jafar-subhani (read 2026-11-10); translator Saleem Bhimji."
+    needs_review: true
+
+  - id: badr-shahin
+    name: "Badr Shahin"
+    role: author
+    alt_names: []
+    notes: "Named as compiler on https://al-islam.org/lady-zaynab-badr-shahin (read 2026-11-10)."
+    needs_review: true
+
+  - id: baqir-sharif-al-qurashi
+    name: "Baqir Sharif al-Qurashi"
+    role: author
+    alt_names:
+      - "Baqir Shareef al-Qurashi"
+      - "Shaykh Baqir Sharif al-Qarashi"
+    notes: "Named as author on https://al-islam.org/life-imam-jafar-al-sadiq-baqir-shareef-al-qurashi (read 2026-11-10); translator M. Majid Asadi."
+    needs_review: true
+
+  - id: ahmed-ali-khan
+    name: "Ahmed Ali Khan"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/what-ashoora-ahmed-ali-khan (read 2026-11-10)."
+    needs_review: true
+
+  - id: musavi-lari
+    name: "Sayyid Mujtaba Musavi Lari"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/ethics-and-spiritual-growth-sayyid-mujtaba-musavi-lari (read 2026-11-10); translator Ali Quli Qara'i."
+    needs_review: true
+
+  - id: tawhid-institute
+    name: "Tawhid Institute"
+    role: author
+    alt_names: []
+    notes: "An organization listed as author of Stories of The Prophets on https://al-islam.org/stories-prophets (read 2026-11-10); editor Celia S. Ebrahimi, illustrator Charles Crowson."
+    needs_review: true
+
+  - id: ali-shariati
+    name: "Ali Shariati"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/and-once-again-abu-dharr-ali-shariati (read 2026-11-10)."
+    needs_review: true
+
+  - id: husein-rahim
+    name: "Husein A. Rahim"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/dua-kumayl-translation-commentary-husein-rahim (read 2026-11-10)."
+    needs_review: true
+
+  - id: tahera-kassamali
+    name: "Tahera Kassamali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/raising-children-tahera-kassamali (read 2026-11-10)."
+    needs_review: true
+
+  - id: mir-ahmed-ali-khan
+    name: "Mir Ahmed Ali Khan"
+    role: author
+    alt_names: []
+    notes: "Credited as 'Contributed by' on https://al-islam.org/articles/brief-introduction-islam (read 2026-11-10); may be the contributor, not the original author."
+    needs_review: true
+
+  - id: imam-zayn-al-abidin
+    name: "Imam Ali Zayn al-Abidin"
+    role: author
+    alt_names:
+      - "Imam Ali Ibn Hussein (as)"
+    notes: "Named as author of the Sahifa extracts on https://al-islam.org/15-whispered-prayers-sahifa-al-kamila-sajjadiyyah (read 2026-11-10)."
+    needs_review: true
+
+  # ── Added during the al-islam.org articles batch (2026-11-10). Names and spellings are only
+  # those shown on the fetched article pages. Not yet reviewed.
+  - id: ahlul-bayt-dilp
+    name: "Ahlul Bayt Digital Islamic Library Project (DILP)"
+    role: author
+    alt_names: []
+    notes: "Listed as author and compiler organization on https://al-islam.org/articles/diseases-soul-anger (read 2026-11-10). An organization, not a person."
+    needs_review: true
+
+  - id: kathy-kooshesh
+    name: "Kathy (Ma'asumeh) Kooshesh"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/my-story-kathy-maasumeh-kooshesh (read 2026-11-10)."
+    needs_review: true
+
+  - id: diana-beatty
+    name: "Diana Masooma Beatty"
+    role: author
+    alt_names:
+      - "Diana Beatty"
+    notes: "Named as author on https://al-islam.org/articles/how-i-became-muslim-diana-masooma-beatty (read 2026-11-10); the page text is signed 'Diana Beatty'."
+    needs_review: true
+
+  - id: muhammad-legenhausen
+    name: "Muhammad Legenhausen"
+    role: author
+    alt_names:
+      - "Hajj Muhammad Legenhausen"
+    notes: "Named as author on https://al-islam.org/articles/arbaeen-reflecting-upon-imams-stand-muhammad-legenhausen (read 2026-11-10)."
+    needs_review: true
+
+  - id: salim-yusufali
+    name: "Salim S. Yusufali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/how-make-most-ziyarah-ahlul-bayt-salim-s-yusufali (read 2026-11-10)."
+    needs_review: true
+
+  - id: yusuf-fadhl
+    name: "Yusuf Fadhl"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/living-miracle-yusuf-fadhl (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-baqir-majlisi
+    name: "Muhammad Baqir al-Majlisi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/sun-behind-clouds-muhammad-baqir-majlisi (read 2026-11-10); translator Afzal Sumar. The page cites Bihar al-Anwar, vol. 52."
+    needs_review: true
+
+  - id: hanieh-tarkian
+    name: "Hanieh Tarkian"
+    role: author
+    alt_names: []
+    notes: "Named as author ('Sister Hanieh Tarkian') on https://al-islam.org/articles/critical-role-women-karbala-hanieh-tarkian (read 2026-11-10)."
+    needs_review: true
+
+  - id: syed-ali-imran
+    name: "Syed Ali Imran"
+    role: author
+    alt_names:
+      - "Sayyid Ali"
+    notes: "Named as author on https://al-islam.org/articles/obedience-intellection-religion-syed-ali-imran and https://al-islam.org/articles/army-imam-al-hasan-ibn-ali-syed-ali-imran (read 2026-11-10); the first page's byline reads 'by Sayyid Ali'."
+    needs_review: true
+
+  - id: syed-ali-abbass-abdullah-shirazi
+    name: "Syed Ali Abbass Abdullah Shirazi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/fatima-al-zahra-uncovering-resistance-7th-century-syed-ali-abbass-abdullah-shirazi (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayed-jamaluddin-hejazi
+    name: "Sayed Jamaluddin Hejazi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/pursuance-sun-sayed-jamaluddin-hejazi (read 2026-11-10)."
+    needs_review: true
+
+  - id: mirza-jawad-maliki-tabrizi
+    name: "Mirza Jawad Maliki Tabrizi"
+    role: author
+    alt_names:
+      - "Ayatullah Mirza Jawad Tabrizi"
+      - "Mirza Jawad Malaki Tabrizi"
+    notes: >
+      Named as author on https://al-islam.org/articles/concise-treatise-authentic-traditions-regarding-right-divine-leadership-imamate-twelve
+      and https://al-islam.org/articles/greatness-15th-month-shaban-mirza-jawad-maliki-tabrizi (read 2026-11-10).
+      "Ayatullah Mirza Jawad Tabrizi" appears in the first page's URL; "Malaki" appears in the second page's body text.
+    needs_review: true
+
+  - id: yasin-t-al-jibouri
+    name: "Yasin T. Al-Jibouri"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/ghadir-khumm-one-islamic-historys-best-kept-secrets-yasin-t-al-jibouri (read 2026-11-10)."
+    needs_review: true
+
+  - id: hasnain-mohamedali
+    name: "Hasnain Mohamedali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/imam-jafar-al-sadiqs-contribution-sciences-hasnain-mohamedali (read 2026-11-10); the page says the article is extracts from a translated book."
+    needs_review: true
+
+  - id: ali-reza-wasii
+    name: "Sayyid 'Ali Reza Wasi'i"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/causes-enmity-imam-ali-light-nahjul-balaghah-sayyid-ali-reza-wasii (read 2026-11-10); translated by Sayyid 'Ali Shahbaz."
+    needs_review: true
+
+  - id: ali-naqi-naqvi
+    name: "Sayyid Ali Naqi Naqvi"
+    role: author
+    alt_names:
+      - "Ali Naqi-un-Naqvi"
+    notes: "Named as author on https://al-islam.org/articles/preface-nahjul-balaghah-sayyid-ali-naqi-naqvi (read 2026-11-10); the heading gives 'Sayyid Ali Naqi Naqvi' and the preface is signed 'Ali Naqi-un-Naqvi'."
+    needs_review: true
+
+  - id: wahid-akhtar
+    name: "Sayyid Wahid Akhtar"
+    role: author
+    alt_names:
+      - "Prof. Waheed Akhtar"
+    notes: "Named as author on https://al-islam.org/articles/concept-freedom-nahjul-balaghah-sayyid-wahid-akhtar (read 2026-11-10); page metadata says 'Sayyid Wahid Akhtar', the body byline 'Prof. Waheed Akhtar'. Not assumed to be the same person as Sayyid Saeed Akhtar Rizvi."
+    needs_review: true
+
+  - id: mahdi-jafari
+    name: "Sayyid Muhammad Mahdi Ja'fari"
+    role: author
+    alt_names:
+      - "Dr. Sayyid Muhammad Mahdi Ja'fari"
+    notes: "Named as author on https://al-islam.org/articles/sayyid-razi-life-and-work-sayyid-muhammad-mahdi-jafari (read 2026-11-10); translated by Mahdi Chamanzar."
+    needs_review: true
+
+  - id: adil-haider
+    name: "Adil Haider"
+    role: author
+    alt_names: []
+    notes: "Named as compiler ('Complied by Adil Haider') on https://al-islam.org/articles/governance-model-imam-ali-quick-glance-adil-haider (read 2026-11-10)."
+    needs_review: true
+
+  - id: nihad-al-fayyad
+    name: "Nihad al-Fayyad"
+    role: author
+    alt_names:
+      - "Shaykh Nihād al-Fayyāḍ"
+    notes: "Named as author on https://al-islam.org/articles/immunity-prophets-imams-physical-deficiencies-nihad-al-fayyad (read 2026-11-10); translated by Amir Al-Zabidi."
+    needs_review: true
+
+  - id: bashir-hassanali-rahim
+    name: "Bashir Hassanali Rahim"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/history-and-philosophy-aza-imam-husayn-bashir-hassanali-rahim (read 2026-11-10)."
+    needs_review: true
+
+  - id: farhat-fatima
+    name: "Syeda Farhat Fatima"
+    role: author
+    alt_names:
+      - "Dr. Farhat Fatima"
+    notes: "Named as author on https://al-islam.org/articles/allahs-bounty-baqiyatullah-syeda-farhat-fatima (read 2026-11-10); the byline reads 'By Dr. Farhat Fatima'."
+    needs_review: true
+
+  - id: muhammad-rida-hakimi
+    name: "Muhammad Rida Hakimi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/ashura-tenth-muharram-muhammad-rida-hakimi (read 2026-11-10); the page also shows the name Hasan Muhammad Al-Najafi without stating his role."
+    needs_review: true
+
+  - id: abbas-ali-shameli
+    name: "Abbas Ali Shameli"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/engendered-islamic-culture-development-abbas-ali-shameli (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-taqi-jafari
+    name: "Muhammad Taqi Ja'fari"
+    role: author
+    alt_names:
+      - "Allamah Muhammad Taqi Ja'fari"
+    notes: "Named as author on https://al-islam.org/articles/essence-evolutionary-culture-muhammad-taqi-jafari (read 2026-11-10); the page header gives 'Muhammad Taqi Ja'fari' and the byline 'Allamah Muhammad Taqi Ja'fari'."
+    needs_review: true
+
+  - id: askari-hussain
+    name: "Askari Hussain"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/holy-month-ramadhan-brief-poem-askari-hussain (read 2026-11-10); the page describes him as a student in the 2nd grade of an Islamic school and says it was contributed by Shaheen Khan."
+    needs_review: true
+
+  - id: zeeshan-haider-jawadi
+    name: "Syed Zeeshan Haider Jawadi"
+    role: author
+    alt_names:
+      - "Allama Zeeshan Haider Jawadi"
+    notes: "Named as author on https://al-islam.org/articles/importance-dua-islam-and-method-supplicating-syed-zeeshan-haider-jawadi (read 2026-11-10); the page calls the text an extract from Nuqoosh Ismat."
+    needs_review: true
+
+  - id: mehdi-golshani
+    name: "Mehdi Golshani"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/modern-science-and-challenges-some-islamic-theological-doctrines-mehdi-golshani (read 2026-11-10)."
+    needs_review: true
+
+  - id: fatemah-meghji
+    name: "Fatemah Meghji"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/opening-our-eyes-light-quran-fatemah-meghji (read 2026-11-10); the page says it was originally published in Al-Sidrah."
+    needs_review: true
+
+  - id: abd-al-husayn-amini
+    name: "Abd Al-Husayn Amini"
+    role: author
+    alt_names:
+      - "al-'Allama al-Sheikh Abd al-Husayn Amini"
+    notes: "Named as author on https://al-islam.org/articles/our-husayn-mourning-him-and-his-karbala-abd-al-husayn-amini (read 2026-11-10); translated by Shaun Astarabadi. Not assumed to be the same person as Ibrahim Amini."
+    needs_review: true
+
+  - id: mohsin-jaffery
+    name: "Mohsin Jaffery"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/satan-angel-or-not-grammatical-analysis-quran-7-11-mohsin-jaffery (read 2026-11-10)."
+    needs_review: true
+
+  - id: saleem-bhimji
+    name: "Saleem Bhimji"
+    role: author
+    alt_names:
+      - "Shaikh Saleem Bhimji"
+    notes: "Named as author on https://al-islam.org/articles/spiritual-fitness-saleem-bhimji and https://al-islam.org/articles/spiritual-migration-saleem-bhimji (read 2026-11-10); the article text gives 'Shaikh Saleem Bhimji'."
+    needs_review: true
+
+  - id: yasser-al-madani
+    name: "Sayyid Yasser al-Madani"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/plea-islamic-unity-yasser-madani (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-yusuf
+    name: "Muhammad Yusuf"
+    role: author
+    alt_names:
+      - "Brother Muhammad Yusuf"
+    notes: "Named as author on https://al-islam.org/articles/how-i-found-right-path-muhammad-yusuf (read 2026-11-10)."
+    needs_review: true
+
+  - id: sachiko-murata
+    name: "Sachiko Murata"
+    role: author
+    alt_names: []
+    notes: "Named as co-author on https://al-islam.org/articles/koran-sachiko-murata-william-c-chittick (read 2026-11-10)."
+    needs_review: true
+
+  - id: william-c-chittick
+    name: "William C. Chittick"
+    role: author
+    alt_names: []
+    notes: "Named as co-author on https://al-islam.org/articles/koran-sachiko-murata-william-c-chittick (read 2026-11-10)."
+    needs_review: true
+
+  - id: mahwash-hirmendi
+    name: "Mahwash Hirmendi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/soldier-allah-mahwash-hirmendi and https://al-islam.org/articles/prayer-mother-mahwash-hirmendi (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayeeda-abid-ali
+    name: "Sayeeda Abid Ali"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/ahlul-bayt-sayeeda-abid-ali (read 2026-11-10)."
+    needs_review: true
+
+  - id: kazem-mirjalili
+    name: "Seyyed Kazem MirJalili"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-10-no-4-winter-2010/imam-ali-herald-unity-1-kazem-mirjalili (read 2026-11-10)."
+    needs_review: true
+
+  - id: ali-aqa-nuri
+    name: "Ali Aqa-Nuri"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/al-taqrib/number-6-march-2010/shia-imams-and-muslim-unity-part-1-ali-aqa-nuri (read 2026-11-10)."
+    needs_review: true
+
+  - id: zahra-kashaniha
+    name: "Zahra Kashaniha"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-12-no-2-summer-2011/lady-mary-role-model-quran-and-bible-zahra-kashaniha (read 2026-11-10)."
+    needs_review: true
+
+  - id: arifa-hudda
+    name: "Arifa Hudda"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-14-no-2-summer-2013/forgiveness-munajat-shabaniyyah-arifa-hudda (read 2026-11-10)."
+    needs_review: true
+
+  - id: alireza-maktabdar
+    name: "AliReza Maktabdar"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Good-Naturedness in Islam: Its Signs and Effects' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: marzieh-sadeqi
+    name: "Marzieh Sadeqi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Justice as a Virtue of the Soul' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: mohammad-rasoul-ahangaran
+    name: "Mohammad Rasoul Ahangaran"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Boundless Peace and Friendship in the Qur'an' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: mohammad-hossein-faryab
+    name: "Mohammad Hossein Faryab"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'The Status of Knowledge in Islam' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: rasoul-imani-khoshkhu
+    name: "Rasoul Imani Khoshkhu"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Introduction to Islamic Sciences, Part 1' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: abdullah-jawadi-amuli
+    name: "Abdullah Jawadi Amuli"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Elements of Unity' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-shabdini-pashaki
+    name: "Muhammad Shabdini Pashaki"
+    role: author
+    alt_names: []
+    notes: "Labeled author of 'From Medina to Sham: Lady Zaynab's Commitment to Wilayah' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-mahdi-mahrizi
+    name: "Muhammad Mahdi Mahrizi"
+    role: author
+    alt_names:
+      - "Mahdi Mahrizi"
+    notes: "Named as author of 'Compilation of Imam Ali's Words and the Classification of Nahj al-Balaghah' on al-islam.org (read 2026-11-10); the page names Mahdi Chamanzar as translator."
+    needs_review: true
+
+  - id: afzal-sumar
+    name: "Afzal Sumar"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'The Formation of the Ja'fari Shi'a Islamic School of Law from its Inception to the Occultation' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayyid-sadiq-husayni-tashi
+    name: "Sayyid Sadiq Sayyid Husayni Tashi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'The Practice of the Holy Prophet (S) and Muslim Leaders in Dealing with Ideological Opponents' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: abd-al-karim-bi-azar-shirazi
+    name: "Abd al-Karim Bi-Azar Shirazi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Majma' al-Bayan: Bridging Enclaves of Knowledge' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-waidh-zadeh-khurasani
+    name: "Muhammad Wa'idh Zadeh Khurasani"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Types of Unity in the Qur'an and Fundamental Causes of Disunity' on al-islam.org (read 2026-11-10); translators named there are Salim S. Yusufali and Shaista K. Yusufali."
+    needs_review: true
+
+  - id: muhammad-al-asi
+    name: "Muhammad al-'Asi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Some Thoughts on the Road to Islamic Solidarity' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: reza-shah-kazemi
+    name: "Reza Shah-Kazemi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Civilizational Dialogue And Mysticism' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-rahim-iwazi
+    name: "Muhammad Rahim Iwazi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Imam Khumayni's Vision of Islamic Unity' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: nasir-shamsi
+    name: "Nasir Shamsi"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Holy Quran, Some Basic Facts on https://al-islam.org/holy-quran-some-basic-facts-nasir-shamsi (read 2026-11-11)."
+    needs_review: true
+
+  - id: association-of-imam-mahdi
+    name: "Association of Imam Mahdi"
+    role: author
+    alt_names: []
+    notes: "An organization named as author of The Last Luminary and Adolescence: A Period of Examination and Success on al-islam.org (read 2026-11-11)."
+    needs_review: true
+
+  - id: kubra-jafri
+    name: "Kubra Jafri"
+    role: author
+    alt_names: []
+    notes: "Named as author of Stories of Bahlool on https://al-islam.org/stories-bahlool (read 2026-11-11)."
+    needs_review: true
+
+  - id: najafi-quchani
+    name: "Hujjatul Islam Najafi Quchani"
+    role: author
+    alt_names: []
+    notes: "Named as author of Journey to the Unseen World on https://al-islam.org/journey-unseen-world-hujjatul-islam-najafi-quchani (read 2026-11-11)."
+    needs_review: true
+
+  - id: bahram-samii
+    name: "Bahram Samii"
+    role: author
+    alt_names: []
+    notes: "Named as author of An Introduction to the Glorious Quran on https://al-islam.org/introduction-glorious-quran-bahram-samii (read 2026-11-11)."
+    needs_review: true
+
+  - id: ali-al-husayni-al-milani
+    name: "Sayyid Ali al-Husayni al-Milani"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Promised Savior on https://al-islam.org/promised-savior-inquiry-imamate-imam-mahdi-viewpoint-muslim-thinkers-al-milani (read 2026-11-11). Not assumed to be the same person as Sayyid Fadhil Milani."
+    needs_review: true
+
+  - id: mohammad-mehdi-taj-langaroodi
+    name: "Mohammad Mehdi Taj Langaroodi"
+    role: author
+    alt_names: []
+    notes: "Named as author of Morals for Children and Young on https://al-islam.org/morals-children-and-young-mohammad-mehdi-taj-langaroodi (read 2026-11-11)."
+    needs_review: true
+
+  - id: sayyid-muhammad-sohofi
+    name: "Sayyid Muhammad Sohofi"
+    role: author
+    alt_names: []
+    notes: "Named as compiler of The Status of Mothers in Islam on https://al-islam.org/status-mothers-islam-sayyid-muhammad-sohofi (read 2026-11-11)."
+    needs_review: true
+
+  - id: kamal-al-sayyid
+    name: "Kamal al-Sayyid"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/maytham-al-tammar-kamal-al-sayyid (read 2026-11-11)."
+    needs_review: true
+
+  - id: liaket-dewji
+    name: "Liaket Dewji"
+    role: author
+    alt_names: []
+    notes: "Named as author of Tears For Karbala on https://al-islam.org/tears-karbala-liakat-dewji (read 2026-11-11); the page spells the name Liaket Dewji."
+    needs_review: true
+
+  - id: alireza-mirza-muhammad
+    name: "Alireza Mirza Muhammad"
+    role: author
+    alt_names: 
+      - "Alireza Mirza Mohammad"
+    notes: "Named as author of Lapidation on https://al-islam.org/lapidation-alireza-mirza-muhammad (read 2026-11-11)."
+    needs_review: true
+
+  - id: seyyed-ali-akbar-moosavi-hosseini
+    name: "Seyyed Ali Akbar Moosavi Hosseini"
+    role: author
+    alt_names: []
+    notes: "Named as author of Islamic Culture and Religious Education (For pupils) on https://al-islam.org/islamic-culture-and-religious-education-pupils-seyyed-ali-akbar-moosavi-hosseini (read 2026-11-11)."
+    needs_review: true
+
+  - id: sadeq-musavi-garmaroodi
+    name: "Sadeq Musavi Garmaroodi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/gardener-gardens-tawheed-sadeq-musavi-garmaroodi (read 2026-11-11)."
+    needs_review: true
+
+  - id: soroor-kotobi
+    name: "Soroor Kotobi"
+    role: author
+    alt_names: []
+    notes: "Named as author of A Gift from Heaven on https://al-islam.org/gift-heaven-soroor-kotobi (read 2026-11-11)."
+    needs_review: true
+
+  - id: seyed-sadraddin-jazayeri
+    name: "Seyed Sadraddin Jazayeri"
+    role: author
+    alt_names: []
+    notes: "Named as one of three authors of Once Upon a Time There Was No Other Than God on https://al-islam.org/once-upon-time-there-was-no-other-god (read 2026-11-11)."
+    needs_review: true
+
+  - id: mahdi-gayeni
+    name: "Mahdi Gayeni"
+    role: author
+    alt_names: []
+    notes: "Named as one of three authors of Once Upon a Time There Was No Other Than God on https://al-islam.org/once-upon-time-there-was-no-other-god (read 2026-11-11)."
+    needs_review: true
+
+  - id: husayn-raiis
+    name: "Husayn Raiis"
+    role: author
+    alt_names: []
+    notes: "Named as one of three authors of Once Upon a Time There Was No Other Than God on https://al-islam.org/once-upon-time-there-was-no-other-god (read 2026-11-11)."
+    needs_review: true
+
+  - id: ahlul-bayt-world-assembly
+    name: "Ahlul Bayt World Assembly"
+    role: author
+    alt_names: []
+    notes: "Listed as author (an organization) of Nahj al-Balaghah for Children on https://al-islam.org/nahj-al-balaghah-children (read 2026-11-11)."
+    needs_review: true
+
+  - id: muhammad-baqir-al-sadr
+    name: "Sayyid Muhammad Baqir al-Sadr"
+    role: author
+    alt_names:
+      - "Martyr Sayyid Muhammad Baqir as-Sadr"
+    notes: "Named as author of An Inquiry Concerning Al-Mahdi on https://al-islam.org/inquiry-concerning-al-mahdi-sayyid-muhammad-baqir-al-sadr and co-author of The Awaited Saviour (read 2026-11-11)."
+    needs_review: true
+
+  - id: ruhullah-khomeini
+    name: "Sayyid Ruhullah Musawi Khomeini"
+    role: author
+    alt_names:
+      - "Al-Khomeini, Ruhullah al-Musawi"
+      - "Ayatullah Ruhullah Khumayni"
+    notes: "Named as author of Forty Hadith, An Exposition on https://al-islam.org/forty-hadith-exposition-second-revised-edition-sayyid-ruhullah-musawi-khomeini (read 2026-11-11). Not assumed to be the same entry as the Imam Khumayni mentioned in other records."
+    needs_review: true
+
+  - id: muhammad-ali-chenarani
+    name: "Muhammad Ali Chenarani"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Prophet's Attitude towards Children and Youth on https://al-islam.org/prophets-attitude-towards-children-and-youth-muhammad-ali-chenarani (read 2026-11-11)."
+    needs_review: true
+
+  - id: mahnaz-heydarpoor
+    name: "Mahnaz Heydarpoor"
+    role: author
+    alt_names: []
+    notes: "Named as author of Perspectives on the Concept of Love in Islam on https://al-islam.org/perspectives-concept-love-islam-mahnaz-heydarpoor (read 2026-11-11)."
+    needs_review: true
+
+  - id: peermohammad-ebrahim-trust
+    name: "Peermohammad Ebrahim Trust"
+    role: author
+    alt_names: []
+    notes: "Listed as author (a trust) of Backbiting on https://al-islam.org/backbiting-peermohammad-ebrahim-trust (read 2026-11-11)."
+    needs_review: true
+
+  - id: sayyid-hasan-islami
+    name: "Sayyid Hasan Islami"
+    role: author
+    alt_names: []
+    notes: "Named as author of Imam Khomeini, Ethics and Politics on https://al-islam.org/imam-khomeini-ethics-and-politics-sayyid-hasan-islami (read 2026-11-11)."
+    needs_review: true
+
+  - id: muhammad-ridha-al-muzaffar
+    name: "Muhammad Ridha al-Muzaffar"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Faith of the Imamiyyah Shi'ah on https://al-islam.org/faith-imamiyyah-shiah-muhammad-ridha-al-muzaffar (read 2026-11-11)."
+    needs_review: true
+
+  - id: shahnaz-yousofi
+    name: "Shahnaz Yousofi"
+    role: author
+    alt_names: []
+    notes: "Named as co-author of The Concept of Abrogation (Naskh) in the Holy Qur'an on https://al-islam.org/concept-abrogation-naskh-holy-quran-abbas-ali-shameli-shahnaz-yousofi (read 2026-11-11)."
+    needs_review: true
+
+  - id: abbas-qummi
+    name: "Shaykh 'Abbas Qummi"
+    role: author
+    alt_names: []
+    notes: "Named as author of House of Sorrows on https://al-islam.org/house-sorrows-life-sayyidah-fatimah-al-zahra-and-her-grief-shaykh-abbas-qummi (read 2026-11-11)."
+    needs_review: true

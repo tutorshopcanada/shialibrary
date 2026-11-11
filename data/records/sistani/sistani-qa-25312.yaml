@@ -1,0 +1,27 @@
+id: sistani-qa-25312
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fish
+level: intermediate
+title: Is shellfish Halal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01184/#25312
+language: en
+date: ''
+description: A question asking whether shellfish is halal (lawful) to eat.
+sample_questions:
+- Is shellfish halal?
+- Can Shias eat shrimp?
+- Is seafood halal for Shias?
+headings:
+- food-drink
+access: free
+location: Fish, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

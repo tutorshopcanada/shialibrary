@@ -1,0 +1,29 @@
+id: sistani-qa-14967
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-rules-of-say
+level: intermediate
+title: Regarding the present Sa'y, is it sufficient (valid) to perform Sa'y in it, knowing that entry
+  to perform Sa'y in the previous Masa'a is prohibited?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01306/#14967
+language: en
+date: ''
+description: A question about performing sa'y in the present sa'y area, given that entry to the previous
+  masa'a (sa'y hall) is prohibited.
+sample_questions:
+- Can I do sa'y in the new area?
+- What if the old sa'y area is closed?
+- Is the new masa'a accepted?
+headings:
+- hajj
+access: free
+location: Rules of Sa'y, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

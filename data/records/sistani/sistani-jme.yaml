@@ -1,0 +1,37 @@
+id: sistani-jme
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: beginner
+title: Jurisprudence Made Easy
+title_original: al-Fatawa al-Muyyessarah
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/49/
+language: en
+date: ''
+description: A simplified guide to everyday Islamic rulings (fiqh) written for ordinary readers, following
+  the views of Sayyid Ali al-Sistani. It is set out as conversations between a father and his teenage
+  son on topics such as prayer, fasting, Hajj, khums (a religious payment), trade, marriage and inheritance.
+sample_questions:
+- Is there an easy, beginner-friendly book of Islamic rulings?
+- Where can I read Sayyid Sistani's rulings in simple language?
+- Is there a book that explains fiqh as a conversation?
+- Where can I learn the basics of prayer, fasting and Hajj rules?
+- What is an introductory book of Shia jurisprudence for ordinary people?
+headings:
+- fiqh
+- taqlid
+access: free
+location: ''
+needs_review: false
+review_note: 'Level: Author''s Preface says the book uses simple, familiar language for the laity and
+  the up-and-coming generation, so beginner was chosen; reviewer to confirm. Author (Abdul Hadi Mohammad
+  Taqi al-Hakim, per the Preface to the English edition, https://www.sistani.org/english/book/49/2390/)
+  matched to scholars.yaml id abdul-hadi-al-hakim; the Arabic-edition introduction (https://www.sistani.org/english/book/49/2391/)
+  says this edition was checked by Sayyid Sistani''s office to conform to his edicts, hence marja: sistani.
+  title_original is the transliterated Arabic title given in the Preface.'
+cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-laws-2218
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: RULES OF QIBLA
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2218/
+language: en
+date: ''
+description: 'Rules of qibla (the direction of the Kaaba in Mecca): facing it in standing, sitting and
+  lying positions, and related cases.'
+sample_questions:
+- How do I know the qibla direction?
+- Which direction do I face for prayer?
+- How do I face qibla if I cannot sit up?
+- What if I'm unsure of the qibla?
+- What is qibla?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

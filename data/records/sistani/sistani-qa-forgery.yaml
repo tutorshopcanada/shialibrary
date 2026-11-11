@@ -1,0 +1,29 @@
+id: sistani-qa-forgery
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Forgery
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01192/
+language: en
+date: ''
+description: A topic page with one question and answer about forging documents in a non-Muslim country.
+sample_questions:
+- Can I forge a document?
+- Is forgery okay in a non-Muslim country?
+- What does Islam say about fake documents?
+- Can I falsify papers for immigration?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: 'Q&A topic: Forgery'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

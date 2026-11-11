@@ -1,0 +1,30 @@
+id: sistani-qa-26119
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hajj-ability
+level: intermediate
+title: If the exam schedule for a student conflicts with the timing of the hajj, is it permissible for
+  him to postpone the hajj that year especially if the exam was very important for him?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02763/#26119
+language: en
+date: ''
+description: A question about whether a student whose important exam clashes with the timing of hajj can
+  postpone hajj that year. A near-identical question (slightly different wording) appears under Hajj -
+  Pilgrimage with a different id.
+sample_questions:
+- Can I delay hajj for an exam?
+- Can a student postpone hajj?
+- Exams or hajj, which first?
+headings:
+- hajj
+access: free
+location: Hajj - Ability, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

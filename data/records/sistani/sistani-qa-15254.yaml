@@ -1,0 +1,30 @@
+id: sistani-qa-15254
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hajj-ihram
+level: intermediate
+title: Is it permissible to put on the ihrãm for hajj from the city of Jeddah? If it is not permissible,
+  what should one do since the plane lands in Jeddah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01222/#15254
+language: en
+date: ''
+description: A question about putting on ihram (the pilgrim's sacred state and dress) for hajj from Jeddah,
+  and what to do since the plane lands there. The same question text appears under Hajj - Pilgrimage with
+  another id.
+sample_questions:
+- Can I enter ihram in Jeddah?
+- Where do I put on ihram when flying?
+- What if my plane lands in Jeddah?
+headings:
+- hajj
+access: free
+location: Hajj - Ihram, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

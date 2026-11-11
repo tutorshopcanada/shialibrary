@@ -1,0 +1,30 @@
+id: sistani-qa-films-and-movies
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Films and movies
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01195/
+language: en
+date: ''
+description: A topic page of questions and answers about watching films, movies and drama series. Questions
+  cover content with sexual themes, actresses who do not wear scarves, and series that promote relationships
+  outside marriage.
+sample_questions:
+- Can Shias watch movies?
+- Can I watch TV dramas?
+- What films should I avoid?
+- Can I watch shows where women don't wear hijab?
+headings:
+- music-entertainment
+access: free
+location: 'Q&A topic: Films and movies'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

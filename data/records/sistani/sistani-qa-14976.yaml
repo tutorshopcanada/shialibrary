@@ -1,0 +1,28 @@
+id: sistani-qa-14976
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qurbani-animal-sacrifice
+level: intermediate
+title: What are the recommended rulings for Eid Adha Qurbani (animal sacrifice)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02825/#14976
+language: en
+date: ''
+description: A question asking about the recommended rulings for Eid al-Adha qurbani (animal sacrifice).
+sample_questions:
+- What is qurbani?
+- How do I do qurbani on Eid?
+- What is recommended for animal sacrifice?
+headings:
+- hajj
+- food-drink
+access: free
+location: Qurbani - Animal Sacrifice, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

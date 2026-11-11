@@ -1,0 +1,28 @@
+id: sistani-qa-26296
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-horse-riding
+level: intermediate
+title: Is it permissible for a female to ride a horse?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01211/#26296
+language: en
+date: ''
+description: A question asking whether a woman may ride a horse.
+sample_questions:
+- Can women ride horses?
+- Can a girl go horse riding?
+- Is horse riding okay for women?
+headings:
+- youth-rulings
+- women-rulings
+access: free
+location: Horse Riding, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

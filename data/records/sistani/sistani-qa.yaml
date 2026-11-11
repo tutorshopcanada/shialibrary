@@ -25,7 +25,8 @@ headings:
 - fiqh
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: 'Level: the pages do not state an audience. Questions are short and plainly worded, so intermediate
-  was chosen for this area; reviewer to confirm. The index listed about 175 topics on 2026-11-10; they are being cataloged in batches (see progress/done-sistani.txt).'
+  was chosen for this area; reviewer to confirm. The index listed about 175 topics on 2026-11-10; they
+  are being cataloged in batches (see progress/done-sistani.txt).'
 cataloged_on: '2026-11-10'

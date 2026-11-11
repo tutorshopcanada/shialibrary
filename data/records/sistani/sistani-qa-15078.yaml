@@ -1,0 +1,27 @@
+id: sistani-qa-15078
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: Is it permissible for a person infected with AIDS to marry a person who is free from it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15078
+language: en
+date: ''
+description: A question about whether a person infected with AIDS can marry someone free of it.
+sample_questions:
+- Can an AIDS patient marry?
+- Must a healthy person be told before marriage?
+- What is said about marriage and illness?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 9
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

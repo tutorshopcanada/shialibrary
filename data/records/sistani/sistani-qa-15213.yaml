@@ -1,0 +1,27 @@
+id: sistani-qa-15213
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-identifying-the-most-learned-mujtahid
+level: intermediate
+title: What does Taqlid mean in religious laws?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01219/#15213
+language: en
+date: ''
+description: A question asking what taqlid (following a qualified jurist in religious law) means.
+sample_questions:
+- What is taqlid?
+- What does it mean to follow a marja'?
+- Why do Shias follow a mujtahid?
+headings:
+- taqlid
+access: free
+location: Identifying the Most Learned Mujtahid, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

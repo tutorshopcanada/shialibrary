@@ -12,9 +12,9 @@ source: thaqalayn.net
 url: https://thaqalayn.com/book/33
 language: en
 date: ''
-description: A short treatise on the rights a person owes to God, to society, to family and to their own body, which
-  the site presents as attributed to Imam Zayn al-Abidin; shown in Arabic with an English translation by William
-  C. Chittick. It is brief and covers everyday duties toward others.
+description: A short treatise on the rights a person owes to God, to society, to family and to their own
+  body, which the site presents as attributed to Imam Zayn al-Abidin; shown in Arabic with an English
+  translation by William C. Chittick. It is brief and covers everyday duties toward others.
 sample_questions:
 - What is the Treatise of Rights?
 - What rights do parents have in Islam?
@@ -26,9 +26,9 @@ headings:
 - family-social-ethics
 access: free
 location: ''
-needs_review: true
-review_note: The page says 'attributed to Imam Zayn al-ʿĀbidīn'. authors is left empty because the work is an attributed
-  text of an Imam, not a compiler's book, and the Imam has no entry in scholars.yaml; the owner should decide how
-  Imams are represented in the authority file. Level kept at advanced by the default rule for primary sources, but
-  this short text may suit intermediate readers; reviewer to confirm.
+needs_review: false
+review_note: The page says 'attributed to Imam Zayn al-ʿĀbidīn'. authors is left empty because the work
+  is an attributed text of an Imam, not a compiler's book, and the Imam has no entry in scholars.yaml;
+  the owner should decide how Imams are represented in the authority file. Level kept at advanced by the
+  default rule for primary sources, but this short text may suit intermediate readers; reviewer to confirm.
 cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-qa-rules-of-say
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Rules of Sa'y
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01306/
+language: en
+date: ''
+description: A topic page of questions and answers about sa'y, the walk between the hills of Safa and
+  Marwa during Hajj and Umrah. Questions cover performing it on upper floors, the number of laps, ritual
+  purity and the changed layout of the area.
+sample_questions:
+- What is sa'y?
+- Can I do sa'y on the upper floor?
+- How many laps is sa'y?
+- Do I need wudhu for sa'y?
+- What about the new sa'y area?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Rules of Sa''y'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-qa-wrestling
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Wrestling
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01357/
+language: en
+date: ''
+description: A topic page with one question about sports such as wrestling and boxing.
+sample_questions:
+- Can I play boxing?
+- Is wrestling allowed?
+- What sports does Islam allow?
+- Can I box for fun?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Wrestling'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

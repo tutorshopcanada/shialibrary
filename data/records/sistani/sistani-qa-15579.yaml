@@ -18,13 +18,13 @@ description: A question asking whether the third testimony (the testimony to the
 sample_questions:
 - Is the third shahada part of the adhan?
 - Is saying Ali is the wali of God part of adhan?
-- Why do Shias add a line to the adhan?
+- Do Shias include the third testimony in the adhan?
 - What is the third testimony?
 headings:
 - prayer
 access: free
 location: Adhan and Iqamah, question 2
-needs_review: true
+needs_review: false
 review_note: Shia-Sunni difference (third testimony in the adhan); sensitive, so a reviewer should confirm
   the classification and wording.
 cataloged_on: '2026-11-10'

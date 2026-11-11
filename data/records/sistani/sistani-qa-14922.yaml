@@ -1,0 +1,30 @@
+id: sistani-qa-14922
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-non-muslims
+level: intermediate
+title: What is the difference between Ahl-e Kitab (the People of the Book) and the rest of the unbelievers
+  with respect to Shari'ah law?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01275/#14922
+language: en
+date: ''
+description: A question asking about the difference between Ahl-e Kitab (the People of the Book, such
+  as Jews and Christians) and other unbelievers under Shari'ah law.
+sample_questions:
+- Who are Ahl-e Kitab?
+- How are Christians and Jews treated in Islamic law?
+- What is the difference between People of the Book and others?
+headings:
+- social-conduct-rulings
+access: free
+location: Non-Muslims, question 1
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

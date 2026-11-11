@@ -1,0 +1,28 @@
+id: sistani-qa-15205
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-interest
+level: intermediate
+title: Can I take an urgent loan from a non-Muslim bank, even if I know that the bank will charge interest?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01220/#15205
+language: en
+date: ''
+description: A question about taking an urgent loan from a non-Muslim bank that charges interest.
+sample_questions:
+- Can I take a bank loan with interest?
+- Can I borrow from a non-Muslim bank?
+- What if I urgently need a loan?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Interest, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

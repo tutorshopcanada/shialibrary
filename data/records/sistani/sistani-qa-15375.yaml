@@ -1,0 +1,27 @@
+id: sistani-qa-15375
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fish
+level: intermediate
+title: Is it permissible to eat lobster, crayfish, and snails?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01184/#15375
+language: en
+date: ''
+description: A question asking whether lobster, crayfish and snails may be eaten.
+sample_questions:
+- Is lobster halal?
+- Can Shias eat snails?
+- Is crayfish halal?
+headings:
+- food-drink
+access: free
+location: Fish, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

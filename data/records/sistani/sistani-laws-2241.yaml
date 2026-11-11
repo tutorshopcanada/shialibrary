@@ -1,0 +1,30 @@
+id: sistani-laws-2241
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: SEQUENCE (TARTĪB)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2241/
+language: en
+date: ''
+description: Rules on sequence (tartib) in the prayer, the order of its parts, and what applies when a
+  part is done out of order, forgotten, or done on purpose.
+sample_questions:
+- What if I do parts of prayer in the wrong order?
+- What if I forget a rukn and do the next one?
+- What does tartib mean in salah?
+- What if I forget to bow and go straight to sajdah?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

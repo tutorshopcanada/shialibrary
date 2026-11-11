@@ -1,0 +1,30 @@
+id: sistani-qa-endowment-waqf
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Endowment - Waqf
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01183/
+language: en
+date: ''
+description: A topic page of questions and answers about waqf (an endowment, where property is set aside
+  permanently for a religious or charitable purpose). Questions cover how a waqf works, trustees, and
+  what to do with a mosque's contents if the building is lost.
+sample_questions:
+- What is waqf?
+- How do I set up a waqf?
+- Does a waqf need a trustee?
+- What happens to mosque property if the mosque is demolished?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Endowment - Waqf'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

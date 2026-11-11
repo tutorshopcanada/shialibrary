@@ -1,0 +1,27 @@
+id: sistani-qa-25550
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gelatin
+level: intermediate
+title: Is it is permissible to consume a foodstuff that contains gelatin?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01201/#25550
+language: en
+date: ''
+description: A question asking whether a foodstuff that contains gelatin may be eaten.
+sample_questions:
+- Can I eat food with gelatin?
+- Is gelatin allowed?
+- Are marshmallows okay to eat?
+headings:
+- food-drink
+access: free
+location: Gelatin, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-non-muslims
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Non-Muslims
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01275/
+language: en
+date: ''
+description: A topic page with one question about the difference between People of the Book (Jews and
+  Christians) and other unbelievers in Islamic law.
+sample_questions:
+- Who are the People of the Book?
+- How are non-Muslims treated in Islamic law?
+- What is Ahl-e Kitab?
+- Are Christians and Jews treated differently?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Non-Muslims'
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

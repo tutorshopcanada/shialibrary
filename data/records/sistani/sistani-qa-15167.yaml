@@ -22,12 +22,12 @@ sample_questions:
 - Can I eat halal-labelled meat from non-Muslim companies?
 - Does the producer's religion matter for halal meat?
 - Is meat from a Muslim country always halal?
-- Imported meat labelled halal?
+- Is imported meat labelled halal okay to eat?
 headings:
 - food-drink
 access: free
 location: Islamic Slaughtering, question 4
-needs_review: true
+needs_review: false
 review_note: Concerns meat produced by non-Muslim companies (other faiths); reviewer should confirm the
   classification and wording.
 cataloged_on: '2026-11-10'

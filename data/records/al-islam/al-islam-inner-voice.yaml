@@ -1,0 +1,34 @@
+id: al-islam-inner-voice
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Inner Voice
+title_original: ''
+authors:
+- saeed-akhtar-rizvi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/inner-voice-sayyid-saeed-akhtar-rizvi
+language: en
+date: ''
+description: A book of 70 short chapters on understanding one's purpose in life and drawing near to God.
+  Topics include trust in God, repentance and humility, avoiding pride, envy and greed, kindness to parents,
+  duties to neighbours, and warnings against vices such as backbiting.
+sample_questions:
+- What is the purpose of life in Islam?
+- How can I get closer to God?
+- What does Islam say about pride and envy?
+- How do I repent sincerely?
+- What does Islam say about backbiting?
+headings:
+- spirituality
+- ethics
+access: free
+location: ''
+needs_review: false
+review_note: Level not stated on the page (audience not stated); set to intermediate pending review. Some
+  chapters touch on prohibitions (liquor, gambling) and polygamy; main purpose appears to be ethics and
+  spirituality.
+cataloged_on: '2026-11-11'

@@ -610,10 +610,10 @@ export function createEngine(index) {
     const strip = ({ doc, ...rest }) => rest;
     // Scores within 5% of each other count as a tie; the shorter (more general) title wins,
     // so "Fasting" comes before "Fasting - Long Days".
-    const nearTie = (a, b) => {
-      const hi = Math.max(a.score, b.score) || 1;
-      if (Math.abs(a.score - b.score) / hi > 0.05) return b.score - a.score;
-      return String(a.record.title).length - String(b.record.title).length || (b.score - a.score);
+    const nearTie = (a, b, val = (h) => h.score) => {
+      const sa = val(a), sb = val(b), hi = Math.max(sa, sb) || 1;
+      if (Math.abs(sa - sb) / hi > 0.05) return sb - sa;
+      return String(a.record.title).length - String(b.record.title).length || (sb - sa);
     };
 
     const exact = kept.filter((h) => h.exact).map(strip);
@@ -622,7 +622,7 @@ export function createEngine(index) {
       (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) ||
       (a.pinned && b.pinned ? 0 :
         strict ? (levelRank(a.record.level, order) - levelRank(b.record.level, order)) || nearTie(a, b)
-          : boosted(b) - boosted(a)));
+          : nearTie(a, b, boosted)));
     related.sort((a, b) => boosted(b) - boosted(a));
 
     result.exact = cluster(exact, f.section);

@@ -1,0 +1,27 @@
+id: sistani-qa-15511
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prostration
+level: intermediate
+title: Is it permissible to prostrate on carpets?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01283/#15511
+language: en
+date: ''
+description: A question asking whether it is acceptable to prostrate on carpets.
+sample_questions:
+- Can I do sajdah on a carpet?
+- What can I prostrate on?
+- Is a carpet suitable for sajdah?
+headings:
+- prayer
+access: free
+location: Prostration, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

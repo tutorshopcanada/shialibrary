@@ -1,0 +1,32 @@
+id: sistani-qa-leather-products
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Leather Products
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01237/
+language: en
+date: ''
+description: A topic page of questions and answers about leather products, especially in the West. Questions
+  cover praying in a leather belt or wallet, leather labels on jeans, leather items whose origin is unlabelled,
+  and buying and using leather.
+sample_questions:
+- Can I pray in a leather belt?
+- Is leather from non-Muslim countries okay?
+- Can I wear leather jeans labels?
+- Can I buy leather shoes in the West?
+- How do I know if leather is halal?
+headings:
+- dress-appearance
+- prayer
+access: free
+location: 'Q&A topic: Leather Products'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

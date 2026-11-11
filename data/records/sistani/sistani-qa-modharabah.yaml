@@ -1,0 +1,30 @@
+id: sistani-qa-modharabah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Modharabah (Sleeping partnership)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01252/
+language: en
+date: ''
+description: A topic page of questions and answers about mudarabah (a sleeping partnership, where one
+  person provides money and another does the work). Questions also cover buying shares in companies that
+  deal with interest.
+sample_questions:
+- What is mudarabah?
+- What is a sleeping partnership?
+- Can I buy shares in a company that earns interest?
+- How do Islamic business partnerships work?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Modharabah (Sleeping partnership)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

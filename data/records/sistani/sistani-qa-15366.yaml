@@ -1,0 +1,28 @@
+id: sistani-qa-15366
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friendship
+level: intermediate
+title: Is it permissible for a Muslim to have a non-Muslim friend?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01186/#15366
+language: en
+date: ''
+description: A question asking about a Muslim having a non-Muslim friend.
+sample_questions:
+- Can I have non-Muslim friends?
+- Can a Shia be friends with a non-Muslim?
+- Is friendship with non-Muslims allowed?
+headings:
+- social-conduct-rulings
+access: free
+location: Friendship, question 2
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

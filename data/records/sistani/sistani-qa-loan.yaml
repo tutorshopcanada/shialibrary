@@ -1,0 +1,29 @@
+id: sistani-qa-loan
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Loan
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01239/
+language: en
+date: ''
+description: A topic page of questions and answers about loans and mortgages. Questions cover how hardship (haraj) is understood in buying decisions, buying shares in companies that take interest-based loans, and mortgages in the West.
+sample_questions:
+- Can I take a mortgage?
+- Can I buy a house with a bank loan?
+- Can I buy shares in a company with loans?
+- What is hardship (haraj) in Islam?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: 'Q&A topic: Loan'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

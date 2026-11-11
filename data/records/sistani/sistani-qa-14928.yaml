@@ -1,0 +1,28 @@
+id: sistani-qa-14928
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-tattoos
+level: intermediate
+title: Does applying a temporary tattoo invalidate or prevent Wudhu (ablution) or Ghusl (ritual washing)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01336/#14928
+language: en
+date: ''
+description: A question asking whether applying a temporary tattoo prevents or affects wudhu or ghusl.
+sample_questions:
+- Does a temporary tattoo affect wudhu?
+- Can I do ghusl with henna or a temporary tattoo?
+- Does a temporary tattoo block water?
+headings:
+- dress-appearance
+- purity
+access: free
+location: Tattoos, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

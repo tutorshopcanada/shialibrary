@@ -1,0 +1,31 @@
+id: sistani-qa-qaza-prayers-and-fasts
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Qaza Prayers and Fasts
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01297/
+language: en
+date: ''
+description: A topic page of questions and answers about qaza (making up missed prayers and fasts). Questions
+  cover kaffarah (an expiation), a deceased father's missed prayers and the eldest son's role.
+sample_questions:
+- What is qaza?
+- Who makes up a dead person's prayers?
+- What is kaffarah?
+- Does the eldest son pray for his father?
+- How do I make up missed fasts?
+headings:
+- prayer
+- fasting
+access: free
+location: 'Q&A topic: Qaza Prayers and Fasts'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'
