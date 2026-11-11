@@ -14,13 +14,16 @@ language: en
 date: ''
 description: A short treatise on the rights a person owes to God, to society, to family and to their own
   body, which the site presents as attributed to Imam Zayn al-Abidin; shown in Arabic with an English
-  translation by William C. Chittick. It is brief and covers everyday duties toward others.
+  translation by William C. Chittick. Its sections cover the rights of Allah over oneself, the rights
+  of acts, the rights of leaders and of subjects, the rights of relatives, and the rights of others. It
+  is brief and covers everyday duties toward others.
 sample_questions:
 - What is the Treatise of Rights?
 - What rights do parents have in Islam?
 - What does Islam say about the rights of others?
 - What is Risalat al-Huquq?
 - What rights does my own body have over me?
+- What does the treatise say about the rights of leaders and subjects?
 headings:
 - hadith-collections
 - family-social-ethics
