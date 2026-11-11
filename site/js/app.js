@@ -240,32 +240,30 @@ function qMeta(q) {
   return [n ? pl(n, 'page') : '', q.path && engine.pathById.get(q.path) ? 'reading path' : ''].filter(Boolean).join(' · ');
 }
 const qRow = (q, theme) => `<li><a class="qrow" href="${esc(qHref(q.question))}"><span class="qt" dir="auto">${esc(q.question)}</span><span class="qm">${esc([theme, qMeta(q)].filter(Boolean).join(' · '))}</span></a></li>`;
+const qLine = (q, theme) => `<li><a class="ql" href="${esc(qHref(q.question))}"><span class="ql-t" dir="auto">${esc(q.question)}</span><span class="ql-m">${esc([theme, (() => { const n = (q.top_records || []).filter((id) => rec(id)).length; return n ? pl(n, 'page') : ''; })()].filter(Boolean).join(' · '))}</span></a></li>`;
+function qTabs() {
+  const { g, tops } = qGroups();
+  const ordered = [...tops.filter((h) => h.id === 'new-to-shia-islam'), ...tops.filter((h) => h.id !== 'new-to-shia-islam')];
+  return { g, ordered, cur: ui.qtheme === 'all' ? 'all' : (g[ui.qtheme] ? ui.qtheme : ordered[0].id) };
+}
 function qListHtml() {
-  const { g, tops } = qGroups(), f = textNorm(ui.qfilter).split(' ').filter(Boolean);
+  const { g, cur } = qTabs(), f = textNorm(ui.qfilter).split(' ').filter(Boolean), typed = ui.qfilter.trim();
   if (f.length) {
     const hits = engine.questions.filter((q) => { const hay = textNorm([q.question, ...(q.alt_phrasings || [])].join(' ')); return f.every((w) => hay.includes(w)); });
-    return hits.length
-      ? `<p class="qcount" role="status">${pl(hits.length, 'question')} match “${esc(ui.qfilter.trim())}”.</p><ul class="qrows">${hits.map((q) => qRow(q, TOPN(topOf((q.headings || [])[0] || 'new-to-shia-islam')))).join('')}</ul>`
-      : `<div class="callout" role="status"><h3 class="h">No question like that yet</h3><p class="mute" style="margin:0">Try fewer words, or ask it in your own words with the button below.</p></div>`;
+    return `<p class="qcount" role="status">${hits.length ? `${pl(hits.length, 'question')} like “${esc(typed)}”.` : 'No ready-made question like that yet.'}</p><ul class="qlines">${hits.map((q) => qLine(q, TOPN(topOf((q.headings || [])[0] || 'new-to-shia-islam')))).join('')}
+      <li><a class="ql ql-go" href="${esc(qHref(typed))}"><span class="ql-t">Search the catalog for “${esc(typed)}”</span><span class="ql-m">All ${RECS.length.toLocaleString()} pages</span></a></li></ul>`;
   }
-  const cur = ui.qtheme === 'all' ? '' : (g[ui.qtheme] ? ui.qtheme : (tops.find((h) => h.id === 'new-to-shia-islam') || tops[0]).id);
-  const list = cur ? g[cur] : engine.questions;
-  return `<p class="qcount">${pl(list.length, 'question')}${cur ? ` on ${esc(TOPN(cur))}` : ''}.</p><ul class="qrows">${list.map((q) => qRow(q, cur ? '' : TOPN(topOf((q.headings || [])[0] || 'new-to-shia-islam')))).join('')}</ul>`;
+  const list = cur === 'all' ? engine.questions : g[cur];
+  return `<ul class="qlines">${list.map((q) => qLine(q, cur === 'all' ? TOPN(topOf((q.headings || [])[0] || 'new-to-shia-islam')) : '')).join('')}</ul>`;
 }
 function questionsHtml() {
-  const { g, tops } = qGroups();
-  const cur = ui.qtheme === 'all' ? 'all' : (g[ui.qtheme] ? ui.qtheme : (tops.find((h) => h.id === 'new-to-shia-islam') || tops[0]).id);
-  const first = (g['new-to-shia-islam'] || []).slice(0, 6);
-  const feat = [...first, ...engine.questions.filter((q) => !first.includes(q))].slice(0, 6);
+  const { g, ordered, cur } = qTabs();
   const ask = SITE.externalSearch && SITE.externalSearch.askUrl;
   return `<section class="blk" id="questions"><h2>Common questions</h2><p class="sub">Questions newcomers ask.</p>
-  <div class="tsec"><h2>Start with these</h2><p class="sub">The questions newcomers ask first.</p><ul class="qfeats">${feat.map((q) => `<li><a class="qfeat" href="${esc(qHref(q.question))}"><span class="qq" dir="auto">${esc(q.question)}</span><span class="qm">${esc(qMeta(q))}</span></a></li>`).join('')}</ul></div>
-  <div class="tsec"><h2>All ${engine.questions.length} questions</h2><p class="sub">Filter by a word, or pick a theme.</p>
-  <div class="qtools"><div class="qfind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="qfilter">Filter the questions</label><input id="qfilter" type="search" autocomplete="off" placeholder="Filter the questions" value="${esc(ui.qfilter)}" maxlength="80"></div>
-  <div class="chips" role="group" aria-label="Theme"><button class="chip" data-qt="all" aria-pressed="${cur === 'all'}">All <i>${engine.questions.length}</i></button>${tops.map((h) => `<button class="chip" data-qt="${esc(h.id)}" aria-pressed="${h.id === cur}">${esc(TOPN(h.id))} <i>${g[h.id].length}</i></button>`).join('')}</div></div>
-  <div id="qlist">${qListHtml()}</div></div>
-  <div class="qask"><div><h3>Can’t find your question?</h3><p>Ask it in your own words in the search box. If the catalog has nothing close, you can also try ${esc((SITE.externalSearch || {}).name || 'the source site')}’s own questions.</p></div>
-  <div class="qask-b"><button class="btn solid big" type="button" data-askq>Ask your own question</button>${ask ? `<a class="btn line" href="${esc(ask)}" target="_blank" rel="noopener noreferrer">Browse ${esc(SITE.externalSearch.name)} questions ↗</a>` : ''}</div></div></section>`;
+  <form class="refine qa" id="qform" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="qfilter">Type a question or a word</label><input id="qfilter" type="search" autocomplete="off" enterkeyhint="search" placeholder="Type a question" value="${esc(ui.qfilter)}" maxlength="200"><button class="btn solid" type="submit">Ask</button></form>
+  <div class="qtabs" role="group" aria-label="Theme">${ordered.map((h) => `<button class="qtab" data-qt="${esc(h.id)}" aria-pressed="${h.id === cur && !ui.qfilter.trim()}">${esc(TOPN(h.id))}<i>${g[h.id].length}</i></button>`).join('')}<button class="qtab" data-qt="all" aria-pressed="${cur === 'all' && !ui.qfilter.trim()}">All<i>${engine.questions.length}</i></button></div>
+  <div id="qlist">${qListHtml()}</div>
+  ${ask ? `<p class="qalt">Not here? ${esc(SITE.externalSearch.name)} also has its own <a href="${esc(ask)}" target="_blank" rel="noopener noreferrer">question service<span class="sr"> (opens in a new tab)</span> ↗</a>.</p>` : ''}</section>`;
 }
 
 function topicStats(id) {
@@ -903,6 +901,7 @@ view.addEventListener('change', (e) => {
 });
 view.addEventListener('submit', (e) => {
   if (e.target.id === 'refine') { e.preventDefault(); const st = readState(); nav(searchHref({ ...blank(), q: $('#q2').value.trim(), order: st.order })); return; }
+  if (e.target.id === 'qform') { e.preventDefault(); const v = ($('#qfilter').value || '').trim(); if (v) nav(qHref(v)); return; }
   if (e.target.id !== 'fbf') return;
   e.preventDefault();
   const k = (document.querySelector('input[name=kind]:checked') || {}).value, msg = $('#fb-msg').value.trim();

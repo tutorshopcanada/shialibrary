@@ -798,3 +798,26 @@ noscript .callout{margin-top:1rem}
 }
 @media (min-width:48rem){.scards{row-gap:0}}
 @media (max-width:47.99rem){.scards{row-gap:10px}}
+
+/* Questions: one input, theme tabs, a quiet list */
+.refine.qa{position:static;margin-bottom:1.1rem}
+.qtabs{display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin-bottom:.4rem;padding-bottom:0}
+.qtabs::-webkit-scrollbar{display:none}
+.qtab{flex:none;border:0;background:transparent;color:var(--mute);font:inherit;font-size:.9375rem;padding:.6rem .85rem;min-height:2.75rem;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.qtab i{font-style:normal;font-size:.8125rem;margin-left:.35rem;opacity:.7;font-variant-numeric:tabular-nums}
+.qtab[aria-pressed=true]{color:var(--ink);font-weight:600;border-bottom-color:var(--t-fiqh)}
+.qtab:focus-visible{outline:3px solid var(--focus);outline-offset:-3px;border-radius:8px}
+@media (hover:hover) and (pointer:fine){.qtab:hover{color:var(--ink)}}
+.qlines{list-style:none;margin:0;padding:0}
+.qlines li+li{border-top:1px solid var(--line)}
+.ql{display:flex;align-items:baseline;justify-content:space-between;gap:1.2rem;min-height:3.25rem;padding:.85rem .2rem;text-decoration:none;color:inherit}
+.ql-t{font-family:var(--serif);font-size:1.3125rem;line-height:1.25;letter-spacing:-.005em;min-width:0;overflow-wrap:anywhere}
+.ql-m{flex:none;font-size:.8125rem;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ql-m::after{content:"›";margin-left:.6rem;font-size:1.1rem}
+.ql:focus-visible{outline:3px solid var(--focus);outline-offset:-2px;border-radius:10px}
+.ql-go .ql-t{font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--btn)}
+@media (hover:hover) and (pointer:fine){.ql:hover .ql-t{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}}
+.ql:active{background:var(--hi)}
+.qalt{margin:1.8rem 0 0;font-size:.875rem;color:var(--mute)}
+@media (max-width:640px){.ql{flex-direction:column;gap:.15rem}.ql-m::after{display:none}}
+@media (min-width:48rem){.qtabs{flex-wrap:wrap;overflow:visible}}
