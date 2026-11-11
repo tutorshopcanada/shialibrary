@@ -143,3 +143,5 @@ Checked with axe-core (WCAG 2.1 A and AA plus best-practice) on 16 pages at desk
 The home hero uses three layers, all decorative and hidden from assistive tech: a very faint sand girih tiling (`site/img/girih.svg`) that fades out behind the headline and is cut away on the right where the shrine sits (14% on desktop, 11% on phones); a white shrine line drawing (`site/img/shrine.svg`) at the right; and the turquoise search arrow beside the search pill, which nudges every few seconds and hides when the box is focused or the user prefers reduced motion. Both SVGs are used as CSS masks so their colour is set in CSS. They are traced artwork taken from another project (jaffariyouth/jiy) and optimised with svgo; confirm the right to reuse them. Sizes: shrine 159 KB (54 KB gzipped), girih 291 KB (83 KB gzipped).
 
 Inner-page headers carry the same girih with no arch: 12% opacity, clear behind the title at the left and strongest at the right (strongest at the bottom on phones).
+
+Tour slides carry the girih too, fixed behind the content at 10% (8% on phones), clear around the title at the left.
