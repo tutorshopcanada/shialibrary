@@ -90,8 +90,14 @@ function mergeConfig(base, over) {
 // ---------------------------------------------------------------------------
 
 /** Lowercase, strip diacritics and punctuation. "Qur'ān" -> "quran", "Ḥusayn" -> "husayn". */
+const PLAIN_ASCII = /^[\x00-\x7f]*$/;
 export function normalize(input) {
-  return String(input == null ? '' : input)
+  const str = String(input == null ? '' : input);
+  // Fast path for plain ASCII (most of the catalog): no marks or Arabic/Persian letters to fold.
+  if (PLAIN_ASCII.test(str)) {
+    return str.toLowerCase().replace(/['`]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+  return str
     .normalize('NFKD')
     .replace(/\p{M}+/gu, '')            // combining marks: Latin diacritics, Arabic vowel signs
     .replace(/ـ/g, '')             // Arabic tatweel
@@ -104,7 +110,13 @@ export function normalize(input) {
 }
 
 /** Very light English stemmer: plurals and -ing. Applied to index and query alike. */
+const STEMS = new Map();
 export function stem(tok) {
+  let r = STEMS.get(tok);
+  if (r === undefined) { r = stemRaw(tok); if (STEMS.size < 50000) STEMS.set(tok, r); }
+  return r;
+}
+function stemRaw(tok) {
   if (tok.length < 4 || !/^[a-z]+$/.test(tok)) return tok;
   let t = tok;
   if (t.endsWith('ies') && t.length > 4) t = t.slice(0, -3) + 'y';
@@ -240,10 +252,17 @@ export function createEngine(index) {
   const fieldLen = FIELDS.map(() => new Float32Array(docs.length));
   const avgLen = FIELDS.map(() => 0);
   const docFreq = new Map();
+  // Many records share the same heading, scholar, context and source text: tokenize each distinct string once.
+  const tokCache = new Map();
+  const indexTokens = (text) => {
+    let r = tokCache.get(text);
+    if (!r) { r = tokenize(text).filter((t) => !stopSet.has(t)); tokCache.set(text, r); }
+    return r;
+  };
   docs.forEach((doc, d) => {
     const seen = new Set();
     FIELDS.forEach((f, fi) => {
-      const toks = tokenize(doc.fieldText[f]).filter((t) => !stopSet.has(t));
+      const toks = indexTokens(doc.fieldText[f]);
       fieldLen[fi][d] = toks.length;
       avgLen[fi] += toks.length;
       const tf = new Map();
