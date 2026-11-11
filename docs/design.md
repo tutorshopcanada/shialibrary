@@ -71,3 +71,7 @@ python3 -m http.server 8000 --directory site   # then open http://localhost:8000
 
 - **About** is split into scannable sections with an on-page jump row (`data-jump` buttons, so the hash stays a route): three principle cards, a "what is included" fact list, the website list, numbered "how results are chosen" steps, a privacy checklist, and a report-a-link card.
 - **Feedback** is a four-card chooser (waitlist, suggest a website, topic or feedback, broken link) with a short form beside a three-step explainer. The button label, placeholder and required message follow the choice (`FB` in `app.js`). "Suggest a source" on the Sources page opens it with the website option selected. Until the owner sets `SITE.report` in `site/js/config.js`, the form is replaced by a notice.
+
+## Calmer cards
+
+Cards were visually heavy: tan outlines, tan group backgrounds around white cards, and seven lines per result. Now: outlines use the light `--line` colour; groups sit on the page ground with no colour block (`.frame` is only used on the hero); a result shows tag and level, title, one meta line (author, source, location, rulings of), a three-line description, a text link out, and one small footer line (context, more in section, report). Topic tiles drop the level legend and "start with" link (the bar stays). Filter chips and the order switch use a softer tint.

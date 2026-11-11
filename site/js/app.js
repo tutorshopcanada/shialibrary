@@ -127,12 +127,12 @@ function cardHtml(r, { compact = false, lean = false, tick = false, hideContextF
   const by = authors.length ? `By ${esc(authors.join(', '))} · ` : '';
   const loc = r.location ? ` · ${esc(r.location)}` : '';
   const par = !compact && r.context && r.context.section ? '' : '';
-  const marja = r.marja ? `<p class="meta">Rulings of: <span dir="auto">${esc(scholarName(r.marja))}</span></p>` : '';
+  const marja = r.marja ? ` · Rulings of <span dir="auto">${esc(scholarName(r.marja))}</span>` : '';
   let facts = '';
   if (r.type === 'course') {
     const rows = [['Offered by', r.provider], ['Taught by', (r.instructors || []).map(scholarName).join(', ')], ['Format', r.delivery],
       ['Length', r.duration], ['Starts', r.start_date], ['Cost', r.cost]].filter(([, v]) => v);
-    if (rows.length) facts = `<dl class="factl">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd dir="auto">${esc(v)}</dd></div>`).join('')}</dl>`;
+    if (rows.length) facts = `<dl class="facts">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd dir="auto">${esc(v)}</dd></div>`).join('')}</dl>`;
   }
   const title = `<h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>`;
   const orig = r.title_original ? `<p class="meta" dir="auto">${esc(r.title_original)}</p>` : '';
@@ -143,23 +143,23 @@ function cardHtml(r, { compact = false, lean = false, tick = false, hideContextF
     if (r.type === 'course' && safeUrl(r.enrollment_url) && r.enrollment_url !== r.url) actions += `<span class="minor">${extLink(r.enrollment_url, '', 'Sign-up page ↗')}</span>`;
     const c = r.context || {}, parts = [c.section, c.work].filter(Boolean);
     if (parts.length) {
-      context = `<p class="ctx"><span class="cl2">In context: </span>${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')}`;
+      context = `<span class="ctx"><span class="cl2">In context: </span>${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')}`;
       const sid = (c.section || c.work).id;
-      if (sid !== hideContextFor) context += `<br><a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a>`;
-      context += '</p>';
+      if (sid !== hideContextFor) context += ` · <a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a>`;
+      context += '</span>';
     } else if (r.descendant_count && r.id !== hideContextFor) {
-      context = `<p class="ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></p>`;
+      context = `<span class="ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>`;
     }
     const rh = reportHref(r);
-    report = `<p class="report"><a href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem with this link</a></p>`;
+    report = `<span class="report"><a href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem</a></span>`;
   }
   if (lean) { context = ''; report = ''; }
   if (tick) actions += `<label class="stick"><input class="tick" type="checkbox" data-read="${esc(r.id)}" ${read[r.id] ? 'checked' : ''}> Mark as read</label>`;
   const det = clusterDetails(more);
   return `<li class="card"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}</div>
-  ${title}${orig}<p class="meta">${by}Source: <span dir="auto">${esc(src)}</span>${loc}</p>${marja}
+  ${title}${orig}<p class="meta">${by}<span dir="auto">${esc(src)}</span>${loc}${marja}</p>
   ${r.description ? `<p class="d" dir="auto">${esc(r.description)}</p>` : ''}${facts}
-  ${actions}${context}${report}${det}</li>`;
+  ${actions}${context || report ? `<p class="cfoot">${context}${report}</p>` : ''}${det}</li>`;
 }
 function clusterDetails(more) {
   if (!more || !more.items.length) return '';

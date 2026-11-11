@@ -684,3 +684,32 @@ noscript .callout{margin-top:1rem}
 @media (hover:hover) and (pointer:fine){.kindc label:hover span{border-color:var(--edge)}}
 @media (max-width:640px){.factl>div{grid-template-columns:minmax(0,1fr)}}
 .qask .btn.solid{background:#fff;color:#0f3f4a;border-color:#fff}
+
+/* Calmer cards: quiet outlines, no nested colour blocks, fewer lines per result */
+.frame:not(.hero-frame){background:transparent;border:0;padding:0;border-radius:0}
+.grp{padding:0}
+.gh{padding:0 0 .7rem}
+.cards{gap:10px}
+.card,.lrow,.mini,.tile,.pcard,.qfeat,.qrow,.sp,.pil,.priv,.hsteps li,.fbx-r,.factl,.xt,.door,.hc,.callout{border:1px solid var(--line)}
+.card{border-radius:14px;padding:1rem 1.2rem}
+.badges{margin-bottom:.3rem;gap:.7rem}
+.tag{border:0;background:transparent;padding:0;gap:.45rem;font-size:.8125rem;font-weight:600;color:var(--mute)}
+.tag::before{width:.55rem;height:.55rem}
+.sp-tags .tag,.lrow .lm .tag{background:var(--frame);padding:.05rem .6rem;color:var(--ink)}
+.card h3{font-size:1.0625rem}
+.card .meta{margin:0 0 .45rem;font-size:.8125rem}
+.card p.d{margin:0 0 .7rem;color:var(--ink);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .open{background:transparent;padding:0;min-height:2.5rem;color:var(--btn);font-weight:600;border-radius:8px}
+@media (hover:hover) and (pointer:fine){.card .open:hover{background:transparent;color:var(--btn);text-decoration:underline;text-underline-offset:.2em}}
+.cfoot{display:flex;flex-wrap:wrap;gap:.1rem 1rem;margin:.3rem 0 0;font-size:.8125rem;color:var(--mute);line-height:1.5}
+.cfoot a{color:var(--mute)}
+.cfoot .ctx,.cfoot .report{margin:0}
+.curated.frame,.curated{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--t-fiqh);border-radius:14px;padding:1rem 1.2rem}
+.pcard,.tile,.mini,.lrow{box-shadow:none}
+.tile .ladder .leg,.tile .tstart{display:none}
+.tile .tfoot{margin-top:auto}
+.chip,.seg{background:color-mix(in srgb,var(--frame) 50%,transparent)}
+.chip[aria-pressed=true]{background:var(--btn)}
+.seg button[aria-pressed=true]{background:var(--paper)}
+.more2{background:color-mix(in srgb,var(--frame) 50%,transparent)}
+.jump .chip,.fbx .chip{background:var(--paper)}
