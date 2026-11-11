@@ -726,3 +726,15 @@ noscript .callout{margin-top:1rem}
 .pcard .sdots i{position:relative;left:auto;top:auto;right:auto;bottom:auto;transform:none;flex:none;width:.8rem;height:.8rem}
 .pcard .sdots i+i::before{content:"";position:absolute;right:100%;top:50%;width:.45rem;height:2px;margin-top:-1px;background:var(--line)}
 .pcard .pf{display:none}
+
+/* Topic page */
+.subs{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(min(100%,10rem),1fr))}
+.subt{display:flex;flex-direction:column;gap:.15rem;min-height:3.5rem;min-width:0;justify-content:center;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:.7rem 1rem;text-decoration:none;color:inherit}
+.subt .subt-n{font-weight:600;letter-spacing:-.01em;line-height:1.3;overflow-wrap:anywhere}
+.subt .subt-c{font-size:.8125rem;color:var(--mute);font-variant-numeric:tabular-nums}
+.subt:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.subt:active{transform:scale(.99)}
+@media (hover:hover) and (pointer:fine){.subt:hover{background:var(--hi)}}
+.lrow .lm .tag{background:transparent;padding:0;color:var(--mute)}
+#everything{scroll-margin-top:1rem}
+@media (max-width:640px){.subt{padding:.6rem .85rem}}

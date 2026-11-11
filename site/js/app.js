@@ -602,9 +602,16 @@ function topicHtml(id) {
   const starters = RECS.filter((n) => n.all.includes(id) && n.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
   const es = (levels.find((l) => l.lv === cur) || { es: [] }).es, lim = ui.lm[id + cur] || 12;
   const rows = es.slice(0, lim).map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
-  return `${kids.length ? `<nav class="tnav" aria-label="Sub-topics">${kids.map((s) => `<a class="chip" href="${esc(topicHref(s.c))}">${esc(TOPN(s.c))} <i>${s.n}</i></a>`).join('')}</nav>` : ''}
-  ${starters.length ? `<section class="tsec"><h2>${starters.length === 1 ? 'Start with this' : 'Start with these'}</h2><p class="sub">${starters.length === 1 ? 'The one book or article on this topic.' : 'The easiest books and articles on this topic.'}</p><div class="minis">${starters.map((n) => miniHtml(n.raw)).join('')}</div></section>` : ''}
-  <section class="tsec"><h2>Everything on this topic</h2><p class="sub">Choose a level. Within each level, books and articles come before individual pages.</p>
+  const fam = new Set([id, ...engine.headings.filter((x) => (x.ancestors || []).includes(id)).map((x) => x.id)]);
+  const inFam = (r) => [...(r.headings || []), ...(r.inherited_headings || [])].some((x) => fam.has(x));
+  const paths = engine.paths.map((p) => ({ p, n: p.steps.filter((s) => { const r = rec(s.record); return r && inFam(r); }).length })).filter((x) => x.n).sort((x, y) => y.n - x.n).slice(0, 3).map((x) => x.p);
+  const qs = engine.questions.filter((q) => (q.headings || []).some((x) => fam.has(x))).slice(0, 6);
+  const sec = (title, sub, body) => `<section class="tsec"><h2>${title}</h2>${sub ? `<p class="sub">${sub}</p>` : ''}${body}</section>`;
+  return `${starters.length ? sec(starters.length === 1 ? 'Start with this' : 'Start with these', starters.length === 1 ? 'The one book or article on this topic.' : 'The easiest books and articles on this topic.', `<div class="minis">${starters.map((n) => miniHtml(n.raw)).join('')}</div>`) : ''}
+  ${paths.length ? sec('Read in order', 'Short reading paths that include this topic.', `<div class="pgrid">${paths.map(pcardHtml).join('')}</div>`) : ''}
+  ${qs.length ? sec('Questions people ask', 'Select one to see the pages chosen for it.', `<ul class="qrows">${qs.map((q) => qRow(q, '')).join('')}</ul>`) : ''}
+  ${kids.length ? sec(`Inside ${esc(TOPN(id))}`, 'Narrower subjects.', `<ul class="subs">${kids.map((s) => `<li><a class="subt" href="${esc(topicHref(s.c))}"><span class="subt-n">${esc(TOPN(s.c))}</span><span class="subt-c">${pl(s.n, 'page')}</span></a></li>`).join('')}</ul>`) : ''}
+  <section class="tsec" id="everything"><h2>Everything on this topic</h2><p class="sub">Choose a level. Within each level, books and articles come before individual pages.</p>
   <div class="seg" role="group" aria-label="Level">${levels.map((l) => `<button data-tl="${esc(id)}|${esc(l.lv)}" aria-pressed="${l.lv === cur}"${l.es.length ? '' : ' disabled'}>${esc(levelLabel(l.lv))}<i>${entryCount(l.es)}</i></button>`).join('')}</div>
   <ul class="lrows">${rows || '<li class="callout">Nothing at this level yet.</li>'}</ul>
   ${es.length > lim ? `<p style="margin:1rem 0 0"><button class="more2" data-lm="${esc(id)}|${esc(cur)}">Show ${Math.min(12, es.length - lim)} more of ${es.length - lim}</button></p>` : ''}</section>

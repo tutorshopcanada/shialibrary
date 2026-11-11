@@ -79,3 +79,7 @@ Cards were visually heavy: tan outlines, tan group backgrounds around white card
 ## Path cards
 
 A path card shows its theme and step count on one line, the title, a two-line intro, then a small journey line: one dot per step, joined, from light (beginner) to dark (advanced), with "Beginner → Advanced" under it. No divider and no second row of counts.
+
+## Topic pages
+
+A topic page now orients first and lists last: "Start with these" (easiest works), "Read in order" (learning paths that include the topic), "Questions people ask" (curated questions under the topic), "Inside <topic>" (sub-topics as a tile grid with page counts, replacing a horizontally scrolling chip strip), then "Everything on this topic" with the level switch and compact rows. Sections that have nothing to show are left out.
