@@ -1,0 +1,32 @@
+id: al-islam-islamic-stories
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Islamic Stories
+title_original: ''
+authors: []
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/islamic-stories
+language: en
+date: ''
+description: A collection of short stories from the lives of the Prophets, Imams and companions, including
+  Bahlool, Mubahala, Prophet Ibrahim, Prophet Sulaiman and the Prophet's entry into Madina.
+sample_questions:
+- What are some stories from the lives of the Prophets?
+- Are there Islamic stories for kids?
+- Who was Bahlool?
+- What happened at Mubahala?
+headings:
+- prophet-muhammad
+- ahl-al-bayt
+- companions-scholars
+access: free
+location: ''
+needs_review: true
+review_note: 'Level beginner by the hub exception: Listed on the al-islam.org ''Texts for Children'' hub
+  (https://al-islam.org/kids-corner/text-for-children); page quote: ''Stories from the lives of the Prophets,
+  Imams, and Companions''; page gives no audience statement. Author and year not stated.'
+cataloged_on: '2026-11-11'

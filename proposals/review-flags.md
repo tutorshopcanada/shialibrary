@@ -57,3 +57,9 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
 - 2026-11-11 | An Introduction To The Rights And Duties Of Women In Islam (Ibrahim Amini) | https://al-islam.org/introduction-rights-and-duties-women-islam-ibrahim-amini | Borderline, not cataloged: mixes social status of women with legal topics (hijab, mahr, nafaqah, inheritance, polygamy, divorce); main purpose not clearly non-fiqh. Owner to decide.
 - 2026-11-11 | From Marriage to Parenthood: The Heavenly Path (Shaheen Merali) | https://al-islam.org/marriage-parenthood-heavenly-path | Not cataloged: includes chapters titled "Important Fiqh Rules" for couples and mothers; mixed with fiqh, main purpose not clearly non-fiqh.
 - 2026-11-11 | How To Start Your Journey Of Religious Responsibility? (Al-Maaref Islamic Cultural Association) | https://al-islam.org/how-start-your-journey-religious-responsibility | Not cataloged: addresses religious rules, imitation (taqlid) and duties (prayer, hijab) for girls reaching religious maturity; main purpose is partly rulings, mixed.
+
+## Skipped (fiqh by other authors) - batch ai12
+- 2026-11-11 | How To Start Your Journey Of Religious Responsibility? (Al-Maaref Islamic Cultural Association) | https://al-islam.org/how-start-your-journey-religious-responsibility | booklet for girls on religious rules, imitation (taqlid) and duties including prayer and the veil; main purpose appears to be religious rules, not clearly non-fiqh. Owner decision needed.
+
+## Skipped for lack of a description (not fiqh)
+- 2026-11-11 | Story of Sacrifice (Jalil Dorrani) | https://al-islam.org/story-sacrifice | not fiqh; skipped only because the page states no description, tags or audience to ground a record. Revisit if wanted.

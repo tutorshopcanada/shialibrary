@@ -914,3 +914,74 @@ scholars:
     alt_names: []
     notes: "Named as compiler of The Status of Mothers in Islam on https://al-islam.org/status-mothers-islam-sayyid-muhammad-sohofi (read 2026-11-11)."
     needs_review: true
+
+  - id: kamal-al-sayyid
+    name: "Kamal al-Sayyid"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/maytham-al-tammar-kamal-al-sayyid (read 2026-11-11)."
+    needs_review: true
+
+  - id: liaket-dewji
+    name: "Liaket Dewji"
+    role: author
+    alt_names: []
+    notes: "Named as author of Tears For Karbala on https://al-islam.org/tears-karbala-liakat-dewji (read 2026-11-11); the page spells the name Liaket Dewji."
+    needs_review: true
+
+  - id: alireza-mirza-muhammad
+    name: "Alireza Mirza Muhammad"
+    role: author
+    alt_names: 
+      - "Alireza Mirza Mohammad"
+    notes: "Named as author of Lapidation on https://al-islam.org/lapidation-alireza-mirza-muhammad (read 2026-11-11)."
+    needs_review: true
+
+  - id: seyyed-ali-akbar-moosavi-hosseini
+    name: "Seyyed Ali Akbar Moosavi Hosseini"
+    role: author
+    alt_names: []
+    notes: "Named as author of Islamic Culture and Religious Education (For pupils) on https://al-islam.org/islamic-culture-and-religious-education-pupils-seyyed-ali-akbar-moosavi-hosseini (read 2026-11-11)."
+    needs_review: true
+
+  - id: sadeq-musavi-garmaroodi
+    name: "Sadeq Musavi Garmaroodi"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/gardener-gardens-tawheed-sadeq-musavi-garmaroodi (read 2026-11-11)."
+    needs_review: true
+
+  - id: soroor-kotobi
+    name: "Soroor Kotobi"
+    role: author
+    alt_names: []
+    notes: "Named as author of A Gift from Heaven on https://al-islam.org/gift-heaven-soroor-kotobi (read 2026-11-11)."
+    needs_review: true
+
+  - id: seyed-sadraddin-jazayeri
+    name: "Seyed Sadraddin Jazayeri"
+    role: author
+    alt_names: []
+    notes: "Named as one of three authors of Once Upon a Time There Was No Other Than God on https://al-islam.org/once-upon-time-there-was-no-other-god (read 2026-11-11)."
+    needs_review: true
+
+  - id: mahdi-gayeni
+    name: "Mahdi Gayeni"
+    role: author
+    alt_names: []
+    notes: "Named as one of three authors of Once Upon a Time There Was No Other Than God on https://al-islam.org/once-upon-time-there-was-no-other-god (read 2026-11-11)."
+    needs_review: true
+
+  - id: husayn-raiis
+    name: "Husayn Raiis"
+    role: author
+    alt_names: []
+    notes: "Named as one of three authors of Once Upon a Time There Was No Other Than God on https://al-islam.org/once-upon-time-there-was-no-other-god (read 2026-11-11)."
+    needs_review: true
+
+  - id: ahlul-bayt-world-assembly
+    name: "Ahlul Bayt World Assembly"
+    role: author
+    alt_names: []
+    notes: "Listed as author (an organization) of Nahj al-Balaghah for Children on https://al-islam.org/nahj-al-balaghah-children (read 2026-11-11)."
+    needs_review: true
