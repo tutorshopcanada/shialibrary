@@ -35,7 +35,7 @@ itself only retrieves and ranks those records.
 
 | Source | What is cataloged | Status |
 |---|---|---|
-| thaqalayn.net | Hadith collections, one record per collection or volume | Active |
+| thaqalayn.net | Hadith collections: one record per collection or volume, plus one section record per chapter (owner decision 2026-11-11). Individual hadith are still not cataloged. | Active |
 | sistani.org | Books of rulings (book and page level) and the Q&A area (topic and single-question level) | Active |
 | al-islam.org | Books and articles, beginner material first | Active |
 | YouTube channels | One record per video | Waiting for the owner's channel list |
