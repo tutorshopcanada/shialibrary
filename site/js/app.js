@@ -489,13 +489,13 @@ function pageStage(m) {
 // ---------------------------------------------------------------------------
 function curatedHtml(result) {
   const c = result.curated; if (!c) return '';
-  let out = '<div class="frame curated"><div class="gh">';
-  if (c.question) out += `<h2 class="ch" dir="auto">${esc(c.question.question)}${c.question.draft ? ' <span class="pill">Draft</span>' : ''}</h2>${c.path ? '' : '<p>The pages chosen for this question are listed first below.</p>'}`;
-  else if (c.heading) out += `<h2 class="ch" dir="auto">${esc(c.heading.label)}${engine.vocabularyDraft ? ' <span class="pill">Draft</span>' : ''}</h2><p><a href="${esc(topicHref(c.heading.id))}">Browse everything on this topic</a></p>`;
-  out += '</div>';
-  if (c.path) out += `<div class="callout"><h3 class="h" dir="auto">Start here: ${esc(c.path.title)}${c.path.draft ? ' <span class="pill">Draft</span>' : ''}</h3>${c.path.intro ? `<p class="mute" dir="auto">${esc(c.path.intro)}</p>` : ''}${stepsHtml(c.path, true)}</div>`;
-  if (c.questions && c.questions.length) out += `<div class="gh"><p>${c.question ? 'Related questions' : 'Common questions on this topic'}</p></div><ul class="qlist">${c.questions.map((q) => `<li><a href="${esc(qHref(q.question))}"><span dir="auto">${esc(q.question)}</span>${q.draft ? '<span class="pill">Draft</span>' : ''}</a></li>`).join('')}</ul>`;
-  return out + '</div>';
+  const qs = [...(c.question ? [c.question] : []), ...(c.questions || [])].filter((q, i, a) => a.findIndex((x) => x.id === q.id) === i).slice(0, 5);
+  const draft = qs.some((q) => q.draft) || (c.path && c.path.draft) || (c.heading && engine.vocabularyDraft);
+  const head = c.heading ? `Questions about ${c.heading.label}` : 'Closest questions';
+  let out = '';
+  if (qs.length) out += `<section class="tsec cur"><h2>${esc(head)}${draft ? ' <span class="pill">Draft</span>' : ''}</h2><ul class="qlines">${qs.map((q) => qLine(q, '')).join('')}${c.heading ? `<li><a class="ql ql-go" href="${esc(topicHref(c.heading.id))}"><span class="ql-t">Everything on ${esc(c.heading.label)}</span><span class="ql-m"></span></a></li>` : ''}</ul></section>`;
+  if (c.path) out += `<section class="tsec cur"><h2>Read in order</h2><div class="pgrid one">${pcardHtml(c.path)}</div></section>`;
+  return out;
 }
 function stepsHtml(path, compact) {
   return `<ol class="hsteps">${path.steps.map((s) => { const r = rec(s.record); return r ? `<li><div>${s.why ? `<p class="why" dir="auto">${esc(s.why)}</p>` : ''}<ul class="cards">${cardHtml(r, { compact })}</ul></div></li>` : ''; }).join('')}</ol>`;
@@ -586,7 +586,7 @@ function resultsHtml(st, pre) {
   const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
   let out = browsing ? '' : refineHtml(st);
   const cap = Number(engine.config.layer2.max_results) || 150;
-  out += `<div class="rhead"><p class="sub">${n >= cap ? `Showing the best ${n} pages. Narrow your search to see others.` : n ? `${pl(n, 'page')} found.` : ''}</p></div>`;
+  if (browsing) out += `<div class="rhead"><p class="sub">${n >= cap ? `Showing the best ${n} pages. Narrow it down with the filters.` : n ? `${pl(n, 'page')}.` : ''}</p></div>`;
   if (!browsing) out += curatedHtml(result);
   out += controlsHtml(st, result);
   if (!n) {
@@ -595,15 +595,15 @@ function resultsHtml(st, pre) {
   }
   let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
   const ee = take(result.exact), rr = take(result.related), total = result.exact.length + result.related.length;
-  const list = (es, o) => `<ul class="cards">${es.map((e) => entryHtml(e, o)).join('')}</ul>`;
+  const list = (es) => resultRows(es);
   if (browsing) {
     announceText = `${pl(n, 'page')}.`;
     out += `<section class="grp frame"><div class="gh"><h3>${pl(n, 'page')}</h3></div>${list(ee, { hideContextFor: st.section })}</section>`;
   } else {
     announceText = ex ? `${pl(ex, 'exact match', 'exact matches')}${rel ? ` and ${pl(rel, 'related result')}` : ''}.` : `No exact matches. ${pl(rel, 'related result')}.`;
-    out += ex ? `<section class="grp frame"><div class="gh"><h3>Exact matches <span>${ex}</span></h3><p>Your words (or a matching topic) appear in the title or in the questions this page helps answer.</p></div>${list(ee)}</section>`
+    out += ex ? `<section class="grp frame"><div class="gh"><h3>Exact matches <span>${ex}</span></h3><p>Your words appear in the title or in the questions a page answers.</p></div>${list(ee)}</section>`
       : '<p class="callout">No exact matches. Here are related results.</p>';
-    if (rel) out += `<section class="grp frame"><div class="gh"><h3>Related results <span>${rel}</span></h3><p>These share some of your words or the same topic. They may or may not be what you are looking for.</p></div>${list(rr)}</section>`;
+    if (rel) out += `<section class="grp frame"><div class="gh"><h3>Related results <span>${rel}</span></h3><p>These share some of your words or the same topic.</p></div>${list(rr)}</section>`;
   }
   if (total > ui.limit) out += `<button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button>`;
   if (!browsing) out += externalHtml(result.query);
@@ -618,11 +618,14 @@ function miniHtml(r) {
   ${r.description ? `<p dir="auto">${esc(r.description)}</p>` : ''}<span class="mute" style="font-size:.875rem;margin-top:auto">Opens on ${esc(sourceShort(r.source))} <span aria-hidden="true">↗</span></span></article>`;
 }
 function rowHtml(r, more) {
-  const sec = r.context && r.context.section ? r.context.section.title : '';
+  const c = r.context || {}, parts = [c.section, c.work].filter(Boolean), sid = (c.section || c.work || {}).id;
+  const ctx = parts.length ? `<span class="lr-ctx">In ${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')} · <a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a></span>` : (r.descendant_count ? `<span class="lr-ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>` : '');
+  const rh = reportHref(r);
   return `<li class="lrow"><h4><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h4>
-  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${sec ? `<span class="lr-sec" dir="auto">In ${esc(sec)}</span>` : ''}</div>
-  ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}</li>`;
+  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
+  ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<p class="lr-foot">${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></p></li>`;
 }
+const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('')}</ul>`;
 function topicHtml(id) {
   const h = engine.headingById.get(id); if (!h) return '<p class="callout">That topic does not exist.</p>';
   const res = engine.search('', { topic: id });
@@ -861,7 +864,8 @@ function render(opts = {}) {
         $('#routeStage').innerHTML = pageStage({ kind: 'Question', title: cq.question, lede: same ? '' : `The closest question to “${st.q}”.`, back: [pageHref('questions'), 'All questions'] });
         view.innerHTML = questionPageHtml(st, result);
       } else {
-        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, back: [BASE, 'Back to start'] });
+        const nn = result.counts && result.counts.total, capn = Number(engine.config.layer2.max_results) || 150;
+        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found.`), back: [BASE, 'Back to start'] });
         view.innerHTML = resultsHtml(st, result);
         announceText = `Results for ${st.q}. ${announceText}`;
       }

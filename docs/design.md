@@ -128,3 +128,7 @@ Plain, direct and specific; every line should tell a visitor something they can 
 ## Guide
 
 Built around one real result. "Anatomy of a result" shows an actual catalog page with numbered markers (tag, level, title, author and source, description) and a legend beside it; the sample card is decorative and not focusable, and the legend carries the same information as text. Below it, Levels (three rows), Tags (only kinds that exist in the catalog, each with a page count) and "On a results page" (exact matches, related results, the Draft mark). The old Sources card is gone because About covers it.
+
+## Results page
+
+Built to scan. The page stage carries the query and the count ("150 pages found", or the cap notice), so the separate count line is gone. Above the results, a plain "Questions about <topic>" list (or "Closest questions") replaces the tan block that presented a loosely matched question as if it had been asked; a matching reading path shows as a path card under "Read in order". The order switch and type chips stay on one line; "More filters" is a quiet text control that opens a panel. Exact and Related groups use the compact rows from topic pages instead of full cards, roughly halving the page height. Each row shows tag, level, author, source and whose rulings it follows, a short description, an "In <section> · More in this section" line, and a "Report a problem" link that appears on hover or focus on desktop and is always visible on touch.

@@ -937,3 +937,30 @@ fieldset.fbtabs{min-width:0;width:100%;max-width:100%}.fbc{min-width:0}
 .keys dd{margin:0;color:var(--ink);line-height:1.5;max-width:40rem}
 .keys dd .mute{margin-left:.4rem;font-size:.8125rem;font-variant-numeric:tabular-nums}
 @media (max-width:40rem){.keys>div{grid-template-columns:minmax(0,1fr)}}
+
+/* Results page */
+.cur h2{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.tsec.cur+.tsec.cur{margin-top:1.6rem}
+.grp{margin-top:1.6rem}
+.grp .lrows{margin-top:.2rem}
+.lr-rep{position:relative;z-index:1;display:inline-block;margin-top:.5rem;font-size:.8125rem;color:var(--mute)}
+.filters{border:0;background:transparent;margin:.2rem 0 1rem}
+.filters>summary{display:inline-flex;list-style:none;padding:.4rem .2rem;min-height:2.75rem;color:var(--btn);font-weight:500;cursor:pointer;gap:.5rem}
+.filters>summary::-webkit-details-marker{display:none}
+.filters>summary::before{content:"";width:.5rem;height:.5rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+.filters[open]>summary::before{transform:rotate(45deg)}
+.filters[open]{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.2rem 1rem 1rem}
+.filters>summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+.refine+.tsec.cur{margin-top:1.6rem}
+.tsec.cur{margin-bottom:1.4rem}
+.lrow .lm>span[dir]+span[dir]::before{content:"·";margin-left:-.45rem;margin-right:.45rem;color:var(--mute)}
+@media (hover:hover) and (pointer:fine){
+  .lr-rep{position:absolute;right:1rem;bottom:.7rem;margin:0;opacity:0;transition:opacity .15s}
+  .lrow:hover .lr-rep,.lrow:focus-within .lr-rep{opacity:1}
+}
+
+.lr-foot{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:.1rem 1rem;margin:.5rem 0 0;font-size:.8125rem;color:var(--mute);line-height:1.5}
+.lr-foot a{color:var(--mute)}
+.lr-foot .lr-rep{position:static;margin:0;opacity:1}
+@media (hover:hover) and (pointer:fine){.lr-foot .lr-rep{opacity:0;transition:opacity .15s}.lrow:hover .lr-foot .lr-rep,.lrow:focus-within .lr-foot .lr-rep{opacity:1}}
+@media (max-width:640px){.lrow .lm>span[dir]+span[dir]::before{display:none}}
