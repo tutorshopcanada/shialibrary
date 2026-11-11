@@ -31,6 +31,14 @@ How the static site in `site/` is put together, and where to change things. No b
 - **Motion:** short, ease-out, off for reduced-motion (fades only). Hover effects only on devices with a mouse.
 - **Accessibility:** skip link, landmarks, focus moved to the page heading on every page change with a polite announcement, visible focus on dark panels, 44 px touch targets.
 
+## Topics and paths
+
+- **Topics page:** one grid of eight cards. Each card is a single link (stretched link) with the sub-topics in plain words, an honest split of "books and articles" against "Q&A and ruling pages" (the fiqh topic is mostly Q&A pages, so one combined number misleads), a level ladder, and a "Start with" link.
+- **One topic:** sub-topic chips, "Start with these" (the three easiest books and articles), then level tabs (Beginner, Intermediate, Advanced) over compact rows. Pages from the same book or section collapse under the best match. A topic is `?topic=<heading-id>`.
+- **Paths page:** a theme filter and a grid of cards. Each card shows its steps as dots (darker = more detailed) and its level range. The theme comes from the first step's subject heading.
+- **One path:** a numbered stepper with the "why" for each step, a read tick on each (saved only in the visitor's browser), a progress count, and related paths. A path is `?path=<id>`.
+- Topic and path cards read from the catalog; nothing about them is hard-coded.
+
 ## Things that are drafts (owner to review)
 
 - `site/js/tour.js`: slide titles, one-line intros, the lists of names (the prophets and the books are samples), and the bios, which are placeholders.

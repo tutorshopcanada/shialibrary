@@ -24,7 +24,7 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const view = $('#view'), input = $('#q');
 let engine = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
 let route = { t: 'home' }, lastSlide = null, firstLoad = true, lastHref = '';
-const ui = { limit: 20, openG: {}, allPaths: false, lm: {}, readTopic: null };
+const ui = { limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '' };
 
 // ---------------------------------------------------------------------------
 // URL state
@@ -90,9 +90,11 @@ const levelLabel = (l) => engine.config.levels.labels[l] || l;
 const LV = (l) => Math.max(0, levelOrder().indexOf(l)) + 1;
 const scholarName = (id) => (engine.scholarById.get(id) || {}).name || id;
 const sourceName = (id) => (engine.sourceById.get(id) || {}).name || id;
+const sourceShort = (id) => sourceName(id).replace(/\s*\(.*\)/, '');
 const headingLabel = (id) => (engine.headingById.get(id) || {}).label || id;
 const TOPN = (id) => headingLabel(id).replace(/\s*\(.*\)/, '');
-const topOf = (id) => { const h = engine.headingById.get(id); return (h && h.ancestors && h.ancestors[0]) || id; };
+// `ancestors` runs nearest-first, so the top-level topic is the LAST item.
+const topOf = (id) => { const h = engine.headingById.get(id); return (h && h.ancestors && h.ancestors[h.ancestors.length - 1]) || id; };
 const slug = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const rec = (id) => engine.recordById.get(id);
 const topHeadings = () => engine.headings.filter((h) => !h.parent);
@@ -118,7 +120,7 @@ function extLink(url, cls, label, aria) {
 // ---------------------------------------------------------------------------
 // Result card
 // ---------------------------------------------------------------------------
-function cardHtml(r, { compact = false, hideContextFor = '', more = null, ctx: moreCtx = null } = {}) {
+function cardHtml(r, { compact = false, lean = false, tick = false, hideContextFor = '', more = null } = {}) {
   const src = sourceName(r.source);
   const authors = (r.authors || []).map(scholarName);
   const by = authors.length ? `By ${esc(authors.join(', '))} · ` : '';
@@ -135,7 +137,8 @@ function cardHtml(r, { compact = false, hideContextFor = '', more = null, ctx: m
   const orig = r.title_original ? `<p class="meta" dir="auto">${esc(r.title_original)}</p>` : '';
   let actions = '', context = '', report = '';
   if (!compact) {
-    actions = extLink(r.url, 'open', `Open on ${esc(src)} <span aria-hidden="true">↗</span>`, `Open “${r.title}” on ${src} (opens in a new tab)`);
+    const srcS = sourceShort(r.source);
+    actions = extLink(r.url, 'open', `Open on ${esc(srcS)} <span aria-hidden="true">↗</span>`, `Open “${r.title}” on ${srcS} (opens in a new tab)`);
     if (r.type === 'course' && safeUrl(r.enrollment_url) && r.enrollment_url !== r.url) actions += `<span class="minor">${extLink(r.enrollment_url, '', 'Sign-up page ↗')}</span>`;
     const c = r.context || {}, parts = [c.section, c.work].filter(Boolean);
     if (parts.length) {
@@ -149,12 +152,17 @@ function cardHtml(r, { compact = false, hideContextFor = '', more = null, ctx: m
     const rh = reportHref(r);
     report = `<p class="report"><a href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem with this link</a></p>`;
   }
-  const det = more && more.items.length
-    ? `<details class="cl"><summary>${more.items.length} more in “${esc((more.title || '').toString())}”</summary><ul class="cl-list">${more.items.slice(0, 40).map((m) => `<li>${extLink(m.url, '', esc(m.title))}</li>`).join('')}${more.items.length > 40 ? `<li class="mute">and ${more.items.length - 40} more. Narrow your search to see them.</li>` : ''}</ul></details>` : '';
+  if (lean) { context = ''; report = ''; }
+  if (tick) actions += `<label class="stick"><input class="tick" type="checkbox" data-read="${esc(r.id)}" ${read[r.id] ? 'checked' : ''}> Mark as read</label>`;
+  const det = clusterDetails(more);
   return `<li class="card"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}</div>
   ${title}${orig}<p class="meta">${by}Source: <span dir="auto">${esc(src)}</span>${loc}</p>${marja}
   ${r.description ? `<p class="d" dir="auto">${esc(r.description)}</p>` : ''}${facts}
   ${actions}${context}${report}${det}</li>`;
+}
+function clusterDetails(more) {
+  if (!more || !more.items.length) return '';
+  return `<details class="cl"><summary>${more.items.length} more in “${esc((more.title || '').toString())}”</summary><ul class="cl-list">${more.items.slice(0, 40).map((m) => `<li>${extLink(m.url, '', esc(m.title))}</li>`).join('')}${more.items.length > 40 ? `<li class="mute">and ${more.items.length - 40} more. Narrow your search to see them.</li>` : ''}</ul></details>`;
 }
 function entryHtml(e, opts) {
   if (e.kind === 'cluster') {
@@ -230,33 +238,55 @@ function questionsHtml() {
   }).join('')}</div></div></section>`;
 }
 
-function topicsHtml() {
-  return `<section class="blk" id="topics"><h2>Browse by topic</h2><p class="sub">Eight areas of study. Each card shows how deep the catalog goes and where to begin.</p>
-  <div class="frame"><div class="tgrid">${topHeadings().map((h) => {
-    const c = lvCounts(h.id), b = bestStart(h.id);
-    const subs = (h.children || []).map((id) => ({ id, n: RECS.filter((r) => r.all.includes(id)).length })).filter((s) => s.n > 0).sort((a, b2) => b2.n - a.n).slice(0, 5);
-    const labels = levelOrder().map((l) => levelLabel(l).toLowerCase());
-    return `<div class="tc"><h3><a class="tlink" href="${esc(topicHref(h.id))}">${esc(TOPN(h.id))}</a></h3>
-    <div class="lv"><div class="bars" aria-hidden="true">${c.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div><div class="leg">${c.map((n, i) => `<span class="l${i + 1}">${n} ${labels[i]}</span>`).join('')}</div></div>
-    ${b ? `<div class="start"><small>Start with</small>${extLink(b.raw.url, '', `${esc(b.raw.title)} <span aria-hidden="true">↗</span>`)}</div>` : ''}
-    <div class="subs">${subs.map((s) => `<a class="sc" href="${esc(topicHref(s.id))}">${esc(TOPN(s.id))}<i>${s.n}</i></a>`).join('')}</div></div>`;
-  }).join('')}</div></div></section>`;
+function topicStats(id) {
+  let works = 0, pages = 0;
+  for (const n of RECS) if (n.all.includes(id)) { if (n.g === 'work') works++; else pages++; }
+  return { works, pages };
 }
-function goodReadsHtml() {
+const statsText = (id) => { const s = topicStats(id); return [s.works ? `${s.works.toLocaleString()} ${s.works === 1 ? 'book or article' : 'books and articles'}` : '', s.pages ? `${s.pages.toLocaleString()} Q&A and ruling pages` : ''].filter(Boolean).join(' · '); };
+function topicTile(h) {
+  const c = lvCounts(h.id), b = bestStart(h.id), kids = (h.children || []).map(TOPN);
+  const s = topicStats(h.id), labels = levelOrder().map((l) => levelLabel(l).toLowerCase());
+  return `<article class="tile"><h3><a href="${esc(topicHref(h.id))}">${esc(TOPN(h.id))}</a></h3>
+  ${kids.length ? `<p class="about" dir="auto">${esc(kids.slice(0, 4).join(', '))}${kids.length > 4 ? ', and more' : ''}</p>` : ''}
+  <div class="tstats">${s.works ? `<span><b>${s.works.toLocaleString()}</b> ${s.works === 1 ? 'book or article' : 'books and articles'}</span>` : ''}${s.pages ? `<span><b>${s.pages.toLocaleString()}</b> Q&amp;A and ruling pages</span>` : ''}</div>
+  <div class="lv ladder"><div class="bars" aria-hidden="true">${c.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div><div class="leg">${c.map((n, i) => `<span class="l${i + 1}">${n.toLocaleString()} ${labels[i]}</span>`).join('')}</div></div>
+  ${b ? `<p class="tstart"><small>Start with</small>${extLink(b.raw.url, '', `${esc(b.raw.title)} <span aria-hidden="true">↗</span>`)}</p>` : ''}
+  <div class="tfoot">Explore this topic <span aria-hidden="true">→</span></div></article>`;
+}
+function topicsHtml() {
   const tops = topHeadings().filter((h) => RECS.some((r) => r.all.includes(h.id)));
-  if (!tops.length) return '';
-  const cur = ui.readTopic && engine.headingById.get(ui.readTopic) ? ui.readTopic : tops[0].id;
-  const picks = RECS.filter((r) => r.all.includes(cur) && r.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
-  return `<section class="blk" id="reads"><h2>Good reads by topic</h2><p class="sub">Pick a subject to see three places to begin, easiest first.</p>
-  <div class="rt" role="group" aria-label="Topic">${tops.map((h) => `<button class="chip" data-rt="${esc(h.id)}" aria-pressed="${h.id === cur}">${esc(TOPN(h.id))}</button>`).join('')}</div>
-  ${picks.length ? `<div class="frame"><ul class="cards reads">${picks.map((n) => cardHtml(n.raw)).join('')}</ul></div>` : '<p class="mute">Nothing at the work level for this topic yet.</p>'}
-  <p style="margin:.9rem 0 0"><a class="btn line" href="${esc(topicHref(cur))}">See everything on ${esc(TOPN(cur))}</a></p></section>`;
+  return `<section class="blk" id="topics"><h2>Browse by topic</h2><p class="sub">${tops.length} subjects. Open one to see three places to start and everything on it, easiest first.</p>
+  <div class="tiles">${tops.map(topicTile).join('')}</div></section>`;
+}
+
+function pathInfo(p) {
+  const rs = p.steps.map((s) => rec(s.record)).filter(Boolean), lv = rs.map((r) => LV(r.level));
+  const h0 = rs[0] && (rs[0].headings || [])[0];
+  return { rs, lv, first: lv[0] || 1, last: lv[lv.length - 1] || 1, theme: h0 ? topOf(h0) : '' };
+}
+const levelRange = (i) => (i.first === i.last ? levelLabel(levelOrder()[i.first - 1]) : `${levelLabel(levelOrder()[i.first - 1])} to ${levelLabel(levelOrder()[i.last - 1])}`);
+function pcardHtml(p) {
+  const i = pathInfo(p);
+  return `<a class="pcard" href="${esc(searchHref({ ...blank(), path: p.id }))}"><span class="pt">${esc(i.theme ? TOPN(i.theme) : 'Learning path')}</span><h3 dir="auto">${esc(p.title)}</h3>${p.intro ? `<p dir="auto">${esc(p.intro)}</p>` : ''}
+  <div class="pf"><span class="sdots" aria-hidden="true">${i.lv.map((l) => `<i class="d${Math.min(3, l)}"></i>`).join('')}</span><span>${pl(p.steps.length, 'step')} · ${esc(levelRange(i))}</span></div></a>`;
 }
 function pathsHtml() {
-  const all = engine.paths.filter((p) => p.id !== 'path-new-to-shia-islam'), list = ui.allPaths ? all : all.slice(0, 8);
-  return `<section class="blk" id="paths"><h2>Learning paths</h2><p class="sub">Short reading orders on one subject, easiest first.</p>
-  <div class="plist">${list.map((p) => `<a class="prow" href="${esc(searchHref({ ...blank(), path: p.id }))}"><div class="frame"><div class="img"><div><div class="big">${p.steps.length}</div><div class="bigl">${p.steps.length === 1 ? 'step' : 'steps'}</div></div></div></div><div><b dir="auto">${esc(p.title)}</b><span dir="auto">${esc(p.intro || '')}</span></div></a>`).join('')}</div>
-  ${all.length > 8 ? `<p style="margin:1.2rem 0 0"><button class="btn line" data-allpaths>${ui.allPaths ? 'Show fewer paths' : `Show all ${all.length} paths`}</button></p>` : ''}</section>`;
+  const infos = engine.paths.map((p) => ({ p, i: pathInfo(p) }));
+  const themes = [...new Set(infos.map((x) => x.i.theme).filter(Boolean))].sort((a, b) => topHeadings().findIndex((h) => h.id === a) - topHeadings().findIndex((h) => h.id === b));
+  const cur = themes.includes(ui.pathTheme) ? ui.pathTheme : '';
+  const list = infos.filter((x) => !cur || x.i.theme === cur);
+  return `<section class="blk" id="paths"><h2>Learning paths</h2><p class="sub">Short reading orders on one subject, easiest first. Each dot is a step; darker dots are more detailed.</p>
+  <div class="chips pfilter" role="group" aria-label="Filter by theme"><button class="chip" data-pt="" aria-pressed="${!cur}">All <i>${infos.length}</i></button>${themes.map((th) => `<button class="chip" data-pt="${esc(th)}" aria-pressed="${th === cur}">${esc(TOPN(th))} <i>${infos.filter((x) => x.i.theme === th).length}</i></button>`).join('')}</div>
+  <div class="pgrid">${list.map((x) => pcardHtml(x.p)).join('')}</div></section>`;
+}
+function pathHtml(p) {
+  const i = pathInfo(p), ids = i.rs.map((r) => r.id), done = ids.filter((id) => read[id]).length, pct = ids.length ? Math.round(done / ids.length * 100) : 0;
+  const same = engine.paths.filter((x) => x.id !== p.id && pathInfo(x).theme === i.theme), others = engine.paths.filter((x) => x.id !== p.id && !same.includes(x));
+  const related = [...same, ...others].slice(0, 3);
+  return `${p.draft ? draftBar('This path') : ''}<div class="pmeta"><span><b>${pl(p.steps.length, 'step')}</b></span><span>${esc(levelRange(i))}</span><span class="prog"><span id="pathc">${done} of ${ids.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Path progress"><i id="pathbar" style="width:${pct}%"></i></div></span></div>
+  <ol class="stepper">${p.steps.map((s, k) => { const r = rec(s.record); return r ? `<li class="${read[r.id] ? 'done' : ''}"><span class="sn2" aria-hidden="true">${k + 1}</span><div>${s.why ? `<p class="why" dir="auto"><span class="sr">Step ${k + 1}: </span>${esc(s.why)}</p>` : `<p class="sr">Step ${k + 1}</p>`}<ul class="cards">${cardHtml(r, { lean: true, tick: true })}</ul></div></li>` : ''; }).join('')}</ol>
+  ${related.length ? `<section class="related"><h2>More learning paths</h2><div class="pgrid">${related.map(pcardHtml).join('')}</div></section>` : ''}`;
 }
 
 const WHAT = { 'al-islam.org': 'Shia books, articles, lectures and Q&A. We start with introductory material.', 'thaqalayn.net': 'Hadith collections, listed one page per book or volume.',
@@ -357,8 +387,8 @@ function homeHtml() {
 const PG = {
   beginners: { kind: 'Step by step', title: 'Start here', lede: 'Never studied this before? Follow these three steps, in order.', draft: true, next: true, body: startHtml, noHide: true },
   questions: { kind: 'Questions', title: 'Common questions', lede: 'Questions newcomers ask, grouped by theme. Select one to see the pages chosen for it.', draft: true, next: true, body: questionsHtml },
-  topics: { kind: 'Topics', title: 'Topics', lede: 'Eight subjects. Each card shows how deep the catalog goes and where to begin.', draft: true, next: true, body: () => topicsHtml() + goodReadsHtml() },
-  paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Short reading orders on one subject, easiest first.', draft: true, next: true, body: pathsHtml },
+  topics: { kind: 'Topics', title: 'Topics', lede: 'Each subject has its own reading list, from beginner to advanced.', draft: true, next: true, body: topicsHtml },
+  paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Short reading orders on one subject. Pick a theme, then a path.', draft: true, next: true, body: pathsHtml },
   sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these approved websites. Nothing else appears.', next: true, body: sourcesHtml },
   guide: { kind: 'Guide', title: 'How to read the results', lede: 'What the levels and tags mean, so you know what you are opening.', next: true, body: guideHtml },
   about: { kind: 'About', title: 'About and scope', lede: 'What this catalog is, what it includes, and how results are chosen.', next: true, body: aboutHtml, noHide: true },
@@ -470,16 +500,35 @@ function resultsHtml(st) {
 }
 const refineHtml = (st) => `<form class="refine" id="refine" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="q2">Refine your search</label><input id="q2" type="search" autocomplete="off" enterkeyhint="search" value="${esc(st.q)}" maxlength="200"><button class="btn solid" type="submit">Search</button></form>`;
 
+function miniHtml(r) {
+  const src = sourceName(r.source);
+  return `<article class="mini"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}</div>
+  <h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>
+  ${r.description ? `<p dir="auto">${esc(r.description)}</p>` : ''}<span class="mute" style="font-size:.875rem;margin-top:auto">Opens on ${esc(sourceShort(r.source))} <span aria-hidden="true">↗</span></span></article>`;
+}
+function rowHtml(r, more) {
+  const sec = r.context && r.context.section ? r.context.section.title : '';
+  return `<li class="lrow"><h4><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h4>
+  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}<span dir="auto">${esc(sourceName(r.source))}</span>${sec ? `<span class="lr-sec" dir="auto">In ${esc(sec)}</span>` : ''}</div>
+  ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}</li>`;
+}
 function topicHtml(id) {
   const h = engine.headingById.get(id); if (!h) return '<p class="callout">That topic does not exist.</p>';
   const res = engine.search('', { topic: id });
   const kids = (h.children || []).map((c) => ({ c, n: RECS.filter((r) => r.all.includes(c)).length })).filter((s) => s.n > 0);
-  let out = `<div class="rhead"><p class="sub">${pl(res.counts.total, 'page')}, laid out from beginner to advanced.</p>${kids.length ? `<div class="chips" style="margin-bottom:1.4rem">${kids.map((s) => `<a class="chip" href="${esc(topicHref(s.c))}">${esc(TOPN(s.c))} <i>${s.n}</i></a>`).join('')}</div>` : ''}</div>`;
-  levelOrder().forEach((lv, i) => {
-    const es = res.exact.filter((e) => entryLevel(e) === lv), lim = ui.lm[id + lv] || 12;
-    out += `<section class="grp frame"><div class="gh"><h3>${esc(levelLabel(lv))} <span>${entryCount(es)}</span></h3><p>${['Start here.', 'Once you know the basics.', 'Detailed rulings and primary sources.'][i] || ''}</p></div>${es.length ? `<ul class="cards">${es.slice(0, lim).map((e) => entryHtml(e)).join('')}</ul>${es.length > lim ? `<p style="margin:.8rem .4rem .4rem"><button class="more2" data-lm="${esc(id)}|${esc(lv)}">Show ${Math.min(12, es.length - lim)} more of ${es.length - lim}</button></p>` : ''}` : '<div class="gh"><p>Nothing at this level yet.</p></div>'}</section>`;
-  });
-  return out + nextBar('topic');
+  const levels = levelOrder().map((lv) => ({ lv, es: res.exact.filter((e) => entryLevel(e) === lv) }));
+  const have = levels.filter((l) => l.es.length);
+  const cur = have.some((l) => l.lv === ui.tl[id]) ? ui.tl[id] : (have[0] || {}).lv;
+  const starters = RECS.filter((n) => n.all.includes(id) && n.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
+  const es = (levels.find((l) => l.lv === cur) || { es: [] }).es, lim = ui.lm[id + cur] || 12;
+  const rows = es.slice(0, lim).map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
+  return `${kids.length ? `<nav class="tnav" aria-label="Sub-topics">${kids.map((s) => `<a class="chip" href="${esc(topicHref(s.c))}">${esc(TOPN(s.c))} <i>${s.n}</i></a>`).join('')}</nav>` : ''}
+  ${starters.length ? `<section class="tsec"><h2>${starters.length === 1 ? 'Start with this' : 'Start with these'}</h2><p class="sub">${starters.length === 1 ? 'The one book or article on this topic.' : 'The easiest books and articles on this topic.'}</p><div class="minis">${starters.map((n) => miniHtml(n.raw)).join('')}</div></section>` : ''}
+  <section class="tsec"><h2>Everything on this topic</h2><p class="sub">Choose a level. Within each level, books and articles come before individual pages.</p>
+  <div class="seg" role="group" aria-label="Level">${levels.map((l) => `<button data-tl="${esc(id)}|${esc(l.lv)}" aria-pressed="${l.lv === cur}"${l.es.length ? '' : ' disabled'}>${esc(levelLabel(l.lv))}<i>${entryCount(l.es)}</i></button>`).join('')}</div>
+  <ul class="lrows">${rows || '<li class="callout">Nothing at this level yet.</li>'}</ul>
+  ${es.length > lim ? `<p style="margin:1rem 0 0"><button class="more2" data-lm="${esc(id)}|${esc(cur)}">Show ${Math.min(12, es.length - lim)} more of ${es.length - lim}</button></p>` : ''}</section>
+  ${nextBar('topic')}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -667,14 +716,14 @@ function render(opts = {}) {
     if (!m.noHide) { const h2 = view.querySelector('section.blk > h2'); if (h2) h2.classList.add('sr'); const sb = view.querySelector('section.blk > .sub'); if (sb) sb.remove(); }
     announceText = `${m.title} page`;
   } else if (t === 'topic') {
-    $('#routeStage').innerHTML = pageStage({ kind: 'Topic', title: TOPN(route.k), back: [pageHref('topics'), 'All topics'] });
+    $('#routeStage').innerHTML = pageStage({ kind: 'Topic', title: TOPN(route.k), lede: statsText(route.k), back: [pageHref('topics'), 'All topics'] });
     view.innerHTML = topicHtml(route.k); announceText = `Topic: ${TOPN(route.k)}`;
   } else if (t === 'path') {
     const p = engine.pathById.get(st.path);
     if (!p) { $('#routeStage').innerHTML = pageStage({ kind: 'Learning path', title: 'Path not found', back: [pageHref('paths'), 'All paths'] }); view.innerHTML = '<p class="callout">That reading path does not exist.</p>'; }
     else {
       $('#routeStage').innerHTML = pageStage({ kind: 'Learning path', title: p.title, lede: p.intro, back: [pageHref('paths'), 'All paths'] });
-      view.innerHTML = (p.draft ? draftBar('This path') : '') + `<section class="blk">${stepsHtml(p, false)}</section>` + nextBar('path');
+      view.innerHTML = pathHtml(p) + nextBar('path');
     }
     announceText = `Learning path: ${titleFor(route)}`;
   } else if (t === 'entity') {
@@ -721,8 +770,8 @@ view.addEventListener('click', (e) => {
   else if ('more' in b.dataset) { ui.limit += 20; render({ push: false }); }
   else if (b.dataset.lm) { const [id, lv] = b.dataset.lm.split('|'); ui.lm[id + lv] = (ui.lm[id + lv] || 12) + 12; const y = scrollY; render({ push: false }); scrollTo(0, y); }
   else if (b.dataset.g) { ui.openG[b.dataset.g] = !ui.openG[b.dataset.g]; const y = scrollY; render({ push: false }); scrollTo(0, y); }
-  else if (b.dataset.rt) { ui.readTopic = b.dataset.rt; const y = scrollY; render({ push: false }); scrollTo(0, y); }
-  else if ('allpaths' in b.dataset) { ui.allPaths = !ui.allPaths; const y = scrollY; render({ push: false }); scrollTo(0, y); }
+  else if (b.dataset.tl) { const [id, lv] = b.dataset.tl.split('|'); ui.tl[id] = lv; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-tl="${CSS.escape(b.dataset.tl)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
+  else if ('pt' in b.dataset) { ui.pathTheme = b.dataset.pt; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-pt="${CSS.escape(b.dataset.pt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
   else if ('focus' in b.dataset) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); input.focus(); }
 });
 view.addEventListener('change', (e) => {
@@ -733,6 +782,8 @@ view.addEventListener('change', (e) => {
     if (t.checked) read[t.dataset.read] = 1; else delete read[t.dataset.read]; saveRead();
     document.querySelectorAll(`[data-read="${CSS.escape(t.dataset.read)}"]`).forEach((x) => { x.checked = t.checked; const w = x.closest('li,.si'); if (w) { const d = w.classList.contains('si') ? w.children[1] : w; d.classList.toggle('done', t.checked); } });
     const sd = startData(), sdn = sd.shelf.filter((r) => read[r.id]).length; const sc = $('#shelfc'); if (sc) sc.textContent = `${sdn} of ${sd.shelf.length} read`;
+    const stepLi = t.closest('.stepper > li'); if (stepLi) stepLi.classList.toggle('done', t.checked);
+    if ($('#pathc') && route.t === 'path') { const p = engine.pathById.get(route.st.path), ids = p ? p.steps.map((s) => s.record).filter((id) => rec(id)) : [], d = ids.filter((id) => read[id]).length, pc2 = ids.length ? Math.round(d / ids.length * 100) : 0; $('#pathc').textContent = `${d} of ${ids.length} read`; $('#pathbar').style.width = pc2 + '%'; $('#pathbar').parentElement.setAttribute('aria-valuenow', pc2); }
     const pd = sd.all.filter((id) => read[id]).length, pct = sd.all.length ? Math.round(pd / sd.all.length * 100) : 0;
     const pc = $('#planc'); if (pc) pc.textContent = `${pd} of ${sd.all.length} read`; const pb = $('#planbar'); if (pb) { pb.style.width = pct + '%'; pb.parentElement.setAttribute('aria-valuenow', pct); }
   }
