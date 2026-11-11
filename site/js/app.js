@@ -297,9 +297,9 @@ function pathInfo(p) {
 }
 const levelRange = (i) => (i.first === i.last ? levelLabel(levelOrder()[i.first - 1]) : `${levelLabel(levelOrder()[i.first - 1])} to ${levelLabel(levelOrder()[i.last - 1])}`);
 function pcardHtml(p) {
-  const i = pathInfo(p);
-  return `<a class="pcard" href="${esc(searchHref({ ...blank(), path: p.id }))}"><span class="pt">${esc(i.theme ? TOPN(i.theme) : 'Learning path')}</span><h3 dir="auto">${esc(p.title)}</h3>${p.intro ? `<p dir="auto">${esc(p.intro)}</p>` : ''}
-  <div class="pf"><span class="sdots" aria-hidden="true">${i.lv.map((l) => `<i class="d${Math.min(3, l)}"></i>`).join('')}</span><span>${pl(p.steps.length, 'step')} · ${esc(levelRange(i))}</span></div></a>`;
+  const i = pathInfo(p), lo = levelLabel(levelOrder()[i.first - 1]), hi = levelLabel(levelOrder()[i.last - 1]);
+  return `<a class="pcard" href="${esc(searchHref({ ...blank(), path: p.id }))}"><span class="pt"><span>${esc(i.theme ? TOPN(i.theme) : 'Learning path')}</span><span>${esc(pl(p.steps.length, 'step'))}</span></span><h3 dir="auto">${esc(p.title)}</h3>${p.intro ? `<p dir="auto">${esc(p.intro)}</p>` : ''}
+  <div class="pj"><span class="sdots" aria-hidden="true">${i.lv.map((l) => `<i class="d${Math.min(3, l)}"></i>`).join('')}</span><span class="pr">${i.first === i.last ? esc(lo) : `${esc(lo)} <span aria-hidden="true">→</span><span class="sr"> to </span> ${esc(hi)}`}</span></div></a>`;
 }
 function pathsHtml() {
   const infos = engine.paths.map((p) => ({ p, i: pathInfo(p) }));

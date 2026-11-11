@@ -713,3 +713,16 @@ noscript .callout{margin-top:1rem}
 .seg button[aria-pressed=true]{background:var(--paper)}
 .more2{background:color-mix(in srgb,var(--frame) 50%,transparent)}
 .jump .chip,.fbx .chip{background:var(--paper)}
+
+/* Path cards: a small journey line from the first step to the last */
+.pcard{gap:.55rem;padding:1.15rem 1.25rem 1.1rem;border-radius:14px}
+.pcard .pt{display:flex;justify-content:space-between;gap:.8rem;font-size:.75rem;color:var(--mute);letter-spacing:.01em}
+.pcard .pt span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.pcard h3{font-size:1.1875rem;line-height:1.25}
+.pcard p{-webkit-line-clamp:2}
+.pcard .pj{margin-top:auto;padding-top:.5rem;display:grid;gap:.45rem}
+.pcard .pr{font-size:.8125rem;color:var(--mute)}
+.pcard .sdots{gap:.45rem;justify-content:flex-start;padding:0}
+.pcard .sdots i{position:relative;left:auto;top:auto;right:auto;bottom:auto;transform:none;flex:none;width:.8rem;height:.8rem}
+.pcard .sdots i+i::before{content:"";position:absolute;right:100%;top:50%;width:.45rem;height:2px;margin-top:-1px;background:var(--line)}
+.pcard .pf{display:none}

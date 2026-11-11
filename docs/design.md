@@ -75,3 +75,7 @@ python3 -m http.server 8000 --directory site   # then open http://localhost:8000
 ## Calmer cards
 
 Cards were visually heavy: tan outlines, tan group backgrounds around white cards, and seven lines per result. Now: outlines use the light `--line` colour; groups sit on the page ground with no colour block (`.frame` is only used on the hero); a result shows tag and level, title, one meta line (author, source, location, rulings of), a three-line description, a text link out, and one small footer line (context, more in section, report). Topic tiles drop the level legend and "start with" link (the bar stays). Filter chips and the order switch use a softer tint.
+
+## Path cards
+
+A path card shows its theme and step count on one line, the title, a two-line intro, then a small journey line: one dot per step, joined, from light (beginner) to dark (advanced), with "Beginner → Advanced" under it. No divider and no second row of counts.
