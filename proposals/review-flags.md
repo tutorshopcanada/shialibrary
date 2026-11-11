@@ -45,3 +45,10 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
 - sistani-worship-8501 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic (e.g. How do Shias pray?), but the level is set to advanced.
 - sistani-worship-8511 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic (e.g. What is Hajj?), but the level is set to advanced.
 - sistani-worship-8513 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic (e.g. What is zakat?), but the level is set to advanced.
+
+## Skipped (polemical) - batch ai10
+- 2026-11-10 | Abu Hurayra and the Falsification of Traditions (Hadith) (Yasin T. al-Jibouri) | https://al-islam.org/articles/abu-hurayra-and-falsification-traditions-hadith-yasin-t-al-jibouri | Page's own tone is polemical: argues against Abu Hurayra, Mu'awiyah, the Umayyads and some Sunni scholars.
+
+## Skipped (not an article) - batch ai10
+- 2026-11-10 | Conversion Story For Haider Brad Haber | https://al-islam.org/discover/haider-brad-haber | The page is a video (ABTV Reborn); /discover/ convert-story pages (also Abdul Baqi, Joe Belden, David Kingdavong, Nishith Desai, Maryam Flemming, listed on converts-to-islam?page=1) were not fetched and look like video stories, outside the articles-only brief.
+- 2026-11-10 | Fatwas about Unity from Contemporary Ulama of the Islamic World | https://al-islam.org/al-taqrib/number-4-winter-2009/fatwas-about-unity-contemporary-ulama-islamic-world | Not fetched; title indicates fatwas by various scholars (fiqh-style), so skipped under the fiqh rule pending owner decision.

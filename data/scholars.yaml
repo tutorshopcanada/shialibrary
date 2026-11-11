@@ -801,3 +801,60 @@ scholars:
     alt_names: []
     notes: "Labeled author of 'From Medina to Sham: Lady Zaynab's Commitment to Wilayah' on al-islam.org (read 2026-11-10)."
     needs_review: true
+
+  - id: muhammad-mahdi-mahrizi
+    name: "Muhammad Mahdi Mahrizi"
+    role: author
+    alt_names:
+      - "Mahdi Mahrizi"
+    notes: "Named as author of 'Compilation of Imam Ali's Words and the Classification of Nahj al-Balaghah' on al-islam.org (read 2026-11-10); the page names Mahdi Chamanzar as translator."
+    needs_review: true
+
+  - id: afzal-sumar
+    name: "Afzal Sumar"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'The Formation of the Ja'fari Shi'a Islamic School of Law from its Inception to the Occultation' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: sayyid-sadiq-husayni-tashi
+    name: "Sayyid Sadiq Sayyid Husayni Tashi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'The Practice of the Holy Prophet (S) and Muslim Leaders in Dealing with Ideological Opponents' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: abd-al-karim-bi-azar-shirazi
+    name: "Abd al-Karim Bi-Azar Shirazi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Majma' al-Bayan: Bridging Enclaves of Knowledge' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-waidh-zadeh-khurasani
+    name: "Muhammad Wa'idh Zadeh Khurasani"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Types of Unity in the Qur'an and Fundamental Causes of Disunity' on al-islam.org (read 2026-11-10); translators named there are Salim S. Yusufali and Shaista K. Yusufali."
+    needs_review: true
+
+  - id: muhammad-al-asi
+    name: "Muhammad al-'Asi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Some Thoughts on the Road to Islamic Solidarity' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: reza-shah-kazemi
+    name: "Reza Shah-Kazemi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Civilizational Dialogue And Mysticism' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-rahim-iwazi
+    name: "Muhammad Rahim Iwazi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Imam Khumayni's Vision of Islamic Unity' on al-islam.org (read 2026-11-10)."
+    needs_review: true
