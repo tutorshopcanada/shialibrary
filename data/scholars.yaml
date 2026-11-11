@@ -752,3 +752,17 @@ scholars:
     alt_names: []
     notes: "Named as author on https://al-islam.org/message-thaqalayn/vol-14-no-2-summer-2013/forgiveness-munajat-shabaniyyah-arifa-hudda (read 2026-11-10)."
     needs_review: true
+
+  - id: alireza-maktabdar
+    name: "AliReza Maktabdar"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Good-Naturedness in Islam: Its Signs and Effects' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: marzieh-sadeqi
+    name: "Marzieh Sadeqi"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Justice as a Virtue of the Soul' on al-islam.org (read 2026-11-10)."
+    needs_review: true
