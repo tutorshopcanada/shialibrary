@@ -1,0 +1,33 @@
+id: al-islam-anecdotes-of-pious-men
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Anecdotes of Pious Men
+title_original: ''
+authors:
+- mutahhari
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/anecdotes-pious-men-murtadha-mutahhari
+language: en
+date: ''
+description: A collection of 18 selected Islamic stories, taken from the Persian book Dastan-e Rastan.
+  The stories involve figures from early Islamic history, including Imam Ali, and illustrate moral lessons.
+  Published by the World Organization for Islamic Services (WOFIS).
+sample_questions:
+- Are there moral stories from early Islam?
+- What stories are told about Imam Ali?
+- What lessons do Islamic stories teach?
+- Where can I read short Islamic anecdotes?
+headings:
+- ethics
+- history
+access: free
+location: ''
+needs_review: true
+review_note: Level not stated on the page (audience not stated); set to intermediate pending review. Stories
+  are described by the page as selected from a Persian book; historical accuracy of individual stories
+  not assessed.
+cataloged_on: '2026-11-11'

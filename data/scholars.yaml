@@ -858,3 +858,59 @@ scholars:
     alt_names: []
     notes: "Named as author of 'Imam Khumayni's Vision of Islamic Unity' on al-islam.org (read 2026-11-10)."
     needs_review: true
+
+  - id: nasir-shamsi
+    name: "Nasir Shamsi"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Holy Quran, Some Basic Facts on https://al-islam.org/holy-quran-some-basic-facts-nasir-shamsi (read 2026-11-11)."
+    needs_review: true
+
+  - id: association-of-imam-mahdi
+    name: "Association of Imam Mahdi"
+    role: author
+    alt_names: []
+    notes: "An organization named as author of The Last Luminary and Adolescence: A Period of Examination and Success on al-islam.org (read 2026-11-11)."
+    needs_review: true
+
+  - id: kubra-jafri
+    name: "Kubra Jafri"
+    role: author
+    alt_names: []
+    notes: "Named as author of Stories of Bahlool on https://al-islam.org/stories-bahlool (read 2026-11-11)."
+    needs_review: true
+
+  - id: najafi-quchani
+    name: "Hujjatul Islam Najafi Quchani"
+    role: author
+    alt_names: []
+    notes: "Named as author of Journey to the Unseen World on https://al-islam.org/journey-unseen-world-hujjatul-islam-najafi-quchani (read 2026-11-11)."
+    needs_review: true
+
+  - id: bahram-samii
+    name: "Bahram Samii"
+    role: author
+    alt_names: []
+    notes: "Named as author of An Introduction to the Glorious Quran on https://al-islam.org/introduction-glorious-quran-bahram-samii (read 2026-11-11)."
+    needs_review: true
+
+  - id: ali-al-husayni-al-milani
+    name: "Sayyid Ali al-Husayni al-Milani"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Promised Savior on https://al-islam.org/promised-savior-inquiry-imamate-imam-mahdi-viewpoint-muslim-thinkers-al-milani (read 2026-11-11). Not assumed to be the same person as Sayyid Fadhil Milani."
+    needs_review: true
+
+  - id: mohammad-mehdi-taj-langaroodi
+    name: "Mohammad Mehdi Taj Langaroodi"
+    role: author
+    alt_names: []
+    notes: "Named as author of Morals for Children and Young on https://al-islam.org/morals-children-and-young-mohammad-mehdi-taj-langaroodi (read 2026-11-11)."
+    needs_review: true
+
+  - id: sayyid-muhammad-sohofi
+    name: "Sayyid Muhammad Sohofi"
+    role: author
+    alt_names: []
+    notes: "Named as compiler of The Status of Mothers in Islam on https://al-islam.org/status-mothers-islam-sayyid-muhammad-sohofi (read 2026-11-11)."
+    needs_review: true

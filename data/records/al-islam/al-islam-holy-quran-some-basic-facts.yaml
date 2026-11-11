@@ -1,0 +1,31 @@
+id: al-islam-holy-quran-some-basic-facts
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: The Holy Quran, Some Basic Facts
+title_original: ''
+authors:
+- nasir-shamsi
+marja: ''
+source: al-islam.org
+url: https://www.al-islam.org/holy-quran-some-basic-facts-nasir-shamsi
+language: en
+date: ''
+description: A short introduction to basic facts about the Quran, with an overview of the book, a section
+  on tafsir (explanation and interpretation of the Quran) and a section on translations of the Quran.
+sample_questions:
+- What is the Quran?
+- What is tafsir?
+- Which translations of the Quran exist?
+- Where can I find basic facts about the Quran?
+headings:
+- quran
+- quran-sciences
+- tafsir
+access: free
+location: ''
+needs_review: true
+review_note: 'Level from the page: ''a short introduction to the basic facts about the Holy Quran''.'
+cataloged_on: '2026-11-11'
