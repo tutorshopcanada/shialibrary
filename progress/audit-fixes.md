@@ -166,22 +166,6 @@ A second AI reader checked every record for ruling language, opinion, and format
 - Before: A hadith collection (reported sayings of the Prophet and the Imams) about Imam al-Rida, compiled by Shaykh al-Saduq and shown with an English translation by Dr. Ali Peiravi. The site says it covers history, law, ethics and theology. Volume 1 of 2 begins with an introduction and traditions about the Imam's mother, name and birth date. It is a primary source for readers with some background.
 - After: A hadith collection (reported sayings of the Prophet and the Imams) about Imam al-Rida, compiled by Shaykh al-Saduq and shown with an English translation by Dr. Ali Peiravi. The site says it covers history, law, ethics and theology, and Volume 1 of 2 begins with an introduction and traditions about the Imam's mother, name and birth date. It is a primary source for readers with some background.
 
-## sistani-laws-2148 (RULING, description)
-- Before: Rules on subsequence (tabaʿiyyah), where an impure object becomes pure by means of another object's purification. Examples include the container of wine that turns to vinegar, a disbeliever's child, and surfaces used for washing the dead.
-- After: How does a child's purity relate to a parent's conversion?
-
-## sistani-qa-14883 (RULING, description)
-- Before: A question asking whether zakat is due on bank accounts and monetary bills.
-- After: Does zakat apply to bank savings?
-
-## sistani-qa-15423 (RULING, description)
-- Before: A question about the jurists' view on men wearing pure natural silk, asking about silk mixed with other material in a necktie, and about a necktie made of pure natural silk.
-- After: What are the rules on men wearing silk?
-
-## sistani-qa-15579 (OPINION, description)
-- Before: A question asking whether the third testimony (the testimony to the guardianship of Imam Ali) is a part of the adhan and iqamah.
-- After: Do Shias include the third testimony in the adhan?
-
 ## sistani-west-hajj-general-rules (RULING, description)
 - Before: General rules on hajj. Topics include what is meant by capability to perform hajj (time, health, safe roads and finances), the role of money and debts, and related points for pilgrims travelling from the West.
 - After: General rules on hajj. Topics include what is meant by capability to perform hajj, the role of money and debts, and related points for pilgrims travelling from the West.
@@ -193,18 +177,6 @@ A second AI reader checked every record for ruling language, opinion, and format
 ## sistani-west-purity-general-rules (OPINION, description)
 - Before: General rules on ritual purity and impurity. Topics include the starting assumption about whether things are pure, how impurity passes from one item to another through wetness, the status of the People of the Book (Jews, Christians and Zoroastrians), and everyday situations in the West.
 - After: General rules on ritual purity and impurity. Topics include the starting assumption about whether things are pure, how impurity passes from one item to another through wetness, the status of the People of the Book, and everyday situations in the West.
-
-## sistani-worship-8496 (RULING, description)
-- Before: Covers the eighth purifier, transfer, where an impure substance moves into another creature, with an example.
-- After: How does the transfer purifier apply to blood?
-
-## thaqalayn-al-imama-wal-tabsira (OPINION, description)
-- Before: An early hadith collection (reported sayings of the Prophet and the Imams) on divine leadership (the Imamate) compiled by ʿAli ibn Babawayh, the father of Shaykh al-Saduq according to the site, shown with an English translation by Haseeb Hassan. It covers the succession of the Imams, and an addendum covers the Mahdi and his occultation. It is a primary source.
-- After: What do the hadith say about the need for a divine authority on earth?
-
-## thaqalayn-kamal-al-din (OPINION, description)
-- Before: A work by Shaykh al-Saduq on the occultation (ghayba, meaning being hidden from view) of the twelfth Imam, Muhammad al-Mahdi, and on the Imamate, shown with an English translation by Sayyid Athar Husain S. H. Rizvi. The site describes it as a theological and historical work with a systematic defense of the doctrine of occultation. It is a primary source for readers with some background.
-- After: What do Shia hadith say about the need for an Imam?
 
 ## Title fixes (by hand, from the same audit)
 - sistani-laws-2150, sistani-laws-2156: removed a stray footnote marker "[1]" from the title.
