@@ -98,14 +98,14 @@ questions:
     alt_phrasings: ["who are the shia", "what do shias believe", "introduction to shia islam", "shia islam for beginners", "what does shia mean"]
     headings: [new-to-shia-islam]
     path: path-new-to-shia-islam
-    top_records: [al-islam-discovering-shii-islam, al-islam-discovering-islam, al-islam-islamic-teachings-in-brief]
+    top_records: [al-islam-discovering-shii-islam, al-islam-brief-introduction-to-islam, al-islam-discovering-islam]
     draft: true
   - id: q-how-to-become-muslim
     question: "I'm new to Islam. Where do I start?"
     alt_phrasings: ["how do i become a muslim", "new muslim where to start", "converting to islam", "what is islam"]
     headings: [becoming-muslim, new-to-shia-islam]
     path: path-new-to-shia-islam
-    top_records: [al-islam-discovering-islam, al-islam-discovering-shii-islam]
+    top_records: [al-islam-brief-introduction-to-islam, al-islam-what-muslim-should-know-and-believe, al-islam-discovering-islam]
     draft: true
   - id: q-how-do-shias-pray
     question: "How do Shias pray?"
@@ -119,7 +119,7 @@ questions:
     alt_phrasings: ["who was ali", "ali ibn abi talib", "first imam", "life of imam ali"]
     headings: [imam-ali]
     path: path-imam-ali
-    top_records: [al-islam-nahjul-balagah-revisited-imam-ali, al-islam-brief-history-fourteen-infallibles, thaqalayn-nahj-al-balagha]
+    top_records: [al-islam-gardener-of-the-gardens-of-tawheed, al-islam-nahjul-balagah-revisited-imam-ali, al-islam-brief-history-fourteen-infallibles]
     draft: true
   - id: q-who-are-the-twelve-imams
     question: "Who are the Twelve Imams?"
@@ -133,13 +133,13 @@ questions:
     alt_phrasings: ["what is ashura", "why do shias mourn", "why do shia cry on ashura", "why was imam hussain killed", "story of karbala", "muharram"]
     headings: [karbala-ashura]
     path: path-karbala-and-ashura
-    top_records: [al-islam-karbala-chain-of-events, al-islam-from-resolution-to-revolution]
+    top_records: [al-islam-tears-for-karbala, al-islam-karbala-and-beyond, al-islam-karbala-chain-of-events]
     draft: true
   - id: q-who-is-the-mahdi
     question: "Who is the Mahdi?"
     alt_phrasings: ["who is imam mahdi", "the twelfth imam", "the hidden imam", "what is the occultation", "imam zaman"]
     headings: [imam-mahdi]
-    top_records: [al-islam-fazail-ul-mahdi, thaqalayn-kitab-al-ghayba-tusi]
+    top_records: [al-islam-the-last-luminary, al-islam-fazail-ul-mahdi, thaqalayn-kitab-al-ghayba-tusi]
     path: path-the-mahdi-and-waiting
     draft: true
   - id: q-who-is-fatimah
@@ -154,7 +154,7 @@ questions:
     alt_phrasings: ["introduction to the quran", "about the quran", "how was the quran revealed"]
     headings: [quran]
     path: path-the-prophet-and-the-quran
-    top_records: [al-islam-quran-in-islam-its-impact-and-influence]
+    top_records: [al-islam-holy-quran-some-basic-facts, al-islam-introduction-to-the-glorious-quran, al-islam-quran-in-islam-its-impact-and-influence]
     draft: true
   - id: q-why-pray-on-turbah
     question: "Why do Shias pray on a clay tablet?"
@@ -193,13 +193,15 @@ questions:
     question: "Is God fair? What about suffering and free will?"
     alt_phrasings: ["divine justice", "why does god allow suffering", "do we have free will", "adl"]
     headings: [adl]
+    path: path-learning-about-god
     top_records: [al-islam-lets-learn-about-divine-justice, al-islam-divine-justice-mutahhari]
     draft: true
   - id: q-life-after-death
     question: "What happens after we die?"
     alt_phrasings: ["day of judgement", "life after death", "afterlife in islam", "heaven and hell"]
     headings: [maad]
-    top_records: [al-islam-day-of-judgement-rizvi]
+    path: path-learning-about-god
+    top_records: [al-islam-lets-learn-about-resurrection, al-islam-day-of-judgement-rizvi]
     draft: true
   - id: q-how-to-make-dua
     question: "How do I make dua (call on God)?"
@@ -324,7 +326,7 @@ questions:
     question: "What is Ashura?"
     alt_phrasings: ["ashoora", "day of ashura", "tenth of muharram", "what happens on 10 muharram"]
     headings: [karbala-ashura]
-    top_records: [al-islam-what-is-ashoora, al-islam-ashura-tenth-muharram]
+    top_records: [al-islam-tears-for-karbala, al-islam-what-is-ashoora, al-islam-ashura-tenth-muharram]
     path: path-ashura-arbaeen-and-mourning
     draft: true
   - id: q-what-is-arbaeen
@@ -365,7 +367,7 @@ questions:
     question: "What is Nahj al-Balagha?"
     alt_phrasings: ["nahjul balagha", "nahj ul balagha", "peak of eloquence", "book of imam ali sermons"]
     headings: [nahj-al-balagha]
-    top_records: [al-islam-nahjul-balagah-revisited-imam-ali, al-islam-preface-nahjul-balaghah, al-islam-contents-nahjul-balaghah]
+    top_records: [al-islam-nahj-al-balaghah-for-children, al-islam-nahjul-balagah-revisited-imam-ali, al-islam-preface-nahjul-balaghah]
     path: path-nahj-al-balagha
     draft: true
   - id: q-nahj-authentic
@@ -385,7 +387,8 @@ questions:
     question: "How can I start understanding the Quran?"
     alt_phrasings: ["reading the quran for beginners", "quran lessons", "how to read the koran", "learn quran meaning"]
     headings: [quran]
-    top_records: [al-islam-opening-our-eyes-light-quran, al-islam-quranic-lessons, al-islam-the-koran-murata-chittick]
+    path: path-quran-for-beginners
+    top_records: [al-islam-holy-quran-some-basic-facts, al-islam-quranic-lessons, al-islam-opening-our-eyes-light-quran]
     draft: true
   - id: q-science-of-hadith
     question: "How are hadith studied and classified?"
@@ -435,7 +438,7 @@ questions:
     question: "What does Islam teach about good character?"
     alt_phrasings: ["akhlaq", "good manners islam", "how to be a better person", "islamic ethics for beginners"]
     headings: [ethics]
-    top_records: [al-islam-ethics-and-spiritual-growth, al-islam-good-naturedness-in-islam, al-islam-indicators-of-piety-part-1]
+    top_records: [al-islam-morals-for-children-and-young, al-islam-ethics-and-spiritual-growth, al-islam-good-naturedness-in-islam]
     path: path-ethics-and-character
     draft: true
   - id: q-spiritual-growth
@@ -448,7 +451,7 @@ questions:
     question: "How should I raise my children as Muslims?"
     alt_phrasings: ["islamic parenting", "teaching kids about islam", "bringing up children", "tarbiyah of children"]
     headings: [family-social-ethics]
-    top_records: [al-islam-raising-children, al-islam-the-prayer-of-a-mother]
+    top_records: [al-islam-morals-for-children-and-young, al-islam-raising-children, al-islam-the-prayer-of-a-mother]
     path: path-family-and-parenting
     draft: true
   - id: q-marriage-rules
@@ -489,12 +492,14 @@ questions:
     question: "What do Shias believe about God?"
     alt_phrasings: ["tawhid meaning", "oneness of god", "allah in shia islam", "nature of god"]
     headings: [tawhid]
-    top_records: [al-islam-islamic-teachings-in-brief, al-islam-basic-teachings-of-islam, al-islam-is-god-a-person]
+    path: path-learning-about-god
+    top_records: [al-islam-lets-learn-about-god, al-islam-once-upon-a-time-there-was-no-other-than-god, al-islam-islamic-teachings-in-brief]
     draft: true
   - id: q-why-prophets
     question: "Why did God send prophets?"
     alt_phrasings: ["purpose of prophets", "nubuwwah", "what is prophethood", "who were the prophets"]
     headings: [nubuwwah]
+    path: path-stories-for-young-readers
     top_records: [al-islam-stories-of-the-prophets, al-islam-basic-teachings-of-islam]
     draft: true
   - id: q-islam-and-science
@@ -538,4 +543,53 @@ questions:
     alt_phrasings: ["wudu and ghusl", "najis and tahir", "what is najasah", "being pure for prayer", "cleanliness in islam"]
     headings: [purity]
     top_records: [sistani-west-purity-introduction, sistani-west-purity-general-rules]
+    draft: true
+  - id: q-stories-for-children
+    question: "Are there Islamic stories I can read with my children?"
+    alt_phrasings: ["islamic stories for kids", "children's books about islam", "bedtime stories prophets", "stories for young muslims"]
+    headings: [nubuwwah]
+    path: path-stories-for-young-readers
+    top_records: [al-islam-stories-of-the-prophets, al-islam-islamic-stories, al-islam-pearls-of-wisdom]
+    draft: true
+  - id: q-teach-kids-about-god
+    question: "How do I explain God to a child?"
+    alt_phrasings: ["teaching children about allah", "islamic lessons for kids about god", "books on tawhid for children", "simple lessons on belief for youth"]
+    headings: [tawhid]
+    path: path-learning-about-god
+    top_records: [al-islam-once-upon-a-time-there-was-no-other-than-god, al-islam-lets-learn-about-god, al-islam-fifty-lessons-principles-belief-youth]
+    draft: true
+  - id: q-teach-kids-manners
+    question: "How do I teach my child good manners in Islam?"
+    alt_phrasings: ["islamic manners for kids", "teaching children not to backbite", "good behaviour for muslim children", "akhlaq for kids"]
+    headings: [family-social-ethics]
+    path: path-good-manners-for-children
+    top_records: [al-islam-morals-for-children-and-young, al-islam-lets-talk-about-backbiting, al-islam-characteristics-of-a-muslim]
+    draft: true
+  - id: q-what-is-ramadan
+    question: "What is the month of Ramadan?"
+    alt_phrasings: ["why do muslims fast", "ramadan for beginners", "ramazan meaning", "month of fasting"]
+    headings: [islamic-calendar]
+    path: path-understanding-ramadan
+    top_records: [al-islam-understanding-month-of-glory, al-islam-seeking-assistance-from-prayer-and-fasting]
+    draft: true
+  - id: q-companions-of-the-imams
+    question: "Who were the companions of the Prophet and the Imams?"
+    alt_phrasings: ["who was abu dharr", "who was bilal", "who was kumayl", "who was maytham al-tammar", "followers of imam ali"]
+    headings: [companions-scholars]
+    path: path-companions-of-the-prophet-and-imams
+    top_records: [al-islam-and-once-again-abu-dharr, al-islam-bilal-historical-stories-children-4, al-islam-kumayl-bin-ziyad]
+    draft: true
+  - id: q-who-was-bilal
+    question: "Who was Bilal, the first caller to prayer?"
+    alt_phrasings: ["bilal ibn rabah", "first muezzin", "story of bilal"]
+    headings: [companions-scholars]
+    path: path-companions-of-the-prophet-and-imams
+    top_records: [al-islam-bilal-historical-stories-children-4, al-islam-islamic-stories]
+    draft: true
+  - id: q-who-was-abu-talib
+    question: "Who was Abu Talib?"
+    alt_phrasings: ["uncle of the prophet", "father of imam ali", "abu talib biography"]
+    headings: [prophet-muhammad]
+    path: path-companions-of-the-prophet-and-imams
+    top_records: [al-islam-abu-talib-b-abdul-muttalib]
     draft: true

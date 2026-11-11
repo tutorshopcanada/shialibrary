@@ -1,17 +1,17 @@
 id: path-nahj-al-balagha
-title: "Nahj al-Balagha and Imam Ali's words"
-intro: "A reading order that introduces Imam Ali through his sermons, letters and sayings collected in Nahj al-Balagha."
+title: Nahj al-Balagha and Imam Ali's words
+intro: A reading order that introduces Imam Ali through his sermons, letters and sayings collected in Nahj al-Balagha.
 steps:
+- record: al-islam-nahj-al-balaghah-for-children
+  why: A small selection of passages from Nahj al-Balagha, chosen for children.
 - record: al-islam-nahjul-balagah-revisited-imam-ali
-  why: "A beginner-level introduction to Imam Ali and to Nahj al-Balagha."
+  why: A beginner-level introduction to Imam Ali and to Nahj al-Balagha.
 - record: al-islam-preface-nahjul-balaghah
-  why: "A preface that describes the book and its compiler."
+  why: A preface that describes the book and its compiler.
 - record: al-islam-various-sayings-imam-ali
-  why: "A selection of sayings of Imam Ali."
-- record: al-islam-concept-freedom-nahjul-balaghah
-  why: "An article on one theme in the book, the idea of freedom."
+  why: A selection of sayings of Imam Ali.
 - record: al-islam-authenticity-nahjul-balaghah
-  why: "An article on how the book's sources and authenticity are discussed."
+  why: An article on how the book's sources and authenticity are discussed.
 - record: thaqalayn-nahj-al-balagha
-  why: "A link to the full book on Thaqalayn, once you are ready to read it directly."
+  why: A link to the full book on Thaqalayn, once you are ready to read it directly.
 draft: true

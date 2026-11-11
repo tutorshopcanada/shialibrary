@@ -1,17 +1,17 @@
 id: path-family-and-parenting
-title: "Family and parenting"
-intro: "A short reading order on raising children and on family relationships."
+title: Family and parenting
+intro: A short reading order on raising children and on family relationships.
 steps:
 - record: al-islam-the-prayer-of-a-mother
-  why: "A short, simple story about a mother, listed among the site's texts for children."
+  why: A short, simple story about a mother, listed among the site's texts for children.
+- record: al-islam-morals-for-children-and-young
+  why: Short stories on family values and good morals that parents can read with children.
 - record: al-islam-raising-children
-  why: "A book on bringing up children."
-- record: al-islam-duty-of-acquiring-knowledge
-  why: "An article on the value of education, relevant to raising children."
+  why: A book on bringing up children.
 - record: al-islam-letter-father-to-son-last-will
-  why: "A letter of advice from Imam Ali to his son."
+  why: A letter of advice from Imam Ali to his son.
 - record: sistani-west-marriage-introduction
-  why: "The introduction to the marriage chapter of a guide for Muslims in the West, for readers who want the practical rules."
+  why: The introduction to the marriage chapter of a guide for Muslims in the West, for readers who want the practical rules.
 - record: thaqalayn-risalat-al-huquq
-  why: "A treatise on the rights people owe one another, for readers ready for primary sources."
+  why: A treatise on the rights people owe one another, for readers ready for primary sources.
 draft: true

@@ -1,17 +1,17 @@
 id: path-twelve-imams-in-turn
-title: "The Twelve Imams, one by one"
-intro: "A reading order that starts with what an Imam is and then moves through the lives of several of the Imams in turn."
+title: The Twelve Imams, one by one
+intro: A reading order that starts with what an Imam is and then moves through the lives of several of the Imams in turn.
 steps:
 - record: al-islam-lets-learn-about-imamate
-  why: "A simple introduction to what Shias mean by the Imams."
+  why: A simple introduction to what Shias mean by the Imams.
+- record: al-islam-imamate-and-the-imams
+  why: A book written for young people about what the Imams are and why Shias follow them.
 - record: al-islam-brief-history-fourteen-infallibles
-  why: "A short history of the Prophet, Lady Fatimah and the twelve Imams."
+  why: A short history of the Prophet, Lady Fatimah and the twelve Imams.
 - record: al-islam-army-of-imam-al-hasan
-  why: "An article on the life and times of the second Imam, Imam al-Hasan."
+  why: An article on the life and times of the second Imam, Imam al-Hasan.
 - record: al-islam-imam-husayn-saviour-of-islam
-  why: "A book on the third Imam, Imam al-Husayn, and his stand."
+  why: A book on the third Imam, Imam al-Husayn, and his stand.
 - record: al-islam-ibadah-imam-zaynul-abideen
-  why: "An article on the worship of the fourth Imam, Imam Zayn al-Abidin."
-- record: al-islam-imam-sadiq-contribution-sciences
-  why: "An article on the sixth Imam, Imam Ja'far al-Sadiq, and his contribution to learning."
+  why: An article on the worship of the fourth Imam, Imam Zayn al-Abidin.
 draft: true
