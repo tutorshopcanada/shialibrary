@@ -318,9 +318,9 @@ function pathHtml(p) {
 }
 
 const WHAT = { 'al-islam.org': 'Shia books and articles from a long-running digital library. We start with introductory material.', 'thaqalayn.net': 'Hadith collections, the primary narrations.',
-  'sistani.org': 'The rulings and the questions and answers of Sayyid Ali al-Sistani, linked to the exact page.', 'khamenei.ir': 'Rulings of Sayyid Ali Khamenei, once this source is ready.', youtube: 'Lectures from approved channels, once the channel list is confirmed.' };
+  'sistani.org': 'The rulings and the questions and answers of Sayyid Ali al-Sistani, linked to the exact page.', 'khamenei.ir': 'Rulings of Sayyid Ali Khamenei, once this source is ready.', youtube: 'Lectures from trusted channels, once the channel list is confirmed.' };
 const LISTS = { 'al-islam.org': 'One page for each book or article.', 'thaqalayn.net': 'One page for each hadith book or volume.', 'sistani.org': 'The book, each of its pages, and each question and answer.' };
-const STATE_TEXT = { active: 'In the catalog', backlog: 'Approved, not added yet', blocked: 'Approved, waiting for access' };
+const STATE_TEXT = { active: 'In the catalog', backlog: 'Planned, not added yet', blocked: 'Planned, waiting for access' };
 const srcName = (s) => (s.id === 'youtube' ? 'YouTube lectures' : s.name.replace(/\s*\(.*\)/, ''));
 function sourceStats(id) {
   const tags = {}, lv = levelOrder().map(() => 0); let n = 0;
@@ -347,10 +347,10 @@ function sourcePanel(s) {
 function sourcesHtml() {
   const active = engine.sources.filter((s) => s.status === 'active'), soon = engine.sources.filter((s) => s.status !== 'active');
   const total = engine.records.length;
-  return `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these approved websites.</p>
-  <ul class="sfacts"><li>Approved by hand</li><li>Twelver Shia only</li><li>English only</li><li><b>${total.toLocaleString()}</b> pages from <b>${active.length}</b> websites</li></ul>
+  return `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these trusted Shia sources.</p>
+  <ul class="sfacts"><li>Chosen by hand</li><li>Twelver Shia only</li><li>English only</li><li><b>${total.toLocaleString()}</b> pages from <b>${active.length}</b> websites</li></ul>
   <div class="scards">${active.map(sourcePanel).join('')}</div>
-  ${soon.length ? `<div class="tsec"><h2>On the way</h2><p class="sub">Approved, but not in the catalog yet.</p><ul class="soon-list">${soon.map((s) => `<li><div><b dir="auto">${esc(srcName(s))}</b><span>${esc(WHAT[s.id] || s.catalog_level || '')}</span></div><span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span></li>`).join('')}</ul></div>` : ''}
+  ${soon.length ? `<div class="tsec"><h2>On the way</h2><p class="sub">Chosen, but not in the catalog yet.</p><ul class="soon-list">${soon.map((s) => `<li><div><b dir="auto">${esc(srcName(s))}</b><span>${esc(WHAT[s.id] || s.catalog_level || '')}</span></div><span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span></li>`).join('')}</ul></div>` : ''}
   <div class="scope"><div><h3>Know a website that belongs here?</h3><p>Fiqh rulings come from two scholars, Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Everything else is not limited by author. Tell us about a website, or read the full scope.</p></div>
   <div class="scope-b"><a class="btn line" href="${esc(pageHref('feedback'))}" data-fbkind="source">Suggest a website</a><a class="btn line" href="${esc(pageHref('about'))}">Read the full scope</a></div></div></section>`;
 }
@@ -380,15 +380,15 @@ function aboutHtml() {
     : `<a class="btn solid" href="${esc(pageHref('feedback'))}">Tell us about it</a>`;
   const scope = safeUrl(SITE.scopeUrl) ? `<a href="${esc(SITE.scopeUrl)}" rel="noopener noreferrer">Read the full scope and inclusion criteria ↗</a>` : 'A fuller written scope is kept with the project and will be linked here once it is public.';
   const cells = [['Who it is for', 'Twelver (Ithna ‘Ashari) Shia resources, in English, with beginners first. Searching with Arabic, Persian or Urdu terms and common spellings still works: they match the same topics.'],
-    ['Where it comes from', `Approved websites only. Nothing appears unless it comes from one of them. <a href="${esc(pageHref('sources'))}">See the websites</a>.`],
+    ['Where it comes from', `Trusted Shia sources only. Nothing appears unless it comes from one of them. <a href="${esc(pageHref('sources'))}">See the websites</a>.`],
     ['Fiqh (rulings)', 'Limited to two scholars for now: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Results show whose rulings a page follows.'],
-    ['Everything else', 'History, beliefs, ethics, hadith, Quran and similar topics are not limited by author, as long as they come from an approved website.']];
+    ['Everything else', 'History, beliefs, ethics, hadith, Quran and similar topics are not limited by author, as long as they come from a trusted source.']];
   const steps = ['It checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it come first.',
     'Then it does an ordinary word search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.',
     'Exact matches have your words, or another name for the same topic, in the title or the questions a page helps answer. Everything else is Related. If nothing is exact, the page says so.',
     'If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.',
     'Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.'];
-  return `<section class="lead"><p class="lead-t">${esc(SITE.name)} is a catalog, not a library.</p><p class="lead-p">It points you to where Shia resources are published on a short list of approved websites. It never hosts, copies or writes them. It is made for people who are new and do not know where to look.</p></section>
+  return `<section class="lead"><p class="lead-t">${esc(SITE.name)} is a catalog, not a library.</p><p class="lead-p">It points you to where Shia resources are published on a short list of trusted Shia sources. It never hosts, copies or writes them. It is made for people who are new and do not know where to look.</p></section>
   <section class="tsec"><div class="pilgrid">
    <div class="pil">${ICON.link}<h3>We point, we do not host</h3><p>Every result links to the website where the original is published, and names it.</p></div>
    <div class="pil">${ICON.list}<h3>Descriptions, not answers</h3><p>Our short summaries say what a page is about. For rulings, they only name the question. Read the ruling on the source page.</p></div>
@@ -451,7 +451,7 @@ function homeHtml() {
   <section class="blk"><h2>Browse by topic</h2><p class="sub">Eight subjects. Each lists its pages from easiest to hardest.</p>
   <ul class="tt">${tops.map((x) => `<li><a class="ttl" href="${esc(topicHref(x.h.id))}"><span>${esc(TOPN(x.h.id))}</span><i>${x.n.toLocaleString()}</i></a></li>`).join('')}</ul>
   <p class="more-l"><a href="${esc(pageHref('topics'))}">All topics →</a></p></section>
-  <section class="blk"><div class="inside"><div><h2>What is in the catalog</h2><p>${engine.records.length.toLocaleString()} pages from ${active.length} approved websites. Every one links out; nothing is copied.</p></div>
+  <section class="blk"><div class="inside"><div><h2>What is in the catalog</h2><p>${engine.records.length.toLocaleString()} pages from ${active.length} trusted Shia sources. Every one links out; nothing is copied.</p></div>
    <ul class="in-l">${active.map((s) => `<li><b dir="auto">${esc(srcName(s))}</b><span>${(counts[s.id] || 0).toLocaleString()} pages</span></li>`).join('')}</ul>
    <a class="btn line" href="${esc(pageHref('sources'))}">See the websites</a></div></section>
   <p class="quietfb">Missing something? <a href="${esc(pageHref('feedback'))}">Join the waitlist or send feedback</a>.</p>`;
@@ -462,7 +462,7 @@ const PG = {
   questions: { kind: 'Questions', title: 'Common questions', lede: 'The questions newcomers ask most, grouped by theme. Each opens the pages chosen to answer it.', draft: true, next: true, body: questionsHtml },
   topics: { kind: 'Topics', title: 'Topics', lede: 'Eight subjects. Each lists its pages from beginner to advanced.', draft: true, next: true, body: topicsHtml },
   paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Ordered reading lists on one subject, easiest first. Pick a theme, then a path.', draft: true, next: true, body: pathsHtml },
-  sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these approved websites. Nothing else appears.', next: true, body: sourcesHtml },
+  sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these trusted Shia sources. Nothing else appears.', next: true, body: sourcesHtml },
   guide: { kind: 'Guide', title: 'How to read the results', lede: 'What the levels and tags mean, so you know what you are opening.', next: true, body: guideHtml },
   about: { kind: 'About', title: 'About and scope', lede: 'What the catalog covers, and what it leaves to the original websites.', next: true, body: aboutHtml, noHide: true },
   feedback: { kind: 'Feedback', title: 'Help shape ShiaLib', lede: 'Report a broken link, suggest a website or a topic, or join the waitlist.', next: false, body: feedbackHtml },
