@@ -1053,6 +1053,22 @@ document.addEventListener('click', (e) => { if (performance.now() < noClickUntil
 // ---------------------------------------------------------------------------
 // Start
 // ---------------------------------------------------------------------------
+// The big, repetitive part of the catalog (hadith chapters) arrives after the page is usable. When it is here the
+// engine is rebuilt with everything and the current view is drawn again. If it fails the page keeps working.
+async function loadMore(index) {
+  try {
+    await new Promise((ok) => (window.requestIdleCallback ? requestIdleCallback(ok, { timeout: 2500 }) : setTimeout(ok, 800)));
+    const res = await fetch('data/' + index.more);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const more = await res.json();
+    const full = { ...index, records: index.records.concat(more.records) };
+    engine = createEngine(full); suggester = createSuggester(full);
+    RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
+    $('#n').textContent = engine.records.length.toLocaleString();
+    render();
+  } catch (err) { console.error('The rest of the catalog could not be loaded.', err); }
+}
+
 async function start() {
   for (const n of document.querySelectorAll('[data-site-name]')) n.textContent = SITE.name;
   try {
@@ -1063,7 +1079,9 @@ async function start() {
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';
+    if (index.total_records) $('#n').textContent = index.total_records.toLocaleString();
     buildTour(); buildNav(); render();
+    if (index.more) loadMore(index);
   } catch (err) {
     view.innerHTML = '<p class="callout">The catalog could not be loaded. Please check your connection and reload the page.</p>';
     announceText = 'The catalog could not be loaded.'; console.error(err);

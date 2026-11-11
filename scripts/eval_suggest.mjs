@@ -8,8 +8,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createSuggester } from '../site/js/suggest.js';
 
+import { loadFullIndex } from './lib_index.mjs';
 const here = dirname(fileURLToPath(import.meta.url));
-const index = JSON.parse(readFileSync(join(here, '..', 'site', 'data', 'index.json'), 'utf8'));
+const index = loadFullIndex(join(here, '..', 'site', 'data'));
 const verbose = process.argv.includes('--verbose');
 const s = createSuggester(index);
 

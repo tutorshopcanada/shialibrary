@@ -8,12 +8,13 @@ import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { createSemantic } from '../site/js/semantic.js';
 
+import { loadFullIndex } from './lib_index.mjs';
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const L3 = path.join(root, 'site/data/l3');
 const check = process.argv.includes('--check');
 const buf = (n) => { const b = fs.readFileSync(path.join(L3, n)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength); };
 
-const index = JSON.parse(fs.readFileSync(path.join(root, 'site/data/index.json'), 'utf8'));
+const index = loadFullIndex(path.join(root, 'site/data'));
 const label = new Map((index.headings || []).map((h) => [h.id, h.label]));
 const text = (r) => {
   const ctx = r.context || {};

@@ -33,6 +33,7 @@ const opt = (name, fallback) => {
   const i = args.indexOf(name);
   return i !== -1 && args[i + 1] ? args[i + 1] : fallback;
 };
+import { loadFullIndex } from './lib_index.mjs';
 const dataDir = resolve(opt('--data', join(here, '..', 'site', 'data')));
 const topN = Math.max(1, parseInt(opt('--top', '10'), 10) || 10);
 const verbose = args.includes('--verbose');
@@ -43,7 +44,7 @@ if (!existsSync(indexPath)) {
   console.error(`Cannot find ${indexPath}. Run: python3 scripts/build_index.py`);
   process.exit(2);
 }
-const engine = createEngine(JSON.parse(readFileSync(indexPath, 'utf8')));
+const engine = createEngine(loadFullIndex(dataDir));
 
 // Layer 3 ("related by meaning"): loaded from site/data/l3 exactly as the page would, so every query here is
 // judged the way a visitor would see it. Skipped (with a note) when the vectors are missing.
