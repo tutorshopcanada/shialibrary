@@ -29,9 +29,17 @@
 
       <form id="search-form" class="search-form" role="search" action="./" method="get">
         <label for="q" class="visually-hidden">Search topics and questions</label>
-        <input id="q" name="q" type="search" dir="auto" autocomplete="off" autocapitalize="none"
-               spellcheck="false" enterkeyhint="search" maxlength="200"
-               placeholder="For example: how to pray, Karbala, al-Kafi">
+        <div class="combo">
+          <input id="q" name="q" type="search" dir="auto" autocomplete="off" autocapitalize="none"
+                 spellcheck="false" enterkeyhint="search" maxlength="200"
+                 role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggest-list"
+                 placeholder="For example: how to pray, Karbala, al-Kafi">
+          <div id="suggest-box" class="suggest-box" hidden>
+            <p id="suggest-label" class="suggest-label" hidden>Try asking</p>
+            <ul id="suggest-list" class="suggest-list" role="listbox" aria-label="Search suggestions"></ul>
+          </div>
+          <p id="suggest-live" class="visually-hidden" role="status" aria-live="polite"></p>
+        </div>
         <button type="submit">Search</button>
       </form>
     </section>

@@ -2,6 +2,7 @@
 // Every piece of catalog text is inserted with textContent, never as HTML.
 
 import { createEngine } from './search.js';
+import { createSuggester } from './suggest.js';
 import { SITE, reportHref, externalSearchHref } from './config.js';
 
 const $ = (id) => document.getElementById(id);
@@ -631,14 +632,127 @@ function render() {
 // Start
 // ---------------------------------------------------------------------------
 
+
+// ---------------------------------------------------------------------------
+// Type-ahead suggestions (ARIA 1.2 combobox). Suggestions come from suggest.js,
+// which only looks at the already-loaded catalog. Nothing typed is sent or stored.
+// ---------------------------------------------------------------------------
+
+const KIND_LABEL = { question: 'Question', topic: 'Topic', scholar: 'Scholar', title: 'Book or article' };
+const sgBox = $('suggest-box');
+const sgList = $('suggest-list');
+const sgLabel = $('suggest-label');
+const sgLive = $('suggest-live');
+let suggester = null;
+let sgItems = [];
+let sgActive = -1;
+
+function sgClose() {
+  sgItems = [];
+  sgActive = -1;
+  sgList.replaceChildren();
+  sgBox.hidden = true;
+  sgLabel.hidden = true;
+  input.setAttribute('aria-expanded', 'false');
+  input.removeAttribute('aria-activedescendant');
+}
+
+function sgSetActive(i) {
+  const prev = sgList.children[sgActive];
+  if (prev) prev.setAttribute('aria-selected', 'false');
+  sgActive = i;
+  const cur = sgList.children[i];
+  if (cur) {
+    cur.setAttribute('aria-selected', 'true');
+    input.setAttribute('aria-activedescendant', cur.id);
+    cur.scrollIntoView({ block: 'nearest' });
+  } else {
+    input.removeAttribute('aria-activedescendant');
+  }
+}
+
+function sgText(text, ranges) {
+  const span = el('span', { class: 'sg-text', dir: 'auto' });
+  let pos = 0;
+  for (const [a, b] of ranges || []) {
+    if (a < pos) continue;
+    if (a > pos) span.append(document.createTextNode(text.slice(pos, a)));
+    span.append(el('b', { text: text.slice(a, b) }));
+    pos = b;
+  }
+  if (pos < text.length) span.append(document.createTextNode(text.slice(pos)));
+  return span;
+}
+
+function sgPick(item) {
+  sgClose();
+  const prev = readState();
+  if (item.target.topic) {
+    // Same as the topic tiles on the home page.
+    input.value = '';
+    go({ ...blank(), topic: item.target.topic, order: prev.order }, { focusResults: true });
+  } else {
+    input.value = item.target.query;
+    go({ ...blank(), q: item.target.query, order: prev.order }, { focusResults: true });
+  }
+  if (window.matchMedia && matchMedia('(pointer: coarse)').matches) input.blur();
+}
+
+function sgUpdate() {
+  if (!suggester) return sgClose();
+  const typed = input.value.trim();
+  const starting = !typed;
+  const items = starting ? suggester.starters(5) : suggester.suggest(typed, 8);
+  if (!items.length || document.activeElement !== input) return sgClose();
+  const same = items.length === sgItems.length && items.every((it, i) => it.text === sgItems[i].text && it.kind === sgItems[i].kind);
+  sgItems = items;
+  if (!same) {
+    sgList.replaceChildren(...items.map((it, i) => el('li', {
+      id: `sg-${i}`, role: 'option', 'aria-selected': 'false', class: `sg-option sg-${it.kind}`,
+      // Keep focus in the input so the click below still registers.
+      onmousedown: (ev) => ev.preventDefault(),
+      onpointerdown: (ev) => { if (ev.pointerType === 'mouse') ev.preventDefault(); },
+      onclick: () => sgPick(it),
+    }, sgText(it.text, it.ranges), el('span', { class: 'sg-kind', text: KIND_LABEL[it.kind] || '' }))));
+    sgActive = -1;
+    input.removeAttribute('aria-activedescendant');
+    sgLive.textContent = `${items.length} ${items.length === 1 ? 'suggestion' : 'suggestions'}`;
+  }
+  sgLabel.hidden = !starting;
+  sgBox.hidden = false;
+  input.setAttribute('aria-expanded', 'true');
+}
+
+input.addEventListener('input', sgUpdate);
+input.addEventListener('focus', sgUpdate);
+input.addEventListener('blur', sgClose);
+input.addEventListener('keydown', (ev) => {
+  const open = !sgBox.hidden;
+  if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
+    if (!open) { sgUpdate(); if (sgBox.hidden) return; }
+    ev.preventDefault();
+    const n = sgItems.length;
+    sgSetActive(ev.key === 'ArrowDown' ? (sgActive + 1) % n : (sgActive <= 0 ? n - 1 : sgActive - 1));
+  } else if (ev.key === 'Enter' && open && sgActive >= 0) {
+    ev.preventDefault();
+    sgPick(sgItems[sgActive]);
+  } else if (ev.key === 'Escape' && open) {
+    ev.preventDefault();
+    sgClose();
+  } else if (ev.key === 'Tab') {
+    sgClose();
+  }
+});
+
 form.addEventListener('submit', (ev) => {
   ev.preventDefault();
+  sgClose();
   const q = input.value.trim();
   const prev = readState();
   // A new search keeps the reading order but drops old filters.
   go({ ...blank(), q, order: prev.order });
 });
-window.addEventListener('popstate', render);
+window.addEventListener('popstate', () => { sgClose(); render(); });
 
 for (const node of document.querySelectorAll('[data-site-name]')) node.textContent = SITE.name;
 
@@ -648,6 +762,7 @@ async function start() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const index = await res.json();
     engine = createEngine(index);
+    suggester = createSuggester(index);
     if (engine.buildDate) $('build-date').textContent = `· Catalog updated ${engine.buildDate}`;
     render();
   } catch (err) {
