@@ -1,0 +1,29 @@
+id: sistani-qa-15086
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: Insulin used for treatment of diabetics is sometimes extracted from the pancreas of pigs. Can we
+  use it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15086
+language: en
+date: ''
+description: A question about using insulin that is sometimes extracted from the pancreas of pigs to treat
+  diabetes.
+sample_questions:
+- Can a Muslim use insulin from pigs?
+- What does Islam say about pork-derived medicine?
+- Is insulin from pigs discussed?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 17
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

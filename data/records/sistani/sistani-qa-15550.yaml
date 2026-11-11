@@ -1,0 +1,28 @@
+id: sistani-qa-15550
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-beard
+level: intermediate
+title: Is it permissible to shave beard, if one is faced with an unavoidable or a difficult situation?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01136/#15550
+language: en
+date: ''
+description: A question asking whether shaving the beard is allowed if a person faces an unavoidable or
+  difficult situation.
+sample_questions:
+- Can I shave if my job requires it?
+- Can I shave my beard under pressure?
+- What if keeping a beard is difficult?
+headings:
+- dress-appearance
+access: free
+location: Beard, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

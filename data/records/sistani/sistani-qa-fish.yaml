@@ -1,0 +1,31 @@
+id: sistani-qa-fish
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fish
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01184/
+language: en
+date: ''
+description: A topic page of questions and answers about eating fish and seafood. Questions cover which
+  seafood is covered by the rules, fish that died in water, shellfish, eating fish at non-Muslim restaurants,
+  and what to do when unsure of the type of fish.
+sample_questions:
+- Can Shias eat shrimp?
+- Which fish can I eat?
+- Is shellfish halal for Shias?
+- Can I eat fish at a non-Muslim restaurant?
+- How do I know if a fish has scales?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Fish'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

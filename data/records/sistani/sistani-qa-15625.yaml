@@ -1,0 +1,30 @@
+id: sistani-qa-15625
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-abortion
+level: intermediate
+title: Is a mother allowed to abort the feotus, if she does not want it while the soul has not yet entered
+  it and there is no serious danger to the mother’s life?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/#15625
+language: en
+date: ''
+description: A question asking about a mother's abortion of a foetus she does not want, before the soul
+  has entered it and without serious danger to her life.
+sample_questions:
+- Can a mother abort an unwanted baby?
+- Is early abortion allowed?
+- Can I abort if my life is not in danger?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Abortion, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

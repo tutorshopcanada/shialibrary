@@ -1,0 +1,30 @@
+id: sistani-qa-jabirah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Jabirah
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01230/
+language: en
+date: ''
+description: A topic page of questions and answers about jabirah (a splint, bandage or dressing over a
+  wound or broken bone, relevant to ritual washing). Questions cover what jabirah is and how to know when
+  it applies instead of washing a sore or fracture.
+sample_questions:
+- What is jabirah?
+- How do I do wudhu with a cast?
+- How do I do ghusl with a bandage?
+- What do I do with a broken bone and wudhu?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Jabirah'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

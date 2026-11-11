@@ -1,0 +1,29 @@
+id: sistani-qa-15306
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-forgery
+level: intermediate
+title: Is it permissible to forge a document in a non-Muslim country?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01192/#15306
+language: en
+date: ''
+description: A question asking about forging a document in a non-Muslim country.
+sample_questions:
+- Can I forge a document?
+- Is forgery okay abroad?
+- What does Islam say about fake documents?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Forgery, question 1
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

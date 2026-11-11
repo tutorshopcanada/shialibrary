@@ -1,0 +1,33 @@
+id: thaqalayn-al-khisal
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Al-Khiṣāl: The Book of Characteristics'
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/10
+language: en
+date: ''
+description: A collection of hadith (reported sayings of the Prophet and the Imams) compiled by Shaykh
+  al-Saduq and arranged by the numbers mentioned in them, from one-numbered characteristics upward; shown
+  in Arabic with an English translation by Dr. Ali Peiravi. According to the site the narrations range
+  over history, doctrine, ethics and jurisprudence. It is a primary source for readers with some background.
+sample_questions:
+- What is Al-Khisal by Shaykh Saduq?
+- Is there a hadith book arranged by numbers?
+- Where can I read hadith on ethics and character?
+- What books did Shaykh Saduq write?
+headings:
+- hadith-collections
+access: free
+location: ''
+needs_review: false
+review_note: 'Mixed content: the site says the narrations cover history, doctrine, ethics and jurisprudence.
+  The main purpose is not legal, so it is cataloged with hadith-collections only; a reviewer should confirm
+  the classification and whether a subject heading should be added.'
+cataloged_on: '2026-11-10'

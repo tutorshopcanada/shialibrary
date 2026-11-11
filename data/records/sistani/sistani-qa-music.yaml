@@ -1,0 +1,31 @@
+id: sistani-qa-music
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Music
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01246/
+language: en
+date: ''
+description: A topic page of questions and answers about music and songs. Questions cover listening to
+  songs with musical instruments, religious songs with music, and how to tell different kinds of songs
+  apart.
+sample_questions:
+- What does Shia fiqh say about music?
+- Can I listen to songs?
+- Can I listen to nasheeds with music?
+- Are religious songs treated differently?
+- What kinds of songs are there in fiqh?
+headings:
+- music-entertainment
+access: free
+location: 'Q&A topic: Music'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

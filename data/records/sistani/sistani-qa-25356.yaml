@@ -1,0 +1,30 @@
+id: sistani-qa-25356
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-illness
+level: intermediate
+title: What is the Islamic ruling about someone who is suffering from a disease? How should he go about
+  fasting?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02655/#25356
+language: en
+date: ''
+description: A question about the Islamic ruling for someone suffering from a disease, asking how he goes
+  about fasting.
+sample_questions:
+- Can I fast with an illness?
+- What do I do if I'm sick in Ramadan?
+- Do sick people have to fast?
+- How do ill people handle fasting?
+headings:
+- fasting
+access: free
+location: Fasting - Illness, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

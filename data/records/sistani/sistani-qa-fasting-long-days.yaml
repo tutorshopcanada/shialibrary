@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-long-days
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Long Days
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02664/
+language: en
+date: ''
+description: A topic page with a question about the rules of fasting for people in the northern hemisphere
+  where days and nights are unusually long or where there is no clear dawn or sunset.
+sample_questions:
+- How do I fast where the sun doesn't set?
+- What are the fasting rules in northern countries?
+- How do I fast in very long days?
+- What if there is no night during Ramadan?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Long Days'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

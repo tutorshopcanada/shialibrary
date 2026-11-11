@@ -1,0 +1,30 @@
+id: sistani-qa-15449
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qaza-prayers-and-fasts
+level: intermediate
+title: Is it obligatory on a man's eldest son to give the Qadha of his fast and prayers after his death?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01297/#15449
+language: en
+date: ''
+description: A question asking whether a man's eldest son has a duty to make up his father's missed fasts
+  and prayers after his death.
+sample_questions:
+- Does the eldest son pray for his father?
+- Who makes up a dead person's fasts?
+- What is qadha for the dead?
+headings:
+- prayer
+- fasting
+- death-burial
+access: free
+location: Qaza Prayers and Fasts, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

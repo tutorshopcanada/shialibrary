@@ -1,0 +1,37 @@
+id: sistani-west-salat-questions-answers
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: advanced
+title: 'Salat: The ritual prayer » Questions and Answers'
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2033/
+language: en
+date: ''
+description: Questions and answers about salat (the daily ritual prayer) from A Code of Practice For Muslims
+  in the West. Questions cover mistakes found later in wudu or ghusl (ritual washing), things on the skin
+  or nails during wudu, full or shortened prayers when travelling, praying in planes, trains and cars,
+  prayer at work or university, clothing and leather worn in prayer, and what one may prostrate on.
+sample_questions:
+- Can I pray at work if my employer does not give me time?
+- Does cream or ink on my skin affect wudu?
+- How do I pray in a train or car?
+- Can I pray wearing a leather belt?
+- What can I do sajdah on?
+- When do I pray full and when do I shorten my prayer?
+- Can I do wudu with long or artificial nails?
+headings:
+- prayer
+- purity
+- muslims-in-west
+access: free
+location: 'Chapter: Salat, Questions and Answers'
+needs_review: false
+review_note: The individual questions on this page have no anchors or URLs of their own, so cataloging
+  stops at page (section) level for this book. Level set to advanced as detailed rulings.
+cataloged_on: '2026-11-10'

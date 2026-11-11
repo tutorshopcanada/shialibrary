@@ -1,0 +1,28 @@
+id: sistani-qa-15065
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Is it permissible to marry a lewd woman (prostitute)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15065
+language: en
+date: ''
+description: A question asking whether it is allowed to marry a woman described as lewd (a prostitute).
+sample_questions:
+- Can a Muslim marry a prostitute?
+- Can I marry a woman with a past?
+- Is marrying a woman of bad conduct allowed?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 12
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

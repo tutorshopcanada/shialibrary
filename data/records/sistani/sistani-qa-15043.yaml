@@ -1,0 +1,28 @@
+id: sistani-qa-15043
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: Are chickens slaughtered by Christians Halal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15043
+language: en
+date: ''
+description: A question asking whether chickens slaughtered by Christians are halal.
+sample_questions:
+- Is chicken slaughtered by Christians halal?
+- Can I eat chicken from a Christian butcher?
+- Is a Christian's slaughter valid?
+headings:
+- food-drink
+access: free
+location: Meat, question 6
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

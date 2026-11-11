@@ -1,0 +1,32 @@
+id: sistani-west-taqlid-general-rules
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: 'Taqlid: Following a jurist » General Rules'
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2026/
+language: en
+date: ''
+description: General rules on taqlid (following a jurist). Topics include who needs to follow a jurist,
+  how to identify the most learned jurist through experts (ahlul khibra), and the ways to learn the opinion
+  (fatwa) of the marja' you follow, such as his own words or his manual of laws.
+sample_questions:
+- How do I choose a marja'?
+- How do I find out my marja's opinion?
+- Who are the ahlul khibra?
+- What is a risala?
+- What happens if my marja' has no opinion on a question?
+headings:
+- taqlid
+- fiqh
+access: free
+location: 'Chapter: Taqlid, General Rules'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

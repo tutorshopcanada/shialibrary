@@ -1,0 +1,29 @@
+id: sistani-qa-14891
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-pictures
+level: intermediate
+title: Is taking pictures of a dead body allowed, Haram or Makruh?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01282/#14891
+language: en
+date: ''
+description: A question asking about taking pictures of a dead body, and whether it is haram (forbidden)
+  or makruh (disliked).
+sample_questions:
+- Can I photograph a dead body?
+- Are pictures of the dead discussed?
+- Is taking a photo of a corpse disliked?
+headings:
+- death-burial
+- social-conduct-rulings
+access: free
+location: Pictures, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

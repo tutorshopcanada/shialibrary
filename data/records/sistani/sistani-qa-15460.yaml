@@ -1,0 +1,27 @@
+id: sistani-qa-15460
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-cloning
+level: intermediate
+title: What is your ruling about animal cloning?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01163/#15460
+language: en
+date: ''
+description: A question asking for the ruling about animal cloning.
+sample_questions:
+- Is animal cloning allowed?
+- What does Islam say about cloning?
+- Can scientists clone animals?
+headings:
+- medical-ethics
+access: free
+location: Cloning, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

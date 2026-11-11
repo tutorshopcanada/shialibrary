@@ -1,0 +1,33 @@
+id: al-islam-ghadir-sermon
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Ghadir Sermon
+title_original: ''
+authors:
+- vahid-majd
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/ghadir-sermon
+language: en
+date: ''
+description: A book on the Ghadir event, which Shias hold to be when the Prophet spoke about Ali's leadership,
+  and on the sermon given there. It has an introduction to the event, a discussion of what the sermon
+  establishes, obligations the author draws from it, and a translation of the sermon in ten parts.
+sample_questions:
+- What was Ghadir Khumm?
+- What did the Prophet say at Ghadir?
+- Why is Ghadir important to Shias?
+- What is the Ghadir sermon?
+- Why do Shias celebrate Eid al-Ghadir?
+headings:
+- ghadir-succession
+access: free
+location: ''
+needs_review: false
+review_note: Level is not stated on the page; intermediate chosen as the cautious option. Ghadir and succession
+  are disputed between Shia and Sunni; the work presents the Shia reading, so a reviewer should confirm
+  the description stays neutral.
+cataloged_on: '2026-11-10'

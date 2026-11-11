@@ -1,0 +1,30 @@
+id: sistani-qa-15547
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-blood
+level: intermediate
+title: If blood is seen in the yolk or the white part of the egg, does it make the egg impure and haram
+  for us? Is there a solution for it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01147/#15547
+language: en
+date: ''
+description: A question asking whether blood seen in the yolk or white of an egg makes the egg impure
+  and haram, and whether there is a solution.
+sample_questions:
+- Can I eat an egg with a blood spot?
+- Is an egg with blood najis?
+- What do I do with a bloody egg?
+headings:
+- purity
+- food-drink
+access: free
+location: Blood, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

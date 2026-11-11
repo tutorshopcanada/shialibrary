@@ -1,0 +1,31 @@
+id: sistani-qa-14830
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qasr-prayers
+level: intermediate
+title: When should one say his salat full (tamam) and when should one say it qasr (two rakat instead of
+  four)? Is the general perception about a person being resident of a city sufficient for him to say his
+  salat fully [in that city]?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01298/#14830
+language: en
+date: ''
+description: A question asking when a person says the prayer in full (tamam) and when in qasr (two rak'ats
+  instead of four), and whether being generally known as a resident of a city is enough for praying in
+  full there. The site lists this question more than once with separate links.
+sample_questions:
+- When do I pray full and when qasr?
+- What counts as being resident for prayer?
+- How do I know whether to shorten my prayers?
+headings:
+- prayer
+access: free
+location: Qasr Prayers, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

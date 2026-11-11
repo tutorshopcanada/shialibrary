@@ -1,0 +1,30 @@
+id: sistani-qa-15069
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Is marriage compulsory in Islam or is it optional? I mean if someone does not want to marry, intentionally,
+  is that allowed in Islam or not?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15069
+language: en
+date: ''
+description: A question asking whether marriage is compulsory or optional in Islam, and whether someone
+  who intentionally chooses not to marry is allowed to.
+sample_questions:
+- Is marriage compulsory in Islam?
+- Can I choose not to marry?
+- Is it a sin to stay single?
+- Is marriage required in Shia fiqh?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 13
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

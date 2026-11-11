@@ -1,0 +1,27 @@
+id: sistani-qa-25375
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting
+level: intermediate
+title: What is the Islamic ruling in regards to swallowing one's own phlegm?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02662/#25375
+language: en
+date: ''
+description: A question asking for the ruling on swallowing one's own phlegm while fasting.
+sample_questions:
+- Does swallowing phlegm break the fast?
+- Can I swallow mucus while fasting?
+- What do I do with phlegm in Ramadan?
+headings:
+- fasting
+access: free
+location: Fasting, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

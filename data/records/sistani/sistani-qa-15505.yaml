@@ -1,0 +1,30 @@
+id: sistani-qa-15505
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-clothing
+level: intermediate
+title: Is it permissible to wear clothes that have pictures of intoxicating drinks as a promotion for
+  drinking them? Is it permissible to sell such items?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01152/#15505
+language: en
+date: ''
+description: A question asking about wearing clothes with pictures of intoxicating drinks as a promotion
+  for drinking them, and about selling such items. The same question text appears under another id (15424)
+  in this topic.
+sample_questions:
+- Can I wear clothes advertising alcohol?
+- Can I sell clothes with alcohol advertisements?
+- Is wearing an alcohol brand shirt okay?
+headings:
+- dress-appearance
+access: free
+location: Clothing, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

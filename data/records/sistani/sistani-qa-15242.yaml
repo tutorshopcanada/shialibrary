@@ -1,0 +1,28 @@
+id: sistani-qa-15242
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hypnotism
+level: intermediate
+title: Is hypnotism permissible?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01209/#15242
+language: en
+date: ''
+description: A question asking whether hypnotism is allowed.
+sample_questions:
+- Is hypnosis allowed?
+- Can I use hypnotism?
+- Is hypnotherapy okay?
+headings:
+- medical-ethics
+- fiqh
+access: free
+location: Hypnotism, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,27 @@
+id: sistani-qa-15612
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: Whats the ruling of the various forms alcohol that causes intoxication?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15612
+language: en
+date: ''
+description: A question asking for the ruling on the various forms of alcohol that cause intoxication.
+sample_questions:
+- What is the Shia view on alcohol?
+- Are all kinds of alcohol treated the same?
+- What types of alcohol are covered?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

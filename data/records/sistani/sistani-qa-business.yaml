@@ -1,0 +1,32 @@
+id: sistani-qa-business
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Business
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01146/
+language: en
+date: ''
+description: A topic page of questions and answers about business and work, mostly for Muslims in non-Muslim
+  countries. Questions cover wasting working hours and wages, working in shops that sell pornographic
+  magazines, employing non-Muslims, and praying and using water for wudhu in offices of unknown ownership.
+sample_questions:
+- Can I be paid for hours I did not work properly?
+- Can I work as a cashier in a shop that sells magazines I object to?
+- Can a Muslim employ non-Muslims?
+- Can I pray in an office whose owner I don't know?
+- What are the rules for working in the West?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: 'Q&A topic: Business'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

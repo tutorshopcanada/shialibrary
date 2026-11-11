@@ -1,0 +1,30 @@
+id: sistani-laws-2232
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: STANDING (QIYĀM)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2232/
+language: en
+date: ''
+description: Rules on standing (qiyam) in prayer, the places where standing applies, and cases such as
+  forgetting to bow and sitting down.
+sample_questions:
+- How long do I stand in prayer?
+- What if I cannot stand in prayer?
+- What is qiyam?
+- What if I forget to bow in prayer?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

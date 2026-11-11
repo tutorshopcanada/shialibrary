@@ -1,0 +1,29 @@
+id: sistani-qa-26333
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-haydh-menstruation
+level: intermediate
+title: What is the ruling of sexual intercourse with ones wife during her menstrual period?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01212/#26333
+language: en
+date: ''
+description: A question asking about marital relations with one's wife during her menstrual period.
+sample_questions:
+- What are the rules for a couple during haydh?
+- Can a husband be intimate during a period?
+- What is not allowed during haydh?
+headings:
+- women-rulings
+- purity
+access: free
+location: Haydh - Menstruation / Monthly Period, question 14
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

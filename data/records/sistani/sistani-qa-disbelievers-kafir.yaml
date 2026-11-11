@@ -1,0 +1,32 @@
+id: sistani-qa-disbelievers-kafir
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Disbelievers - Kafir
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02801/
+language: en
+date: ''
+description: A topic page of questions and answers about dealing with disbelievers (kafir, a term for
+  people who do not follow Islam). Questions cover saying Salam Alaykum (the Muslim greeting) to them
+  and sending them seasonal greetings.
+sample_questions:
+- Can I say salam to non-Muslims?
+- Can I wish non-Muslims happy holidays?
+- How should I greet people of other faiths?
+- Can I send Christmas greetings?
+headings:
+- social-conduct-rulings
+- fiqh
+access: free
+location: 'Q&A topic: Disbelievers - Kafir'
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

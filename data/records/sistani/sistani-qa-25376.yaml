@@ -1,0 +1,27 @@
+id: sistani-qa-25376
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting
+level: intermediate
+title: What is the ruling about chewing gum in the month of Ramadhan?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02662/#25376
+language: en
+date: ''
+description: A question asking for the ruling on chewing gum in the month of Ramadan.
+sample_questions:
+- Can I chew gum while fasting?
+- Does gum break the fast?
+- Is chewing gum okay in Ramadan?
+headings:
+- fasting
+access: free
+location: Fasting, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

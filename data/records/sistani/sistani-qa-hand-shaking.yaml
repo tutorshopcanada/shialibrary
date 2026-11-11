@@ -1,0 +1,29 @@
+id: sistani-qa-hand-shaking
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Hand-shaking
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01207/
+language: en
+date: ''
+description: A topic page with one question and answer about shaking hands with customers of the opposite
+  sex at work.
+sample_questions:
+- Can I shake hands with the opposite sex?
+- What if my job needs handshakes?
+- Can I shake hands with customers?
+- Is handshaking allowed at work?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Hand-shaking'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

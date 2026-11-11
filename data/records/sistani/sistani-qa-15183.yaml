@@ -1,0 +1,30 @@
+id: sistani-qa-15183
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-buying-selling
+level: intermediate
+title: I know there is a company which is helping Israel monthly. What is the fatwa about working in such
+  a company and purchasing its products?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01133/#15183
+language: en
+date: ''
+description: A question about working in, or buying the products of, a company said to be helping Israel
+  each month.
+sample_questions:
+- Can I buy from a company that supports Israel?
+- Can I work for such a company?
+- What is the fatwa on boycotting a company?
+headings:
+- transactions-work
+access: free
+location: Buying & Selling, question 4
+needs_review: false
+review_note: Touches on a politically sensitive matter; reviewer should confirm the classification and
+  wording.
+cataloged_on: '2026-11-10'

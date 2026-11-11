@@ -1,0 +1,29 @@
+id: sistani-qa-oath
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Oath
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01278/
+language: en
+date: ''
+description: A topic page of questions and answers about oaths, which are promises made in God's name.
+  Questions cover the conditions of an oath and what to do when one is broken.
+sample_questions:
+- What is an oath in Islam?
+- What if I break my oath?
+- What makes an oath count?
+- What is kaffarah for a broken oath?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Oath'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

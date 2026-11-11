@@ -1,0 +1,27 @@
+id: sistani-qa-15085
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: Is it permissible to transplant the liver of pig in a human’s body?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15085
+language: en
+date: ''
+description: A question about transplanting a pig's liver into a human body.
+sample_questions:
+- What does Islam say about animal organ transplants?
+- Can pig organs be used in medicine?
+- Is a pig liver transplant discussed?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 16
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-15220
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-inheritance
+level: intermediate
+title: A lady is the only survival heir amongst her two brothers and two sisters. Does she inherit the
+  whole property or is it to be distributed also amongst her dead brothers and sisters’ children?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01217/#15220
+language: en
+date: ''
+description: A question about a woman who is the only surviving heir among her siblings, asking whether
+  she inherits everything or whether the children of her deceased siblings share it.
+sample_questions:
+- Do nieces and nephews inherit?
+- Who inherits if a sibling has died?
+- Does a sister inherit everything?
+headings:
+- marriage-family
+- transactions-work
+access: free
+location: Inheritance, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

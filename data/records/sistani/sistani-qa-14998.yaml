@@ -1,0 +1,31 @@
+id: sistani-qa-14998
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-congregational-prayers
+level: intermediate
+title: Can one say one’s congregational prayer behind a Sunni Imam with the intention of Jama'at (congregation)?
+  And should one recite al-hamd on his own?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01154/#14998
+language: en
+date: ''
+description: A question about joining a congregational prayer led by a Sunni imam, and about reciting
+  Surah al-Hamd (the opening chapter of the Quran) oneself when doing so.
+sample_questions:
+- Can a Shia pray behind a Sunni imam?
+- Can I pray in a Sunni mosque?
+- Do I recite al-hamd myself when praying behind a Sunni imam?
+- Can I join jamaat at a Sunni mosque?
+headings:
+- prayer
+access: free
+location: Congregational Prayers, question 3
+needs_review: false
+review_note: Touches on Shia-Sunni practice (praying behind a Sunni imam); sensitive, so a reviewer should
+  confirm the classification and wording.
+cataloged_on: '2026-11-10'

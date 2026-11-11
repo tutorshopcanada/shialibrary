@@ -1,0 +1,30 @@
+id: sistani-qa-15145
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-quran
+level: intermediate
+title: What is the stand on giving a non-Muslim the Qur`an for him or her to learn about the Qur`an and
+  our faith if it is Arabic text?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01296/#15145
+language: en
+date: ''
+description: A question about giving a non-Muslim an Arabic Quran so they can learn about it and the faith.
+sample_questions:
+- Can I give a Quran to a non-Muslim?
+- Can a non-Muslim touch the Quran?
+- Can I share the Quran with a friend?
+headings:
+- purity
+- quran
+access: free
+location: Quran, question 3
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

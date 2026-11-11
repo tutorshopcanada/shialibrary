@@ -1,0 +1,31 @@
+id: sistani-qa-beard
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Beard
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01136/
+language: en
+date: ''
+description: A topic page of questions and answers about keeping or shaving the beard. Questions cover
+  the French-cut beard, the minimum amount of beard, leaving hair on the chin, shaving in difficult circumstances,
+  and shaving on repeated days.
+sample_questions:
+- Is it okay to shave my beard?
+- Can I have a French-cut beard?
+- How much beard do I need to keep?
+- Can I shave if I face difficulty at work?
+- What is the rule on trimming a beard?
+headings:
+- dress-appearance
+access: free
+location: 'Q&A topic: Beard'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

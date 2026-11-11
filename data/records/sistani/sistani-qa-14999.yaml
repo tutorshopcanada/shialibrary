@@ -1,0 +1,29 @@
+id: sistani-qa-14999
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-congregational-prayers
+level: intermediate
+title: Please inform me what the procedure of congregational prayer is?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01154/#14999
+language: en
+date: ''
+description: A question asking how congregational prayer (praying together behind a prayer leader) is
+  carried out.
+sample_questions:
+- What is the procedure of congregational prayer?
+- How do you pray jamaat?
+- How do I join a congregational prayer?
+- What is the reward of praying in congregation?
+headings:
+- prayer
+access: free
+location: Congregational Prayers, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

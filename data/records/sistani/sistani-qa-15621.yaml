@@ -1,0 +1,30 @@
+id: sistani-qa-15621
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: What is your opinion about the beer (Maa al-Sha'eir) which is sold on the market normally with
+  a label that reads "alcohol free".
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15621
+language: en
+date: ''
+description: A question asking for an opinion on beer (Maa al-Sha'eir) sold in shops with a label saying
+  'alcohol free'.
+sample_questions:
+- Is alcohol-free beer okay?
+- What about malt drinks sold as non-alcoholic?
+- Can I drink beer labelled alcohol free?
+- Is Maa al-Sha'eir acceptable?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

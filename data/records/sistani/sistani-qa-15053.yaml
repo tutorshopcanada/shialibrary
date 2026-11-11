@@ -1,0 +1,29 @@
+id: sistani-qa-15053
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: I am virgin girl but independent financially. Is it is necessary to obtain my guardian's permission
+  for marriage?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15053
+language: en
+date: ''
+description: A question from a financially independent virgin girl asking whether she needs her guardian's
+  permission for marriage.
+sample_questions:
+- Do I need my guardian's consent to marry?
+- Can I marry without my father's permission?
+- Does financial independence change the need for permission?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

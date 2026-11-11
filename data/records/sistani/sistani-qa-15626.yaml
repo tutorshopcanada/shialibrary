@@ -1,0 +1,31 @@
+id: sistani-qa-15626
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-abortion
+level: intermediate
+title: 'Sometimes the doctors reach the following conclusion: This foetus is afflicted with a very serious
+  disease; it is therefore preferable that it should be aborted because if that child is born, it will
+  be deformed or will die soon after birth...'
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/#15626
+language: en
+date: ''
+description: A question about doctors advising abortion because a foetus has a serious disease, asking
+  about the doctor's and the mother's roles and who becomes liable for compensation (indemnity).
+sample_questions:
+- Can a doctor perform an abortion for a sick foetus?
+- Can the mother agree to an abortion on medical advice?
+- Who is liable for compensation in an abortion?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Abortion, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

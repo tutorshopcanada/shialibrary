@@ -1,0 +1,30 @@
+id: sistani-qa-pork
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Pork
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01293/
+language: en
+date: ''
+description: A topic page of questions and answers about pork. Questions cover working in a store that
+  sells pork and buying or selling it to non-Muslims.
+sample_questions:
+- Can I work in a store that sells pork?
+- Can I sell pork to non-Muslims?
+- What does Islam say about pork?
+- Can I work in a supermarket?
+headings:
+- food-drink
+- transactions-work
+access: free
+location: 'Q&A topic: Pork'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

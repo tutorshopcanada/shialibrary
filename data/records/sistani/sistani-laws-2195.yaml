@@ -1,0 +1,30 @@
+id: sistani-laws-2195
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: DRY ABLUTION (TAYAMMUM)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2195/
+language: en
+date: ''
+description: Introduces tayammum (dry ablution, done with earth when water cannot be used) and says it
+  is performed in seven situations that the following pages explain.
+sample_questions:
+- What is tayammum?
+- When is tayammum done instead of wudu?
+- What are the situations for tayammum?
+- Is tayammum a replacement for ghusl?
+headings:
+- purity
+- fiqh
+access: free
+location: 'Chapter: Purification (Ṭahārah)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

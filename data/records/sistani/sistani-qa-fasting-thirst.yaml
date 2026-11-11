@@ -1,0 +1,28 @@
+id: sistani-qa-fasting-thirst
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Thirst
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02653/
+language: en
+date: ''
+description: A topic page with a question about extreme thirst while fasting.
+sample_questions:
+- What if I get very thirsty while fasting?
+- Can thirst be a reason to break the fast?
+- Can I drink water if I'm too thirsty?
+- When can I stop my fast?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Thirst'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

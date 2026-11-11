@@ -1,0 +1,27 @@
+id: sistani-qa-15171
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-investment
+level: intermediate
+title: Can I invest my money in the stock market?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01227/#15171
+language: en
+date: ''
+description: A question asking whether money may be invested in the stock market.
+sample_questions:
+- Can I invest in stocks?
+- Is the stock market allowed?
+- Can Shias buy shares?
+headings:
+- transactions-work
+access: free
+location: Investment, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

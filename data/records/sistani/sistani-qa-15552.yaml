@@ -1,0 +1,27 @@
+id: sistani-qa-15552
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-beard
+level: intermediate
+title: What is the minimum requirement for keeping a beard?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01136/#15552
+language: en
+date: ''
+description: A question asking what the minimum requirement for keeping a beard is.
+sample_questions:
+- How much beard do I need?
+- What is the minimum beard in Islam?
+- Do I have to grow a full beard?
+headings:
+- dress-appearance
+access: free
+location: Beard, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

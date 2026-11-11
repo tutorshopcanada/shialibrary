@@ -1,0 +1,32 @@
+id: al-islam-stories-of-bahlool
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Stories of Bahlool
+title_original: ''
+authors:
+- kubra-jafri
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/stories-bahlool
+language: en
+date: ''
+description: A biography and collection of stories about Bahlool, described on the site as a companion
+  of the seventh Imam (Imam Musa al-Kazim), who acted as if he was insane to hide his love for the Imam.
+  The book has 52 sections including many short stories.
+sample_questions:
+- Who was Bahlool?
+- Who were the companions of Imam Musa al-Kazim?
+- Are there stories about Bahlool?
+- Why did Bahlool pretend to be mad?
+headings:
+- companions-scholars
+- twelve-imams
+access: free
+location: ''
+needs_review: false
+review_note: Level not stated on the page (audience not stated); set to intermediate pending review. Companions
+  of the Imams are a sensitive topic; historical accuracy of the stories not assessed.
+cataloged_on: '2026-11-11'

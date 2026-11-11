@@ -1,0 +1,28 @@
+id: sistani-qa-26369
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-masturbation
+level: intermediate
+title: Is it permissible to masturbate for medical reasons? If so, what are the conditions or limits?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01244/#26369
+language: en
+date: ''
+description: A question asking about masturbation for medical reasons, and what conditions or limits apply.
+sample_questions:
+- Is masturbation ever discussed for medical reasons?
+- Can a doctor ask for a sample?
+- What are the limits for medical cases?
+headings:
+- social-conduct-rulings
+access: free
+location: Masturbation, question 6
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

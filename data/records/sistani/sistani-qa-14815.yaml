@@ -1,0 +1,28 @@
+id: sistani-qa-14815
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-rules-of-slaughtering-during-hajj
+level: intermediate
+title: What are the conditions for slaughtering of an animal?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01301/#14815
+language: en
+date: ''
+description: A question asking about the conditions for slaughtering an animal.
+sample_questions:
+- What are the conditions of slaughter?
+- How is an animal slaughtered?
+- What makes meat halal?
+headings:
+- hajj
+- food-drink
+access: free
+location: Rules of Slaughtering during Hajj, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

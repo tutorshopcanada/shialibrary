@@ -1,0 +1,30 @@
+id: sistani-qa-15628
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-abortion
+level: intermediate
+title: I have a medical illness, and have become pregnant recently, under what circumstances is an abortion
+  allowed?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/#15628
+language: en
+date: ''
+description: A question from a woman with a medical illness who has become pregnant, asking under what
+  circumstances abortion is allowed.
+sample_questions:
+- Can I abort if I am ill?
+- When is abortion allowed for medical reasons?
+- What if pregnancy harms my health?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Abortion, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

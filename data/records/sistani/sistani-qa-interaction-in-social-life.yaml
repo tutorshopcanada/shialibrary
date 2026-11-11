@@ -1,0 +1,32 @@
+id: sistani-qa-interaction-in-social-life
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Interaction in Social Life
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01215/
+language: en
+date: ''
+description: A topic page of questions and answers about social interaction, including mixed settings
+  such as swimming pools and gyms, co-education, men and women working together, social gatherings and
+  lectures, and eating at the homes of People of the Book (Christians and Jews).
+sample_questions:
+- Can men and women work together?
+- Can I go to a mixed gym?
+- Can I attend a mixed gathering?
+- Can I eat at a Christian friend's home?
+- How should a convert deal with non-Muslim family?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Interaction in Social Life'
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

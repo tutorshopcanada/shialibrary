@@ -1,0 +1,31 @@
+id: sistani-qa-cosmetics
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Cosmetics
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01165/
+language: en
+date: ''
+description: A topic page of questions and answers about cosmetics and perfume. Questions cover a woman
+  going out wearing perfume whose scent reaches non-mahram men (men she is not closely related to), and
+  wearing make-up in public.
+sample_questions:
+- Can women wear make-up in public?
+- Can I wear perfume outside?
+- Can I wear mascara?
+- What are the rules on make-up for Muslim women?
+headings:
+- dress-appearance
+- women-rulings
+access: free
+location: 'Q&A topic: Cosmetics'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

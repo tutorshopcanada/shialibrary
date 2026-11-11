@@ -1,0 +1,30 @@
+id: sistani-qa-15567
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-buying-selling
+level: intermediate
+title: Can a Muslim buy or sell wine or pork to non-Muslims? What is the fatwa on the income one gets
+  by doing such a job?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01133/#15567
+language: en
+date: ''
+description: A question asking whether a Muslim can buy or sell wine or pork to non-Muslims, and about
+  the income from such a job.
+sample_questions:
+- Can I sell alcohol to non-Muslims?
+- Is income from selling pork allowed?
+- Can a Muslim work in a liquor store?
+headings:
+- transactions-work
+- food-drink
+access: free
+location: Buying & Selling, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,29 @@
+id: sistani-qa-15454
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-temporary-marriage-mutah
+level: intermediate
+title: I am married to woman that lives by her self and she is completely dependent on her self. We are
+  married for one year but we have still long time for our marriage to end...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01245/#15454
+language: en
+date: ''
+description: A question from a man in a fixed-term marriage who wants to end it early because of problems,
+  asking whether it can be ended before the agreed time.
+sample_questions:
+- Can I end mut'ah early?
+- How is a temporary marriage ended?
+- What if we cannot live together?
+headings:
+- marriage-family
+access: free
+location: Temporary Marriage - Mutah, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

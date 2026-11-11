@@ -1,0 +1,31 @@
+id: sistani-qa-kaffarah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Kaffarah
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01236/
+language: en
+date: ''
+description: A topic page of questions and answers about kaffarah (an expiation, a set act or payment
+  made to make up for certain violations). Questions cover breaking an oath, breaking a fast on purpose,
+  and delaying the make-up of a missed fast.
+sample_questions:
+- What is kaffarah?
+- What is the kaffarah for breaking an oath?
+- What is the kaffarah for breaking a fast?
+- What if I delay making up a fast?
+headings:
+- fiqh
+- fasting
+access: free
+location: 'Q&A topic: Kaffarah'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

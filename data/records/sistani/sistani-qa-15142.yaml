@@ -1,0 +1,28 @@
+id: sistani-qa-15142
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-kaffarah
+level: intermediate
+title: What is the Kaffara for breaking one's fast intentionally?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01236/#15142
+language: en
+date: ''
+description: A question asking what the kaffarah (expiation) is for breaking one's fast intentionally.
+sample_questions:
+- What is the kaffarah for breaking a fast?
+- What if I eat on purpose in Ramadan?
+- What is expiation for a broken fast?
+headings:
+- fasting
+- fiqh
+access: free
+location: Kaffarah, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

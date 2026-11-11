@@ -1,0 +1,28 @@
+id: sistani-qa-14861
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-pork
+level: intermediate
+title: Is it permissible to buy or sell pork to non-Muslims?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01293/#14861
+language: en
+date: ''
+description: A question asking about buying or selling pork to non-Muslims.
+sample_questions:
+- Can I sell pork to non-Muslims?
+- Can I trade in pork?
+- What does Islam say about dealing in pork?
+headings:
+- food-drink
+- transactions-work
+access: free
+location: Pork, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

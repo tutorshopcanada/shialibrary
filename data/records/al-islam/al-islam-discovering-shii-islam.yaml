@@ -1,0 +1,35 @@
+id: al-islam-discovering-shii-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Discovering Shi'i Islam
+title_original: ''
+authors:
+- shomali
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/discovering-shii-islam-mohammad-ali-shomali
+language: en
+date: '2003'
+description: A short book that the site describes as a brief introduction to Islam in general and Shia
+  Islam in particular. It covers where Shia Islam began, the sources Shias draw on (the Quran, the Prophet's
+  example and his family), core beliefs, the main practices such as prayer and fasting, and Shia communities
+  around the world.
+sample_questions:
+- What is Shia Islam?
+- Who are the Shia?
+- How did Shia Islam start?
+- What do Shias believe?
+- What does the word Shia mean?
+- What are the main Shia practices?
+- Where do Shias live in the world?
+headings:
+- new-to-shia-islam
+- beliefs
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

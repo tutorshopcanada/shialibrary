@@ -1,0 +1,31 @@
+id: sistani-qa-qibla
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Qibla
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01300/
+language: en
+date: ''
+description: A topic page of questions and answers about the qibla (the direction of the Kaaba in Mecca,
+  which Muslims face in prayer). Questions cover facing the qibla while praying in unusual places such
+  as vehicles, and other situations where the direction is unclear.
+sample_questions:
+- Which direction do Muslims face to pray?
+- What is the qibla?
+- How do I pray on a plane or train?
+- How do I find the qibla direction?
+- Does the qibla matter in the bathroom?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Qibla'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

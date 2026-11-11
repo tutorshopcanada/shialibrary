@@ -1,0 +1,29 @@
+id: sistani-qa-15046
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: Meat companies slaughter a large number of chickens at one time [that is, simultaneously]...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15046
+language: en
+date: ''
+description: A question about machine slaughter of many chickens at once by a Muslim who says takbir and
+  the name of Allah only once, asking whether those chickens can be eaten and whether a doubt about them
+  can be ignored. The site lists this question more than once with separate links.
+sample_questions:
+- Is machine-slaughtered chicken halal?
+- Is one takbir enough for many chickens?
+- What if I doubt that chicken is halal?
+headings:
+- food-drink
+access: free
+location: Meat, question 9
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

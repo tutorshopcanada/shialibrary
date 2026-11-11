@@ -1,0 +1,27 @@
+id: sistani-qa-15559
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-black-clothes
+level: intermediate
+title: Is it permissible to drape a mosque with black cloths?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01134/#15559
+language: en
+date: ''
+description: A question asking whether draping a mosque with black cloths is allowed.
+sample_questions:
+- Can a mosque be covered in black cloth?
+- Can we hang black banners in a mosque?
+- Is decorating a mosque in black okay?
+headings:
+- dress-appearance
+access: free
+location: Black Clothes, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

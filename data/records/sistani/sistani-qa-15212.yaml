@@ -1,0 +1,29 @@
+id: sistani-qa-15212
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-interest
+level: intermediate
+title: Is it permitted to pay interest to non-Muslims and also take interest from them?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01220/#15212
+language: en
+date: ''
+description: A question asking about paying interest to non-Muslims and taking interest from them.
+sample_questions:
+- Can I pay interest to non-Muslims?
+- Can I take interest from non-Muslims?
+- What is the rule on interest with non-Muslims?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Interest, question 5
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

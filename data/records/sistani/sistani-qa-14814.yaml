@@ -1,0 +1,29 @@
+id: sistani-qa-14814
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-rules-of-say
+level: intermediate
+title: Is it valid to perform the Sa'ee (Sa'y) between Safa and Marwah for Umrah al-Tamattu' or Hajj from
+  the upper floors?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01306/#14814
+language: en
+date: ''
+description: A question asking about performing the sa'y between Safa and Marwah for Umrah al-Tamattu'
+  or Hajj from the upper floors.
+sample_questions:
+- Can I do sa'y on the upper floor?
+- Is sa'y on the second level accepted?
+- Can I do sa'y in a wheelchair upstairs?
+headings:
+- hajj
+access: free
+location: Rules of Sa'y, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

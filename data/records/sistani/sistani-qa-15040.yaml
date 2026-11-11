@@ -1,0 +1,27 @@
+id: sistani-qa-15040
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-modharabah
+level: intermediate
+title: What is Mozarebah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01252/#15040
+language: en
+date: ''
+description: A question asking what Mozarebah (mudarabah, a sleeping partnership) is.
+sample_questions:
+- What is mudarabah?
+- What is a sleeping partner?
+- How does a profit-sharing partnership work?
+headings:
+- transactions-work
+access: free
+location: Modharabah (Sleeping partnership), question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

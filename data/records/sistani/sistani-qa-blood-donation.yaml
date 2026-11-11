@@ -1,0 +1,30 @@
+id: sistani-qa-blood-donation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Blood Donation
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01137/
+language: en
+date: ''
+description: A topic page of questions and answers about donating and receiving blood. Questions ask about
+  donating blood and about a transfusion of blood from a non-Muslim.
+sample_questions:
+- Can I donate blood?
+- Can I receive blood from a non-Muslim?
+- Is blood transfusion allowed?
+- Is donated blood pure?
+headings:
+- medical-ethics
+- purity
+access: free
+location: 'Q&A topic: Blood Donation'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

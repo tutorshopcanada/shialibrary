@@ -1,0 +1,31 @@
+id: sistani-qa-ghusl
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Ghusl - Ritual Bath
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01198/
+language: en
+date: ''
+description: A topic page of questions and answers about ghusl, the ritual full-body wash. Questions cover
+  how the different forms of ghusl are performed, the intention, ghusl for janabat (a state after sexual
+  activity), things on the skin that can block water, and combining several ghusls.
+sample_questions:
+- How do I perform ghusl?
+- What is ghusl janabat?
+- Do I need to clean myself before ghusl?
+- Can I do one ghusl for several reasons?
+- What is tartibi ghusl?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Ghusl - Ritual Bath'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

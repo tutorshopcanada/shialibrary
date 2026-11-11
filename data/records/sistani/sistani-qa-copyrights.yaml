@@ -1,0 +1,31 @@
+id: sistani-qa-copyrights
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Copyrights
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01153/
+language: en
+date: ''
+description: A topic page of questions and answers about copyright. Questions cover copying software,
+  movies and audio CDs marked 'All Rights Reserved', photocopying books and duplicating DVDs for personal
+  use, using cracked apps, and selling pirated programs and DVDs.
+sample_questions:
+- Can I copy software or movies?
+- Can I photocopy a book?
+- Can I use cracked apps?
+- Can I sell pirated DVDs?
+- What does Islam say about copyright?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Copyrights'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-25374
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-long-days
+level: intermediate
+title: 'You are requested to let us know the rules of fasting in the month of Ramadhan for those who are
+  living in northern hemisphere keeping in view the following scenarios: 1...'
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02664/#25374
+language: en
+date: ''
+description: A question asking for the rules of fasting in Ramadan for people in the northern hemisphere,
+  in several scenarios where there is continuous day or night or no clear dawn.
+sample_questions:
+- How do I fast in the Arctic?
+- What if there's no sunset in Ramadan?
+- How do I fast where the days are 24 hours long?
+- How do I know when to start fasting in the far north?
+headings:
+- fasting
+access: free
+location: Fasting - Long Days, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

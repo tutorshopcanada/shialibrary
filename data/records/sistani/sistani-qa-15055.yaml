@@ -1,0 +1,29 @@
+id: sistani-qa-15055
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: If a woman is over thirty years of age, and still virgin, is it necessary for her to seek the permission
+  of her guardian for marriage?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15055
+language: en
+date: ''
+description: A question asking whether a virgin woman over thirty needs to seek her guardian's permission
+  for marriage.
+sample_questions:
+- Does a woman over thirty need her guardian's permission?
+- Do older women need consent to marry?
+- Does age change the guardian's role in marriage?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

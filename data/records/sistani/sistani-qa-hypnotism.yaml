@@ -1,0 +1,30 @@
+id: sistani-qa-hypnotism
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Hypnotism
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01209/
+language: en
+date: ''
+description: A topic page with one question and answer about hypnotism (putting a person into a trance-like
+  state).
+sample_questions:
+- Is hypnosis allowed?
+- Can I use hypnotism?
+- What does Islam say about hypnosis?
+- Can I try hypnotherapy?
+headings:
+- medical-ethics
+- fiqh
+access: free
+location: 'Q&A topic: Hypnotism'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

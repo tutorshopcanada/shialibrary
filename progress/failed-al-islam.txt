@@ -1,0 +1,3 @@
+2026-11-10 | https://al-islam.org/light-within-me | guessed URL returned HTTP 404 (not retried)
+2026-11-10 | https://www.al-islam.org/articles | HTTP 403 Forbidden (www host)
+2026-11-10 | https://al-islam.org/book | WebFetch HTTP 403 Forbidden

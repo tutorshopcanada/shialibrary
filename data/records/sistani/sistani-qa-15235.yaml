@@ -1,0 +1,29 @@
+id: sistani-qa-15235
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-halal-haram-foods
+level: intermediate
+title: Can we eat food cooked by a non Muslim when we do not know whether or not it is Taher?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01210/#15235
+language: en
+date: ''
+description: A question asking whether food cooked by a non-Muslim can be eaten when it is not known whether
+  it is tahir (ritually pure).
+sample_questions:
+- Can I eat food cooked by a non-Muslim?
+- Is a non-Muslim's cooking pure?
+- What if I don't know whether the food is tahir?
+headings:
+- food-drink
+access: free
+location: Halal & Haram Foods, question 1
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

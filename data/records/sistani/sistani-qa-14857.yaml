@@ -1,0 +1,31 @@
+id: sistani-qa-14857
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-haydh-menstruation
+level: intermediate
+title: Some women use certain pills to delay the onset of their monthly period so that they be able to
+  perform their religious obligations, such as fasting and hajj rituals...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01212/#14857
+language: en
+date: ''
+description: A question about women using pills to delay the period so they can fast or perform hajj,
+  when the pills make the cycle irregular. A near-identical question (slightly different wording) appears
+  elsewhere in this topic with another id.
+sample_questions:
+- Can I use pills to delay my period?
+- What if period pills make my cycle irregular?
+- Can I delay my period for Ramadan or hajj?
+headings:
+- women-rulings
+- purity
+access: free
+location: Haydh - Menstruation / Monthly Period, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

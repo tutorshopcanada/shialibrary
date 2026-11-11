@@ -1,0 +1,27 @@
+id: sistani-qa-15059
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Is it valid to pronounce the marriage formula through a telephone?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15059
+language: en
+date: ''
+description: A question asking whether it is valid to pronounce the marriage formula through a telephone.
+sample_questions:
+- Can a nikah be done over the phone?
+- Is a marriage contract by phone valid?
+- Can the marriage formula be said remotely?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

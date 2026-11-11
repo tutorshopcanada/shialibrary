@@ -1,0 +1,31 @@
+id: sistani-qa-ejaculation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Ejaculation
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01181/
+language: en
+date: ''
+description: A topic page of questions and answers about ejaculation and related discharges, as they relate
+  to ritual purity. Questions cover telling different kinds of discharge apart, when a full ritual wash
+  (ghusl) applies, and the status of pre-ejaculate fluid.
+sample_questions:
+- What is the difference between semen and other discharge?
+- When do I need to do ghusl?
+- Is pre-ejaculate fluid najis?
+- What discharges affect ritual purity?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Ejaculation'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

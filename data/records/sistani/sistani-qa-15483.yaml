@@ -1,0 +1,29 @@
+id: sistani-qa-15483
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-cheating
+level: intermediate
+title: Is it allowed write a thesis on behalf of another person for their university degree?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01155/#15483
+language: en
+date: ''
+description: A question asking whether writing a thesis on behalf of another person for their university
+  degree is allowed.
+sample_questions:
+- Can I write someone else's thesis?
+- Is ghost-writing an assignment allowed?
+- Can I do another student's work for money?
+headings:
+- transactions-work
+- youth-rulings
+access: free
+location: Cheating, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

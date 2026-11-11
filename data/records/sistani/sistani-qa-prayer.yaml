@@ -1,0 +1,32 @@
+id: sistani-qa-prayer
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Prayer
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/
+language: en
+date: ''
+description: A topic page of questions and answers about the daily prayer (salat). Questions cover praying
+  on time at work, school and while travelling, praying on planes and trains, clothing and items worn
+  in prayer, men and women praying near each other, and sleeping through or delaying prayers.
+sample_questions:
+- How do I pray at work?
+- What if I miss a prayer time?
+- Can I pray in my clothes if they contain leather?
+- How do I pray while travelling?
+- Can men and women pray side by side?
+- What invalidates my prayer?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Prayer'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

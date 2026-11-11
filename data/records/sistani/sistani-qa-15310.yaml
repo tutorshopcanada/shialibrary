@@ -1,0 +1,27 @@
+id: sistani-qa-15310
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-following-a-mujtahid
+level: intermediate
+title: What does Taqlid mean?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01191/#15310
+language: en
+date: ''
+description: A question asking what taqlid means. The site lists this question twice with separate links.
+sample_questions:
+- What does taqlid mean?
+- What is taqlid?
+- What is the meaning of taqleed?
+headings:
+- taqlid
+access: free
+location: Following a Mujtahid, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

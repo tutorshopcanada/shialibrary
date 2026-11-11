@@ -1,0 +1,68 @@
+# Approved sources. Nothing is cataloged unless it is listed here with status: active.
+# Only the owner adds sources. Proposals go in proposals/new-sources.md.
+# status: active (may be cataloged) | blocked (approved, but the site refuses automated
+#         access; do not fetch until the owner resolves it) | backlog (waiting on the owner)
+sources:
+  - id: thaqalayn.net
+    name: "Thaqalayn"
+    type: hadith-collections
+    base_url: "https://thaqalayn.net/"
+    status: active
+    catalog_level: "One record per collection/book/volume. No per-hadith records."
+    notes: >
+      thaqalayn.net permanently redirects to thaqalayn.com (checked 2026-11-10); record URLs
+      use the address the site actually serves. robots.txt allows everything except /api/
+      and /super/, and publishes a sitemap.
+
+  - id: al-islam.org
+    name: "Al-Islam.org (Ahlul Bayt Digital Islamic Library Project)"
+    type: library
+    base_url: "https://al-islam.org/"
+    status: active
+    crawl_delay_seconds: 10
+    catalog_level: "One record per book or article. Beginner material first."
+    notes: >
+      robots.txt (read 2026-11-10) allows book and article pages, disallows /search/, /admin/,
+      /user/ and similar, and asks for a 10-second delay between requests. Plain scripted
+      requests (curl) from the build machine are refused by the site's Cloudflare protection,
+      so pages are read one at a time with the standard web-fetch tool, never faster than the
+      crawl delay, and candidate pages are found through a web search limited to this site
+      (the site's own /search/ is off limits). Do not use /book/export/ or /printpdf/ URLs
+      as record URLs; use the book's normal page.
+
+  - id: sistani.org
+    name: "Office of Sayyid Ali al-Sistani"
+    type: fiqh
+    base_url: "https://www.sistani.org/english/"
+    status: active
+    catalog_level: "Work, section (one page), and item (single Q&A with its own URL)."
+    notes: >
+      robots.txt has no disallow rules (checked 2026-11-10). Structure report:
+      docs/sistani-structure.md. Every record from this source is content_tag fiqh.
+
+  - id: khamenei.ir
+    name: "Office of Sayyid Ali Khamenei"
+    type: fiqh
+    base_url: "https://khamenei.ir/"
+    status: blocked
+    catalog_level: "To be decided after the site's structure is inspected."
+    notes: >
+      Named by the owner on 2026-11-10 as the likely source for Sayyid Khamenei's rulings
+      ("should work maybe"). Not reachable from the build machine on 2026-11-10: direct
+      requests to khamenei.ir and english.khamenei.ir were reset, and the web-fetch tool got
+      HTTP 503 for robots.txt on both. Nothing has been inspected or cataloged. Before any
+      cataloging: read robots.txt, inspect and report the structure (which section holds the
+      English rulings, URL patterns, per-question links), and confirm with the owner.
+
+  - id: youtube
+    name: "Whitelisted YouTube channels"
+    type: video
+    base_url: "https://www.youtube.com/"
+    status: backlog
+    catalog_level: "One record per video."
+    channels: []          # owner supplies channel IDs; nothing is harvested until then
+    notes: "Backlog. No channel list yet."
+
+# Institutes offering courses. The owner named the Shia Research Institute and Tasneem
+# Institute as examples but has not supplied their websites. Do not guess addresses.
+institutes: []

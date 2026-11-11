@@ -1,0 +1,31 @@
+id: sistani-qa-alcohol
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Alcohol
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/
+language: en
+date: ''
+description: A topic page of questions and answers about alcohol. Questions cover alcohol in perfume,
+  medicine and mouthwash, drinks labelled alcohol-free, foods with traces of ethanol, and dealing with
+  alcohol at work, in business and in restaurants.
+sample_questions:
+- Is alcohol in perfume a problem?
+- Can I use medicine that contains alcohol?
+- What about beer that says alcohol free?
+- Can I eat in a restaurant that serves alcohol?
+- Can I work in a place that sells alcohol?
+headings:
+- food-drink
+access: free
+location: 'Q&A topic: Alcohol'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

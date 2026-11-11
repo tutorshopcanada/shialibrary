@@ -1,0 +1,28 @@
+id: sistani-qa-15587
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-adultery
+level: intermediate
+title: What is meant by the expression “an adulterous woman known for adultery”?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01129/#15587
+language: en
+date: ''
+description: A question asking what is meant by the expression 'an adulterous woman known for adultery'.
+sample_questions:
+- Who is an adulterous woman known for adultery?
+- What does known for adultery mean?
+- How do jurists define this term?
+headings:
+- marriage-family
+- social-conduct-rulings
+access: free
+location: Adultery, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

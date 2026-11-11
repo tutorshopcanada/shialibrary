@@ -1,0 +1,31 @@
+id: sistani-west-translators-preface
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Introduction » Translator's Preface
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2020/
+language: en
+date: ''
+description: The translator's preface to the English edition. It describes how books of Islamic laws have
+  changed over time, how this book focuses on issues faced by Muslims in the West, and how the translation
+  was prepared with the help of the office of Sayyid Sistani.
+sample_questions:
+- Who translated this book into English?
+- How are manuals of Islamic laws written?
+- How was this translation checked?
+- What is the Arabic book al-Fiqh lil Mughtaribin?
+headings:
+- fiqh
+- muslims-in-west
+access: free
+location: 'Front matter: Translator''s Preface'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

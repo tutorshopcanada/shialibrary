@@ -1,0 +1,31 @@
+id: sistani-qa-iddah-waiting-period
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Iddah (waiting period)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01223/
+language: en
+date: ''
+description: A topic page of questions and answers about 'iddah (the waiting period a woman observes after
+  divorce or a husband's death before marrying again). Questions cover relying on a woman's statement
+  and temporary marriage with a woman of the People of the Book soon after divorce.
+sample_questions:
+- What is iddah?
+- Can I trust a woman who says her iddah is over?
+- How long is the waiting period?
+- Can I marry during iddah?
+headings:
+- marriage-family
+- women-rulings
+access: free
+location: 'Q&A topic: Iddah (waiting period)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

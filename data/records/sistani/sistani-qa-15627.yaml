@@ -1,0 +1,28 @@
+id: sistani-qa-15627
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-abortion
+level: intermediate
+title: What is your ruling on aborting an “unwanted pregnancy” before 4 months into the pregnancy?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/#15627
+language: en
+date: ''
+description: A question asking for the ruling on aborting an unwanted pregnancy before four months.
+sample_questions:
+- Is abortion before four months allowed?
+- What does Sistani say about unwanted pregnancy?
+- Can I abort in the first months?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Abortion, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

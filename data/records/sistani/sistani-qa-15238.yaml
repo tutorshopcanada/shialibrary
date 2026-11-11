@@ -1,0 +1,28 @@
+id: sistani-qa-15238
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-halal-haram-foods
+level: intermediate
+title: What is the general rule about foods made by Ahl-e Kitab (People of the Books)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01210/#15238
+language: en
+date: ''
+description: A question asking what the general rule is for foods made by Ahl-e Kitab (People of the Book).
+sample_questions:
+- Can I eat food made by Christians and Jews?
+- What is the rule on People of the Book's food?
+- Is food from Ahl al-Kitab halal?
+headings:
+- food-drink
+access: free
+location: Halal & Haram Foods, question 3
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

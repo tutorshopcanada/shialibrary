@@ -1,0 +1,31 @@
+id: sistani-qa-congregational-prayers
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Congregational Prayers
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01154/
+language: en
+date: ''
+description: A topic page of questions and answers about congregational prayer (salat al-jama'ah, praying
+  together behind a prayer leader), from the office of Sayyid Ali al-Sistani. Questions cover how it is
+  performed, who can lead, praying behind a Sunni imam, and whether it is better than praying alone.
+sample_questions:
+- How do you pray in congregation?
+- Who can lead the prayer?
+- Is it better to pray in a group or alone?
+- Can a Shia pray behind a Sunni imam?
+- Should women pray in congregation?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Congregational Prayers'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

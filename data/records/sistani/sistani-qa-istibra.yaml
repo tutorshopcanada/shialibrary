@@ -1,0 +1,31 @@
+id: sistani-qa-istibra
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Istibra
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01226/
+language: en
+date: ''
+description: A topic page of questions and answers about istibra (a step taken after urinating so as to
+  be sure no urine remains). Questions cover why it is done, how it is done, doubts about whether it was
+  done, and fluids that appear before or after urinating.
+sample_questions:
+- What is istibra?
+- How do I do istibra?
+- What if I doubt I did istibra?
+- Why is istibra done?
+- Does a discharge after urinating break wudhu?
+headings:
+- purity
+access: free
+location: 'Q&A topic: Istibra'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

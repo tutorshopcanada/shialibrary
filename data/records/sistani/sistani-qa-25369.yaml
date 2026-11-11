@@ -1,0 +1,31 @@
+id: sistani-qa-25369
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting
+level: intermediate
+title: According to some jurists, a person who intentionally invalidates his fast during the month of
+  Ramadhan by committing a sin has to pay all three kinds of penalty [that is, fasting for sixty days,
+  feeding sixty poor people, and emancipating a slave]...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02662/#25369
+language: en
+date: ''
+description: A question about the three kinds of penalty some jurists mention for deliberately invalidating
+  a Ramadan fast through sin, asking what a person does today when freeing a slave is not possible.
+sample_questions:
+- What is the penalty for breaking a Ramadan fast on purpose?
+- What is kaffarah for fasting?
+- What if freeing a slave isn't possible today?
+- What are the three penalties for a broken fast?
+headings:
+- fasting
+access: free
+location: Fasting, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

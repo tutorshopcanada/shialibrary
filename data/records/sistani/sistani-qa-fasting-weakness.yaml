@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-weakness
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Weakness
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02651/
+language: en
+date: ''
+description: A topic page with a question about fasting by a young person who has reached puberty but
+  is too weak to fast.
+sample_questions:
+- What if I'm too weak to fast?
+- My daughter is weak, does she have to fast?
+- How does a weak teenager begin fasting?
+- What do I do if fasting is too hard for me?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Weakness'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

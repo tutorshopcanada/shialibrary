@@ -1,0 +1,33 @@
+id: sistani-qa-abortion
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Abortion
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/
+language: en
+date: ''
+description: A topic page of questions and answers about abortion (ending a pregnancy). Questions cover
+  cases of a deformed or seriously ill foetus, the stage when the soul is said to enter the foetus, unwanted
+  pregnancy, a mother's illness or AIDS, compensation (diyah, blood money) and kaffara (expiation).
+sample_questions:
+- What does Islam say about abortion?
+- Is abortion allowed if the baby is sick?
+- Can I abort in early pregnancy?
+- What is kaffara for abortion?
+- What if pregnancy risks the mother's health?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: 'Q&A topic: Abortion'
+needs_review: false
+review_note: Sensitive medical and ethical topic; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

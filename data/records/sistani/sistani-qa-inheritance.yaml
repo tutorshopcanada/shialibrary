@@ -1,0 +1,31 @@
+id: sistani-qa-inheritance
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Inheritance
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01217/
+language: en
+date: ''
+description: A topic page of questions and answers about inheritance. Questions cover a child born after
+  the father's death through stored sperm, adopted children, temporary wives and their children, and worked
+  examples of how an estate is shared among relatives.
+sample_questions:
+- Does an adopted child inherit?
+- Does a temporary wife inherit?
+- Who inherits when someone dies?
+- How is property divided among relatives?
+headings:
+- marriage-family
+- transactions-work
+access: free
+location: 'Q&A topic: Inheritance'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

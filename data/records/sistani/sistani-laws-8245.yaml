@@ -1,0 +1,28 @@
+id: sistani-laws-8245
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: intermediate
+title: 'Appendix 3: List of Updated Rulings'
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/8245/
+language: en
+date: ''
+description: An appendix listing the rulings revised since the previous edition of the book by ruling
+  number, which are marked with an asterisk in the text.
+sample_questions:
+- Which rulings changed in the newest edition?
+- How do I know which rulings were updated?
+- Where is the list of revised rulings?
+- What does the asterisk mean in the book?
+headings:
+- fiqh
+access: free
+location: 'Chapter: Appendix 3: List of Updated Rulings'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

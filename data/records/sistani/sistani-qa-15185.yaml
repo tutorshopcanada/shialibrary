@@ -1,0 +1,27 @@
+id: sistani-qa-15185
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-istibra
+level: intermediate
+title: If a person doubts whether he performed Istibra or not, what should he do?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01226/#15185
+language: en
+date: ''
+description: A question about what a person should do when in doubt whether istibra was performed.
+sample_questions:
+- What if I doubt I did istibra?
+- What if I forget istibra?
+- What if I am unsure about istibra?
+headings:
+- purity
+access: free
+location: Istibra, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

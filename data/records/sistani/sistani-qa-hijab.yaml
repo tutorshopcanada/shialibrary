@@ -1,0 +1,32 @@
+id: sistani-qa-hijab
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Hijab (Islamic Dress)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01208/
+language: en
+date: ''
+description: A topic page of questions and answers about hijab, Islamic modest dress. Questions cover
+  what the minimum covering is, hijab in front of relatives and non-mahrams (people outside the close
+  family circle), hijab in schools that prohibit it, and head coverings such as wigs.
+sample_questions:
+- What is hijab?
+- What is the minimum hijab for a woman?
+- What is modest dress in Islam?
+- Do I wear hijab in front of relatives?
+- Can I take off my hijab if there is danger?
+headings:
+- dress-appearance
+- women-rulings
+access: free
+location: 'Q&A topic: Hijab (Islamic Dress)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

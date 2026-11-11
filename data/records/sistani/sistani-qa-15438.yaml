@@ -1,0 +1,30 @@
+id: sistani-qa-15438
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-doubts
+level: intermediate
+title: If a person has a lot of doubts in Wudu’, Prayer, Ghusl etc. what should he do?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01168/#15438
+language: en
+date: ''
+description: A question asking what a person should do if he has many doubts in wudu, prayer, ghusl and
+  similar acts.
+sample_questions:
+- What if I have a lot of doubts in prayer?
+- How do I deal with doubts about wudhu?
+- What if I keep doubting my ghusl?
+- Is there a rule for people who doubt a lot?
+headings:
+- prayer
+- purity
+access: free
+location: Doubts, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

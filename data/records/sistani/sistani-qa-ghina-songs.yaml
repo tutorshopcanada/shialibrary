@@ -1,0 +1,30 @@
+id: sistani-qa-ghina-songs
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Ghina (Songs)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01200/
+language: en
+date: ''
+description: 'A topic page of questions and answers about ghina, a term for a type of singing or song.
+  It has two questions: one on reciting the Quran and dua (prayers) to the tune of songs, and one on the
+  ruling on ghina itself.'
+sample_questions:
+- What is ghina?
+- Can I listen to songs?
+- Can Quran be recited to a song tune?
+- What does Islam say about singing?
+headings:
+- music-entertainment
+access: free
+location: 'Q&A topic: Ghina (Songs)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

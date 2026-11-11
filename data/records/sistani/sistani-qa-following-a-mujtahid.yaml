@@ -1,0 +1,31 @@
+id: sistani-qa-following-a-mujtahid
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Following a Mujtahid
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01191/
+language: en
+date: ''
+description: A topic page of questions and answers about following a mujtahid (taqlid), the practice of
+  a non-specialist following the rulings of a qualified jurist. Questions cover why it is done, what the
+  term means, and how to identify the most learned jurist.
+sample_questions:
+- What is taqlid?
+- Why do Shias follow a marja?
+- What is a mujtahid?
+- How do I choose a marja?
+- Do I have to follow a scholar?
+headings:
+- taqlid
+access: free
+location: 'Q&A topic: Following a Mujtahid'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15141
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-kaffarah
+level: intermediate
+title: If a person breaks his oath, what is the penalty?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01236/#15141
+language: en
+date: ''
+description: A question asking what the penalty (kaffarah) is for a person who breaks his oath.
+sample_questions:
+- What is the kaffarah for breaking an oath?
+- What if I break a promise to Allah?
+- How do I make up a broken oath?
+headings:
+- fiqh
+- fasting
+access: free
+location: Kaffarah, question 1
+needs_review: false
+review_note: Concerns a penalty or expiation; reviewer should confirm the classification and wording.
+cataloged_on: '2026-11-10'

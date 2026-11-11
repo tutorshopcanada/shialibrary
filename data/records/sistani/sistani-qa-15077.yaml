@@ -1,0 +1,27 @@
+id: sistani-qa-15077
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the ruling on marriage between two people who are carriers of the AIDS virus?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15077
+language: en
+date: ''
+description: A question about marriage between two people who both carry the AIDS virus.
+sample_questions:
+- Can two carriers of AIDS marry?
+- What does Islam say about marriage and illness?
+- Is marriage between sick people discussed?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

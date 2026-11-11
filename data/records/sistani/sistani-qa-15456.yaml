@@ -1,0 +1,29 @@
+id: sistani-qa-15456
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-divorce
+level: intermediate
+title: A woman who took divorce from her husband (wedding ceremony was not held and she took Talaq-e-Khula`)
+  in this situation should she perform `Iddah?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01166/#15456
+language: en
+date: ''
+description: A question from a woman who took a khula' divorce (the wedding ceremony was not held), asking
+  whether she should observe iddah (the waiting period).
+sample_questions:
+- Do I observe iddah after khula?
+- Is there a waiting period if the wedding wasn't held?
+- Does iddah apply after a khula divorce?
+headings:
+- marriage-family
+access: free
+location: Divorce, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

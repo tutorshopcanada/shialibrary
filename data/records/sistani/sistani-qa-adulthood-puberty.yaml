@@ -1,0 +1,30 @@
+id: sistani-qa-adulthood-puberty
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Adulthood - Puberty (Buloogh)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01127/
+language: en
+date: ''
+description: A topic page of questions and answers about buloogh (reaching religious adulthood, when Islamic
+  duties begin). Questions ask how puberty is confirmed in a boy and when a girl is considered an adult.
+sample_questions:
+- When does a boy become an adult in Islam?
+- When is a girl considered an adult?
+- At what age do I have to pray and fast?
+- What is buloogh?
+headings:
+- youth-rulings
+- fiqh
+access: free
+location: 'Q&A topic: Adulthood - Puberty (Buloogh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

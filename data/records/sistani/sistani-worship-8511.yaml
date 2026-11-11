@@ -1,0 +1,29 @@
+id: sistani-worship-8511
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-worship
+level: advanced
+title: Rules of Ḥajj
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/26890/8511/
+language: en
+date: ''
+description: An introduction to the rules of Hajj, the pilgrimage to Mecca, with its place in Islamic
+  law, and its kinds, ending with a note on Hajj al-Tamattu'.
+sample_questions:
+- What is Hajj?
+- What are the kinds of Hajj?
+- What is Hajj al-Tamattu'?
+- Who is Hajj for?
+headings:
+- hajj
+- fiqh
+access: free
+location: 'Chapter: Rules of Ḥajj'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

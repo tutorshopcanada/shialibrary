@@ -1,0 +1,30 @@
+id: sistani-laws-2225
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: PLACES WHERE PERFORMING PRAYERS IS RECOMMENDED (MUSTAḤABB)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2225/
+language: en
+date: ''
+description: Covers places for prayer, such as mosques, the shrines of the Imams, and places for women,
+  and the practice of attending mosques.
+sample_questions:
+- Where is it best to pray?
+- Is it better to pray in a mosque?
+- Where should women pray?
+- Is praying at the shrines of the Imams recommended?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

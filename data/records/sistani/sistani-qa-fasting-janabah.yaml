@@ -1,0 +1,30 @@
+id: sistani-qa-fasting-janabah
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Janabah
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02663/
+language: en
+date: ''
+description: A topic page of questions about janabat (the state after sexual activity or discharge) and
+  its effect on fasting.
+sample_questions:
+- Does janabat break the fast?
+- What if I wake up in janabat in Ramadan?
+- Does a wet dream break the fast?
+- Can I fast without having done ghusl?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Janabah'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

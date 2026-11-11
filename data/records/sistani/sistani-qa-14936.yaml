@@ -1,0 +1,28 @@
+id: sistani-qa-14936
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-rules-of-say
+level: intermediate
+title: Is ritual purity (Taharah) a requirement during the Sa'y between Safa and Marwa?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01306/#14936
+language: en
+date: ''
+description: A question asking whether ritual purity (taharah) is a requirement during sa'y between Safa
+  and Marwa.
+sample_questions:
+- Do I need wudhu for sa'y?
+- Can I do sa'y in a state of impurity?
+- Is taharah needed for sa'y?
+headings:
+- hajj
+access: free
+location: Rules of Sa'y, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

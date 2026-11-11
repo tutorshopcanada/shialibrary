@@ -1,0 +1,28 @@
+id: sistani-qa-fast-broken-intentionally
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fast - Broken Intentionally
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02658/
+language: en
+date: ''
+description: A topic page with a question about deliberately not fasting or breaking a fast.
+sample_questions:
+- What if I break my fast on purpose?
+- What happens if I don't fast without a reason?
+- Is there a penalty for deliberately breaking a fast?
+- What do I do if I skipped fasting on purpose?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fast - Broken Intentionally'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

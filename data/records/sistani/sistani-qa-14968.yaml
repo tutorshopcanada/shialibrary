@@ -1,0 +1,29 @@
+id: sistani-qa-14968
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: The earth is one of the purifying agents. Following the example of a shoe's sole that can be purified
+  by walking on the earth, would the same rule apply to car tires?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14968
+language: en
+date: ''
+description: A question asking whether the earth's purifying role, as with a shoe's sole, applies to car
+  tyres.
+sample_questions:
+- Does walking purify car tyres?
+- How do tyres become pure?
+- Can the earth purify a car's wheels?
+headings:
+- purity
+access: free
+location: Najasat, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

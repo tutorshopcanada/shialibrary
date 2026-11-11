@@ -1,0 +1,30 @@
+id: sistani-qa-15062
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-marriage
+level: intermediate
+title: Is it permissible for a Muslim single man to consummate permanent marriage contract with a Christian
+  or Jewish woman?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01250/#15062
+language: en
+date: ''
+description: A question asking whether a Muslim single man can enter a permanent marriage contract with
+  a Christian or Jewish woman.
+sample_questions:
+- Can a Muslim man marry a Christian woman?
+- Can a Shia marry a Jewish woman?
+- Can a Muslim marry someone from the People of the Book?
+headings:
+- marriage-family
+access: free
+location: Marriage, question 10
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

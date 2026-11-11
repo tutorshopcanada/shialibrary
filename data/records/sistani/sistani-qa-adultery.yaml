@@ -1,0 +1,33 @@
+id: sistani-qa-adultery
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Adultery
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01129/
+language: en
+date: ''
+description: A topic page of questions and answers about adultery (sex outside marriage). Questions cover
+  living together before a marriage contract, the waiting period ('idda) after divorce or separation,
+  who is meant by 'known for adultery', and marriage between two people who had sex before marriage.
+sample_questions:
+- What happens if a couple lived together before marriage?
+- Is there a waiting period after adultery?
+- Can two people who had premarital sex marry?
+- What is 'idda?
+- What does Islam say about adultery?
+headings:
+- marriage-family
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Adultery'
+needs_review: false
+review_note: Sexual matters and penalties; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

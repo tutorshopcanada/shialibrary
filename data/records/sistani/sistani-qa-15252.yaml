@@ -1,0 +1,29 @@
+id: sistani-qa-15252
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hajj-pilgrimage
+level: intermediate
+title: It is recommended to perform hajj every year. However, there are many poor Muslims who are in dire
+  need of food and clothing in various Muslim countries...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01206/#15252
+language: en
+date: ''
+description: A question comparing spending on repeated hajj or ziyarat (visiting holy shrines) with giving
+  charity to poor believers, asking which is better.
+sample_questions:
+- Hajj again or charity?
+- Should I give to the poor instead of another hajj?
+- Is ziyarat better than charity?
+headings:
+- hajj
+access: free
+location: Hajj - Pilgrimage, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-25372
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting
+level: intermediate
+title: I wanted to know if we can brush our teeth during a fast. If so, how?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02662/#25372
+language: en
+date: ''
+description: A question asking whether teeth can be brushed during a fast, and if so how.
+sample_questions:
+- Can I brush my teeth while fasting?
+- Does toothpaste break the fast?
+- How do I brush my teeth in Ramadan?
+- Is it okay to use a toothbrush when fasting?
+headings:
+- fasting
+access: free
+location: Fasting, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

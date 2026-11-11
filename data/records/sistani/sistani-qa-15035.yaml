@@ -1,0 +1,27 @@
+id: sistani-qa-15035
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-interaction-in-social-life
+level: intermediate
+title: Are men and women allowed to work together in the same company?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01215/#15035
+language: en
+date: ''
+description: A question asking whether men and women may work together in the same company.
+sample_questions:
+- Can men and women work together?
+- Is a mixed workplace okay?
+- Can I work with the opposite sex?
+headings:
+- social-conduct-rulings
+access: free
+location: Interaction in Social Life, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

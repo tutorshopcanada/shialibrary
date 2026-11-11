@@ -1,0 +1,29 @@
+id: sistani-qa-14882
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-zakat
+level: intermediate
+title: What is the difference between Khums and Zakat?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01358/#14882
+language: en
+date: ''
+description: A question asking what the difference between khums and zakat is. The site lists this question
+  twice with separate links.
+sample_questions:
+- What is the difference between khums and zakat?
+- How are khums and zakat different?
+- Zakat vs khums?
+- Are khums and zakat the same thing?
+headings:
+- khums-zakat
+access: free
+location: Zakat, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

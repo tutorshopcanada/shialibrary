@@ -1,0 +1,30 @@
+id: sistani-jme-2390
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-jme
+level: beginner
+title: Preface to the English edition
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/49/2390/
+language: en
+date: ''
+description: The author's preface to the English edition, explaining why he wrote a plain-language book
+  of jurisprudence and who it is meant for, especially the younger generation. It also thanks those who
+  financed and translated the book.
+sample_questions:
+- Who wrote Jurisprudence Made Easy?
+- Who is this book written for?
+- Why was a simplified book of fiqh written?
+- Who financed the English translation?
+headings:
+- fiqh
+access: free
+location: Front matter
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

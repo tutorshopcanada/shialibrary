@@ -1,0 +1,29 @@
+id: sistani-qa-15461
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: What is your ruling about cat hair on a person's dress during salat?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#15461
+language: en
+date: ''
+description: A question asking for the ruling on cat hair on a person's clothing during salat.
+sample_questions:
+- Can I pray with cat hair on my clothes?
+- Does a cat's fur affect my prayer?
+- Do I remove pet hair before salat?
+- Cat hair and prayer?
+headings:
+- prayer
+- purity
+access: free
+location: Prayer, question 21
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

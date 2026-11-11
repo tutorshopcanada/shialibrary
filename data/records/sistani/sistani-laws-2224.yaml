@@ -1,0 +1,31 @@
+id: sistani-laws-2224
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: THE PLACE WHERE PRAYERS ARE PERFORMED
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2224/
+language: en
+date: ''
+description: Covers the place where prayers are performed, the conditions that apply to it, and related
+  cases.
+sample_questions:
+- Where can I pray?
+- Can I pray on someone else's property?
+- What are the conditions of the place of prayer?
+- Can I pray on a rented place?
+- Can I pray in a car or train?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

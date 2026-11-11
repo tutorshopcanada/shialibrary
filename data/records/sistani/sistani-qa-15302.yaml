@@ -1,0 +1,27 @@
+id: sistani-qa-15302
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ghusl
+level: intermediate
+title: Is the ink that had dried [on our hands, for example] a barrier to perform wudhu or ghusl?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01198/#15302
+language: en
+date: ''
+description: A question asking whether dried ink on the hands is a barrier to performing wudhu or ghusl.
+sample_questions:
+- Does ink stop my wudhu?
+- Is dried ink a barrier for ghusl?
+- Can I do wudhu with ink on my hands?
+headings:
+- purity
+access: free
+location: Ghusl - Ritual Bath, question 9
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

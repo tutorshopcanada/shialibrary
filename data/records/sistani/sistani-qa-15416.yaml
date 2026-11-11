@@ -1,0 +1,29 @@
+id: sistani-qa-15416
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-depositing-money
+level: intermediate
+title: It is permissible to deposit money with national banks, in other words loaning the banks?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01176/#15416
+language: en
+date: ''
+description: A question asking whether depositing money with national banks, in other words loaning the
+  banks, is allowed.
+sample_questions:
+- Can I put my money in a national bank?
+- Is a bank deposit a loan to the bank?
+- Can I save money in a bank?
+headings:
+- transactions-work
+- khums-zakat
+access: free
+location: Depositing Money, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

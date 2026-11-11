@@ -1,0 +1,29 @@
+id: sistani-qa-14880
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-zakat
+level: intermediate
+title: If I save an amount of money throughout the whole year I know that I have to pay Khums from it.
+  What about Zakat? Should I give Zakat from the amount also?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01358/#14880
+language: en
+date: ''
+description: A question asking whether zakat must also be paid on money saved throughout the year when
+  khums is already paid on it.
+sample_questions:
+- Do I pay both khums and zakat on savings?
+- Is zakat due on money I save?
+- Zakat and khums on the same money?
+headings:
+- khums-zakat
+access: free
+location: Zakat, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

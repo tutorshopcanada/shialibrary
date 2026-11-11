@@ -1,0 +1,32 @@
+id: sistani-qa-dancing
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Dancing
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01172/
+language: en
+date: ''
+description: A topic page of questions and answers about dancing. Questions cover compulsory dance classes
+  in Western schools, a wife dancing for her husband, dancing in gender-segregated gatherings, dance parties
+  for married couples, and women-only dance lessons.
+sample_questions:
+- Can I take dance classes at school?
+- Can a woman dance for her husband?
+- Can women dance in front of other women?
+- Can I attend a women-only dance class?
+- What does Islam say about dancing?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Dancing'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

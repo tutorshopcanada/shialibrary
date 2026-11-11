@@ -1,0 +1,30 @@
+id: sistani-qa-doubts
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Doubts
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01168/
+language: en
+date: ''
+description: A topic page with a question about what to do when a person has frequent doubts in acts of
+  worship such as wudhu, prayer and ghusl.
+sample_questions:
+- What if I keep doubting my wudhu?
+- How do I deal with doubts in prayer?
+- What if I have constant doubts in worship?
+- Is excessive doubt a problem in fiqh?
+headings:
+- prayer
+- purity
+access: free
+location: 'Q&A topic: Doubts'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

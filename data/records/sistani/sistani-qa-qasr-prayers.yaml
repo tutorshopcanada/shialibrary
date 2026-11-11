@@ -1,0 +1,31 @@
+id: sistani-qa-qasr-prayers
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Qasr Prayers
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01298/
+language: en
+date: ''
+description: A topic page of questions and answers about qasr, the shortened form of the four-rak'at prayers
+  said by travellers. Questions cover who counts as a frequent traveller, travelling with sinful intentions,
+  travelling for hunting, and when to pray in full versus qasr.
+sample_questions:
+- What is qasr prayer?
+- When do I shorten my prayers?
+- Who is a frequent traveller in fiqh?
+- Do I shorten prayers when I go hunting?
+- When do I pray in full while travelling?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Qasr Prayers'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

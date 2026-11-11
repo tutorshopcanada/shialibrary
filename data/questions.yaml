@@ -1,0 +1,595 @@
+# Starter questions in plain language. ALL DRAFTS: written by the cataloging agent, not yet
+# reviewed by the owner or a scholar. Each maps to headings and to records that exist.
+questions:
+  - id: q-pray-in-congregation
+    question: "How do Shias pray in congregation?"
+    alt_phrasings: ["how to pray jamaat", "congregational prayer", "praying together in a group", "how does jamaah prayer work"]
+    headings: [prayer]
+    top_records: [sistani-qa-congregational-prayers, sistani-qa-15487, sistani-west-salat-general-rules]
+    draft: true
+  - id: q-who-can-lead-prayer
+    question: "Who can lead the prayer?"
+    alt_phrasings: ["conditions for a prayer leader", "who can be imam of prayer", "qualifications of imam jamaat"]
+    headings: [prayer]
+    top_records: [sistani-qa-14997, sistani-qa-congregational-prayers]
+    draft: true
+  - id: q-pray-behind-sunni-imam
+    question: "Can a Shia pray behind a Sunni imam?"
+    alt_phrasings: ["praying in a sunni mosque", "shia praying behind sunni", "can i join prayer at a sunni mosque"]
+    headings: [prayer]
+    top_records: [sistani-qa-14998, sistani-qa-15488]
+    draft: true
+  - id: q-congregation-or-alone
+    question: "Is it better to pray in congregation or alone?"
+    alt_phrasings: ["pray at the mosque or at home", "is congregational prayer better", "should women pray in congregation"]
+    headings: [prayer]
+    top_records: [sistani-qa-15001, sistani-qa-25307, sistani-qa-congregational-prayers]
+    draft: true
+  - id: q-pray-on-plane
+    question: "How do I pray on a plane or while travelling?"
+    alt_phrasings: ["prayer on an airplane", "praying in a car or train", "finding the qiblah when travelling", "travel prayer", "qasr prayer"]
+    headings: [prayer]
+    top_records: [sistani-west-salat-general-rules, sistani-west-salat-questions-answers]
+    draft: true
+  - id: q-pray-at-work
+    question: "How do I keep up my prayers at work or university?"
+    alt_phrasings: ["praying at work", "prayer time at my job", "prayer at school", "no time to pray at work"]
+    headings: [prayer, muslims-in-west]
+    top_records: [sistani-west-salat-questions-answers]
+    draft: true
+  - id: q-why-prayer-matters
+    question: "Why is prayer so important in Islam?"
+    alt_phrasings: ["why do muslims pray", "importance of salah", "why pray"]
+    headings: [prayer]
+    top_records: [sistani-west-salat-introduction]
+    draft: true
+  - id: q-living-in-west
+    question: "How do I practise Islam while living in a non-Muslim country?"
+    alt_phrasings: ["muslim in the west", "islamic rules for living in the west", "rulings for muslims in western countries"]
+    headings: [muslims-in-west]
+    top_records: [sistani-code-of-practice-west]
+    path: path-islam-in-the-west
+    draft: true
+  - id: q-sistani-rulings
+    question: "Where can I look up Ayatollah Sistani's rulings?"
+    alt_phrasings: ["sistani fatwa", "sistani question and answer", "ask sistani", "sistani rulings in english"]
+    headings: [fiqh]
+    top_records: [sistani-qa, sistani-code-of-practice-west]
+    draft: true
+  - id: q-what-is-al-kafi
+    question: "What is Al-Kafi?"
+    alt_phrasings: ["al kafi hadith book", "shia hadith books", "main shia hadith collection", "usul al-kafi"]
+    headings: [hadith-collections]
+    top_records: [thaqalayn-al-kafi-vol-1, thaqalayn-al-kafi-vol-2]
+    draft: true
+  - id: q-nahj-al-balagha
+    question: "Where can I read the sermons and sayings of Imam Ali?"
+    alt_phrasings: ["what is nahjul balagha", "nahj al-balagha in english", "sayings of imam ali", "letters of imam ali"]
+    headings: [nahj-al-balagha, imam-ali]
+    top_records: [thaqalayn-nahj-al-balagha]
+    path: path-nahj-al-balagha
+    draft: true
+  - id: q-hadith-on-god
+    question: "What do the Imams say about God?"
+    alt_phrasings: ["hadith about tawhid", "shia hadith on the oneness of god", "narrations about allah"]
+    headings: [tawhid]
+    top_records: [thaqalayn-al-tawhid, thaqalayn-al-kafi-vol-1]
+    draft: true
+  - id: q-hadith-on-mahdi-occultation
+    question: "Where can I read hadith about the twelfth Imam being hidden?"
+    alt_phrasings: ["hadith about the mahdi", "occultation of the imam", "ghaybah hadith", "book about the occultation"]
+    headings: [imam-mahdi]
+    top_records: [thaqalayn-kitab-al-ghayba-tusi]
+    draft: true
+  - id: q-ziyarat-imam-husayn
+    question: "What do hadith say about visiting the shrine of Imam Husayn?"
+    alt_phrasings: ["ziyarat of imam hussain", "visiting karbala", "hadith about ziyarat", "kamil al-ziyarat"]
+    headings: [ziyarat, imam-husayn]
+    top_records: [thaqalayn-kamil-al-ziyarat]
+    draft: true
+  - id: q-rights-of-others
+    question: "What rights do other people have over me?"
+    alt_phrasings: ["treatise on rights", "risalat al-huquq", "rights of parents and neighbours", "duties to others in islam"]
+    headings: [family-social-ethics]
+    top_records: [thaqalayn-risalat-al-huquq]
+    draft: true
+  - id: q-what-is-shia-islam
+    question: "What is Shia Islam?"
+    alt_phrasings: ["who are the shia", "what do shias believe", "introduction to shia islam", "shia islam for beginners", "what does shia mean"]
+    headings: [new-to-shia-islam]
+    path: path-new-to-shia-islam
+    top_records: [al-islam-discovering-shii-islam, al-islam-brief-introduction-to-islam, al-islam-discovering-islam]
+    draft: true
+  - id: q-how-to-become-muslim
+    question: "I'm new to Islam. Where do I start?"
+    alt_phrasings: ["how do i become a muslim", "new muslim where to start", "converting to islam", "what is islam"]
+    headings: [becoming-muslim, new-to-shia-islam]
+    path: path-new-to-shia-islam
+    top_records: [al-islam-brief-introduction-to-islam, al-islam-what-muslim-should-know-and-believe, al-islam-discovering-islam]
+    draft: true
+  - id: q-how-do-shias-pray
+    question: "How do Shias pray?"
+    alt_phrasings: ["how to pray", "how to perform salah", "shia prayer", "learn to pray", "daily prayers"]
+    headings: [prayer]
+    path: path-learning-about-prayer
+    top_records: [al-islam-discovering-islam, sistani-west-salat-general-rules, sistani-qa-congregational-prayers]
+    draft: true
+  - id: q-who-is-imam-ali
+    question: "Who is Imam Ali?"
+    alt_phrasings: ["who was ali", "ali ibn abi talib", "first imam", "life of imam ali"]
+    headings: [imam-ali]
+    path: path-imam-ali
+    top_records: [al-islam-gardener-of-the-gardens-of-tawheed, al-islam-nahjul-balagah-revisited-imam-ali, al-islam-brief-history-fourteen-infallibles]
+    draft: true
+  - id: q-who-are-the-twelve-imams
+    question: "Who are the Twelve Imams?"
+    alt_phrasings: ["names of the 12 imams", "the twelve imams", "who are the fourteen infallibles", "ahlul bayt"]
+    headings: [twelve-imams]
+    top_records: [al-islam-brief-history-fourteen-infallibles, al-islam-discovering-islam]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-what-happened-at-karbala
+    question: "What happened at Karbala?"
+    alt_phrasings: ["what is ashura", "why do shias mourn", "why do shia cry on ashura", "why was imam hussain killed", "story of karbala", "muharram"]
+    headings: [karbala-ashura]
+    path: path-karbala-and-ashura
+    top_records: [al-islam-tears-for-karbala, al-islam-karbala-and-beyond, al-islam-karbala-chain-of-events]
+    draft: true
+  - id: q-who-is-the-mahdi
+    question: "Who is the Mahdi?"
+    alt_phrasings: ["who is imam mahdi", "the twelfth imam", "the hidden imam", "what is the occultation", "imam zaman"]
+    headings: [imam-mahdi]
+    top_records: [al-islam-the-last-luminary, al-islam-fazail-ul-mahdi, thaqalayn-kitab-al-ghayba-tusi]
+    path: path-the-mahdi-and-waiting
+    draft: true
+  - id: q-who-is-fatimah
+    question: "Who is Lady Fatimah?"
+    alt_phrasings: ["fatima zahra", "daughter of the prophet", "life of fatimah"]
+    headings: [fatimah]
+    top_records: [al-islam-fatima-the-gracious, al-islam-brief-history-fourteen-infallibles]
+    path: path-fatimah-and-the-prophets-family
+    draft: true
+  - id: q-what-is-the-quran
+    question: "What is the Quran and how was it revealed?"
+    alt_phrasings: ["introduction to the quran", "about the quran", "how was the quran revealed"]
+    headings: [quran]
+    path: path-the-prophet-and-the-quran
+    top_records: [al-islam-holy-quran-some-basic-facts, al-islam-introduction-to-the-glorious-quran, al-islam-quran-in-islam-its-impact-and-influence]
+    draft: true
+  - id: q-why-pray-on-turbah
+    question: "Why do Shias pray on a clay tablet?"
+    alt_phrasings: ["turbah", "why do shias pray differently", "shia prayer stone", "mohr"]
+    headings: [sunni-shia]
+    top_records: [al-islam-mystery-of-the-shia]
+    draft: true
+  - id: q-who-is-prophet-muhammad
+    question: "Who is the Prophet Muhammad?"
+    alt_phrasings: ["life of the prophet", "biography of muhammad", "story of prophet muhammad", "seerah"]
+    headings: [prophet-muhammad]
+    path: path-the-prophet-and-the-quran
+    top_records: [al-islam-prophet-muhammad-brief-biography, al-islam-glance-life-holy-prophet]
+    draft: true
+  - id: q-what-is-ghadir
+    question: "What happened at Ghadir Khumm?"
+    alt_phrasings: ["what is eid al-ghadir", "ghadir sermon", "event of ghadir"]
+    headings: [ghadir-succession]
+    top_records: [al-islam-ghadir-sermon, al-islam-glance-life-holy-prophet]
+    draft: true
+  - id: q-why-follow-imams
+    question: "Why do Shias follow the Imams?"
+    alt_phrasings: ["what is imamate", "what is an imam in shia islam", "why do shias believe in imams"]
+    headings: [imamate]
+    path: path-the-imams-and-imamate
+    top_records: [al-islam-imamate-and-the-imams, al-islam-lets-learn-about-imamate, al-islam-islamic-teachings-in-brief]
+    draft: true
+  - id: q-why-mourn-husayn
+    question: "Why do Shias mourn for Imam Husayn?"
+    alt_phrasings: ["why do shias cry in muharram", "why mourning for hussain", "azadari", "is mourning allowed"]
+    headings: [karbala-ashura]
+    path: path-karbala-and-ashura
+    top_records: [al-islam-quran-and-mourning-for-husayn, al-islam-karbala-chain-of-events, sistani-qa-azadari]
+    draft: true
+  - id: q-is-god-just
+    question: "Is God fair? What about suffering and free will?"
+    alt_phrasings: ["divine justice", "why does god allow suffering", "do we have free will", "adl"]
+    headings: [adl]
+    path: path-learning-about-god
+    top_records: [al-islam-lets-learn-about-divine-justice, al-islam-divine-justice-mutahhari]
+    draft: true
+  - id: q-life-after-death
+    question: "What happens after we die?"
+    alt_phrasings: ["day of judgement", "life after death", "afterlife in islam", "heaven and hell"]
+    headings: [maad]
+    path: path-learning-about-god
+    top_records: [al-islam-lets-learn-about-resurrection, al-islam-day-of-judgement-rizvi]
+    draft: true
+  - id: q-how-to-make-dua
+    question: "How do I make dua (call on God)?"
+    alt_phrasings: ["what is dua", "how to supplicate", "praying to god in my own words"]
+    headings: [duas]
+    path: path-dua-and-repentance
+    top_records: [al-islam-importance-of-dua-method-supplicating, al-islam-dua-amrohi, al-islam-in-the-presence-of-the-beloved]
+    draft: true
+  - id: q-how-to-repent
+    question: "How do I repent from my sins?"
+    alt_phrasings: ["tawbah", "will god forgive me", "repentance in islam", "how to ask forgiveness"]
+    headings: [spirituality]
+    top_records: [al-islam-repentance-cradle-of-mercy]
+    draft: true
+  - id: q-what-is-hadith
+    question: "What is a hadith and how do we know it is reliable?"
+    alt_phrasings: ["hadith sciences", "are hadith authentic", "how were hadith collected", "what are hadith"]
+    headings: [hadith-sciences]
+    top_records: [al-islam-sciences-of-hadith-leghaei, al-islam-al-hadith-analysis-overview]
+    draft: true
+  - id: q-what-is-khums
+    question: "What is khums?"
+    alt_phrasings: ["khums rules", "do i have to pay khums", "the one fifth payment"]
+    headings: [khums-zakat]
+    top_records: [sistani-qa-khums]
+    draft: true
+  - id: q-fasting-ramadan
+    question: "What are the rules of fasting in Ramadan?"
+    alt_phrasings: ["how to fast", "who does not have to fast", "what breaks the fast", "ramadan fasting"]
+    headings: [fasting]
+    top_records: [sistani-west-fasting-general-rules, sistani-qa-fasting]
+    draft: true
+  - id: q-halal-food-west
+    question: "What can I eat in a non-Muslim country?"
+    alt_phrasings: ["is supermarket meat halal", "halal food in the west", "eating at restaurants", "can i eat food made by non-muslims"]
+    headings: [food-drink]
+    top_records: [sistani-west-food-general-rules, sistani-qa-eating-drinking, sistani-qa-meat]
+    draft: true
+  - id: q-what-is-taqlid
+    question: "What is taqlid, and do I need to follow a marja?"
+    alt_phrasings: ["following a mujtahid", "how to choose a marja", "what is a marja"]
+    headings: [taqlid]
+    top_records: [sistani-west-taqlid-introduction, sistani-west-taqlid-general-rules, sistani-qa-following-a-mujtahid]
+    draft: true
+  - id: q-why-become-shia
+    question: "Why do people become Shia?"
+    alt_phrasings: ["why did you become shia", "converting to shia islam", "how i became shia", "why shia", "convert stories"]
+    headings: [becoming-muslim, sunni-shia]
+    path: path-why-people-become-shia
+    top_records: [al-islam-how-i-found-right-path, al-islam-discovering-shii-islam, al-islam-meaning-origins-shiism]
+    draft: true
+  - id: q-imam-hasan
+    question: "Who was Imam Hasan?"
+    alt_phrasings: ["imam hasan ibn ali", "second imam", "al-hasan al-mujtaba", "story of imam hassan"]
+    headings: [twelve-imams]
+    top_records: [al-islam-army-of-imam-al-hasan, al-islam-brief-history-fourteen-infallibles, al-islam-imam-hasan-brief-look-his-life]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-imam-husayn
+    question: "Who was Imam Husayn?"
+    alt_phrasings: ["imam hussain", "hussein ibn ali", "third imam", "al-husayn ibn ali"]
+    headings: [imam-husayn]
+    top_records: [al-islam-imam-husayn-saviour-of-islam, al-islam-journey-of-imam-husayn, al-islam-last-days-of-imam-husayn]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-imam-sajjad
+    question: "Who was Imam Zayn al-Abidin (Sajjad)?"
+    alt_phrasings: ["imam sajjad", "zainul abideen", "fourth imam", "ali ibn al-husayn"]
+    headings: [twelve-imams]
+    top_records: [al-islam-in-praise-imam-zaynul-abideen, al-islam-ibadah-imam-zaynul-abideen, al-islam-zayn-al-abidin-mufid-irshad]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-imam-sadiq
+    question: "Who was Imam Ja'far al-Sadiq?"
+    alt_phrasings: ["imam jafar sadiq", "sixth imam", "jafar as-sadiq", "imam sadiq teachings"]
+    headings: [twelve-imams]
+    top_records: [al-islam-life-imam-jafar-al-sadiq, al-islam-imam-sadiq-contribution-sciences, al-islam-imam-sadiq-mufid-irshad]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-imam-rida
+    question: "Who was Imam al-Rida?"
+    alt_phrasings: ["imam reza", "imam ridha", "eighth imam", "ali ibn musa al-rida"]
+    headings: [twelve-imams]
+    top_records: [al-islam-brief-history-fourteen-infallibles, thaqalayn-uyun-akhbar-al-rida-vol-1]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-imam-jawad
+    question: "Who was Imam Muhammad al-Taqi (al-Jawad)?"
+    alt_phrasings: ["imam jawad", "ninth imam", "imam taqi", "muhammad al-jawad"]
+    headings: [twelve-imams]
+    top_records: [al-islam-brief-history-fourteen-infallibles, al-islam-infallibles-imam-muhammad-al-taqi]
+    path: path-twelve-imams-in-turn
+    draft: true
+  - id: q-khadijah
+    question: "Who was Lady Khadijah?"
+    alt_phrasings: ["khadija wife of the prophet", "khadijah bint khuwaylid", "first wife of prophet muhammad", "khadeeja"]
+    headings: [prophet-muhammad, ahl-al-bayt]
+    top_records: [al-islam-lady-khadija-perfect-woman, al-islam-khadijah-daughter-of-khuwaylid]
+    path: path-fatimah-and-the-prophets-family
+    draft: true
+  - id: q-lady-zaynab
+    question: "Who was Lady Zaynab?"
+    alt_phrasings: ["zainab bint ali", "sayyida zaynab", "sister of imam husayn", "zeinab"]
+    headings: [ahl-al-bayt, karbala-ashura]
+    top_records: [al-islam-lady-zaynab, al-islam-role-of-women-in-karbala, al-islam-medina-to-sham-lady-zaynab-wilayah]
+    path: path-fatimah-and-the-prophets-family
+    draft: true
+  - id: q-fatimah-role-model
+    question: "Why is Fatimah a role model for women?"
+    alt_phrasings: ["fatima zahra role model", "what can we learn from fatimah", "life of fatima al-zahra", "daughter of the prophet"]
+    headings: [fatimah]
+    top_records: [al-islam-fatima-perfect-role-model, al-islam-fatima-the-gracious, al-islam-fatima-mother-of-her-father]
+    path: path-fatimah-and-the-prophets-family
+    draft: true
+  - id: q-lady-mary
+    question: "Who is Mary (Maryam) in the Quran?"
+    alt_phrasings: ["maryam mother of isa", "virgin mary in islam", "lady maryam", "mary mother of jesus quran"]
+    headings: [quran]
+    top_records: [al-islam-lady-mary-role-model-quran-bible]
+    draft: true
+  - id: q-what-is-ashura
+    question: "What is Ashura?"
+    alt_phrasings: ["ashoora", "day of ashura", "tenth of muharram", "what happens on 10 muharram"]
+    headings: [karbala-ashura]
+    top_records: [al-islam-tears-for-karbala, al-islam-what-is-ashoora, al-islam-ashura-tenth-muharram]
+    path: path-ashura-arbaeen-and-mourning
+    draft: true
+  - id: q-what-is-arbaeen
+    question: "What is Arbaeen, and why do people walk to Karbala?"
+    alt_phrasings: ["arbain", "arba'een pilgrimage", "chehlum", "forty days after ashura", "walk to karbala"]
+    headings: [karbala-ashura, ziyarat]
+    top_records: [al-islam-arbaeen-reflecting-upon-imams-stand, al-islam-guide-walking-imam-hussain]
+    path: path-ashura-arbaeen-and-mourning
+    draft: true
+  - id: q-what-is-azadari
+    question: "What are majalis and azadari (mourning gatherings)?"
+    alt_phrasings: ["majlis", "muharram gatherings", "azadari meaning", "why do shias hold mourning gatherings", "aza-e-husain"]
+    headings: [karbala-ashura]
+    top_records: [al-islam-history-philosophy-aza-husayn, al-islam-philosophy-husayn-sacrifice-azadari, al-islam-quran-and-mourning-for-husayn]
+    path: path-ashura-arbaeen-and-mourning
+    draft: true
+  - id: q-ghadir-sermon
+    question: "What did the Prophet say in the Ghadir sermon?"
+    alt_phrasings: ["sermon of ghadir khumm", "eid al-ghadir", "ghadeer", "event of ghadir"]
+    headings: [ghadir-succession]
+    top_records: [al-islam-ghadir-sermon, al-islam-ghadir-khumm-best-kept-secrets, al-islam-ali-and-allegiance]
+    draft: true
+  - id: q-mahdi-waiting
+    question: "What does it mean to wait for the Mahdi?"
+    alt_phrasings: ["intizar", "awaiting the imam", "waiting for imam al-mahdi", "what should i do while waiting for the mahdi"]
+    headings: [imam-mahdi]
+    top_records: [al-islam-humans-era-awaiting, al-islam-sun-behind-the-clouds, al-islam-allahs-bounty-baqiyatullah]
+    path: path-the-mahdi-and-waiting
+    draft: true
+  - id: q-mahdi-world
+    question: "What will the world be like when the Mahdi appears?"
+    alt_phrasings: ["the mahdi's government", "end times in shia islam", "imam mahdi reappearance", "zuhur"]
+    headings: [imam-mahdi]
+    top_records: [al-islam-globe-advent-imam-mahdi-part-1, al-islam-globe-advent-imam-mahdi-part-2, al-islam-fazail-ul-mahdi]
+    path: path-the-mahdi-and-waiting
+    draft: true
+  - id: q-what-is-nahj
+    question: "What is Nahj al-Balagha?"
+    alt_phrasings: ["nahjul balagha", "nahj ul balagha", "peak of eloquence", "book of imam ali sermons"]
+    headings: [nahj-al-balagha]
+    top_records: [al-islam-nahj-al-balaghah-for-children, al-islam-nahjul-balagah-revisited-imam-ali, al-islam-preface-nahjul-balaghah]
+    path: path-nahj-al-balagha
+    draft: true
+  - id: q-nahj-authentic
+    question: "Is Nahj al-Balagha authentic?"
+    alt_phrasings: ["who wrote nahj al-balagha", "sources of nahjul balagha", "sayyid razi compilation", "doubts about nahj al-balagha"]
+    headings: [nahj-al-balagha]
+    top_records: [al-islam-authenticity-nahjul-balaghah, al-islam-sayyid-razi-life-and-work, al-islam-sources-nahjul-balaghah]
+    path: path-nahj-al-balagha
+    draft: true
+  - id: q-what-is-tafsir
+    question: "What is tafsir (Quran commentary)?"
+    alt_phrasings: ["tafseer", "quran interpretation", "how is the quran explained", "science of tafsir"]
+    headings: [tafsir, quran-sciences]
+    top_records: [al-islam-introduction-science-tafsir, al-islam-quran-in-islam-its-impact-and-influence]
+    draft: true
+  - id: q-understand-quran
+    question: "How can I start understanding the Quran?"
+    alt_phrasings: ["reading the quran for beginners", "quran lessons", "how to read the koran", "learn quran meaning"]
+    headings: [quran]
+    path: path-quran-for-beginners
+    top_records: [al-islam-holy-quran-some-basic-facts, al-islam-quranic-lessons, al-islam-opening-our-eyes-light-quran]
+    draft: true
+  - id: q-science-of-hadith
+    question: "How are hadith studied and classified?"
+    alt_phrasings: ["ilm al-hadith", "hadith sciences", "types of hadith", "sahih weak hadith", "how do scholars check narrators"]
+    headings: [hadith-sciences, hadith]
+    top_records: [al-islam-al-hadith-analysis-overview, al-islam-sciences-of-hadith-leghaei]
+    draft: true
+  - id: q-dua-kumayl
+    question: "What is Dua Kumayl?"
+    alt_phrasings: ["du'a kumayl", "dua kumail", "thursday night dua", "supplication of kumayl"]
+    headings: [duas]
+    top_records: [al-islam-dua-kumayl-translation-commentary]
+    draft: true
+  - id: q-sahifa-sajjadiyya
+    question: "What is the Sahifa Sajjadiyya?"
+    alt_phrasings: ["sahifa sajjadiyya", "sahifa kamila", "psalms of the family of muhammad", "prayers of imam zayn al-abidin"]
+    headings: [duas]
+    top_records: [al-islam-15-whispered-prayers-sahifa-sajjadiyya, al-islam-ibadah-imam-zaynul-abideen]
+    draft: true
+  - id: q-how-to-do-ziyarat
+    question: "How do I visit a shrine (ziyarat) with the right etiquette?"
+    alt_phrasings: ["ziyarah etiquette", "how to make ziyara", "visiting the imams", "adab of ziyarat"]
+    headings: [ziyarat]
+    top_records: [al-islam-how-to-make-most-of-ziyarah, al-islam-guide-walking-imam-hussain, thaqalayn-kamil-al-ziyarat]
+    draft: true
+  - id: q-shaban-15
+    question: "What is special about the 15th of Shaban?"
+    alt_phrasings: ["nisf shaban", "mid-shaban", "shab-e-barat", "birth of imam mahdi", "night of 15 shaban"]
+    headings: [islamic-calendar]
+    top_records: [al-islam-greatness-of-15th-of-shaban, al-islam-forgiveness-munajat-shabaniyyah]
+    draft: true
+  - id: q-control-anger
+    question: "How can I control my anger?"
+    alt_phrasings: ["anger management islam", "islamic advice on anger", "ghadab", "how to stop being angry"]
+    headings: [ethics, spirituality]
+    top_records: [al-islam-diseases-soul-anger, al-islam-good-naturedness-in-islam, al-islam-fortitude-bridge-to-victory]
+    path: path-ethics-and-character
+    draft: true
+  - id: q-patience
+    question: "Why is patience important in Islam?"
+    alt_phrasings: ["sabr", "being patient in hardship", "how to be patient", "fortitude"]
+    headings: [ethics]
+    top_records: [al-islam-fortitude-bridge-to-victory, al-islam-indicators-of-piety-part-1]
+    path: path-ethics-and-character
+    draft: true
+  - id: q-good-character
+    question: "What does Islam teach about good character?"
+    alt_phrasings: ["akhlaq", "good manners islam", "how to be a better person", "islamic ethics for beginners"]
+    headings: [ethics]
+    top_records: [al-islam-morals-for-children-and-young, al-islam-ethics-and-spiritual-growth, al-islam-good-naturedness-in-islam]
+    path: path-ethics-and-character
+    draft: true
+  - id: q-spiritual-growth
+    question: "How can I grow spiritually?"
+    alt_phrasings: ["spiritual development", "becoming closer to god", "self-improvement in islam", "tazkiyah", "irfan"]
+    headings: [spirituality]
+    top_records: [al-islam-spiritual-fitness, al-islam-ethics-and-spiritual-growth, al-islam-spiritual-migration]
+    draft: true
+  - id: q-raise-children
+    question: "How should I raise my children as Muslims?"
+    alt_phrasings: ["islamic parenting", "teaching kids about islam", "bringing up children", "tarbiyah of children"]
+    headings: [family-social-ethics]
+    top_records: [al-islam-morals-for-children-and-young, al-islam-raising-children, al-islam-the-prayer-of-a-mother]
+    path: path-family-and-parenting
+    draft: true
+  - id: q-marriage-rules
+    question: "Where can I read about the basic rules of marriage?"
+    alt_phrasings: ["islamic marriage", "nikah rules", "muslim wedding", "temporary marriage and permanent marriage"]
+    headings: [marriage-family]
+    top_records: [sistani-west-marriage-introduction, sistani-west-marriage-general-rules]
+    path: path-family-and-parenting
+    draft: true
+  - id: q-hijab-dress
+    question: "Where can I read about hijab and Islamic dress?"
+    alt_phrasings: ["what to wear islam", "headscarf rules", "modest dress", "dress code muslims"]
+    headings: [dress-appearance]
+    top_records: [sistani-west-dress-introduction, sistani-west-dress-general-rules, sistani-women]
+    draft: true
+  - id: q-convert-stories
+    question: "Where can I read the stories of people who became Muslim?"
+    alt_phrasings: ["converts to islam", "reverts", "how i found islam", "journey to islam"]
+    headings: [becoming-muslim]
+    top_records: [al-islam-how-i-became-muslim-diana-beatty, al-islam-my-story-kathy-kooshesh, al-islam-how-i-found-right-path]
+    path: path-becoming-muslim-first-steps
+    draft: true
+  - id: q-shia-sunni-difference
+    question: "What is the difference between Shia and Sunni?"
+    alt_phrasings: ["shia vs sunni", "shi'a and sunni differences", "why did muslims split", "shiite sunni history"]
+    headings: [sunni-shia]
+    top_records: [al-islam-meaning-origins-shiism, al-islam-discovering-shii-islam, al-islam-mystery-of-the-shia]
+    path: path-shia-and-sunni-unity
+    draft: true
+  - id: q-shia-sunni-unity
+    question: "Can Shias and Sunnis live and pray together in unity?"
+    alt_phrasings: ["muslim unity", "islamic unity week", "ittihad", "sunni shia brotherhood"]
+    headings: [sunni-shia]
+    top_records: [al-islam-plea-islamic-unity, al-islam-shia-imams-muslim-unity-part-1, al-islam-thoughts-road-islamic-solidarity]
+    path: path-shia-and-sunni-unity
+    draft: true
+  - id: q-who-is-god
+    question: "What do Shias believe about God?"
+    alt_phrasings: ["tawhid meaning", "oneness of god", "allah in shia islam", "nature of god"]
+    headings: [tawhid]
+    path: path-learning-about-god
+    top_records: [al-islam-lets-learn-about-god, al-islam-once-upon-a-time-there-was-no-other-than-god, al-islam-islamic-teachings-in-brief]
+    draft: true
+  - id: q-why-prophets
+    question: "Why did God send prophets?"
+    alt_phrasings: ["purpose of prophets", "nubuwwah", "what is prophethood", "who were the prophets"]
+    headings: [nubuwwah]
+    path: path-stories-for-young-readers
+    top_records: [al-islam-stories-of-the-prophets, al-islam-basic-teachings-of-islam]
+    draft: true
+  - id: q-islam-and-science
+    question: "Does Islam conflict with modern science?"
+    alt_phrasings: ["islam and science", "religion and science", "islam and evolution", "science in islamic history"]
+    headings: [beliefs]
+    top_records: [al-islam-imam-sadiq-contribution-sciences, al-islam-modern-science-islamic-doctrines]
+    draft: true
+  - id: q-qasr-travel
+    question: "How many rak'ahs do I pray when travelling?"
+    alt_phrasings: ["shortened prayer", "qasr prayer rules", "praying while travelling", "distance for qasr", "musafir prayer"]
+    headings: [prayer]
+    top_records: [sistani-qa-qasr-prayers, sistani-west-salat-general-rules]
+    draft: true
+  - id: q-khums-pay
+    question: "How do I work out and pay my khums?"
+    alt_phrasings: ["khums calculation", "who pays khums", "khums on savings", "annual khums date", "how to pay khums"]
+    headings: [khums-zakat]
+    top_records: [sistani-qa-khums, sistani-code-of-practice-west]
+    draft: true
+  - id: q-fasting-ill
+    question: "Can I fast if I am ill, pregnant or travelling?"
+    alt_phrasings: ["exemptions from fasting", "missed fasts", "fasting when sick", "pregnant and fasting", "ramadan fasting exceptions"]
+    headings: [fasting]
+    top_records: [sistani-qa-fasting-illness, sistani-qa-fasting-pregnancy, sistani-qa-fasting]
+    draft: true
+  - id: q-halal-ingredients
+    question: "How do I check whether food ingredients are halal?"
+    alt_phrasings: ["e numbers halal", "gelatin halal", "haram ingredients", "halal supermarket food", "is this product halal"]
+    headings: [food-drink]
+    top_records: [sistani-west-appendix-ingredients-preservatives, sistani-qa-halal-haram-foods, sistani-west-food-introduction]
+    draft: true
+  - id: q-what-is-hajj
+    question: "What is Hajj and how is it performed?"
+    alt_phrasings: ["pilgrimage to mecca", "hajj steps", "umrah and hajj", "how to perform hajj", "hajj for beginners"]
+    headings: [hajj]
+    top_records: [sistani-west-hajj-introduction, sistani-qa-hajj-pilgrimage, sistani-hajj-rituals]
+    draft: true
+  - id: q-ritual-purity
+    question: "What is ritual purity (taharah) and why does it matter?"
+    alt_phrasings: ["wudu and ghusl", "najis and tahir", "what is najasah", "being pure for prayer", "cleanliness in islam"]
+    headings: [purity]
+    top_records: [sistani-west-purity-introduction, sistani-west-purity-general-rules]
+    draft: true
+  - id: q-stories-for-children
+    question: "Are there Islamic stories I can read with my children?"
+    alt_phrasings: ["islamic stories for kids", "children's books about islam", "bedtime stories prophets", "stories for young muslims"]
+    headings: [nubuwwah]
+    path: path-stories-for-young-readers
+    top_records: [al-islam-stories-of-the-prophets, al-islam-islamic-stories, al-islam-pearls-of-wisdom]
+    draft: true
+  - id: q-teach-kids-about-god
+    question: "How do I explain God to a child?"
+    alt_phrasings: ["teaching children about allah", "islamic lessons for kids about god", "books on tawhid for children", "simple lessons on belief for youth"]
+    headings: [tawhid]
+    path: path-learning-about-god
+    top_records: [al-islam-once-upon-a-time-there-was-no-other-than-god, al-islam-lets-learn-about-god, al-islam-fifty-lessons-principles-belief-youth]
+    draft: true
+  - id: q-teach-kids-manners
+    question: "How do I teach my child good manners in Islam?"
+    alt_phrasings: ["islamic manners for kids", "teaching children not to backbite", "good behaviour for muslim children", "akhlaq for kids"]
+    headings: [family-social-ethics]
+    path: path-good-manners-for-children
+    top_records: [al-islam-morals-for-children-and-young, al-islam-lets-talk-about-backbiting, al-islam-characteristics-of-a-muslim]
+    draft: true
+  - id: q-what-is-ramadan
+    question: "What is the month of Ramadan?"
+    alt_phrasings: ["why do muslims fast", "ramadan for beginners", "ramazan meaning", "month of fasting"]
+    headings: [islamic-calendar]
+    path: path-understanding-ramadan
+    top_records: [al-islam-understanding-month-of-glory, al-islam-seeking-assistance-from-prayer-and-fasting]
+    draft: true
+  - id: q-companions-of-the-imams
+    question: "Who were the companions of the Prophet and the Imams?"
+    alt_phrasings: ["who was abu dharr", "who was bilal", "who was kumayl", "who was maytham al-tammar", "followers of imam ali"]
+    headings: [companions-scholars]
+    path: path-companions-of-the-prophet-and-imams
+    top_records: [al-islam-and-once-again-abu-dharr, al-islam-bilal-historical-stories-children-4, al-islam-kumayl-bin-ziyad]
+    draft: true
+  - id: q-who-was-bilal
+    question: "Who was Bilal, the first caller to prayer?"
+    alt_phrasings: ["bilal ibn rabah", "first muezzin", "story of bilal"]
+    headings: [companions-scholars]
+    path: path-companions-of-the-prophet-and-imams
+    top_records: [al-islam-bilal-historical-stories-children-4, al-islam-islamic-stories]
+    draft: true
+  - id: q-who-was-abu-talib
+    question: "Who was Abu Talib?"
+    alt_phrasings: ["uncle of the prophet", "father of imam ali", "abu talib biography"]
+    headings: [prophet-muhammad]
+    path: path-companions-of-the-prophet-and-imams
+    top_records: [al-islam-abu-talib-b-abdul-muttalib]
+    draft: true

@@ -1,0 +1,31 @@
+id: sistani-west-introduction
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Introduction
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2018/
+language: en
+date: ''
+description: The author's long introduction to A Code of Practice For Muslims in the West. It tells a
+  story of a flight to London in which everyday religious questions arise, and discusses how Muslims can
+  hold on to their faith and values when living in non-Muslim countries and why the book was written.
+sample_questions:
+- Why was a book of rulings for Muslims in the West written?
+- How can a Muslim keep their faith in a non-Muslim country?
+- What religious questions do Muslims face when they move to the West?
+- What does this book on Muslims in the West cover?
+headings:
+- fiqh
+- muslims-in-west
+access: free
+location: 'Front matter: Introduction'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

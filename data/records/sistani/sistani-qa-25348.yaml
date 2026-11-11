@@ -1,0 +1,28 @@
+id: sistani-qa-25348
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-intention
+level: intermediate
+title: What is the niyyah of fasting? How should one make niyyah of fasting?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02649/#25348
+language: en
+date: ''
+description: A question asking what the niyyah (intention) of fasting is and how to make it.
+sample_questions:
+- What is the intention for fasting?
+- How do I make niyyah for Ramadan?
+- What do I say before fasting?
+- How do I make intention for a fast?
+headings:
+- fasting
+access: free
+location: Fasting - Intention (Niyah), question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

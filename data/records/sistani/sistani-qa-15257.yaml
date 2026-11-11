@@ -1,0 +1,28 @@
+id: sistani-qa-15257
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hijab
+level: intermediate
+title: Can I remove my Hijab in time of danger?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01208/#15257
+language: en
+date: ''
+description: A question asking whether the hijab can be removed in a time of danger.
+sample_questions:
+- Can I take off my hijab if I am in danger?
+- Is hijab required in an emergency?
+- Can I remove hijab for safety?
+headings:
+- dress-appearance
+- women-rulings
+access: free
+location: Hijab (Islamic Dress), question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-laws-2252
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: DOUBTS THAT MUST BE DISMISSED
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2252/
+language: en
+date: ''
+description: Introduces the doubts in prayer that the book addresses under the heading of dismissed doubts,
+  with each category explained on the following pages.
+sample_questions:
+- Which doubts in prayer can be ignored?
+- What does it mean to dismiss a doubt?
+- What if I doubt after finishing the prayer?
+- What if I doubt after the time of prayer?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

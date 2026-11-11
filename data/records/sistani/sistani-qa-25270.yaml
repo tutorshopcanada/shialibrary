@@ -1,0 +1,28 @@
+id: sistani-qa-25270
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-abortion
+level: intermediate
+title: What is the kaffara of abortion?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/#25270
+language: en
+date: ''
+description: A question asking what the kaffara (expiation, a religious penalty) for abortion is.
+sample_questions:
+- What is kaffara for abortion?
+- Is there a penalty for abortion?
+- What do I owe after an abortion?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Abortion, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

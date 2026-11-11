@@ -1,0 +1,30 @@
+id: sistani-qa-identifying-the-most-learned-mujtahid
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Identifying the Most Learned Mujtahid
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01219/
+language: en
+date: ''
+description: 'A topic page of questions and answers about taqlid (following a marja'', a senior scholar,
+  in religious law) and how to identify the most learned mujtahid (a qualified jurist). It has two questions:
+  what taqlid means and how to identify the most learned.'
+sample_questions:
+- What is taqlid?
+- How do I choose a marja'?
+- How do I find the most learned mujtahid?
+- Who should I follow?
+headings:
+- taqlid
+access: free
+location: 'Q&A topic: Identifying the Most Learned Mujtahid'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

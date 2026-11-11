@@ -1,0 +1,17 @@
+id: path-islam-in-the-west
+title: "Practising Islam in the West"
+intro: "A reading order for Muslims living in non-Muslim countries: first the basics, then the practical guide and its chapters on prayer and food."
+steps:
+- record: al-islam-brief-introduction-to-islam
+  why: "A short beginner-level introduction to Islam."
+- record: al-islam-islamic-teachings-in-brief
+  why: "A summary of Islamic beliefs and ethics in simple language."
+- record: sistani-jme
+  why: "An easy-to-follow introduction to Islamic law on Sayyid Sistani's site."
+- record: sistani-code-of-practice-west
+  why: "A guide to practical living for Muslims in the West, presenting Sayyid Sistani's rulings."
+- record: sistani-west-salat-introduction
+  why: "The introduction to the guide's chapter on prayer."
+- record: sistani-west-food-introduction
+  why: "The introduction to the guide's chapter on eating and drinking."
+draft: true

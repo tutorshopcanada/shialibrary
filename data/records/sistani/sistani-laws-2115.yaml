@@ -1,0 +1,30 @@
+id: sistani-laws-2115
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: intermediate
+title: Translator’s Preface to the Fourth Edition
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2115/
+language: en
+date: ''
+description: The translator's preface to the fourth edition. It describes how the translation was updated
+  to match the latest Persian edition, how changed rulings are marked, and related projects such as the
+  OneStopFiqh app and portal.
+sample_questions:
+- How was the fourth edition of Islamic Laws updated?
+- How are changed rulings marked in the book?
+- What is OneStopFiqh?
+- Is there a mobile app for Islamic Laws?
+headings:
+- fiqh
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

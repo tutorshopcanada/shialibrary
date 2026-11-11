@@ -1,0 +1,30 @@
+id: sistani-qa-chat-between-male-female
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Chat between Male & Female
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01151/
+language: en
+date: ''
+description: A topic page of questions and answers about communication between men and women who are not
+  related. Questions cover chatting with girls on the internet and friendly relationships between classmates.
+sample_questions:
+- Can I chat with girls online?
+- Can I be friends with a girl in my class?
+- Can boys and girls talk?
+- What are the rules for online chat?
+headings:
+- social-conduct-rulings
+- youth-rulings
+access: free
+location: 'Q&A topic: Chat between Male & Female'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

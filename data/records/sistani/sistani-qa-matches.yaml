@@ -1,0 +1,29 @@
+id: sistani-qa-matches
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Matches
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01247/
+language: en
+date: ''
+description: A topic page with a single question about earnings from professional sports. It is useful
+  for anyone wondering about sports as a career or income.
+sample_questions:
+- Is a career in professional sports accepted in Islam?
+- Is money from sports halal (lawful)?
+- Can I earn a living as an athlete?
+- Is playing matches for money discussed?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Matches'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

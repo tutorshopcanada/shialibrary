@@ -1,0 +1,29 @@
+id: sistani-qa-14969
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: Where does the domino effect of mutanajjis items stop when it is no longer wet?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14969
+language: en
+date: ''
+description: A question asking where the chain of impurity spread through items that touch impure things
+  comes to an end when they are no longer wet.
+sample_questions:
+- How far does impurity spread?
+- Does dry contact spread najasat?
+- What is mutanajjis?
+- When does the spread of najasat stop?
+headings:
+- purity
+access: free
+location: Najasat, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

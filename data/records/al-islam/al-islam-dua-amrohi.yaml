@@ -1,0 +1,33 @@
+id: al-islam-dua-amrohi
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Du'a
+title_original: ''
+authors:
+- amrohi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/dua-supplication-sayyid-zafar-hasan-amrohi
+language: en
+date: ''
+description: A book about du'a, personal supplication to God, which the site describes as an elaborate
+  text on its reality. It looks at what supplication is, its parts, the kinds of people who supplicate,
+  closeness to God, its effects and the language of supplication.
+sample_questions:
+- What is dua?
+- How do I make dua?
+- Why do Muslims make supplications?
+- Does dua change anything?
+- What are the parts of a supplication?
+- What is the difference between dua and prayer?
+headings:
+- duas
+access: free
+location: ''
+needs_review: false
+review_note: Level is not stated on the page; intermediate chosen as the cautious option. The text is
+  described by the site as elaborate.
+cataloged_on: '2026-11-10'

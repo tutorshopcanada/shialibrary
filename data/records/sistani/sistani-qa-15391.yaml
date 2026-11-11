@@ -1,0 +1,27 @@
+id: sistani-qa-15391
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: Is it permissible to drink beer that says “alcohol free” on it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15391
+language: en
+date: ''
+description: A question asking whether it is allowed to drink beer that says 'alcohol free' on it.
+sample_questions:
+- Is non-alcoholic beer allowed?
+- Can I drink beer that says alcohol free?
+- Is 0% beer okay for Muslims?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 13
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

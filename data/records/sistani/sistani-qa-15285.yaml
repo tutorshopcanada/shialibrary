@@ -1,0 +1,27 @@
+id: sistani-qa-15285
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gold
+level: intermediate
+title: Can a man wear a platinum ring?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01196/#15285
+language: en
+date: ''
+description: A question asking whether a man may wear a platinum ring.
+sample_questions:
+- Can men wear platinum rings?
+- Is a platinum ring okay for a man?
+- What rings can men wear?
+headings:
+- dress-appearance
+access: free
+location: Gold, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

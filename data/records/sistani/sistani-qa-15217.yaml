@@ -1,0 +1,28 @@
+id: sistani-qa-15217
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-inheritance
+level: intermediate
+title: Does an adopted child inherit?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01217/#15217
+language: en
+date: ''
+description: A question asking whether an adopted child inherits.
+sample_questions:
+- Does an adopted child inherit?
+- Can adopted children get an inheritance?
+- Does adoption affect inheritance?
+headings:
+- marriage-family
+- transactions-work
+access: free
+location: Inheritance, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

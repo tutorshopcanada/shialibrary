@@ -1,0 +1,31 @@
+id: sistani-qa-zakat
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Zakat
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01358/
+language: en
+date: ''
+description: A topic page of questions and answers about zakat, an annual religious payment of a fixed
+  share of certain kinds of property. Questions cover how it differs from khums, who can receive it, and
+  how it relates to savings, debts and bank accounts.
+sample_questions:
+- What is zakat?
+- What is the difference between zakat and khums?
+- Do I pay zakat on savings?
+- Who can receive zakat?
+- Does zakat apply to bank accounts?
+headings:
+- khums-zakat
+access: free
+location: 'Q&A topic: Zakat'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

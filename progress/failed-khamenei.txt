@@ -1,0 +1,5 @@
+# Pages that could not be fetched. date | URL | what happened
+2026-11-10 | https://khamenei.ir/robots.txt | connection reset (curl)
+2026-11-10 | https://english.khamenei.ir/robots.txt | connection reset (curl); HTTP 503 (web-fetch tool)
+2026-11-10 | https://english.khamenei.ir/ | connection reset (curl)
+2026-11-10 | https://www.khamenei.ir/robots.txt | HTTP 503 (web-fetch tool)

@@ -1,0 +1,30 @@
+id: sistani-qa-14908
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: Some people pray for years and even perform pilgrimage, yet they do not pay khums. Is it obligatory
+  on them to repeat their prayers and pilgrimage?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14908
+language: en
+date: ''
+description: A question about people who pray for years and even go on pilgrimage without paying khums,
+  asking whether they have to repeat their prayers and pilgrimage.
+sample_questions:
+- Are my prayers affected if I didn't pay khums?
+- Do I repeat Hajj if I never paid khums?
+- What if I prayed for years without paying khums?
+headings:
+- prayer
+- khums-zakat
+access: free
+location: Prayer, question 22
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

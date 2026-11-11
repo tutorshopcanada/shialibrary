@@ -1,0 +1,30 @@
+id: sistani-laws-2243
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: QUNŪT
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2243/
+language: en
+date: ''
+description: Rules on qunut, a supplication made with raised hands in prayer, including where it is said,
+  the hand position and what may be said.
+sample_questions:
+- What is qunut?
+- What do I say in qunut?
+- When do I make qunut in prayer?
+- How do I hold my hands in qunut?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

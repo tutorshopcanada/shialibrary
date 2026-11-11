@@ -1,0 +1,31 @@
+id: sistani-qa-15004
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-azadari
+level: intermediate
+title: I have a question about matam (Azadari) and the manner our people are holding Muharram rituals,
+  what is our purpose of holding these events?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01125/#15004
+language: en
+date: ''
+description: A question about matam (chest-beating mourning) and the way Muharram rituals are held, asking
+  what the purpose of these events is.
+sample_questions:
+- What is matam?
+- Why do Shias do matam?
+- What is the purpose of Muharram gatherings?
+- Why do people hold Muharram events?
+headings:
+- fiqh
+- karbala-ashura
+access: free
+location: Azadari (Lamentation), question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

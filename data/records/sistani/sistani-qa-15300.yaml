@@ -1,0 +1,30 @@
+id: sistani-qa-15300
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ghusl
+level: intermediate
+title: Can a person Perform Ghusl-e-Irtimasi instead of Ghusl-e-Tartibi, in order to save time, even if
+  he has enough time to perform the latter?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01198/#15300
+language: en
+date: ''
+description: A question asking whether a person can do irtimasi (immersion) ghusl instead of tartibi (sequential)
+  ghusl in order to save time, even when there is enough time for the latter.
+sample_questions:
+- Can I do ghusl by dipping in water?
+- What is the difference between irtimasi and tartibi ghusl?
+- Can I choose irtimasi ghusl?
+- Is quick ghusl allowed?
+headings:
+- purity
+access: free
+location: Ghusl - Ritual Bath, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

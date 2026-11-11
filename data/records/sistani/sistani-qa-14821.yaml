@@ -1,0 +1,31 @@
+id: sistani-qa-14821
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qibla
+level: intermediate
+title: 'In European countries, public baths are built with certain considerations. Whether or not it is
+  in the direction of qibla is not one of their considerations unlike the situation in Muslim countries:
+  1...'
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01300/#14821
+language: en
+date: ''
+description: A question about public baths in European countries that are not built with the qibla in
+  mind, asking about using them when the qibla direction is unknown or when they face it.
+sample_questions:
+- Can I use a bathroom that faces the qibla?
+- Does the qibla direction matter in public toilets?
+- What if I don't know where the qibla is?
+- Facing the qibla in a bathroom in Europe?
+headings:
+- prayer
+access: free
+location: Qibla, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

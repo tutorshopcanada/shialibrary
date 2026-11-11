@@ -1,0 +1,27 @@
+id: sistani-qa-15152
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-jabirah
+level: intermediate
+title: What is Jabira?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01230/#15152
+language: en
+date: ''
+description: A question asking what jabirah (a splint or dressing used in ritual washing) is.
+sample_questions:
+- What is jabirah?
+- What is a jabirah wudhu?
+- What is jabirah ghusl?
+headings:
+- purity
+access: free
+location: Jabirah, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

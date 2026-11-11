@@ -1,0 +1,31 @@
+id: sistani-qa-child-custody
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Child Custody
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01164/
+language: en
+date: ''
+description: A topic page of questions and answers about child custody and the rights of spouses in a
+  dispute. Both questions describe a wife who left the matrimonial home for seven months and applied to
+  a non-Islamic court for divorce, maintenance and custody, and ask about her rights.
+sample_questions:
+- Who gets custody of the children?
+- Does a wife who leaves home get maintenance?
+- Can a woman go to a civil court for divorce?
+- What are the marital duties of a wife?
+- What are a husband's duties?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Child Custody'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

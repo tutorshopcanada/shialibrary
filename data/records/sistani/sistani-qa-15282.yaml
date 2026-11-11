@@ -1,0 +1,27 @@
+id: sistani-qa-15282
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-beard
+level: intermediate
+title: Is French-cut beard permissible?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01136/#15282
+language: en
+date: ''
+description: A question asking about the French-cut beard style.
+sample_questions:
+- Can I keep a French-cut beard?
+- Is a goatee allowed?
+- What beard styles are allowed?
+headings:
+- dress-appearance
+access: free
+location: Beard, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

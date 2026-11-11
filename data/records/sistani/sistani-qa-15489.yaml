@@ -1,0 +1,28 @@
+id: sistani-qa-15489
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-congregational-prayers
+level: intermediate
+title: Which is better, praying in congregation or praying individually?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01154/#15489
+language: en
+date: ''
+description: A question comparing praying in congregation with praying on one's own. The site lists this
+  question twice with separate links.
+sample_questions:
+- Is praying in jamaat better than praying alone?
+- Is it better to pray together or individually?
+- Is congregational prayer recommended?
+headings:
+- prayer
+access: free
+location: Congregational Prayers, question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,32 @@
+id: sistani-west-taqlid-questions-answers
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: advanced
+title: 'Taqlid: Following a jurist » Questions and Answers'
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2027/
+language: en
+date: ''
+description: Questions and answers on taqlid for Muslims in the West. Questions cover how to identify
+  the most learned jurist when this is hard, how to find experts (ahlul khibra), what to do when experts
+  disagree, and finding the jurist's opinion on an issue.
+sample_questions:
+- How can I know who the a'lam is?
+- How do I find ahlul khibra in the West?
+- What if experts disagree about the most learned jurist?
+- Is feeling at ease with a scholar enough to follow him?
+- Do I have to look up my marja's view on every issue?
+headings:
+- taqlid
+- fiqh
+access: free
+location: 'Chapter: Taqlid, Questions and Answers'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

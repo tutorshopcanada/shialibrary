@@ -1,0 +1,31 @@
+id: al-islam-lapidation
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Lapidation
+title_original: ''
+authors:
+- alireza-mirza-muhammad
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/lapidation-alireza-mirza-muhammad
+language: en
+date: '1986'
+description: An illustrated children's book telling the events before the battle to protect the Ka'ba,
+  known as the Year of the Elephant. The site says it is meant to help teach children the history of the
+  Ka'ba.
+sample_questions:
+- What was the Year of the Elephant?
+- What happened to the army that came to destroy the Ka'ba?
+- Is there a children's book about the history of the Ka'ba?
+headings:
+- history
+access: free
+location: ''
+needs_review: false
+review_note: 'Level beginner by the hub exception: Listed on the al-islam.org ''Texts for Children'' hub
+  (https://al-islam.org/kids-corner/text-for-children); page describes it as a children''s book. Fourth
+  edition 1986, Besat Foundation.'
+cataloged_on: '2026-11-11'

@@ -1,0 +1,29 @@
+id: sistani-qa-night-prayer
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Night Prayer
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01274/
+language: en
+date: ''
+description: A topic page of questions and answers about the night prayer (Salatul Layl). Questions cover
+  praying before midnight, finding the time of midnight and shortened forms of the prayer.
+sample_questions:
+- What is the night prayer?
+- Can I pray Salatul Layl early?
+- When is midnight?
+- What are Salat al-Shaf and al-Witr?
+headings:
+- prayer
+access: free
+location: 'Q&A topic: Night Prayer'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

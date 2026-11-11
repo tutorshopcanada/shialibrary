@@ -1,0 +1,31 @@
+id: sistani-qa-paintings
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Paintings
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01292/
+language: en
+date: ''
+description: A topic page of questions and answers about paintings and portraits. Questions cover depicting
+  the Prophet and the Imams, and street artists who paint portraits.
+sample_questions:
+- Can the Prophet be depicted?
+- Can a woman have her portrait painted?
+- What does Islam say about paintings?
+- Can I sit for a street artist?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Paintings'
+needs_review: false
+review_note: Touches on depicting the Prophet and the Imams; sensitive, so a reviewer should confirm the
+  classification and wording.
+cataloged_on: '2026-11-10'

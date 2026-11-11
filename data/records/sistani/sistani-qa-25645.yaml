@@ -1,0 +1,27 @@
+id: sistani-qa-25645
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-khums
+level: intermediate
+title: Is it obligatory to pay Khums from my jewellery?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01234/#25645
+language: en
+date: ''
+description: A question asking whether it is obligatory to pay khums on one's jewellery.
+sample_questions:
+- Do I pay khums on jewellery?
+- Is gold jewellery subject to khums?
+- Is khums due on my wife's jewellery?
+headings:
+- khums-zakat
+access: free
+location: Khums, question 10
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

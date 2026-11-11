@@ -1,0 +1,5 @@
+{
+  "type": "module",
+  "private": true,
+  "description": "Marks the .js files in this folder as ES modules so Node (scripts/eval_search.mjs) loads the same search.js the page uses. Not an npm package; nothing to install."
+}

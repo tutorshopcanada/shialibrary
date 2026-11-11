@@ -1,0 +1,32 @@
+id: sistani-qa-burial-of-the-dead
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Burial of the Dead
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01167/
+language: en
+date: ''
+description: A topic page of questions and answers about burying a deceased Muslim, mostly for Muslims
+  living in non-Muslim countries. Questions cover burial in non-Muslim cemeteries, moving the body to
+  a Muslim country, who pays the costs, who takes charge when there is no heir, and burial in a coffin.
+sample_questions:
+- Can a Muslim be buried in a non-Muslim cemetery?
+- Should a body be sent to a Muslim country?
+- Who pays for transporting a body?
+- Can a Muslim be buried in a coffin?
+- Who arranges burial if there is no family?
+headings:
+- death-burial
+- muslims-in-west
+access: free
+location: 'Q&A topic: Burial of the Dead'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

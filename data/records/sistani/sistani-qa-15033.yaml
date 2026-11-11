@@ -1,0 +1,29 @@
+id: sistani-qa-15033
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-legal-issues
+level: intermediate
+title: Some people use to steal electricity (Power Supply) by making some modifications in the meter.
+  Is it permissible.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01179/#15033
+language: en
+date: ''
+description: A question about stealing electricity by modifying the meter.
+sample_questions:
+- Can I tamper with my electricity meter?
+- Is stealing electricity allowed?
+- Can I get free power by changing the meter?
+headings:
+- social-conduct-rulings
+- muslims-in-west
+access: free
+location: Legal Issues, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

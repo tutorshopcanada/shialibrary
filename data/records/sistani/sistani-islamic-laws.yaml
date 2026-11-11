@@ -1,0 +1,31 @@
+id: sistani-islamic-laws
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: advanced
+title: Islamic Laws
+title_original: Tawḍīḥ al‑Masāʾil
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/
+language: en
+date: ''
+description: An English translation of the Persian manual of practical rulings (Tawḍīḥ al-Masāʾil, 'Explanation
+  of Issues') of Sayyid Ali al-Husayni al-Sistani, published by the World Federation of KSIMC, fourth
+  edition, translated by Dr Shaykh Mohammed Ali Ismail. Its contents page lists about 300 pages by chapter,
+  starting with following a jurist (taqlid) and purification.
+sample_questions:
+- Where can I read Ayatollah Sistani's full book of rulings?
+- Is there a complete manual of Shia Islamic laws in English?
+- Where do I find detailed rulings on purification and worship?
+- What is the risalah of Sayyid Sistani?
+headings:
+- fiqh
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,32 @@
+id: sistani-west-appendix-scale-fish
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: Appendices » Pictures of scale fish
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/4800/
+language: en
+date: ''
+description: An appendix of names and pictures of fish species that have scales, with names in Arabic,
+  French and English. It is a reference list for readers checking fish.
+sample_questions:
+- Which fish have scales?
+- What are the names of scaly fish in Arabic and English?
+- Where can I find pictures of scale fish?
+- What fish is mackerel in Arabic?
+headings:
+- food-drink
+- muslims-in-west
+- fiqh
+access: free
+location: 'Back matter: Appendix (pictures of scale fish)'
+needs_review: false
+review_note: Page is a table of fish names in several languages plus images; wording of description based
+  on visible text only. Reviewer to confirm.
+cataloged_on: '2026-11-10'

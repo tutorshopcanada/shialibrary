@@ -1,0 +1,28 @@
+id: sistani-qa-15381
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-disbelievers-kafir
+level: intermediate
+title: What is the ruling on saying Salam Alaykum to the disbelievers?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02801/#15381
+language: en
+date: ''
+description: A question asking for the ruling on saying Salam Alaykum (the Muslim greeting) to disbelievers.
+sample_questions:
+- Can I say salam to a non-Muslim?
+- How do I greet non-Muslims?
+- Is it okay to say assalamu alaykum to everyone?
+headings:
+- social-conduct-rulings
+- fiqh
+access: free
+location: Disbelievers - Kafir, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

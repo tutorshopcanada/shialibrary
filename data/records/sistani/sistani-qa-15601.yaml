@@ -1,0 +1,28 @@
+id: sistani-qa-15601
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-autopsy
+level: intermediate
+title: What is your ruling on an autopsy of a deceased Muslim?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01126/#15601
+language: en
+date: ''
+description: A question asking for the ruling on carrying out an autopsy on a deceased Muslim.
+sample_questions:
+- Is autopsy allowed in Islam?
+- Can a Muslim body be autopsied?
+- What does Sistani say about autopsies?
+headings:
+- death-burial
+- medical-ethics
+access: free
+location: Autopsy, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

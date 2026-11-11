@@ -1,0 +1,28 @@
+id: sistani-qa-15482
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-contraceptives-birth-control
+level: intermediate
+title: Is it permissible for a woman to use contraceptives in order to prevent conception?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01139/#15482
+language: en
+date: ''
+description: A question asking whether a woman may use contraceptives to prevent conception.
+sample_questions:
+- Can a woman use contraceptives?
+- Is birth control okay in Islam?
+- Can I prevent pregnancy?
+headings:
+- marriage-family
+- medical-ethics
+access: free
+location: Contraceptives - Birth Control, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

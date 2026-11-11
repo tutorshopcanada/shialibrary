@@ -1,0 +1,30 @@
+id: sistani-qa-drawing
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Drawing
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01175/
+language: en
+date: ''
+description: A topic page of questions and answers about drawing and sculpture. Questions cover students
+  asked to draw a human being or animal as an assignment, and sculpture work.
+sample_questions:
+- Can I draw people or animals?
+- What if my art class assigns a portrait?
+- Can I make sculptures?
+- Is drawing allowed in Islam?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Drawing'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

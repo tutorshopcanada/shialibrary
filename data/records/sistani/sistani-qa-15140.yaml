@@ -1,0 +1,29 @@
+id: sistani-qa-15140
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-leather-products
+level: intermediate
+title: What is your ruling on buying and using leather products in non-Muslim countries?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01237/#15140
+language: en
+date: ''
+description: A question asking about buying and using leather products in non-Muslim countries.
+sample_questions:
+- Can I buy leather in the West?
+- Is leather from non-Muslim countries okay?
+- Can I use leather products from the West?
+headings:
+- dress-appearance
+- prayer
+access: free
+location: Leather Products, question 4
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

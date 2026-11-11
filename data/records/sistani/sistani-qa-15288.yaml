@@ -1,0 +1,27 @@
+id: sistani-qa-15288
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-ghina-songs
+level: intermediate
+title: Some people recite Quran and Dua on the tune of some songs, is this permissible?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01200/#15288
+language: en
+date: ''
+description: A question about reciting the Quran and dua (supplication) to the tune of songs.
+sample_questions:
+- Can I recite Quran to a song tune?
+- Can dua be sung like a song?
+- Is it okay to recite to a melody?
+headings:
+- music-entertainment
+access: free
+location: Ghina (Songs), question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

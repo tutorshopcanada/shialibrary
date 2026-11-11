@@ -1,0 +1,30 @@
+id: sistani-qa-15018
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-modharabah
+level: intermediate
+title: Some trading and manufacturing companies get loans from private or state banks in Muslim countries
+  and also from other [non-Muslim] institutions with the condition of interest; and they also earn interest
+  on the deposits they leave in those banks...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01252/#15018
+language: en
+date: ''
+description: A question about buying shares in, or becoming a partner of, companies that borrow from banks
+  with interest and earn interest on deposits.
+sample_questions:
+- Can I buy shares in companies that use interest?
+- What is said about investing in such companies?
+- What is riba (interest)?
+headings:
+- transactions-work
+access: free
+location: Modharabah (Sleeping partnership), question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

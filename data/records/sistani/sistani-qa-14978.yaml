@@ -1,0 +1,27 @@
+id: sistani-qa-14978
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: Are alcoholic beverages pure? Is beer pure?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14978
+language: en
+date: ''
+description: A question asking whether alcoholic drinks, and beer in particular, are pure.
+sample_questions:
+- Is beer najis?
+- Are alcoholic drinks impure?
+- Is alcohol ritually impure?
+headings:
+- purity
+access: free
+location: Najasat, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

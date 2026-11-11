@@ -1,0 +1,30 @@
+id: sistani-qa-14950
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-prayer
+level: intermediate
+title: If the time for salat has come while the student is still on his way to the university. When he
+  reaches the university, he realizes that the time of salat has ended...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01280/#14950
+language: en
+date: ''
+description: A question from a student whose prayer time begins on the way to university and has ended
+  by the time he arrives, asking whether he can pray in the car even though there are places to pray where
+  he risks being late. The site lists this question twice with separate links.
+sample_questions:
+- Can I pray in the car so I'm not late?
+- What if prayer time ends while I'm travelling to university?
+- Can I pray in a car to avoid missing class?
+headings:
+- prayer
+access: free
+location: Prayer, question 14
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

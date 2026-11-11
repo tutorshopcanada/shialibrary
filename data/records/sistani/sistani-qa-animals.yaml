@@ -1,0 +1,31 @@
+id: sistani-qa-animals
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Animals
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01130/
+language: en
+date: ''
+description: A topic page of questions and answers about animals. Questions cover keeping cats, hamsters,
+  rabbits and dogs at home, purification after a dog licks the body or clothes, and cat hair and prayer.
+sample_questions:
+- Can I keep a pet in Islam?
+- Can I keep a dog at home?
+- What if a dog licks my clothes?
+- Is a cat najis?
+- Does cat hair affect my prayer?
+headings:
+- purity
+- food-drink
+access: free
+location: 'Q&A topic: Animals'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

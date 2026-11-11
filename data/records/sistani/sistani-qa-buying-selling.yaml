@@ -1,0 +1,32 @@
+id: sistani-qa-buying-selling
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Buying & Selling
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01133/
+language: en
+date: ''
+description: A topic page of questions and answers about buying and selling. Questions cover buying a
+  car on instalments through banks or insurers, lottery tickets, selling meat from a dead animal, dealing
+  with a company said to support Israel, trading wine and pork with non-Muslims, buying statues for decoration,
+  and working on Ashura.
+sample_questions:
+- Can I buy a car on instalments?
+- Are lottery tickets allowed?
+- Can I sell wine or pork to non-Muslims?
+- Can I buy statues for decoration?
+- Can I work on Ashura?
+headings:
+- transactions-work
+access: free
+location: 'Q&A topic: Buying & Selling'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About and scope · Shia Resource Finder</title>
+  <meta name="description" content="What this catalog includes, which websites it points to, and how results are chosen.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="./" data-site-name>Shia Resource Finder</a>
+      <nav aria-label="Site">
+        <a href="./">Search</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap prose">
+    <h1>About this catalog</h1>
+    <p>This is a free catalog of Shia resources. You type a topic or a question, and it points you to where that content can be found on a short list of approved websites.</p>
+    <p>It is made for people who are new and do not know where to look. It works like a library catalog: it describes things and tells you where they are.</p>
+
+    <h2 id="not-host">We do not host or write the content</h2>
+    <ul>
+      <li>Every result is a short catalog entry with a link to the website where the original is published.</li>
+      <li>We are not the author or publisher of any book, article, ruling, hadith collection, lecture or course listed here. The source is named on every result.</li>
+      <li>The short descriptions are our own plain-English summaries of what a page is about. For rulings (fiqh), the description only says what the question is about. It never restates the ruling. Read the ruling on the source page.</li>
+      <li>This site does not give religious rulings or take positions.</li>
+    </ul>
+
+    <h2 id="scope">What is included</h2>
+    <ul>
+      <li><strong>Twelver (Ithna ‘Ashari) Shia</strong> resources only, for now.</li>
+      <li><strong>English only</strong>, for now. You can still search with Arabic, Persian or Urdu terms and common spellings; they are matched to the same topics.</li>
+      <li><strong>Approved websites only.</strong> Nothing appears here unless it comes from a website on the list below.</li>
+      <li><strong>Fiqh (rulings and practical law)</strong> is limited to two scholars for now: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Results show whose rulings a page follows.</li>
+      <li><strong>Everything else</strong> (history, beliefs, ethics, hadith, Quran and similar) is not limited by author, as long as it comes from an approved website.</li>
+      <li>Beginner material comes first. Each result is marked Beginner, Intermediate or Advanced.</li>
+    </ul>
+    <p id="scope-link">The full scope and inclusion criteria are published in the project repository, in the file <code>docs/scope.md</code>.</p>
+
+    <h2 id="sources">Websites this catalog points to</h2>
+    <ul id="source-list" class="source-list">
+      <li>Loading the list of sources…</li>
+    </ul>
+    <noscript><p class="notice">The list of sources is loaded with JavaScript.</p></noscript>
+
+    <h2 id="how">How results are chosen</h2>
+    <ul>
+      <li><strong>No AI writes answers here.</strong> The search only finds and orders catalog entries. It never writes answers, summaries or rulings.</li>
+      <li>First it checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it are shown first.</li>
+      <li>Then it does an ordinary word search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.</li>
+      <li><strong>Exact matches</strong> are results where your words, or another name for the same topic, appear in the title or in the questions a page helps answer. Everything else is listed as <strong>Related results</strong>. If there are no exact matches, the page says so.</li>
+      <li>If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.</li>
+      <li>Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.</li>
+      <li>Catalog entries were prepared with the help of an AI assistant from the source pages, then checked by automatic rules. Items marked <span class="draft-mark">Draft, awaiting review</span> have not yet been reviewed by a person.</li>
+    </ul>
+
+    <h2 id="privacy">Privacy</h2>
+    <p>The search runs entirely in your browser. What you type is not sent to us or to anyone else, and it is not stored. This site uses no cookies, no tracking and no accounts. When you follow a link, you leave this site and the other website’s own policies apply. This includes the “Search Al-Islam.org” link shown under results: only if you click it, your search words are sent to Al-Islam.org as part of that link.</p>
+
+    <h2 id="report">Report a wrong or broken link</h2>
+    <p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. It helps to include the title of the result and what is wrong.</p>
+    <p id="report-slot"><span class="todo">Reporting is not set up yet.</span></p>
+
+    <p class="muted" id="build-date"></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>This is a catalog. Every result links to the website where the original is published. We are not the author or publisher of any of it.</p>
+      <p><a href="./">Back to search</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/about.js"></script>
+</body>
+</html>

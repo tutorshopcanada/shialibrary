@@ -1,0 +1,30 @@
+id: sistani-qa-15471
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-cheese
+level: intermediate
+title: Some of the cheese products manufactured in non-Muslim countries contain rennet extracted from
+  the calf or other animals...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01159/#15471
+language: en
+date: ''
+description: A question about cheese from non-Muslim countries that may contain rennet taken from an animal,
+  where it is unknown whether the animal was slaughtered by Islamic law or the rennet has transformed
+  into something else.
+sample_questions:
+- Can I eat cheese with rennet from an unknown source?
+- Does the way the animal was slaughtered matter for cheese?
+- Is transformed rennet a factor?
+headings:
+- food-drink
+access: free
+location: Cheese, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

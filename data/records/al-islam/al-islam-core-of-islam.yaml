@@ -1,0 +1,36 @@
+id: al-islam-core-of-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: The Core of Islam
+title_original: ''
+authors:
+- fadhil-milani
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/core-islam-sayyid-fadhil-milani
+language: en
+date: ''
+description: A book that, in the site's words, aims to guide Muslims, especially young people, with clear
+  answers to commonly asked questions. Its chapters cover the setting in which the Prophet Muhammad lived,
+  core beliefs, what Muslims hold sacred, social behaviour, the position of women, the main groupings
+  among Muslims, present-day issues, important days of the year, and prayer.
+sample_questions:
+- What are the core beliefs of Islam?
+- What are the main groups in Islam?
+- What does Islam say about women?
+- What are the important days in the Islamic year?
+- What is sacred to Muslims?
+- What issues do Muslims face today?
+headings:
+- new-to-shia-islam
+- beliefs
+access: free
+location: ''
+needs_review: false
+review_note: 'Level: the page says it is for Muslims, especially youths, answering common questions; it
+  may deserve beginner. Chapter 9 is on prayer; a reviewer should confirm the book''s main purpose is
+  not fiqh. Publication year is not clearly labelled on the page, so `date` is blank.'
+cataloged_on: '2026-11-10'

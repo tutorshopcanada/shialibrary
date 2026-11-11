@@ -1,0 +1,34 @@
+id: thaqalayn-kitab-al-mumin
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Kitāb al-Muʾmin: The Book of the Believer'
+title_original: ''
+authors:
+- husayn-b-said-al-ahwazi
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/30
+language: en
+date: ''
+description: A collection of 201 traditions on faith (iman) and the believer, compiled by al-Husayn b. Sa'id al-Ahwazi
+  and shown with an English translation by Muhajir b. Ali. According to the site, it covers a believer's trials, the
+  honours given to believers, their rights over each other and the reward of helping one another. It is a primary source
+  for readers with some background.
+sample_questions:
+- What are the rights of a believer over another believer?
+- What is the reward of helping a believer?
+- What is iman (faith)?
+- What do the Imams say about the trials of a believer?
+- Who was al-Husayn b. Sa'id al-Ahwazi?
+headings:
+- hadith-collections
+- ethics
+- family-social-ethics
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

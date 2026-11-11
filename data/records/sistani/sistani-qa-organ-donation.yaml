@@ -1,0 +1,30 @@
+id: sistani-qa-organ-donation
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Organ Donation
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01277/
+language: en
+date: ''
+description: A topic page of questions and answers about organ donation and related medical matters. Questions
+  cover the purity of a transplanted organ, mercy killing and removing life support.
+sample_questions:
+- Can I donate my organs?
+- What does Islam say about mercy killing?
+- Can life support be switched off?
+- Is a transplanted organ clean?
+headings:
+- medical-ethics
+- death-burial
+access: free
+location: 'Q&A topic: Organ Donation'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

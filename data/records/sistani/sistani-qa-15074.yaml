@@ -1,0 +1,27 @@
+id: sistani-qa-15074
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the ruling on abortion for a pregnant woman who is infected with AIDS?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15074
+language: en
+date: ''
+description: A question about abortion for a pregnant woman who is infected with AIDS.
+sample_questions:
+- What is said about abortion if the mother has AIDS?
+- Is abortion for health reasons discussed?
+- What does Islam say about abortion?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

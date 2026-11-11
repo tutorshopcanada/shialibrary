@@ -1,0 +1,30 @@
+id: sistani-qa-male-and-female-relations
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Male and Female Relations
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01257/
+language: en
+date: ''
+description: A topic page with a question about a man talking with his fiancee by telephone. The same
+  question appears twice on the site.
+sample_questions:
+- Can I talk to my fiancee on the phone?
+- What is allowed between an engaged couple?
+- Can engaged people speak before marriage?
+- What are the rules for talking to the opposite sex?
+headings:
+- social-conduct-rulings
+- marriage-family
+access: free
+location: 'Q&A topic: Male and Female Relations'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

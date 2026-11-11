@@ -1,0 +1,35 @@
+id: al-islam-sciences-of-hadith-leghaei
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Sciences of Hadith
+title_original: ''
+authors:
+- mansour-leghaei
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/sciences-hadith-mansour-leghaei
+language: en
+date: ''
+description: A course of 14 lectures on the study of hadith (reports of the sayings and actions of the
+  Prophet and the Imams). It covers the definition and branches of the subject, the history of hadith
+  among Shias, how reports are checked, and how they are understood.
+sample_questions:
+- What is hadith?
+- How do scholars check if a hadith is reliable?
+- What are the sciences of hadith?
+- How were hadiths collected among Shias?
+- What is rijal?
+- Why are some hadiths considered weak?
+headings:
+- hadith-sciences
+- hadith
+access: free
+location: ''
+needs_review: false
+review_note: Level is not stated on the page; intermediate chosen as the cautious option. Covers the early
+  prohibition of writing hadith, a topic debated between Shia and Sunni; a reviewer should confirm the
+  description stays neutral.
+cataloged_on: '2026-11-10'

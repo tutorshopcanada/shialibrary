@@ -1,0 +1,28 @@
+id: sistani-qa-15387
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eid-crescent
+level: intermediate
+title: What is the proof of sighting the moon?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01177/#15387
+language: en
+date: ''
+description: A question asking what is accepted as proof that the new moon has been sighted.
+sample_questions:
+- How is moon sighting proven?
+- Who can confirm the new moon?
+- What counts as proof of the crescent?
+headings:
+- islamic-calendar
+- fiqh
+access: free
+location: Eid Crescent, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-qa-15415
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-depositing-money
+level: intermediate
+title: Some governments and some companies in non-Muslim as well as Muslim, countries deposit the salaries
+  of their employees directly into their accounts in the banks...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01176/#15415
+language: en
+date: ''
+description: A question about salaries deposited directly into employees' bank accounts, asking whether
+  khums is obligatory when the account statement shows an amount beyond the annual expenses.
+sample_questions:
+- Do I pay khums on my bank salary?
+- Does khums apply to money in the bank?
+- How does khums work with a direct-deposit salary?
+headings:
+- khums-zakat
+- transactions-work
+access: free
+location: Depositing Money, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

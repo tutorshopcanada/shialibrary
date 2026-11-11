@@ -1,0 +1,31 @@
+id: sistani-qa-khums
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Khums
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01234/
+language: en
+date: ''
+description: A topic page of questions and answers about khums, a religious payment made on part of one's
+  savings and certain kinds of wealth. Questions cover the Sahm-e Imam and Sahm-e Sadat shares, what wealth
+  khums applies to, and who can receive it.
+sample_questions:
+- What is khums?
+- Who do I pay khums to?
+- Do I pay khums on my savings?
+- What is Sahm-e Imam?
+- What is the difference between khums and zakat?
+headings:
+- khums-zakat
+access: free
+location: 'Q&A topic: Khums'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

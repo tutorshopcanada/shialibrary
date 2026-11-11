@@ -1,0 +1,29 @@
+id: sistani-qa-15531
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-contraceptives-birth-control
+level: intermediate
+title: What is the ruling on the use of IUD and pills by a woman to prevent pregnancy?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01139/#15531
+language: en
+date: ''
+description: A question asking for the ruling on a woman using an IUD (a small device placed in the womb)
+  and pills to prevent pregnancy.
+sample_questions:
+- Can I use an IUD?
+- Can I take birth control pills?
+- Is contraception allowed in Islam?
+headings:
+- marriage-family
+- medical-ethics
+access: free
+location: Contraceptives - Birth Control, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

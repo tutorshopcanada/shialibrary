@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-intention
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Intention (Niyah)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02649/
+language: en
+date: ''
+description: A topic page of questions and answers about the intention (niyyah) for fasting. Questions
+  cover what the intention is and whether it needs to be spoken aloud.
+sample_questions:
+- What is the niyyah of fasting?
+- How do I make the intention to fast?
+- Do I say the niyyah out loud?
+- Do I make an intention every day of Ramadan?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Intention (Niyah)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

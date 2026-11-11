@@ -1,0 +1,30 @@
+id: sistani-qa-15466
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-chess-backgammon
+level: intermediate
+title: What is the ruling on playing backgammon / chess, without betting, on my own with the computer,
+  smart phone device (i.e. against no other person, but the game)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01161/#15466
+language: en
+date: ''
+description: A question asking about playing backgammon or chess, without betting, alone against the computer
+  or a smartphone.
+sample_questions:
+- Can I play chess against the computer?
+- Can I play chess on my phone?
+- Is a chess app okay?
+headings:
+- music-entertainment
+- social-conduct-rulings
+access: free
+location: Chess & Backgammon, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

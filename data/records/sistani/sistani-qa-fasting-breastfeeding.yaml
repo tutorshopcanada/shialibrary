@@ -1,0 +1,28 @@
+id: sistani-qa-fasting-breastfeeding
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Breastfeeding
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02657/
+language: en
+date: ''
+description: A topic page with a question from a breastfeeding mother about fasting.
+sample_questions:
+- Can a breastfeeding mother fast?
+- Do I fast while nursing?
+- What if fasting affects my milk?
+- Fasting rules for nursing mothers?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Breastfeeding'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

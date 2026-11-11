@@ -1,0 +1,31 @@
+id: sistani-qa-15076
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-medical-issues
+level: intermediate
+title: What is the ruling on the sexual relations of an AIDS patient? Is it permissible for a non-infected
+  person to refuse sexual relation with their spouse because sexual intercourse is one of the main ways
+  of transmitting the virus?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/#15076
+language: en
+date: ''
+description: A question about marital relations with an AIDS patient and whether a healthy spouse may
+  decline relations because of the risk of transmission.
+sample_questions:
+- Can I refuse relations if my spouse is infected?
+- What are marital relations rules with AIDS?
+- What about the risk of infection in marriage?
+headings:
+- medical-ethics
+access: free
+location: Medical Issues, question 7
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

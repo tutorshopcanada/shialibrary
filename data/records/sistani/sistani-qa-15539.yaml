@@ -1,0 +1,30 @@
+id: sistani-qa-15539
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-black-magic
+level: intermediate
+title: Is it permissible to use white magic which is employed for good and is the opposite of black magic
+  which is used by evil persons?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01138/#15539
+language: en
+date: ''
+description: A question asking whether white magic, used for good and as the opposite of black magic used
+  by evil persons, is allowed.
+sample_questions:
+- Is white magic allowed?
+- What is the difference between white and black magic?
+- Can I use magic for good purposes?
+headings:
+- social-conduct-rulings
+- fiqh
+access: free
+location: Black Magic, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

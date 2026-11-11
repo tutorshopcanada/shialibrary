@@ -1,0 +1,28 @@
+id: sistani-qa-fasting-old-age
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Old Age
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02654/
+language: en
+date: ''
+description: A topic page with a question about fasting for people who cannot fast because of old age.
+sample_questions:
+- Do elderly people have to fast?
+- What if I am too old to fast?
+- What do old people do instead of fasting?
+- What are the fasting rules for the elderly?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Old Age'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

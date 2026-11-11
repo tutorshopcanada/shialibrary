@@ -1,0 +1,29 @@
+id: sistani-qa-25196
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-azadari
+level: intermediate
+title: Is there any objection to people holding up chandeliers or flags ahead of the mourning processions?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01125/#25196
+language: en
+date: ''
+description: A question asking whether there is any objection to people holding up chandeliers or flags
+  ahead of mourning processions.
+sample_questions:
+- Can we carry flags in Muharram processions?
+- Are alams and chandeliers in processions allowed?
+- Is carrying flags in azadari acceptable?
+headings:
+- fiqh
+- karbala-ashura
+access: free
+location: Azadari (Lamentation), question 7
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

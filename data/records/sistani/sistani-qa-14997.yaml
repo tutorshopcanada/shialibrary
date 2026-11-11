@@ -1,0 +1,28 @@
+id: sistani-qa-14997
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-congregational-prayers
+level: intermediate
+title: What are the necessary qualifications of a prayer leader?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01154/#14997
+language: en
+date: ''
+description: A question about the conditions a person must meet to lead others in congregational prayer.
+sample_questions:
+- Who can lead the prayer?
+- What are the conditions for an imam of prayer?
+- Who can be imam for jamaat?
+- Can anyone lead salah?
+headings:
+- prayer
+access: free
+location: Congregational Prayers, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

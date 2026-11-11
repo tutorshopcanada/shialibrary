@@ -1,0 +1,31 @@
+id: sistani-qa-rules-of-slaughtering-during-hajj
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Rules of Slaughtering during Hajj
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01301/
+language: en
+date: ''
+description: A topic page of questions and answers about slaughtering the hady (the sacrificial animal)
+  during Hajj. Questions cover conditions of slaughter, restrictions at Mina, the value of the poor's
+  share and dividing the hady.
+sample_questions:
+- How is the hady slaughtered?
+- What are the rules of slaughter at Mina?
+- What if slaughtering is prevented at Mina?
+- Who receives the meat of the hady?
+headings:
+- hajj
+- food-drink
+access: free
+location: 'Q&A topic: Rules of Slaughtering during Hajj'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

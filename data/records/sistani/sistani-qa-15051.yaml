@@ -1,0 +1,30 @@
+id: sistani-qa-15051
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-meat
+level: intermediate
+title: Is it permissible to buy a fish from a Muslim who is not a Shi‘a while we have no knowledge whether
+  it is from the category of scale fish or not?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01251/#15051
+language: en
+date: ''
+description: A question about buying fish from a Muslim who is not a Shia when it is not known whether
+  it is a scale fish.
+sample_questions:
+- Can I buy fish from a Sunni fishmonger?
+- Can I trust a non-Shia Muslim's fish?
+- What if I don't know whether a fish has scales?
+headings:
+- food-drink
+access: free
+location: Meat, question 13
+needs_review: false
+review_note: Touches on Shia-Sunni practice; sensitive, so a reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

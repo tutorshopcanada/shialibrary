@@ -1,0 +1,30 @@
+id: sistani-laws-2250
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: DOUBTS THAT ARISE IN PRAYERS (SHAKKIYĀT)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2250/
+language: en
+date: ''
+description: Introduces shakkiyat, the types of doubt that arise in prayers, and states that there are
+  twenty-three types, divided into groups that the next pages explain.
+sample_questions:
+- What are shakkiyat?
+- What doubts can happen in prayer?
+- How many types of doubt are there in prayer?
+- What if I doubt how many rakʿahs I prayed?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

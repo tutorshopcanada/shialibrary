@@ -1,0 +1,31 @@
+id: sistani-qa-justice
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Justice
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01232/
+language: en
+date: ''
+description: A topic page of questions and answers about 'adalah (justice or uprightness, a quality required
+  of certain people in religious law, such as a prayer leader). Questions cover who counts as a just person
+  and following a prayer leader whose justice is not known.
+sample_questions:
+- Who is an 'adil person?
+- What is 'adalah?
+- Can I pray behind an imam I don't know?
+- What makes an imam just?
+headings:
+- fiqh
+- prayer
+access: free
+location: 'Q&A topic: Justice'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

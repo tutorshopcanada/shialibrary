@@ -1,0 +1,30 @@
+id: sistani-laws-2212
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: THE TIME FOR THE PRAYER AFTER SUNSET (MAGHRIB) AND THE EVENING (ʿISHĀʾ) PRAYER
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2212/
+language: en
+date: ''
+description: Covers the time for the sunset (maghrib) and evening (isha) prayers, including doubts about
+  whether the sun has set, and mistakes in the order of the two prayers.
+sample_questions:
+- When is maghrib prayer time?
+- When does isha time start?
+- How do I know the sun has set?
+- What if I pray isha before maghrib by mistake?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,31 @@
+id: sistani-qa-divorce
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Divorce
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01166/
+language: en
+date: ''
+description: A topic page of questions and answers about divorce. Questions cover witnesses to the divorce
+  formula, civil versus religious divorce in the West, divorce on a parent's advice, khul' divorce and
+  the waiting period, certificates, and divorce when the husband is Sunni.
+sample_questions:
+- Do I need witnesses for a divorce?
+- Is a civil divorce also a religious divorce?
+- Do I observe iddah after khula?
+- Can a divorce be said over the phone?
+- What if my husband won't give a religious divorce?
+headings:
+- marriage-family
+access: free
+location: 'Q&A topic: Divorce'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,14 @@
+id: path-learning-about-prayer
+title: Learning about prayer
+intro: Start with a general introduction that explains the daily prayers, then move to why prayer matters
+  and to the detailed rulings of Sayyid Sistani. The rulings pages are labelled Fiqh.
+steps:
+- record: al-islam-discovering-islam
+  why: Its section on Islamic practices introduces the five daily prayers for a newcomer.
+- record: sistani-west-salat-introduction
+  why: A short piece on why prayer matters, from a book of Sayyid Sistani's rulings.
+- record: sistani-west-salat-general-rules
+  why: General rules on prayer, including when travelling. Detailed rulings.
+- record: sistani-qa-congregational-prayers
+  why: Questions and answers on praying together in congregation. Detailed rulings.
+draft: true

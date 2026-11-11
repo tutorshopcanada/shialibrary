@@ -1,0 +1,27 @@
+id: sistani-qa-25647
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-khums
+level: intermediate
+title: Is Khums payable on the money which I have lent to my friend?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01234/#25647
+language: en
+date: ''
+description: A question asking whether khums is payable on money that has been lent to a friend.
+sample_questions:
+- Do I pay khums on a loan I gave?
+- Is khums due on money owed to me?
+- Does khums apply to lent money?
+headings:
+- khums-zakat
+access: free
+location: Khums, question 12
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

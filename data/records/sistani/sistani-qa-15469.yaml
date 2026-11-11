@@ -1,0 +1,29 @@
+id: sistani-qa-15469
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-cheese
+level: intermediate
+title: (In the case of) imported cheese from non-Muslim countries, if it is known to contain rennet (anfahah)
+  from a calf or a young goat, or an animal enzyme, is it permissible to consume it?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01159/#15469
+language: en
+date: ''
+description: A question about imported cheese from non-Muslim countries that is known to contain rennet
+  (anfahah) from a calf or young goat, or an animal enzyme, asking whether it may be eaten.
+sample_questions:
+- Can I eat cheese with animal rennet?
+- What is anfahah?
+- Is cheese with animal enzymes okay?
+headings:
+- food-drink
+access: free
+location: Cheese, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

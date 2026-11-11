@@ -1,0 +1,32 @@
+id: sistani-qa-15370
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-friday-prayer
+level: intermediate
+title: Is one entitled to object to the holding of Friday prayer by claiming that the marjas of the Muslims
+  in Najaf and Qum do not establish it, while knowing that in the city in which the mukallaf resides...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01185/#15370
+language: en
+date: ''
+description: A question asking whether a person may object to Friday prayer being held on the grounds
+  that the marjas in Najaf and Qum do not establish it, when most people in the city pray it according
+  to their own fiqh.
+sample_questions:
+- Can I object to Friday prayer in my city?
+- Why do some marjas not hold Friday prayer?
+- Do Najaf and Qum hold Jumuah prayer?
+- What if my community prays Friday prayer but my marja does not?
+headings:
+- prayer
+access: free
+location: Friday Prayer (Jumu'ah), question 3
+needs_review: false
+review_note: Concerns differing practice among scholars and communities; description kept neutral, reviewer
+  should confirm.
+cataloged_on: '2026-11-10'

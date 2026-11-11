@@ -1,0 +1,29 @@
+id: sistani-qa-25379
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fasting-illness
+level: intermediate
+title: I am suffering from a problem with my kidney. Dehydration will affect my kidney and worsen my health
+  problem. What is my duty about fasting?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02655/#25379
+language: en
+date: ''
+description: A question from a person with a kidney problem who is affected by dehydration, asking what
+  his duty about fasting is.
+sample_questions:
+- Can I fast with kidney problems?
+- What if dehydration harms my health?
+- Do I fast if it worsens my illness?
+headings:
+- fasting
+access: free
+location: Fasting - Illness, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

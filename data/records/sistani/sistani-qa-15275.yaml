@@ -1,0 +1,30 @@
+id: sistani-qa-15275
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gambling
+level: intermediate
+title: Is it permissible to play games of chance, such as dominoes, billiard, and card games, on electronic
+  machines (computers / online) with betting or without betting?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01202/#15275
+language: en
+date: ''
+description: A question about playing games of chance, such as dominoes, billiards and card games, on
+  electronic machines or online, with or without betting.
+sample_questions:
+- Can I play cards online?
+- Can I play online games of chance?
+- Are online dominoes okay without betting?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: Gambling, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

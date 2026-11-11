@@ -1,0 +1,29 @@
+id: sistani-qa-14988
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-moon-sighting
+level: intermediate
+title: What is the rulings of His Eminence Grand Ayatullah Sayyid Ali Sistani (May Allah protect him)
+  on sighting of the new moon crescent and determining the 1st day of the month?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01266/#14988
+language: en
+date: ''
+description: A question asking for Sayyid Sistani's rulings on sighting the new moon and determining the
+  first day of the month.
+sample_questions:
+- What is Sistani's view on moon sighting?
+- How is the first day of the month decided?
+- Can I rely on calculations?
+headings:
+- fasting
+access: free
+location: Moon Sighting, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

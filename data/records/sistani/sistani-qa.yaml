@@ -1,0 +1,32 @@
+id: sistani-qa
+type: qa
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: Question & Answer
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/
+language: en
+date: ''
+description: The question-and-answer area of the official website of Sayyid Ali al-Sistani's office. It
+  lists short questions on practical Islamic rulings (fiqh) with the office's answers, arranged alphabetically
+  by topic, from abortion and alcohol to prayer, fasting, marriage and work.
+sample_questions:
+- Where can I find Ayatollah Sistani's answers to common questions?
+- What does Sistani say about a specific issue?
+- Is there a list of Shia fiqh questions by topic?
+- Where can I look up a ruling from Sayyid Sistani?
+headings:
+- fiqh
+access: free
+location: ''
+needs_review: false
+review_note: 'Level: the pages do not state an audience. Questions are short and plainly worded, so intermediate
+  was chosen for this area; reviewer to confirm. The index listed about 175 topics on 2026-11-10; they
+  are being cataloged in batches (see progress/done-sistani.txt).'
+cataloged_on: '2026-11-10'

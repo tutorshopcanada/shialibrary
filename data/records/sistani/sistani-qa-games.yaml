@@ -1,0 +1,30 @@
+id: sistani-qa-games
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Games
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01199/
+language: en
+date: ''
+description: A topic page of questions and answers about games and sports. Questions cover martial arts
+  and contact sports, watching sport, games using dice, electronic games of chance, and cricket.
+sample_questions:
+- Can Shias play sports?
+- Can I play games with dice?
+- Is boxing allowed?
+- Can I watch cricket on TV?
+- Can I play video games?
+headings:
+- music-entertainment
+access: free
+location: 'Q&A topic: Games'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

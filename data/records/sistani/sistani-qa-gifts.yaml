@@ -1,0 +1,31 @@
+id: sistani-qa-gifts
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Gifts
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01197/
+language: en
+date: ''
+description: A topic page of questions and answers about gifts. Questions cover receiving a gift from
+  someone who has not paid khums (a religious payment on wealth) and bank deposit schemes that offer a
+  gift or a lottery prize to depositors.
+sample_questions:
+- Do I owe khums on a gift?
+- Can I accept a gift from someone who hasn't paid khums?
+- Can I join a bank scheme that gives gifts?
+- Are bank deposit prizes okay?
+headings:
+- transactions-work
+- khums-zakat
+access: free
+location: 'Q&A topic: Gifts'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

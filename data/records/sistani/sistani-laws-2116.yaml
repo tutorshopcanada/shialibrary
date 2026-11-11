@@ -1,0 +1,28 @@
+id: sistani-laws-2116
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: intermediate
+title: Transliteration
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2116/
+language: en
+date: ''
+description: A short page explaining the transliteration system used in the book to write Arabic terms
+  in English letters, with a note on which Arabic parts are meant to be spoken aloud.
+sample_questions:
+- How are Arabic words spelled in Islamic Laws?
+- What is transliteration?
+- How do I read the Arabic terms in the book?
+headings:
+- fiqh
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15430
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-dancing
+level: intermediate
+title: Is it permissible for me as a female to attend dancing lessons in female only classes?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01172/#15430
+language: en
+date: ''
+description: A question from a woman asking whether she may attend dancing lessons in female-only classes.
+sample_questions:
+- Can I attend women-only dance lessons?
+- Can women take dance classes?
+- Is a ladies' dance class okay?
+headings:
+- music-entertainment
+- women-rulings
+access: free
+location: Dancing, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

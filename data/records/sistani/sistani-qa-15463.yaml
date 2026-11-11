@@ -1,0 +1,30 @@
+id: sistani-qa-15463
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gambling
+level: intermediate
+title: Some people play with gambling instruments other than chess and backgammon for enjoyment and without
+  placing a bet.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01202/#15463
+language: en
+date: ''
+description: A question about playing with gambling instruments other than chess and backgammon, for fun
+  and without placing a bet.
+sample_questions:
+- Can I play cards for fun?
+- Can I use gambling items without betting?
+- Are casino games okay without money?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: Gambling, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

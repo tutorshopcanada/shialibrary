@@ -1,0 +1,30 @@
+id: sistani-qa-15443
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-burial-of-the-dead
+level: intermediate
+title: When there is no heir for a deceased Muslim person in the foreign land, who should take charge
+  of his burial?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01167/#15443
+language: en
+date: ''
+description: A question asking who should take charge of the burial when a deceased Muslim in a foreign
+  land has no heir.
+sample_questions:
+- Who buries a Muslim with no family?
+- Who is responsible for a body with no heirs?
+- What happens if a Muslim dies abroad alone?
+headings:
+- death-burial
+- muslims-in-west
+access: free
+location: Burial of the Dead, question 6
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

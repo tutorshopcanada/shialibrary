@@ -1,0 +1,28 @@
+id: sistani-qa-15222
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-istikhara
+level: intermediate
+title: When is it good or necessary to perform an Istikhara?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01216/#15222
+language: en
+date: ''
+description: A question asking when it is good or necessary to perform istikhara.
+sample_questions:
+- When should I do istikhara?
+- Do I need istikhara for every decision?
+- What is istikhara used for?
+headings:
+- spirituality
+- fiqh
+access: free
+location: Istikhara, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

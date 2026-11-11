@@ -1,0 +1,33 @@
+id: al-islam-invitation-to-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Invitation to Islam
+title_original: ''
+authors:
+- moustafa-al-qazwini
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/invitation-islam-sayyid-moustafa-al-qazwini
+language: en
+date: ''
+description: A book in four parts on Islamic beliefs (the pillars of Islam), Islamic practices, religious
+  texts and other Islamic issues, by the author of Discovering Islam. The first part begins with God as
+  the centre of Muslim belief.
+sample_questions:
+- What do Muslims believe?
+- What are the pillars of Islam?
+- What are the main practices of Islam?
+- What are the religious texts of Islam?
+- Where can I find an introduction to Islam?
+headings:
+- new-to-shia-islam
+- beliefs
+access: free
+location: ''
+needs_review: false
+review_note: Level not stated on the page (audience not stated); set to intermediate pending review. Page
+  gave no description; the Practices part may touch on rulings, but the main purpose looks introductory.
+cataloged_on: '2026-11-11'

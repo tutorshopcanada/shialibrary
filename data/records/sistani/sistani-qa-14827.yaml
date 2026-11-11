@@ -1,0 +1,28 @@
+id: sistani-qa-14827
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-qasr-prayers
+level: intermediate
+title: Who is a Kasir al-Safar (frequent traveler)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01298/#14827
+language: en
+date: ''
+description: A question asking who a Kasir al-Safar (frequent traveller) is.
+sample_questions:
+- Who is a frequent traveller?
+- What is kasir al-safar?
+- Do people who travel often shorten prayers?
+- How is a frequent traveller defined?
+headings:
+- prayer
+access: free
+location: Qasr Prayers, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,28 @@
+id: sistani-qa-15614
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-alcohol
+level: intermediate
+title: Is it permissible to consume medication that contain alcohol for ones treatment?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01123/#15614
+language: en
+date: ''
+description: A question asking whether it is allowed to take medication that contains alcohol as treatment.
+sample_questions:
+- Can I take medicine with alcohol?
+- Is cough syrup with alcohol okay?
+- Can I use alcohol-based medicine?
+- Is medicine containing alcohol allowed?
+headings:
+- food-drink
+access: free
+location: Alcohol, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

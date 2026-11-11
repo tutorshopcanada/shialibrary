@@ -1,0 +1,29 @@
+id: sistani-qa-14980
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-najasat
+level: intermediate
+title: 'A toothbrush that contains bristles from the hair of a pig: is it permissible to buy, sell and
+  use it? Does the mouth become impure by using such a toothbrush?'
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01268/#14980
+language: en
+date: ''
+description: A question about a toothbrush with bristles made from pig hair, asking about buying, selling
+  and using it and whether the mouth becomes impure.
+sample_questions:
+- Can I use a toothbrush with pig hair?
+- Is a pig-bristle toothbrush najis?
+- Can I sell pig-bristle brushes?
+headings:
+- purity
+access: free
+location: Najasat, question 10
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

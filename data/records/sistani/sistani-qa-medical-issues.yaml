@@ -1,0 +1,32 @@
+id: sistani-qa-medical-issues
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Medical Issues
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01249/
+language: en
+date: ''
+description: A topic page of questions and answers about medical matters. Questions cover AIDS (illness,
+  marriage, family and isolation), fertility treatment in a lab, organ and animal-product use in medicine,
+  autopsy, drug testing, medical examination of patients, brain death and narcotics.
+sample_questions:
+- What does Shia law say about AIDS?
+- Are test-tube babies discussed in Islamic law?
+- Can I use medicine made from animal products?
+- What is said about autopsy?
+- What is the view on brain death?
+- What does Islam say about drug misuse?
+headings:
+- medical-ethics
+access: free
+location: 'Q&A topic: Medical Issues'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-laws-8241
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: CHAPTER THIRTY-EIGHT » Inheritance (Irth) » MISCELLANEOUS RULES OF INHERITANCE
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/8241/
+language: en
+date: ''
+description: 'Covers miscellaneous rulings of inheritance: items the eldest son receives, debts equal
+  to the estate, inheriting across religions, a relative who kills, and dividing the estate.'
+sample_questions:
+- What does the eldest son receive?
+- What happens to inheritance if there is debt?
+- Can a Muslim inherit from a non-Muslim?
+- What if an heir killed the deceased?
+- How is an estate divided?
+headings:
+- death-burial
+- fiqh
+access: free
+location: 'Chapter: Inheritance (Irth)'
+needs_review: false
+review_note: Touches on inheritance across religions and on killing; flagged for human review.
+cataloged_on: '2026-11-10'

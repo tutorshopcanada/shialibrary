@@ -1,0 +1,31 @@
+id: sistani-west-taqlid-introduction
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-code-of-practice-west
+level: intermediate
+title: 'Taqlid: Following a jurist » Introduction'
+title_original: ''
+authors:
+- abdul-hadi-al-hakim
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/46/2025/
+language: en
+date: ''
+description: Short opening to the chapter on taqlid (following a qualified Islamic jurist, called a mujtahid,
+  in religious matters). It explains what taqlid means and introduces the idea of the most learned jurist
+  (a'lam).
+sample_questions:
+- What is taqlid?
+- What is a mujtahid?
+- Why do Shias follow a marja'?
+- What does a'lam mean?
+headings:
+- taqlid
+- fiqh
+access: free
+location: 'Chapter: Taqlid, Introduction'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

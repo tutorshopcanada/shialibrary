@@ -1,0 +1,28 @@
+id: sistani-qa-25359
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-fast-broken-intentionally
+level: intermediate
+title: What is the Islamic ruling about someone who does not fast intentionally or breaks his fast deliberately?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02658/#25359
+language: en
+date: ''
+description: A question about the Islamic ruling for someone who does not fast intentionally or breaks
+  his fast deliberately.
+sample_questions:
+- What if I break my fast deliberately?
+- What is the penalty for skipping a fast on purpose?
+- What do I do after eating on purpose in Ramadan?
+headings:
+- fasting
+access: free
+location: Fast - Broken Intentionally, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

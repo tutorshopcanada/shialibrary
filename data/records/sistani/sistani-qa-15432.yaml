@@ -1,0 +1,33 @@
+id: sistani-qa-15432
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-abortion
+level: intermediate
+title: In certain cases doctors advise that the foetus is so deformed that it could be very difficult
+  to treat the born baby and, perhaps, it (the child) would live a very short time suffering pain and
+  agony with his parents, then dies...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01121/#15432
+language: en
+date: ''
+description: A question about a foetus doctors say is badly deformed, asking about abortion, whether it
+  matters if the soul has entered the foetus yet, and whether compensation (blood money) is payable and
+  by whom.
+sample_questions:
+- Can I abort a deformed baby?
+- Does it matter if the soul has entered the foetus?
+- Who pays compensation for an abortion?
+- What if doctors say the baby will suffer?
+headings:
+- medical-ethics
+- marriage-family
+access: free
+location: Abortion, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

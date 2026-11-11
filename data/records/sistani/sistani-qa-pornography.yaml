@@ -1,0 +1,31 @@
+id: sistani-qa-pornography
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Pornography
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01288/
+language: en
+date: ''
+description: A topic page with questions about viewing pictures or films of naked people. The questions
+  are about pictures with and without lustful intention.
+sample_questions:
+- What does Islam say about pornography?
+- Can I look at pictures of naked people?
+- Is watching adult films discussed?
+- What is said about lust and images?
+headings:
+- social-conduct-rulings
+- youth-rulings
+access: free
+location: 'Q&A topic: Pornography'
+needs_review: false
+review_note: Touches on a sexual matter; described neutrally, reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

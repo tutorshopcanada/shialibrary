@@ -1,0 +1,31 @@
+id: sistani-qa-25193
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-azadari
+level: intermediate
+title: I would like to ask your opinion about taking off the shirts in mourning processions. Is it permissible
+  for men to take off their shirts while beating their chests?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01125/#25193
+language: en
+date: ''
+description: A question asking for an opinion on men taking off their shirts while beating their chests
+  in mourning processions.
+sample_questions:
+- Can men remove their shirts in matam?
+- Is bare-chested matam allowed?
+- Can I beat my chest without a shirt?
+- What about taking off shirts in Muharram processions?
+headings:
+- fiqh
+- karbala-ashura
+access: free
+location: Azadari (Lamentation), question 5
+needs_review: false
+review_note: Question about a contested mourning practice; description kept neutral, reviewer should confirm.
+cataloged_on: '2026-11-10'

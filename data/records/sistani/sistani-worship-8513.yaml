@@ -1,0 +1,29 @@
+id: sistani-worship-8513
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-worship
+level: advanced
+title: Rules of Zakāt
+title_original: ''
+authors: []
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/26890/8513/
+language: en
+date: ''
+description: An introduction to zakat, the religious charity payment, and its importance in Islamic law
+  as mentioned alongside prayer in the Quran.
+sample_questions:
+- What is zakat?
+- Why is zakat important?
+- What does the Quran say about zakat?
+- What are the categories of zakat?
+headings:
+- khums-zakat
+- fiqh
+access: free
+location: 'Chapter: Rules of Zakāt'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

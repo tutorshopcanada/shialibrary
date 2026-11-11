@@ -1,0 +1,30 @@
+id: sistani-laws-2209
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: THE TIME FOR THE MIDDAY (ẒUHR) AND AFTERNOON (ʿAṢR) PRAYERS
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2209/
+language: en
+date: ''
+description: Covers the time for the midday (zuhr) and afternoon (asr) prayers, and a case of starting
+  asr by mistake before zuhr.
+sample_questions:
+- When is zuhr prayer time?
+- When does asr time start?
+- What if I start asr before zuhr by mistake?
+- What time do zuhr and asr prayers start?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

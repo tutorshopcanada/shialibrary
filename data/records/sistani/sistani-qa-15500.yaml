@@ -1,0 +1,30 @@
+id: sistani-qa-15500
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-clothing
+level: intermediate
+title: Is there any restriction for women to wear trousers having a long bottom, so that it come under
+  our feet?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01152/#15500
+language: en
+date: ''
+description: A question asking whether there is any restriction for women wearing trousers with a long
+  bottom that comes under the feet.
+sample_questions:
+- Can women wear long trousers?
+- Are trousers allowed for women?
+- Is there a rule on trouser length for women?
+headings:
+- dress-appearance
+- women-rulings
+access: free
+location: Clothing, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

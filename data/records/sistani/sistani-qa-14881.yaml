@@ -1,0 +1,30 @@
+id: sistani-qa-14881
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-zakat
+level: intermediate
+title: Is it permissible for a "Sayyid" to have Sadaqa for their needs? If it is permissible, then please
+  specify the condition.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01358/#14881
+language: en
+date: ''
+description: A question asking whether a sayyid (descendant of the Prophet) is allowed to receive sadaqa
+  (charity) for their needs, and under what conditions.
+sample_questions:
+- Can a sayyid receive zakat?
+- Can sayyids take sadaqa?
+- Who can't receive zakat?
+- Can a descendant of the Prophet accept charity?
+headings:
+- khums-zakat
+access: free
+location: Zakat, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

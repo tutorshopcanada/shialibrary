@@ -1,0 +1,29 @@
+id: sistani-qa-15397
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eating-drinking
+level: intermediate
+title: Is it permissible to the food that has been cooked by a non-Muslim?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01178/#15397
+language: en
+date: ''
+description: A question asking whether it is allowed to eat food cooked by a non-Muslim.
+sample_questions:
+- Can I eat food cooked by a non-Muslim?
+- Can I eat at a non-Muslim's home?
+- Is food prepared by non-Muslims okay?
+- Eating a Christian's cooking?
+headings:
+- food-drink
+access: free
+location: Eating & Drinking, question 7
+needs_review: false
+review_note: Concerns food prepared by people of another faith; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

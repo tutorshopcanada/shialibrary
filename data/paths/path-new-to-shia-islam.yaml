@@ -1,0 +1,15 @@
+id: path-new-to-shia-islam
+title: New to Shia Islam
+intro: 'A short reading order for someone starting from the beginning: first what Islam is, then what is particular to Shia Islam, then the core beliefs in more depth.'
+steps:
+- record: al-islam-brief-introduction-to-islam
+  why: A short article introducing Islam from a Shia viewpoint.
+- record: al-islam-discovering-islam
+  why: An introduction to Islam from a Shia perspective, which the site says is written with newcomers in mind.
+- record: al-islam-discovering-shii-islam
+  why: A brief overview of where Shia Islam began, its sources, beliefs and practices.
+- record: al-islam-islamic-teachings-in-brief
+  why: A summary of Islamic beliefs and ethics in fairly simple language.
+- record: al-islam-basic-teachings-of-islam
+  why: A closer look at belief in God, prophets and the afterlife, once the basics are familiar.
+draft: true

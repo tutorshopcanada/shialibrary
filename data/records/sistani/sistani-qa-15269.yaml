@@ -1,0 +1,28 @@
+id: sistani-qa-15269
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-graves
+level: intermediate
+title: Is it permissible for women to visit graveyards?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01205/#15269
+language: en
+date: ''
+description: A question asking whether women may visit graveyards.
+sample_questions:
+- Can women visit graves?
+- Can a woman go to the cemetery?
+- Is visiting graves okay for women?
+headings:
+- death-burial
+- muslims-in-west
+access: free
+location: Graves, question 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

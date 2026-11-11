@@ -1,0 +1,30 @@
+id: sistani-laws-2240
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: SALUTATION (SALĀM)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2240/
+language: en
+date: ''
+description: Rules on the salutation (salam) that ends the prayer, with its Arabic text, transliteration
+  and translation.
+sample_questions:
+- How do I end the prayer?
+- What is the salam of prayer?
+- What do I say at the end of salah?
+- Is the salam obligatory?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

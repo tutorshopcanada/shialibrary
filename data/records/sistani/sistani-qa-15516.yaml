@@ -1,0 +1,31 @@
+id: sistani-qa-15516
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-business
+level: intermediate
+title: Is it permissible for a Muslim business owner to employ non-Muslims in his business even though
+  there are Muslims who need jobs?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01146/#15516
+language: en
+date: ''
+description: A question asking whether a Muslim business owner may employ non-Muslims even though there
+  are Muslims who need jobs.
+sample_questions:
+- Can a Muslim employ non-Muslims?
+- Should I hire Muslims first?
+- Can I hire people of other religions?
+headings:
+- transactions-work
+- muslims-in-west
+access: free
+location: Business, question 3
+needs_review: false
+review_note: Concerns people of another faith or dealings with them; reviewer should confirm the classification
+  and wording.
+cataloged_on: '2026-11-10'

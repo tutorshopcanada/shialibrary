@@ -1,0 +1,28 @@
+id: sistani-qa-14963
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-nafilah-prayer
+level: intermediate
+title: Can a person offer Salatul Layl before midnight, for example, after Isha prayers?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01270/#14963
+language: en
+date: ''
+description: A question asking whether the night prayer (Salatul Layl) can be offered before midnight,
+  for example after Isha prayer.
+sample_questions:
+- Can I pray Salatul Layl early?
+- When is the night prayer prayed?
+- Can I pray night prayer after Isha?
+headings:
+- prayer
+access: free
+location: Nafilah Prayer, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,33 @@
+id: thaqalayn-al-kafi-vol-6
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: 'Al-Kāfi (Vol. 6): The Sufficient'
+title_original: ''
+authors:
+- kulayni
+marja: ''
+source: thaqalayn.net
+url: https://thaqalayn.com/book/6
+language: en
+date: ''
+description: Volume 6 of 8 of Al-Kafi, a collection of hadith (reported sayings of the Prophet and the Imams) compiled
+  by Shaykh al-Kulayni, shown with an English translation by Muhammad Sarwar. According to the site, this volume includes
+  the books on aqiqah (offering an animal for a newborn), divorce, hunting, slaughtering, food, drinks, dress and domestic
+  animals. It is a primary source, best suited to readers who already know the basics.
+sample_questions:
+- What hadith are there about having a newborn child?
+- What hadith are there about divorce?
+- What hadith are there about food and drink?
+- What hadith are there about dress and beautification?
+- Who compiled Al-Kafi?
+headings:
+- hadith-collections
+- legal-hadith
+access: free
+location: Volume 6 of 8
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

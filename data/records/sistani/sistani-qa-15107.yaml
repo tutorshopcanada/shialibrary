@@ -1,0 +1,33 @@
+id: sistani-qa-15107
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-music
+level: intermediate
+title: Just as many questions are asked about halãl and harãm music, many questions are asked about halãl
+  and harãm songs. Is it correct to say that harãm songs are those that arouse sexual, lustful urges and
+  promote unstable and degrading behaviour?...
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01246/#15107
+language: en
+date: ''
+description: A question about the distinction between halal and haram songs, asking whether songs that
+  arouse lust are one category and songs that uplift the soul, such as religious praise or morale-raising
+  songs, are another.
+sample_questions:
+- What kinds of songs are halal?
+- How do I know if a song is haram?
+- Are religious songs treated differently from other songs?
+- What is the rule on uplifting songs?
+headings:
+- music-entertainment
+access: free
+location: Music, question 3
+needs_review: false
+review_note: The question itself proposes a classification of songs; description kept neutral so it does
+  not take a position, reviewer should confirm.
+cataloged_on: '2026-11-10'

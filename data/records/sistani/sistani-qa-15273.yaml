@@ -1,0 +1,28 @@
+id: sistani-qa-15273
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-gambling
+level: intermediate
+title: Is buying and selling chess, backgammon, dominoes, billiard, and card games allowed?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01202/#15273
+language: en
+date: ''
+description: A question about buying and selling chess, backgammon, dominoes, billiards and card games.
+sample_questions:
+- Can I sell chess sets?
+- Can I buy playing cards?
+- Can I trade in board games?
+headings:
+- transactions-work
+- music-entertainment
+access: free
+location: Gambling, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

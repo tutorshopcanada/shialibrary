@@ -1,0 +1,38 @@
+id: al-islam-basic-teachings-of-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Basic Teachings Of Islam
+title_original: ''
+authors:
+- beheshti
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/basic-teachings-islam-sayyid-muhammad-husayni-beheshti
+language: en
+date: ''
+description: 'A book that the site says presents the essential beliefs and practices of Islam within the
+  Shia tradition. Most of it is about God: His oneness, how people can know Him, and His relationship
+  to humans and the universe. It then turns to fate and free will, prophets and revelation, the Quran,
+  and the afterlife.'
+sample_questions:
+- What does Islam teach about God?
+- Is there only one God in Islam?
+- What does Islam say about fate and free will?
+- Why do Muslims believe in prophets?
+- What does Islam say about paradise and hell?
+- Does Islam conflict with science?
+headings:
+- beliefs
+- tawhid
+- nubuwwah
+- maad
+access: free
+location: ''
+needs_review: false
+review_note: The page does not say who the book is for, so the more cautious level (intermediate) was
+  chosen; a reviewer may judge it beginner. The edition is given only as '3rd edition 1404 A.H.', so `date`
+  is blank.
+cataloged_on: '2026-11-10'

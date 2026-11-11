@@ -1,0 +1,29 @@
+id: sistani-qa-15256
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-hijab
+level: intermediate
+title: What is the best modest dress according to Islamic laws?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01208/#15256
+language: en
+date: ''
+description: A question asking what the best modest dress is according to Islamic law.
+sample_questions:
+- What is modest dress in Islam?
+- What should a woman wear?
+- What is the best hijab?
+- What is Islamic dress?
+headings:
+- dress-appearance
+- women-rulings
+access: free
+location: Hijab (Islamic Dress), question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

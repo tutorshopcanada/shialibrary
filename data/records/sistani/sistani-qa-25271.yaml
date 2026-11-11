@@ -1,0 +1,28 @@
+id: sistani-qa-25271
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-animals
+level: intermediate
+title: Does cat hair affect ones prayers?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01130/#25271
+language: en
+date: ''
+description: A question asking whether cat hair affects one's prayers.
+sample_questions:
+- Does cat hair affect my prayer?
+- Can I pray with cat fur on my clothes?
+- Do I have to remove pet hair before salat?
+headings:
+- prayer
+- purity
+access: free
+location: Animals, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

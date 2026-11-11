@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-education
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Education
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02652/
+language: en
+date: ''
+description: A topic page of questions about fasting during the school and university year, including
+  exams.
+sample_questions:
+- Can I break my fast for exams?
+- Do I fast during exams?
+- Can a student skip fasting?
+- Does studying excuse me from fasting?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Education'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

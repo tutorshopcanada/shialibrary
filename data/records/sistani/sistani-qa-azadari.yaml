@@ -1,0 +1,33 @@
+id: sistani-qa-azadari
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Azadari (Lamentation)
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01125/
+language: en
+date: ''
+description: A topic page of questions and answers about azadari, mourning for Imam Husayn and the other
+  Imams. Questions cover the purpose of mourning, the forms mourning gatherings and processions take,
+  and related customs during Muharram and Safar.
+sample_questions:
+- Why do Shias mourn for Imam Husayn?
+- What is azadari?
+- Is mourning for the Imams recommended?
+- What do Shias do during Muharram?
+- Is it okay to wear black in Muharram?
+headings:
+- fiqh
+- karbala-ashura
+access: free
+location: 'Q&A topic: Azadari (Lamentation)'
+needs_review: false
+review_note: Mourning practices are a sensitive and sometimes debated area; a reviewer should confirm
+  the classification and wording.
+cataloged_on: '2026-11-10'

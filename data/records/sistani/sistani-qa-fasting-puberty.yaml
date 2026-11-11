@@ -1,0 +1,29 @@
+id: sistani-qa-fasting-puberty
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Fasting - Puberty
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/02661/
+language: en
+date: ''
+description: A topic page of questions about fasting and the age of puberty, including how puberty is
+  confirmed and when a girl is considered an adult in Sharia.
+sample_questions:
+- At what age do I start fasting?
+- How do I know I've reached puberty?
+- When is a girl considered an adult?
+- What if I didn't fast after puberty?
+headings:
+- fasting
+access: free
+location: 'Q&A topic: Fasting - Puberty'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

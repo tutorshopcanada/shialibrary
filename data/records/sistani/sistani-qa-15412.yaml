@@ -1,0 +1,27 @@
+id: sistani-qa-15412
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-eid-prayer
+level: intermediate
+title: When is the time for Eid prayer?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01180/#15412
+language: en
+date: ''
+description: A question asking about the time of the Eid prayer.
+sample_questions:
+- When is Eid prayer held?
+- What time do I pray Eid prayer?
+- When does Eid prayer start?
+headings:
+- prayer
+access: free
+location: Eid Prayer, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

@@ -1,0 +1,30 @@
+id: sistani-laws-2214
+type: book
+content_tag: fiqh
+granularity: section
+parent: sistani-islamic-laws
+level: advanced
+title: PRAYERS THAT MUST BE PERFORMED IN ORDER
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/book/48/2214/
+language: en
+date: ''
+description: Covers the order of the daily prayers, such as asr in relation to zuhr and isha in relation
+  to maghrib, and cases of mistakes, doubts or realizing the order afterward.
+sample_questions:
+- Must I pray zuhr before asr?
+- What if I start asr and realize I didn't pray zuhr?
+- What order should daily prayers be in?
+- What if I doubt whether I prayed zuhr?
+headings:
+- prayer
+- fiqh
+access: free
+location: 'Chapter: Prayer (Ṣalāh)'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

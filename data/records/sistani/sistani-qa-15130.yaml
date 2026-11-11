@@ -1,0 +1,29 @@
+id: sistani-qa-15130
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-rules-of-say
+level: intermediate
+title: A person performed fourteen laps of Sa'y believing that this was what was obligatory upon them.
+  What is the ruling regarding them?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01306/#15130
+language: en
+date: ''
+description: A question about a person who performed fourteen laps of sa'y believing that was what is
+  required, asking about the ruling in their case.
+sample_questions:
+- What if I did too many laps of sa'y?
+- How many laps is sa'y?
+- What if I made a mistake in sa'y?
+headings:
+- hajj
+access: free
+location: Rules of Sa'y, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

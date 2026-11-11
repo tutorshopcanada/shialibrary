@@ -1,0 +1,29 @@
+id: sistani-qa-26124
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-adhan-iqamah
+level: intermediate
+title: Is the recitation of Adhan and Iqama for daily prayers and other prayers compulsory (Wajib)?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01131/#26124
+language: en
+date: ''
+description: A question asking whether reciting the adhan and iqama is compulsory (wajib) for the daily
+  prayers and other prayers.
+sample_questions:
+- Is the adhan compulsory?
+- Do I have to say iqama before praying?
+- Is the call to prayer required for every prayer?
+- Are adhan and iqamah wajib?
+headings:
+- prayer
+access: free
+location: Adhan and Iqamah, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

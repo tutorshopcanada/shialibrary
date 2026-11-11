@@ -1,0 +1,28 @@
+id: sistani-qa-15477
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-crescent-sighting
+level: intermediate
+title: What is the evidence of sighting the crescent?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01157/#15477
+language: en
+date: ''
+description: A question asking what counts as evidence of sighting the crescent.
+sample_questions:
+- What is proof of the new moon?
+- How is moon sighting proven?
+- Whose testimony counts for the crescent?
+headings:
+- fasting
+- islamic-calendar
+access: free
+location: Crescent Sighting, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'

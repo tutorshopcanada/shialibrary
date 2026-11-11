@@ -1,0 +1,29 @@
+id: sistani-qa-qasam
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Qasam
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01299/
+language: en
+date: ''
+description: A topic page of questions and answers about qasam (an oath, a promise made in God's name).
+  Questions cover the conditions of an oath and making up for a broken one.
+sample_questions:
+- What is a qasam?
+- What if I break my oath?
+- What are the conditions of an oath?
+- How do I make up a broken oath?
+headings:
+- social-conduct-rulings
+access: free
+location: 'Q&A topic: Qasam'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-10'
