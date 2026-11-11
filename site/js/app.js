@@ -773,7 +773,9 @@ let rows = [], hi = 0;
 const RET = '<kbd aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3v5a2 2 0 0 1-2 2H3M5.5 7.5L3 10l2.5 2.5"/></svg></kbd>';
 function buildRows() {
   const q = input.value.trim(), out = [];
-  if (!q) {
+  // One letter is too vague to match anything useful ("d" matched a section titled "D) ..."),
+  // so below two characters we keep showing the starter questions instead of results.
+  if (q.length < 2) {
     if (engine.questions.length) {
       out.push({ lab: `Suggested questions (${engine.questions.length})` });
       engine.questions.forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) }));

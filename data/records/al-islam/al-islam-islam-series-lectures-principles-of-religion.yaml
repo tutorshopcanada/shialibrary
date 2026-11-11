@@ -1,0 +1,37 @@
+id: al-islam-islam-series-lectures-principles-of-religion
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: advanced
+title: Islam, A Series Of Lectures On Principles Of Religion
+title_original: ''
+authors:
+- saeed-akhtar-rizvi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/islam-series-lectures-principles-religion-sayyid-saeed-akhtar-rizvi
+language: en
+date: ''
+description: A transcript of a lecture series on the fundamental roots of Islam. The chapters cover unity
+  of God, divine justice, prophethood with a short life of the Prophet, the Imamate, the Day of Judgment
+  and an overview of the branches of religion.
+sample_questions:
+- What are the roots of religion in Islam?
+- What is tawhid, the unity of God?
+- What is the Day of Judgment in Islam?
+- What is the Imamate in Shia belief?
+headings:
+- beliefs
+- tawhid
+- adl
+- nubuwwah
+- imamate
+- maad
+access: free
+location: ''
+needs_review: false
+review_note: 'Level advanced: the page calls it a transcript of lectures on the fundamental roots of Islam
+  but states no audience; the more cautious level is used. Published by WOFIS, already in scholars.yaml.
+  Branches of Religion is one chapter in an overview of the roots, not a fiqh work.'
+cataloged_on: '2026-11-11'

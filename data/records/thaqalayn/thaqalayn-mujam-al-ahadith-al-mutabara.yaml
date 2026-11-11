@@ -16,14 +16,15 @@ date: ''
 description: A hadith collection (reported sayings of the Prophet and the Imams) compiled by Shaykh Muhammad
   Asif al-Muhsini, shown with an English translation by Ammaar Muslim. The site says he gathered narrations
   he judged reliable, using criteria it describes, and notes that some scholars may differ with his judgments.
-  Chapters cover intellect and knowledge, principles of jurisprudence, narrators, divine unity and the
-  Quran.
+  Its five books cover intellect and knowledge, the principles of jurisprudence (how rulings are derived
+  from the sources), a list of narrators, divine unity, and the Quran and its recitation.
 sample_questions:
 - What is Mu'jam al-Ahadith al-Mu'tabara?
 - Who compiled Mu'jam al-Ahadith al-Mu'tabara?
 - What hadith are there about intellect and knowledge?
 - What hadith are there about the oneness of God?
 - What hadith are there about the Quran?
+- What hadith are there about giving fatwas without knowledge?
 headings:
 - hadith-collections
 - tawhid

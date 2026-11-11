@@ -47,8 +47,9 @@ layer2:
     max_expansions: 40      # cap on how many longer words one prefix may expand to
   # Bonus for records tagged with a heading (or written by a scholar) that the
   # query names through any of its alternate terms. Multiplied by the number of
-  # query words the alternate term covers.
-  concept_weight: 2.5
+  # query words the alternate term covers. (Raised from 2.5 on 2026-11-11: word-hit scores
+  # grow with catalog size, so the bonus must keep pace or topic tags stop leading.)
+  concept_weight: 3.5
   # Score multiplier when the whole query appears word-for-word in the title,
   # sample questions or description.
   phrase_boost: 1.6
@@ -94,9 +95,14 @@ ranking:
   # Whole books and topic pages rank above single questions of equal relevance, so a broad
   # search ("prayer", "khums") leads with the overview and not with one narrow question.
   granularity_boost:
-    work: 2.0
+    work: 3.0   # raised from 2.0: thaqalayn chapters (sections) must not outrank their own volume
     section: 1.8
     item: 1.0
+  # Per-source overrides. thaqalayn chapters are narrow pages (one chapter of a hadith book), so they
+  # count like single questions, not like whole chapters of a book.
+  granularity_boost_by_source:
+    thaqalayn.net:
+      section: 1.0
   # Exact matches: "boost" multiplies relevance by the level multipliers below, so a
   # beginner record wins when relevance is similar, but a page that actually contains the
   # searched words is not buried under easier pages that only share its topic.

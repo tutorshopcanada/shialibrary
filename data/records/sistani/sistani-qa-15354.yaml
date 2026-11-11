@@ -1,0 +1,27 @@
+id: sistani-qa-15354
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-forbidden-acts-ihram
+level: intermediate
+title: Is a pilgrim allowed to scratch his head, if he feels uncomfortable. There is a chance that his hair may fall off.
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01188/#15354
+language: en
+date: ''
+description: A question about whether a pilgrim in ihram may scratch the head when it feels uncomfortable, given the chance that hair may fall out.
+sample_questions:
+- Can I scratch my head during hajj?
+- Is scratching my head allowed in ihram?
+- What if my head itches during ihram?
+headings:
+- hajj
+access: free
+location: Forbidden Acts During Ihram, question 3
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-11'

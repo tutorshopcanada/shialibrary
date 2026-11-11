@@ -1,0 +1,35 @@
+id: al-islam-tenets-of-islam-tusi
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Tenets of Islam
+title_original: ''
+authors:
+- tusi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/tenets-islam-shaykh-tusi
+language: en
+date: ''
+description: 'Short passages by Shaykh Tusi on the main Islamic beliefs: the attributes of God, monotheism,
+  justice, the grace of God, prophethood, infallibility, the Seal of the Prophets, and related topics.
+  Each chapter is brief and covers one belief.'
+sample_questions:
+- What are the attributes of God in Islam?
+- What is monotheism, or tawhid?
+- What is the meaning of divine justice?
+- What does 'Seal of the Prophets' mean?
+headings:
+- beliefs
+- tawhid
+- adl
+- nubuwwah
+access: free
+location: ''
+needs_review: false
+review_note: 'Level intermediate: a short classical text whose audience is not stated on the page. Publisher
+  Islamic Seminary Publications; no date or translator shown. The page''s description names Imamate and
+  the Day of Judgement, which the chapter list does not show as separate chapters.'
+cataloged_on: '2026-11-11'

@@ -1,0 +1,27 @@
+id: sistani-qa-15356
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-forbidden-acts-ihram
+level: intermediate
+title: Is it permissible for a man to touch his wife during Ihram?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01188/#15356
+language: en
+date: ''
+description: A question about whether a man in ihram may touch his wife.
+sample_questions:
+- Can a husband touch his wife during ihram?
+- What is allowed between spouses during hajj?
+- Are there rules about touching in ihram?
+headings:
+- hajj
+access: free
+location: Forbidden Acts During Ihram, question 5
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-11'

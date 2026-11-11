@@ -15,14 +15,17 @@ language: en
 date: ''
 description: A work by Shaykh al-Saduq on the occultation (ghayba, meaning being hidden from view) of
   the twelfth Imam, Muhammad al-Mahdi, and on the Imamate, shown with an English translation by Sayyid
-  Athar Husain S. H. Rizvi. The site describes it as a theological and historical work with a systematic
-  defense of the doctrine of occultation. It is a primary source for readers with some background.
+  Athar Husain S. H. Rizvi. Its first section covers the author's introduction, the necessity of the Imamate
+  and the Imam's infallibility. The second section, 'The Occultations and the Proofs', begins with accounts
+  of earlier prophets who were hidden for periods, such as Idris and Yusuf. It is a primary source for
+  readers with some background.
 sample_questions:
 - Who is the Mahdi?
 - What is the occultation of the twelfth Imam?
 - Why do Shias believe the Imam is hidden?
 - What do Shia hadith say about the need for an Imam?
 - Who compiled Kamal al-Din?
+- What do the hadith say about occultations of earlier prophets?
 headings:
 - hadith-collections
 - imam-mahdi

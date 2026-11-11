@@ -1051,3 +1051,32 @@ scholars:
     alt_names: []
     notes: "Named as author of House of Sorrows on https://al-islam.org/house-sorrows-life-sayyidah-fatimah-al-zahra-and-her-grief-shaykh-abbas-qummi (read 2026-11-11)."
     needs_review: true
+
+  # ── Added during the al-islam.org batch (2026-11-11). Verified on the fetched page. Not yet reviewed.
+  - id: murtadha-al-askari
+    name: "Sayyid Murtadha al-'Askari"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Twelve Successors of the Holy Prophet on https://al-islam.org/twelve-successors-holy-prophet-sayyid-murtadha-al-askari (read 2026-11-11). Only this spelling was seen on that page; add other spellings only when verified."
+    needs_review: true
+
+  - id: abdul-adheem-al-muhtadi
+    name: "Abdul Adheem al-Muhtadi al-Bahrani"
+    role: author
+    alt_names: []
+    notes: "Named as author of For a Better Future on https://al-islam.org/better-future-abdul-adheem-al-muhtadi-al-bahrani (read 2026-11-11). Only this spelling was seen on that page."
+    needs_review: true
+
+  - id: hasnain-kassamali
+    name: "Hasnain Kassamali"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Islamic Glossary: An Explanation of Names, Terms and Symbols on https://al-islam.org/articles/islamic-glossary-explanation-names-terms-and-symbols-hasnain-kassamali (read 2026-11-11). Not confirmed as the same person as hasnain-mohamedali; check before merging."
+    needs_review: true
+
+  - id: raza-shabbar
+    name: "Syed Muhammad Raza Shabbar"
+    role: author
+    alt_names: []
+    notes: "Named as author of Story of the Holy Ka'aba And its People on https://al-islam.org/story-holy-kaaba-and-its-people-smr-shabbar (read 2026-11-11). Only this spelling was seen on that page."
+    needs_review: true
