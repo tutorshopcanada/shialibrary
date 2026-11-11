@@ -90,8 +90,14 @@ function mergeConfig(base, over) {
 // ---------------------------------------------------------------------------
 
 /** Lowercase, strip diacritics and punctuation. "Qur'ān" -> "quran", "Ḥusayn" -> "husayn". */
+const PLAIN_ASCII = /^[\x00-\x7f]*$/;
 export function normalize(input) {
-  return String(input == null ? '' : input)
+  const str = String(input == null ? '' : input);
+  // Fast path for plain ASCII (most of the catalog): no marks or Arabic/Persian letters to fold.
+  if (PLAIN_ASCII.test(str)) {
+    return str.toLowerCase().replace(/['`]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+  return str
     .normalize('NFKD')
     .replace(/\p{M}+/gu, '')            // combining marks: Latin diacritics, Arabic vowel signs
     .replace(/ـ/g, '')             // Arabic tatweel
@@ -104,7 +110,13 @@ export function normalize(input) {
 }
 
 /** Very light English stemmer: plurals and -ing. Applied to index and query alike. */
+const STEMS = new Map();
 export function stem(tok) {
+  let r = STEMS.get(tok);
+  if (r === undefined) { r = stemRaw(tok); if (STEMS.size < 50000) STEMS.set(tok, r); }
+  return r;
+}
+function stemRaw(tok) {
   if (tok.length < 4 || !/^[a-z]+$/.test(tok)) return tok;
   let t = tok;
   if (t.endsWith('ies') && t.length > 4) t = t.slice(0, -3) + 'y';
@@ -115,9 +127,20 @@ export function stem(tok) {
 }
 
 /** Normalized, stemmed tokens (stopwords kept). */
+const WORD_TOKENS = new Map(); // raw whitespace-delimited word -> its stemmed tokens
 export function tokenize(input) {
-  const n = normalize(input);
-  return n ? n.split(' ').map(stem) : [];
+  const out = [];
+  for (const w of String(input == null ? '' : input).split(/\s+/)) {
+    if (!w) continue;
+    let t = WORD_TOKENS.get(w);
+    if (!t) {
+      const n = normalize(w);
+      t = n ? n.split(' ').map(stem) : [];
+      if (WORD_TOKENS.size < 200000) WORD_TOKENS.set(w, t);
+    }
+    for (let i = 0; i < t.length; i++) out.push(t[i]);
+  }
+  return out;
 }
 
 /** Two words count as the same when equal, or one is the other plus 1-2 letters (pray / prayer). */
@@ -240,18 +263,30 @@ export function createEngine(index) {
   const fieldLen = FIELDS.map(() => new Float32Array(docs.length));
   const avgLen = FIELDS.map(() => 0);
   const docFreq = new Map();
+  // Many records share the same heading, scholar, context and source text: tokenize each distinct string once.
+  const tokCache = new Map();
+  const indexTokens = (text) => {
+    let r = tokCache.get(text);
+    if (!r) {
+      const toks = tokenize(text).filter((t) => !stopSet.has(t));
+      const tf = new Map();
+      for (const t of toks) tf.set(t, (tf.get(t) || 0) + 1);
+      r = { len: toks.length, entries: [...tf] };
+      tokCache.set(text, r);
+    }
+    return r;
+  };
   docs.forEach((doc, d) => {
     const seen = new Set();
     FIELDS.forEach((f, fi) => {
-      const toks = tokenize(doc.fieldText[f]).filter((t) => !stopSet.has(t));
-      fieldLen[fi][d] = toks.length;
-      avgLen[fi] += toks.length;
-      const tf = new Map();
-      for (const t of toks) tf.set(t, (tf.get(t) || 0) + 1);
-      for (const [t, n] of tf) {
+      const { len, entries } = indexTokens(doc.fieldText[f]);
+      fieldLen[fi][d] = len;
+      avgLen[fi] += len;
+      for (let e = 0; e < entries.length; e++) {
+        const t = entries[e][0];
         let p = postings.get(t);
         if (!p) { p = []; postings.set(t, p); }
-        p.push(d, fi, n);
+        p.push(d, fi, entries[e][1]);
         seen.add(t);
       }
     });

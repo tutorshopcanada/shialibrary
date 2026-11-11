@@ -17,7 +17,7 @@ is hosted or republished here, and the search never writes answers.
 | `data/scholars.yaml` | Authority file for scholars and authors |
 | `data/questions.yaml`, `data/paths/` | Starter questions and learning paths (drafts) |
 | `scripts/validate.py` | Checks every record and reference |
-| `scripts/build_index.py` | Builds `site/data/index.json` |
+| `scripts/build_index.py` | Builds `site/data/index.json` (plus `index-more.json`: the big hadith-chapter set, loaded after first paint) |
 | `scripts/build_vectors.mjs` | Builds the record vectors for search Layer 3 (related by meaning) into `site/data/l3/` |
 | `scripts/export_static_model.py` | One-time export of the small open-source similarity model (MIT) into `site/data/l3/` |
 | `site/` | The static site (search, Start here, the tour). See [docs/design.md](docs/design.md) |

@@ -59,6 +59,9 @@ class Problems:
         self.warnings.append(msg)
 
 
+# A source with more records than this has its section/item records moved to index-more.json.
+DEFER_SOURCE_OVER = 1500
+
 def load_yaml(path: Path, problems: Problems):
     try:
         with path.open(encoding="utf-8") as fh:
@@ -492,6 +495,16 @@ def main(argv=None) -> int:
         print(f"\nIndex NOT written: {len(problems.errors)} problem(s) found.", file=sys.stderr)
         return 1
 
+    # Big, repetitive sets (thaqalayn chapters: 4,800+) go to a second file the page loads after it is usable,
+    # so the first load stays small and fast. The search engine is rebuilt with both once it arrives.
+    slimmed = [slim(r) for r in records]
+    per_source = {}
+    for r in records:
+        per_source[r["source"]] = per_source.get(r["source"], 0) + 1
+    def deferred(r):
+        return r.get("granularity") != "work" and per_source[r["source"]] > DEFER_SOURCE_OVER
+    core_records = [x for r, x in zip(records, slimmed) if not deferred(r)]
+    more_records = [x for r, x in zip(records, slimmed) if deferred(r)]
     index = {
         "schema": 1,
         "build_date": _dt.date.today().isoformat(),
@@ -503,18 +516,26 @@ def main(argv=None) -> int:
         "headings": headings,
         "questions": questions,
         "paths": paths,
-        "records": [slim(r) for r in records],
+        "total_records": len(records),
+        "more": "index-more.json" if more_records else "",
+        "records": core_records,
     }
 
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = dict(ensure_ascii=False, sort_keys=False)
     dump.update({"indent": 1} if args.pretty else {"separators": (",", ":")})
     (out_dir / "index.json").write_text(json.dumps(index, **dump) + "\n", encoding="utf-8")
+    more_path = out_dir / "index-more.json"
+    if more_records:
+        more_path.write_text(json.dumps({"records": more_records}, **dump) + "\n", encoding="utf-8")
+    elif more_path.exists():
+        more_path.unlink()
     (out_dir / "search-eval.json").write_text(
         json.dumps({"queries": eval_queries}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     size_kb = (out_dir / "index.json").stat().st_size / 1024
-    print(f"Wrote {out_dir / 'index.json'} ({size_kb:.0f} KB): {len(records)} records, "
+    more_kb = more_path.stat().st_size / 1024 if more_records else 0
+    print(f"Wrote {out_dir / 'index.json'} ({size_kb:.0f} KB) + index-more.json ({more_kb:.0f} KB, {len(more_records)} records): {len(records)} records, "
           f"{len(headings)} headings, {len(scholars)} scholars, {len(sources)} sources, "
           f"{len(questions)} questions, {len(paths)} paths; {len(eval_queries)} eval queries.")
     return 0

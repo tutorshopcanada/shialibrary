@@ -56,9 +56,9 @@ function searchWithMeaning(st) {
   return result;
 }
 const meaningNoteHtml = () => (MEANING.kind === 'loading'
-  ? '<p class="meaning-note" role="status">Looking for results by meaning on your device. The first time this downloads about 4 MB.</p>'
+  ? '<p class="meaning-note" role="status">Looking for results by meaning on your device. The first time this downloads about 1 MB.</p>'
   : MEANING.kind === 'ask'
-    ? '<p class="meaning-note"><button class="btn line" type="button" data-meaning>Look for related results by meaning</button> This downloads about 4 MB once and runs on your device. Nothing you type is sent anywhere.</p>'
+    ? '<p class="meaning-note"><button class="btn line" type="button" data-meaning>Look for related results by meaning</button> This downloads about 1 MB once and runs on your device. Nothing you type is sent anywhere.</p>'
     : '');
 const ui = { fbkind: '', limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
 
@@ -434,7 +434,7 @@ function aboutHtml() {
   const steps = ['It checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it come first.',
     'Then it does an ordinary word search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.',
     'Exact matches have your words, or another name for the same topic, in the title or the questions a page helps answer. Everything else is Related. If nothing is exact, the page says so.',
-    'If few pages match your words, a small open-source model also measures how close your search is in meaning to each page. It runs on your device (about 4 MB, downloaded once from this site, never sent anywhere) and only measures similarity: it writes nothing. Pages found this way are marked “Found by meaning” and listed under Related.',
+    'If few pages match your words, a small open-source model also measures how close your search is in meaning to each page. It runs on your device (about 1 MB, downloaded once from this site, never sent anywhere) and only measures similarity: it writes nothing. Pages found this way are marked “Found by meaning” and listed under Related.',
     'If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.',
     'Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.'];
   return `<section class="lead"><p class="lead-t">${esc(SITE.name)} is a catalog, not a library.</p><p class="lead-p">It points you to where Shia resources are published on a short list of trusted Shia sources. It never hosts, copies or writes them. It is made for people who are new and do not know where to look.</p></section>
@@ -1053,6 +1053,22 @@ document.addEventListener('click', (e) => { if (performance.now() < noClickUntil
 // ---------------------------------------------------------------------------
 // Start
 // ---------------------------------------------------------------------------
+// The big, repetitive part of the catalog (hadith chapters) arrives after the page is usable. When it is here the
+// engine is rebuilt with everything and the current view is drawn again. If it fails the page keeps working.
+async function loadMore(index) {
+  try {
+    await new Promise((ok) => (window.requestIdleCallback ? requestIdleCallback(ok, { timeout: 2500 }) : setTimeout(ok, 800)));
+    const res = await fetch('data/' + index.more);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const more = await res.json();
+    const full = { ...index, records: index.records.concat(more.records) };
+    engine = createEngine(full); suggester = createSuggester(full);
+    RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
+    $('#n').textContent = engine.records.length.toLocaleString();
+    render();
+  } catch (err) { console.error('The rest of the catalog could not be loaded.', err); }
+}
+
 async function start() {
   for (const n of document.querySelectorAll('[data-site-name]')) n.textContent = SITE.name;
   try {
@@ -1063,7 +1079,9 @@ async function start() {
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';
+    if (index.total_records) $('#n').textContent = index.total_records.toLocaleString();
     buildTour(); buildNav(); render();
+    if (index.more) loadMore(index);
   } catch (err) {
     view.innerHTML = '<p class="callout">The catalog could not be loaded. Please check your connection and reload the page.</p>';
     announceText = 'The catalog could not be loaded.'; console.error(err);

@@ -989,6 +989,10 @@ body.tour .skip{display:none}
 /* Hero artwork: girih tiling behind, white shrine at the right, search arrow beside the pill */
 .stage>.hero-art{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
 .stage>.hero-art i{position:absolute;display:block}
+/* Decorative artwork (about 120 KB of masks) is requested only after the catalog has loaded (html.art, set by the inline script in index.html), so it never competes with index.json on slow connections. */
+html:not(.art) .stage>.hero-art,html:not(.art) .rs::before,html:not(.art) .show::before{display:none}
+html.art .hero-art,html.art .rs::before{animation:art-in .5s ease-out}
+@keyframes art-in{from{opacity:0}}
 .ha-girih{inset:0;background:#e9d3a8;opacity:.14;--cut:linear-gradient(to right,#000 0,#000 38%,transparent 64%);-webkit-mask-image:url(../img/girih.svg),radial-gradient(ellipse 55% 60% at 50% 46%,transparent 30%,#000 85%),var(--cut);mask-image:url(../img/girih.svg),radial-gradient(ellipse 55% 60% at 50% 46%,transparent 30%,#000 85%),var(--cut);-webkit-mask-size:440px auto,100% 100%,100% 100%;mask-size:440px auto,100% 100%,100% 100%;-webkit-mask-repeat:repeat,no-repeat,no-repeat;mask-repeat:repeat,no-repeat,no-repeat;-webkit-mask-composite:source-in;mask-composite:intersect}
 .ha-shrine{right:-1.5rem;bottom:0;width:min(42rem,62%);height:96%;background:#fff;opacity:.32;-webkit-mask-image:url(../img/shrine.svg),linear-gradient(to right,transparent 0,#000 55%);mask-image:url(../img/shrine.svg),linear-gradient(to right,transparent 0,#000 55%);-webkit-mask-size:contain,100% 100%;mask-size:contain,100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:right bottom,0 0;mask-position:right bottom,0 0;-webkit-mask-composite:source-in;mask-composite:intersect}
 .stage>.pal-wrap,.stage>.hero-art~*{z-index:1}
