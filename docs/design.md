@@ -145,3 +145,5 @@ The home hero uses three layers, all decorative and hidden from assistive tech: 
 Inner-page headers carry the same girih with no arch: 12% opacity, clear behind the title at the left and strongest at the right (strongest at the bottom on phones).
 
 Tour slides carry the girih too, fixed behind the content at 10% (8% on phones), clear around the title at the left.
+
+On results and question pages the search box sits inside the page header, under the count, instead of floating alone below it. The header and the box read as one block; the box is no longer sticky.

@@ -481,7 +481,7 @@ const PG = {
 };
 
 function pageStage(m) {
-  return `<div class="rs page">${m.back ? `<div class="sl-top"><a class="back" href="${esc(m.back[0])}">← ${esc(m.back[1])}</a><span></span></div>` : ''}<div class="sl-body"><span class="kind">${esc(m.kind)}</span><h1 dir="auto">${esc(m.title)}</h1>${m.lede ? `<p class="lede" dir="auto">${esc(m.lede)}</p>` : ''}</div></div>`;
+  return `<div class="rs page">${m.back ? `<div class="sl-top"><a class="back" href="${esc(m.back[0])}">← ${esc(m.back[1])}</a><span></span></div>` : ''}<div class="sl-body"><span class="kind">${esc(m.kind)}</span><h1 dir="auto">${esc(m.title)}</h1>${m.lede ? `<p class="lede" dir="auto">${esc(m.lede)}</p>` : ''}${m.search ? refineHtml(m.search) : ''}</div></div>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -566,7 +566,7 @@ function questionPageHtml(st, result) {
   const rowsOf = (es) => es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
   const related = (c.questions || []).filter((x) => x.id !== q.id);
   announceText = `${q.question}. ${pl(pins.length, 'page')} chosen, ${pl(total, 'more page')}.`;
-  return `${refineHtml(st)}${q.draft ? draftBar('The pages chosen for this question are not yet reviewed by a person.') : ''}
+  return `${q.draft ? draftBar('The pages chosen for this question are not yet reviewed by a person.') : ''}
   ${pins.length ? `<section class="tsec"><h2>${pins.length === 1 ? 'Best page' : 'Best pages'} for this question</h2><div class="minis">${pins.map(miniHtml).join('')}</div></section>` : ''}
   ${c.path ? `<section class="tsec"><h2>Reading path</h2><p class="sub">The same subject, step by step.</p><div class="pgrid one">${pcardHtml(c.path)}</div></section>` : ''}
   ${related.length ? `<section class="tsec"><h2>Related questions</h2><ul class="qrows" style="margin-top:.8rem">${related.map((x) => qRow(x, '')).join('')}</ul></section>` : ''}
@@ -581,10 +581,10 @@ function resultsHtml(st, pre) {
   const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
     announceText = `No close match for “${result.query}”.`;
-    return `${refineHtml(st)}${fallbackHtml(result)}${externalHtml(result.query)}<div style="height:3rem"></div>${topicsHtml()}`;
+    return `${fallbackHtml(result)}${externalHtml(result.query)}<div style="height:3rem"></div>${topicsHtml()}`;
   }
   const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
-  let out = browsing ? '' : refineHtml(st);
+  let out = '';
   const cap = Number(engine.config.layer2.max_results) || 150;
   if (browsing) out += `<div class="rhead"><p class="sub">${n >= cap ? `Showing the best ${n} pages. Narrow it down with the filters.` : n ? `${pl(n, 'page')}.` : ''}</p></div>`;
   if (!browsing) out += curatedHtml(result);
@@ -861,11 +861,11 @@ function render(opts = {}) {
       input.value = st.q;
       if (cq) {
         const same = textNorm(cq.question) === textNorm(st.q);
-        $('#routeStage').innerHTML = pageStage({ kind: 'Question', title: cq.question, lede: same ? '' : `The closest question to “${st.q}”.`, back: [pageHref('questions'), 'All questions'] });
+        $('#routeStage').innerHTML = pageStage({ kind: 'Question', title: cq.question, lede: same ? '' : `The closest question to “${st.q}”.`, back: [pageHref('questions'), 'All questions'], search: st });
         view.innerHTML = questionPageHtml(st, result);
       } else {
         const nn = result.counts && result.counts.total, capn = Number(engine.config.layer2.max_results) || 150;
-        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found.`), back: [BASE, 'Back to start'] });
+        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found.`), back: [BASE, 'Back to start'], search: st });
         view.innerHTML = resultsHtml(st, result);
         announceText = `Results for ${st.q}. ${announceText}`;
       }
@@ -1013,3 +1013,5 @@ async function start() {
   }
 }
 start();
+
+$('#routeStage').addEventListener('submit', (e) => { if (e.target.id === 'refine') { e.preventDefault(); const st = readState(); nav(searchHref({ ...blank(), q: $('#q2').value.trim(), order: st.order })); } });

@@ -1009,3 +1009,7 @@ body.has .hero-art,body.has .cursor{display:none}
 /* Tour slides: the same girih behind the content */
 .show::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:#e9d3a8;opacity:.1;-webkit-mask-image:url(../img/girih.svg),radial-gradient(ellipse 60% 70% at 22% 45%,transparent 25%,#000 90%);mask-image:url(../img/girih.svg),radial-gradient(ellipse 60% 70% at 22% 45%,transparent 25%,#000 90%);-webkit-mask-size:420px auto,100% 100%;mask-size:420px auto,100% 100%;-webkit-mask-repeat:repeat,no-repeat;mask-repeat:repeat,no-repeat;-webkit-mask-composite:source-in;mask-composite:intersect}
 @media (max-width:40rem){.show::before{opacity:.08;-webkit-mask-size:300px auto,100% 100%;mask-size:300px auto,100% 100%}}
+
+/* Results: the search box lives inside the page header */
+.rs .refine{position:static;margin:1.1rem 0 0;max-width:36rem;box-shadow:0 14px 34px -16px rgba(0,0,0,.55)}
+.rs.page .lede{margin-bottom:0}
