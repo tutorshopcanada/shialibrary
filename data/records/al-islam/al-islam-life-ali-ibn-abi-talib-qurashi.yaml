@@ -1,0 +1,33 @@
+id: al-islam-life-ali-ibn-abi-talib-qurashi
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: advanced
+title: The Life of Ali Ibn Abi Talib
+title_original: ''
+authors:
+- baqir-sharif-al-qurashi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/life-ali-ibn-abi-talib-baqir-sharif-al-qurashi
+language: en
+date: ''
+description: A biography of Imam Ali ibn Abi Talib, the first Imam in Shia belief. It follows his life
+  in order, from his early life and virtues and his military participation to the events after the Prophet's
+  death and the period of his own rule.
+sample_questions:
+- Who was Imam Ali ibn Abi Talib?
+- What was the early life of Imam Ali like?
+- What role did Imam Ali play in the early Muslim community?
+- What was Imam Ali's time as ruler like?
+headings:
+- imam-ali
+- history
+access: free
+location: ''
+needs_review: false
+review_note: 'Level advanced: a detailed chronological biography with a translator''s foreword; the page
+  states no audience or summary, so the more cautious level is used. Author is the Baqir Sharif al-Qurashi
+  listed on the page, already in scholars.yaml.'
+cataloged_on: '2026-11-11'
