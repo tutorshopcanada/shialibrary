@@ -15,15 +15,16 @@ language: en
 date: ''
 description: A book by Shaykh al-Tusi on the occultation (ghayba, meaning being hidden from view) of the
   twelfth Imam, al-Mahdi; shown in Arabic with an English translation by Sayyid Athar Husain S. H. Rizvi.
-  According to the site it combines arguments and hadith (reported sayings of the Prophet and the Imams)
-  on the occultation, the Imam's deputies and the signs of his return. It is a detailed primary source
-  for readers with some background.
+  Its chapters set out principles of the Imamate and the Imam's infallibility, respond to groups that
+  disputed the succession of the Imams (such as the Waqifiya), and give reports about Imam Musa al-Kazim
+  and Imam al-Ridha. It is a detailed primary source for readers with some background.
 sample_questions:
 - Who is the Mahdi?
 - What is the occultation of the twelfth Imam?
 - What are the signs of the Mahdi's reappearance?
 - Who were the deputies of Imam al-Mahdi?
 - What hadith are there about the hidden Imam?
+- What did Shaykh al-Tusi argue about the Imamate?
 headings:
 - hadith-collections
 - imam-mahdi
