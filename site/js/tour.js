@@ -1,0 +1,80 @@
+// The "What is Islam?" tour: seven full-screen slides.
+//
+// DRAFT CONTENT. Everything here is placeholder structure for the design: the slide titles,
+// the one-line intros, and the lists of names. None of it is religious content written by the
+// catalog, and nothing here has been reviewed by the owner or a scholar. Bios on the name pages
+// are placeholders too. Change names, add or remove items freely: no build step.
+//
+// Item kinds:
+//   { concept: 'Tawhid', sub: 'The oneness of God' }          an idea; its page searches the catalog
+//   { person: 'Imam Ali', sub: 'Imam 1', as: 'imam' }         a named person (as: prophet | imam | infallible)
+//   { book: 'record-id' }                                      a book or collection from the catalog
+//   { scholar: 'scholar-id' }                                  an author from data/scholars.yaml
+//   { topic: 'heading-id', sub: 'Topic' }                      a topic page
+//   { href: '#beginners', name: '...', sub: '...' }            a plain link; add ask: true to focus the search box
+//   { auto: 'hadith-works' | 'top-scholars', limit: 6 }        filled from the catalog at load time
+// A repeated name (for example the Prophet on slides 3 and 5) is one page, reachable from both slides.
+
+export const TOUR_DRAFT = true;
+
+const IMAMS = [
+  ['Imam Ali', 'Imam 1'], ['Imam Hasan', 'Imam 2'], ['Imam Husayn', 'Imam 3'], ['Imam Zayn al-Abidin', 'Imam 4'],
+  ['Imam al-Baqir', 'Imam 5'], ['Imam al-Sadiq', 'Imam 6'], ['Imam al-Kazim', 'Imam 7'], ['Imam al-Rida', 'Imam 8'],
+  ['Imam al-Jawad', 'Imam 9'], ['Imam al-Hadi', 'Imam 10'], ['Imam al-Askari', 'Imam 11'], ['Imam al-Mahdi', 'Imam 12'],
+];
+// Sample list for the layout. The owner confirms the final list.
+const PROPHETS = ['Adam', 'Idris', 'Nuh', 'Hud', 'Salih', 'Ibrahim', 'Ismail', 'Ishaq', 'Yaqub', 'Yusuf', 'Musa', 'Harun',
+  'Dawud', 'Sulayman', 'Ayyub', 'Yunus', 'Zakariyya', 'Yahya', 'Isa'];
+
+const muhammad = { person: 'The Prophet Muhammad', sub: 'The Prophet', as: 'prophet' };
+const fatimah = { person: 'Lady Fatimah al-Zahra', sub: 'Lady Fatimah', as: 'infallible' };
+const quran = { concept: 'The Quran', sub: 'Scripture', as: 'book' };
+const imams = IMAMS.map(([person, sub]) => ({ person, sub, as: 'imam' }));
+
+export const TOUR = [
+  { k: 'revelation', label: 'The divine mission', title: 'The divine mission',
+    lede: 'Where the story begins: the idea of a divine mission, and of revelation.',
+    groups: [{ label: 'Key ideas', items: [
+      { concept: 'Tawhid', sub: 'The oneness of God' },
+      { concept: 'Revelation (Wahy)', sub: 'How guidance is sent' },
+      { concept: 'Prophethood (Nubuwwah)', sub: 'Messengers and guidance' },
+      { concept: 'Divine justice (Adl)', sub: 'Justice as a principle' },
+      { concept: 'The afterlife (Maad)', sub: 'Return and accountability' },
+    ] }] },
+  { k: 'prophets', label: 'The prophets and the books', title: 'The prophets and the books',
+    lede: 'The prophets, and the books linked with them.',
+    note: 'Sample lists for the layout. The final lists are yours to confirm.',
+    groups: [
+      { label: 'The prophets', items: PROPHETS.map((n) => ({ person: `Prophet ${n}`, sub: 'Prophet', as: 'prophet' })) },
+      { label: 'The books', lead: true, items: [
+        { concept: 'The Torah', sub: 'Scripture', as: 'book' }, { concept: 'The Psalms', sub: 'Scripture', as: 'book' },
+        { concept: 'The Gospel', sub: 'Scripture', as: 'book' }, quran] },
+    ] },
+  { k: 'muhammad', label: 'Prophet Muhammad and the Quran', title: 'Prophet Muhammad and the Quran',
+    lede: 'The last messenger, and the book revealed to him.',
+    groups: [{ lead: true, items: [muhammad, quran,
+      { concept: 'Hadith and the Prophet’s sayings', sub: 'How they were recorded' },
+      { concept: 'Ahl al-Bayt', sub: 'The Prophet’s family' }] }] },
+  { k: 'ali', label: 'Imam Ali', title: 'Imam Ali', lede: 'Imam Ali, and the sources that carry his words.',
+    groups: [{ lead: true, items: [imams[0],
+      { book: 'thaqalayn-nahj-al-balagha' }, { book: 'al-islam-nahjul-balagah-revisited-imam-ali' },
+      { concept: 'Ghadir and the succession', sub: 'A turning point' }] }] },
+  { k: 'infallibles', label: 'The infallibles', title: 'The infallibles', lede: 'The Prophet, Lady Fatimah and the Twelve Imams.',
+    groups: [{ label: 'The Prophet and Lady Fatimah', lead: true, items: [muhammad, fatimah] },
+      { label: 'The Twelve Imams', items: imams }] },
+  { k: 'scholars', label: 'The traditions and the scholars', title: 'The traditions and the scholars',
+    lede: 'How knowledge was passed on: the collections, and the people who preserved them.',
+    groups: [{ label: 'The traditions', items: [{ auto: 'hadith-works', limit: 6 }] },
+      { label: 'The scholars', items: [{ auto: 'top-scholars', limit: 12 }] }] },
+  { k: 'today', label: 'Today', title: 'Today', lede: 'Where this leaves you, and where to go from here.',
+    groups: [
+      { label: 'Go further', lead: true, items: [
+        { href: '#beginners', name: 'Read the day-one shelf', sub: 'Short introductions, then a plan' },
+        { href: '#topics', name: 'Browse by topic', sub: 'Eight subjects, easiest first' },
+        { href: '#home', ask: true, name: 'Ask a question', sub: 'Search the catalog' }] },
+      { label: 'Living today', items: [
+        { scholar: 'sistani' }, { scholar: 'khamenei' },
+        { topic: 'taqlid', sub: 'Topic', name: 'Following a jurist' },
+        { topic: 'muslims-in-west', sub: 'Topic', name: 'Muslims in the West' }] },
+    ] },
+];

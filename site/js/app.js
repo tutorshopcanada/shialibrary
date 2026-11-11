@@ -1,660 +1,828 @@
-// Page behaviour. All search decisions live in search.js; this file only draws.
-// Every piece of catalog text is inserted with textContent, never as HTML.
+// ShiaLib page behaviour. All search decisions live in search.js; this file only draws.
+//
+// Routing, so every state has a real link:
+//   ?q=…&tag=…&level=…&source=…&scholar=…&topic=…&section=…&order=…   searches and browsing (shareable)
+//   ?path=…                                                           one learning path
+//   #beginners #questions #topics #paths #sources #guide #feedback #about   pages
+//   #start-<slide>                                                    the "What is Islam?" tour
+//   #e-<name>                                                         a name or book from the tour
+//
+// Catalog text is always escaped with esc() before it is put in a template, and links only ever
+// become clickable when they are http(s) (safeUrl). Nothing the visitor types is stored.
 
 import { createEngine } from './search.js';
-import { SITE, reportHref, externalSearchHref } from './config.js';
+import { SITE, START, reportConfigured, reportHref, feedbackHref, externalSearchHref } from './config.js';
+import { TOUR, TOUR_DRAFT } from './tour.js';
 
-const $ = (id) => document.getElementById(id);
-const view = $('view');
-const statusEl = $('status');
-const input = $('q');
-const form = $('search-form');
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"'`]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '`': '&#96;' }[c]));
+const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//i.test(u) ? u : '');
+const pl = (n, one, many) => `${n.toLocaleString()} ${n === 1 ? one : (many || one + 's')}`;
+const BASE = location.pathname;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let engine = null;
+const view = $('#view'), input = $('#q');
+let engine = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
+let route = { t: 'home' }, lastSlide = null, firstLoad = true, lastHref = '';
+const ui = { limit: 20, openG: {}, allPaths: false, lm: {}, readTopic: null };
+
+// ---------------------------------------------------------------------------
+// URL state
+// ---------------------------------------------------------------------------
 const PARAMS = ['q', 'tag', 'level', 'source', 'scholar', 'topic', 'section', 'order', 'path'];
-
-// ---------------------------------------------------------------------------
-// Small DOM helpers
-// ---------------------------------------------------------------------------
-
-/** Create an element. Text is always set as text, never parsed as HTML. */
-function el(tag, attrs, ...children) {
-  const node = document.createElement(tag);
-  if (attrs) {
-    for (const [k, v] of Object.entries(attrs)) {
-      if (v === null || v === undefined || v === false) continue;
-      if (k === 'class') node.className = v;
-      else if (k === 'text') node.textContent = v;
-      else if (k.startsWith('on')) node.addEventListener(k.slice(2), v);
-      else node.setAttribute(k, v === true ? '' : v);
-    }
-  }
-  for (const c of children.flat()) {
-    if (c === null || c === undefined || c === false) continue;
-    node.append(c.nodeType ? c : document.createTextNode(String(c)));
-  }
-  return node;
-}
-
-/** Only http(s) links are ever turned into clickable links. */
-function safeUrl(url) {
-  return typeof url === 'string' && /^https?:\/\//i.test(url) ? url : '';
-}
-
-function externalLink(url, attrs, ...children) {
-  const href = safeUrl(url);
-  if (!href) return el('span', attrs, ...children);
-  return el('a', { ...attrs, href, target: '_blank', rel: 'noopener noreferrer' }, ...children);
-}
-
-function plural(n, one, many) { return `${n} ${n === 1 ? one : many}`; }
-
-// ---------------------------------------------------------------------------
-// URL state (shareable searches, working back button)
-// ---------------------------------------------------------------------------
-
+const FILTERS = ['tag', 'level', 'source', 'scholar', 'topic', 'section'];
+const blank = () => Object.fromEntries(PARAMS.map((k) => [k, '']));
 function readState() {
-  const sp = new URLSearchParams(location.search);
-  const s = {};
+  const sp = new URLSearchParams(location.search), s = {};
   for (const k of PARAMS) s[k] = (sp.get(k) || '').trim();
   return s;
 }
-
-function hrefFor(state) {
+function qsFor(st) {
   const sp = new URLSearchParams();
-  for (const k of PARAMS) if (state[k]) sp.set(k, state[k]);
-  const qs = sp.toString();
-  return qs ? `?${qs}` : location.pathname.replace(/[^/]*$/, '') || './';
+  for (const k of PARAMS) if (st[k]) sp.set(k, st[k]);
+  const s = sp.toString();
+  return s ? `?${s}` : '';
 }
+const searchHref = (st) => BASE + qsFor(st);
+const pageHref = (k) => `${BASE}#${k}`;
+const qHref = (q) => searchHref({ ...blank(), q });
+const topicHref = (id) => searchHref({ ...blank(), topic: id });
 
-function go(state, { replace = false, focusResults = false } = {}) {
-  const url = hrefFor(state);
-  if (replace) history.replaceState(null, '', url); else history.pushState(null, '', url);
-  render();
-  if (focusResults) {
-    window.scrollTo({ top: 0 });
+function nav(url) {
+  if (url === location.pathname + location.search + location.hash) return render();
+  history.pushState(null, '', url);
+  ui.limit = 20;
+  render({ push: true });
+}
+document.addEventListener('click', (e) => {
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  const a = e.target.closest('a[href]');
+  if (!a || a.target || a.hasAttribute('download')) return;
+  let u; try { u = new URL(a.href, location.href); } catch { return; }
+  if (u.origin !== location.origin || u.pathname !== BASE) return;
+  e.preventDefault();
+  nav(u.pathname + u.search + u.hash);
+});
+addEventListener('popstate', () => render());
+addEventListener('hashchange', () => { if (location.href !== lastHref) render(); });
+
+function parseRoute() {
+  const st = readState(), h = location.hash.replace(/^#/, '');
+  if (st.path) return { t: 'path', st };
+  if (FILTERS.some((k) => st[k]) || st.q) {
+    const only = st.topic && !st.q && FILTERS.every((k) => k === 'topic' || !st[k]);
+    if (only) return { t: 'topic', k: st.topic, st };
+    return { t: 'results', st };
   }
+  if (h.startsWith('start-')) { const k = h.slice(6); if (SL.some((s) => s[0] === k)) return { t: 'slide', k }; }
+  if (h.startsWith('e-') && E[h]) return { t: 'entity', k: h };
+  if (h === 'start') return { t: 'page', k: 'beginners' };
+  if (PG[h]) return { t: 'page', k: h };
+  return { t: 'home' };
 }
 
-/** Internal link that updates the page without a reload (still a real link). */
-function navLink(state, attrs, ...children) {
-  return el('a', {
-    ...attrs,
-    href: hrefFor(state),
-    onclick: (ev) => {
-      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button !== 0) return;
-      ev.preventDefault();
-      go(state, { focusResults: true });
-    },
-  }, ...children);
-}
-
-const blank = () => Object.fromEntries(PARAMS.map((k) => [k, '']));
-
 // ---------------------------------------------------------------------------
-// Labels
+// Catalog helpers
 // ---------------------------------------------------------------------------
-
 const tagLabel = (t) => engine.config.tags.labels[t] || t;
+const levelOrder = () => engine.config.levels.order;
 const levelLabel = (l) => engine.config.levels.labels[l] || l;
+const LV = (l) => Math.max(0, levelOrder().indexOf(l)) + 1;
 const scholarName = (id) => (engine.scholarById.get(id) || {}).name || id;
 const sourceName = (id) => (engine.sourceById.get(id) || {}).name || id;
 const headingLabel = (id) => (engine.headingById.get(id) || {}).label || id;
+const TOPN = (id) => headingLabel(id).replace(/\s*\(.*\)/, '');
+const topOf = (id) => { const h = engine.headingById.get(id); return (h && h.ancestors && h.ancestors[0]) || id; };
+const slug = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const rec = (id) => engine.recordById.get(id);
+const topHeadings = () => engine.headings.filter((h) => !h.parent);
 
-function draftMark() {
-  return el('span', { class: 'draft-mark', title: 'Written as a draft. Not yet reviewed by the site owner or a scholar.' },
-    'Draft, awaiting review');
+function normalize(r) {
+  return { id: r.id, raw: r, tag: r.content_tag, lv: r.level, g: r.granularity, p: r.parent || '',
+    all: [...new Set([...(r.headings || []), ...(r.inherited_headings || [])])] };
 }
-
-function levelBadge(level) {
-  const order = engine.config.levels.order;
-  const n = Math.max(0, order.indexOf(level)) + 1;
-  const dots = el('span', { class: 'level-dots', 'aria-hidden': 'true' });
-  for (let i = 1; i <= order.length; i++) dots.append(el('span', { class: i <= n ? 'dot on' : 'dot' }));
-  return el('span', { class: `badge level level-${level}` }, dots, levelLabel(level));
+function lvCounts(id) { const c = levelOrder().map(() => 0); for (const n of RECS) if (n.all.includes(id)) c[LV(n.lv) - 1]++; return c; }
+function bestStart(id) {
+  return RECS.filter((n) => n.all.includes(id)).sort((a, b) => (LV(a.lv) - LV(b.lv)) ||
+    (a.g === 'work' ? 0 : 1) - (b.g === 'work' ? 0 : 1) || String(a.raw.title).localeCompare(b.raw.title))[0];
 }
-
-function tagBadge(tag) {
-  return el('span', { class: `badge tag tag-${tag}` }, tagLabel(tag));
+function levelDots(level) {
+  const n = LV(level);
+  return `<span class="lvl"><s aria-hidden="true">${levelOrder().map((_, i) => `<b class="${i < n ? 'on' : ''}"></b>`).join('')}</s>${esc(levelLabel(level))}</span>`;
+}
+function extLink(url, cls, label, aria) {
+  const u = safeUrl(url);
+  return u ? `<a class="${cls}" href="${esc(u)}" target="_blank" rel="noopener noreferrer"${aria ? ` aria-label="${esc(aria)}"` : ''}>${label}</a>` : `<span class="${cls}">${label}</span>`;
 }
 
 // ---------------------------------------------------------------------------
 // Result card
 // ---------------------------------------------------------------------------
-
-function recordCard(record, { headingLevel = 'h3', compact = false, hideContextFor = '' } = {}) {
-  const src = sourceName(record.source);
-  const card = el('article', { class: compact ? 'card compact' : 'card' });
-
-  card.append(el('div', { class: 'badges' }, tagBadge(record.content_tag), levelBadge(record.level)));
-
-  card.append(el(headingLevel, { class: 'card-title' },
-    externalLink(record.url, { dir: 'auto' }, record.title)));
-  if (record.title_original) {
-    card.append(el('p', { class: 'title-original', dir: 'auto', text: record.title_original }));
+function cardHtml(r, { compact = false, hideContextFor = '', more = null, ctx: moreCtx = null } = {}) {
+  const src = sourceName(r.source);
+  const authors = (r.authors || []).map(scholarName);
+  const by = authors.length ? `By ${esc(authors.join(', '))} · ` : '';
+  const loc = r.location ? ` · ${esc(r.location)}` : '';
+  const par = !compact && r.context && r.context.section ? '' : '';
+  const marja = r.marja ? `<p class="meta">Rulings of: <span dir="auto">${esc(scholarName(r.marja))}</span></p>` : '';
+  let facts = '';
+  if (r.type === 'course') {
+    const rows = [['Offered by', r.provider], ['Taught by', (r.instructors || []).map(scholarName).join(', ')], ['Format', r.delivery],
+      ['Length', r.duration], ['Starts', r.start_date], ['Cost', r.cost]].filter(([, v]) => v);
+    if (rows.length) facts = `<dl class="facts">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd dir="auto">${esc(v)}</dd></div>`).join('')}</dl>`;
   }
-
-  // Who wrote it, and where it is published.
-  const meta = el('p', { class: 'meta' });
-  const authors = (record.authors || []).map(scholarName);
-  if (authors.length) meta.append(el('span', { dir: 'auto' }, 'By ', authors.join(', ')), el('span', { class: 'sep', 'aria-hidden': 'true' }, ' · '));
-  meta.append(el('span', { class: 'source' }, 'Source: ', el('strong', { dir: 'auto', text: src })));
-  if (record.location) meta.append(el('span', { class: 'sep', 'aria-hidden': 'true' }, ' · '), el('span', { dir: 'auto', text: record.location }));
-  card.append(meta);
-  if (record.marja) {
-    card.append(el('p', { class: 'meta marja' }, 'Rulings of: ', el('span', { dir: 'auto', text: scholarName(record.marja) })));
-  }
-
-  if (record.description) card.append(el('p', { class: 'desc', dir: 'auto', text: record.description }));
-
-  if (record.type === 'course') {
-    const facts = [
-      ['Offered by', record.provider], ['Taught by', (record.instructors || []).map(scholarName).join(', ')],
-      ['Format', record.delivery], ['Length', record.duration], ['Starts', record.start_date], ['Cost', record.cost],
-    ].filter(([, v]) => v);
-    if (facts.length) {
-      const dl = el('dl', { class: 'facts' });
-      for (const [k, v] of facts) dl.append(el('div', null, el('dt', { text: k }), el('dd', { dir: 'auto', text: v })));
-      card.append(dl);
-    }
-  }
-
+  const title = `<h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>`;
+  const orig = r.title_original ? `<p class="meta" dir="auto">${esc(r.title_original)}</p>` : '';
+  let actions = '', context = '', report = '';
   if (!compact) {
-    const actions = el('p', { class: 'actions' });
-    actions.append(externalLink(record.url, {
-      class: 'open-link',
-      'aria-label': `Open “${record.title}” on ${src} (opens in a new tab)`,
-    }, `Open on ${src}`, el('span', { 'aria-hidden': 'true' }, ' ↗')));
-    if (record.type === 'course' && safeUrl(record.enrollment_url) && record.enrollment_url !== record.url) {
-      actions.append(externalLink(record.enrollment_url, { class: 'minor-link' }, 'Sign-up page ↗'));
+    actions = extLink(r.url, 'open', `Open on ${esc(src)} <span aria-hidden="true">↗</span>`, `Open “${r.title}” on ${src} (opens in a new tab)`);
+    if (r.type === 'course' && safeUrl(r.enrollment_url) && r.enrollment_url !== r.url) actions += `<span class="minor">${extLink(r.enrollment_url, '', 'Sign-up page ↗')}</span>`;
+    const c = r.context || {}, parts = [c.section, c.work].filter(Boolean);
+    if (parts.length) {
+      context = `<p class="ctx"><span class="cl2">In context: </span>${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')}`;
+      const sid = (c.section || c.work).id;
+      if (sid !== hideContextFor) context += `<br><a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a>`;
+      context += '</p>';
+    } else if (r.descendant_count && r.id !== hideContextFor) {
+      context = `<p class="ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></p>`;
     }
-    card.append(actions);
+    const rh = reportHref(r);
+    report = `<p class="report"><a href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem with this link</a></p>`;
   }
+  const det = more && more.items.length
+    ? `<details class="cl"><summary>${more.items.length} more in “${esc((more.title || '').toString())}”</summary><ul class="cl-list">${more.items.slice(0, 40).map((m) => `<li>${extLink(m.url, '', esc(m.title))}</li>`).join('')}${more.items.length > 40 ? `<li class="mute">and ${more.items.length - 40} more. Narrow your search to see them.</li>` : ''}</ul></details>` : '';
+  return `<li class="card"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}</div>
+  ${title}${orig}<p class="meta">${by}Source: <span dir="auto">${esc(src)}</span>${loc}</p>${marja}
+  ${r.description ? `<p class="d" dir="auto">${esc(r.description)}</p>` : ''}${facts}
+  ${actions}${context}${report}${det}</li>`;
+}
+function entryHtml(e, opts) {
+  if (e.kind === 'cluster') {
+    const p = e.parent || {};
+    return cardHtml(e.items[0].record, { ...opts, more: { items: e.items.slice(1).map((i) => i.record), title: p.title || 'the same section' } });
+  }
+  return cardHtml(e.record, opts);
+}
+const entryLevel = (e) => (e.kind === 'cluster' ? e.items[0].record : e.record).level;
+const entryCount = (list) => list.reduce((n, e) => n + (e.kind === 'cluster' ? e.items.length : 1), 0);
 
-  // In context: step back to the chapter and the book.
-  const ctx = record.context || {};
-  const parts = [ctx.section, ctx.work].filter(Boolean);
-  if (parts.length && !compact) {
-    const line = el('p', { class: 'context' }, el('span', { class: 'context-label' }, 'In context: '));
-    parts.forEach((p, i) => {
-      if (i) line.append(el('span', { 'aria-hidden': 'true' }, ' · '));
-      line.append(externalLink(p.url, { dir: 'auto', title: `Opens on ${src} in a new tab` }, p.title));
-    });
-    card.append(line);
-    const sectionId = (ctx.section || ctx.work).id;
-    if (sectionId !== hideContextFor) {
-      card.append(el('p', { class: 'context' },
-        navLink({ ...blank(), section: sectionId }, null,
-          ctx.section ? 'More in this section' : 'More in this book')));
-    }
-  } else if (!compact && record.descendant_count && record.id !== hideContextFor) {
-    card.append(el('p', { class: 'context' },
-      navLink({ ...blank(), section: record.id }, null,
-        `Browse the ${plural(record.descendant_count, 'entry', 'entries')} inside`)));
-  }
+// ---------------------------------------------------------------------------
+// Pieces shared by several pages
+// ---------------------------------------------------------------------------
+const draftBar = (what = 'This page') => `<p class="draftbar"><span class="pill">Draft</span> ${esc(what)} was drafted from the catalog and has not been reviewed yet.</p>`;
+const nextBar = (k) => {
+  const n = NEXT[k]; if (!n) return '';
+  return `<nav class="nextbar" aria-label="Next step"><p>${esc(n[0])}</p><a class="btn solid big" href="${esc(n[2] === 'home' ? BASE : pageHref(n[2]))}">${esc(n[1])} <span aria-hidden="true">→</span></a></nav>`;
+};
+const NEXT = {
+  beginners: ['Have a specific question?', 'Browse common questions', 'questions'],
+  questions: ['Prefer to browse by subject?', 'Browse by topic', 'topics'],
+  topics: ['Want a guided reading order?', 'Follow a learning path', 'paths'],
+  topic: ['Want a guided reading order?', 'Follow a learning path', 'paths'],
+  paths: ['Curious where these pages come from?', 'See our sources', 'sources'],
+  path: ['Want more reading orders?', 'More learning paths', 'paths'],
+  sources: ['Not sure what a level or tag means?', 'How to read the results', 'guide'],
+  guide: ['Ready to begin?', 'Start here', 'beginners'],
+  about: ['Ready to begin?', 'Start here', 'beginners'],
+  feedback: ['Done here?', 'Back to the start', 'home'],
+};
 
-  if (!compact) {
-    const href = reportHref(record);
-    card.append(el('p', { class: 'report' },
-      href ? el('a', { href, rel: 'noopener noreferrer' }, 'Report a problem with this link')
-        : el('a', { href: 'about.html#report' }, 'Report a problem with this link')));
-  }
-  return card;
+let read = {};
+try { read = JSON.parse(localStorage.getItem('shialib-read') || '{}') || {}; } catch { read = {}; }
+const saveRead = () => { try { localStorage.setItem('shialib-read', JSON.stringify(read)); } catch { /* private window: fine */ } };
+const tickBox = (r) => `<span class="tickwrap"><input class="tick" type="checkbox" data-read="${esc(r.id)}" ${read[r.id] ? 'checked' : ''} aria-label="Mark as read: ${esc(r.title)}"></span>`;
+
+function startData() {
+  const ok = (ids) => ids.map((id) => { const r = rec(id); if (!r) console.warn('Start-here list names a record that is not in the catalog:', id); return r; }).filter(Boolean);
+  const shelf = ok(START.shelf);
+  const stages = START.stages.map((s) => ({ ...s, shelfStage: s.ids === 'shelf', recs: s.ids === 'shelf' ? shelf : ok(s.ids) })).filter((s) => s.recs.length);
+  return { shelf, stages, all: [...new Set(stages.flatMap((s) => s.recs.map((r) => r.id)))] };
 }
 
-/** Several items from one section, collapsed: best first, the rest behind a button. */
-function clusterBlock(entry, uid) {
-  const parent = entry.parent || {};
-  const items = entry.items;
-  const box = el('section', { class: 'cluster', 'aria-label': `Matches in ${parent.title || 'one section'}` });
-  box.append(el('p', { class: 'cluster-head' },
-    `${plural(items.length, 'match', 'matches')} in `,
-    el('strong', { dir: 'auto', text: parent.title || 'the same section' })));
-  box.append(recordCard(items[0].record));
-  if (items.length > 1) {
-    const restId = `cluster-rest-${uid}`;
-    const rest = el('div', { id: restId, class: 'cluster-rest', hidden: true });
-    const moreLabel = `Show ${items.length - 1} more from this section`;
-    const btn = el('button', {
-      type: 'button', class: 'expand', 'aria-expanded': 'false', 'aria-controls': restId,
-      onclick: () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        if (!open && !rest.childElementCount) {
-          for (const it of items.slice(1)) rest.append(recordCard(it.record));
-        }
-        rest.hidden = open;
-        btn.setAttribute('aria-expanded', String(!open));
-        btn.textContent = open ? moreLabel : 'Show fewer';
-      },
-    }, moreLabel);
-    box.append(btn, rest);
-  }
-  return box;
+function tourCard() {
+  return `<div class="tour"><h3>What is Islam?</h3><p>A seven-step tour, from the divine mission to today. Select any name or book to open its page.</p>
+   <ol>${SL.map(([, l]) => `<li>${esc(l)}</li>`).join('')}</ol><a class="btn white big" href="${esc(pageHref('start-' + SL[0][0]))}">Begin <span aria-hidden="true">→</span></a></div>`;
+}
+function shelfHtml(sd) {
+  const n = sd.shelf.filter((r) => read[r.id]).length;
+  return `<div class="shelf"><div class="shelf-h"><b>Day one shelf</b><span id="shelfc">${n} of ${sd.shelf.length} read</span></div>${sd.shelf.map((r) =>
+    `<div class="si"><div>${tickBox(r)}</div><div class="${read[r.id] ? 'done' : ''}">${extLink(r.url, 'tt', `${esc(r.title)} <span aria-hidden="true">↗</span>`)}<small>${(r.sample_questions || [])[0] ? `After this you can answer: “${esc(r.sample_questions[0])}”` : ''}</small></div></div>`).join('')}</div>`;
+}
+function planHtml(sd) {
+  const done = sd.all.filter((id) => read[id]).length, pct = sd.all.length ? Math.round(done / sd.all.length * 100) : 0;
+  return `<div class="frame plan"><div class="plan-h"><div><h2>Your plan for the rest</h2></div><div class="prog"><span id="planc">${done} of ${sd.all.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Plan progress"><i id="planbar" style="width:${pct}%"></i></div></div></div>
+  <ol class="stages">${sd.stages.map((s, i) => {
+    const lv = [...new Set(s.recs.map((r) => LV(r.level)))].sort();
+    return `<li class="stg"><div><div class="no">Stage ${i + 1} of ${sd.stages.length}</div><h3>${esc(s.title)}</h3><div class="meta">${esc(s.note)}<br>${pl(s.recs.length, 'page')} · ${lv.map((l) => esc(levelLabel(levelOrder()[l - 1]))).join(', ')}</div></div>
+    ${s.shelfStage ? `<p class="mute" style="margin:0">These are the ${s.recs.length} pages from step 2, the day-one shelf. Tick them there.</p>`
+      : `<ul>${s.recs.map((r) => `<li class="${read[r.id] ? 'done' : ''}">${tickBox(r)}${extLink(r.url, '', esc(r.title))}${levelDots(r.level)}</li>`).join('')}</ul>`}</li>`;
+  }).join('')}</ol></div>`;
 }
 
-let clusterSeq = 0;
-function entryList(entries, opts) {
-  const list = el('ol', { class: 'results' });
-  for (const e of entries) {
-    list.append(el('li', null, e.kind === 'cluster' ? clusterBlock(e, ++clusterSeq) : recordCard(e.record, opts)));
-  }
-  return list;
+function questionsHtml() {
+  const g = {};
+  engine.questions.forEach((q) => { (g[topOf((q.headings || [])[0] || 'new-to-shia-islam')] ||= []).push(q); });
+  const tops = topHeadings().filter((h) => g[h.id]).sort((a, b) => g[b.id].length - g[a.id].length);
+  return `<section class="blk" id="questions"><h2>Common questions</h2><p class="sub">Questions newcomers ask, grouped by theme. Each opens the pages chosen for it.</p>
+  <div class="frame"><div class="qg">${tops.map((h) => {
+    const l = g[h.id], open = ui.openG[h.id], shown = open ? l : l.slice(0, 4);
+    return `<div class="qc"><h3 class="qh">${esc(TOPN(h.id))}</h3><ul>${shown.map((q) => `<li><a class="qa" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a></li>`).join('')}</ul>${l.length > 4 ? `<button class="more" data-g="${esc(h.id)}">${open ? 'Show fewer' : `See all ${l.length}`}</button>` : ''}</div>`;
+  }).join('')}</div></div></section>`;
+}
+
+function topicsHtml() {
+  return `<section class="blk" id="topics"><h2>Browse by topic</h2><p class="sub">Eight areas of study. Each card shows how deep the catalog goes and where to begin.</p>
+  <div class="frame"><div class="tgrid">${topHeadings().map((h) => {
+    const c = lvCounts(h.id), b = bestStart(h.id);
+    const subs = (h.children || []).map((id) => ({ id, n: RECS.filter((r) => r.all.includes(id)).length })).filter((s) => s.n > 0).sort((a, b2) => b2.n - a.n).slice(0, 5);
+    const labels = levelOrder().map((l) => levelLabel(l).toLowerCase());
+    return `<div class="tc"><h3><a class="tlink" href="${esc(topicHref(h.id))}">${esc(TOPN(h.id))}</a></h3>
+    <div class="lv"><div class="bars" aria-hidden="true">${c.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div><div class="leg">${c.map((n, i) => `<span class="l${i + 1}">${n} ${labels[i]}</span>`).join('')}</div></div>
+    ${b ? `<div class="start"><small>Start with</small>${extLink(b.raw.url, '', `${esc(b.raw.title)} <span aria-hidden="true">↗</span>`)}</div>` : ''}
+    <div class="subs">${subs.map((s) => `<a class="sc" href="${esc(topicHref(s.id))}">${esc(TOPN(s.id))}<i>${s.n}</i></a>`).join('')}</div></div>`;
+  }).join('')}</div></div></section>`;
+}
+function goodReadsHtml() {
+  const tops = topHeadings().filter((h) => RECS.some((r) => r.all.includes(h.id)));
+  if (!tops.length) return '';
+  const cur = ui.readTopic && engine.headingById.get(ui.readTopic) ? ui.readTopic : tops[0].id;
+  const picks = RECS.filter((r) => r.all.includes(cur) && r.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
+  return `<section class="blk" id="reads"><h2>Good reads by topic</h2><p class="sub">Pick a subject to see three places to begin, easiest first.</p>
+  <div class="rt" role="group" aria-label="Topic">${tops.map((h) => `<button class="chip" data-rt="${esc(h.id)}" aria-pressed="${h.id === cur}">${esc(TOPN(h.id))}</button>`).join('')}</div>
+  ${picks.length ? `<div class="frame"><ul class="cards reads">${picks.map((n) => cardHtml(n.raw)).join('')}</ul></div>` : '<p class="mute">Nothing at the work level for this topic yet.</p>'}
+  <p style="margin:.9rem 0 0"><a class="btn line" href="${esc(topicHref(cur))}">See everything on ${esc(TOPN(cur))}</a></p></section>`;
+}
+function pathsHtml() {
+  const all = engine.paths.filter((p) => p.id !== 'path-new-to-shia-islam'), list = ui.allPaths ? all : all.slice(0, 8);
+  return `<section class="blk" id="paths"><h2>Learning paths</h2><p class="sub">Short reading orders on one subject, easiest first.</p>
+  <div class="plist">${list.map((p) => `<a class="prow" href="${esc(searchHref({ ...blank(), path: p.id }))}"><div class="frame"><div class="img"><div><div class="big">${p.steps.length}</div><div class="bigl">${p.steps.length === 1 ? 'step' : 'steps'}</div></div></div></div><div><b dir="auto">${esc(p.title)}</b><span dir="auto">${esc(p.intro || '')}</span></div></a>`).join('')}</div>
+  ${all.length > 8 ? `<p style="margin:1.2rem 0 0"><button class="btn line" data-allpaths>${ui.allPaths ? 'Show fewer paths' : `Show all ${all.length} paths`}</button></p>` : ''}</section>`;
+}
+
+const WHAT = { 'al-islam.org': 'Shia books, articles, lectures and Q&A. We start with introductory material.', 'thaqalayn.net': 'Hadith collections, listed one page per book or volume.',
+  'sistani.org': 'Rulings and questions and answers, linked to the exact page.', 'khamenei.ir': 'Rulings of Sayyid Ali Khamenei, once this source is ready.', youtube: 'Lectures from approved channels, once the channel list is confirmed.' };
+const STATE_TEXT = { active: 'In the catalog', backlog: 'Approved, not added yet', blocked: 'Approved, waiting for access' };
+function sourceCards() {
+  const counts = new Map(); for (const r of engine.records) counts.set(r.source, (counts.get(r.source) || 0) + 1);
+  return `<div class="frame"><div class="srcg">${engine.sources.map((s) => {
+    const n = counts.get(s.id) || 0, active = s.status === 'active', url = safeUrl(s.base_url);
+    const name = s.id === 'youtube' ? 'YouTube lectures' : s.name.replace(/\s*\(.*\)/, '');
+    return `<div class="sr1${active ? '' : ' soon'}"><h3 dir="auto">${esc(name)}</h3><p>${esc(WHAT[s.id] || s.catalog_level || '')}</p>
+      ${active ? `<p class="n"><b style="color:var(--ink);font-weight:500">${n.toLocaleString()}</b> ${n === 1 ? 'page' : 'pages'}</p>${url ? `<a class="btn line" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit ${esc(s.id)} <span aria-hidden="true">↗</span></a>` : ''}` : `<span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span>`}</div>`;
+  }).join('')}</div></div>`;
+}
+const sourcesHtml = () => `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these approved websites. Nothing else appears.</p>${sourceCards()}</section>`;
+
+function guideHtml() {
+  const tags = engine.config.tags;
+  return `<section class="blk" id="howto"><h2>How to read the results</h2><p class="sub">Every result carries a level and a tag, so you know what you are opening before you click.</p>
+  <div class="frame"><div class="how">
+   <div class="hc"><h3>Levels</h3><dl>${levelOrder().map((l, i) => `<dt>${levelDots(l)}</dt><dd>${['Written for someone new. No background needed.', 'Assumes the basics.', 'Detailed rulings, specialist work and primary sources.'][i] || ''}</dd>`).join('')}</dl></div>
+   <div class="hc"><h3>Tags</h3><dl><dt><span class="tag" style="--c:var(--t-fiqh)">${esc(tags.labels.fiqh)}</span></dt><dd>Rulings and Q&amp;A from Sayyid Sistani or Sayyid Khamenei.</dd><dt><span class="tag" style="--c:var(--t-hadith)">${esc(tags.labels.hadith)}</span></dt><dd>Collections of narrations.</dd><dt><span class="tag" style="--c:var(--t-book)">${esc(tags.labels.book)}</span> <span class="tag" style="--c:var(--t-article)">${esc(tags.labels.article)}</span></dt><dd>Introductions, studies and talks.</dd></dl></div>
+   <div class="hc"><h3>Sources</h3><p>${esc(SITE.name)} describes pages and links to them. Every result opens the original on its own website, and the site that publishes it is always named.</p></div>
+  </div></div></section>`;
+}
+
+function aboutHtml() {
+  const rep = reportConfigured()
+    ? `<a class="btn solid" href="${esc(reportHref(null))}" rel="noopener noreferrer">${SITE.report.kind === 'github' ? 'Report a problem (opens GitHub)' : 'Report a problem by email'}</a>`
+    : '<span class="todo">Reporting is not set up yet.</span>';
+  const scope = safeUrl(SITE.scopeUrl) ? `<a href="${esc(SITE.scopeUrl)}" rel="noopener noreferrer">Read the full scope and inclusion criteria</a>.` : 'The full scope and inclusion criteria are published in the project repository, in the file <code>docs/scope.md</code>.';
+  return `<div class="prose">
+  <p>${esc(SITE.name)} is a free catalog of Shia resources. You type a topic or a question, and it points you to where that content can be found on a short list of approved websites. It is made for people who are new and do not know where to look. It works like a library catalog: it describes things and tells you where they are.</p>
+  <h2 id="not-host">We do not host or write the content</h2><ul>
+   <li>Every result is a short catalog entry with a link to the website where the original is published.</li>
+   <li>We are not the author or publisher of any book, article, ruling, hadith collection, lecture or course listed here. The source is named on every result.</li>
+   <li>The short descriptions are our own plain-English summaries of what a page is about. For rulings (fiqh), the description only says what the question is about. It never restates the ruling. Read the ruling on the source page.</li>
+   <li>This site does not give religious rulings or take positions.</li></ul>
+  <h2 id="scope">What is included</h2><ul>
+   <li><strong>Twelver (Ithna ‘Ashari) Shia</strong> resources only, for now.</li>
+   <li><strong>English only</strong>, for now. You can still search with Arabic, Persian or Urdu terms and common spellings; they are matched to the same topics.</li>
+   <li><strong>Approved websites only.</strong> Nothing appears here unless it comes from a website on the list below.</li>
+   <li><strong>Fiqh (rulings and practical law)</strong> is limited to two scholars for now: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Results show whose rulings a page follows.</li>
+   <li><strong>Everything else</strong> (history, beliefs, ethics, hadith, Quran and similar) is not limited by author, as long as it comes from an approved website.</li>
+   <li>Beginner material comes first. Each result is marked Beginner, Intermediate or Advanced.</li></ul>
+  <p>${scope}</p>
+  <h2 id="sources-list">Websites this catalog points to</h2></div>${sourceCards()}
+  <div class="prose"><h2 id="how">How results are chosen</h2><ul>
+   <li><strong>No AI writes answers here.</strong> The search only finds and orders catalog entries. It never writes answers, summaries or rulings.</li>
+   <li>First it checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it are shown first.</li>
+   <li>Then it does an ordinary word search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.</li>
+   <li><strong>Exact matches</strong> are results where your words, or another name for the same topic, appear in the title or in the questions a page helps answer. Everything else is listed as <strong>Related results</strong>. If there are no exact matches, the page says so.</li>
+   <li>If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.</li>
+   <li>Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.</li>
+   <li>Catalog entries were prepared with the help of an AI assistant from the source pages, then checked by automatic rules. Items marked <span class="pill">Draft</span> have not yet been reviewed by a person.</li></ul>
+  <h2 id="privacy">Privacy</h2>
+  <p>The search runs entirely in your browser. What you type is not sent to us or to anyone else, and it is not stored. This site uses no cookies, no tracking and no accounts. If you tick pages as read, those ticks are saved only in your own browser (local storage) and never leave it. When you follow a link, you leave this site and the other website’s own policies apply. This includes the “Search Al-Islam.org” link shown under results: only if you click it, your search words are sent to Al-Islam.org as part of that link.</p>
+  <h2 id="report">Report a wrong or broken link</h2>
+  <p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. It helps to include the title of the result and what is wrong.</p>
+  <p>${rep}</p></div>`;
+}
+
+function feedbackHtml() {
+  const ok = reportConfigured();
+  return `<section class="blk" id="feedback"><h2>Help shape ${esc(SITE.name)}</h2><p class="sub">Join the waitlist, suggest a topic, or report a broken link.</p>
+  <div class="frame"><div class="fb"><div class="fb-l"><h3>Tell us what you need</h3><p>Missing a topic? Spotted a broken link? Want to suggest a website? Every note is read by the person who runs the catalog.</p></div>
+   <div class="fb-r" id="fbr">${ok ? `<form id="fbf" novalidate>
+   <fieldset class="fld"><legend>I want to</legend><div class="kinds"><label><input type="radio" name="kind" value="waitlist" checked><span>Join the waitlist</span></label><label><input type="radio" name="kind" value="feedback"><span>Send feedback</span></label><label><input type="radio" name="kind" value="link"><span>Report a broken link</span></label></div></fieldset>
+   <div class="fld" id="fb-msgw"><label for="fb-msg">Your message <span class="mute" id="fb-opt">(optional)</span></label><textarea id="fb-msg" placeholder="What would help?" aria-describedby="fb-eh fb-merr"></textarea><span class="hint" id="fb-eh">This opens your ${SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app'} with the message ready. Nothing is sent until you send it.</span><span class="err" id="fb-merr" role="alert" hidden>Add a short message so we know what to look at.</span></div>
+   <button class="btn solid big" type="submit" id="fb-go">Join the waitlist</button></form>`
+   : '<div class="okbox"><b>Feedback is not set up yet.</b><p>The site owner needs to choose an email address or a GitHub repository in <code>site/js/config.js</code>. Until then there is nowhere to send messages.</p></div>'}</div></div></div></section>`;
+}
+
+function startHtml() {
+  const sd = startData();
+  return `<section class="blk"><div class="stp"><h2><span class="sn">1</span>Begin with “What is Islam?”</h2><p>The big picture, one idea at a time.</p></div><div class="frame">${tourCard()}</div></section>
+  <section class="blk"><div class="stp"><h2><span class="sn">2</span>Read the day-one shelf</h2><p>${sd.shelf.length} short introductions in a good order. Tick each one as you finish it.</p></div><div class="frame">${shelfHtml(sd)}</div></section>
+  <section class="blk"><div class="stp"><h2><span class="sn">3</span>Follow the plan</h2><p>A staged route from the basics to the source texts.</p></div>${planHtml(sd)}</section>`;
+}
+
+function homeHtml() {
+  const tops = topHeadings().filter((h) => RECS.some((r) => r.all.includes(h.id))).length;
+  return `<section class="blk"><h2>Where to begin</h2><p class="sub">Three ways in, depending on how much you already know.</p>
+  <div class="frame"><div class="doors">${tourCard()}
+   <button class="door" data-focus type="button"><small>Ask</small><h3>Ask a question</h3><p>Type it the way you would say it. We match it to pages chosen for that question.</p><span class="go">Start typing →</span></button>
+   <a class="door" href="${esc(pageHref('topics'))}"><small>Browse</small><h3>Browse by topic</h3><p>${tops} subjects, each laid out from beginner to advanced.</p><span class="go">Open topics →</span></a>
+  </div></div></section>
+  <section class="blk"><h2>Explore</h2><p class="sub">More ways into the catalog.</p>
+  <div class="exg">
+   <a class="xt" href="${esc(pageHref('beginners'))}"><b>Start here</b><span>The tour, the day-one shelf and a plan for the rest.</span><em>3 steps</em></a>
+   <a class="xt" href="${esc(pageHref('questions'))}"><b>Common questions</b><span>Questions newcomers ask, grouped by theme.</span><em>${pl(engine.questions.length, 'question')}</em></a>
+   <a class="xt" href="${esc(pageHref('paths'))}"><b>Learning paths</b><span>Short reading orders on one subject.</span><em>${pl(engine.paths.length, 'path')}</em></a>
+   <a class="xt" href="${esc(pageHref('sources'))}"><b>Our sources</b><span>The approved websites every result comes from.</span><em>${pl(engine.sources.filter((s) => s.status === 'active').length, 'active source')}</em></a>
+  </div></section>
+  <section class="blk"><div class="cta"><div><h3>Help shape ${esc(SITE.name)}</h3><p>Join the waitlist, suggest a topic, or report a broken link.</p></div><a class="btn white big" href="${esc(pageHref('feedback'))}">Send feedback</a></div></section>`;
+}
+
+const PG = {
+  beginners: { kind: 'Step by step', title: 'Start here', lede: 'Never studied this before? Follow these three steps, in order.', draft: true, next: true, body: startHtml, noHide: true },
+  questions: { kind: 'Questions', title: 'Common questions', lede: 'Questions newcomers ask, grouped by theme. Select one to see the pages chosen for it.', draft: true, next: true, body: questionsHtml },
+  topics: { kind: 'Topics', title: 'Topics', lede: 'Eight subjects. Each card shows how deep the catalog goes and where to begin.', draft: true, next: true, body: () => topicsHtml() + goodReadsHtml() },
+  paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Short reading orders on one subject, easiest first.', draft: true, next: true, body: pathsHtml },
+  sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these approved websites. Nothing else appears.', next: true, body: sourcesHtml },
+  guide: { kind: 'Guide', title: 'How to read the results', lede: 'What the levels and tags mean, so you know what you are opening.', next: true, body: guideHtml },
+  about: { kind: 'About', title: 'About and scope', lede: 'What this catalog is, what it includes, and how results are chosen.', next: true, body: aboutHtml, noHide: true },
+  feedback: { kind: 'Feedback', title: 'Help shape ShiaLib', lede: 'Join the waitlist, suggest a topic, or report a broken link.', next: true, body: feedbackHtml },
+};
+
+function pageStage(m) {
+  return `<div class="rs page">${m.back ? `<div class="sl-top"><a class="back" href="${esc(m.back[0])}">← ${esc(m.back[1])}</a><span></span></div>` : ''}<div class="sl-body"><span class="kind">${esc(m.kind)}</span><h1 dir="auto">${esc(m.title)}</h1>${m.lede ? `<p class="lede" dir="auto">${esc(m.lede)}</p>` : ''}</div></div>`;
 }
 
 // ---------------------------------------------------------------------------
-// Front-page pieces (also reused by the fallback)
+// Search results, topic pages, section browsing, paths
 // ---------------------------------------------------------------------------
-
-function starterQuestions(limit = 10) {
-  const qs = engine.questions;
-  if (!qs.length) return null;
-  const sec = el('section', { class: 'block', 'aria-labelledby': 'h-questions' });
-  sec.append(el('h2', { id: 'h-questions' }, 'Not sure what to type? Start with a question'));
-  if (qs.some((q) => q.draft)) {
-    sec.append(el('p', { class: 'draft-note' }, draftMark(),
-      ' These starter questions were drafted while building the catalog and have not been reviewed yet.'));
-  }
-  const list = el('ul', { class: 'question-list' });
-  const add = (q) => list.append(el('li', null,
-    navLink({ ...blank(), q: q.question }, { dir: 'auto' }, q.question),
-    q.draft ? el('span', { class: 'draft-dot', title: 'Draft, awaiting review' }, 'Draft') : null));
-  qs.slice(0, limit).forEach(add);
-  sec.append(list);
-  if (qs.length > limit) {
-    const btn = el('button', { type: 'button', class: 'expand', onclick: () => { qs.slice(limit).forEach(add); btn.remove(); } },
-      `Show all ${qs.length} questions`);
-    sec.append(btn);
-  }
-  return sec;
+function curatedHtml(result) {
+  const c = result.curated; if (!c) return '';
+  let out = '<div class="frame curated"><div class="gh">';
+  if (c.question) out += `<h2 class="ch" dir="auto">${esc(c.question.question)}${c.question.draft ? ' <span class="pill">Draft</span>' : ''}</h2>${c.path ? '' : '<p>The pages chosen for this question are listed first below.</p>'}`;
+  else if (c.heading) out += `<h2 class="ch" dir="auto">${esc(c.heading.label)}${engine.vocabularyDraft ? ' <span class="pill">Draft</span>' : ''}</h2><p><a href="${esc(topicHref(c.heading.id))}">Browse everything on this topic</a></p>`;
+  out += '</div>';
+  if (c.path) out += `<div class="callout"><h3 class="h" dir="auto">Start here: ${esc(c.path.title)}${c.path.draft ? ' <span class="pill">Draft</span>' : ''}</h3>${c.path.intro ? `<p class="mute" dir="auto">${esc(c.path.intro)}</p>` : ''}${stepsHtml(c.path, true)}</div>`;
+  if (c.questions && c.questions.length) out += `<div class="gh"><p>${c.question ? 'Related questions' : 'Common questions on this topic'}</p></div><ul class="qlist">${c.questions.map((q) => `<li><a href="${esc(qHref(q.question))}"><span dir="auto">${esc(q.question)}</span>${q.draft ? '<span class="pill">Draft</span>' : ''}</a></li>`).join('')}</ul>`;
+  return out + '</div>';
 }
-
-function topicCounts() {
-  const counts = new Map();
-  for (const r of engine.records) {
-    for (const h of new Set([...(r.headings || []), ...(r.inherited_headings || [])])) counts.set(h, (counts.get(h) || 0) + 1);
-  }
-  return counts;
+function stepsHtml(path, compact) {
+  return `<ol class="steps">${path.steps.map((s) => { const r = rec(s.record); return r ? `<li><div>${s.why ? `<p class="why" dir="auto">${esc(s.why)}</p>` : ''}<ul class="cards">${cardHtml(r, { compact })}</ul></div></li>` : ''; }).join('')}</ol>`;
 }
-
-function topicTiles() {
-  const tops = engine.headings.filter((h) => !h.parent);
-  if (!tops.length) return null;
-  const counts = topicCounts();
-  const sec = el('section', { class: 'block', 'aria-labelledby': 'h-topics' });
-  sec.append(el('h2', { id: 'h-topics' }, 'Browse by topic'));
-  if (engine.vocabularyDraft) {
-    sec.append(el('p', { class: 'draft-note' }, draftMark(), ' This list of topics is a draft.'));
-  }
-  const grid = el('ul', { class: 'tiles' });
-  for (const h of tops) {
-    const n = counts.get(h.id) || 0;
-    const kids = (h.children || []).map(headingLabel).slice(0, 3).join(', ');
-    const inner = [
-      el('span', { class: 'tile-title', dir: 'auto', text: h.label }),
-      kids ? el('span', { class: 'tile-sub', dir: 'auto', text: kids + ((h.children || []).length > 3 ? ', …' : '') }) : null,
-      el('span', { class: 'tile-count' }, n ? plural(n, 'resource', 'resources') : 'Nothing cataloged yet'),
-    ];
-    grid.append(el('li', null, n
-      ? navLink({ ...blank(), topic: h.id }, { class: 'tile' }, ...inner)
-      : el('div', { class: 'tile empty' }, ...inner)));
-  }
-  sec.append(grid);
-  return sec;
+function externalHtml(q) {
+  const href = externalSearchHref(q); if (!href) return '';
+  const name = SITE.externalSearch.name;
+  return `<div class="callout extsearch" style="margin-top:2rem"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Have a question we don’t answer?</h2><p>We catalog books and articles, not individual questions and answers. ${esc(name)} has its own question-and-answer section and search, which may have your question.</p>
+  <p><a class="btn line" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Search ${esc(name)} for “${esc(String(q).trim())}” ↗</a>${SITE.externalSearch.askUrl ? ` <a href="${esc(SITE.externalSearch.askUrl)}" target="_blank" rel="noopener noreferrer">Or browse its questions ↗</a>` : ''}</p>
+  <small>This opens ${esc(name)} in a new tab and sends your search words to that site. We are not affiliated with it and do not control its results.</small></div>`;
 }
-
-function pathSteps(path, headingLevel = 'h3') {
-  const wrap = el('div', { class: 'path' });
-  const head = el(headingLevel, { class: 'path-title' }, el('span', { dir: 'auto', text: path.title }));
-  if (path.draft) head.append(' ', draftMark());
-  wrap.append(head);
-  if (path.intro) wrap.append(el('p', { class: 'path-intro', dir: 'auto', text: path.intro }));
-  const ol = el('ol', { class: 'steps' });
-  for (const step of path.steps) {
-    const rec = engine.recordById.get(step.record);
-    if (!rec) continue;
-    const li = el('li', { class: 'step' });
-    if (step.why) li.append(el('p', { class: 'why', dir: 'auto', text: step.why }));
-    li.append(recordCard(rec, { headingLevel: 'h4', compact: true }));
-    ol.append(li);
-  }
-  wrap.append(ol);
-  return wrap;
+function fallbackHtml(result) {
+  return `<div class="callout"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">We couldn’t find a close match</h2>
+  <p>${result.emptyTopic ? `We have a topic called <strong dir="auto">${esc(result.emptyTopic.label)}</strong>, but nothing has been cataloged for it yet.` : `Nothing in the catalog matches <strong dir="auto">“${esc(result.query)}”</strong> closely enough to show. We would rather show nothing than a loose guess.`}</p>
+  <p class="mute" style="margin:0">Try a shorter search, a different spelling, or start from a topic or question below.</p></div>`;
 }
-
-function startHerePaths() {
-  if (!engine.paths.length) return null;
-  const sec = el('section', { class: 'block', 'aria-labelledby': 'h-paths' });
-  sec.append(el('h2', { id: 'h-paths' }, 'Start here: short reading paths'));
-  sec.append(el('p', { class: 'muted' }, 'Each path is a few steps, from a simple introduction to more detailed material.'));
-  engine.paths.forEach((p, i) => {
-    const d = el('details', { class: 'path-box', open: i === 0 });
-    const sum = el('summary', null, el('span', { class: 'path-summary', dir: 'auto', text: p.title }),
-      el('span', { class: 'muted' }, ` · ${plural(p.steps.length, 'step', 'steps')}`));
-    if (p.draft) sum.append(' ', draftMark());
-    d.append(sum);
-    const body = pathSteps(p, 'h3');
-    body.querySelector('.path-title').classList.add('visually-hidden');
-    d.append(body);
-    sec.append(d);
-  });
-  return sec;
-}
-
-function renderHome() {
-  document.body.classList.remove('has-results');
-  view.replaceChildren();
-  const parts = [starterQuestions(), topicTiles(), startHerePaths()].filter(Boolean);
-  if (!engine.records.length) {
-    view.append(el('p', { class: 'notice' }, 'The catalog is empty for now. Records will appear here as they are added.'));
-  }
-  view.append(...parts);
-  statusEl.textContent = '';
-}
-
-// ---------------------------------------------------------------------------
-// Results
-// ---------------------------------------------------------------------------
-
-function orderToggle(state, result) {
-  const mk = (value, label, hint) => {
-    const on = result.order === value;
-    return el('button', {
-      type: 'button', class: on ? 'seg on' : 'seg', 'aria-pressed': String(on), title: hint,
-      onclick: () => go({ ...state, order: value === engine.config.ranking.default_order ? '' : value }),
-    }, label);
-  };
-  return el('div', { class: 'order', role: 'group', 'aria-label': 'Which results come first' },
-    mk('beginner', 'I’m new: simpler first', 'Beginner material is listed first'),
-    mk('deeper', 'Show deeper material first', 'Advanced and detailed material is listed first'));
-}
-
-function tagChips(state, result) {
+function controlsHtml(st, result) {
   const total = Object.values(result.counts.tags).reduce((a, b) => a + b, 0);
-  const wrap = el('div', { class: 'chips', role: 'group', 'aria-label': 'Filter by type of content' });
-  const chip = (tag, label, n) => {
-    const on = (state.tag || '') === tag;
-    return el('button', {
-      type: 'button', class: `chip${on ? ' on' : ''}${tag ? ` chip-${tag}` : ''}`, 'aria-pressed': String(on),
-      disabled: n === 0 && !on,
-      onclick: () => go({ ...state, tag: on ? '' : tag }),
-    }, label, el('span', { class: 'chip-count' }, ` ${n}`));
-  };
-  wrap.append(chip('', 'All', total));
-  for (const t of engine.config.tags.order) {
-    const n = result.counts.tags[t] || 0;
-    if (n || state.tag === t) wrap.append(chip(t, tagLabel(t), n));
-  }
-  return wrap;
+  const seg = `<div class="seg" role="group" aria-label="Which results come first"><button data-order="beginner" aria-pressed="${result.order === 'beginner'}">I’m new: simpler first</button><button data-order="deeper" aria-pressed="${result.order === 'deeper'}">Show deeper material first</button></div>`;
+  const chip = (tag, label, n) => `<button class="chip" data-tag="${esc(tag)}" aria-pressed="${(st.tag || '') === tag}"${n === 0 && st.tag !== tag ? ' disabled' : ''}>${esc(label)} <i>${n}</i></button>`;
+  const chips = `<div class="chips" role="group" aria-label="Filter by type of content">${chip('', 'All', total)}${engine.config.tags.order.filter((t) => (result.counts.tags[t] || 0) || st.tag === t).map((t) => chip(t, tagLabel(t), result.counts.tags[t] || 0)).join('')}</div>`;
+  const sel = (key, label, opts) => `<div class="fld"><label for="f-${key}">${label}</label><select id="f-${key}" data-filter="${key}">${opts.map(([v, t]) => `<option value="${esc(v)}"${v === (st[key] || '') ? ' selected' : ''}>${esc(t)}</option>`).join('')}</select></div>`;
+  const f = facets(), active = ['level', 'source', 'scholar', 'topic'].filter((k) => st[k]).length;
+  const panel = `<details class="filters"${active ? ' open' : ''}><summary>${active ? `More filters (${active} on)` : 'More filters'}</summary><div class="filter-grid">
+    ${sel('level', 'Level', [['', 'Any level'], ...levelOrder().map((l) => [l, levelLabel(l)])])}${sel('topic', 'Subject', [['', 'Any subject'], ...f.topics])}
+    ${sel('source', 'Source', [['', 'Any source'], ...f.sources])}${sel('scholar', 'Scholar or author', [['', 'Anyone'], ...f.scholars])}</div></details>`;
+  const af = [];
+  if (st.topic) af.push(['topic', `Subject: ${headingLabel(st.topic)}`]);
+  if (st.section) af.push(['section', `Inside: ${(rec(st.section) || {}).title || st.section}`]);
+  if (st.level) af.push(['level', `Level: ${levelLabel(st.level)}`]);
+  if (st.source) af.push(['source', `Source: ${sourceName(st.source)}`]);
+  if (st.scholar) af.push(['scholar', `By: ${scholarName(st.scholar)}`]);
+  if (st.tag) af.push(['tag', `Type: ${tagLabel(st.tag)}`]);
+  const pills = af.length ? `<ul class="apills" aria-label="Filters in use">${af.map(([k, l]) => `<li><button class="apill" data-clear="${k}" aria-label="Remove filter: ${esc(l)}"><span dir="auto">${esc(l)}</span> ×</button></li>`).join('')}</ul>` : '';
+  return `<div class="ctl">${seg}${chips}</div>${panel}${pills}`;
 }
-
-function select(id, label, value, options, onchange) {
-  const sel = el('select', { id, onchange: (ev) => onchange(ev.target.value) });
-  for (const [v, text] of options) sel.append(el('option', { value: v, selected: v === value, dir: 'auto' }, text));
-  return el('div', { class: 'field' }, el('label', { for: id }, label), sel);
-}
-
 let facetCache = null;
 function facets() {
   if (facetCache) return facetCache;
-  const sources = new Set(), people = new Set();
+  const sources = new Set(), people = new Set(), counts = new Map();
   for (const r of engine.records) {
     sources.add(r.source);
     for (const id of [...(r.authors || []), ...(r.instructors || []), r.marja]) if (id) people.add(id);
+    for (const h of new Set([...(r.headings || []), ...(r.inherited_headings || [])])) counts.set(h, (counts.get(h) || 0) + 1);
   }
-  const counts = topicCounts();
-  const depth = (h) => (h.ancestors || []).length;
-  const ordered = [];
-  const walk = (h) => { if (counts.get(h.id)) ordered.push(h); (h.children || []).forEach((c) => walk(engine.headingById.get(c))); };
-  engine.headings.filter((h) => !h.parent).forEach(walk);
-  facetCache = {
+  const ordered = [], walk = (h) => { if (counts.get(h.id)) ordered.push(h); (h.children || []).forEach((c) => engine.headingById.get(c) && walk(engine.headingById.get(c))); };
+  topHeadings().forEach(walk);
+  return (facetCache = {
     sources: engine.sources.filter((s) => sources.has(s.id)).map((s) => [s.id, s.name]),
-    scholars: engine.scholars.filter((s) => people.has(s.id)).map((s) => [s.id, s.name])
-      .sort((a, b) => a[1].localeCompare(b[1])),
-    topics: ordered.map((h) => [h.id, `${'– '.repeat(depth(h))}${h.label}`]),
-  };
-  return facetCache;
+    scholars: engine.scholars.filter((s) => people.has(s.id)).map((s) => [s.id, s.name]).sort((a, b) => a[1].localeCompare(b[1])),
+    topics: ordered.map((h) => [h.id, `${'– '.repeat((h.ancestors || []).length)}${h.label}`]),
+  });
 }
 
-function filterPanel(state) {
-  const f = facets();
-  const active = ['level', 'source', 'scholar', 'topic'].filter((k) => state[k]).length;
-  const box = el('details', { class: 'filters', open: active > 0 });
-  box.append(el('summary', null, active ? `More filters (${active} on)` : 'More filters'));
-  const grid = el('div', { class: 'filter-grid' });
-  const set = (key) => (v) => go({ ...state, [key]: v });
-  grid.append(
-    select('f-level', 'Level', state.level,
-      [['', 'Any level'], ...engine.config.levels.order.map((l) => [l, levelLabel(l)])], set('level')),
-    select('f-topic', 'Subject', state.topic, [['', 'Any subject'], ...f.topics], set('topic')),
-    select('f-source', 'Source', state.source, [['', 'Any source'], ...f.sources], set('source')),
-    select('f-scholar', 'Scholar or author', state.scholar, [['', 'Anyone'], ...f.scholars], set('scholar')),
-  );
-  box.append(grid);
-  return box;
-}
-
-function activeFilters(state) {
-  const items = [];
-  if (state.topic) items.push(['topic', `Subject: ${headingLabel(state.topic)}`]);
-  if (state.section) items.push(['section', `Inside: ${(engine.recordById.get(state.section) || {}).title || state.section}`]);
-  if (state.level) items.push(['level', `Level: ${levelLabel(state.level)}`]);
-  if (state.source) items.push(['source', `Source: ${sourceName(state.source)}`]);
-  if (state.scholar) items.push(['scholar', `By: ${scholarName(state.scholar)}`]);
-  if (state.tag) items.push(['tag', `Type: ${tagLabel(state.tag)}`]);
-  if (!items.length) return null;
-  const ul = el('ul', { class: 'active-filters', 'aria-label': 'Filters in use' });
-  for (const [key, label] of items) {
-    ul.append(el('li', null, el('button', {
-      type: 'button', class: 'pill', 'aria-label': `Remove filter: ${label}`,
-      onclick: () => go({ ...state, [key]: '' }),
-    }, el('span', { dir: 'auto', text: label }), el('span', { 'aria-hidden': 'true' }, ' ×'))));
-  }
-  return ul;
-}
-
-function curatedBlock(result) {
-  const c = result.curated;
-  if (!c) return null;
-  const box = el('section', { class: 'curated', 'aria-labelledby': 'h-curated' });
-  if (c.question) {
-    box.append(el('p', { class: 'eyebrow' }, 'A common question'));
-    const h = el('h2', { id: 'h-curated' }, el('span', { dir: 'auto', text: c.question.question }));
-    if (c.question.draft) h.append(' ', draftMark());
-    box.append(h);
-    if (!c.path) {
-      box.append(el('p', { class: 'muted' }, 'The pages chosen for this question are listed first below.'));
-    }
-  } else if (c.heading) {
-    box.append(el('p', { class: 'eyebrow' }, 'Topic'));
-    const h = el('h2', { id: 'h-curated' }, el('span', { dir: 'auto', text: c.heading.label }));
-    if (engine.vocabularyDraft) h.append(' ', draftMark());
-    box.append(h);
-    box.append(el('p', null, navLink({ ...blank(), topic: c.heading.id }, null, 'Browse everything on this topic')));
-  }
-  if (c.path) {
-    box.append(el('p', { class: 'eyebrow' }, 'Start here'));
-    box.append(pathSteps(c.path, 'h3'));
-  }
-  if (c.questions && c.questions.length) {
-    box.append(el('p', { class: 'eyebrow' }, c.question ? 'Related questions' : 'Common questions on this topic'));
-    const ul = el('ul', { class: 'question-list' });
-    for (const q of c.questions) {
-      ul.append(el('li', null, navLink({ ...blank(), q: q.question }, { dir: 'auto' }, q.question),
-        q.draft ? el('span', { class: 'draft-dot', title: 'Draft, awaiting review' }, 'Draft') : null));
-    }
-    box.append(ul);
-  }
-  return box;
-}
-
-/** "Ask the source site" box: for questions the catalog does not cover. A plain outbound link. */
-function externalSearchBlock(query) {
-  const href = externalSearchHref(query);
-  if (!href) return null;
-  const name = SITE.externalSearch.name;
-  const box = el('section', { class: 'external-search', 'aria-label': `Search ${name}` });
-  box.append(el('h2', null, 'Have a question we don’t answer?'));
-  box.append(el('p', null, 'We catalog books and articles, not individual questions and answers. ',
-    `${name} has its own question-and-answer section and search, which may have your question.`));
-  box.append(el('p', null, el('a', { class: 'button-link', href, target: '_blank', rel: 'noopener noreferrer' },
-    `Search ${name} for “${String(query).trim()}” ↗`),
-    SITE.externalSearch.askUrl ? el('span', null, ' ', el('a', { href: SITE.externalSearch.askUrl, target: '_blank', rel: 'noopener noreferrer' }, 'Or browse its questions ↗')) : null));
-  box.append(el('p', { class: 'small' }, `This opens ${name} in a new tab and sends your search words to that site. We are not affiliated with it and do not control its results.`));
-  return box;
-}
-
-function fallbackBlock(result) {
-  const box = el('section', { class: 'fallback' });
-  box.append(el('h2', null, 'We couldn’t find a close match'));
-  if (result.emptyTopic) {
-    box.append(el('p', null, 'We have a topic called ',
-      el('strong', { dir: 'auto', text: result.emptyTopic.label }),
-      ', but nothing has been cataloged for it yet.'));
-  } else {
-    box.append(el('p', null, 'Nothing in the catalog matches ',
-      el('strong', { dir: 'auto', text: `“${result.query}”` }),
-      ' closely enough to show. We would rather show nothing than a loose guess.'));
-  }
-  box.append(el('p', null, 'You could try a shorter search, a different spelling, or start from one of the topics or questions below.'));
-  return box;
-}
-
-function renderPathPage(state) {
-  const path = engine.pathById.get(state.path);
-  document.body.classList.add('has-results');
-  view.replaceChildren();
-  if (!path) {
-    view.append(el('p', { class: 'notice' }, 'That reading path does not exist. ', navLink(blank(), null, 'Back to the start')));
-    statusEl.textContent = 'Reading path not found.';
-    return;
-  }
-  view.append(el('p', { class: 'eyebrow' }, 'Start here'), pathSteps(path, 'h2'),
-    el('p', null, navLink(blank(), null, '← All topics and questions')));
-  statusEl.textContent = `Reading path: ${path.title}, ${plural(path.steps.length, 'step', 'steps')}.`;
-}
-
-function renderResults(state) {
-  const result = engine.search(state.q, state);
-  document.body.classList.add('has-results');
-  view.replaceChildren();
-  clusterSeq = 0;
-  const browsing = result.mode === 'browse';
-  const hasAnyFilter = ['tag', 'level', 'source', 'scholar', 'topic', 'section'].some((k) => state[k]);
-
-  // Fallback (Layer 4): say so plainly, then offer ways forward.
+function resultsHtml(st) {
+  const result = engine.search(st.q, st), browsing = result.mode === 'browse';
+  const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
-    statusEl.textContent = `No close match for “${result.query}”.`;
-    view.append(fallbackBlock(result), ...[externalSearchBlock(result.query), topicTiles(), starterQuestions(8)].filter(Boolean));
-    return;
+    announceText = `No close match for “${result.query}”.`;
+    return `${refineHtml(st)}${fallbackHtml(result)}${externalHtml(result.query)}<div style="height:3rem"></div>${topicsHtml()}`;
   }
-
-  const head = el('div', { class: 'results-head' });
+  const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
+  let out = browsing ? '' : refineHtml(st);
+  const cap = Number(engine.config.layer2.max_results) || 150;
+  out += `<div class="rhead"><p class="sub">${n >= cap ? `Showing the best ${n} pages. Narrow your search to see others.` : n ? `${pl(n, 'page')} found.` : ''}</p></div>`;
+  if (!browsing) out += curatedHtml(result);
+  out += controlsHtml(st, result);
+  if (!n) {
+    announceText = 'No results with these filters.';
+    return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'Nothing to show.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
+  }
+  let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
+  const ee = take(result.exact), rr = take(result.related), total = result.exact.length + result.related.length;
+  const list = (es, o) => `<ul class="cards">${es.map((e) => entryHtml(e, o)).join('')}</ul>`;
   if (browsing) {
-    const sectionRec = state.section && engine.recordById.get(state.section);
-    const title = sectionRec ? sectionRec.title
-      : state.topic ? headingLabel(state.topic)
-        : state.scholar ? scholarName(state.scholar)
-          : state.source ? sourceName(state.source) : 'Everything in the catalog';
-    head.append(el('p', { class: 'eyebrow' }, sectionRec ? 'Browsing inside' : state.topic ? 'Browsing topic' : 'Browsing'));
-    head.append(el('h2', { class: 'results-title', dir: 'auto', text: title }));
+    announceText = `${pl(n, 'page')}.`;
+    out += `<section class="grp frame"><div class="gh"><h3>${pl(n, 'page')}</h3></div>${list(ee, { hideContextFor: st.section })}</section>`;
   } else {
-    head.append(el('h2', { class: 'results-title' }, 'Results for ', el('span', { dir: 'auto', text: `“${result.query}”` })));
+    announceText = ex ? `${pl(ex, 'exact match', 'exact matches')}${rel ? ` and ${pl(rel, 'related result')}` : ''}.` : `No exact matches. ${pl(rel, 'related result')}.`;
+    out += ex ? `<section class="grp frame"><div class="gh"><h3>Exact matches <span>${ex}</span></h3><p>Your words (or a matching topic) appear in the title or in the questions this page helps answer.</p></div>${list(ee)}</section>`
+      : '<p class="callout">No exact matches. Here are related results.</p>';
+    if (rel) out += `<section class="grp frame"><div class="gh"><h3>Related results <span>${rel}</span></h3><p>These share some of your words or the same topic. They may or may not be what you are looking for.</p></div>${list(rr)}</section>`;
   }
-  view.append(head);
+  if (total > ui.limit) out += `<button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button>`;
+  if (!browsing) out += externalHtml(result.query);
+  return out;
+}
+const refineHtml = (st) => `<form class="refine" id="refine" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="q2">Refine your search</label><input id="q2" type="search" autocomplete="off" enterkeyhint="search" value="${esc(st.q)}" maxlength="200"><button class="btn solid" type="submit">Search</button></form>`;
 
-  const curated = browsing ? null : curatedBlock(result);
-  if (curated) view.append(curated);
-
-  const controls = el('div', { class: 'controls' });
-  controls.append(orderToggle(state, result), tagChips(state, result), filterPanel(state));
-  const af = activeFilters(state);
-  if (af) controls.append(af);
-  view.append(controls);
-
-  const n = result.counts.total;
-  if (n === 0) {
-    statusEl.textContent = 'No results with these filters.';
-    view.append(el('div', { class: 'notice' },
-      el('p', null, hasAnyFilter ? 'Nothing matches with these filters switched on.' : 'Nothing to show.'),
-      hasAnyFilter ? el('p', null, el('button', {
-        type: 'button', class: 'expand',
-        onclick: () => go({ ...blank(), q: state.q, order: state.order }),
-      }, 'Clear all filters')) : null));
-    return;
-  }
-
-  if (browsing) {
-    statusEl.textContent = `${plural(n, 'resource', 'resources')}.`;
-    view.append(el('section', { 'aria-label': 'Resources' },
-      entryList(result.exact, { hideContextFor: state.section })));
-    return;
-  }
-
-  const ex = result.counts.exact, rel = result.counts.related;
-  statusEl.textContent = ex
-    ? `${plural(ex, 'exact match', 'exact matches')}${rel ? ` and ${plural(rel, 'related result', 'related results')}` : ''}.`
-    : `No exact matches. ${plural(rel, 'related result', 'related results')}.`;
-
-  const exactSec = el('section', { class: 'group', 'aria-labelledby': 'h-exact' });
-  exactSec.append(el('h2', { id: 'h-exact', class: 'group-title' }, 'Exact matches ', el('span', { class: 'count' }, `(${ex})`)));
-  if (ex) {
-    exactSec.append(el('p', { class: 'group-note' }, 'Your words (or a matching topic) appear in the title or in the questions this page helps answer.'));
-    exactSec.append(entryList(result.exact));
-  } else {
-    exactSec.append(el('p', { class: 'honest' }, 'No exact matches. Here are related results.'));
-  }
-  view.append(exactSec);
-
-  if (rel) {
-    const relSec = el('section', { class: 'group', 'aria-labelledby': 'h-related' });
-    relSec.append(el('h2', { id: 'h-related', class: 'group-title' }, 'Related results ', el('span', { class: 'count' }, `(${rel})`)));
-    relSec.append(el('p', { class: 'group-note' }, 'These share some of your words or the same topic. They may or may not be what you are looking for.'));
-    relSec.append(entryList(result.related));
-    view.append(relSec);
-  }
-  const ext = externalSearchBlock(result.query);
-  if (ext) view.append(ext);
+function topicHtml(id) {
+  const h = engine.headingById.get(id); if (!h) return '<p class="callout">That topic does not exist.</p>';
+  const res = engine.search('', { topic: id });
+  const kids = (h.children || []).map((c) => ({ c, n: RECS.filter((r) => r.all.includes(c)).length })).filter((s) => s.n > 0);
+  let out = `<div class="rhead"><p class="sub">${pl(res.counts.total, 'page')}, laid out from beginner to advanced.</p>${kids.length ? `<div class="chips" style="margin-bottom:1.4rem">${kids.map((s) => `<a class="chip" href="${esc(topicHref(s.c))}">${esc(TOPN(s.c))} <i>${s.n}</i></a>`).join('')}</div>` : ''}</div>`;
+  levelOrder().forEach((lv, i) => {
+    const es = res.exact.filter((e) => entryLevel(e) === lv), lim = ui.lm[id + lv] || 12;
+    out += `<section class="grp frame"><div class="gh"><h3>${esc(levelLabel(lv))} <span>${entryCount(es)}</span></h3><p>${['Start here.', 'Once you know the basics.', 'Detailed rulings and primary sources.'][i] || ''}</p></div>${es.length ? `<ul class="cards">${es.slice(0, lim).map((e) => entryHtml(e)).join('')}</ul>${es.length > lim ? `<p style="margin:.8rem .4rem .4rem"><button class="more2" data-lm="${esc(id)}|${esc(lv)}">Show ${Math.min(12, es.length - lim)} more of ${es.length - lim}</button></p>` : ''}` : '<div class="gh"><p>Nothing at this level yet.</p></div>'}</section>`;
+  });
+  return out + nextBar('topic');
 }
 
-function render() {
+// ---------------------------------------------------------------------------
+// The tour and the name pages
+// ---------------------------------------------------------------------------
+function buildTour() {
+  E = {};
+  const ent = (name, sub, kind, type, extra = {}) => { const k = extra.k || 'e-' + slug(name); if (!E[k]) E[k] = { k, name, sub, kind, type, ...extra, slides: [] }; return k; };
+  const hadith = [], seen = new Set();
+  for (const r of engine.records) {
+    if (r.content_tag === 'hadith' && r.granularity === 'work' && !/\(Vol\. ([2-9]|\d\d)/.test(r.title) && !seen.has(r.title)) { seen.add(r.title); hadith.push(r.id); }
+  }
+  const workCount = (id) => engine.records.filter((r) => (r.authors || []).includes(id)).length;
+  const resolve = (it) => {
+    if (it.person) return ent(it.person, it.sub, { prophet: 'Prophet', imam: 'Imam', infallible: 'Infallible' }[it.as] || 'Person', 'person');
+    if (it.concept) return ent(it.concept, it.sub, it.as === 'book' ? 'Book' : 'Concept', it.as === 'book' ? 'book' : 'concept');
+    if (it.book) { const r = rec(it.book); return r ? ent(r.title, `${tagLabel(r.content_tag)} · ${levelLabel(r.level)}`, 'Book', 'book', { k: 'e-book-' + r.id, rid: r.id }) : null; }
+    if (it.scholar) { const s = engine.scholarById.get(it.scholar); if (!s) return null; const w = workCount(s.id); return ent(s.name, w ? pl(w, 'page') : 'Author', 'Scholar', 'scholar', { k: 'e-scholar-' + s.id, sid: s.id }); }
+    if (it.topic) return { href: topicHref(it.topic), name: it.name || TOPN(it.topic), sub: it.sub || 'Topic' };
+    if (it.href) return { href: it.href === '#home' ? BASE : it.href.startsWith('#') ? pageHref(it.href.slice(1)) : it.href, name: it.name, sub: it.sub, ask: it.ask };
+    return null;
+  };
+  TOURX = TOUR.map((s) => ({ ...s, groups: s.groups.map((g) => {
+    let items = [];
+    for (const it of g.items) {
+      if (it.auto === 'hadith-works') items.push(...hadith.slice(0, it.limit || 6).map((id) => resolve({ book: id })));
+      else if (it.auto === 'top-scholars') items.push(...[...engine.scholars].map((x) => ({ x, w: workCount(x.id) })).filter((o) => o.w).sort((a, b) => b.w - a.w).slice(0, it.limit || 12).map((o) => resolve({ scholar: o.x.id })));
+      else items.push(resolve(it));
+    }
+    items = items.filter(Boolean);
+    for (const it of items) if (typeof it === 'string' && !E[it].slides.includes(s.k)) E[it].slides.push(s.k);
+    return { ...g, items };
+  }) }));
+  SL = TOURX.map((s) => [s.k, s.label]);
+}
+function ctxFor(k) {
+  const e = E[k], want = lastSlide && e.slides.includes(lastSlide) ? lastSlide : e.slides[0];
+  const s = TOURX.find((x) => x.k === want) || TOURX[0];
+  const g = s.groups.find((gr) => gr.items.includes(k)) || { items: [k] };
+  return { slide: s, peers: g.items.filter((i) => typeof i === 'string') };
+}
+const ARW = (d) => `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d ? 'M3 8h10M9 4l4 4-4 4' : 'M13 8H3M7 4L3 8l4 4'}"/></svg>`;
+function tileHtml(it, i) {
+  const st = `style="--i:${Math.min(i, 8)}"`;
+  if (typeof it === 'string') { const e = E[it]; return `<a class="dt" ${st} href="${esc(pageHref(it))}"><b dir="auto">${esc(e.name)}</b><small>${esc(e.sub)}</small></a>`; }
+  return `<a class="dt" ${st} href="${esc(it.href)}"${it.ask ? ' data-ask' : ''}><b>${esc(it.name)}</b><small>${esc(it.sub || '')}</small></a>`;
+}
+function slideHtml(key) {
+  const i = SL.findIndex((s) => s[0] === key), s = TOURX[i], last = i === SL.length - 1;
+  const prev = SL[(i + SL.length - 1) % SL.length], next = SL[(i + 1) % SL.length];
+  let n = 0;
+  const body = s.groups.map((g) => `${g.label ? `<p class="gl">${esc(g.label)}</p>` : ''}<div class="dgrid ${g.lead ? 'lead' : ''}">${g.items.map((it) => tileHtml(it, n++)).join('')}</div>`).join('') + (s.note ? `<p class="note" style="margin:0">${esc(s.note)}</p>` : '');
+  return `<div class="sh-pad sh-top"><a class="sh-x" href="${esc(BASE)}" aria-label="Exit What is Islam?"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>Exit</a>
+   <div class="sh-prog" aria-hidden="true">${SL.map((_, j) => `<i class="${j < i ? 'd' : j === i ? 'c' : ''}"></i>`).join('')}</div><span class="sh-n">${i + 1} / ${SL.length}</span></div>
+  <div class="sh-pad sh-main"><div class="sh-l"><span class="sh-big" aria-hidden="true">${i + 1}</span><h1 id="shh" tabindex="-1">${esc(s.title)}</h1><p class="l2">${esc(s.lede)}</p></div><div class="sh-r">${body}</div></div>
+  <div class="sh-pad sh-bot"><div class="row2">${i === 0 ? '<span></span>' : `<a class="pv2" href="${esc(pageHref('start-' + prev[0]))}" aria-label="Previous slide: ${esc(prev[1])}"><span class="rb">${ARW(0)}</span><span>${esc(prev[1])}</span></a>`}
+   ${last ? `<a class="pn" href="${esc(pageHref('beginners'))}">Continue to Start here ${ARW(1)}</a>` : `<a class="pn" href="${esc(pageHref('start-' + next[0]))}">${esc(next[1])} ${ARW(1)}</a>`}</div></div>`;
+}
+function entityStageHtml(e) {
+  const c = ctxFor(e.k);
+  return pageStage({ kind: e.kind, title: e.name, lede: e.sub, back: [pageHref('start-' + c.slide.k), 'Back to ' + c.slide.label] });
+}
+function entityBodyHtml(e) {
+  let rel = [], head = 'Learn more', empty = 'No pages for this name in the catalog yet.';
+  const strip = (s) => s.replace(/^(The |Prophet |Imam )/, '').replace(/\s*\(.*\)/, '');
+  const firstRecords = (res) => [...res.exact, ...res.related].map((x) => (x.kind === 'cluster' ? x.items[0].record : x.record));
+  if (e.type === 'scholar') { rel = firstRecords(engine.search('', { scholar: e.sid })).slice(0, 6); head = 'Works by this author'; empty = 'No works by this author in the catalog yet.'; }
+  else if (e.type === 'book' && e.rid) { const r = rec(e.rid); rel = [r, ...RECS.filter((x) => x.id !== r.id && x.raw.headings.some((h) => (r.headings || []).includes(h))).slice(0, 5).map((x) => x.raw)]; head = 'This book, and related pages'; }
+  else { const res = engine.search(strip(e.name)); rel = firstRecords(res).slice(0, 6); }
+  const q = e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '');
+  const c = ctxFor(e.k), g = c.peers, i = g.indexOf(e.k), p = E[g[(i + g.length - 1) % g.length]], n = E[g[(i + 1) % g.length]];
+  return `<div class="egrid"><div><div class="bio"><h3>Short bio <span class="pill">Placeholder</span></h3><div class="ph"><i></i><i></i><i></i><p>A short, sourced bio will go here once it has been written and reviewed.</p></div></div>
+  <div style="margin-top:1rem"><a class="btn solid big" href="${esc(qHref(q))}" style="width:100%;justify-content:center">Search more for “${esc(q)}”</a></div></div>
+  <div class="frame" style="padding:8px"><div class="gh"><h3>${head} <span>${rel.length}</span></h3><p>Links to pages in the catalog.</p></div>${rel.length ? `<ul class="cards">${rel.map((r) => cardHtml(r)).join('')}</ul>` : `<div class="gh"><p>${empty}</p></div>`}</div></div>
+  ${g.length > 1 ? `<div class="enav"><a href="${esc(pageHref(p.k))}"><small>Previous</small>${esc(p.name)}</a><a class="nx" href="${esc(pageHref(n.k))}"><small>Next</small>${esc(n.name)}</a></div>` : ''}`;
+}
+
+// ---------------------------------------------------------------------------
+// Hero search box (suggestions as you type)
+// ---------------------------------------------------------------------------
+let rows = [], hi = 0;
+const RET = '<kbd aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3v5a2 2 0 0 1-2 2H3M5.5 7.5L3 10l2.5 2.5"/></svg></kbd>';
+function buildRows() {
+  const q = input.value.trim(), out = [];
+  if (!q) {
+    if (engine.questions.length) {
+      out.push({ lab: `Suggested questions (${engine.questions.length})` });
+      engine.questions.forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) }));
+      out.push({ k: 'q', text: `See all ${engine.questions.length} questions, grouped by theme`, go: () => nav(pageHref('questions')) });
+    }
+  } else {
+    out.push({ k: 'all', text: `See all results for “${q}”`, go: () => nav(qHref(q)) });
+    const res = engine.search(q), c = res.curated;
+    const qs = c ? (c.question ? [c.question] : (c.questions || [])) : [];
+    if (qs.length) { out.push({ lab: 'Questions' }); qs.slice(0, 4).forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) })); }
+    const top = [...res.exact, ...res.related].slice(0, 5).map((e) => (e.kind === 'cluster' ? e.items[0].record : e.record));
+    if (top.length) { out.push({ lab: 'Top matches' }); top.forEach((r) => out.push({ k: 'r', r })); }
+  }
+  return out;
+}
+function buildList() {
   if (!engine) return;
-  const state = readState();
-  if (document.activeElement !== input || input.value.trim() !== state.q) input.value = state.q;
-  document.title = state.q ? `${state.q} · ${SITE.name}` : SITE.name;
-  if (state.path) return renderPathPage(state);
-  const hasFilter = ['tag', 'level', 'source', 'scholar', 'topic', 'section'].some((k) => state[k]);
-  if (!state.q && !hasFilter) return renderHome();
-  renderResults(state);
+  const items = buildRows(); rows = items.filter((x) => !x.lab); if (hi >= rows.length) hi = 0;
+  let i = -1;
+  $('#list').innerHTML = items.map((x) => {
+    if (x.lab) return `<div class="lab" role="presentation">${esc(x.lab)}</div>`;
+    i++; const sel = i === hi, id = 'opt' + i;
+    if (x.k === 'r') { const r = x.r; return `<a class="row" id="${id}" role="option" aria-selected="${sel}" data-i="${i}" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer"><span class="t" dir="auto">${esc(r.title)}</span><span class="r">${sel ? 'Open ' + RET : esc(tagLabel(r.content_tag))}</span></a>`; }
+    return `<div class="row" id="${id}" role="option" aria-selected="${sel}" data-i="${i}"><span class="t" dir="auto">${esc(x.text)}</span><span class="r">${sel ? 'Select ' + RET : ''}</span></div>`;
+  }).join('');
+  input.setAttribute('aria-activedescendant', rows.length ? 'opt' + hi : '');
+  comboState();
 }
+function comboState() { input.setAttribute('aria-expanded', String(!(document.body.classList.contains('has') && !$('#pal').matches(':focus-within')))); }
+function setHi(n, scroll) { hi = (n + rows.length) % rows.length; buildList(); if (scroll) { const e = $('#opt' + hi); e && e.scrollIntoView({ block: 'nearest' }); } }
+function choose(i) { const x = rows[i]; if (!x) return; if (x.k === 'r') $('#opt' + i).click(); else x.go(); }
+input.addEventListener('input', () => { hi = 0; buildList(); });
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowDown') { e.preventDefault(); setHi(hi + 1, true); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); setHi(hi - 1, true); }
+  else if (e.key === 'Enter') { e.preventDefault(); choose(hi); }
+  else if (e.key === 'Escape') { input.value = ''; hi = 0; if (route.t === 'results') nav(BASE); else buildList(); }
+});
+$('#form').addEventListener('submit', (e) => e.preventDefault());
+$('#pal').addEventListener('focusin', comboState);
+$('#pal').addEventListener('focusout', () => setTimeout(comboState, 0));
+$('#list').addEventListener('mousemove', (e) => { const r = e.target.closest('.row'); if (r && +r.dataset.i !== hi) { hi = +r.dataset.i; buildList(); } });
+$('#list').addEventListener('mousedown', (e) => e.preventDefault());
+$('#list').addEventListener('click', (e) => { const r = e.target.closest('.row'); if (!r || r.tagName === 'A') return; choose(+r.dataset.i); });
+
+// ---------------------------------------------------------------------------
+// Render
+// ---------------------------------------------------------------------------
+let announceText = '';
+const MENU = [['beginners', 'Start here'], ['questions', 'Questions'], ['start-revelation', 'What is Islam?'], ['topics', 'Topics'], ['paths', 'Paths'], ['sources', 'Sources']];
+function buildNav() {
+  $('#mainnav').innerHTML = MENU.map(([h, l]) => `<a href="${esc(pageHref(h))}" data-nav="${h}">${esc(l)}</a>`).join('');
+}
+function setMenu(open) {
+  const m = $('#mnav'), b = $('#menuBtn');
+  if (open) {
+    const cur = route.t === 'page' ? route.k : route.t === 'topic' ? 'topics' : '';
+    m.innerHTML = [...MENU, ['guide', 'How to read the results'], ['about', 'About and scope'], ['feedback', 'Feedback and waitlist']].map(([h, l]) => `<a href="${esc(pageHref(h))}" ${h === cur ? 'aria-current="page"' : ''}>${esc(l)}</a>`).join('') + '<button class="btn line" type="button" id="mAsk">Search the catalog</button>';
+  }
+  m.hidden = !open; b.setAttribute('aria-expanded', String(open)); $('#menuLbl').textContent = open ? 'Close' : 'Menu';
+}
+function titleFor(r) {
+  switch (r.t) {
+    case 'page': return PG[r.k].title;
+    case 'topic': return TOPN(r.k);
+    case 'path': { const p = engine.pathById.get(r.st.path); return p ? p.title : 'Learning path'; }
+    case 'entity': return E[r.k].name;
+    case 'slide': return SL.find((s) => s[0] === r.k)[1] + ' · What is Islam?';
+    case 'results': return r.st.q ? `${r.st.q}` : 'Browsing';
+    default: return '';
+  }
+}
+
+function render(opts = {}) {
+  if (!engine) return;
+  lastHref = location.href;
+  route = parseRoute();
+  const t = route.t, st = route.st || blank();
+  const heroOn = t === 'home';
+  document.body.classList.remove('has');
+  document.body.classList.toggle('tour', t === 'slide');
+  document.querySelectorAll('#mainnav a').forEach((a) => {
+    const h = a.dataset.nav; a.removeAttribute('aria-current');
+    if ((t === 'page' && route.k === h) || (t === 'topic' && h === 'topics')) a.setAttribute('aria-current', 'page');
+  });
+  $('#heroStage').hidden = !heroOn; $('#routeStage').hidden = heroOn || t === 'slide';
+  const sh = $('#show'); sh.hidden = t !== 'slide';
+  announceText = '';
+  if (t === 'slide') {
+    lastSlide = route.k;
+    const i = SL.findIndex((s) => s[0] === route.k);
+    sh.dataset.dir = i >= (render.lastIdx ?? 0) ? 'next' : 'prev'; render.lastIdx = i;
+    sh.innerHTML = slideHtml(route.k); sh.scrollTop = 0; view.innerHTML = '';
+    announceText = `Slide ${i + 1} of ${SL.length}: ${SL[i][1]}`;
+  } else if (t === 'home') {
+    view.innerHTML = homeHtml(); announceText = 'Home';
+  } else if (t === 'page') {
+    const m = PG[route.k]; $('#routeStage').innerHTML = pageStage(m);
+    view.innerHTML = (m.draft && draftApplies(route.k) ? draftBar() : '') + m.body() + (m.next ? nextBar(route.k) : '');
+    if (!m.noHide) { const h2 = view.querySelector('section.blk > h2'); if (h2) h2.classList.add('sr'); const sb = view.querySelector('section.blk > .sub'); if (sb) sb.remove(); }
+    announceText = `${m.title} page`;
+  } else if (t === 'topic') {
+    $('#routeStage').innerHTML = pageStage({ kind: 'Topic', title: TOPN(route.k), back: [pageHref('topics'), 'All topics'] });
+    view.innerHTML = topicHtml(route.k); announceText = `Topic: ${TOPN(route.k)}`;
+  } else if (t === 'path') {
+    const p = engine.pathById.get(st.path);
+    if (!p) { $('#routeStage').innerHTML = pageStage({ kind: 'Learning path', title: 'Path not found', back: [pageHref('paths'), 'All paths'] }); view.innerHTML = '<p class="callout">That reading path does not exist.</p>'; }
+    else {
+      $('#routeStage').innerHTML = pageStage({ kind: 'Learning path', title: p.title, lede: p.intro, back: [pageHref('paths'), 'All paths'] });
+      view.innerHTML = (p.draft ? draftBar('This path') : '') + `<section class="blk">${stepsHtml(p, false)}</section>` + nextBar('path');
+    }
+    announceText = `Learning path: ${titleFor(route)}`;
+  } else if (t === 'entity') {
+    const e = E[route.k]; $('#routeStage').innerHTML = entityStageHtml(e); view.innerHTML = entityBodyHtml(e); announceText = `${e.name}, ${e.kind}`;
+  } else if (t === 'results') {
+    if (!st.q) {
+      const sec = st.section && rec(st.section);
+      const title = sec ? sec.title : st.scholar ? scholarName(st.scholar) : st.source ? sourceName(st.source) : st.tag ? `Everything tagged ${tagLabel(st.tag)}` : 'Everything in the catalog';
+      $('#routeStage').innerHTML = pageStage({ kind: sec ? 'Browsing inside' : 'Browsing', title, back: [BASE, 'Back to start'] });
+    } else {
+      $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, back: [BASE, 'Back to start'] });
+      input.value = st.q;
+    }
+    view.innerHTML = resultsHtml(st);
+    if (st.q) announceText = `Results for ${st.q}. ${announceText}`;
+  }
+  buildList(); setMenu(false);
+  try { document.title = t === 'home' ? `${SITE.name}: find where to learn about Shia Islam` : `${titleFor(route)} · ${SITE.name}`; } catch { /* ignore */ }
+  afterRender(opts);
+}
+const draftApplies = (k) => ({ questions: engine.questions.some((q) => q.draft), paths: engine.paths.some((p) => p.draft), topics: engine.vocabularyDraft || engine.questions.some((q) => q.draft), beginners: true }[k] ?? true);
+
+function afterRender(opts) {
+  const t = route.t;
+  if (t !== 'slide' && opts.push !== false) scrollTo(0, 0);
+  if (firstLoad) { firstLoad = false; return; }
+  let target = null;
+  if (t === 'slide') target = $('#shh');
+  else if (t === 'home') target = $('#heroStage h1');
+  else target = $('#routeStage h1');
+  if (target) { target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); }
+  const a = $('#announce'); a.textContent = ''; setTimeout(() => { a.textContent = announceText; }, 60);
+}
+
+// ---------------------------------------------------------------------------
+// Events (delegated)
+// ---------------------------------------------------------------------------
+view.addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  const st = readState(), keep = (patch) => nav(searchHref({ ...st, ...patch }));
+  if ('tag' in b.dataset) keep({ tag: st.tag === b.dataset.tag ? '' : b.dataset.tag });
+  else if ('order' in b.dataset) keep({ order: b.dataset.order === engine.config.ranking.default_order ? '' : b.dataset.order });
+  else if (b.dataset.clear) keep({ [b.dataset.clear]: '' });
+  else if ('more' in b.dataset) { ui.limit += 20; render({ push: false }); }
+  else if (b.dataset.lm) { const [id, lv] = b.dataset.lm.split('|'); ui.lm[id + lv] = (ui.lm[id + lv] || 12) + 12; const y = scrollY; render({ push: false }); scrollTo(0, y); }
+  else if (b.dataset.g) { ui.openG[b.dataset.g] = !ui.openG[b.dataset.g]; const y = scrollY; render({ push: false }); scrollTo(0, y); }
+  else if (b.dataset.rt) { ui.readTopic = b.dataset.rt; const y = scrollY; render({ push: false }); scrollTo(0, y); }
+  else if ('allpaths' in b.dataset) { ui.allPaths = !ui.allPaths; const y = scrollY; render({ push: false }); scrollTo(0, y); }
+  else if ('focus' in b.dataset) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); input.focus(); }
+});
+view.addEventListener('change', (e) => {
+  const t = e.target;
+  if (t.dataset && t.dataset.filter) { const st = readState(); nav(searchHref({ ...st, [t.dataset.filter]: t.value })); return; }
+  if (t.name === 'kind') { const k = t.value; $('#fb-go').textContent = k === 'waitlist' ? 'Join the waitlist' : k === 'feedback' ? 'Send feedback' : 'Send report'; $('#fb-opt').textContent = k === 'waitlist' ? '(optional)' : ''; $('#fb-merr').hidden = true; return; }
+  if (t.dataset && t.dataset.read) {
+    if (t.checked) read[t.dataset.read] = 1; else delete read[t.dataset.read]; saveRead();
+    document.querySelectorAll(`[data-read="${CSS.escape(t.dataset.read)}"]`).forEach((x) => { x.checked = t.checked; const w = x.closest('li,.si'); if (w) { const d = w.classList.contains('si') ? w.children[1] : w; d.classList.toggle('done', t.checked); } });
+    const sd = startData(), sdn = sd.shelf.filter((r) => read[r.id]).length; const sc = $('#shelfc'); if (sc) sc.textContent = `${sdn} of ${sd.shelf.length} read`;
+    const pd = sd.all.filter((id) => read[id]).length, pct = sd.all.length ? Math.round(pd / sd.all.length * 100) : 0;
+    const pc = $('#planc'); if (pc) pc.textContent = `${pd} of ${sd.all.length} read`; const pb = $('#planbar'); if (pb) { pb.style.width = pct + '%'; pb.parentElement.setAttribute('aria-valuenow', pct); }
+  }
+});
+view.addEventListener('submit', (e) => {
+  if (e.target.id === 'refine') { e.preventDefault(); const st = readState(); nav(searchHref({ ...blank(), q: $('#q2').value.trim(), order: st.order })); return; }
+  if (e.target.id !== 'fbf') return;
+  e.preventDefault();
+  const k = (document.querySelector('input[name=kind]:checked') || {}).value, msg = $('#fb-msg').value.trim();
+  const need = k !== 'waitlist' && !msg; $('#fb-merr').hidden = !need; $('#fb-msg').setAttribute('aria-invalid', String(need));
+  if (need) { $('#fb-msg').focus(); return; }
+  const href = feedbackHref(k, msg); if (!href) return;
+  if (SITE.report.kind === 'github') window.open(href, '_blank', 'noopener'); else location.href = href;
+});
+$('#show').addEventListener('click', (e) => { const a = e.target.closest('[data-ask]'); if (a) { e.preventDefault(); nav(BASE); setTimeout(() => $('#ask').click(), 80); } });
+$('#skip').addEventListener('click', (e) => { e.preventDefault(); view.setAttribute('tabindex', '-1'); view.focus(); view.scrollIntoView({ block: 'start' }); });
+$('#ask').addEventListener('click', () => {
+  if (route.t === 'results' && route.st.q) { const r = $('#q2'); if (r) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); r.focus(); r.select(); return; } }
+  if (route.t !== 'home') nav(BASE);
+  setTimeout(() => { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); input.focus(); }, 60);
+});
+$('#menuBtn').addEventListener('click', () => setMenu($('#mnav').hidden));
+$('#mnav').addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); else if (e.target.id === 'mAsk') { setMenu(false); $('#ask').click(); } });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !$('#mnav').hidden) { setMenu(false); $('#menuBtn').focus(); return; }
+  if (route.t !== 'slide' || /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
+  const i = SL.findIndex((s) => s[0] === route.k);
+  if (e.key === 'ArrowRight') nav(pageHref(i < SL.length - 1 ? 'start-' + SL[i + 1][0] : 'beginners'));
+  if (e.key === 'ArrowLeft' && i > 0) nav(pageHref('start-' + SL[i - 1][0]));
+  if (e.key === 'Escape') nav(BASE);
+});
+const curTheme = () => document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+function themeBtn() { const d = curTheme() === 'dark', b = $('#theme'); b.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme'); b.classList.toggle('is-dark', d); }
+$('#theme').addEventListener('click', () => { document.documentElement.dataset.theme = curTheme() === 'dark' ? 'light' : 'dark'; themeBtn(); });
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', themeBtn); themeBtn();
+
+// Tour swipe: the slide follows the finger 1:1, release projects momentum (touch and pen only).
+const showEl = $('#show'); let g = null, noClickUntil = 0;
+const rubber = (o, dim, c = .55) => (o * dim * c) / (dim + c * Math.abs(o));
+const projectPx = (v) => v * .998 / (1 - .998);
+const curIdx = () => SL.findIndex((s) => s[0] === route.k);
+showEl.addEventListener('pointerdown', (e) => {
+  if (route.t !== 'slide' || e.pointerType === 'mouse' || g) return;
+  const m = showEl.querySelector('.sh-main'); if (!m) return;
+  g = { id: e.pointerId, x: e.clientX, y: e.clientY, drag: false, m, h: [[e.clientX, performance.now()]] };
+});
+showEl.addEventListener('pointermove', (e) => {
+  if (!g || e.pointerId !== g.id) return;
+  const dx = e.clientX - g.x, dy = e.clientY - g.y;
+  if (!g.drag) {
+    if (Math.abs(dy) > 10 && Math.abs(dy) > Math.abs(dx)) { g = null; return; }
+    if (Math.abs(dx) < 10) return;
+    g.drag = true; try { showEl.setPointerCapture(e.pointerId); } catch { /* ignore */ }
+    g.m.style.transition = 'none'; g.m.style.willChange = 'transform';
+  }
+  const i = curIdx(), W = innerWidth, edge = (dx > 0 && i === 0) || (dx < 0 && i === SL.length - 1);
+  g.m.style.transform = `translate3d(${edge ? rubber(dx, W) : dx}px,0,0)`;
+  g.dx = dx; g.h.push([e.clientX, performance.now()]); if (g.h.length > 5) g.h.shift();
+});
+function endDrag(e, cancel) {
+  if (!g || e.pointerId !== g.id) return; const d = g; g = null;
+  if (!d.drag) return;
+  noClickUntil = performance.now() + 350;
+  const f = d.h[0], l = d.h[d.h.length - 1], v = (l[0] - f[0]) / Math.max(1, l[1] - f[1]);
+  const i = curIdx(), W = innerWidth, end = d.dx + projectPx(v); let to = null;
+  if (!cancel && Math.abs(end) > W * .4) { if (end < 0 && i < SL.length - 1) to = SL[i + 1][0]; else if (end > 0 && i > 0) to = SL[i - 1][0]; }
+  const m = d.m;
+  if (to) { m.style.transition = 'transform 140ms cubic-bezier(.23,1,.32,1),opacity 140ms'; m.style.transform = `translate3d(${end < 0 ? -72 : 72}px,0,0)`; m.style.opacity = '0'; setTimeout(() => nav(pageHref('start-' + to)), 120); }
+  else { m.style.transition = 'transform 260ms cubic-bezier(.32,.72,0,1)'; m.style.transform = 'translate3d(0,0,0)'; setTimeout(() => { m.style.willChange = ''; m.style.transition = ''; }, 280); }
+}
+showEl.addEventListener('pointerup', (e) => endDrag(e, false));
+showEl.addEventListener('pointercancel', (e) => endDrag(e, true));
+document.addEventListener('click', (e) => { if (performance.now() < noClickUntil) { e.preventDefault(); e.stopPropagation(); } }, true);
 
 // ---------------------------------------------------------------------------
 // Start
 // ---------------------------------------------------------------------------
-
-form.addEventListener('submit', (ev) => {
-  ev.preventDefault();
-  const q = input.value.trim();
-  const prev = readState();
-  // A new search keeps the reading order but drops old filters.
-  go({ ...blank(), q, order: prev.order });
-});
-window.addEventListener('popstate', render);
-
-for (const node of document.querySelectorAll('[data-site-name]')) node.textContent = SITE.name;
-
 async function start() {
+  for (const n of document.querySelectorAll('[data-site-name]')) n.textContent = SITE.name;
   try {
     const res = await fetch('data/index.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const index = await res.json();
-    engine = createEngine(index);
-    if (engine.buildDate) $('build-date').textContent = `· Catalog updated ${engine.buildDate}`;
-    render();
+    engine = createEngine(await res.json());
+    RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
+    $('#n').textContent = engine.records.length.toLocaleString();
+    $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';
+    buildTour(); buildNav(); render();
   } catch (err) {
-    view.replaceChildren(el('p', { class: 'notice' },
-      'The catalog could not be loaded. Please check your connection and reload the page.'));
-    statusEl.textContent = 'The catalog could not be loaded.';
-    console.error(err);
+    view.innerHTML = '<p class="callout">The catalog could not be loaded. Please check your connection and reload the page.</p>';
+    announceText = 'The catalog could not be loaded.'; console.error(err);
   }
 }
 start();
