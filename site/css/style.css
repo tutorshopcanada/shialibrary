@@ -1013,3 +1013,13 @@ body.has .hero-art,body.has .cursor{display:none}
 /* Results: the search box lives inside the page header */
 .rs .refine{position:static;margin:1.1rem 0 0;max-width:36rem;box-shadow:0 14px 34px -16px rgba(0,0,0,.55)}
 .rs.page .lede{margin-bottom:0}
+
+/* Flatter inner-page headers: back link and kind label share one row, smaller title */
+.rs.page{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:1rem;padding:clamp(.5rem,1.6vw,.9rem) clamp(1rem,4vw,2.4rem) clamp(1.1rem,2.6vw,1.6rem)}
+.rs.page .sl-top{grid-column:1;grid-row:1;margin:0}
+.rs.page .sl-body{display:contents}
+.rs.page .kind{grid-column:2;grid-row:1;justify-self:end;margin:0;font-size:.75rem;padding:.2rem .7rem}
+.rs.page h1,.rs.page .lede,.rs.page .refine{grid-column:1/-1}
+.rs.page h1{font-size:clamp(1.9rem,4.4vw,2.9rem);margin:.5rem 0 .3rem;line-height:1.02}
+.rs.page .lede{font-size:.9375rem;max-width:40rem}
+.rs.page .refine{margin-top:.9rem}

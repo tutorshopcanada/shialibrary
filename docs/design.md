@@ -147,3 +147,5 @@ Inner-page headers carry the same girih with no arch: 12% opacity, clear behind 
 Tour slides carry the girih too, fixed behind the content at 10% (8% on phones), clear around the title at the left.
 
 On results and question pages the search box sits inside the page header, under the count, instead of floating alone below it. The header and the box read as one block; the box is no longer sticky.
+
+Inner-page headers are flat: the back link and the kind label share one row, the title is smaller (about 30 to 46px), and the lede is one short line. Headers are 115 to 235px tall (results with the search box included) instead of about 300px. The home hero is unchanged.
