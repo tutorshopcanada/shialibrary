@@ -43,7 +43,6 @@ export const TOUR = [
     ] }] },
   { k: 'prophets', label: 'The prophets and the books', title: 'The prophets and the books',
     lede: 'The prophets, and the books linked with them.',
-    note: 'Sample lists for the layout. The final lists are yours to confirm.',
     groups: [
       { label: 'The prophets', items: PROPHETS.map((n) => ({ person: `Prophet ${n}`, sub: 'Prophet', as: 'prophet' })) },
       { label: 'The books', lead: true, items: [
@@ -66,10 +65,10 @@ export const TOUR = [
     lede: 'How knowledge was passed on: the collections, and the people who preserved them.',
     groups: [{ label: 'The traditions', items: [{ auto: 'hadith-works', limit: 6 }] },
       { label: 'The scholars', items: [{ auto: 'top-scholars', limit: 12 }] }] },
-  { k: 'today', label: 'Today', title: 'Today', lede: 'Where this leaves you, and where to go from here.',
+  { k: 'today', label: 'Today', title: 'Today', lede: 'Where to go next.',
     groups: [
       { label: 'Go further', lead: true, items: [
-        { href: '#beginners', name: 'Read the day-one shelf', sub: 'Short introductions, then a plan' },
+        { href: '#beginners', name: 'Read the day-one shelf', sub: 'Seven introductions, then a plan' },
         { href: '#topics', name: 'Browse by topic', sub: 'Eight subjects, easiest first' },
         { href: '#home', ask: true, name: 'Ask a question', sub: 'Search the catalog' }] },
       { label: 'Living today', items: [

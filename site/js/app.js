@@ -178,7 +178,7 @@ const entryCount = (list) => list.reduce((n, e) => n + (e.kind === 'cluster' ? e
 // ---------------------------------------------------------------------------
 // Pieces shared by several pages
 // ---------------------------------------------------------------------------
-const draftBar = (what = 'This page') => `<p class="draftbar"><span class="pill">Draft</span> ${esc(what)} was drafted from the catalog and has not been reviewed yet.</p>`;
+const draftBar = (text = 'Written from the catalog and not yet reviewed by a person.') => `<p class="draftbar"><span class="pill">Draft</span> ${esc(text)}</p>`;
 const nextBar = (k) => {
   const n = NEXT[k]; if (!n) return '';
   return `<nav class="nextbar" aria-label="Next step"><p>${esc(n[0])}</p><a class="btn solid big" href="${esc(n[2] === 'home' ? BASE : pageHref(n[2]))}">${esc(n[1])} <span aria-hidden="true">→</span></a></nav>`;
@@ -188,13 +188,13 @@ const NEXT = {
   questions: ['Prefer to browse by subject?', 'Browse by topic', 'topics'],
   topics: ['Want a guided reading order?', 'Follow a learning path', 'paths'],
   topic: ['Want a guided reading order?', 'Follow a learning path', 'paths'],
-  paths: ['Curious where these pages come from?', 'See our sources', 'sources'],
-  path: ['Want more reading orders?', 'More learning paths', 'paths'],
+  paths: ['Where do these pages come from?', 'See the sources', 'sources'],
+  path: ['Looking for another subject?', 'All learning paths', 'paths'],
   question: ['Have a different question?', 'Browse common questions', 'questions'],
-  sources: ['Not sure what a level or tag means?', 'How to read the results', 'guide'],
-  guide: ['Ready to begin?', 'Start here', 'beginners'],
-  about: ['Ready to begin?', 'Start here', 'beginners'],
-  feedback: ['Done here?', 'Back to the start', 'home'],
+  sources: ['Not sure what the levels and tags mean?', 'How to read the results', 'guide'],
+  guide: ['Ready to look something up?', 'Start here', 'beginners'],
+  about: ['New here?', 'Start here', 'beginners'],
+  
 };
 
 let read = {};
@@ -224,7 +224,7 @@ function planHtml(sd) {
   <ol class="stages">${sd.stages.map((s, i) => {
     const lv = [...new Set(s.recs.map((r) => LV(r.level)))].sort();
     return `<li class="stg"><div class="stg-h"><span class="sg-n" aria-hidden="true">${i + 1}</span><div class="stg-t"><div class="no">Stage ${i + 1} of ${sd.stages.length}</div><h3>${esc(s.title)}</h3><p>${esc(s.note)}</p></div><span class="sg-m">${pl(s.recs.length, 'page')} · ${lv.map((l) => esc(levelLabel(levelOrder()[l - 1]))).join(', ')}</span></div>
-    ${s.shelfStage ? `<p class="stg-s">These are the ${s.recs.length} pages on the day-one shelf. <button class="btn line" type="button" data-jump="st2">Go to the shelf</button></p>`
+    ${s.shelfStage ? `<p class="stg-s">The same ${pl(s.recs.length, 'page')} as step 2. <button class="btn line" type="button" data-jump="st2">Go to the shelf</button></p>`
       : `<ul>${s.recs.map((r) => `<li class="${read[r.id] ? 'done' : ''}">${tickBox(r)}${extLink(r.url, '', esc(r.title))}${levelDots(r.level)}</li>`).join('')}</ul>`}</li>`;
   }).join('')}</ol></div>`;
 }
@@ -312,7 +312,7 @@ function pathHtml(p) {
   const i = pathInfo(p), ids = i.rs.map((r) => r.id), done = ids.filter((id) => read[id]).length, pct = ids.length ? Math.round(done / ids.length * 100) : 0;
   const same = engine.paths.filter((x) => x.id !== p.id && pathInfo(x).theme === i.theme), others = engine.paths.filter((x) => x.id !== p.id && !same.includes(x));
   const related = [...same, ...others].slice(0, 3);
-  return `${p.draft ? draftBar('This path') : ''}<div class="pmeta"><span><b>${pl(p.steps.length, 'step')}</b></span><span>${esc(levelRange(i))}</span><span class="prog"><span id="pathc">${done} of ${ids.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Path progress"><i id="pathbar" style="width:${pct}%"></i></div></span></div>
+  return `${p.draft ? draftBar('This path was written from the catalog and is not yet reviewed by a person.') : ''}<div class="pmeta"><span><b>${pl(p.steps.length, 'step')}</b></span><span>${esc(levelRange(i))}</span><span class="prog"><span id="pathc">${done} of ${ids.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Path progress"><i id="pathbar" style="width:${pct}%"></i></div></span></div>
   <ol class="stepper">${p.steps.map((s, k) => { const r = rec(s.record); return r ? `<li class="${read[r.id] ? 'done' : ''}"><span class="sn2" aria-hidden="true">${k + 1}</span><div>${s.why ? `<p class="why" dir="auto"><span class="sr">Step ${k + 1}: </span>${esc(s.why)}</p>` : `<p class="sr">Step ${k + 1}</p>`}<ul class="cards">${cardHtml(r, { lean: true, tick: true })}</ul></div></li>` : ''; }).join('')}</ol>
   ${related.length ? `<section class="related"><h2>More learning paths</h2><div class="pgrid">${related.map(pcardHtml).join('')}</div></section>` : ''}`;
 }
@@ -422,16 +422,16 @@ function feedbackHtml() {
 }
 
 function tourStrip() {
-  return `<div class="tour2"><div class="t2-l"><h3>What is Islam?</h3><p>A seven-step tour, from the divine mission to today. Select any name or book to open its page.</p><a class="btn white big" href="${esc(pageHref('start-' + SL[0][0]))}">Begin the tour <span aria-hidden="true">→</span></a></div>
+  return `<div class="tour2"><div class="t2-l"><h3>What is Islam?</h3><p>Seven stops, from revelation to today. Select any name or book to open its page.</p><a class="btn white big" href="${esc(pageHref('start-' + SL[0][0]))}">Begin the tour <span aria-hidden="true">→</span></a></div>
    <ol class="t2-r">${SL.map(([k, l]) => `<li><a href="${esc(pageHref('start-' + k))}">${esc(l)}</a></li>`).join('')}</ol></div>`;
 }
 function startHtml() {
   const sd = startData(), sn = sd.shelf.filter((r) => read[r.id]).length, pd = sd.all.filter((id) => read[id]).length;
   const J = [['st1', 'What is Islam?', `${SL.length}-stop tour`, 'ov-tour'], ['st2', 'Day-one shelf', `${sn} of ${sd.shelf.length} read`, 'ov-shelf'], ['st3', 'Your plan', `${pd} of ${sd.all.length} read`, 'ov-plan']];
   return `<nav aria-label="Your three steps"><ol class="jstrip">${J.map(([id, t, s, oid], i) => `<li><button class="jcard" type="button" data-jump="${id}"><span class="jn" aria-hidden="true">${i + 1}</span><span class="jt"><b>${esc(t)}</b><small id="${oid}">${esc(s)}</small></span></button></li>`).join('')}</ol></nav>
-  <section class="blk" id="st1"><div class="stp"><h2><span class="sn">1</span>Begin with “What is Islam?”</h2><p>The big picture, one idea at a time.</p></div>${tourStrip()}</section>
-  <section class="blk" id="st2"><div class="stp"><h2><span class="sn">2</span>Read the day-one shelf</h2><p>${sd.shelf.length} short introductions in a good order. Tick each one as you finish it.</p></div>${shelfHtml(sd)}</section>
-  <section class="blk" id="st3"><div class="stp"><h2><span class="sn">3</span>Follow the plan</h2><p>A staged route from the basics to the source texts.</p></div>${planHtml(sd)}</section>`;
+  <section class="blk" id="st1"><div class="stp"><h2><span class="sn">1</span>Begin with “What is Islam?”</h2><p>The main ideas and people, in the order they come.</p></div>${tourStrip()}</section>
+  <section class="blk" id="st2"><div class="stp"><h2><span class="sn">2</span>Read the day-one shelf</h2><p>${pl(sd.shelf.length, 'introduction')}, in reading order. Tick each one when you finish it.</p></div>${shelfHtml(sd)}</section>
+  <section class="blk" id="st3"><div class="stp"><h2><span class="sn">3</span>Follow the plan</h2><p>Five stages, from the basics to the primary texts.</p></div>${planHtml(sd)}</section>`;
 }
 
 function homeHtml() {
@@ -442,30 +442,30 @@ function homeHtml() {
   for (const r of engine.records) counts[r.source] = (counts[r.source] || 0) + 1;
   const started = sn || pd;
   return `<p class="hguide"><a href="${esc(pageHref('beginners'))}">New here? Follow the three-step guide <span aria-hidden="true">→</span></a></p>
-  <section class="blk hq"><h2>Questions people start with</h2><p class="sub">Pick one to see the pages chosen for it.</p>
+  <section class="blk hq"><h2>Questions people start with</h2><p class="sub">Each one opens a short list of pages chosen to answer it.</p>
   <ul class="qlines">${starters.map((q) => qLine(q, '')).join('')}<li><a class="ql ql-go" href="${esc(pageHref('questions'))}"><span class="ql-t">See all ${engine.questions.length} questions</span><span class="ql-m"></span></a></li></ul></section>
-  <section class="blk"><h2>Or be guided</h2><p class="sub">Three ways to learn in order.</p>
-  <div class="g3"><a class="gcard" href="${esc(pageHref('beginners'))}"><small>${started ? 'Continue' : 'Step by step'}</small><h3>Start here</h3><p>The tour, a day-one shelf and a plan for the rest.</p><span class="gm">${started ? `${pd} of ${sd.all.length} pages read` : '3 steps'}</span></a>
-   <a class="gcard" href="${esc(pageHref('start-' + (SL[0] || ['revelation'])[0]))}"><small>A short tour</small><h3>What is Islam?</h3><p>From the divine mission to today, one idea at a time.</p><span class="gm">${SL.length || 7} stops</span></a>
-   <a class="gcard" href="${esc(pageHref('paths'))}"><small>Reading orders</small><h3>Learning paths</h3><p>Short paths on one subject, easiest first.</p><span class="gm">${pl(engine.paths.length, 'path')}</span></a></div></section>
-  <section class="blk"><h2>Browse by topic</h2><p class="sub">Each subject has its own reading list.</p>
+  <section class="blk"><h2>Or follow a route</h2><p class="sub">Each takes you from the basics to deeper reading, in order.</p>
+  <div class="g3"><a class="gcard" href="${esc(pageHref('beginners'))}"><small>${started ? 'Continue' : 'Step by step'}</small><h3>Start here</h3><p>A short tour, seven introductions, then a staged plan.</p><span class="gm">${started ? `${pd} of ${sd.all.length} pages read` : '3 steps'}</span></a>
+   <a class="gcard" href="${esc(pageHref('start-' + (SL[0] || ['revelation'])[0]))}"><small>A short tour</small><h3>What is Islam?</h3><p>Seven short stops, from revelation to the present day.</p><span class="gm">${SL.length || 7} stops</span></a>
+   <a class="gcard" href="${esc(pageHref('paths'))}"><small>Reading orders</small><h3>Learning paths</h3><p>Ordered reading on one subject, easiest page first.</p><span class="gm">${pl(engine.paths.length, 'path')}</span></a></div></section>
+  <section class="blk"><h2>Browse by topic</h2><p class="sub">Eight subjects. Each lists its pages from easiest to hardest.</p>
   <ul class="tt">${tops.map((x) => `<li><a class="ttl" href="${esc(topicHref(x.h.id))}"><span>${esc(TOPN(x.h.id))}</span><i>${x.n.toLocaleString()}</i></a></li>`).join('')}</ul>
-  <p class="more-l"><a href="${esc(pageHref('topics'))}">See how the topics are laid out →</a></p></section>
-  <section class="blk"><div class="inside"><div><h2>What is inside</h2><p>${engine.records.length.toLocaleString()} pages from ${active.length} approved websites. We link to them and never copy them.</p></div>
+  <p class="more-l"><a href="${esc(pageHref('topics'))}">All topics →</a></p></section>
+  <section class="blk"><div class="inside"><div><h2>What is in the catalog</h2><p>${engine.records.length.toLocaleString()} pages from ${active.length} approved websites. Every one links out; nothing is copied.</p></div>
    <ul class="in-l">${active.map((s) => `<li><b dir="auto">${esc(srcName(s))}</b><span>${(counts[s.id] || 0).toLocaleString()} pages</span></li>`).join('')}</ul>
    <a class="btn line" href="${esc(pageHref('sources'))}">See the websites</a></div></section>
   <p class="quietfb">Missing something? <a href="${esc(pageHref('feedback'))}">Join the waitlist or send feedback</a>.</p>`;
 }
 
 const PG = {
-  beginners: { kind: 'Step by step', title: 'Start here', lede: 'Never studied this before? Follow these three steps, in order.', draft: true, next: true, body: startHtml, noHide: true },
-  questions: { kind: 'Questions', title: 'Common questions', lede: 'Questions newcomers ask, grouped by theme. Select one to see the pages chosen for it.', draft: true, next: true, body: questionsHtml },
-  topics: { kind: 'Topics', title: 'Topics', lede: 'Each subject has its own reading list, from beginner to advanced.', draft: true, next: true, body: topicsHtml },
-  paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Short reading orders on one subject. Pick a theme, then a path.', draft: true, next: true, body: pathsHtml },
+  beginners: { kind: 'Step by step', title: 'Start here', lede: 'New to this? Do these three things in order.', draft: true, next: true, body: startHtml, noHide: true },
+  questions: { kind: 'Questions', title: 'Common questions', lede: 'The questions newcomers ask most, grouped by theme. Each opens the pages chosen to answer it.', draft: true, next: true, body: questionsHtml },
+  topics: { kind: 'Topics', title: 'Topics', lede: 'Eight subjects. Each lists its pages from beginner to advanced.', draft: true, next: true, body: topicsHtml },
+  paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Ordered reading lists on one subject, easiest first. Pick a theme, then a path.', draft: true, next: true, body: pathsHtml },
   sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these approved websites. Nothing else appears.', next: true, body: sourcesHtml },
   guide: { kind: 'Guide', title: 'How to read the results', lede: 'What the levels and tags mean, so you know what you are opening.', next: true, body: guideHtml },
-  about: { kind: 'About', title: 'About and scope', lede: 'What this catalog is, what it includes, and how results are chosen.', next: true, body: aboutHtml, noHide: true },
-  feedback: { kind: 'Feedback', title: 'Help shape ShiaLib', lede: 'Join the waitlist, suggest a topic, or report a broken link.', next: true, body: feedbackHtml },
+  about: { kind: 'About', title: 'About and scope', lede: 'What the catalog covers, and what it leaves to the original websites.', next: true, body: aboutHtml, noHide: true },
+  feedback: { kind: 'Feedback', title: 'Help shape ShiaLib', lede: 'Report a broken link, suggest a website or a topic, or join the waitlist.', next: false, body: feedbackHtml },
 };
 
 function pageStage(m) {
@@ -554,9 +554,9 @@ function questionPageHtml(st, result) {
   const rowsOf = (es) => es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
   const related = (c.questions || []).filter((x) => x.id !== q.id);
   announceText = `${q.question}. ${pl(pins.length, 'page')} chosen, ${pl(total, 'more page')}.`;
-  return `${refineHtml(st)}${q.draft ? draftBar('The pages chosen for this question') : ''}
-  ${pins.length ? `<section class="tsec"><h2>Start with ${pins.length === 1 ? 'this page' : 'these pages'}</h2><p class="sub">Chosen for this question.</p><div class="minis">${pins.map(miniHtml).join('')}</div></section>` : ''}
-  ${c.path ? `<section class="tsec"><h2>Read in order</h2><p class="sub">A short reading path on this subject.</p><div class="pgrid one">${pcardHtml(c.path)}</div></section>` : ''}
+  return `${refineHtml(st)}${q.draft ? draftBar('The pages chosen for this question are not yet reviewed by a person.') : ''}
+  ${pins.length ? `<section class="tsec"><h2>Start with ${pins.length === 1 ? 'this page' : 'these pages'}</h2><p class="sub">Chosen to answer this question.</p><div class="minis">${pins.map(miniHtml).join('')}</div></section>` : ''}
+  ${c.path ? `<section class="tsec"><h2>Read in order</h2><p class="sub">A reading path that covers this subject step by step.</p><div class="pgrid one">${pcardHtml(c.path)}</div></section>` : ''}
   ${related.length ? `<section class="tsec"><h2>Related questions</h2><ul class="qrows" style="margin-top:.8rem">${related.map((x) => qRow(x, '')).join('')}</ul></section>` : ''}
   ${total ? `<section class="tsec"><h2>More pages that match</h2><p class="sub">${pl(total, 'page')}, simpler material first.</p>${controlsHtml(st, result)}
   ${exs.length ? `<h3 class="gt">Exact matches <span>${ex.length}</span></h3><ul class="lrows">${rowsOf(exs)}</ul>` : ''}
@@ -579,7 +579,7 @@ function resultsHtml(st, pre) {
   out += controlsHtml(st, result);
   if (!n) {
     announceText = 'No results with these filters.';
-    return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'Nothing to show.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
+    return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'There are no pages here yet.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
   }
   let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
   const ee = take(result.exact), rr = take(result.related), total = result.exact.length + result.related.length;
@@ -627,9 +627,9 @@ function topicHtml(id) {
   const qs = engine.questions.filter((q) => (q.headings || []).some((x) => fam.has(x))).slice(0, 6);
   const sec = (title, sub, body) => `<section class="tsec"><h2>${title}</h2>${sub ? `<p class="sub">${sub}</p>` : ''}${body}</section>`;
   return `${starters.length ? sec(starters.length === 1 ? 'Start with this' : 'Start with these', starters.length === 1 ? 'The one book or article on this topic.' : 'The easiest books and articles on this topic.', `<div class="minis">${starters.map((n) => miniHtml(n.raw)).join('')}</div>`) : ''}
-  ${paths.length ? sec('Read in order', 'Short reading paths that include this topic.', `<div class="pgrid">${paths.map(pcardHtml).join('')}</div>`) : ''}
-  ${qs.length ? sec('Questions people ask', 'Select one to see the pages chosen for it.', `<ul class="qrows">${qs.map((q) => qRow(q, '')).join('')}</ul>`) : ''}
-  ${kids.length ? sec(`Inside ${esc(TOPN(id))}`, 'Narrower subjects.', `<ul class="subs">${kids.map((s) => `<li><a class="subt" href="${esc(topicHref(s.c))}"><span class="subt-n">${esc(TOPN(s.c))}</span><span class="subt-c">${pl(s.n, 'page')}</span></a></li>`).join('')}</ul>`) : ''}
+  ${paths.length ? sec('Read in order', 'Reading paths that include this topic.', `<div class="pgrid">${paths.map(pcardHtml).join('')}</div>`) : ''}
+  ${qs.length ? sec('Questions people ask', 'Each opens the pages chosen to answer it.', `<ul class="qrows">${qs.map((q) => qRow(q, '')).join('')}</ul>`) : ''}
+  ${kids.length ? sec(`Inside ${esc(TOPN(id))}`, 'Smaller subjects within it.', `<ul class="subs">${kids.map((s) => `<li><a class="subt" href="${esc(topicHref(s.c))}"><span class="subt-n">${esc(TOPN(s.c))}</span><span class="subt-c">${pl(s.n, 'page')}</span></a></li>`).join('')}</ul>`) : ''}
   <section class="tsec" id="everything"><h2>Everything on this topic</h2><p class="sub">Choose a level. Within each level, books and articles come before individual pages.</p>
   <div class="seg" role="group" aria-label="Level">${levels.map((l) => `<button data-tl="${esc(id)}|${esc(l.lv)}" aria-pressed="${l.lv === cur}"${l.es.length ? '' : ' disabled'}>${esc(levelLabel(l.lv))}<i>${entryCount(l.es)}</i></button>`).join('')}</div>
   <ul class="lrows">${rows || '<li class="callout">Nothing at this level yet.</li>'}</ul>
@@ -699,16 +699,16 @@ function entityStageHtml(e) {
   return pageStage({ kind: e.kind, title: e.name, lede: e.sub, back: [pageHref('start-' + c.slide.k), 'Back to ' + c.slide.label] });
 }
 function entityBodyHtml(e) {
-  let rel = [], head = 'Learn more', empty = 'No pages for this name in the catalog yet.';
+  let rel = [], head = 'Pages about this', empty = 'No pages for this name in the catalog yet.';
   const strip = (s) => s.replace(/^(The |Prophet |Imam )/, '').replace(/\s*\(.*\)/, '');
   const firstRecords = (res) => [...res.exact, ...res.related].map((x) => (x.kind === 'cluster' ? x.items[0].record : x.record));
   if (e.type === 'scholar') { rel = firstRecords(engine.search('', { scholar: e.sid })).slice(0, 6); head = 'Works by this author'; empty = 'No works by this author in the catalog yet.'; }
   else if (e.type === 'book' && e.rid) { const r = rec(e.rid); rel = [r, ...RECS.filter((x) => x.id !== r.id && x.raw.headings.some((h) => (r.headings || []).includes(h))).slice(0, 5).map((x) => x.raw)]; head = 'This book, and related pages'; }
-  else { const res = engine.search(strip(e.name)); rel = (res.exact.length ? firstRecords({ exact: res.exact, related: [] }) : firstRecords(res)).slice(0, 6); }
+  else { head = `Pages about ${e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '')}`; const res = engine.search(strip(e.name)); rel = (res.exact.length ? firstRecords({ exact: res.exact, related: [] }) : firstRecords(res)).slice(0, 6); }
   const q = e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '');
   const c = ctxFor(e.k), g = c.peers, i = g.indexOf(e.k), p = E[g[(i + g.length - 1) % g.length]], n = E[g[(i + 1) % g.length]];
   return `<div class="egrid"><div><div class="bio"><h3>Short bio <span class="pill">Placeholder</span></h3><p class="mute" style="margin:0">A short, sourced bio will go here once it has been written and reviewed.</p></div>
-  <div style="margin-top:1rem"><a class="btn solid big" href="${esc(qHref(q))}" style="width:100%;justify-content:center">Search more for “${esc(q)}”</a></div></div>
+  <div style="margin-top:1rem"><a class="btn solid big" href="${esc(qHref(q))}" style="width:100%;justify-content:center">Search the catalog for “${esc(q)}”</a></div></div>
   <section><h2 class="eh">${head} <span>${rel.length}</span></h2>${rel.length ? `<ul class="lrows" style="margin-top:.8rem">${rel.map((r) => rowHtml(r)).join('')}</ul>` : `<p class="mute">${empty}</p>`}</section></div>
   ${g.length > 1 ? `<div class="enav"><a href="${esc(pageHref(p.k))}"><small>Previous</small>${esc(p.name)}</a><a class="nx" href="${esc(pageHref(n.k))}"><small>Next</small>${esc(n.name)}</a></div>` : ''}`;
 }

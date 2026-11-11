@@ -113,3 +113,14 @@ One narrow card instead of a side column plus four boxed options. Four underline
 ## About (second pass)
 
 Shorter and with one clear lead. The page opens with a single serif statement ("ShiaLib is a catalog, not a library") and a short paragraph, then three promise cards and the AI-preparation note. "What is included" is four labelled cells in two columns, and the websites list is dropped in favour of a link to Sources. "How results are chosen" gives the headline rule and keeps the five steps inside an expandable row. Privacy is a short checklist. When no public scope document is set, the page says a fuller written scope will be linked once public, rather than naming a file path.
+
+## Copy and voice
+
+Plain, direct and specific; every line should tell a visitor something they can use.
+
+- Say what is there, with a number when there is one ("Ninety questions…", "Seven stops…"). No "one idea at a time", "ways to learn", "more ways in".
+- A page lede says something the title does not. Section subtitles say what a click gives you ("Each one opens a short list of pages chosen to answer it").
+- Calls to action name the destination or the outcome ("All topics", "See the sources"), not "Learn more" or "Click here".
+- Draft notices are one sentence and say what was not reviewed.
+- Placeholders that were notes to the owner ("Sample lists for the layout…") do not appear on the public pages. Developer wording (file names, config keys) never does.
+- The tour slides and name pages are draft content written for layout. Their wording is for the owner to replace.
