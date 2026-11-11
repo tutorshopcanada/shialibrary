@@ -338,12 +338,12 @@ function levelPhrase(st) {
   return st.n && st.lv[top] / st.n > 0.5 ? `Mostly ${labels[top]}` : 'A mix of levels';
 }
 function sourcePanel(s) {
-  const st = sourceStats(s.id), url = safeUrl(s.base_url), first = sourceFirstPage(s.id), tagNames = Object.entries(st.tags).sort((a, b) => b[1] - a[1]).map(([t]) => tagLabel(t));
+  const st = sourceStats(s.id), url = safeUrl(s.base_url), first = sourceFirstPage(s.id);
   return `<article class="scard"><div class="sc-top"><h3 dir="auto">${esc(srcName(s))}</h3><p class="sc-dom">${esc(s.id)}</p></div>
    <p class="sc-d">${esc(WHAT[s.id] || '')}</p>
-   <div class="sc-n"><p><b>${st.n.toLocaleString()}</b> ${st.n === 1 ? 'page' : 'pages'} · ${esc(tagNames.join(', '))}</p>
+   <div class="sc-n"><p><b>${st.n.toLocaleString()}</b> ${st.n === 1 ? 'page' : 'pages'}</p>
     <div class="lv ladder"><div class="bars" aria-hidden="true">${st.lv.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div></div><p class="sc-l">${esc(levelPhrase(st))}</p></div>
-   ${first ? `<p class="sc-f"><span>Good first page</span>${extLink(first.url, '', `${esc(first.title)} <span aria-hidden="true">↗</span>`)}</p>` : ''}
+   <p class="sc-f"><span>Good first page</span>${first ? extLink(first.url, '', `${esc(first.title)} <span aria-hidden="true">↗</span>`) : '<em>No beginner-level pages on this website</em>'}</p>
    <div class="sc-a"><a class="btn solid" href="${esc(searchHref({ ...blank(), source: s.id }))}">Browse ${st.n.toLocaleString()} pages</a>${url ? `<a class="sc-v" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit site <span aria-hidden="true">↗</span><span class="sr"> (${esc(s.id)}, opens in a new tab)</span></a>` : ''}</div></article>`;
 }
 function sourcesHtml() {
