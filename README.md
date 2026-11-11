@@ -18,7 +18,7 @@ is hosted or republished here, and the search never writes answers.
 | `data/questions.yaml`, `data/paths/` | Starter questions and learning paths (drafts) |
 | `scripts/validate.py` | Checks every record and reference |
 | `scripts/build_index.py` | Builds `site/data/index.json` |
-| `site/` | The static search page |
+| `site/` | The static site (search, Start here, the tour). See [docs/design.md](docs/design.md) |
 
 ## Use
 

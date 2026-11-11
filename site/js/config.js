@@ -2,8 +2,7 @@
 
 export const SITE = {
   // Shown in the header and page titles.
-  // TODO(owner): choose the public name of the tool.
-  name: 'Shia Resource Finder',
+  name: 'ShiaLib',
 
   // "Report a wrong or broken link". Needs no server: it opens the visitor's
   // email app or a pre-filled GitHub issue.
@@ -63,3 +62,51 @@ export function externalSearchHref(query) {
   if (!q || !SITE.externalSearch) return '';
   return SITE.externalSearch.url + encodeURIComponent(q);
 }
+
+/**
+ * Link for general feedback or a waitlist request. Same no-server approach as reportHref:
+ * the visitor's email app, or a pre-filled GitHub issue. Returns '' when not set up.
+ * @param {'waitlist'|'feedback'|'link'} kind
+ * @param {string} message  what the visitor typed (may be empty)
+ */
+export function feedbackHref(kind, message) {
+  if (!reportConfigured()) return '';
+  const subject = { waitlist: `${SITE.name}: add me to the waitlist`, feedback: `${SITE.name}: feedback`, link: `${SITE.name}: link problem`, source: `${SITE.name}: website suggestion` }[kind] || `${SITE.name}: feedback`;
+  const body = String(message || '').trim() || (kind === 'waitlist' ? 'Please add me to the waitlist.' : '');
+  if (SITE.report.kind === 'github') {
+    const base = SITE.report.target.replace(/\/+$/, '');
+    return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+  return `mailto:${SITE.report.target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+/**
+ * "Start here" curation. Owner-editable. Every id must be a record in the catalog; missing ids are
+ * skipped (and logged in the browser console) so a rename never breaks the page.
+ * Wording on the page that comes from these lists is a draft until the owner reviews it.
+ */
+export const START = {
+  // Step 2 of "Start here": the introductions, in reading order.
+  shelf: [
+    'al-islam-brief-introduction-to-islam',
+    'al-islam-discovering-islam',
+    'al-islam-discovering-shii-islam',
+    'al-islam-prophet-muhammad-brief-biography',
+    'al-islam-holy-quran-some-basic-facts',
+    'al-islam-imamate-and-the-imams',
+    'al-islam-nahjul-balagah-revisited-imam-ali',
+  ],
+  // Step 3: the plan. `ids: 'shelf'` means "the introductions".
+  stages: [
+    { title: 'Foundations', note: 'Start with the introductions above.', ids: 'shelf' },
+    { title: 'Beliefs and the Imams in depth', note: 'The same ideas, one level deeper.', ids: [
+      'al-islam-islamic-teachings-in-brief', 'al-islam-basic-teachings-of-islam', 'al-islam-lets-learn-about-divine-justice',
+      'al-islam-brief-history-fourteen-infallibles', 'al-islam-imamate-wilayah-part-1'] },
+    { title: 'Living it: prayer', note: 'How prayer works, then the detailed rulings.', ids: [
+      'sistani-west-salat-introduction', 'sistani-west-salat-general-rules', 'sistani-qa-congregational-prayers'] },
+    { title: 'Remembrance: Karbala and Ashura', note: 'The events, their message, then the narrations.', ids: [
+      'al-islam-tears-for-karbala', 'al-islam-karbala-chain-of-events', 'al-islam-from-resolution-to-revolution', 'thaqalayn-kamil-al-ziyarat'] },
+    { title: 'The source texts', note: 'Primary collections, for when you are ready.', ids: [
+      'al-islam-preface-nahjul-balaghah', 'thaqalayn-nahj-al-balagha', 'thaqalayn-al-kafi-vol-1'] },
+  ],
+};
