@@ -1,5 +1,0 @@
-# Cloudflare Pages reads this file. It publishes only the search page (the site folder),
-# not the rest of the repository.
-name = "shialibrary"
-pages_build_output_dir = "site"
-compatibility_date = "2026-11-01"
