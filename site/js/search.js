@@ -57,6 +57,17 @@ export const DEFAULT_CONFIG = {
     labels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },
   },
   grouping: { min_items: 3 },
+  // Layer 3: "related by meaning" (site/js/semantic.js). It is consulted only when keyword search is weak.
+  layer3: {
+    enabled: true,
+    max_exact: 2,          // weak = fewer than this many exact keyword matches
+    min_similarity: 0.46,  // cosine similarity the best record must reach, else nothing is shown
+    relative_floor: 0.82,  // other records must reach this fraction of the best similarity
+    boost_strength: 0.2,   // how much the beginner-first and book-first boosts count for in meaning ranking (0 = not at all)
+    max_related: 30,       // size of the fused "Related results" list
+    fusion_k: 20,          // reciprocal-rank-fusion constant (higher = flatter blend of the two rankings)
+    candidates: 80,        // how many nearest records the semantic layer hands over before filtering
+  },
 };
 
 const FIELDS = ['title', 'sample_questions', 'headings', 'scholars', 'description',
@@ -627,10 +638,80 @@ export function createEngine(index) {
 
     result.exact = cluster(exact, f.section);
     result.related = cluster(related, f.section);
+    result.relatedHits = related; // ungrouped, in order: Layer 3 fuses its results with these
     result.counts.exact = exact.length;
     result.counts.related = related.length;
     result.counts.total = exact.length + related.length;
     return result;
+  }
+
+  const docIndex = new Map(docs.map((d, i) => [d.record.id, i]));
+
+  /** True when keyword search is weak enough that Layer 3 (meaning) should be consulted. */
+  function needsSemantic(result) {
+    const L3 = config.layer3;
+    if (!L3 || !L3.enabled || result.mode !== 'search') return false;
+    return result.fallback || result.counts.exact < L3.max_exact;
+  }
+
+  /**
+   * Fold Layer 3 into a search result. `ranked` is [{ id, score }] best first (cosine similarity from
+   * semantic.js). The "Related results" group becomes keyword-related and meaning-related records fused by
+   * reciprocal rank (a record found both ways rises); records found only by meaning carry
+   * `viaMeaning: true` so the page can label them. Exact matches are untouched; filters still apply.
+   * Returns a copy: `related` and `counts.related` replaced, plus `meaningIds` and `meaningOnly`.
+   */
+  function addSemantic(result, ranked) {
+    const L3 = config.layer3;
+    const out = { ...result, meaningIds: [], meaningOnly: false };
+    if (!L3 || !L3.enabled || !ranked || !ranked.length) return out;
+    const best = ranked[0].score;
+    if (best < L3.min_similarity) return out;
+    const f = result.filters;
+    const boost = result.order === 'deeper' ? config.ranking.deeper_boost : config.ranking.level_boost;
+    const gran = config.ranking.granularity_boost || {};
+    const floor = Math.max(L3.min_similarity, best * L3.relative_floor);
+    // Level and book-over-question boosts count for less here than in keyword ranking: similarity is already a fine signal.
+    const strength = Number(L3.boost_strength) >= 0 ? Number(L3.boost_strength) : 0.2;
+    const exactIds = new Set(flatten(result.exact).map((r) => r.id));
+    const keyword = result.relatedHits || [];
+    const kwRank = new Map(keyword.map((h, i) => [h.record.id, i + 1]));
+
+    const sem = [];
+    out.counts = { ...result.counts, tags: { ...result.counts.tags } };
+    for (const { id, score } of ranked.slice(0, L3.candidates)) {
+      if (score < floor) break;
+      if (exactIds.has(id)) continue;
+      const doc = docs[docIndex.get(id)];
+      if (!doc || !passesFilters(doc, f, true)) continue;
+      const tag = doc.record.content_tag;
+      if (!kwRank.has(id)) out.counts.tags[tag] = (out.counts.tags[tag] || 0) + 1;
+      if (f.tag && tag !== f.tag) continue;
+      sem.push({ record: doc.record, similarity: score, exact: false, coverage: 0, viaMeaning: true,
+        score: score * (1 + strength * ((Number(boost[doc.record.level]) || 1) * (Number(gran[doc.record.granularity]) || 1) - 1)) });
+    }
+    sem.sort((a, b) => b.score - a.score);
+    const semRank = new Map(sem.map((h, i) => [h.record.id, i + 1]));
+
+    const K = Number(L3.fusion_k) || 20;
+    const byId = new Map();
+    for (const h of keyword) byId.set(h.record.id, { ...h });
+    for (const h of sem) {
+      const cur = byId.get(h.record.id);
+      if (cur) { cur.viaMeaning = true; cur.similarity = h.similarity; } else byId.set(h.record.id, { ...h });
+    }
+    const fused = [...byId.values()].map((h) => {
+      const k = kwRank.get(h.record.id), s = semRank.get(h.record.id);
+      return { ...h, fused: (k ? 1 / (K + k) : 0) + (s ? 1 / (K + s) : 0), viaKeywords: !!k };
+    }).sort((a, b) => b.fused - a.fused);
+    const kept = fused.slice(0, L3.max_related || 30);
+    out.related = cluster(kept, f.section);
+    out.counts.related = kept.length;
+    out.counts.total = out.counts.exact + kept.length;
+    out.meaningIds = kept.filter((h) => h.viaMeaning && !h.viaKeywords).map((h) => h.record.id);
+    out.meaningOnly = !!result.fallback && kept.length > 0;
+    if (out.meaningOnly) { out.layer = 3; out.fallback = false; out.emptyTopic = null; }
+    return out;
   }
 
   /** Flatten grouped entries back to a plain list of records (used by the eval runner). */
@@ -646,7 +727,7 @@ export function createEngine(index) {
   return {
     config, records, headings, scholars, sources, questions, paths,
     recordById, headingById, scholarById, sourceById, pathById,
-    search, flatten, analyze,
+    search, flatten, analyze, needsSemantic, addSemantic,
     buildDate: index.build_date || '',
     vocabularyDraft: !!index.vocabulary_draft,
   };
