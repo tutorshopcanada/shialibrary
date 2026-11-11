@@ -30,5 +30,9 @@ jobs:
         run: python3 scripts/validate.py
       - name: Build search index
         run: python3 scripts/build_index.py
+      - name: Check Layer 3 vectors are current and the tokenizer matches
+        run: |
+          node scripts/build_vectors.mjs --check
+          node scripts/test_semantic.mjs
       - name: Run search evaluation
         run: node scripts/eval_search.mjs

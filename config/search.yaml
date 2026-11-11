@@ -144,3 +144,18 @@ grouping:
   # When at least this many items (e.g. Q&A) from the same section match, they
   # are collapsed under the section, best match first, with an expand control.
   min_items: 3
+
+# ---------------------------------------------------------------------------
+# Layer 3: "related by meaning" (site/js/semantic.js). Consulted only when keyword search is weak.
+# A small open-source model measures similarity between the query and each record on the visitor's own
+# device. It never writes text. Vectors are built by scripts/build_vectors.mjs.
+# ---------------------------------------------------------------------------
+layer3:
+  enabled: true
+  max_exact: 2          # weak = fewer than this many exact keyword matches
+  min_similarity: 0.46  # the best record must reach this cosine similarity, else nothing is shown
+  relative_floor: 0.82  # other records must reach this fraction of the best similarity
+  boost_strength: 0.2   # how much the beginner-first and book-first boosts count for in meaning ranking (0 = not at all)
+  max_related: 30       # size of the fused "Related results" list
+  fusion_k: 20          # reciprocal-rank-fusion constant (higher = flatter blend of keyword and meaning)
+  candidates: 80        # nearest records handed over before filtering

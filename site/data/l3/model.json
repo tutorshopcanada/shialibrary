@@ -1,0 +1,11 @@
+{
+  "model": "minishlab/potion-base-4M",
+  "licence": "MIT",
+  "source": "https://huggingface.co/minishlab/potion-base-4M",
+  "dim": 128,
+  "vocab_size": 29528,
+  "unk_token": "[UNK]",
+  "quantisation": "int8 per row, float32 scale",
+  "max_quantisation_error": 0.20517730712890625,
+  "how_it_works": "text -> lower-case word pieces -> average of their vectors -> unit length"
+}
