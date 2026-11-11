@@ -1,4 +1,4 @@
 Layer 3 similarity model: minishlab/potion-base-4M (MIT licence), by Minish Lab,
 distilled from BAAI/bge-base-en-v1.5 (MIT licence). https://huggingface.co/minishlab/potion-base-4M
-The files here are an 8-bit-quantised copy of its token vectors and vocabulary.
+The files here are a pruned, 4-bit-quantised copy of its token vectors, plus its vocabulary.
 The model only measures similarity between a query and catalog records. It writes no text.

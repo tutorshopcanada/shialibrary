@@ -12,8 +12,18 @@
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <noscript><style>.loading{display:none}</style></noscript>
+  <noscript><style>.loading{display:none}html:not(.art) .stage>.hero-art,html:not(.art) .rs::before{display:block}</style></noscript>
   <link rel="preload" href="data/index.json" as="fetch" crossorigin="anonymous">
+  <script>
+    /* Show the decorative artwork only after the catalog has loaded (or after 6 s at the latest). */
+    (function () {
+      var d = document.documentElement, done = false;
+      function go() { if (done) return; done = true; if (mo) mo.disconnect(); d.classList.add('art'); }
+      var mo = window.MutationObserver && new MutationObserver(function () { var n = document.getElementById('n'); if (n && n.textContent.trim()) go(); });
+      if (mo) mo.observe(d, { childList: true, subtree: true, characterData: true });
+      setTimeout(go, 6000);
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#top" id="skip">Skip to content</a>

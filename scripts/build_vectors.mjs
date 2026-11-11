@@ -26,6 +26,22 @@ const texts = index.records.map(text);
 const hash = crypto.createHash('sha256').update(index.records.map((r, i) => r.id + '\t' + texts[i]).join('\n')).digest('hex');
 
 const storedPath = path.join(L3, 'records.json');
+
+// The word pieces the catalog uses must all have a vector in the (pruned) model files; see
+// scripts/export_static_model.py. Returns the missing piece ids, and lists the used ones for that script.
+const tokenizer = createSemantic({
+  meta: JSON.parse(fs.readFileSync(path.join(L3, 'model.json'), 'utf8')),
+  vocabText: fs.readFileSync(path.join(L3, 'vocab.txt'), 'utf8'),
+  tokenVecs: buf('tokens.q4'), tokenScales: buf('tokens.scale'), tokenKeep: buf('tokens.keep'),
+});
+const keepBits = new Uint8Array(buf('tokens.keep'));
+const used = [...new Set(texts.flatMap((t) => tokenizer.tokenIds(t)))].sort((a, b) => a - b);
+const missing = used.filter((id) => !(keepBits[id >> 3] & (1 << (id & 7))));
+const usedPath = path.join(root, 'scripts/fixtures/l3_used_pieces.json');
+const missingMsg = `${missing.length} word pieces used by the catalog have no vector. Run: python3 scripts/export_static_model.py && node scripts/build_vectors.mjs`;
+if (check) {
+  if (missing.length) { console.error(missingMsg); process.exit(1); }
+}
 if (check) {
   const stored = fs.existsSync(storedPath) ? JSON.parse(fs.readFileSync(storedPath, 'utf8')) : null;
   if (!stored || stored.text_hash !== hash) {
@@ -36,11 +52,9 @@ if (check) {
   process.exit(0);
 }
 
-const sem = createSemantic({
-  meta: JSON.parse(fs.readFileSync(path.join(L3, 'model.json'), 'utf8')),
-  vocabText: fs.readFileSync(path.join(L3, 'vocab.txt'), 'utf8'),
-  tokenVecs: buf('tokens.i8'), tokenScales: buf('tokens.scale'),
-});
+fs.writeFileSync(usedPath, JSON.stringify(used) + '\n');
+if (missing.length) { console.error(missingMsg); process.exit(1); }
+const sem = tokenizer;
 let empty = 0;
 const vectors = texts.map((t) => { const v = sem.embed(t); if (!v) empty++; return v; });
 const { q, s } = sem.quantise(vectors);

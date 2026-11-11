@@ -5,7 +5,11 @@
   "dim": 128,
   "vocab_size": 29528,
   "unk_token": "[UNK]",
-  "quantisation": "int8 per row, float32 scale",
-  "max_quantisation_error": 0.20517730712890625,
+  "quantisation": "4-bit signed per row, float16 scale",
+  "token_bits": 4,
+  "kept_rows": 9037,
+  "low_ids_kept": 6000,
+  "pruned_noise": 2085.752,
+  "max_quantisation_error": 3.343792676925659,
   "how_it_works": "text -> lower-case word pieces -> average of their vectors -> unit length"
 }

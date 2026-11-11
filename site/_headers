@@ -1,0 +1,20 @@
+# Cloudflare Pages response headers. Cloudflare compresses text files (brotli/gzip) automatically.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# File names never change, so cache for a week and refresh quietly in the background.
+/fonts/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Code and the catalog change on every deploy: cheap revalidation, never block on the network.
+/js/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+/css/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+/data/index.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
+/data/l3/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800

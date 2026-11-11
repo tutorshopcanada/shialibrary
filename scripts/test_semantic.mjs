@@ -12,7 +12,7 @@ const buf = (n) => { const b = fs.readFileSync(path.join(L3, n)); return b.buffe
 const sem = createSemantic({
   meta: JSON.parse(fs.readFileSync(path.join(L3, 'model.json'), 'utf8')),
   vocabText: fs.readFileSync(path.join(L3, 'vocab.txt'), 'utf8'),
-  tokenVecs: buf('tokens.i8'), tokenScales: buf('tokens.scale'),
+  tokenVecs: buf('tokens.q4'), tokenScales: buf('tokens.scale'), tokenKeep: buf('tokens.keep'),
 });
 const cases = JSON.parse(fs.readFileSync(path.join(root, 'scripts/fixtures/tokenizer_cases.json'), 'utf8'));
 let bad = 0;

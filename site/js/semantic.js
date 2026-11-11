@@ -6,8 +6,10 @@
 // unit length. Record vectors are computed at build time with this same code (scripts/build_vectors.mjs),
 // so a query is compared with the records on the visitor's own device. Nothing typed leaves the device.
 //
-// Files (self-hosted under data/l3/): model.json, vocab.txt, tokens.i8 + tokens.scale (the word-piece
-// vectors, 8-bit), records.i8 + records.scale + records.json (the catalog's vectors).
+// Files (self-hosted under data/l3/): model.json, vocab.txt (the full vocabulary, so word-piece cutting is
+// identical to the reference tokenizer), tokens.q4 + tokens.scale + tokens.keep (vectors for the kept word
+// pieces only: 4-bit, float16 scale per row, and a bitmap saying which pieces have a row; a piece without a
+// row contributes nothing), records.i8 + records.scale + records.json (the catalog's vectors).
 
 const WS = /[\s   -   　]/u;
 const CONTROL = /[\p{Cc}\p{Cf}\p{Cs}\p{Co}\p{Cn}]/u;
@@ -63,13 +65,27 @@ function wordPieces(word, vocab, maxChars = 100) {
   return ids;
 }
 
-export function createSemantic({ meta, vocabText, tokenVecs, tokenScales, recordVecs, recordScales, recordIds }) {
+function half(h) {
+  const e = (h >> 10) & 31, m = h & 1023, sgn = h & 0x8000 ? -1 : 1;
+  if (e === 0) return sgn * m * 2 ** -24;
+  if (e === 31) return m ? NaN : sgn * Infinity;
+  return sgn * (1 + m / 1024) * 2 ** (e - 15);
+}
+
+export function createSemantic({ meta, vocabText, tokenVecs, tokenScales, tokenKeep, recordVecs, recordScales, recordIds }) {
   const dim = meta.dim;
   const vocab = new Map();
   vocabText.split('\n').forEach((t, i) => { if (t !== '' || i < meta.vocab_size) vocab.set(t, i); });
   const i8 = (buf) => (buf instanceof Int8Array ? buf : new Int8Array(buf));
   const f32 = (buf) => (buf instanceof Float32Array ? buf : new Float32Array(buf));
-  const TV = i8(tokenVecs), TS = f32(tokenScales);
+  const u8 = (buf) => (buf instanceof Uint8Array ? buf : new Uint8Array(buf));
+  const TV = u8(tokenVecs), KEEP = u8(tokenKeep);
+  const u16 = new Uint16Array(u8(tokenScales).slice().buffer);
+  const TS = Float32Array.from(u16, half);
+  const half_dim = dim >> 1;
+  // rowOf[pieceId] = row in TV, or -1 when the piece was pruned (no vector)
+  const rowOf = new Int32Array(meta.vocab_size).fill(-1);
+  for (let id = 0, row = 0; id < meta.vocab_size; id++) if (KEEP[id >> 3] & (1 << (id & 7))) rowOf[id] = row++;
   const RV = recordVecs ? i8(recordVecs) : null, RS = recordScales ? f32(recordScales) : null;
 
   /** Token ids for a text; unknown words are dropped (as the model does). */
@@ -82,16 +98,26 @@ export function createSemantic({ meta, vocabText, tokenVecs, tokenScales, record
     return ids;
   }
 
-  /** Unit-length vector for a text, or null when no word is known. */
+  /** Vector for a text (unit length unless some of its pieces were pruned, then slightly shorter), or null when no word is known. */
   function embed(text) {
     const ids = tokenIds(text);
     if (!ids.length) return null;
     const v = new Float32Array(dim);
+    let used = 0, dropped = 0;
     for (const id of ids) {
-      const s = TS[id], o = id * dim;
-      for (let k = 0; k < dim; k++) v[k] += TV[o + k] * s;
+      const row = rowOf[id];
+      if (row < 0) { dropped++; continue; }
+      used++;
+      const s = TS[row], o = row * half_dim;
+      for (let j = 0; j < half_dim; j++) {
+        const b = TV[o + j];
+        v[2 * j] += ((b & 15) - 8) * s;
+        v[2 * j + 1] += ((b >> 4) - 8) * s;
+      }
     }
-    let n = 0;
+    if (!used) return null;
+    let n = dropped * (meta.pruned_noise || 0); // a pruned (rare) piece still dilutes the average, as its own vector would have
+
     for (let k = 0; k < dim; k++) n += v[k] * v[k];
     n = Math.sqrt(n) || 1;
     for (let k = 0; k < dim; k++) v[k] /= n;
@@ -141,7 +167,7 @@ export async function loadSemantic(base, read, onProgress) {
     if (!res.ok) throw new Error(`${url}: HTTP ${res.status}`);
     return kind === 'json' ? res.json() : kind === 'text' ? res.text() : res.arrayBuffer();
   });
-  const names = ['model.json', 'vocab.txt', 'tokens.scale', 'records.json', 'records.scale', 'tokens.i8', 'records.i8'];
+  const names = ['model.json', 'vocab.txt', 'tokens.scale', 'tokens.keep', 'records.json', 'records.scale', 'tokens.q4', 'records.i8'];
   const kinds = { 'model.json': 'json', 'vocab.txt': 'text', 'records.json': 'json' };
   const got = {};
   let done = 0;
@@ -151,7 +177,7 @@ export async function loadSemantic(base, read, onProgress) {
     if (onProgress) onProgress(done / names.length);
   }
   return createSemantic({
-    meta: got['model.json'], vocabText: got['vocab.txt'], tokenVecs: got['tokens.i8'], tokenScales: got['tokens.scale'],
+    meta: got['model.json'], vocabText: got['vocab.txt'], tokenVecs: got['tokens.q4'], tokenScales: got['tokens.scale'], tokenKeep: got['tokens.keep'],
     recordVecs: got['records.i8'], recordScales: got['records.scale'], recordIds: got['records.json'].ids,
   });
 }
