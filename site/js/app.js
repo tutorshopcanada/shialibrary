@@ -362,14 +362,26 @@ function sourceRowsHtml() {
   }).join('')}</ul>`;
 }
 
+const TAG_MEAN = { fiqh: 'Rulings, and questions and answers about them, from Sayyid Sistani or Sayyid Khamenei.', hadith: 'Collections of narrations, such as Al-Kafi and Nahj al-Balagha.', book: 'A whole book, or a volume of one.', article: 'A shorter piece: an essay, a study or a talk.', course: 'A course from a Shia institute.', lecture: 'A recorded lecture.', other: 'Anything that fits none of the above.' };
+const LEVEL_MEAN = ['Written for someone new. No background needed.', 'Assumes you know the basics.', 'Detailed rulings, specialist studies and primary sources.'];
+function guideDemo() {
+  const r = rec('al-islam-discovering-islam') || engine.records.find((x) => x.level === 'beginner' && x.granularity === 'work');
+  if (!r) return '';
+  const authors = (r.authors || []).map(scholarName).join(', ');
+  const c = r.context || {}, ctx = [c.section, c.work].filter(Boolean).map((p) => p.title).join(' · ');
+  const mk = (n) => `<b class="mk" aria-hidden="true">${n}</b>`;
+  return `<div class="anat"><div class="demo" aria-hidden="true" inert><div class="badges">${mk(1)}<span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${mk(2)}${levelDots(r.level)}</div>
+    <h3>${mk(3)}${esc(r.title)}</h3><p class="meta">${mk(4)}${authors ? `By ${esc(authors)} · ` : ''}${esc(sourceName(r.source))}</p>
+    ${r.description ? `<p class="d">${mk(5)}${esc(r.description)}</p>` : ''}<p class="open-d">Open on ${esc(sourceShort(r.source))} ↗</p>${ctx ? `<p class="cfoot">${mk(6)}In context: ${esc(ctx)}</p>` : ''}</div>
+   <ol class="legend"><li><b>Tag.</b> What kind of page it is.</li><li><b>Level.</b> How much you need to know first.</li><li><b>Title.</b> Opens the original page on its own website, in a new tab.</li><li><b>Author and source.</b> Who wrote it and where it is published.</li><li><b>Description.</b> Our own plain summary of what the page covers. It never states a ruling or an answer.</li>${ctx ? '<li><b>In context.</b> The chapter or book the page sits in, with a link to more from it.</li>' : ''}</ol></div>`;
+}
 function guideHtml() {
-  const tags = engine.config.tags;
-  return `<section class="blk" id="howto"><h2>How to read the results</h2><p class="sub">Every result carries a level and a tag, so you know what you are opening before you click.</p>
-  <div class="frame"><div class="how">
-   <div class="hc"><h3>Levels</h3><dl>${levelOrder().map((l, i) => `<dt>${levelDots(l)}</dt><dd>${['Written for someone new. No background needed.', 'Assumes the basics.', 'Detailed rulings, specialist work and primary sources.'][i] || ''}</dd>`).join('')}</dl></div>
-   <div class="hc"><h3>Tags</h3><dl><dt><span class="tag" style="--c:var(--t-fiqh)">${esc(tags.labels.fiqh)}</span></dt><dd>Rulings and Q&amp;A from Sayyid Sistani or Sayyid Khamenei.</dd><dt><span class="tag" style="--c:var(--t-hadith)">${esc(tags.labels.hadith)}</span></dt><dd>Collections of narrations.</dd><dt><span class="tag" style="--c:var(--t-book)">${esc(tags.labels.book)}</span> <span class="tag" style="--c:var(--t-article)">${esc(tags.labels.article)}</span></dt><dd>Introductions, studies and talks.</dd></dl></div>
-   <div class="hc"><h3>Sources</h3><p>${esc(SITE.name)} describes pages and links to them. Every result opens the original on its own website, and the site that publishes it is always named.</p></div>
-  </div></div></section>`;
+  const counts = {}; for (const r of engine.records) counts[r.content_tag] = (counts[r.content_tag] || 0) + 1;
+  const tags = (engine.config.tags.order || Object.keys(engine.config.tags.labels)).filter((t) => counts[t]);
+  return `<section class="tsec"><h2>Anatomy of a result</h2><p class="sub">This is a real page from the catalog. Each part tells you something before you click.</p>${guideDemo()}</section>
+  <section class="tsec"><h2>Levels</h2><p class="sub">Every page has one. Simpler pages are listed first unless you switch the order.</p><dl class="keys">${levelOrder().map((l, i) => `<div><dt>${levelDots(l)}</dt><dd>${esc(LEVEL_MEAN[i] || '')}</dd></div>`).join('')}</dl></section>
+  <section class="tsec"><h2>Tags</h2><p class="sub">The kind of page. Use the tag buttons on a results page to show one kind at a time.</p><dl class="keys">${tags.map((t) => `<div><dt><span class="tag" style="--c:var(--t-${esc(t)})">${esc(engine.config.tags.labels[t])}</span></dt><dd>${esc(TAG_MEAN[t] || '')} <span class="mute">${counts[t].toLocaleString()} ${counts[t] === 1 ? 'page' : 'pages'}</span></dd></div>`).join('')}</dl></section>
+  <section class="tsec"><h2>On a results page</h2><dl class="keys"><div><dt>Exact matches</dt><dd>Your words, or another name for the same topic, appear in the title or in the questions a page answers.</dd></div><div><dt>Related results</dt><dd>These share some of your words or the same topic. They may or may not be what you want.</dd></div><div><dt><span class="pill">Draft</span></dt><dd>A question or path that nobody has reviewed yet.</dd></div></dl></section>`;
 }
 
 const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
@@ -463,7 +475,7 @@ const PG = {
   topics: { kind: 'Topics', title: 'Topics', lede: 'Eight subjects. Each lists its pages from beginner to advanced.', draft: true, next: true, body: topicsHtml },
   paths: { kind: 'Learning paths', title: 'Learning paths', lede: 'Ordered reading lists on one subject, easiest first. Pick a theme, then a path.', draft: true, next: true, body: pathsHtml },
   sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these trusted Shia sources. Nothing else appears.', next: true, body: sourcesHtml },
-  guide: { kind: 'Guide', title: 'How to read the results', lede: 'What the levels and tags mean, so you know what you are opening.', next: true, body: guideHtml },
+  guide: { kind: 'Guide', title: 'How to read the results', lede: 'What each part of a result tells you, before you click it.', next: true, body: guideHtml },
   about: { kind: 'About', title: 'About and scope', lede: 'What the catalog covers, and what it leaves to the original websites.', next: true, body: aboutHtml, noHide: true },
   feedback: { kind: 'Feedback', title: 'Help shape ShiaLib', lede: 'Report a broken link, suggest a website or a topic, or join the waitlist.', next: false, body: feedbackHtml },
 };

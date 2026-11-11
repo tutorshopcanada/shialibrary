@@ -124,3 +124,7 @@ Plain, direct and specific; every line should tell a visitor something they can 
 - Draft notices are one sentence and say what was not reviewed.
 - Placeholders that were notes to the owner ("Sample lists for the layout…") do not appear on the public pages. Developer wording (file names, config keys) never does.
 - The tour slides and name pages are draft content written for layout. Their wording is for the owner to replace.
+
+## Guide
+
+Built around one real result. "Anatomy of a result" shows an actual catalog page with numbered markers (tag, level, title, author and source, description) and a legend beside it; the sample card is decorative and not focusable, and the legend carries the same information as text. Below it, Levels (three rows), Tags (only kinds that exist in the catalog, each with a page count) and "On a results page" (exact matches, related results, the Draft mark). The old Sources card is gone because About covers it.
