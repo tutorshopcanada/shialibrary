@@ -28,7 +28,7 @@ headings:
 - purity
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: 'No individual author is named: the Introduction (https://www.sistani.org/english/book/26890/8476/)
   says the treatise was prepared by the Office of Al-Sayyid Al-Sistani in accordance with his fatwas,
   so authors is empty. Level set to advanced because the Introduction describes a summary of the most

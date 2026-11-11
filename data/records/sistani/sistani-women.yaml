@@ -28,7 +28,7 @@ headings:
 - fiqh
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: 'Level beginner is taken from the Preface (https://www.sistani.org/english/book/26927/8537/):
   written in simple language, mainly for teenage girls. No author or compiler is named and Sayyid Sistani
   is not named on the pages read, so authors is empty and marja: sistani is based on the book being listed

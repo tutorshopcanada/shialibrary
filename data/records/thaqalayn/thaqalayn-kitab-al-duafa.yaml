@@ -13,9 +13,10 @@ source: thaqalayn.net
 url: https://thaqalayn.com/book/17
 language: en
 date: ''
-description: A biographical reference on narrators of Shia hadith and their reliability, shown with an English translation
-  by Tashayyu. The site says it is organised alphabetically and is also known as 'Rijal Ibn al-Ghada'iri' (rijal means
-  the study of narrators). It is not a hadith collection; it is a tool for studying who transmitted hadith.
+description: A biographical reference on narrators of Shia hadith and their reliability, shown with an
+  English translation by Tashayyu. The site says it is organised alphabetically and is also known as 'Rijal
+  Ibn al-Ghada'iri' (rijal means the study of narrators). It is not a hadith collection; it is a tool
+  for studying who transmitted hadith.
 sample_questions:
 - What is Kitab al-Du'afa?
 - What is rijal, the study of hadith narrators?
@@ -26,8 +27,9 @@ headings:
 - hadith-sciences
 access: free
 location: ''
-needs_review: true
-review_note: The page itself describes this as a rijal (narrator-evaluation) work, so it is typed as a book rather than
-  a hadith collection. The page's title says 'Attributed to Ibn al-Ghada'iri' and its text says scholars have disputed
-  the book's authorship; the author link is kept only because the page names him.
+needs_review: false
+review_note: The page itself describes this as a rijal (narrator-evaluation) work, so it is typed as a
+  book rather than a hadith collection. The page's title says 'Attributed to Ibn al-Ghada'iri' and its
+  text says scholars have disputed the book's authorship; the author link is kept only because the page
+  names him.
 cataloged_on: '2026-11-10'

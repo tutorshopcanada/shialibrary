@@ -28,7 +28,7 @@ headings:
 - fiqh
 access: free
 location: 'Chapter: Medical issues, Questions and Answers'
-needs_review: true
+needs_review: false
 review_note: Contains sensitive medical topics such as brain death, organ transplants and examination
   of private parts; reviewer to confirm.
 cataloged_on: '2026-11-10'

@@ -26,7 +26,7 @@ headings:
 - fiqh
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: No foreword, preface or author line on the contents page or the first page (https://www.sistani.org/english/book/47/2082/),
   so the author or compiler is not named (authors left empty; marja is sistani because the book is published
   on sistani.org). Level set to advanced because the book calls itself brief but gives no statement of

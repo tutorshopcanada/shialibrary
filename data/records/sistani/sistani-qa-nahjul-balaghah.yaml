@@ -24,7 +24,7 @@ headings:
 - fiqh
 access: free
 location: 'Q&A topic: Nahjul Balaghah'
-needs_review: true
+needs_review: false
 review_note: The topic is about a book of sayings rather than a legal ruling, so it may not be fiqh; a
   reviewer should confirm the classification.
 cataloged_on: '2026-11-10'

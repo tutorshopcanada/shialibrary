@@ -23,6 +23,6 @@ headings:
 - medical-ethics
 access: free
 location: Medical Issues, question 3
-needs_review: true
+needs_review: false
 review_note: The question text is unclear, so a reviewer should confirm the classification.
 cataloged_on: '2026-11-10'

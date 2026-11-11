@@ -75,3 +75,6 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
 
 ## Owner decision 2026-11-11
 The owner approved everything cataloged from al-islam.org ("anything from al-islam.org is good"). Their needs_review flags were cleared in one change; the review_note text was kept as a record of why each was flagged (level evidence, disputed topics). This does not change the rule for sistani.org, thaqalayn or any other source, which stay flagged for a reviewer.
+
+## Owner decision 2026-11-11 (second)
+The owner also approved everything cataloged from sistani.org and thaqalayn ("anything from sistani.org and thaqalayn is good too"). Their remaining needs_review flags were cleared; review_note text was kept. The sensitive-topic wording rule still applies to new records (describe what is asked, never the ruling), and the second-reader audit fixes stay in place.

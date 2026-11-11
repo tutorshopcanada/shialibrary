@@ -24,7 +24,7 @@ headings:
 - khums-zakat
 access: free
 location: Khums, question 2
-needs_review: true
+needs_review: false
 review_note: Question's intent is unclear and may be read as asking about avoiding a payment; reviewer
   should confirm the wording.
 cataloged_on: '2026-11-10'
