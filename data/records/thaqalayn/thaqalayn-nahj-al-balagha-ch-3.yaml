@@ -15,9 +15,9 @@ language: en
 date: ''
 description: Section 3 of Nahj al-Balagha, "Sayings", with 480 chapters. The link opens its first chapter.
 sample_questions:
-- What does Nahj al-Balagha say about Sayings?
-- What hadith are there about Sayings?
-- Where can I read about Sayings in Nahj al-Balagha?
+- What hadith are there on “Sayings”?
+- What does Nahj al-Balagha say about “Sayings”?
+- Where can I read about “Sayings” in Nahj al-Balagha?
 headings:
 - nahj-al-balagha
 - imam-ali
