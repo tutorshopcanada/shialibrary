@@ -59,3 +59,10 @@ python3 scripts/build_index.py
 node scripts/eval_search.mjs
 python3 -m http.server 8000 --directory site   # then open http://localhost:8000
 ```
+
+## Questions and sources
+
+- **Questions** (`#questions`): six "start with these" newcomer questions, then all 90 with a filter box (partial re-render of `#qlist`, nothing typed is stored) and theme chips (`data-qt`). A closing card sends people to the search box or the source site's own questions.
+- **A question's own page**: typing a curated question (or one of its alternate phrasings, see `isThatQuestion`) shows the question as the page headline, the pages chosen for it (`top_records`), its reading path, related questions, then the other matching pages as compact rows. Broad searches such as "prayer" keep the normal results layout.
+- **Sources** (`#sources`): one panel per approved website with page count, level bar, content-tag counts, "Browse all N pages" (`?source=id`) and a link to the site. Sources not yet in the catalog sit under "On the way" with their status. The About page uses a compact list (`sourceRowsHtml`).
+

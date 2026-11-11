@@ -182,14 +182,6 @@ section.blk{scroll-margin-top:1rem}
 .why{margin:.2rem 0 .6rem;font-weight:500}
 
 /* Sources */
-.srcg{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr))}
-.sr1{background:var(--paper);border-radius:8px;padding:1.2rem 1.25rem;display:flex;flex-direction:column;gap:.5rem}
-.sr1 h3{margin:0;font-size:1.125rem;font-weight:600;letter-spacing:-.025em;line-height:1.25}
-.sr1 p{margin:0;color:var(--mute);font-size:0.875rem;line-height:1.4}
-.sr1 .n{font-size:0.875rem}
-.sr1 .btn{align-self:flex-start;margin-top:auto}
-.sr1.soon{background:transparent;border:1.5px dashed var(--line)}
-.sr1.soon h3{color:var(--mute)}
 
 /* Good reads */
 
@@ -473,10 +465,10 @@ input,textarea,select{font-size:max(16px,1rem)}
 /* Type: tracking follows size (apple-design); numbers align */
 body{letter-spacing:0}
 .lab,.gh p,.meta,.hint,.note,.sh-n,.lvl,.chip i,.pill{letter-spacing:.01em}
-.sh-n,.chip i,.lv .leg,.prog,.shelf-h span,.sr1 .n{font-variant-numeric:tabular-nums}
+.sh-n,.chip i,.lv .leg,.prog,.shelf-h span,.qm{font-variant-numeric:tabular-nums}
 /* Worst-case content (break-ui): long titles and unbroken strings wrap, never push the layout */
 .card h3,.card p.d,.meta,.dt b,.dt small,.row .t,.cl-list a,.tc h3,.prow b,.prow span,.xt b,.xt span,.qc button{overflow-wrap:anywhere}
-.dt,.door,.xt,.card,.tc,.qc,.sr1,.hc{min-width:0}
+.dt,.door,.xt,.card,.tc,.qc,.sp,.hc{min-width:0}
 @media (prefers-contrast:more){:root{--edge:#7a5f33;--line:#b89d70;--mute:#2f3a4c}}
 .prog{flex-wrap:wrap}.bar{width:min(9rem,100%)}
 .stg>*{min-width:0}
@@ -516,7 +508,56 @@ body{letter-spacing:0}
 .minor{margin-left:.8rem;font-size:.875rem}
 .extsearch .btn{margin:.3rem 0}
 .extsearch small{display:block;color:var(--mute);font-size:.875rem}
-.sr1 .state{display:inline-block;font-size:.75rem;font-weight:500;border-radius:99px;padding:.05rem .6rem;background:var(--frame);color:var(--mute);align-self:flex-start}
+/* Questions */
+.state{display:inline-block;font-size:.75rem;font-weight:500;border-radius:99px;padding:.1rem .65rem;background:var(--frame);color:var(--mute);white-space:nowrap}
+.state.ok{background:color-mix(in srgb,var(--t-fiqh) 16%,transparent);color:var(--ink)}
+.qfeats,.qrows{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.qfeats{grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:8px}
+.qfeat,.qrow{display:flex;flex-direction:column;gap:.2rem;min-width:0;min-height:2.75rem;background:var(--paper);border:1px solid var(--edge);border-radius:12px;padding:.85rem 1.1rem;text-decoration:none;color:inherit}
+.qfeat{min-height:5.5rem;justify-content:space-between}
+.qq{font-family:'Instrument Serif',Georgia,serif;font-size:1.375rem;line-height:1.2;letter-spacing:-.01em}
+.qt{font-weight:500;line-height:1.35;overflow-wrap:anywhere}
+.qm{font-size:.75rem;color:var(--mute)}
+.qrows{grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr))}
+.qtools{display:grid;gap:.8rem;margin:0 0 1rem}
+.qfind{position:relative;max-width:26rem}
+.qfind svg{position:absolute;left:.9rem;top:50%;width:1.1rem;height:1.1rem;transform:translateY(-50%);color:var(--mute);pointer-events:none}
+.qfind input{width:100%;min-height:2.75rem;border:1px solid var(--edge);background:var(--paper);color:var(--ink);border-radius:12px;padding:.5rem .9rem .5rem 2.6rem;font:inherit;font-size:1rem}
+.qfind input:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.qcount{margin:0 0 .7rem;font-size:.875rem;color:var(--mute)}
+.qask,.scope{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;margin-top:2.6rem;padding:1.3rem 1.4rem;border-radius:16px;color:#fff;background:linear-gradient(135deg,#143b63,#1d7f86)}
+.scope{color:var(--ink);background:var(--paper);border:1px solid var(--edge)}
+.qask h3,.scope h3{margin:0 0 .3rem;font-size:1.125rem;font-weight:600;letter-spacing:-.02em}
+.qask p,.scope p{margin:0;max-width:34rem;font-size:.875rem;line-height:1.5;opacity:.92}
+.scope p{opacity:1;color:var(--mute)}
+.qask-b,.scope-b{display:flex;flex-wrap:wrap;gap:.5rem}
+.qask .btn.line{color:#fff;border-color:rgba(255,255,255,.5);background:transparent}
+.gt{display:flex;align-items:baseline;gap:.5rem;margin:1.4rem 0 0;font-size:1rem;font-weight:600;letter-spacing:-.015em}
+.gt span{font-size:.875rem;font-weight:400;color:var(--mute)}
+.pgrid.one{grid-template-columns:minmax(0,34rem)}
+/* Sources */
+.ssum{display:flex;flex-wrap:wrap;gap:.2rem 1.4rem;margin:0 0 1.4rem;font-size:.875rem;color:var(--mute)}
+.ssum b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.sps{display:grid;gap:8px}
+.sp{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:1.4rem 2rem;background:var(--paper);border:1px solid var(--edge);border-radius:16px;padding:1.4rem 1.5rem;min-width:0}
+.sp-top{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}
+.sp h3{margin:0;font-size:1.375rem;font-weight:600;letter-spacing:-.03em;line-height:1.2}
+.sp-d{margin:.6rem 0 0;line-height:1.5}
+.sp-c{margin:.5rem 0 0;font-size:.875rem;color:var(--mute);line-height:1.45}
+.sp-c b{color:var(--ink);font-weight:500}
+.sp-acts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
+.sp-side{display:grid;gap:.9rem;align-content:start}
+.sp-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0}
+.sp-tags .tag{font-size:.75rem}
+.soon-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.soon-list li{display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center;justify-content:space-between;border:1.5px dashed var(--line);border-radius:12px;padding:.8rem 1.1rem}
+.soon-list li>div{display:grid;gap:.1rem;min-width:0;flex:1 1 16rem}
+.soon-list b{font-weight:600}
+.soon-list span:not(.state){font-size:.875rem;color:var(--mute)}
+@media (max-width:760px){.sp{grid-template-columns:minmax(0,1fr)}.qask,.scope{padding:1.1rem}}
+@media (hover:hover) and (pointer:fine){.qfeat:hover,.qrow:hover{background:var(--hi)}}
+.qfeat:active,.qrow:active{transform:scale(.99)}
+.qfeat:focus-visible,.qrow:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .prose{max-width:44rem}
 .prose h2{margin-top:2.4rem}.prose ul{padding-left:1.2rem;margin:0 0 1rem}.prose li{margin-bottom:.5rem}
 .prose p{margin:0 0 1rem}
@@ -596,3 +637,4 @@ noscript .callout{margin-top:1rem}
 .related{margin-top:3rem}
 .related>h2{font-size:1.375rem;letter-spacing:-.03em;margin:0 0 1rem;font-weight:600}
 .seg button:disabled{opacity:.45;cursor:default}
+.sps+.tsec{margin-top:2.6rem}

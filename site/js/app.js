@@ -10,7 +10,7 @@
 // Catalog text is always escaped with esc() before it is put in a template, and links only ever
 // become clickable when they are http(s) (safeUrl). Nothing the visitor types is stored.
 
-import { createEngine } from './search.js';
+import { createEngine, normalize as textNorm } from './search.js';
 import { SITE, START, reportConfigured, reportHref, feedbackHref, externalSearchHref } from './config.js';
 import { TOUR, TOUR_DRAFT } from './tour.js';
 
@@ -24,7 +24,7 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const view = $('#view'), input = $('#q');
 let engine = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
 let route = { t: 'home' }, lastSlide = null, firstLoad = true, lastHref = '';
-const ui = { limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '' };
+const ui = { limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
 
 // ---------------------------------------------------------------------------
 // URL state
@@ -189,6 +189,7 @@ const NEXT = {
   topic: ['Want a guided reading order?', 'Follow a learning path', 'paths'],
   paths: ['Curious where these pages come from?', 'See our sources', 'sources'],
   path: ['Want more reading orders?', 'More learning paths', 'paths'],
+  question: ['Have a different question?', 'Browse common questions', 'questions'],
   sources: ['Not sure what a level or tag means?', 'How to read the results', 'guide'],
   guide: ['Ready to begin?', 'Start here', 'beginners'],
   about: ['Ready to begin?', 'Start here', 'beginners'],
@@ -227,15 +228,43 @@ function planHtml(sd) {
   }).join('')}</ol></div>`;
 }
 
-function questionsHtml() {
+function qGroups() {
   const g = {};
   engine.questions.forEach((q) => { (g[topOf((q.headings || [])[0] || 'new-to-shia-islam')] ||= []).push(q); });
-  const tops = topHeadings().filter((h) => g[h.id]).sort((a, b) => g[b.id].length - g[a.id].length);
-  return `<section class="blk" id="questions"><h2>Common questions</h2><p class="sub">Questions newcomers ask, grouped by theme. Each opens the pages chosen for it.</p>
-  <div class="frame"><div class="qg">${tops.map((h) => {
-    const l = g[h.id], open = ui.openG[h.id], shown = open ? l : l.slice(0, 4);
-    return `<div class="qc"><h3 class="qh">${esc(TOPN(h.id))}</h3><ul>${shown.map((q) => `<li><a class="qa" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a></li>`).join('')}</ul>${l.length > 4 ? `<button class="more" data-g="${esc(h.id)}">${open ? 'Show fewer' : `See all ${l.length}`}</button>` : ''}</div>`;
-  }).join('')}</div></div></section>`;
+  const tops = topHeadings().filter((h) => g[h.id]).sort((x, y) => g[y.id].length - g[x.id].length);
+  return { g, tops };
+}
+function qMeta(q) {
+  const n = (q.top_records || []).filter((id) => rec(id)).length;
+  return [n ? pl(n, 'page') : '', q.path && engine.pathById.get(q.path) ? 'reading path' : ''].filter(Boolean).join(' · ');
+}
+const qRow = (q, theme) => `<li><a class="qrow" href="${esc(qHref(q.question))}"><span class="qt" dir="auto">${esc(q.question)}</span><span class="qm">${esc([theme, qMeta(q)].filter(Boolean).join(' · '))}</span></a></li>`;
+function qListHtml() {
+  const { g, tops } = qGroups(), f = textNorm(ui.qfilter).split(' ').filter(Boolean);
+  if (f.length) {
+    const hits = engine.questions.filter((q) => { const hay = textNorm([q.question, ...(q.alt_phrasings || [])].join(' ')); return f.every((w) => hay.includes(w)); });
+    return hits.length
+      ? `<p class="qcount" role="status">${pl(hits.length, 'question')} match “${esc(ui.qfilter.trim())}”.</p><ul class="qrows">${hits.map((q) => qRow(q, TOPN(topOf((q.headings || [])[0] || 'new-to-shia-islam')))).join('')}</ul>`
+      : `<div class="callout" role="status"><h3 class="h">No question like that yet</h3><p class="mute" style="margin:0">Try fewer words, or ask it in your own words with the button below.</p></div>`;
+  }
+  const cur = ui.qtheme === 'all' ? '' : (g[ui.qtheme] ? ui.qtheme : (tops.find((h) => h.id === 'new-to-shia-islam') || tops[0]).id);
+  const list = cur ? g[cur] : engine.questions;
+  return `<p class="qcount">${pl(list.length, 'question')}${cur ? ` on ${esc(TOPN(cur))}` : ''}.</p><ul class="qrows">${list.map((q) => qRow(q, cur ? '' : TOPN(topOf((q.headings || [])[0] || 'new-to-shia-islam')))).join('')}</ul>`;
+}
+function questionsHtml() {
+  const { g, tops } = qGroups();
+  const cur = ui.qtheme === 'all' ? 'all' : (g[ui.qtheme] ? ui.qtheme : (tops.find((h) => h.id === 'new-to-shia-islam') || tops[0]).id);
+  const first = (g['new-to-shia-islam'] || []).slice(0, 6);
+  const feat = [...first, ...engine.questions.filter((q) => !first.includes(q))].slice(0, 6);
+  const ask = SITE.externalSearch && SITE.externalSearch.askUrl;
+  return `<section class="blk" id="questions"><h2>Common questions</h2><p class="sub">Questions newcomers ask.</p>
+  <div class="tsec"><h2>Start with these</h2><p class="sub">The questions newcomers ask first.</p><ul class="qfeats">${feat.map((q) => `<li><a class="qfeat" href="${esc(qHref(q.question))}"><span class="qq" dir="auto">${esc(q.question)}</span><span class="qm">${esc(qMeta(q))}</span></a></li>`).join('')}</ul></div>
+  <div class="tsec"><h2>All ${engine.questions.length} questions</h2><p class="sub">Filter by a word, or pick a theme.</p>
+  <div class="qtools"><div class="qfind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="qfilter">Filter the questions</label><input id="qfilter" type="search" autocomplete="off" placeholder="Filter the questions" value="${esc(ui.qfilter)}" maxlength="80"></div>
+  <div class="chips" role="group" aria-label="Theme"><button class="chip" data-qt="all" aria-pressed="${cur === 'all'}">All <i>${engine.questions.length}</i></button>${tops.map((h) => `<button class="chip" data-qt="${esc(h.id)}" aria-pressed="${h.id === cur}">${esc(TOPN(h.id))} <i>${g[h.id].length}</i></button>`).join('')}</div></div>
+  <div id="qlist">${qListHtml()}</div></div>
+  <div class="qask"><div><h3>Can’t find your question?</h3><p>Ask it in your own words in the search box. If the catalog has nothing close, you can also try ${esc((SITE.externalSearch || {}).name || 'the source site')}’s own questions.</p></div>
+  <div class="qask-b"><button class="btn solid big" type="button" data-askq>Ask your own question</button>${ask ? `<a class="btn line" href="${esc(ask)}" target="_blank" rel="noopener noreferrer">Browse ${esc(SITE.externalSearch.name)} questions ↗</a>` : ''}</div></div></section>`;
 }
 
 function topicStats(id) {
@@ -289,19 +318,42 @@ function pathHtml(p) {
   ${related.length ? `<section class="related"><h2>More learning paths</h2><div class="pgrid">${related.map(pcardHtml).join('')}</div></section>` : ''}`;
 }
 
-const WHAT = { 'al-islam.org': 'Shia books, articles, lectures and Q&A. We start with introductory material.', 'thaqalayn.net': 'Hadith collections, listed one page per book or volume.',
-  'sistani.org': 'Rulings and questions and answers, linked to the exact page.', 'khamenei.ir': 'Rulings of Sayyid Ali Khamenei, once this source is ready.', youtube: 'Lectures from approved channels, once the channel list is confirmed.' };
+const WHAT = { 'al-islam.org': 'Shia books and articles from a long-running digital library. We start with introductory material.', 'thaqalayn.net': 'Hadith collections, the primary narrations.',
+  'sistani.org': 'The rulings and the questions and answers of Sayyid Ali al-Sistani, linked to the exact page.', 'khamenei.ir': 'Rulings of Sayyid Ali Khamenei, once this source is ready.', youtube: 'Lectures from approved channels, once the channel list is confirmed.' };
+const LISTS = { 'al-islam.org': 'One page for each book or article.', 'thaqalayn.net': 'One page for each hadith book or volume.', 'sistani.org': 'The book, each of its pages, and each question and answer.' };
 const STATE_TEXT = { active: 'In the catalog', backlog: 'Approved, not added yet', blocked: 'Approved, waiting for access' };
-function sourceCards() {
-  const counts = new Map(); for (const r of engine.records) counts.set(r.source, (counts.get(r.source) || 0) + 1);
-  return `<div class="frame"><div class="srcg">${engine.sources.map((s) => {
-    const n = counts.get(s.id) || 0, active = s.status === 'active', url = safeUrl(s.base_url);
-    const name = s.id === 'youtube' ? 'YouTube lectures' : s.name.replace(/\s*\(.*\)/, '');
-    return `<div class="sr1${active ? '' : ' soon'}"><h3 dir="auto">${esc(name)}</h3><p>${esc(WHAT[s.id] || s.catalog_level || '')}</p>
-      ${active ? `<p class="n"><b style="color:var(--ink);font-weight:500">${n.toLocaleString()}</b> ${n === 1 ? 'page' : 'pages'}</p>${url ? `<a class="btn line" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit ${esc(s.id)} <span aria-hidden="true">↗</span></a>` : ''}` : `<span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span>`}</div>`;
-  }).join('')}</div></div>`;
+const srcName = (s) => (s.id === 'youtube' ? 'YouTube lectures' : s.name.replace(/\s*\(.*\)/, ''));
+function sourceStats(id) {
+  const tags = {}, lv = levelOrder().map(() => 0); let n = 0;
+  for (const r of engine.records) if (r.source === id) { n++; tags[r.content_tag] = (tags[r.content_tag] || 0) + 1; lv[LV(r.level) - 1]++; }
+  return { n, tags, lv };
 }
-const sourcesHtml = () => `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these approved websites. Nothing else appears.</p>${sourceCards()}</section>`;
+function sourcePanel(s) {
+  const st = sourceStats(s.id), url = safeUrl(s.base_url), labels = levelOrder().map((l) => levelLabel(l).toLowerCase());
+  return `<article class="sp"><div class="sp-main"><div class="sp-top"><h3 dir="auto">${esc(srcName(s))}</h3><span class="state ok">${esc(STATE_TEXT.active)}</span></div>
+   <p class="sp-d">${esc(WHAT[s.id] || '')}</p><p class="sp-c"><b>What we list:</b> ${esc(LISTS[s.id] || s.catalog_level || '')}</p>
+   <div class="sp-acts"><a class="btn solid" href="${esc(searchHref({ ...blank(), source: s.id }))}">Browse all ${st.n.toLocaleString()} pages</a>${url ? `<a class="btn line" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit ${esc(s.id)} <span aria-hidden="true">↗</span></a>` : ''}</div></div>
+   <div class="sp-side"><div class="tstats"><span><b>${st.n.toLocaleString()}</b> ${st.n === 1 ? 'page' : 'pages'}</span></div>
+   <div class="lv ladder"><div class="bars" aria-hidden="true">${st.lv.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div><div class="leg">${st.lv.map((n, i) => `<span class="l${i + 1}">${n.toLocaleString()} ${labels[i]}</span>`).join('')}</div></div>
+   <p class="sp-tags">${Object.entries(st.tags).sort((a, b) => b[1] - a[1]).map(([tg, n]) => `<span class="tag" style="--c:var(--t-${esc(tg)})">${esc(tagLabel(tg))} ${n.toLocaleString()}</span>`).join('')}</p></div></article>`;
+}
+function sourcesHtml() {
+  const active = engine.sources.filter((s) => s.status === 'active'), soon = engine.sources.filter((s) => s.status !== 'active');
+  const total = engine.records.length;
+  return `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these approved websites.</p>
+  <p class="ssum"><span><b>${active.length}</b> approved websites in the catalog</span><span><b>${total.toLocaleString()}</b> pages</span><span>English only</span></p>
+  <div class="sps">${active.map(sourcePanel).join('')}</div>
+  ${soon.length ? `<div class="tsec"><h2>On the way</h2><p class="sub">Approved, but not in the catalog yet.</p><ul class="soon-list">${soon.map((s) => `<li><div><b dir="auto">${esc(srcName(s))}</b><span>${esc(WHAT[s.id] || s.catalog_level || '')}</span></div><span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span></li>`).join('')}</ul></div>` : ''}
+  <div class="scope"><div><h3>What we include</h3><p>Twelver Shia resources in English, from approved websites only. Fiqh rulings come from two scholars: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Everything else is not limited by author.</p></div>
+  <div class="scope-b"><a class="btn line" href="${esc(pageHref('about'))}">Read the full scope</a><a class="btn line" href="${esc(pageHref('feedback'))}">Suggest a source</a></div></div></section>`;
+}
+function sourceRowsHtml() {
+  const counts = new Map(); for (const r of engine.records) counts.set(r.source, (counts.get(r.source) || 0) + 1);
+  return `<ul class="soon-list" style="margin:1rem 0 1.4rem">${engine.sources.map((s) => {
+    const n = counts.get(s.id) || 0, url = safeUrl(s.base_url);
+    return `<li><div><b dir="auto">${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(srcName(s))}</a>` : esc(srcName(s))}</b><span>${esc(LISTS[s.id] || s.catalog_level || '')}${n ? ` ${n.toLocaleString()} ${n === 1 ? 'entry' : 'entries'} so far.` : ''}</span></div><span class="state${s.status === 'active' ? ' ok' : ''}">${esc(STATE_TEXT[s.status] || s.status)}</span></li>`;
+  }).join('')}</ul>`;
+}
 
 function guideHtml() {
   const tags = engine.config.tags;
@@ -333,7 +385,7 @@ function aboutHtml() {
    <li><strong>Everything else</strong> (history, beliefs, ethics, hadith, Quran and similar) is not limited by author, as long as it comes from an approved website.</li>
    <li>Beginner material comes first. Each result is marked Beginner, Intermediate or Advanced.</li></ul>
   <p>${scope}</p>
-  <h2 id="sources-list">Websites this catalog points to</h2></div>${sourceCards()}
+  <h2 id="sources-list">Websites this catalog points to</h2></div><div class="prose">${sourceRowsHtml()}</div>
   <div class="prose"><h2 id="how">How results are chosen</h2><ul>
    <li><strong>No AI writes answers here.</strong> The search only finds and orders catalog entries. It never writes answers, summaries or rulings.</li>
    <li>First it checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it are shown first.</li>
@@ -465,8 +517,34 @@ function facets() {
   });
 }
 
-function resultsHtml(st) {
-  const result = engine.search(st.q, st), browsing = result.mode === 'browse';
+// A search gets its own question page only when the words typed are really that question (or one of its alternate phrasings).
+function isThatQuestion(query, q) {
+  const qt = textNorm(query).split(' ').filter(Boolean);
+  if (!qt.length) return false;
+  return [q.question, ...(q.alt_phrasings || [])].some((s) => { const n = textNorm(s); if (n === qt.join(' ')) return true; if (qt.length < 3) return false; const w = new Set(n.split(' ')); return qt.every((x) => w.has(x)); });
+}
+function questionPageHtml(st, result) {
+  const q = result.curated.question, c = result.curated;
+  const pins = (q.top_records || []).map(rec).filter(Boolean), pinIds = new Set(pins.map((r) => r.id));
+  const rest = (es) => es.filter((e) => !(e.kind !== 'cluster' && pinIds.has(e.record.id)));
+  const ex = rest(result.exact), rel = rest(result.related);
+  let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
+  const exs = take(ex), rels = take(rel), total = ex.length + rel.length;
+  const rowsOf = (es) => es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
+  const related = (c.questions || []).filter((x) => x.id !== q.id);
+  announceText = `${q.question}. ${pl(pins.length, 'page')} chosen, ${pl(total, 'more page')}.`;
+  return `${refineHtml(st)}${q.draft ? draftBar('The pages chosen for this question') : ''}
+  ${pins.length ? `<section class="tsec"><h2>Start with ${pins.length === 1 ? 'this page' : 'these pages'}</h2><p class="sub">Chosen for this question.</p><div class="minis">${pins.map(miniHtml).join('')}</div></section>` : ''}
+  ${c.path ? `<section class="tsec"><h2>Read in order</h2><p class="sub">A short reading path on this subject.</p><div class="pgrid one">${pcardHtml(c.path)}</div></section>` : ''}
+  ${related.length ? `<section class="tsec"><h2>Related questions</h2><ul class="qrows" style="margin-top:.8rem">${related.map((x) => qRow(x, '')).join('')}</ul></section>` : ''}
+  ${total ? `<section class="tsec"><h2>More pages that match</h2><p class="sub">${pl(total, 'page')}, simpler material first.</p>${controlsHtml(st, result)}
+  ${exs.length ? `<h3 class="gt">Exact matches <span>${ex.length}</span></h3><ul class="lrows">${rowsOf(exs)}</ul>` : ''}
+  ${rels.length ? `<h3 class="gt">Related results <span>${rel.length}</span></h3><ul class="lrows">${rowsOf(rels)}</ul>` : ''}
+  ${total > ui.limit ? `<p style="margin:1rem 0 0"><button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button></p>` : ''}</section>` : ''}
+  ${externalHtml(result.query)}${nextBar('question')}`;
+}
+function resultsHtml(st, pre) {
+  const result = pre || engine.search(st.q, st), browsing = result.mode === 'browse';
   const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
     announceText = `No close match for “${result.query}”.`;
@@ -509,7 +587,7 @@ function miniHtml(r) {
 function rowHtml(r, more) {
   const sec = r.context && r.context.section ? r.context.section.title : '';
   return `<li class="lrow"><h4><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h4>
-  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}<span dir="auto">${esc(sourceName(r.source))}</span>${sec ? `<span class="lr-sec" dir="auto">In ${esc(sec)}</span>` : ''}</div>
+  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${sec ? `<span class="lr-sec" dir="auto">In ${esc(sec)}</span>` : ''}</div>
   ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}</li>`;
 }
 function topicHtml(id) {
@@ -733,12 +811,20 @@ function render(opts = {}) {
       const sec = st.section && rec(st.section);
       const title = sec ? sec.title : st.scholar ? scholarName(st.scholar) : st.source ? sourceName(st.source) : st.tag ? `Everything tagged ${tagLabel(st.tag)}` : 'Everything in the catalog';
       $('#routeStage').innerHTML = pageStage({ kind: sec ? 'Browsing inside' : 'Browsing', title, back: [BASE, 'Back to start'] });
+      view.innerHTML = resultsHtml(st);
     } else {
-      $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, back: [BASE, 'Back to start'] });
+      const result = engine.search(st.q, st), cq = !result.fallback && result.curated && result.curated.question && isThatQuestion(st.q, result.curated.question) ? result.curated.question : null;
       input.value = st.q;
+      if (cq) {
+        const same = textNorm(cq.question) === textNorm(st.q);
+        $('#routeStage').innerHTML = pageStage({ kind: 'Question', title: cq.question, lede: same ? '' : `The closest question to “${st.q}”.`, back: [pageHref('questions'), 'All questions'] });
+        view.innerHTML = questionPageHtml(st, result);
+      } else {
+        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, back: [BASE, 'Back to start'] });
+        view.innerHTML = resultsHtml(st, result);
+        announceText = `Results for ${st.q}. ${announceText}`;
+      }
     }
-    view.innerHTML = resultsHtml(st);
-    if (st.q) announceText = `Results for ${st.q}. ${announceText}`;
   }
   buildList(); setMenu(false);
   try { document.title = t === 'home' ? `${SITE.name}: find where to learn about Shia Islam` : `${titleFor(route)} · ${SITE.name}`; } catch { /* ignore */ }
@@ -773,7 +859,10 @@ view.addEventListener('click', (e) => {
   else if (b.dataset.tl) { const [id, lv] = b.dataset.tl.split('|'); ui.tl[id] = lv; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-tl="${CSS.escape(b.dataset.tl)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
   else if ('pt' in b.dataset) { ui.pathTheme = b.dataset.pt; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-pt="${CSS.escape(b.dataset.pt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
   else if ('focus' in b.dataset) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); input.focus(); }
+  else if ('askq' in b.dataset) { $('#ask').click(); }
+  else if (b.dataset.qt) { ui.qtheme = b.dataset.qt; ui.qfilter = ''; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-qt="${CSS.escape(b.dataset.qt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
 });
+view.addEventListener('input', (e) => { if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
 view.addEventListener('change', (e) => {
   const t = e.target;
   if (t.dataset && t.dataset.filter) { const st = readState(); nav(searchHref({ ...st, [t.dataset.filter]: t.value })); return; }
