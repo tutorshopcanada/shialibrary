@@ -1,0 +1,29 @@
+id: sistani-qa-forbidden-acts-ihram
+type: qa
+content_tag: fiqh
+granularity: section
+parent: sistani-qa
+level: intermediate
+title: Forbidden Acts During Ihram
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01188/
+language: en
+date: ''
+description: A topic page of questions and answers about acts a pilgrim must avoid while in ihram (the sacred state entered for hajj and umrah). Questions cover covering the head, shade, scratching, brushing the teeth and touching one's spouse.
+sample_questions:
+- What am I not allowed to do while in ihram?
+- Can I cover my head during ihram?
+- Can I scratch my head during hajj?
+- Can I brush my teeth while in ihram?
+- Can a husband touch his wife during ihram?
+headings:
+- hajj
+access: free
+location: 'Q&A topic: Forbidden Acts During Ihram'
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-11'

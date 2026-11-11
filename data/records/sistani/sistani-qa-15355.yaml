@@ -1,0 +1,27 @@
+id: sistani-qa-15355
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-forbidden-acts-ihram
+level: intermediate
+title: Can a person brush his teeth during Ihram, if there is likelihood of bleeding?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01188/#15355
+language: en
+date: ''
+description: A question about whether a pilgrim in ihram may brush the teeth when the gums are likely to bleed.
+sample_questions:
+- Can I brush my teeth during ihram?
+- Is toothbrushing allowed on hajj?
+- What if my gums might bleed during ihram?
+headings:
+- hajj
+access: free
+location: Forbidden Acts During Ihram, question 4
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-11'
