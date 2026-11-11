@@ -25,7 +25,7 @@ headings:
 - imam-ali
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page states no description, audience or level; intermediate chosen as the cautious option.
   Page credits the library project, not a person, as author, so authors left empty.
 cataloged_on: '2026-11-10'

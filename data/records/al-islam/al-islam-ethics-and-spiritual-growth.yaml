@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/ethics-and-spiritual-growth-sayyid-mujtaba-musavi-lari
 language: en
 date: '1997'
-description: A book on ethics and personal growth, which the site describes as covering man's struggle for
-  perfection, spiritual needs, duties and the road to success. Its fourteen chapters look at human values,
-  duties, social cooperation, psychological needs, exaggerated opinions of oneself, and fear.
+description: A book on ethics and personal growth, which the site describes as covering man's struggle
+  for perfection, spiritual needs, duties and the road to success. Its fourteen chapters look at human
+  values, duties, social cooperation, psychological needs, exaggerated opinions of oneself, and fear.
 sample_questions:
 - How can I improve my character in Islam?
 - What are human spiritual needs?
@@ -28,7 +28,7 @@ headings:
 - ethics
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not state an intended audience or level; intermediate chosen as the cautious
   option.
 cataloged_on: '2026-11-10'

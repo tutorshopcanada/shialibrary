@@ -13,10 +13,10 @@ source: al-islam.org
 url: https://al-islam.org/dua-kumayl-translation-commentary-husein-rahim
 language: en
 date: ''
-description: A book on Dua Kumayl, a well-known Shia supplication (dua, a prayer of personal request to God)
-  that the site says Imam Ali taught to his companion Kumayl ibn Ziyad. According to the site it gives the
-  Arabic text, an English translation, commentary and an audio recitation, with a section on the origin
-  of the dua.
+description: A book on Dua Kumayl, a well-known Shia supplication (dua, a prayer of personal request to
+  God) that the site says Imam Ali taught to his companion Kumayl ibn Ziyad. According to the site it
+  gives the Arabic text, an English translation, commentary and an audio recitation, with a section on
+  the origin of the dua.
 sample_questions:
 - What is Dua Kumayl?
 - Where does Dua Kumayl come from?
@@ -28,7 +28,7 @@ headings:
 - duas
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not state an intended audience or level; intermediate chosen as the cautious
   option.
 cataloged_on: '2026-11-10'

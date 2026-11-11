@@ -14,8 +14,8 @@ url: https://al-islam.org/raising-children-tahera-kassamali
 language: en
 date: '1998'
 description: A book of ten short lessons on the Islamic way of raising children, which the site says draw
-  on Islamic sources originally written in Farsi. Lessons cover the mother's role, religious training, a
-  child's need for love, self-esteem, discipline, play, outside influences, sibling rivalry and common
+  on Islamic sources originally written in Farsi. Lessons cover the mother's role, religious training,
+  a child's need for love, self-esteem, discipline, play, outside influences, sibling rivalry and common
   mistakes parents make. It ends with a dua for virtuous children.
 sample_questions:
 - How should children be raised in Islam?
@@ -29,7 +29,7 @@ headings:
 - family-social-ethics
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not state an intended audience or level; intermediate chosen as the cautious
   option.
 cataloged_on: '2026-11-10'

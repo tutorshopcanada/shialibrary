@@ -13,10 +13,10 @@ source: al-islam.org
 url: https://al-islam.org/introduction-science-tafsir-quran-jafar-subhani
 language: en
 date: ''
-description: A book about the rules and approach to be used when interpreting the Quran (tafsir means Quran
-  commentary). Its parts cover topics such as Arabic grammar, word meanings, the occasions when verses were
-  revealed, and understanding the history and setting of the revelation. The site describes it as a discussion
-  of the rules governing interpretation of the Quran.
+description: A book about the rules and approach to be used when interpreting the Quran (tafsir means
+  Quran commentary). Its parts cover topics such as Arabic grammar, word meanings, the occasions when
+  verses were revealed, and understanding the history and setting of the revelation. The site describes
+  it as a discussion of the rules governing interpretation of the Quran.
 sample_questions:
 - What is tafsir?
 - How is the Quran interpreted?
@@ -29,7 +29,7 @@ headings:
 - quran-sciences
 access: free
 location: ''
-needs_review: true
-review_note: The page does not state an intended audience or level; intermediate chosen as the cautious option
-  because it discusses the methodology of interpretation.
+needs_review: false
+review_note: The page does not state an intended audience or level; intermediate chosen as the cautious
+  option because it discusses the methodology of interpretation.
 cataloged_on: '2026-11-10'

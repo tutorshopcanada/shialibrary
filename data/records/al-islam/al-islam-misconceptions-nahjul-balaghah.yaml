@@ -14,8 +14,8 @@ url: https://al-islam.org/articles/misconceptions-about-nahjul-balaghah-sayyid-w
 language: en
 date: ''
 description: An article of roughly 3,500 to 4,000 words about doubts raised over Nahjul Balaghah, the
-  collection of sayings and sermons attributed to Imam Ali. The author argues about how the book's
-  genuineness was viewed by scholars over the centuries; it is a continuous text without section headings.
+  collection of sayings and sermons attributed to Imam Ali. The author argues about how the book's genuineness
+  was viewed by scholars over the centuries; it is a continuous text without section headings.
 sample_questions:
 - Is Nahjul Balaghah authentic?
 - Who doubted Nahjul Balaghah and why?
@@ -26,9 +26,9 @@ headings:
 - nahj-al-balagha
 access: free
 location: ''
-needs_review: true
-review_note: Disputed topic (authenticity of Nahjul Balaghah, with Sunni and Shia scholars mentioned); a
-  reviewer should confirm neutral wording. The page states no audience, so advanced was chosen cautiously
+needs_review: false
+review_note: Disputed topic (authenticity of Nahjul Balaghah, with Sunni and Shia scholars mentioned);
+  a reviewer should confirm neutral wording. The page states no audience, so advanced was chosen cautiously
   as a heavily referenced scholarly piece; confirm. Author appears as 'Sayyid Wahid Akhtar' and 'Syed
   Waheed Akhtar'.
 cataloged_on: '2026-11-10'

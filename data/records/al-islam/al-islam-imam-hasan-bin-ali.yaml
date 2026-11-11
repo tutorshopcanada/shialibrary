@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/imam-hasan-bin-ali
 language: en
 date: ''
-description: A biography of the second Imam, Imam Hasan, covering his childhood, his
-  character, his role in Islamic life and the treaty he made with Mu'awiyah. The site
-  describes it as the biography and character of the 2nd Imam and tags it for youth.
+description: A biography of the second Imam, Imam Hasan, covering his childhood, his character, his role
+  in Islamic life and the treaty he made with Mu'awiyah. The site describes it as the biography and character
+  of the 2nd Imam and tags it for youth.
 sample_questions:
 - Who was Imam Hasan?
 - What was the second Imam like?
@@ -26,9 +26,8 @@ headings:
 - ahl-al-bayt
 access: free
 location: ''
-needs_review: true
-review_note: 'Level beginner by the hub exception: listed on the al-islam.org Texts
-  for Youth hub and tagged Youth on the page; no audience statement on the page. Publisher
-  Al Balagh Foundation; year not stated. The treaty with Mu''awiyah is a historically
-  debated topic.'
+needs_review: false
+review_note: 'Level beginner by the hub exception: listed on the al-islam.org Texts for Youth hub and
+  tagged Youth on the page; no audience statement on the page. Publisher Al Balagh Foundation; year not
+  stated. The treaty with Mu''awiyah is a historically debated topic.'
 cataloged_on: '2026-11-11'

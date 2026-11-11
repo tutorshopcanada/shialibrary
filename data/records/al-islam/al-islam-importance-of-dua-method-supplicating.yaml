@@ -26,6 +26,6 @@ headings:
 - duas
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page states no audience or level, so intermediate was chosen as the cautious option.
 cataloged_on: '2026-11-10'

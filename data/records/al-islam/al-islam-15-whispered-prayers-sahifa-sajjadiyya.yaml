@@ -15,8 +15,8 @@ language: en
 date: ''
 description: A collection of fifteen personal prayers (munajat, meaning whispered or intimate prayers)
   taken from the Sahifa Sajjadiyya, a book of supplications credited to Imam Ali Zayn al-Abidin, the fourth
-  Imam. Each prayer is named for a type of person, such as the repenters, the hopeful, the thankful and the
-  lovers. The page has an introduction.
+  Imam. Each prayer is named for a type of person, such as the repenters, the hopeful, the thankful and
+  the lovers. The page has an introduction.
 sample_questions:
 - What is the Sahifa Sajjadiyya?
 - What are the whispered prayers?
@@ -29,8 +29,8 @@ headings:
 - ahl-al-bayt
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not state an intended audience or level; intermediate chosen as the cautious
-  option. The page says the translation is based on the commentary of Sheikh Dr. Mohammad Ali Shomali and
-  names no translator; it names Imam Ali Zayn al-Abidin as the author.
+  option. The page says the translation is based on the commentary of Sheikh Dr. Mohammad Ali Shomali
+  and names no translator; it names Imam Ali Zayn al-Abidin as the author.
 cataloged_on: '2026-11-10'

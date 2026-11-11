@@ -12,10 +12,10 @@ source: al-islam.org
 url: https://al-islam.org/divine-wisdom-prophet-muhammad
 language: en
 date: ''
-description: A compilation of debates the Prophet Muhammad is reported to have held
-  with scholars and representatives of other religions (Jews, Christians, atheists,
-  dualists and polytheists). The page says it is translated from Ihtijaj al-Tabarsi
-  and gives the need to respond to Islamophobic propaganda as its purpose.
+description: A compilation of debates the Prophet Muhammad is reported to have held with scholars and
+  representatives of other religions (Jews, Christians, atheists, dualists and polytheists). The page
+  says it is translated from Ihtijaj al-Tabarsi and gives the need to respond to Islamophobic propaganda
+  as its purpose.
 sample_questions:
 - How did the Prophet Muhammad debate people of other religions?
 - What did the Prophet say to the Jews and Christians?
@@ -26,8 +26,8 @@ headings:
 - nubuwwah
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Listed
-  on the Introducing Islam hub. No author is labelled on the page (a name, Fizza Hyderi,
-  appears unlabelled), so authors left empty. Interfaith debate content.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Listed on the Introducing Islam
+  hub. No author is labelled on the page (a name, Fizza Hyderi, appears unlabelled), so authors left empty.
+  Interfaith debate content.
 cataloged_on: '2026-11-11'

@@ -26,7 +26,7 @@ headings:
 - tafsir
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page states no audience; advanced chosen because it is a grammatical analysis using Arabic
   terms and footnotes. A scholarly question on a Quranic interpretation, so a reviewer should confirm
   neutral wording.

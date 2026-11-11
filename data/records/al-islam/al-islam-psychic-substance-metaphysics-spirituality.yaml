@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/articles/psychic-substance-meeting-point-between-metaphysics-spirituality-mohammad-ali-shomali
 language: en
 date: ''
-description: A long academic paper (about 7,000 to 8,000 words) on the soul in Islamic philosophy. It covers
-  the types of substance, the parts of the soul, proof that it exists, its eternity and its happiness, and
-  ends with references.
+description: A long academic paper (about 7,000 to 8,000 words) on the soul in Islamic philosophy. It
+  covers the types of substance, the parts of the soul, proof that it exists, its eternity and its happiness,
+  and ends with references.
 sample_questions:
 - What is the soul in Islam?
 - Does the soul exist forever?
@@ -27,7 +27,7 @@ headings:
 - beliefs
 access: free
 location: ''
-needs_review: true
-review_note: The page states no audience; advanced chosen because it is a long philosophical paper with an
-  abstract and references. Reviewer to confirm.
+needs_review: false
+review_note: The page states no audience; advanced chosen because it is a long philosophical paper with
+  an abstract and references. Reviewer to confirm.
 cataloged_on: '2026-11-10'

@@ -13,10 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/shiite-anthology-sayyid-muhammad-husayn-tabatabai
 language: en
 date: '1980'
-description: A collection of sayings, sermons, prayers and writings representing a
-  cross-section of Shia religious thought, on the unity of God, the ruler and society,
-  and prayer and supplication, with an appendix on the twelve Imams. The page says
-  it was selected especially for the Western reader.
+description: A collection of sayings, sermons, prayers and writings representing a cross-section of Shia
+  religious thought, on the unity of God, the ruler and society, and prayer and supplication, with an
+  appendix on the twelve Imams. The page says it was selected especially for the Western reader.
 sample_questions:
 - What do Shias believe?
 - Where can I read Shia sayings and prayers?
@@ -28,9 +27,8 @@ headings:
 - twelve-imams
 access: free
 location: ''
-needs_review: true
-review_note: 'Level beginner by the hub exception: listed on the Responses to Misconceptions
-  hub (not a newcomer-titled hub) but the page says it is "Especially selected for
-  the Western reader"; check by a reviewer. First published 1980 by Muhammadi Trust;
-  translated by William C. Chittick.'
+needs_review: false
+review_note: 'Level beginner by the hub exception: listed on the Responses to Misconceptions hub (not
+  a newcomer-titled hub) but the page says it is "Especially selected for the Western reader"; check by
+  a reviewer. First published 1980 by Muhammadi Trust; translated by William C. Chittick.'
 cataloged_on: '2026-11-11'

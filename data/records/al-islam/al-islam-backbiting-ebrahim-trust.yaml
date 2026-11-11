@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/backbiting-peermohammad-ebrahim-trust
 language: en
 date: '1970'
-description: A booklet-style text that describes backbiting (speaking ill of someone
-  in their absence) as a serious sin often overlooked by Muslims, covering its causes,
-  evil effects and words of wisdom against it. Second edition 1970, Karachi.
+description: A booklet-style text that describes backbiting (speaking ill of someone in their absence)
+  as a serious sin often overlooked by Muslims, covering its causes, evil effects and words of wisdom
+  against it. Second edition 1970, Karachi.
 sample_questions:
 - What is backbiting in Islam?
 - Why is backbiting a sin?
@@ -26,8 +26,7 @@ headings:
 - family-social-ethics
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Listed
-  on the Spirituality hub. First edition 1967, second edition 1970; the page does
-  not label itself a book.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Listed on the Spirituality
+  hub. First edition 1967, second edition 1970; the page does not label itself a book.
 cataloged_on: '2026-11-11'

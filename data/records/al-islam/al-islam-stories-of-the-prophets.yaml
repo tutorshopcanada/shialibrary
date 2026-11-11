@@ -29,7 +29,7 @@ headings:
 - quran
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not state an audience; beginner level is inferred from the site's description
   as simple English accounts and from its illustrated, story format. Author is an organisation (Tawhid
   Institute); the page also names an editor and an illustrator, which the schema has no field for.

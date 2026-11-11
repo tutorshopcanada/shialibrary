@@ -24,7 +24,7 @@ headings:
 - twelve-imams
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page states no description, audience or level; intermediate chosen as the cautious option.
   The poem's composer Farazdaq is named in the text; not added to scholars.yaml and authors left empty
   since the page names no author of the page itself.

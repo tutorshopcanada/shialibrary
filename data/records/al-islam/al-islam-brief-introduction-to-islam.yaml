@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/articles/brief-introduction-islam
 language: en
 date: ''
-description: A short article introducing Islam from a Shia viewpoint. It presents the core beliefs as the
-  roots of religion (the unity and justice of God, prophethood, the Imamate and the Day of Judgement), then
-  moves to sayings on balancing this world and the hereafter, knowledge, duties to parents and good
+description: A short article introducing Islam from a Shia viewpoint. It presents the core beliefs as
+  the roots of religion (the unity and justice of God, prophethood, the Imamate and the Day of Judgement),
+  then moves to sayings on balancing this world and the hereafter, knowledge, duties to parents and good
   character.
 sample_questions:
 - What is Islam?
@@ -30,8 +30,8 @@ headings:
 - beliefs
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: Beginner level is inferred only from the word "Brief" in the title; the page states no audience
-  or description. The page credits the work as "Contributed by Mir Ahmed Ali Khan", which may mean he is
-  the contributor rather than the original author.
+  or description. The page credits the work as "Contributed by Mir Ahmed Ali Khan", which may mean he
+  is the contributor rather than the original author.
 cataloged_on: '2026-11-10'

@@ -13,10 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/forty-hadith-exposition-second-revised-edition-sayyid-ruhullah-musawi-khomeini
 language: en
 date: ''
-description: A detailed commentary on forty selected traditions of the Prophet and
-  his Ahl al-Bayt, mostly on ethics and spiritual self-improvement (self-struggle,
-  showing off, pride, envy, anger and similar). The Persian original is said to date
-  from 1939; Ansariyan Publications, Qum.
+description: A detailed commentary on forty selected traditions of the Prophet and his Ahl al-Bayt, mostly
+  on ethics and spiritual self-improvement (self-struggle, showing off, pride, envy, anger and similar).
+  The Persian original is said to date from 1939; Ansariyan Publications, Qum.
 sample_questions:
 - What are the forty hadith of Imam Khomeini?
 - How can I fight pride and envy in Islam?
@@ -29,9 +28,8 @@ headings:
 - hadith
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Found by
-  search; root page read. Translators Mahliqa Qara'i and Ali Quli Qara'i. Hadith commentary,
-  so content tag is book not hadith; ethical/theological, not fiqh. Only the first
-  100,000 characters of the page were read.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Found by search; root page
+  read. Translators Mahliqa Qara'i and Ali Quli Qara'i. Hadith commentary, so content tag is book not
+  hadith; ethical/theological, not fiqh. Only the first 100,000 characters of the page were read.
 cataloged_on: '2026-11-11'

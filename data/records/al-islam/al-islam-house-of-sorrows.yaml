@@ -13,10 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/house-sorrows-life-sayyidah-fatimah-al-zahra-and-her-grief-shaykh-abbas-qummi
 language: en
 date: '2010'
-description: A book on the life of Sayyidah Fatimah al-Zahra, the Prophet's daughter,
-  including her birth, virtues and her grief after the Prophet's death. The site says
-  it is the first book in English to detail the last six months of her life. Published
-  by The Islamic Publishing House, 2010.
+description: A book on the life of Sayyidah Fatimah al-Zahra, the Prophet's daughter, including her birth,
+  virtues and her grief after the Prophet's death. The site says it is the first book in English to detail
+  the last six months of her life. Published by The Islamic Publishing House, 2010.
 sample_questions:
 - Who was Fatimah al-Zahra?
 - How did Lady Fatimah grieve after the Prophet died?
@@ -27,8 +26,8 @@ headings:
 - ahl-al-bayt
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Listed
-  on the Introducing the Ahlul Bayt hub. Covers events after the Prophet's death (Saqifah),
-  a contested historical topic. Translator named as Aejaz Ali Turab Husain.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Listed on the Introducing the
+  Ahlul Bayt hub. Covers events after the Prophet's death (Saqifah), a contested historical topic. Translator
+  named as Aejaz Ali Turab Husain.
 cataloged_on: '2026-11-11'

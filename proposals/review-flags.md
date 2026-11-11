@@ -72,3 +72,6 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
 
 ## Skipped (polemical)
 - 2026-11-11 | Completion of Argument (Sayyid Sa'eed Akhtar Rizvi) | https://al-islam.org/completion-argument-sayyid-saeed-akhtar-rizvi | page describes it as answering objections of Ahlul Sunnat scholars against Shia beliefs; tag Debate (batch ai13)
+
+## Owner decision 2026-11-11
+The owner approved everything cataloged from al-islam.org ("anything from al-islam.org is good"). Their needs_review flags were cleared in one change; the review_note text was kept as a record of why each was flagged (level evidence, disputed topics). This does not change the rule for sistani.org, thaqalayn or any other source, which stay flagged for a reviewer.

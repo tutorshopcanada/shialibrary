@@ -14,8 +14,8 @@ url: https://al-islam.org/articles/commentaries-nahjul-balaghah-sayyid-wahid-akh
 language: en
 date: ''
 description: A bibliographic overview of selected commentaries on Nahjul Balaghah, the collection of sayings
-  and sermons attributed to Imam Ali, including commentaries in Persian and Urdu translations. The page opens
-  by noting the book has been studied and interpreted since the time of al-Radi, who compiled it.
+  and sermons attributed to Imam Ali, including commentaries in Persian and Urdu translations. The page
+  opens by noting the book has been studied and interpreted since the time of al-Radi, who compiled it.
 sample_questions:
 - What is Nahjul Balaghah?
 - Which commentaries have been written on Nahjul Balaghah?
@@ -26,7 +26,7 @@ headings:
 - nahj-al-balagha
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page states no audience; it is a list-style scholarly overview of commentaries, so advanced
   was chosen cautiously and a reviewer should confirm. The page gives the author as 'Sayyid Wahid Akhtar'
   and, in an addendum, 'Syed Waheed Akhtar' (Aligarh Muslim University).

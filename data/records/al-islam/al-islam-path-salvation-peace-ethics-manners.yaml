@@ -27,8 +27,8 @@ headings:
 - ahl-al-bayt
 access: free
 location: ''
-needs_review: true
-review_note: The page states no audience, so intermediate was chosen as the cautious level. The byline lists
-  'Dr. Farhat Fatima' and also 'Dr. S. Farhana Fatima Abedi'; only the first is recorded as author, so a
-  reviewer should confirm whether the second should be added.
+needs_review: false
+review_note: The page states no audience, so intermediate was chosen as the cautious level. The byline
+  lists 'Dr. Farhat Fatima' and also 'Dr. S. Farhana Fatima Abedi'; only the first is recorded as author,
+  so a reviewer should confirm whether the second should be added.
 cataloged_on: '2026-11-10'

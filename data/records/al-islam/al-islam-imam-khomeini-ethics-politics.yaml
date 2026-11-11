@@ -13,10 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/imam-khomeini-ethics-and-politics-sayyid-hasan-islami
 language: en
 date: ''
-description: 'A discussion of ethics and its relation to politics from the viewpoint
-  of Imam Khomeini, in three parts: his code of ethics, ethics and politics, and three
-  ethical pillars of politics. Published by the Institute for the Compilation and
-  Publication of the Works of Imam Khomeini.'
+description: 'A discussion of ethics and its relation to politics from the viewpoint of Imam Khomeini,
+  in three parts: his code of ethics, ethics and politics, and three ethical pillars of politics. Published
+  by the Institute for the Compilation and Publication of the Works of Imam Khomeini.'
 sample_questions:
 - What did Imam Khomeini teach about ethics?
 - How are ethics related to politics in Islam?
@@ -27,8 +26,7 @@ headings:
 - spirituality
 access: free
 location: ''
-needs_review: true
-review_note: 'Level advanced: scholarly study with bibliography; audience not stated.
-  Listed on the Spirituality hub. Political subject matter; human review advised.
-  Year not stated.'
+needs_review: false
+review_note: 'Level advanced: scholarly study with bibliography; audience not stated. Listed on the Spirituality
+  hub. Political subject matter; human review advised. Year not stated.'
 cataloged_on: '2026-11-11'

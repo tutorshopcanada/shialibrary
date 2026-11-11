@@ -26,7 +26,7 @@ headings:
 - ahl-al-bayt
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: Level is not stated on the page; intermediate chosen as the cautious option. The site's metadata
   lists Sayyida Fatimah al-Zahra' as author, which looks like a labelling quirk, so authors is left empty.
   Translator (Saleem Bhimji) is not recorded because the schema has no field.

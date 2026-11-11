@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/articles/opening-our-eyes-light-quran-fatemah-meghji
 language: en
 date: ''
-description: A short essay (about 1,900 words, originally published in Al-Sidrah) on why many Muslims have
-  heard the Quran called a 'manifest light' yet find it confusing to read. The site says it speaks to the
-  frustration of younger Muslims in particular.
+description: A short essay (about 1,900 words, originally published in Al-Sidrah) on why many Muslims
+  have heard the Quran called a 'manifest light' yet find it confusing to read. The site says it speaks
+  to the frustration of younger Muslims in particular.
 sample_questions:
 - Why is the Quran called a light?
 - Why do many Muslims find the Quran confusing?
@@ -25,7 +25,7 @@ headings:
 - quran
 access: free
 location: ''
-needs_review: true
+needs_review: false
 review_note: The page does not state an audience level, so intermediate was chosen as the cautious option;
   it mentions 'post-modern millennial Muslims' as those frustrated.
 cataloged_on: '2026-11-10'

@@ -13,9 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/ziyaarat-aale-yaasin-brief-commentary
 language: en
 date: ''
-description: A brief verse-by-verse explanation of Ziyaarat Aale-Yaasin, a salutation
-  attributed to Imam al-Mahdi, with the Arabic text and a note on its chain of narrators.
-  Published by the Association of Imam Mahdi in Shaabaan 1425 A.H.
+description: A brief verse-by-verse explanation of Ziyaarat Aale-Yaasin, a salutation attributed to Imam
+  al-Mahdi, with the Arabic text and a note on its chain of narrators. Published by the Association of
+  Imam Mahdi in Shaabaan 1425 A.H.
 sample_questions:
 - What is Ziyaarat Aale-Yaasin?
 - What does Ziyarat Al Yasin mean?
@@ -26,7 +26,7 @@ headings:
 - imam-mahdi
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Listed
-  on the Spirituality hub.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Listed on the Spirituality
+  hub.
 cataloged_on: '2026-11-11'

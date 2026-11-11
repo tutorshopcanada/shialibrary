@@ -13,10 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/perspectives-concept-love-islam-mahnaz-heydarpoor
 language: en
 date: ''
-description: An introduction to the subject of love in Islam, covering divine love
-  (God's love for Himself, creatures and perfect human beings) and human love (love
-  and reason, love for God and for fellow humans). Published by Spring Publications,
-  UK.
+description: An introduction to the subject of love in Islam, covering divine love (God's love for Himself,
+  creatures and perfect human beings) and human love (love and reason, love for God and for fellow humans).
+  Published by Spring Publications, UK.
 sample_questions:
 - What does Islam say about love?
 - How does God love His creatures?
@@ -27,8 +26,7 @@ headings:
 - ethics
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Listed
-  on the Spirituality hub. The page calls it an introduction to the subject of love,
-  not to Islam in general.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Listed on the Spirituality
+  hub. The page calls it an introduction to the subject of love, not to Islam in general.
 cataloged_on: '2026-11-11'

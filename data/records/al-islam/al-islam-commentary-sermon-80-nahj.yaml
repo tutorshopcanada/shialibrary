@@ -13,10 +13,9 @@ source: al-islam.org
 url: https://al-islam.org/commentary-sermon-80-nahjul-balaghah-naser-makarem-shirazi
 language: en
 date: '2012'
-description: A booklet explaining Sermon 80 of Nahjul Balaghah (attributed to Imam
-  Ali) on the similarities and differences between men and women, with notes on its
-  transmission and a section on the life of A'ysha. E-published in March 2012; translator
-  Saleem Bhimji.
+description: A booklet explaining Sermon 80 of Nahjul Balaghah (attributed to Imam Ali) on the similarities
+  and differences between men and women, with notes on its transmission and a section on the life of A'ysha.
+  E-published in March 2012; translator Saleem Bhimji.
 sample_questions:
 - What does Imam Ali say about women in Nahjul Balaghah?
 - What is Sermon 80 of Nahjul Balaghah?
@@ -27,8 +26,7 @@ headings:
 - nahj-al-balagha
 access: free
 location: ''
-needs_review: true
-review_note: Level not stated on the page; set to intermediate by default. Listed
-  on the Introducing Islam hub. Includes a section on A'ysha, a contested topic in
-  Shia-Sunni history; human review needed.
+needs_review: false
+review_note: Level not stated on the page; set to intermediate by default. Listed on the Introducing Islam
+  hub. Includes a section on A'ysha, a contested topic in Shia-Sunni history; human review needed.
 cataloged_on: '2026-11-11'

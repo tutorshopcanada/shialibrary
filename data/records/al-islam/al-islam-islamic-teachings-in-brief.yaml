@@ -13,7 +13,10 @@ source: al-islam.org
 url: https://al-islam.org/islamic-teachings-brief-sayyid-muhammad-husayn-tabatabai
 language: en
 date: ''
-description: A short book by Sayyid Muhammad Husayn Tabataba'i that the site describes as a summary of the teachings of Islam, written in relatively simple language. It covers belief in God, prophethood, the Qur'an, the Prophet and his family, the Imamate (the belief in leaders after the Prophet), the afterlife, ethics and religious commandments.
+description: A short book by Sayyid Muhammad Husayn Tabataba'i that the site describes as a summary of
+  the teachings of Islam, written in relatively simple language. It covers belief in God, prophethood,
+  the Qur'an, the Prophet and his family, the Imamate (the belief in leaders after the Prophet), the afterlife,
+  ethics and religious commandments.
 sample_questions:
 - What is Islam?
 - What do Shia Muslims believe about God?
@@ -27,6 +30,7 @@ headings:
 - imamate
 access: free
 location: ''
-needs_review: true
-review_note: The Imamate chapter covers a belief on which Shia and Sunni Muslims differ. The level is taken from the page's description of a summary in relatively simple language.
+needs_review: false
+review_note: The Imamate chapter covers a belief on which Shia and Sunni Muslims differ. The level is
+  taken from the page's description of a summary in relatively simple language.
 cataloged_on: '2026-11-10'
