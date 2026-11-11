@@ -401,7 +401,7 @@ function aboutHtml() {
     'If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.',
     'Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.'];
   return `<section class="lead"><p class="lead-t">${esc(SITE.name)} is a catalog, not a library.</p><p class="lead-p">It points you to where Shia resources are published on a short list of trusted Shia sources. It never hosts, copies or writes them. It is made for people who are new and do not know where to look.</p></section>
-  <section class="tsec"><div class="pilgrid">
+  <section class="tsec"><h2 class="sr">What we do</h2><div class="pilgrid">
    <div class="pil">${ICON.link}<h3>We link, we do not host</h3><p>Every result links to the website where the original is published, and names it.</p></div>
    <div class="pil">${ICON.list}<h3>Descriptions, not answers</h3><p>Our short summaries say what a page is about. For rulings, they only name the question. Read the ruling on the source page.</p></div>
    <div class="pil">${ICON.lock}<h3>No rulings, no positions</h3><p>This site describes, labels and links. It does not give religious rulings.</p></div></div>
@@ -617,11 +617,11 @@ function miniHtml(r) {
   <h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>
   ${r.description ? `<p dir="auto">${esc(r.description)}</p>` : ''}<span class="mute" style="font-size:.875rem;margin-top:auto">Opens on ${esc(sourceShort(r.source))} <span aria-hidden="true">↗</span></span></article>`;
 }
-function rowHtml(r, more) {
+function rowHtml(r, more, hl = 'h4') {
   const c = r.context || {}, parts = [c.section, c.work].filter(Boolean), sid = (c.section || c.work || {}).id;
   const ctx = parts.length ? `<span class="lr-ctx">In ${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')} · <a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a></span>` : (r.descendant_count ? `<span class="lr-ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>` : '');
   const rh = reportHref(r);
-  return `<li class="lrow"><h4><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h4>
+  return `<li class="lrow"><${hl}><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></${hl}>
   <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
   ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<p class="lr-foot">${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></p></li>`;
 }
@@ -635,7 +635,7 @@ function topicHtml(id) {
   const cur = have.some((l) => l.lv === ui.tl[id]) ? ui.tl[id] : (have[0] || {}).lv;
   const starters = RECS.filter((n) => n.all.includes(id) && n.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
   const es = (levels.find((l) => l.lv === cur) || { es: [] }).es, lim = ui.lm[id + cur] || 12;
-  const rows = es.slice(0, lim).map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
+  const rows = es.slice(0, lim).map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }, 'h3') : rowHtml(e.record, null, 'h3'))).join('');
   const fam = new Set([id, ...engine.headings.filter((x) => (x.ancestors || []).includes(id)).map((x) => x.id)]);
   const inFam = (r) => [...(r.headings || []), ...(r.inherited_headings || [])].some((x) => fam.has(x));
   const paths = engine.paths.map((p) => ({ p, n: p.steps.filter((s) => { const r = rec(s.record); return r && inFam(r); }).length })).filter((x) => x.n).sort((x, y) => y.n - x.n).slice(0, 3).map((x) => x.p);
@@ -722,9 +722,9 @@ function entityBodyHtml(e) {
   else { head = `Pages about ${e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '')}`; const res = engine.search(strip(e.name)); rel = (res.exact.length ? firstRecords({ exact: res.exact, related: [] }) : firstRecords(res)).slice(0, 6); }
   const q = e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '');
   const c = ctxFor(e.k), g = c.peers, i = g.indexOf(e.k), p = E[g[(i + g.length - 1) % g.length]], n = E[g[(i + 1) % g.length]];
-  return `<div class="egrid"><div><div class="bio"><h3>Short bio <span class="pill">Placeholder</span></h3><p class="mute" style="margin:0">A short, sourced bio will go here once it has been written and reviewed.</p></div>
+  return `<div class="egrid"><div><div class="bio"><h2 class="bh">Short bio <span class="pill">Placeholder</span></h2><p class="mute" style="margin:0">A short, sourced bio will go here once it has been written and reviewed.</p></div>
   <div style="margin-top:1rem"><a class="btn solid big" href="${esc(qHref(q))}" style="width:100%;justify-content:center">Search the catalog for “${esc(q)}”</a></div></div>
-  <section><h2 class="eh">${head} <span>${rel.length}</span></h2>${rel.length ? `<ul class="lrows" style="margin-top:.8rem">${rel.map((r) => rowHtml(r)).join('')}</ul>` : `<p class="mute">${empty}</p>`}</section></div>
+  <section><h2 class="eh">${head} <span>${rel.length}</span></h2>${rel.length ? `<ul class="lrows" style="margin-top:.8rem">${rel.map((r) => rowHtml(r, null, 'h3')).join('')}</ul>` : `<p class="mute">${empty}</p>`}</section></div>
   ${g.length > 1 ? `<div class="enav"><a href="${esc(pageHref(p.k))}"><small>Previous</small>${esc(p.name)}</a><a class="nx" href="${esc(pageHref(n.k))}"><small>Next</small>${esc(n.name)}</a></div>` : ''}`;
 }
 

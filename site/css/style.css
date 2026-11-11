@@ -964,3 +964,24 @@ fieldset.fbtabs{min-width:0;width:100%;max-width:100%}.fbc{min-width:0}
 .lr-foot .lr-rep{position:static;margin:0;opacity:1}
 @media (hover:hover) and (pointer:fine){.lr-foot .lr-rep{opacity:0;transition:opacity .15s}.lrow:hover .lr-foot .lr-rep,.lrow:focus-within .lr-foot .lr-rep{opacity:1}}
 @media (max-width:640px){.lrow .lm>span[dir]+span[dir]::before{display:none}}
+
+/* Accessibility fixes from the audit */
+.lrow h3{margin:0;font-size:1rem;font-weight:600;letter-spacing:-.015em;line-height:1.35}
+.lrow h3 a{color:inherit;text-decoration:none}
+.lrow h3 a::after{content:"";position:absolute;inset:0;border-radius:12px}
+.lrow h3 a:focus-visible{outline:none}
+.lrow h3 a:focus-visible::after{outline:3px solid var(--focus);outline-offset:2px}
+.bio .bh{margin:0 0 .8rem;font-size:1rem;font-weight:600;letter-spacing:-.02em;line-height:1.3;display:flex;gap:.6rem;align-items:center}
+.chip i,.qtab i,.seg button i{opacity:1;color:var(--mute)}
+.chip[aria-pressed=true] i,.qtab[aria-pressed=true] i{color:inherit}
+body.tour .skip{display:none}
+@media (max-width:640px){.seg{display:flex;width:100%}.seg button{flex:1;white-space:normal;line-height:1.25;padding:.5rem .6rem}}
+.pcard:focus-visible,.gcard:focus-visible,.ttl:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.refine:focus-within,.refine.qa:focus-within{outline:3px solid var(--focus);outline-offset:2px;border-color:var(--ink)}
+/* Touch targets (audit): give small links a 44px-tall hit area */
+.brand,.fl a{display:inline-flex;align-items:center;min-height:2.75rem}
+.si a.tt{padding:.4rem 0}
+.tnav .chip{min-height:2.75rem}
+.rs a.back{display:inline-flex;align-items:center;min-height:2.75rem}
+.sc-f a{display:inline-block;padding:.4rem 0}
+@media (hover:none){.lr-foot a{display:inline-flex;align-items:center;min-height:2.5rem}}
