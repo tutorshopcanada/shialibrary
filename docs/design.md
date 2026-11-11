@@ -95,3 +95,7 @@ For a newcomer the level bars and tag counts were noise, so the page leads with 
 ## Questions (second pass)
 
 One control and one quiet list. The page opens with a single input: typing narrows the ready-made questions live, and "Ask" (or Enter) searches the whole catalog; a "Search the catalog for …" line is always the last row of a filtered list. Themes are underlined tabs (New to Shia Islam first, All last) instead of tan chips. The list is hairline rows with the question in the serif face and a page count at the right, not a grid of boxes. The separate "Start with these" block is gone, because it repeated the first tab. The source site's own question service is one line of text under the list.
+
+## Home
+
+The home answers "what do you want to do?" in three ways, in this order: ask, be guided, browse. The hero keeps the headline and search box; the suggestion list opens only when the box is focused. Below it: a quiet "New here? Follow the three-step guide" link, "Questions people start with" (six real questions as hairline rows, then "See all 90"), "Or be guided" (Start here with progress for returning visitors, the What is Islam? tour, Learning paths), "Browse by topic" (eight compact tiles with page counts), "What is inside" (the three websites and their page counts), and one quiet feedback line. Removed: the "Where to begin" frame, the four-card "Explore" row, the pill over the wave and the gold feedback banner.

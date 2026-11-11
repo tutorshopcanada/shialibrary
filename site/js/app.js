@@ -434,20 +434,26 @@ function startHtml() {
 }
 
 function homeHtml() {
-  const tops = topHeadings().filter((h) => RECS.some((r) => r.all.includes(h.id))).length;
-  return `<section class="blk"><h2>Where to begin</h2><p class="sub">Three ways in, depending on how much you already know.</p>
-  <div class="frame"><div class="doors">${tourCard()}
-   <button class="door" data-focus type="button"><small>Ask</small><h3>Ask a question</h3><p>Type it the way you would say it. We match it to pages chosen for that question.</p><span class="go">Start typing →</span></button>
-   <a class="door" href="${esc(pageHref('topics'))}"><small>Browse</small><h3>Browse by topic</h3><p>${tops} subjects, each laid out from beginner to advanced.</p><span class="go">Open topics →</span></a>
-  </div></div></section>
-  <section class="blk"><h2>Explore</h2><p class="sub">More ways into the catalog.</p>
-  <div class="exg">
-   <a class="xt" href="${esc(pageHref('beginners'))}"><b>Start here</b><span>The tour, the day-one shelf and a plan for the rest.</span><em>3 steps</em></a>
-   <a class="xt" href="${esc(pageHref('questions'))}"><b>Common questions</b><span>Questions newcomers ask, grouped by theme.</span><em>${pl(engine.questions.length, 'question')}</em></a>
-   <a class="xt" href="${esc(pageHref('paths'))}"><b>Learning paths</b><span>Short reading orders on one subject.</span><em>${pl(engine.paths.length, 'path')}</em></a>
-   <a class="xt" href="${esc(pageHref('sources'))}"><b>Our sources</b><span>The approved websites every result comes from.</span><em>${pl(engine.sources.filter((s) => s.status === 'active').length, 'active source')}</em></a>
-  </div></section>
-  <section class="blk"><div class="cta"><div><h3>Help shape ${esc(SITE.name)}</h3><p>Join the waitlist, suggest a topic, or report a broken link.</p></div><a class="btn white big" href="${esc(pageHref('feedback'))}">Send feedback</a></div></section>`;
+  const sd = startData(), sn = sd.shelf.filter((r) => read[r.id]).length, pd = sd.all.filter((id) => read[id]).length;
+  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 6);
+  const tops = topHeadings().map((h) => ({ h, n: RECS.filter((r) => r.all.includes(h.id)).length })).filter((x) => x.n);
+  const active = engine.sources.filter((s) => s.status === 'active'), counts = {};
+  for (const r of engine.records) counts[r.source] = (counts[r.source] || 0) + 1;
+  const started = sn || pd;
+  return `<p class="hguide"><a href="${esc(pageHref('beginners'))}">New here? Follow the three-step guide <span aria-hidden="true">→</span></a></p>
+  <section class="blk hq"><h2>Questions people start with</h2><p class="sub">Pick one to see the pages chosen for it.</p>
+  <ul class="qlines">${starters.map((q) => qLine(q, '')).join('')}<li><a class="ql ql-go" href="${esc(pageHref('questions'))}"><span class="ql-t">See all ${engine.questions.length} questions</span><span class="ql-m"></span></a></li></ul></section>
+  <section class="blk"><h2>Or be guided</h2><p class="sub">Three ways to learn in order.</p>
+  <div class="g3"><a class="gcard" href="${esc(pageHref('beginners'))}"><small>${started ? 'Continue' : 'Step by step'}</small><h3>Start here</h3><p>The tour, a day-one shelf and a plan for the rest.</p><span class="gm">${started ? `${pd} of ${sd.all.length} pages read` : '3 steps'}</span></a>
+   <a class="gcard" href="${esc(pageHref('start-' + (SL[0] || ['revelation'])[0]))}"><small>A short tour</small><h3>What is Islam?</h3><p>From the divine mission to today, one idea at a time.</p><span class="gm">${SL.length || 7} stops</span></a>
+   <a class="gcard" href="${esc(pageHref('paths'))}"><small>Reading orders</small><h3>Learning paths</h3><p>Short paths on one subject, easiest first.</p><span class="gm">${pl(engine.paths.length, 'path')}</span></a></div></section>
+  <section class="blk"><h2>Browse by topic</h2><p class="sub">Each subject has its own reading list.</p>
+  <ul class="tt">${tops.map((x) => `<li><a class="ttl" href="${esc(topicHref(x.h.id))}"><span>${esc(TOPN(x.h.id))}</span><i>${x.n.toLocaleString()}</i></a></li>`).join('')}</ul>
+  <p class="more-l"><a href="${esc(pageHref('topics'))}">See how the topics are laid out →</a></p></section>
+  <section class="blk"><div class="inside"><div><h2>What is inside</h2><p>${engine.records.length.toLocaleString()} pages from ${active.length} approved websites. We link to them and never copy them.</p></div>
+   <ul class="in-l">${active.map((s) => `<li><b dir="auto">${esc(srcName(s))}</b><span>${(counts[s.id] || 0).toLocaleString()} pages</span></li>`).join('')}</ul>
+   <a class="btn line" href="${esc(pageHref('sources'))}">See the websites</a></div></section>
+  <p class="quietfb">Missing something? <a href="${esc(pageHref('feedback'))}">Join the waitlist or send feedback</a>.</p>`;
 }
 
 const PG = {
@@ -741,7 +747,7 @@ function buildList() {
   input.setAttribute('aria-activedescendant', rows.length ? 'opt' + hi : '');
   comboState();
 }
-function comboState() { input.setAttribute('aria-expanded', String(!(document.body.classList.contains('has') && !$('#pal').matches(':focus-within')))); }
+function comboState() { input.setAttribute('aria-expanded', String($('#pal').matches(':focus-within'))); }
 function setHi(n, scroll) { hi = (n + rows.length) % rows.length; buildList(); if (scroll) { const e = $('#opt' + hi); e && e.scrollIntoView({ block: 'nearest' }); } }
 function choose(i) { const x = rows[i]; if (!x) return; if (x.k === 'r') $('#opt' + i).click(); else x.go(); }
 input.addEventListener('input', () => { hi = 0; buildList(); });
