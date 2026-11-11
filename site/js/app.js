@@ -402,22 +402,23 @@ function aboutHtml() {
 }
 
 const FB = {
-  waitlist: { t: 'Join the waitlist', d: 'Hear when new sources and features arrive.', go: 'Join the waitlist', need: false, ph: 'Anything you would like us to know? (optional)' },
-  source: { t: 'Suggest a website', d: 'A Shia website that belongs in the catalog.', go: 'Send suggestion', need: true, ph: 'The website address, and what it offers.' },
-  feedback: { t: 'Suggest a topic or send feedback', d: 'Something missing, confusing or wrong.', go: 'Send feedback', need: true, ph: 'What would help?' },
-  link: { t: 'Report a broken link', d: 'A link that fails or opens the wrong page.', go: 'Send report', need: true, ph: 'The title of the result and what is wrong.' },
+  waitlist: { tab: 'Waitlist', d: 'Hear when new sources and features arrive. A message is optional.', go: 'Join the waitlist', need: false, ph: 'Anything you would like us to know? (optional)' },
+  source: { tab: 'Suggest a website', d: 'Tell us about a Shia website that belongs in the catalog, and what it offers.', go: 'Send suggestion', need: true, ph: 'The website address, and what it offers.' },
+  feedback: { tab: 'Topic or feedback', d: 'Something missing, confusing or wrong? A topic you would like covered?', go: 'Send feedback', need: true, ph: 'What would help?' },
+  link: { tab: 'Broken link', d: 'A link that fails or opens the wrong page. Include the title of the result.', go: 'Send report', need: true, ph: 'The title of the result and what is wrong.' },
 };
 function feedbackHtml() {
   const ok = reportConfigured(), via = SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app';
   const k0 = ui.fbkind && FB[ui.fbkind] ? ui.fbkind : 'waitlist';
-  return `<section class="blk" id="feedback"><div class="fbx"><div class="fbx-l"><h2>Tell us what you need</h2><p class="sub">Every note is read by the person who runs the catalog.</p>
-   <ol class="fbx-how"><li><b>Choose what this is about</b></li><li><b>Write a short note</b></li><li><b>Your ${via} opens</b> with the message ready. Nothing is sent until you send it.</li></ol>
-   <p class="note" style="margin:0">No account is needed, and nothing you type here is stored by this site.</p></div>
-  <div class="fbx-r" id="fbr">${ok ? `<form id="fbf" novalidate>
-   <fieldset class="fld"><legend>What is this about?</legend><div class="kindc">${Object.entries(FB).map(([k, v]) => `<label><input type="radio" name="kind" value="${k}"${k === k0 ? ' checked' : ''}><span><b>${esc(v.t)}</b><small>${esc(v.d)}</small></span></label>`).join('')}</div></fieldset>
-   <div class="fld" id="fb-msgw"><label for="fb-msg">Your message <span class="mute" id="fb-opt">${FB[k0].need ? '' : '(optional)'}</span></label><textarea id="fb-msg" placeholder="${esc(FB[k0].ph)}" aria-describedby="fb-eh fb-merr"></textarea><span class="hint" id="fb-eh">This opens your ${via} with the message ready. Nothing is sent until you send it.</span><span class="err" id="fb-merr" role="alert" hidden>Add a short message so we know what to look at.</span></div>
-   <button class="btn solid big" type="submit" id="fb-go">${esc(FB[k0].go)}</button></form>`
-   : '<div class="okbox"><b>Feedback is not set up yet.</b><p>The site owner needs to choose an email address or a GitHub repository in <code>site/js/config.js</code>. Until then there is nowhere to send messages.</p></div>'}</div></div></section>`;
+  if (!ok) {
+    try { console.info('ShiaLib: feedback is switched off. Set SITE.report in site/js/config.js to turn it on.'); } catch { /* ignore */ }
+    return `<section class="blk" id="feedback"><div class="fbc fbc-off"><h2>Feedback opens soon</h2><p>We have not connected a way to receive notes yet. Please check back, or use the links in the footer for now.</p><a class="btn line" href="${esc(BASE)}">Back to the start</a></div></section>`;
+  }
+  return `<section class="blk" id="feedback"><form class="fbc" id="fbf" novalidate>
+   <fieldset class="fbtabs"><legend class="sr">What is this about?</legend>${Object.entries(FB).map(([k, v]) => `<label class="fbtab"><input type="radio" name="kind" value="${k}"${k === k0 ? ' checked' : ''}><span>${esc(v.tab)}</span></label>`).join('')}</fieldset>
+   <p class="fb-d" id="fb-desc">${esc(FB[k0].d)}</p>
+   <div class="fld" id="fb-msgw"><label for="fb-msg">Your message <span class="mute" id="fb-opt">${FB[k0].need ? '' : '(optional)'}</span></label><textarea id="fb-msg" placeholder="${esc(FB[k0].ph)}" aria-describedby="fb-merr"></textarea><span class="err" id="fb-merr" role="alert" hidden>Add a short message so we know what to look at.</span></div>
+   <div class="fb-a"><button class="btn solid big" type="submit" id="fb-go">${esc(FB[k0].go)}</button><p class="fb-n">Your ${via} opens with the message ready. Nothing is sent until you send it. No account is needed, and this site stores nothing you type.</p></div></form></section>`;
 }
 
 function tourStrip() {
@@ -895,7 +896,7 @@ view.addEventListener('input', (e) => { if (e.target.id === 'qfilter') { ui.qfil
 view.addEventListener('change', (e) => {
   const t = e.target;
   if (t.dataset && t.dataset.filter) { const st = readState(); nav(searchHref({ ...st, [t.dataset.filter]: t.value })); return; }
-  if (t.name === 'kind') { const f = FB[t.value] || FB.feedback; ui.fbkind = t.value; $('#fb-go').textContent = f.go; $('#fb-opt').textContent = f.need ? '' : '(optional)'; $('#fb-msg').placeholder = f.ph; $('#fb-merr').hidden = true; return; }
+  if (t.name === 'kind') { const f = FB[t.value] || FB.feedback; ui.fbkind = t.value; $('#fb-go').textContent = f.go; $('#fb-opt').textContent = f.need ? '' : '(optional)'; $('#fb-msg').placeholder = f.ph; $('#fb-desc').textContent = f.d; $('#fb-merr').hidden = true; return; }
   if (t.dataset && t.dataset.read) {
     if (t.checked) read[t.dataset.read] = 1; else delete read[t.dataset.read]; saveRead();
     document.querySelectorAll(`[data-read="${CSS.escape(t.dataset.read)}"]`).forEach((x) => { x.checked = t.checked; const w = x.closest('li,.si'); if (w) { const d = w.classList.contains('si') ? w.children[1] : w; d.classList.toggle('done', t.checked); } });

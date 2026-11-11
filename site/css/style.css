@@ -875,3 +875,23 @@ noscript .callout{margin-top:1rem}
 .eh{font-size:1.25rem;letter-spacing:-.025em;margin:0}
 .eh span{color:var(--mute);font-weight:400}
 .enav a{border-color:var(--line);border-radius:12px}
+
+/* Feedback (second pass) */
+.fbc{max-width:40rem;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(1.1rem,3vw,1.7rem)}
+.fbc-off{text-align:left}
+.fbc-off h2{margin:0 0 .4rem;font-size:1.375rem;letter-spacing:-.03em}
+.fbc-off p{margin:0 0 1.1rem;color:var(--mute);line-height:1.5;max-width:32rem}
+.fbtabs{border:0;padding:0;margin:0 0 1rem;display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);min-width:0}
+.fbtabs::-webkit-scrollbar{display:none}
+.fbtab{flex:none;cursor:pointer}
+.fbtab input{position:absolute;opacity:0;width:1px;height:1px}
+.fbtab span{display:inline-flex;align-items:center;min-height:2.75rem;padding:.5rem .85rem;color:var(--mute);font-size:.9375rem;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px}
+.fbtab input:checked+span{color:var(--ink);font-weight:600;border-bottom-color:var(--t-fiqh)}
+.fbtab input:focus-visible+span{outline:3px solid var(--focus);outline-offset:-3px;border-radius:8px}
+@media (hover:hover) and (pointer:fine){.fbtab:hover span{color:var(--ink)}}
+.fb-d{margin:0 0 1.1rem;color:var(--mute);line-height:1.5}
+.fbc .fld textarea{background:var(--ground);min-height:8rem}
+.fb-a{display:grid;gap:.9rem;justify-items:start}
+.fb-n{margin:0;font-size:.8125rem;color:var(--mute);line-height:1.5;max-width:32rem}
+fieldset.fbtabs{min-width:0;width:100%;max-width:100%}.fbc{min-width:0}
+.fbtabs,.fbtab{position:relative}

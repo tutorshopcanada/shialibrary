@@ -105,3 +105,7 @@ The home answers "what do you want to do?" in three ways, in this order: ask, be
 Slides: the large ghost numeral behind the title is gone (the progress bar already says "2 / 7"). A group whose names all carry the same sub-label (for example nineteen prophets, each "Prophet") shows as a wrapping row of name pills instead of nineteen identical tiles, so both groups fit on one screen. Group labels are small capitals with a count. Groups of different items (the Imams, scholars, books) keep the tile style.
 
 Name pages: the short bio is a plain card (placeholder wording, no skeleton bars). "Learn more" uses the compact rows from topic pages, and lists exact matches only when there are any, so a name does not pull in unrelated pages. Previous and next names sit below.
+
+## Feedback (second pass)
+
+One narrow card instead of a side column plus four boxed options. Four underlined tabs (Waitlist, Suggest a website, Topic or feedback, Broken link) pick the kind; one sentence under the tabs says what that kind is for, then a message box and a single button. The button label, placeholder and whether a message is required follow the tab. The explainer is one muted note under the button. Until the owner sets `SITE.report` in `site/js/config.js`, visitors see a plain "Feedback opens soon" card (no developer wording) and the console logs a one-line hint for the owner.
