@@ -13,16 +13,18 @@ source: thaqalayn.net
 url: https://thaqalayn.com/book/29
 language: en
 date: ''
-description: A transcription of 97 assemblies in which Shaykh al-Saduq dictated narrations to his students, shown with
-  an English translation by Bilal Muhammad. The site says it holds 1082 narrations attributed to the Prophet and the
-  Ahl al-Bayt (the Prophet's family), including topics such as the Night Journey and Ascension, supplications and the
-  virtues of the Ahl al-Bayt. It is a primary source.
+description: A transcription of 97 assemblies in which Shaykh al-Saduq dictated narrations to his students,
+  shown with an English translation by Bilal Muhammad. Each assembly is dated by the day and month when
+  it was held; the first assemblies are dated Rajab and Sha'ban. The site says it holds 1082 narrations
+  attributed to the Prophet and the Ahl al-Bayt (the Prophet's family), including topics such as the Night
+  Journey and Ascension, supplications and the virtues of the Ahl al-Bayt. It is a primary source.
 sample_questions:
 - What is Al-Amali of Shaykh al-Saduq?
 - Who compiled this Al-Amali?
 - What hadith are there about the Night Journey (Isra and Miraj)?
 - What hadith are there about the virtues of the Ahl al-Bayt?
 - How many assemblies does Al-Amali have?
+- What hadith are there from the assemblies held in Rajab?
 headings:
 - hadith-collections
 - ahl-al-bayt

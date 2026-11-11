@@ -1,0 +1,27 @@
+id: sistani-qa-15352
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-forbidden-acts-ihram
+level: intermediate
+title: If covering the head was recurrent in each ihram, should kaffarah (atonement or expiation) be repeated [for every incident]?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01188/#15352
+language: en
+date: ''
+description: A question about whether the expiation (kaffarah) for covering the head during ihram must be repeated when the same act happens again within one ihram.
+sample_questions:
+- Can I cover my head during ihram?
+- What is kaffarah in ihram?
+- What if I covered my head more than once in ihram?
+headings:
+- hajj
+access: free
+location: Forbidden Acts During Ihram, question 1
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-11'

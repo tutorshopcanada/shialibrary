@@ -1,0 +1,39 @@
+id: al-islam-elements-of-islamic-studies-rizvi
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Elements of Islamic Studies
+title_original: ''
+authors:
+- saeed-akhtar-rizvi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/elements-islamic-studies-sayyid-saeed-akhtar-rizvi
+language: en
+date: '1983'
+description: A basic textbook of Islamic teachings for students of all ages, built from the author's lessons.
+  It covers the Kalima, the Fourteen Infallibles, the names of prophets and books, the roots of religion
+  (beliefs) and an overview of the branches of religion, in fifteen lessons.
+sample_questions:
+- What are the basic teachings of Islam?
+- Who are the Fourteen Infallibles?
+- What are the roots of religion in Islam?
+- What does the Kalima mean?
+- Where can a beginner start learning the basics of Islam?
+headings:
+- new-to-shia-islam
+- beliefs
+- tawhid
+- adl
+- nubuwwah
+- imamate
+- maad
+access: free
+location: ''
+needs_review: false
+review_note: The page gives the Fourth Edition (1983) as its latest edition shown; the first edition was
+  1968. The branches lessons are an overview of practices inside a basic teaching text; the work's main
+  purpose is basic belief and teaching, so it is not catalogued as a fiqh work.
+cataloged_on: '2026-11-11'

@@ -1,0 +1,38 @@
+id: al-islam-what-everyone-should-know-about-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: What Everyone Should Know about Islam
+title_original: ''
+authors:
+- ibrahim-amini
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/what-everyone-should-know-about-islam-ibrahim-amini
+language: en
+date: ''
+description: A summary of the principles of religion by Ayatollah Ibrahim Amini, written for general readers.
+  Its chapters cover theology, prophethood, the Imamate, the Resurrection, moral ethics and the branches
+  of religion. The book presents itself as a summary that points readers to fuller works.
+sample_questions:
+- What are the principles of religion in Islam?
+- What is prophethood in Islam?
+- What is the Imamate?
+- What happens after death in Islam?
+- What does Islam teach about ethics?
+headings:
+- beliefs
+- tawhid
+- nubuwwah
+- imamate
+- maad
+- ethics
+access: free
+location: ''
+needs_review: false
+review_note: 'Level intermediate: the page states no audience. The book describes itself as a summary
+  that prepares readers for fuller works, so it is not placed at beginner level. The chapter on Branches
+  of Religion lists practices as an overview only and is not treated as a fiqh work.'
+cataloged_on: '2026-11-11'

@@ -413,6 +413,13 @@ export function createEngine(index) {
     return (out.question || out.heading) ? out : null;
   }
 
+  // Book-over-question boost. A source can override it (ranking.granularity_boost_by_source), e.g. thaqalayn
+  // chapters are narrow pages, so they must not get the boost that sistani.org chapter pages get.
+  function granBoost(r) {
+    const by = (config.ranking.granularity_boost_by_source || {})[r.source] || {};
+    return Number(by[r.granularity] ?? (config.ranking.granularity_boost || {})[r.granularity]) || 1;
+  }
+
   // ---- Layer 2 scoring ----
   function keywordScores(qa) {
     const { k1, b } = config.layer2.bm25;
@@ -582,7 +589,7 @@ export function createEngine(index) {
       if (cov < L2.min_result_coverage) continue;
       let s = score[d];
       if (qa.phrase && (doc.tq.includes(qa.phrase) || doc.desc.includes(qa.phrase))) s *= L2.phrase_boost;
-      s *= Number((config.ranking.granularity_boost || {})[doc.record.granularity]) || 1;
+      s *= granBoost(doc.record);
       hits.push({ doc, record: doc.record, score: s, coverage: cov, exact: isExact(qa, doc) });
     }
     hits.sort((a, b) => b.score - a.score);
@@ -688,7 +695,6 @@ export function createEngine(index) {
     if (best < L3.min_similarity) return out;
     const f = result.filters;
     const boost = result.order === 'deeper' ? config.ranking.deeper_boost : config.ranking.level_boost;
-    const gran = config.ranking.granularity_boost || {};
     const floor = Math.max(L3.min_similarity, best * L3.relative_floor);
     // Level and book-over-question boosts count for less here than in keyword ranking: similarity is already a fine signal.
     const strength = Number(L3.boost_strength) >= 0 ? Number(L3.boost_strength) : 0.2;
@@ -707,7 +713,7 @@ export function createEngine(index) {
       if (!kwRank.has(id)) out.counts.tags[tag] = (out.counts.tags[tag] || 0) + 1;
       if (f.tag && tag !== f.tag) continue;
       sem.push({ record: doc.record, similarity: score, exact: false, coverage: 0, viaMeaning: true,
-        score: score * (1 + strength * ((Number(boost[doc.record.level]) || 1) * (Number(gran[doc.record.granularity]) || 1) - 1)) });
+        score: score * (1 + strength * ((Number(boost[doc.record.level]) || 1) * (granBoost(doc.record)) - 1)) });
     }
     sem.sort((a, b) => b.score - a.score);
     const semRank = new Map(sem.map((h, i) => [h.record.id, i + 1]));

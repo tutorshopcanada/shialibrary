@@ -15,14 +15,17 @@ language: en
 date: ''
 description: A biographical reference on narrators of Shia hadith and their reliability, shown with an
   English translation by Tashayyu. The site says it is organised alphabetically and is also known as 'Rijal
-  Ibn al-Ghada'iri' (rijal means the study of narrators). It is not a hadith collection; it is a tool
-  for studying who transmitted hadith.
+  Ibn al-Ghada'iri' (rijal means the study of narrators). Its chapters are grouped by the first letter
+  of each narrator's name, from Alif to Ya, with one chapter on kunyas (names that begin with Abu) and
+  an addendum of material quoted from other authors. It is not a hadith collection; it is a tool for studying
+  who transmitted hadith.
 sample_questions:
 - What is Kitab al-Du'afa?
 - What is rijal, the study of hadith narrators?
 - Who was Ibn al-Ghada'iri?
 - How do scholars judge the reliability of hadith narrators?
 - Where can I read about weak narrators of hadith?
+- Who are the narrators listed under the letter Alif?
 headings:
 - hadith-sciences
 access: free

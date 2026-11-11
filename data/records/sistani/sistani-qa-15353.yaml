@@ -1,0 +1,27 @@
+id: sistani-qa-15353
+type: qa
+content_tag: fiqh
+granularity: item
+parent: sistani-qa-forbidden-acts-ihram
+level: intermediate
+title: If someone else cast a shade over you while you are walking, is kaffara obligatory?
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: sistani.org
+url: https://www.sistani.org/english/qa/01188/#15353
+language: en
+date: ''
+description: A question about a pilgrim in ihram who is shaded by another person while walking, and whether an expiation (kaffarah) applies in that case.
+sample_questions:
+- Can someone shade me with an umbrella during ihram?
+- Does shade during ihram require kaffarah?
+- What is kaffara in ihram?
+headings:
+- hajj
+access: free
+location: Forbidden Acts During Ihram, question 2
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-11'

@@ -1,3 +1,6 @@
 2026-11-10 | https://al-islam.org/light-within-me | guessed URL returned HTTP 404 (not retried)
 2026-11-10 | https://www.al-islam.org/articles | HTTP 403 Forbidden (www host)
 2026-11-10 | https://al-islam.org/book | WebFetch HTTP 403 Forbidden
+2026-11-11 | https://al-islam.org/node/41808 | page returned only site navigation, no title-body or author (presentation 'Who is Shia?'); not cataloged
+2026-11-11 | https://al-islam.org/file/lets-learn-about-imam-ali | file page shows only site navigation, no readable title body or author; not cataloged
+2026-11-11 | https://al-islam.org/node/41779 | node page shows only site navigation, no title body or author; not cataloged
