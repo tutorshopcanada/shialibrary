@@ -638,3 +638,49 @@ noscript .callout{margin-top:1rem}
 .related>h2{font-size:1.375rem;letter-spacing:-.03em;margin:0 0 1rem;font-weight:600}
 .seg button:disabled{opacity:.45;cursor:default}
 .sps+.tsec{margin-top:2.6rem}
+
+/* About */
+.jump{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 2rem}
+.jump .chip{border:1px solid var(--edge);background:var(--paper)}
+.pilgrid{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));margin-top:1.2rem}
+.pil{background:var(--paper);border:1px solid var(--edge);border-radius:16px;padding:1.2rem 1.25rem;min-width:0}
+.pil svg{width:1.6rem;height:1.6rem;color:var(--t-fiqh);margin-bottom:.7rem}
+.pil h3{margin:0 0 .35rem;font-size:1.0625rem;font-weight:600;letter-spacing:-.02em}
+.pil p{margin:0;font-size:.875rem;line-height:1.5;color:var(--mute)}
+.factl{margin:1rem 0 0;display:grid;border:1px solid var(--edge);border-radius:16px;background:var(--paper);overflow:hidden}
+.factl>div{display:grid;grid-template-columns:minmax(0,10rem) minmax(0,1fr);gap:.3rem 1.5rem;padding:.9rem 1.25rem}
+.factl>div+div{border-top:1px solid var(--line)}
+.factl dt{font-weight:600;letter-spacing:-.01em}
+.factl dd{margin:0;color:var(--mute);line-height:1.5;max-width:42rem}
+.hsteps{list-style:none;counter-reset:s;margin:1rem 0 0;padding:0;display:grid;gap:8px}
+.hsteps li{counter-increment:s;position:relative;background:var(--paper);border:1px solid var(--edge);border-radius:12px;padding:.9rem 1.1rem .9rem 3.6rem;min-width:0}
+.hsteps li::before{content:counter(s);position:absolute;left:1.1rem;top:.9rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--btn);color:var(--on-btn);display:grid;place-items:center;font-size:.875rem;font-weight:600}
+.hsteps h3{margin:0;font-size:1rem;font-weight:600;letter-spacing:-.015em}
+.hsteps p{margin:.2rem 0 0;font-size:.875rem;color:var(--mute);line-height:1.5}
+.note{margin:1rem 0 0;font-size:.875rem;color:var(--mute);line-height:1.5;max-width:42rem}
+.priv{background:var(--paper);border:1px solid var(--edge);border-radius:16px;padding:1.1rem 1.25rem;margin-top:1rem}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.ticks li{position:relative;padding-left:1.7rem;line-height:1.5;max-width:44rem}
+.ticks li::before{content:"";position:absolute;left:.1rem;top:.35rem;width:.7rem;height:.4rem;border-left:2px solid var(--t-fiqh);border-bottom:2px solid var(--t-fiqh);transform:rotate(-45deg)}
+#report .qask{margin-top:0}
+.tsec[id]{scroll-margin-top:1rem}
+/* Feedback */
+.fbx{display:grid;gap:1.6rem 3rem;grid-template-columns:minmax(0,1fr)}
+@media(min-width:56rem){.fbx{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start}.fbx-l{position:sticky;top:1.5rem}}
+.fbx-l h2{margin:0 0 .3rem;font-size:1.375rem;letter-spacing:-.03em}
+.fbx-how{counter-reset:h;list-style:none;margin:1.2rem 0;padding:0;display:grid;gap:.8rem}
+.fbx-how li{counter-increment:h;position:relative;padding-left:2.3rem;line-height:1.45;font-size:.9375rem}
+.fbx-how li::before{content:counter(h);position:absolute;left:0;top:-.05rem;width:1.6rem;height:1.6rem;border-radius:50%;border:1.5px solid var(--edge);display:grid;place-items:center;font-size:.8125rem;font-weight:600}
+.fbx-r{background:var(--paper);border:1px solid var(--edge);border-radius:16px;padding:clamp(1.1rem,3vw,1.6rem);min-width:0}
+.kindc{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr))}
+.kindc label{cursor:pointer;min-width:0}
+.kindc input{position:absolute;opacity:0;width:1px;height:1px}
+.kindc span{display:flex;flex-direction:column;gap:.15rem;height:100%;border:1.5px solid var(--line);border-radius:12px;padding:.8rem 1rem;min-height:3.5rem;background:var(--ground)}
+.kindc b{font-weight:600;font-size:.9375rem;letter-spacing:-.01em}
+.kindc small{font-size:.8125rem;color:var(--mute);line-height:1.35}
+.kindc input:checked+span{border-color:var(--t-fiqh);background:color-mix(in srgb,var(--t-fiqh) 12%,var(--paper));box-shadow:inset 0 0 0 1px var(--t-fiqh)}
+.kindc input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.kindc label:active span{transform:scale(.985)}
+@media (hover:hover) and (pointer:fine){.kindc label:hover span{border-color:var(--edge)}}
+@media (max-width:640px){.factl>div{grid-template-columns:minmax(0,1fr)}}
+.qask .btn.solid{background:#fff;color:#0f3f4a;border-color:#fff}

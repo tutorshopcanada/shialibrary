@@ -66,3 +66,8 @@ python3 -m http.server 8000 --directory site   # then open http://localhost:8000
 - **A question's own page**: typing a curated question (or one of its alternate phrasings, see `isThatQuestion`) shows the question as the page headline, the pages chosen for it (`top_records`), its reading path, related questions, then the other matching pages as compact rows. Broad searches such as "prayer" keep the normal results layout.
 - **Sources** (`#sources`): one panel per approved website with page count, level bar, content-tag counts, "Browse all N pages" (`?source=id`) and a link to the site. Sources not yet in the catalog sit under "On the way" with their status. The About page uses a compact list (`sourceRowsHtml`).
 
+
+## About and feedback
+
+- **About** is split into scannable sections with an on-page jump row (`data-jump` buttons, so the hash stays a route): three principle cards, a "what is included" fact list, the website list, numbered "how results are chosen" steps, a privacy checklist, and a report-a-link card.
+- **Feedback** is a four-card chooser (waitlist, suggest a website, topic or feedback, broken link) with a short form beside a three-step explainer. The button label, placeholder and required message follow the choice (`FB` in `app.js`). "Suggest a source" on the Sources page opens it with the website option selected. Until the owner sets `SITE.report` in `site/js/config.js`, the form is replaced by a notice.

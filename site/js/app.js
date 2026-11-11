@@ -24,7 +24,7 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const view = $('#view'), input = $('#q');
 let engine = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
 let route = { t: 'home' }, lastSlide = null, firstLoad = true, lastHref = '';
-const ui = { limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
+const ui = { fbkind: '', limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
 
 // ---------------------------------------------------------------------------
 // URL state
@@ -61,6 +61,7 @@ document.addEventListener('click', (e) => {
   let u; try { u = new URL(a.href, location.href); } catch { return; }
   if (u.origin !== location.origin || u.pathname !== BASE) return;
   e.preventDefault();
+  if (a.dataset.fbkind) ui.fbkind = a.dataset.fbkind;
   nav(u.pathname + u.search + u.hash);
 });
 addEventListener('popstate', () => render());
@@ -131,7 +132,7 @@ function cardHtml(r, { compact = false, lean = false, tick = false, hideContextF
   if (r.type === 'course') {
     const rows = [['Offered by', r.provider], ['Taught by', (r.instructors || []).map(scholarName).join(', ')], ['Format', r.delivery],
       ['Length', r.duration], ['Starts', r.start_date], ['Cost', r.cost]].filter(([, v]) => v);
-    if (rows.length) facts = `<dl class="facts">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd dir="auto">${esc(v)}</dd></div>`).join('')}</dl>`;
+    if (rows.length) facts = `<dl class="factl">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd dir="auto">${esc(v)}</dd></div>`).join('')}</dl>`;
   }
   const title = `<h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>`;
   const orig = r.title_original ? `<p class="meta" dir="auto">${esc(r.title_original)}</p>` : '';
@@ -345,7 +346,7 @@ function sourcesHtml() {
   <div class="sps">${active.map(sourcePanel).join('')}</div>
   ${soon.length ? `<div class="tsec"><h2>On the way</h2><p class="sub">Approved, but not in the catalog yet.</p><ul class="soon-list">${soon.map((s) => `<li><div><b dir="auto">${esc(srcName(s))}</b><span>${esc(WHAT[s.id] || s.catalog_level || '')}</span></div><span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span></li>`).join('')}</ul></div>` : ''}
   <div class="scope"><div><h3>What we include</h3><p>Twelver Shia resources in English, from approved websites only. Fiqh rulings come from two scholars: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Everything else is not limited by author.</p></div>
-  <div class="scope-b"><a class="btn line" href="${esc(pageHref('about'))}">Read the full scope</a><a class="btn line" href="${esc(pageHref('feedback'))}">Suggest a source</a></div></div></section>`;
+  <div class="scope-b"><a class="btn line" href="${esc(pageHref('about'))}">Read the full scope</a><a class="btn line" href="${esc(pageHref('feedback'))}" data-fbkind="source">Suggest a source</a></div></div></section>`;
 }
 function sourceRowsHtml() {
   const counts = new Map(); for (const r of engine.records) counts.set(r.source, (counts.get(r.source) || 0) + 1);
@@ -365,51 +366,52 @@ function guideHtml() {
   </div></div></section>`;
 }
 
+const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ICON = { link: ico('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'), list: ico('<path d="M5 6h14M5 12h14M5 18h9"/>'), lock: ico('<rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>') };
 function aboutHtml() {
   const rep = reportConfigured()
     ? `<a class="btn solid" href="${esc(reportHref(null))}" rel="noopener noreferrer">${SITE.report.kind === 'github' ? 'Report a problem (opens GitHub)' : 'Report a problem by email'}</a>`
-    : '<span class="todo">Reporting is not set up yet.</span>';
-  const scope = safeUrl(SITE.scopeUrl) ? `<a href="${esc(SITE.scopeUrl)}" rel="noopener noreferrer">Read the full scope and inclusion criteria</a>.` : 'The full scope and inclusion criteria are published in the project repository, in the file <code>docs/scope.md</code>.';
-  return `<div class="prose">
-  <p>${esc(SITE.name)} is a free catalog of Shia resources. You type a topic or a question, and it points you to where that content can be found on a short list of approved websites. It is made for people who are new and do not know where to look. It works like a library catalog: it describes things and tells you where they are.</p>
-  <h2 id="not-host">We do not host or write the content</h2><ul>
-   <li>Every result is a short catalog entry with a link to the website where the original is published.</li>
-   <li>We are not the author or publisher of any book, article, ruling, hadith collection, lecture or course listed here. The source is named on every result.</li>
-   <li>The short descriptions are our own plain-English summaries of what a page is about. For rulings (fiqh), the description only says what the question is about. It never restates the ruling. Read the ruling on the source page.</li>
-   <li>This site does not give religious rulings or take positions.</li></ul>
-  <h2 id="scope">What is included</h2><ul>
-   <li><strong>Twelver (Ithna ‘Ashari) Shia</strong> resources only, for now.</li>
-   <li><strong>English only</strong>, for now. You can still search with Arabic, Persian or Urdu terms and common spellings; they are matched to the same topics.</li>
-   <li><strong>Approved websites only.</strong> Nothing appears here unless it comes from a website on the list below.</li>
-   <li><strong>Fiqh (rulings and practical law)</strong> is limited to two scholars for now: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Results show whose rulings a page follows.</li>
-   <li><strong>Everything else</strong> (history, beliefs, ethics, hadith, Quran and similar) is not limited by author, as long as it comes from an approved website.</li>
-   <li>Beginner material comes first. Each result is marked Beginner, Intermediate or Advanced.</li></ul>
-  <p>${scope}</p>
-  <h2 id="sources-list">Websites this catalog points to</h2></div><div class="prose">${sourceRowsHtml()}</div>
-  <div class="prose"><h2 id="how">How results are chosen</h2><ul>
-   <li><strong>No AI writes answers here.</strong> The search only finds and orders catalog entries. It never writes answers, summaries or rulings.</li>
-   <li>First it checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it are shown first.</li>
-   <li>Then it does an ordinary word search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.</li>
-   <li><strong>Exact matches</strong> are results where your words, or another name for the same topic, appear in the title or in the questions a page helps answer. Everything else is listed as <strong>Related results</strong>. If there are no exact matches, the page says so.</li>
-   <li>If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.</li>
-   <li>Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.</li>
-   <li>Catalog entries were prepared with the help of an AI assistant from the source pages, then checked by automatic rules. Items marked <span class="pill">Draft</span> have not yet been reviewed by a person.</li></ul>
-  <h2 id="privacy">Privacy</h2>
-  <p>The search runs entirely in your browser. What you type is not sent to us or to anyone else, and it is not stored. This site uses no cookies, no tracking and no accounts. If you tick pages as read, those ticks are saved only in your own browser (local storage) and never leave it. When you follow a link, you leave this site and the other website’s own policies apply. This includes the “Search Al-Islam.org” link shown under results: only if you click it, your search words are sent to Al-Islam.org as part of that link.</p>
-  <h2 id="report">Report a wrong or broken link</h2>
-  <p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. It helps to include the title of the result and what is wrong.</p>
-  <p>${rep}</p></div>`;
+    : `<a class="btn solid" href="${esc(pageHref('feedback'))}">Tell us about it</a>`;
+  const scope = safeUrl(SITE.scopeUrl) ? `<a href="${esc(SITE.scopeUrl)}" rel="noopener noreferrer">Read the full scope and inclusion criteria</a>` : 'The full scope and inclusion criteria are published in the project repository, in the file <code>docs/scope.md</code>';
+  const facts = [['School', 'Twelver (Ithna ‘Ashari) Shia resources only, for now.'], ['Language', 'English only, for now. Searching with Arabic, Persian or Urdu terms and common spellings still works: they match the same topics.'],
+    ['Websites', 'Approved websites only. Nothing appears here unless it comes from a site on the list below.'], ['Fiqh', 'Rulings and practical law are limited to two scholars for now: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Results show whose rulings a page follows.'],
+    ['Everything else', 'History, beliefs, ethics, hadith, Quran and similar topics are not limited by author, as long as they come from an approved website.'], ['Levels', 'Beginner material comes first. Each result is marked Beginner, Intermediate or Advanced.']];
+  const steps = [['Common questions first', 'It checks a list of questions and topics prepared in advance. If your search matches one, the pages chosen for it are shown first.'],
+    ['Then a word search', 'An ordinary search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.'],
+    ['Exact, then related', 'Exact matches have your words, or another name for the same topic, in the title or in the questions a page helps answer. Everything else is Related. If nothing is exact, the page says so.'],
+    ['No guessing', 'If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead.'],
+    ['Simple first', 'Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.']];
+  return `<nav class="jump" aria-label="On this page">${[['not-host', 'What we do'], ['scope', 'What is included'], ['sources-list', 'Websites'], ['how', 'How results are chosen'], ['privacy', 'Privacy'], ['report', 'Report a link']].map(([id, l]) => `<button class="chip" type="button" data-jump="${id}">${l}</button>`).join('')}</nav>
+  <section class="tsec" id="not-host"><h2>A catalog, not a library</h2><p class="sub">${esc(SITE.name)} is a free catalog of Shia resources. Type a topic or a question, and it points you to where that content can be found on a short list of approved websites. It is made for people who are new and do not know where to look.</p>
+   <div class="pilgrid"><div class="pil">${ICON.link}<h3>We point, we do not host</h3><p>Every result is a short catalog entry with a link to the website where the original is published. We are not the author or publisher of any of it, and the source is named on every result.</p></div>
+   <div class="pil">${ICON.list}<h3>Descriptions, not answers</h3><p>The short descriptions are our own plain-English summaries of what a page is about. For rulings, the description only says what the question is about. Read the ruling on the source page.</p></div>
+   <div class="pil">${ICON.lock}<h3>No rulings, no positions</h3><p>This site does not give religious rulings or take positions. It describes, labels and links.</p></div></div></section>
+  <section class="tsec" id="scope"><h2>What is included</h2><p class="sub">${scope}.</p><dl class="factl">${facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl></section>
+  <section class="tsec" id="sources-list"><h2>Websites this catalog points to</h2><p class="sub">Every result comes from one of these.</p>${sourceRowsHtml()}<p style="margin:0"><a class="btn line" href="${esc(pageHref('sources'))}">See what each website contributes</a></p></section>
+  <section class="tsec" id="how"><h2>How results are chosen</h2><p class="sub">Plain matching rules. <strong>No AI writes answers here:</strong> the search only finds and orders catalog entries, and never writes answers, summaries or rulings.</p>
+   <ol class="hsteps">${steps.map(([h, p]) => `<li><h3>${esc(h)}</h3><p>${esc(p)}</p></li>`).join('')}</ol>
+   <p class="note">Catalog entries were prepared with the help of an AI assistant from the source pages, then checked by automatic rules. Items marked <span class="pill">Draft</span> have not yet been reviewed by a person.</p></section>
+  <section class="tsec" id="privacy"><h2>Privacy</h2><div class="priv"><ul class="ticks"><li>The search runs entirely in your browser. What you type is not sent to us or to anyone else, and it is not stored.</li><li>No cookies, no tracking and no accounts.</li><li>If you tick pages as read, those ticks are saved only in your own browser and never leave it.</li><li>When you follow a link, you leave this site and the other website’s own policies apply. This includes the “Search Al-Islam.org” link under results: only if you click it, your search words are sent to Al-Islam.org as part of that link.</li></ul></div></section>
+  <section class="tsec" id="report"><div class="qask"><div><h3>Report a wrong or broken link</h3><p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. It helps to include the title of the result and what is wrong.</p></div><div class="qask-b">${rep}</div></div></section>`;
 }
 
+const FB = {
+  waitlist: { t: 'Join the waitlist', d: 'Hear when new sources and features arrive.', go: 'Join the waitlist', need: false, ph: 'Anything you would like us to know? (optional)' },
+  source: { t: 'Suggest a website', d: 'A Shia website that belongs in the catalog.', go: 'Send suggestion', need: true, ph: 'The website address, and what it offers.' },
+  feedback: { t: 'Suggest a topic or send feedback', d: 'Something missing, confusing or wrong.', go: 'Send feedback', need: true, ph: 'What would help?' },
+  link: { t: 'Report a broken link', d: 'A link that fails or opens the wrong page.', go: 'Send report', need: true, ph: 'The title of the result and what is wrong.' },
+};
 function feedbackHtml() {
-  const ok = reportConfigured();
-  return `<section class="blk" id="feedback"><h2>Help shape ${esc(SITE.name)}</h2><p class="sub">Join the waitlist, suggest a topic, or report a broken link.</p>
-  <div class="frame"><div class="fb"><div class="fb-l"><h3>Tell us what you need</h3><p>Missing a topic? Spotted a broken link? Want to suggest a website? Every note is read by the person who runs the catalog.</p></div>
-   <div class="fb-r" id="fbr">${ok ? `<form id="fbf" novalidate>
-   <fieldset class="fld"><legend>I want to</legend><div class="kinds"><label><input type="radio" name="kind" value="waitlist" checked><span>Join the waitlist</span></label><label><input type="radio" name="kind" value="feedback"><span>Send feedback</span></label><label><input type="radio" name="kind" value="link"><span>Report a broken link</span></label></div></fieldset>
-   <div class="fld" id="fb-msgw"><label for="fb-msg">Your message <span class="mute" id="fb-opt">(optional)</span></label><textarea id="fb-msg" placeholder="What would help?" aria-describedby="fb-eh fb-merr"></textarea><span class="hint" id="fb-eh">This opens your ${SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app'} with the message ready. Nothing is sent until you send it.</span><span class="err" id="fb-merr" role="alert" hidden>Add a short message so we know what to look at.</span></div>
-   <button class="btn solid big" type="submit" id="fb-go">Join the waitlist</button></form>`
-   : '<div class="okbox"><b>Feedback is not set up yet.</b><p>The site owner needs to choose an email address or a GitHub repository in <code>site/js/config.js</code>. Until then there is nowhere to send messages.</p></div>'}</div></div></div></section>`;
+  const ok = reportConfigured(), via = SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app';
+  const k0 = ui.fbkind && FB[ui.fbkind] ? ui.fbkind : 'waitlist';
+  return `<section class="blk" id="feedback"><div class="fbx"><div class="fbx-l"><h2>Tell us what you need</h2><p class="sub">Every note is read by the person who runs the catalog.</p>
+   <ol class="fbx-how"><li><b>Choose what this is about</b></li><li><b>Write a short note</b></li><li><b>Your ${via} opens</b> with the message ready. Nothing is sent until you send it.</li></ol>
+   <p class="note" style="margin:0">No account is needed, and nothing you type here is stored by this site.</p></div>
+  <div class="fbx-r" id="fbr">${ok ? `<form id="fbf" novalidate>
+   <fieldset class="fld"><legend>What is this about?</legend><div class="kindc">${Object.entries(FB).map(([k, v]) => `<label><input type="radio" name="kind" value="${k}"${k === k0 ? ' checked' : ''}><span><b>${esc(v.t)}</b><small>${esc(v.d)}</small></span></label>`).join('')}</div></fieldset>
+   <div class="fld" id="fb-msgw"><label for="fb-msg">Your message <span class="mute" id="fb-opt">${FB[k0].need ? '' : '(optional)'}</span></label><textarea id="fb-msg" placeholder="${esc(FB[k0].ph)}" aria-describedby="fb-eh fb-merr"></textarea><span class="hint" id="fb-eh">This opens your ${via} with the message ready. Nothing is sent until you send it.</span><span class="err" id="fb-merr" role="alert" hidden>Add a short message so we know what to look at.</span></div>
+   <button class="btn solid big" type="submit" id="fb-go">${esc(FB[k0].go)}</button></form>`
+   : '<div class="okbox"><b>Feedback is not set up yet.</b><p>The site owner needs to choose an email address or a GitHub repository in <code>site/js/config.js</code>. Until then there is nowhere to send messages.</p></div>'}</div></div></section>`;
 }
 
 function startHtml() {
@@ -465,7 +467,7 @@ function curatedHtml(result) {
   return out + '</div>';
 }
 function stepsHtml(path, compact) {
-  return `<ol class="steps">${path.steps.map((s) => { const r = rec(s.record); return r ? `<li><div>${s.why ? `<p class="why" dir="auto">${esc(s.why)}</p>` : ''}<ul class="cards">${cardHtml(r, { compact })}</ul></div></li>` : ''; }).join('')}</ol>`;
+  return `<ol class="hsteps">${path.steps.map((s) => { const r = rec(s.record); return r ? `<li><div>${s.why ? `<p class="why" dir="auto">${esc(s.why)}</p>` : ''}<ul class="cards">${cardHtml(r, { compact })}</ul></div></li>` : ''; }).join('')}</ol>`;
 }
 function externalHtml(q) {
   const href = externalSearchHref(q); if (!href) return '';
@@ -860,13 +862,14 @@ view.addEventListener('click', (e) => {
   else if ('pt' in b.dataset) { ui.pathTheme = b.dataset.pt; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-pt="${CSS.escape(b.dataset.pt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
   else if ('focus' in b.dataset) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); input.focus(); }
   else if ('askq' in b.dataset) { $('#ask').click(); }
+  else if (b.dataset.jump) { const el = document.getElementById(b.dataset.jump); if (el) { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); } }
   else if (b.dataset.qt) { ui.qtheme = b.dataset.qt; ui.qfilter = ''; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-qt="${CSS.escape(b.dataset.qt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
 });
 view.addEventListener('input', (e) => { if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
 view.addEventListener('change', (e) => {
   const t = e.target;
   if (t.dataset && t.dataset.filter) { const st = readState(); nav(searchHref({ ...st, [t.dataset.filter]: t.value })); return; }
-  if (t.name === 'kind') { const k = t.value; $('#fb-go').textContent = k === 'waitlist' ? 'Join the waitlist' : k === 'feedback' ? 'Send feedback' : 'Send report'; $('#fb-opt').textContent = k === 'waitlist' ? '(optional)' : ''; $('#fb-merr').hidden = true; return; }
+  if (t.name === 'kind') { const f = FB[t.value] || FB.feedback; ui.fbkind = t.value; $('#fb-go').textContent = f.go; $('#fb-opt').textContent = f.need ? '' : '(optional)'; $('#fb-msg').placeholder = f.ph; $('#fb-merr').hidden = true; return; }
   if (t.dataset && t.dataset.read) {
     if (t.checked) read[t.dataset.read] = 1; else delete read[t.dataset.read]; saveRead();
     document.querySelectorAll(`[data-read="${CSS.escape(t.dataset.read)}"]`).forEach((x) => { x.checked = t.checked; const w = x.closest('li,.si'); if (w) { const d = w.classList.contains('si') ? w.children[1] : w; d.classList.toggle('done', t.checked); } });
@@ -882,7 +885,7 @@ view.addEventListener('submit', (e) => {
   if (e.target.id !== 'fbf') return;
   e.preventDefault();
   const k = (document.querySelector('input[name=kind]:checked') || {}).value, msg = $('#fb-msg').value.trim();
-  const need = k !== 'waitlist' && !msg; $('#fb-merr').hidden = !need; $('#fb-msg').setAttribute('aria-invalid', String(need));
+  const need = (FB[k] || FB.feedback).need && !msg; $('#fb-merr').hidden = !need; $('#fb-msg').setAttribute('aria-invalid', String(need));
   if (need) { $('#fb-msg').focus(); return; }
   const href = feedbackHref(k, msg); if (!href) return;
   if (SITE.report.kind === 'github') window.open(href, '_blank', 'noopener'); else location.href = href;

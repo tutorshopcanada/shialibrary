@@ -71,7 +71,7 @@ export function externalSearchHref(query) {
  */
 export function feedbackHref(kind, message) {
   if (!reportConfigured()) return '';
-  const subject = { waitlist: `${SITE.name}: add me to the waitlist`, feedback: `${SITE.name}: feedback`, link: `${SITE.name}: link problem` }[kind] || `${SITE.name}: feedback`;
+  const subject = { waitlist: `${SITE.name}: add me to the waitlist`, feedback: `${SITE.name}: feedback`, link: `${SITE.name}: link problem`, source: `${SITE.name}: website suggestion` }[kind] || `${SITE.name}: feedback`;
   const body = String(message || '').trim() || (kind === 'waitlist' ? 'Please add me to the waitlist.' : '');
   if (SITE.report.kind === 'github') {
     const base = SITE.report.target.replace(/\/+$/, '');
