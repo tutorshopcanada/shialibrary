@@ -1,7 +1,7 @@
-# Checks the catalog on every push and pull request. On the default branch it also
-# publishes the search page to GitHub Pages (enable Pages with source "GitHub Actions"
-# in the repository settings first).
-name: Catalog checks and site
+# Checks the catalog on every push and pull request: validates the records, builds the search
+# index and runs the search evaluation. The site itself is published by Cloudflare Pages
+# (output directory: site; build command: python3 scripts/build_index.py).
+name: Catalog checks
 on:
   push:
   pull_request:
@@ -32,22 +32,3 @@ jobs:
         run: python3 scripts/build_index.py
       - name: Run search evaluation
         run: node scripts/eval_search.mjs
-      - name: Upload site
-        if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && github.event_name != 'pull_request'
-    needs: check
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
