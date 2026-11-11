@@ -1,6 +1,18 @@
 {
   "version": 2,
   "skills": {
+    "dimensional-drawing": {
+      "source": "enesozturk/dimensional-drawing",
+      "sourceType": "github",
+      "skillPath": "skills/dimensional-drawing/SKILL.md",
+      "computedHash": "eccba90e3927edba2b5ed98d26928b6560cb11ffe15ed1750dba89ecc7fa011a"
+    },
+    "dimensional-drawing-motion": {
+      "source": "enesozturk/dimensional-drawing",
+      "sourceType": "github",
+      "skillPath": "skills/dimensional-drawing-motion/SKILL.md",
+      "computedHash": "fb500ead2ef102fb078724e9a984f04a88b37153426a3c9564205567c9e3c24b"
+    },
     "stageshow": {
       "source": "benjitaylor/skills",
       "sourceType": "github",
