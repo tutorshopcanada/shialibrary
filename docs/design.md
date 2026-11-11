@@ -87,3 +87,7 @@ A topic page now orients first and lists last: "Start with these" (easiest works
 ## Start here
 
 Three steps with a map on top: a strip of three jump cards (What is Islam?, Day-one shelf, Your plan) that scroll to each step and show live "N of M read" counts. Step 1 is a short banner with the seven tour stops as a grid instead of a tall column. The shelf and the plan each have a progress bar (teal, not gold). Plan stages are cards with a numbered header, a note and page count, then tickable rows; the Foundations stage points back to the shelf instead of repeating it. The tour card on the home page is unchanged.
+
+## Sources (second pass)
+
+For a newcomer the level bars and tag counts were noise, so the page leads with what each website is. A row of facts first (approved by hand, Twelver Shia, English only, totals), then one card per website in a three-column grid: name and domain, a plain description, page count with its content types, a single level bar with a phrase ("Mostly intermediate"), a "Good first page" link (the first beginner-level work from that website, left out when it has none), and the "Browse N pages" button with a quiet "Visit site" link. Websites not yet in the catalog stay under "On the way". The closing card invites suggestions and links to the full scope.

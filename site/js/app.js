@@ -329,24 +329,32 @@ function sourceStats(id) {
   for (const r of engine.records) if (r.source === id) { n++; tags[r.content_tag] = (tags[r.content_tag] || 0) + 1; lv[LV(r.level) - 1]++; }
   return { n, tags, lv };
 }
+function sourceFirstPage(id) {
+  const w = engine.records.filter((r) => r.source === id && r.granularity === 'work' && LV(r.level) === 1).sort((x, y) => String(x.title).localeCompare(String(y.title)));
+  return w[0] || null;
+}
+function levelPhrase(st) {
+  const labels = levelOrder().map((l) => levelLabel(l).toLowerCase()), top = st.lv.indexOf(Math.max(...st.lv));
+  return st.n && st.lv[top] / st.n > 0.5 ? `Mostly ${labels[top]}` : 'A mix of levels';
+}
 function sourcePanel(s) {
-  const st = sourceStats(s.id), url = safeUrl(s.base_url), labels = levelOrder().map((l) => levelLabel(l).toLowerCase());
-  return `<article class="sp"><div class="sp-main"><div class="sp-top"><h3 dir="auto">${esc(srcName(s))}</h3><span class="state ok">${esc(STATE_TEXT.active)}</span></div>
-   <p class="sp-d">${esc(WHAT[s.id] || '')}</p><p class="sp-c"><b>What we list:</b> ${esc(LISTS[s.id] || s.catalog_level || '')}</p>
-   <div class="sp-acts"><a class="btn solid" href="${esc(searchHref({ ...blank(), source: s.id }))}">Browse all ${st.n.toLocaleString()} pages</a>${url ? `<a class="btn line" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit ${esc(s.id)} <span aria-hidden="true">↗</span></a>` : ''}</div></div>
-   <div class="sp-side"><div class="tstats"><span><b>${st.n.toLocaleString()}</b> ${st.n === 1 ? 'page' : 'pages'}</span></div>
-   <div class="lv ladder"><div class="bars" aria-hidden="true">${st.lv.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div><div class="leg">${st.lv.map((n, i) => `<span class="l${i + 1}">${n.toLocaleString()} ${labels[i]}</span>`).join('')}</div></div>
-   <p class="sp-tags">${Object.entries(st.tags).sort((a, b) => b[1] - a[1]).map(([tg, n]) => `<span class="tag" style="--c:var(--t-${esc(tg)})">${esc(tagLabel(tg))} ${n.toLocaleString()}</span>`).join('')}</p></div></article>`;
+  const st = sourceStats(s.id), url = safeUrl(s.base_url), first = sourceFirstPage(s.id), tagNames = Object.entries(st.tags).sort((a, b) => b[1] - a[1]).map(([t]) => tagLabel(t));
+  return `<article class="scard"><div class="sc-top"><h3 dir="auto">${esc(srcName(s))}</h3><p class="sc-dom">${esc(s.id)}</p></div>
+   <p class="sc-d">${esc(WHAT[s.id] || '')}</p>
+   <div class="sc-n"><p><b>${st.n.toLocaleString()}</b> ${st.n === 1 ? 'page' : 'pages'} · ${esc(tagNames.join(', '))}</p>
+    <div class="lv ladder"><div class="bars" aria-hidden="true">${st.lv.map((n, i) => n ? `<i class="b${i + 1}" style="flex:${n}"></i>` : '').join('')}</div></div><p class="sc-l">${esc(levelPhrase(st))}</p></div>
+   ${first ? `<p class="sc-f"><span>Good first page</span>${extLink(first.url, '', `${esc(first.title)} <span aria-hidden="true">↗</span>`)}</p>` : ''}
+   <div class="sc-a"><a class="btn solid" href="${esc(searchHref({ ...blank(), source: s.id }))}">Browse ${st.n.toLocaleString()} pages</a>${url ? `<a class="sc-v" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Visit site <span aria-hidden="true">↗</span><span class="sr"> (${esc(s.id)}, opens in a new tab)</span></a>` : ''}</div></article>`;
 }
 function sourcesHtml() {
   const active = engine.sources.filter((s) => s.status === 'active'), soon = engine.sources.filter((s) => s.status !== 'active');
   const total = engine.records.length;
   return `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these approved websites.</p>
-  <p class="ssum"><span><b>${active.length}</b> approved websites in the catalog</span><span><b>${total.toLocaleString()}</b> pages</span><span>English only</span></p>
-  <div class="sps">${active.map(sourcePanel).join('')}</div>
+  <ul class="sfacts"><li>Approved by hand</li><li>Twelver Shia only</li><li>English only</li><li><b>${total.toLocaleString()}</b> pages from <b>${active.length}</b> websites</li></ul>
+  <div class="scards">${active.map(sourcePanel).join('')}</div>
   ${soon.length ? `<div class="tsec"><h2>On the way</h2><p class="sub">Approved, but not in the catalog yet.</p><ul class="soon-list">${soon.map((s) => `<li><div><b dir="auto">${esc(srcName(s))}</b><span>${esc(WHAT[s.id] || s.catalog_level || '')}</span></div><span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span></li>`).join('')}</ul></div>` : ''}
-  <div class="scope"><div><h3>What we include</h3><p>Twelver Shia resources in English, from approved websites only. Fiqh rulings come from two scholars: Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Everything else is not limited by author.</p></div>
-  <div class="scope-b"><a class="btn line" href="${esc(pageHref('about'))}">Read the full scope</a><a class="btn line" href="${esc(pageHref('feedback'))}" data-fbkind="source">Suggest a source</a></div></div></section>`;
+  <div class="scope"><div><h3>Know a website that belongs here?</h3><p>Fiqh rulings come from two scholars, Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Everything else is not limited by author. Tell us about a website, or read the full scope.</p></div>
+  <div class="scope-b"><a class="btn line" href="${esc(pageHref('feedback'))}" data-fbkind="source">Suggest a website</a><a class="btn line" href="${esc(pageHref('about'))}">Read the full scope</a></div></div></section>`;
 }
 function sourceRowsHtml() {
   const counts = new Map(); for (const r of engine.records) counts.set(r.source, (counts.get(r.source) || 0) + 1);
