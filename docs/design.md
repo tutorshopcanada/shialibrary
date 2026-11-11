@@ -83,3 +83,7 @@ A path card shows its theme and step count on one line, the title, a two-line in
 ## Topic pages
 
 A topic page now orients first and lists last: "Start with these" (easiest works), "Read in order" (learning paths that include the topic), "Questions people ask" (curated questions under the topic), "Inside <topic>" (sub-topics as a tile grid with page counts, replacing a horizontally scrolling chip strip), then "Everything on this topic" with the level switch and compact rows. Sections that have nothing to show are left out.
+
+## Start here
+
+Three steps with a map on top: a strip of three jump cards (What is Islam?, Day-one shelf, Your plan) that scroll to each step and show live "N of M read" counts. Step 1 is a short banner with the seven tour stops as a grid instead of a tall column. The shelf and the plan each have a progress bar (teal, not gold). Plan stages are cards with a numbered header, a note and page count, then tickable rows; the Foundations stage points back to the shelf instead of repeating it. The tour card on the home page is unchanged.

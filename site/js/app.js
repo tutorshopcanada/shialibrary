@@ -215,16 +215,16 @@ function tourCard() {
 }
 function shelfHtml(sd) {
   const n = sd.shelf.filter((r) => read[r.id]).length;
-  return `<div class="shelf"><div class="shelf-h"><b>Day one shelf</b><span id="shelfc">${n} of ${sd.shelf.length} read</span></div>${sd.shelf.map((r) =>
+  return `<div class="shelf"><div class="shelf-h"><b>Day one shelf</b><span class="prog"><span id="shelfc">${n} of ${sd.shelf.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${sd.shelf.length ? Math.round(n / sd.shelf.length * 100) : 0}" aria-label="Shelf progress"><i id="shelfbar" style="width:${sd.shelf.length ? Math.round(n / sd.shelf.length * 100) : 0}%"></i></div></span></div>${sd.shelf.map((r) =>
     `<div class="si"><div>${tickBox(r)}</div><div class="${read[r.id] ? 'done' : ''}">${extLink(r.url, 'tt', `${esc(r.title)} <span aria-hidden="true">↗</span>`)}<small>${(r.sample_questions || [])[0] ? `After this you can answer: “${esc(r.sample_questions[0])}”` : ''}</small></div></div>`).join('')}</div>`;
 }
 function planHtml(sd) {
   const done = sd.all.filter((id) => read[id]).length, pct = sd.all.length ? Math.round(done / sd.all.length * 100) : 0;
-  return `<div class="frame plan"><div class="plan-h"><div><h2>Your plan for the rest</h2></div><div class="prog"><span id="planc">${done} of ${sd.all.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Plan progress"><i id="planbar" style="width:${pct}%"></i></div></div></div>
+  return `<div class="plan"><div class="plan-h"><b>Your progress</b><div class="prog"><span id="planc">${done} of ${sd.all.length} read</span><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Plan progress"><i id="planbar" style="width:${pct}%"></i></div></div></div>
   <ol class="stages">${sd.stages.map((s, i) => {
     const lv = [...new Set(s.recs.map((r) => LV(r.level)))].sort();
-    return `<li class="stg"><div><div class="no">Stage ${i + 1} of ${sd.stages.length}</div><h3>${esc(s.title)}</h3><div class="meta">${esc(s.note)}<br>${pl(s.recs.length, 'page')} · ${lv.map((l) => esc(levelLabel(levelOrder()[l - 1]))).join(', ')}</div></div>
-    ${s.shelfStage ? `<p class="mute" style="margin:0">These are the ${s.recs.length} pages from step 2, the day-one shelf. Tick them there.</p>`
+    return `<li class="stg"><div class="stg-h"><span class="sg-n" aria-hidden="true">${i + 1}</span><div class="stg-t"><div class="no">Stage ${i + 1} of ${sd.stages.length}</div><h3>${esc(s.title)}</h3><p>${esc(s.note)}</p></div><span class="sg-m">${pl(s.recs.length, 'page')} · ${lv.map((l) => esc(levelLabel(levelOrder()[l - 1]))).join(', ')}</span></div>
+    ${s.shelfStage ? `<p class="stg-s">These are the ${s.recs.length} pages on the day-one shelf. <button class="btn line" type="button" data-jump="st2">Go to the shelf</button></p>`
       : `<ul>${s.recs.map((r) => `<li class="${read[r.id] ? 'done' : ''}">${tickBox(r)}${extLink(r.url, '', esc(r.title))}${levelDots(r.level)}</li>`).join('')}</ul>`}</li>`;
   }).join('')}</ol></div>`;
 }
@@ -414,11 +414,17 @@ function feedbackHtml() {
    : '<div class="okbox"><b>Feedback is not set up yet.</b><p>The site owner needs to choose an email address or a GitHub repository in <code>site/js/config.js</code>. Until then there is nowhere to send messages.</p></div>'}</div></div></section>`;
 }
 
+function tourStrip() {
+  return `<div class="tour2"><div class="t2-l"><h3>What is Islam?</h3><p>A seven-step tour, from the divine mission to today. Select any name or book to open its page.</p><a class="btn white big" href="${esc(pageHref('start-' + SL[0][0]))}">Begin the tour <span aria-hidden="true">→</span></a></div>
+   <ol class="t2-r">${SL.map(([k, l]) => `<li><a href="${esc(pageHref('start-' + k))}">${esc(l)}</a></li>`).join('')}</ol></div>`;
+}
 function startHtml() {
-  const sd = startData();
-  return `<section class="blk"><div class="stp"><h2><span class="sn">1</span>Begin with “What is Islam?”</h2><p>The big picture, one idea at a time.</p></div><div class="frame">${tourCard()}</div></section>
-  <section class="blk"><div class="stp"><h2><span class="sn">2</span>Read the day-one shelf</h2><p>${sd.shelf.length} short introductions in a good order. Tick each one as you finish it.</p></div><div class="frame">${shelfHtml(sd)}</div></section>
-  <section class="blk"><div class="stp"><h2><span class="sn">3</span>Follow the plan</h2><p>A staged route from the basics to the source texts.</p></div>${planHtml(sd)}</section>`;
+  const sd = startData(), sn = sd.shelf.filter((r) => read[r.id]).length, pd = sd.all.filter((id) => read[id]).length;
+  const J = [['st1', 'What is Islam?', `${SL.length}-stop tour`, 'ov-tour'], ['st2', 'Day-one shelf', `${sn} of ${sd.shelf.length} read`, 'ov-shelf'], ['st3', 'Your plan', `${pd} of ${sd.all.length} read`, 'ov-plan']];
+  return `<nav aria-label="Your three steps"><ol class="jstrip">${J.map(([id, t, s, oid], i) => `<li><button class="jcard" type="button" data-jump="${id}"><span class="jn" aria-hidden="true">${i + 1}</span><span class="jt"><b>${esc(t)}</b><small id="${oid}">${esc(s)}</small></span></button></li>`).join('')}</ol></nav>
+  <section class="blk" id="st1"><div class="stp"><h2><span class="sn">1</span>Begin with “What is Islam?”</h2><p>The big picture, one idea at a time.</p></div>${tourStrip()}</section>
+  <section class="blk" id="st2"><div class="stp"><h2><span class="sn">2</span>Read the day-one shelf</h2><p>${sd.shelf.length} short introductions in a good order. Tick each one as you finish it.</p></div>${shelfHtml(sd)}</section>
+  <section class="blk" id="st3"><div class="stp"><h2><span class="sn">3</span>Follow the plan</h2><p>A staged route from the basics to the source texts.</p></div>${planHtml(sd)}</section>`;
 }
 
 function homeHtml() {
@@ -880,11 +886,11 @@ view.addEventListener('change', (e) => {
   if (t.dataset && t.dataset.read) {
     if (t.checked) read[t.dataset.read] = 1; else delete read[t.dataset.read]; saveRead();
     document.querySelectorAll(`[data-read="${CSS.escape(t.dataset.read)}"]`).forEach((x) => { x.checked = t.checked; const w = x.closest('li,.si'); if (w) { const d = w.classList.contains('si') ? w.children[1] : w; d.classList.toggle('done', t.checked); } });
-    const sd = startData(), sdn = sd.shelf.filter((r) => read[r.id]).length; const sc = $('#shelfc'); if (sc) sc.textContent = `${sdn} of ${sd.shelf.length} read`;
+    const sd = startData(), sdn = sd.shelf.filter((r) => read[r.id]).length; const sc = $('#shelfc'); if (sc) sc.textContent = `${sdn} of ${sd.shelf.length} read`; const shp = sd.shelf.length ? Math.round(sdn / sd.shelf.length * 100) : 0, sb = $('#shelfbar'); if (sb) { sb.style.width = shp + '%'; sb.parentElement.setAttribute('aria-valuenow', shp); } const ovs = $('#ov-shelf'); if (ovs) ovs.textContent = `${sdn} of ${sd.shelf.length} read`;
     const stepLi = t.closest('.stepper > li'); if (stepLi) stepLi.classList.toggle('done', t.checked);
     if ($('#pathc') && route.t === 'path') { const p = engine.pathById.get(route.st.path), ids = p ? p.steps.map((s) => s.record).filter((id) => rec(id)) : [], d = ids.filter((id) => read[id]).length, pc2 = ids.length ? Math.round(d / ids.length * 100) : 0; $('#pathc').textContent = `${d} of ${ids.length} read`; $('#pathbar').style.width = pc2 + '%'; $('#pathbar').parentElement.setAttribute('aria-valuenow', pc2); }
     const pd = sd.all.filter((id) => read[id]).length, pct = sd.all.length ? Math.round(pd / sd.all.length * 100) : 0;
-    const pc = $('#planc'); if (pc) pc.textContent = `${pd} of ${sd.all.length} read`; const pb = $('#planbar'); if (pb) { pb.style.width = pct + '%'; pb.parentElement.setAttribute('aria-valuenow', pct); }
+    const pc = $('#planc'); if (pc) pc.textContent = `${pd} of ${sd.all.length} read`; const ovp = $('#ov-plan'); if (ovp) ovp.textContent = `${pd} of ${sd.all.length} read`; const pb = $('#planbar'); if (pb) { pb.style.width = pct + '%'; pb.parentElement.setAttribute('aria-valuenow', pct); }
   }
 });
 view.addEventListener('submit', (e) => {
