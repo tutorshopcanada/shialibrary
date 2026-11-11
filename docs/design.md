@@ -109,3 +109,7 @@ Name pages: the short bio is a plain card (placeholder wording, no skeleton bars
 ## Feedback (second pass)
 
 One narrow card instead of a side column plus four boxed options. Four underlined tabs (Waitlist, Suggest a website, Topic or feedback, Broken link) pick the kind; one sentence under the tabs says what that kind is for, then a message box and a single button. The button label, placeholder and whether a message is required follow the tab. The explainer is one muted note under the button. Until the owner sets `SITE.report` in `site/js/config.js`, visitors see a plain "Feedback opens soon" card (no developer wording) and the console logs a one-line hint for the owner.
+
+## About (second pass)
+
+Shorter and with one clear lead. The page opens with a single serif statement ("ShiaLib is a catalog, not a library") and a short paragraph, then three promise cards and the AI-preparation note. "What is included" is four labelled cells in two columns, and the websites list is dropped in favour of a link to Sources. "How results are chosen" gives the headline rule and keeps the five steps inside an expandable row. Privacy is a short checklist. When no public scope document is set, the page says a fuller written scope will be linked once public, rather than naming a file path.

@@ -895,3 +895,21 @@ noscript .callout{margin-top:1rem}
 .fb-n{margin:0;font-size:.8125rem;color:var(--mute);line-height:1.5;max-width:32rem}
 fieldset.fbtabs{min-width:0;width:100%;max-width:100%}.fbc{min-width:0}
 .fbtabs,.fbtab{position:relative}
+
+/* About (second pass) */
+.lead{max-width:46rem;margin:0 0 2.6rem}
+.lead-t{margin:0 0 .6rem;font-family:var(--serif);font-size:clamp(2rem,5vw,3.1rem);line-height:1.05;letter-spacing:-.02em}
+.lead-p{margin:0;font-size:1.125rem;line-height:1.55;color:var(--mute)}
+.cells{margin:1rem 0 0;display:grid;gap:1.4rem 2.5rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:48rem){.cells{grid-template-columns:minmax(0,1fr)}}
+.cells dt{font-size:.8125rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin-bottom:.3rem}
+.cells dd{margin:0;line-height:1.55;max-width:30rem}
+.priv{background:transparent;border:0;padding:0;margin-top:1rem}
+.more{margin-top:.6rem}
+.more summary{cursor:pointer;min-height:2.75rem;display:inline-flex;align-items:center;font-weight:500;color:var(--btn)}
+.more summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+.more[open] summary{margin-bottom:.4rem}
+.more summary{list-style:none;gap:.5rem}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"";width:.5rem;height:.5rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+.more[open] summary::before{transform:rotate(45deg)}
