@@ -593,3 +593,203 @@ questions:
     path: path-companions-of-the-prophet-and-imams
     top_records: [al-islam-abu-talib-b-abdul-muttalib]
     draft: true
+
+  # ── Hadith collections (thaqalayn.net), added 2026-11-11 ─────────────────────
+  - id: q-imam-ali-on-patience
+    question: "What did Imam Ali say about patience?"
+    alt_phrasings: ["imam ali on sabr", "sayings of ali about patience", "ali quotes on patience", "patience in the words of imam ali"]
+    headings: [imam-ali, ethics]
+    top_records: [thaqalayn-nahj-al-balagha, thaqalayn-kitab-al-zuhd]
+    draft: true
+  - id: q-imam-ali-on-knowledge
+    question: "What did Imam Ali say about knowledge?"
+    alt_phrasings: ["imam ali quotes on knowledge", "ali on learning", "importance of knowledge in shia hadith", "sayings of ali about seeking knowledge"]
+    headings: [imam-ali, ethics]
+    top_records: [thaqalayn-nahj-al-balagha, thaqalayn-al-kafi-vol-1]
+    draft: true
+  - id: q-imam-ali-on-this-world
+    question: "What did Imam Ali say about this world and worldly wealth?"
+    alt_phrasings: ["imam ali on dunya", "ali on zuhd", "imam ali on the world", "detachment from the world"]
+    headings: [imam-ali, spirituality]
+    top_records: [thaqalayn-kitab-al-zuhd, thaqalayn-nahj-al-balagha]
+    draft: true
+  - id: q-imam-rida-sayings
+    question: "Where are the sayings of Imam al-Rida?"
+    alt_phrasings: ["imam reza sayings", "hadith of imam reza", "imam al-reza quotes", "eighth imam hadith", "ali al-ridha narrations"]
+    headings: [twelve-imams]
+    top_records: [thaqalayn-uyun-akhbar-al-rida-vol-1, thaqalayn-uyun-akhbar-al-rida-vol-2]
+    draft: true
+  - id: q-imam-rida-reasons
+    question: "Did an Imam explain the reasons behind religious rules?"
+    alt_phrasings: ["reasons behind islamic laws", "why are the rules of islam", "imam reza explains the reasons", "wisdom behind religious commandments"]
+    headings: [twelve-imams]
+    top_records: [thaqalayn-uyun-akhbar-al-rida-vol-2]
+    draft: true
+  - id: q-hadith-about-charity
+    question: "What do the hadith say about giving charity?"
+    alt_phrasings: ["hadith on sadaqah", "hadith on zakat", "narrations about giving to the poor", "what does the hadith say about charity"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-4, thaqalayn-tahdhib-al-ahkam-vol-4]
+    draft: true
+  - id: q-hadith-about-fasting
+    question: "What do the hadith say about fasting?"
+    alt_phrasings: ["hadith on sawm", "narrations about roza", "ahadith about fasting", "fasts recommended in hadith"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-man-la-yahduruh-al-faqih-vol-2, thaqalayn-tahdhib-al-ahkam-vol-4]
+    draft: true
+  - id: q-hadith-about-hajj
+    question: "What do the hadith say about Hajj?"
+    alt_phrasings: ["hadith about pilgrimage to mecca", "narrations on hajj", "hajj in the hadith", "hadith on umrah"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-4, thaqalayn-man-la-yahduruh-al-faqih-vol-2]
+    draft: true
+  - id: q-hadith-about-marriage
+    question: "What do the hadith say about marriage?"
+    alt_phrasings: ["hadith on nikah", "narrations about choosing a spouse", "hadith on marriage and family", "hadith about wedding"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-5, thaqalayn-man-la-yahduruh-al-faqih-vol-3]
+    draft: true
+  - id: q-hadith-about-inheritance
+    question: "What do the hadith say about inheritance and wills?"
+    alt_phrasings: ["hadith on wills", "islamic inheritance narrations", "hadith about bequests", "hadith on who inherits"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-7, thaqalayn-man-la-yahduruh-al-faqih-vol-4]
+    draft: true
+  - id: q-hadith-about-divorce
+    question: "What do the hadith say about divorce?"
+    alt_phrasings: ["hadith on talaq", "narrations about divorce", "hadith divorce rules", "hadith on separation of spouses"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-6, thaqalayn-man-la-yahduruh-al-faqih-vol-3]
+    draft: true
+  - id: q-hadith-about-purity
+    question: "What do the hadith say about wudu and ritual washing?"
+    alt_phrasings: ["hadith on wudu", "hadith on ghusl", "narrations about cleanliness before prayer", "hadith on ritual purity"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-tahdhib-al-ahkam-vol-1, thaqalayn-man-la-yahduruh-al-faqih-vol-1]
+    draft: true
+  - id: q-hadith-about-prayer-times
+    question: "What do the hadith say about the times of prayer?"
+    alt_phrasings: ["hadith on prayer times", "hadith about salat times", "narrations about when to pray", "hadith on the qiblah"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-tahdhib-al-ahkam-vol-2, thaqalayn-man-la-yahduruh-al-faqih-vol-1]
+    draft: true
+  - id: q-hadith-about-food
+    question: "What do the hadith say about food and drink?"
+    alt_phrasings: ["hadith on halal food", "narrations about eating", "hadith on drinks", "hadith on what is lawful to eat"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-6]
+    draft: true
+  - id: q-hadith-about-trade
+    question: "What do the hadith say about earning a living and trade?"
+    alt_phrasings: ["hadith on business", "hadith on halal income", "narrations about trade", "ahadith on work and money"]
+    headings: [legal-hadith]
+    top_records: [thaqalayn-al-kafi-vol-5, thaqalayn-man-la-yahduruh-al-faqih-vol-3]
+    draft: true
+  - id: q-hadith-rewards-of-deeds
+    question: "Which hadith book lists the rewards of good deeds?"
+    alt_phrasings: ["rewards for good actions", "hadith on reward of deeds", "thawab for worship", "punishment for sins in hadith"]
+    headings: [ethics]
+    top_records: [thaqalayn-thawab-al-amal]
+    draft: true
+  - id: q-hadith-virtues-of-ahl-al-bayt
+    question: "What do the hadith say about the virtues of the Ahl al-Bayt?"
+    alt_phrasings: ["hadith on loving ahlul bayt", "virtues of the prophet's family", "fadail ahl al-bayt", "hadith about the household of the prophet"]
+    headings: [ahl-al-bayt]
+    top_records: [thaqalayn-fadail-al-shia, thaqalayn-al-amali-saduq]
+    draft: true
+  - id: q-hadith-night-journey
+    question: "What hadith describe the Night Journey and Ascension?"
+    alt_phrasings: ["isra and miraj hadith", "mi'raj of the prophet", "night journey hadith", "ascension of the prophet"]
+    headings: [prophet-muhammad]
+    top_records: [thaqalayn-al-amali-saduq]
+    draft: true
+  - id: q-hadith-virtues-of-the-months
+    question: "What are the virtues of Rajab, Shaban and Ramadan?"
+    alt_phrasings: ["virtues of rajab", "merits of shaban", "hadith about the three months", "what to do in rajab"]
+    headings: [islamic-calendar]
+    top_records: [thaqalayn-fadail-al-ashhur-al-thalatha]
+    draft: true
+  - id: q-hadith-qualities-of-a-shia
+    question: "What do the hadith say about the qualities of a true Shia?"
+    alt_phrasings: ["attributes of shia in hadith", "what should a shia be like", "shia character hadith", "good qualities of the followers of the imams"]
+    headings: [ethics]
+    top_records: [thaqalayn-sifat-al-shia, thaqalayn-fadail-al-shia]
+    draft: true
+  - id: q-hadith-intellect-and-ignorance
+    question: "What do the hadith say about the intellect and ignorance?"
+    alt_phrasings: ["hadith on aql", "intellect in shia hadith", "knowledge and ignorance hadith", "what is reason in islam"]
+    headings: [ethics]
+    top_records: [thaqalayn-al-kafi-vol-1]
+    draft: true
+  - id: q-hadith-faith-and-disbelief
+    question: "What do the hadith say about faith and disbelief?"
+    alt_phrasings: ["iman and kufr in hadith", "hadith on faith", "narrations on belief and unbelief"]
+    headings: [beliefs]
+    top_records: [thaqalayn-al-kafi-vol-2, thaqalayn-kitab-al-mumin]
+    draft: true
+  - id: q-hadith-after-imam-dies
+    question: "What happens when an Imam passes away?"
+    alt_phrasings: ["who takes over after an imam dies", "succession of the imams hadith", "after the death of an imam", "how is the next imam chosen"]
+    headings: [imamate]
+    top_records: [thaqalayn-al-imama-wal-tabsira]
+    draft: true
+  - id: q-hadith-signs-of-the-mahdi
+    question: "What are the signs of the Mahdi's reappearance?"
+    alt_phrasings: ["signs before the mahdi", "signs of the hidden imam's return", "ghayba signs hadith", "signs of imam mahdi"]
+    headings: [imam-mahdi]
+    top_records: [thaqalayn-kitab-al-ghayba-numani, thaqalayn-kitab-al-ghayba-tusi]
+    draft: true
+  - id: q-hadith-deputies-of-the-hidden-imam
+    question: "Who were the deputies of the hidden Imam?"
+    alt_phrasings: ["deputies of imam mahdi", "special deputies of the mahdi", "who spoke for the hidden imam", "representatives of imam al-mahdi"]
+    headings: [imam-mahdi]
+    top_records: [thaqalayn-kitab-al-ghayba-tusi]
+    draft: true
+  - id: q-hadith-defence-of-occultation
+    question: "Is there an early book that defends the belief in the Mahdi's occultation?"
+    alt_phrasings: ["why is the imam hidden", "book on the occultation of the imam", "kamal al-din", "arguments for the hidden imam"]
+    headings: [imam-mahdi]
+    top_records: [thaqalayn-kamal-al-din]
+    draft: true
+  - id: q-hadith-what-is-al-amali
+    question: "What is Al-Amali?"
+    alt_phrasings: ["al-amali shaykh saduq", "al-amali mufid", "dictations hadith book", "majalis hadith"]
+    headings: [hadith-collections]
+    top_records: [thaqalayn-al-amali-mufid, thaqalayn-al-amali-saduq]
+    draft: true
+  - id: q-hadith-arranged-by-numbers
+    question: "Is there a hadith book arranged by numbers?"
+    alt_phrasings: ["al-khisal", "hadith by numbers", "book of characteristics", "numbered hadith collection"]
+    headings: [hadith-collections]
+    top_records: [thaqalayn-al-khisal]
+    draft: true
+  - id: q-hadith-meaning-of-terms
+    question: "Is there a hadith book that explains difficult religious terms?"
+    alt_phrasings: ["meanings of islamic words", "ma'ani al-akhbar", "explanation of words in hadith", "what does a term in hadith mean"]
+    headings: [hadith-collections, tafsir]
+    top_records: [thaqalayn-maani-al-akhbar]
+    draft: true
+  - id: q-hadith-only-judged-reliable
+    question: "Is there a hadith book that includes only narrations its compiler judged reliable?"
+    alt_phrasings: ["authenticated hadith collection", "reliable shia hadith book", "mu'tabar hadith", "sahih hadith shia book"]
+    headings: [hadith-sciences, hadith-collections]
+    top_records: [thaqalayn-mujam-al-ahadith-al-mutabara]
+    draft: true
+  - id: q-hadith-narrator-reliability
+    question: "How do scholars judge whether a hadith narrator is reliable?"
+    alt_phrasings: ["rijal study", "who are the weak narrators", "reliability of hadith transmitters", "ibn al-ghada'iri"]
+    headings: [hadith-sciences]
+    top_records: [thaqalayn-kitab-al-duafa]
+    draft: true
+  - id: q-hadith-chain-of-narrators
+    question: "What is a chain of narrators (isnad), and where can I see one?"
+    alt_phrasings: ["isnad explained", "transmission chain of hadith", "chain of narrators in al-faqih"]
+    headings: [hadith-sciences]
+    top_records: [thaqalayn-man-la-yahduruh-al-faqih-vol-5-mashaykha]
+    draft: true
+  - id: q-hadith-letters-and-wills-of-imams
+    question: "Where can I read the letters and wills of the Imams?"
+    alt_phrasings: ["wills of the imams", "letters of the imams", "rawdat al-kafi", "volume 8 of al-kafi"]
+    headings: [twelve-imams, hadith-collections]
+    top_records: [thaqalayn-al-kafi-vol-8]
+    draft: true
