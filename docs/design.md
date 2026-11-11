@@ -99,3 +99,9 @@ One control and one quiet list. The page opens with a single input: typing narro
 ## Home
 
 The home answers "what do you want to do?" in three ways, in this order: ask, be guided, browse. The hero keeps the headline and search box; the suggestion list opens only when the box is focused. Below it: a quiet "New here? Follow the three-step guide" link, "Questions people start with" (six real questions as hairline rows, then "See all 90"), "Or be guided" (Start here with progress for returning visitors, the What is Islam? tour, Learning paths), "Browse by topic" (eight compact tiles with page counts), "What is inside" (the three websites and their page counts), and one quiet feedback line. Removed: the "Where to begin" frame, the four-card "Explore" row, the pill over the wave and the gold feedback banner.
+
+## Tour pages
+
+Slides: the large ghost numeral behind the title is gone (the progress bar already says "2 / 7"). A group whose names all carry the same sub-label (for example nineteen prophets, each "Prophet") shows as a wrapping row of name pills instead of nineteen identical tiles, so both groups fit on one screen. Group labels are small capitals with a count. Groups of different items (the Imams, scholars, books) keep the tile style.
+
+Name pages: the short bio is a plain card (placeholder wording, no skeleton bars). "Learn more" uses the compact rows from topic pages, and lists exact matches only when there are any, so a name does not pull in unrelated pages. Previous and next names sit below.

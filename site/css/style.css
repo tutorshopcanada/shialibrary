@@ -861,3 +861,17 @@ noscript .callout{margin-top:1rem}
 .hguide{margin:1.4rem 0 2.2rem;text-align:center}
 .hguide a{display:inline-flex;align-items:center;gap:.4rem;min-height:2.75rem;font-weight:500;color:var(--btn);text-decoration:underline;text-underline-offset:.25em;text-decoration-thickness:1px}
 @media (hover:hover) and (pointer:fine){.hguide a:hover{text-decoration-thickness:2px}}
+
+/* Tour pages */
+.sh-r .gl{display:flex;align-items:baseline;gap:.5rem;margin:0 0 -.3rem;font-size:.8125rem;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.sh-r .gl span{opacity:.7;font-variant-numeric:tabular-nums}
+.pills{display:flex;flex-wrap:wrap;gap:.45rem}
+.pl-l{display:inline-flex;align-items:center;min-height:2.6rem;padding:.4rem 1rem;border-radius:22px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;text-decoration:none;font-size:.9375rem;transition:background-color .15s,border-color .15s;animation:up .4s cubic-bezier(.23,1,.32,1) both;animation-delay:calc(var(--i,0)*30ms + 60ms)}
+.pl-l:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.pl-l:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.pl-l:hover{background:rgba(255,255,255,.16);border-color:#6fe0d2}}
+@media(prefers-reduced-motion:reduce){.pl-l{animation:fadeo .2s both!important;animation-delay:0s!important}}
+.bio{border-color:var(--line);border-radius:14px}
+.eh{font-size:1.25rem;letter-spacing:-.025em;margin:0}
+.eh span{color:var(--mute);font-weight:400}
+.enav a{border-color:var(--line);border-radius:12px}

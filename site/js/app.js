@@ -685,10 +685,11 @@ function slideHtml(key) {
   const i = SL.findIndex((s) => s[0] === key), s = TOURX[i], last = i === SL.length - 1;
   const prev = SL[(i + SL.length - 1) % SL.length], next = SL[(i + 1) % SL.length];
   let n = 0;
-  const body = s.groups.map((g) => `${g.label ? `<p class="gl">${esc(g.label)}</p>` : ''}<div class="dgrid ${g.lead ? 'lead' : ''}">${g.items.map((it) => tileHtml(it, n++)).join('')}</div>`).join('') + (s.note ? `<p class="note" style="margin:0">${esc(s.note)}</p>` : '');
+  const sameSub = (g) => { const subs = new Set(g.items.map((it) => (typeof it === 'string' ? (E[it] || {}).sub : it.sub))); return !g.lead && g.items.length >= 5 && subs.size === 1 && g.items.every((it) => typeof it === 'string'); };
+  const body = s.groups.map((g) => `${g.label ? `<p class="gl">${esc(g.label)}${g.items.length > 3 ? ` <span>${g.items.length}</span>` : ''}</p>` : ''}${sameSub(g) ? `<div class="pills">${g.items.map((it) => `<a class="pl-l" style="--i:${Math.min(n++, 8)}" href="${esc(pageHref(it))}" dir="auto">${esc(E[it].name)}</a>`).join('')}</div>` : `<div class="dgrid ${g.lead ? 'lead' : ''}">${g.items.map((it) => tileHtml(it, n++)).join('')}</div>`}`).join('') + (s.note ? `<p class="note" style="margin:0">${esc(s.note)}</p>` : '');
   return `<div class="sh-pad sh-top"><a class="sh-x" href="${esc(BASE)}" aria-label="Exit What is Islam?"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>Exit</a>
    <div class="sh-prog" aria-hidden="true">${SL.map((_, j) => `<i class="${j < i ? 'd' : j === i ? 'c' : ''}"></i>`).join('')}</div><span class="sh-n">${i + 1} / ${SL.length}</span></div>
-  <div class="sh-pad sh-main"><div class="sh-l"><span class="sh-big" aria-hidden="true">${i + 1}</span><h1 id="shh" tabindex="-1">${esc(s.title)}</h1><p class="l2">${esc(s.lede)}</p></div><div class="sh-r">${body}</div></div>
+  <div class="sh-pad sh-main"><div class="sh-l"><h1 id="shh" tabindex="-1">${esc(s.title)}</h1><p class="l2">${esc(s.lede)}</p></div><div class="sh-r">${body}</div></div>
   <div class="sh-pad sh-bot"><div class="row2">${i === 0 ? '<span></span>' : `<a class="pv2" href="${esc(pageHref('start-' + prev[0]))}" aria-label="Previous slide: ${esc(prev[1])}"><span class="rb">${ARW(0)}</span><span>${esc(prev[1])}</span></a>`}
    ${last ? `<a class="pn" href="${esc(pageHref('beginners'))}">Continue to Start here ${ARW(1)}</a>` : `<a class="pn" href="${esc(pageHref('start-' + next[0]))}">${esc(next[1])} ${ARW(1)}</a>`}</div></div>`;
 }
@@ -702,12 +703,12 @@ function entityBodyHtml(e) {
   const firstRecords = (res) => [...res.exact, ...res.related].map((x) => (x.kind === 'cluster' ? x.items[0].record : x.record));
   if (e.type === 'scholar') { rel = firstRecords(engine.search('', { scholar: e.sid })).slice(0, 6); head = 'Works by this author'; empty = 'No works by this author in the catalog yet.'; }
   else if (e.type === 'book' && e.rid) { const r = rec(e.rid); rel = [r, ...RECS.filter((x) => x.id !== r.id && x.raw.headings.some((h) => (r.headings || []).includes(h))).slice(0, 5).map((x) => x.raw)]; head = 'This book, and related pages'; }
-  else { const res = engine.search(strip(e.name)); rel = firstRecords(res).slice(0, 6); }
+  else { const res = engine.search(strip(e.name)); rel = (res.exact.length ? firstRecords({ exact: res.exact, related: [] }) : firstRecords(res)).slice(0, 6); }
   const q = e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '');
   const c = ctxFor(e.k), g = c.peers, i = g.indexOf(e.k), p = E[g[(i + g.length - 1) % g.length]], n = E[g[(i + 1) % g.length]];
-  return `<div class="egrid"><div><div class="bio"><h3>Short bio <span class="pill">Placeholder</span></h3><div class="ph"><i></i><i></i><i></i><p>A short, sourced bio will go here once it has been written and reviewed.</p></div></div>
+  return `<div class="egrid"><div><div class="bio"><h3>Short bio <span class="pill">Placeholder</span></h3><p class="mute" style="margin:0">A short, sourced bio will go here once it has been written and reviewed.</p></div>
   <div style="margin-top:1rem"><a class="btn solid big" href="${esc(qHref(q))}" style="width:100%;justify-content:center">Search more for “${esc(q)}”</a></div></div>
-  <div class="frame" style="padding:8px"><div class="gh"><h3>${head} <span>${rel.length}</span></h3><p>Links to pages in the catalog.</p></div>${rel.length ? `<ul class="cards">${rel.map((r) => cardHtml(r)).join('')}</ul>` : `<div class="gh"><p>${empty}</p></div>`}</div></div>
+  <section><h2 class="eh">${head} <span>${rel.length}</span></h2>${rel.length ? `<ul class="lrows" style="margin-top:.8rem">${rel.map((r) => rowHtml(r)).join('')}</ul>` : `<p class="mute">${empty}</p>`}</section></div>
   ${g.length > 1 ? `<div class="enav"><a href="${esc(pageHref(p.k))}"><small>Previous</small>${esc(p.name)}</a><a class="nx" href="${esc(pageHref(n.k))}"><small>Next</small>${esc(n.name)}</a></div>` : ''}`;
 }
 
