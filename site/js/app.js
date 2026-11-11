@@ -12,6 +12,7 @@
 
 import { createEngine, normalize as textNorm } from './search.js';
 import { loadSemantic } from './semantic.js';
+import { createSuggester } from './suggest.js';
 import { SITE, START, reportConfigured, reportHref, feedbackHref, externalSearchHref } from './config.js';
 import { TOUR, TOUR_DRAFT } from './tour.js';
 
@@ -23,7 +24,7 @@ const BASE = location.pathname;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const view = $('#view'), input = $('#q');
-let engine = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
+let engine = null, suggester = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
 let route = { t: 'home' }, lastSlide = null, firstLoad = true, lastHref = '';
 // Layer 3: related by meaning. A small open-source model measures similarity on this device and writes
 // nothing. It is fetched only when keyword search is weak, once (the browser keeps it). With Data Saver
@@ -781,9 +782,23 @@ function buildRows() {
   } else {
     out.push({ k: 'all', text: `See all results for “${q}”`, go: () => nav(qHref(q)) });
     const res = engine.search(q), c = res.curated;
-    const qs = c ? (c.question ? [c.question] : (c.questions || [])) : [];
-    if (qs.length) { out.push({ lab: 'Questions' }); qs.slice(0, 4).forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) })); }
-    const top = [...res.exact, ...res.related].slice(0, 5).map((e) => (e.kind === 'cluster' ? e.items[0].record : e.record));
+    // Starter questions, topics and authors that start like what was typed (suggest.js; nothing leaves the device).
+    const sg = suggester ? suggester.suggest(q, 7) : [];
+    const groups = [['question', 'Questions'], ['topic', 'Topics'], ['scholar', 'Authors']];
+    let any = false;
+    for (const [kind, lab] of groups) {
+      // A question that only matched through an alternate phrasing (nothing highlighted in its own words) needs a longer typed word.
+      const items = sg.filter((x) => x.kind === kind && (kind !== 'question' || (x.ranges && x.ranges.length) || q.length >= 6));
+      if (!items.length) continue;
+      any = true; out.push({ lab });
+      items.forEach((x) => out.push({ k: 'q', text: x.text, go: () => nav(kind === 'topic' ? topicHref(x.target.topic) : qHref(x.target.query)) }));
+    }
+    if (!any && !suggester) {
+      const qs = c ? (c.question ? [c.question] : (c.questions || [])) : [];
+      if (qs.length) { out.push({ lab: 'Questions' }); qs.slice(0, 4).forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) })); }
+    }
+    // Pages: only when the words actually match, so a half-typed word does not fill the list with noise.
+    const top = (res.exact.length ? [...res.exact, ...res.related] : []).slice(0, 5).map((e) => (e.kind === 'cluster' ? e.items[0].record : e.record));
     if (top.length) { out.push({ lab: 'Top matches' }); top.forEach((r) => out.push({ k: 'r', r })); }
   }
   return out;
@@ -1041,7 +1056,8 @@ async function start() {
   try {
     const res = await fetch('data/index.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    engine = createEngine(await res.json());
+    const index = await res.json();
+    engine = createEngine(index); suggester = createSuggester(index);
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';
