@@ -11,6 +11,8 @@
 // become clickable when they are http(s) (safeUrl). Nothing the visitor types is stored.
 
 import { createEngine, normalize as textNorm } from './search.js';
+import { loadSemantic } from './semantic.js';
+import { createSuggester } from './suggest.js';
 import { SITE, START, reportConfigured, reportHref, feedbackHref, externalSearchHref } from './config.js';
 import { TOUR, TOUR_DRAFT } from './tour.js';
 
@@ -22,8 +24,42 @@ const BASE = location.pathname;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const view = $('#view'), input = $('#q');
-let engine = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
+let engine = null, suggester = null, RECS = [], N = new Map(), E = {}, SL = [], TOURX = [];
 let route = { t: 'home' }, lastSlide = null, firstLoad = true, lastHref = '';
+// Layer 3: related by meaning. A small open-source model measures similarity on this device and writes
+// nothing. It is fetched only when keyword search is weak, once (the browser keeps it). With Data Saver
+// on, the visitor chooses first.
+const MEANING = { api: null, promise: null, failed: false, optIn: false, ids: new Set(), kind: '' };
+const dataSaverOn = () => { try { return !!(navigator.connection && navigator.connection.saveData); } catch { return false; } };
+function loadMeaning() {
+  if (!MEANING.promise) {
+    MEANING.promise = loadSemantic('data/l3/').then((api) => { MEANING.api = api; return api; })
+      .catch((err) => { MEANING.failed = true; console.error(err); return null; });
+  }
+  return MEANING.promise;
+}
+function searchWithMeaning(st) {
+  let result = engine.search(st.q, st);
+  MEANING.kind = ''; MEANING.ids = new Set();
+  if (engine.needsSemantic(result) && !MEANING.failed) {
+    if (MEANING.api) {
+      result = engine.addSemantic(result, MEANING.api.rank(st.q, engine.config.layer3.candidates));
+      MEANING.ids = new Set(result.meaningIds || []);
+    } else if (MEANING.optIn || !dataSaverOn()) {
+      MEANING.kind = 'loading';
+      const q = st.q;
+      loadMeaning().then(() => { if (route.t === 'results' && route.st && route.st.q === q) render({ push: false, quiet: true }); });
+    } else {
+      MEANING.kind = 'ask';
+    }
+  }
+  return result;
+}
+const meaningNoteHtml = () => (MEANING.kind === 'loading'
+  ? '<p class="meaning-note" role="status">Looking for results by meaning on your device. The first time this downloads about 4 MB.</p>'
+  : MEANING.kind === 'ask'
+    ? '<p class="meaning-note"><button class="btn line" type="button" data-meaning>Look for related results by meaning</button> This downloads about 4 MB once and runs on your device. Nothing you type is sent anywhere.</p>'
+    : '');
 const ui = { fbkind: '', limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
 
 // ---------------------------------------------------------------------------
@@ -398,6 +434,7 @@ function aboutHtml() {
   const steps = ['It checks a list of common questions and topics prepared in advance. If your search matches one, the pages chosen for it come first.',
     'Then it does an ordinary word search over titles, descriptions, the questions each page helps answer, topic names (including other spellings) and scholar names.',
     'Exact matches have your words, or another name for the same topic, in the title or the questions a page helps answer. Everything else is Related. If nothing is exact, the page says so.',
+    'If few pages match your words, a small open-source model also measures how close your search is in meaning to each page. It runs on your device (about 4 MB, downloaded once from this site, never sent anywhere) and only measures similarity: it writes nothing. Pages found this way are marked “Found by meaning” and listed under Related.',
     'If nothing matches well, the page says “We couldn’t find a close match” and offers topics and questions instead of guessing.',
     'Simpler material is listed first by default. You can switch to “Show deeper material first” at any time.'];
   return `<section class="lead"><p class="lead-t">${esc(SITE.name)} is a catalog, not a library.</p><p class="lead-p">It points you to where Shia resources are published on a short list of trusted Shia sources. It never hosts, copies or writes them. It is made for people who are new and do not know where to look.</p></section>
@@ -408,7 +445,7 @@ function aboutHtml() {
    <p class="note">Catalog entries were prepared with the help of an AI assistant from the source pages, then checked by automatic rules. Items marked <span class="pill">Draft</span> have not yet been reviewed by a person.</p></section>
   <section class="tsec"><h2>What the catalog covers</h2><dl class="cells">${cells.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v.includes('<a ') ? v : esc(v)}</dd></div>`).join('')}</dl><p class="note">${scope}</p></section>
   <section class="tsec"><h2>How results are chosen</h2><p class="sub">Plain matching rules. <strong>No AI writes answers here:</strong> the search only finds and orders catalog entries.</p>
-   <details class="more"><summary>See the five steps</summary><ol class="hsteps">${steps.map((p) => `<li><p>${esc(p)}</p></li>`).join('')}</ol></details></section>
+   <details class="more"><summary>See the six steps</summary><ol class="hsteps">${steps.map((p) => `<li><p>${esc(p)}</p></li>`).join('')}</ol></details></section>
   <section class="tsec"><h2>Privacy</h2><ul class="ticks priv"><li>The search runs entirely in your browser. What you type is not sent to anyone and is not stored.</li><li>No cookies, no tracking, no accounts.</li><li>Pages you tick as read are saved only in your own browser.</li><li>When you follow a link you leave this site, and the other website’s own policies apply. The “Search Al-Islam.org” link under results sends your search words to that site only if you click it.</li></ul></section>
   <section class="tsec"><div class="qask"><div><h3>Report a wrong or broken link</h3><p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. Include the title of the result and what is wrong.</p></div><div class="qask-b">${rep}</div></div></section>`;
 }
@@ -581,7 +618,7 @@ function resultsHtml(st, pre) {
   const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
     announceText = `No close match for “${result.query}”.`;
-    return `${fallbackHtml(result)}${externalHtml(result.query)}<div style="height:3rem"></div>${topicsHtml()}`;
+    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml(result.query)}<div style="height:3rem"></div>${topicsHtml()}`;
   }
   const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
   let out = '';
@@ -589,6 +626,7 @@ function resultsHtml(st, pre) {
   if (browsing) out += `<div class="rhead"><p class="sub">${n >= cap ? `Showing the best ${n} pages. Narrow it down with the filters.` : n ? `${pl(n, 'page')}.` : ''}</p></div>`;
   if (!browsing) out += curatedHtml(result);
   out += controlsHtml(st, result);
+  if (!browsing) out += meaningNoteHtml();
   if (!n) {
     announceText = 'No results with these filters.';
     return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'There are no pages here yet.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
@@ -603,7 +641,7 @@ function resultsHtml(st, pre) {
     announceText = ex ? `${pl(ex, 'exact match', 'exact matches')}${rel ? ` and ${pl(rel, 'related result')}` : ''}.` : `No exact matches. ${pl(rel, 'related result')}.`;
     out += ex ? `<section class="grp frame"><div class="gh"><h3>Exact matches <span>${ex}</span></h3><p>Your words appear in the title or in the questions a page answers.</p></div>${list(ee)}</section>`
       : '<p class="callout">No exact matches. Here are related results.</p>';
-    if (rel) out += `<section class="grp frame"><div class="gh"><h3>Related results <span>${rel}</span></h3><p>These share some of your words or the same topic.</p></div>${list(rr)}</section>`;
+    if (rel) out += `<section class="grp frame"><div class="gh"><h3>Related results <span>${rel}</span></h3><p>${MEANING.ids.size ? 'These share some of your words or the same topic. Those marked “Found by meaning” were matched by meaning on your device, not by your words.' : 'These share some of your words or the same topic.'}</p></div>${list(rr)}</section>`;
   }
   if (total > ui.limit) out += `<button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button>`;
   if (!browsing) out += externalHtml(result.query);
@@ -622,7 +660,7 @@ function rowHtml(r, more, hl = 'h4') {
   const ctx = parts.length ? `<span class="lr-ctx">In ${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')} · <a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a></span>` : (r.descendant_count ? `<span class="lr-ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>` : '');
   const rh = reportHref(r);
   return `<li class="lrow"><${hl}><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></${hl}>
-  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
+  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${MEANING.ids.has(r.id) ? '<span class="by-meaning" title="Matched by meaning on your device, not by your exact words">Found by meaning</span>' : ''}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
   ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<p class="lr-foot">${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></p></li>`;
 }
 const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('')}</ul>`;
@@ -746,9 +784,23 @@ function buildRows() {
   } else {
     out.push({ k: 'all', text: `See all results for “${q}”`, go: () => nav(qHref(q)) });
     const res = engine.search(q), c = res.curated;
-    const qs = c ? (c.question ? [c.question] : (c.questions || [])) : [];
-    if (qs.length) { out.push({ lab: 'Questions' }); qs.slice(0, 4).forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) })); }
-    const top = [...res.exact, ...res.related].slice(0, 5).map((e) => (e.kind === 'cluster' ? e.items[0].record : e.record));
+    // Starter questions, topics and authors that start like what was typed (suggest.js; nothing leaves the device).
+    const sg = suggester ? suggester.suggest(q, 7) : [];
+    const groups = [['question', 'Questions'], ['topic', 'Topics'], ['scholar', 'Authors']];
+    let any = false;
+    for (const [kind, lab] of groups) {
+      // A question that only matched through an alternate phrasing (nothing highlighted in its own words) needs a longer typed word.
+      const items = sg.filter((x) => x.kind === kind && (kind !== 'question' || (x.ranges && x.ranges.length) || q.length >= 6));
+      if (!items.length) continue;
+      any = true; out.push({ lab });
+      items.forEach((x) => out.push({ k: 'q', text: x.text, go: () => nav(kind === 'topic' ? topicHref(x.target.topic) : qHref(x.target.query)) }));
+    }
+    if (!any && !suggester) {
+      const qs = c ? (c.question ? [c.question] : (c.questions || [])) : [];
+      if (qs.length) { out.push({ lab: 'Questions' }); qs.slice(0, 4).forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) })); }
+    }
+    // Pages: only when the words actually match, so a half-typed word does not fill the list with noise.
+    const top = (res.exact.length ? [...res.exact, ...res.related] : []).slice(0, 5).map((e) => (e.kind === 'cluster' ? e.items[0].record : e.record));
     if (top.length) { out.push({ lab: 'Top matches' }); top.forEach((r) => out.push({ k: 'r', r })); }
   }
   return out;
@@ -859,7 +911,7 @@ function render(opts = {}) {
       $('#routeStage').innerHTML = pageStage({ kind: sec ? 'Browsing inside' : 'Browsing', title, back: [BASE, 'Back to start'] });
       view.innerHTML = resultsHtml(st);
     } else {
-      const result = engine.search(st.q, st), cq = !result.fallback && result.curated && result.curated.question && isThatQuestion(st.q, result.curated.question) ? result.curated.question : null;
+      const result = searchWithMeaning(st), cq = !result.fallback && result.curated && result.curated.question && isThatQuestion(st.q, result.curated.question) ? result.curated.question : null;
       input.value = st.q;
       if (cq) {
         const same = textNorm(cq.question) === textNorm(st.q);
@@ -881,6 +933,7 @@ const draftApplies = (k) => ({ questions: engine.questions.some((q) => q.draft),
 
 function afterRender(opts) {
   const t = route.t;
+  if (opts.quiet) { const q = $('#announce'); q.textContent = ''; setTimeout(() => { q.textContent = announceText; }, 60); return; }
   if (t !== 'slide' && opts.push !== false) scrollTo(0, 0);
   if (firstLoad) { firstLoad = false; return; }
   let target = null;
@@ -897,7 +950,8 @@ function afterRender(opts) {
 view.addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b) return;
   const st = readState(), keep = (patch) => nav(searchHref({ ...st, ...patch }));
-  if ('tag' in b.dataset) keep({ tag: st.tag === b.dataset.tag ? '' : b.dataset.tag });
+  if ('meaning' in b.dataset) { MEANING.optIn = true; render({ push: false, quiet: true }); }
+  else if ('tag' in b.dataset) keep({ tag: st.tag === b.dataset.tag ? '' : b.dataset.tag });
   else if ('order' in b.dataset) keep({ order: b.dataset.order === engine.config.ranking.default_order ? '' : b.dataset.order });
   else if (b.dataset.clear) keep({ [b.dataset.clear]: '' });
   else if ('more' in b.dataset) { ui.limit += 20; render({ push: false }); }
@@ -1004,7 +1058,8 @@ async function start() {
   try {
     const res = await fetch('data/index.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    engine = createEngine(await res.json());
+    const index = await res.json();
+    engine = createEngine(index); suggester = createSuggester(index);
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';

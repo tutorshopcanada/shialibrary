@@ -1028,3 +1028,8 @@ body.has .hero-art,body.has .cursor{display:none}
 #top.in{background:var(--frame);border:1px solid var(--edge);border-radius:22px;padding:clamp(10px,1.6vw,20px);margin-top:1rem;margin-bottom:1.6rem}
 #top .hero-frame{background:transparent;border:0;border-radius:0;padding:0;margin:0}
 #top .view{background:var(--ground);border-radius:12px;margin-top:clamp(10px,1.6vw,20px);padding:clamp(1.4rem,3.4vw,2.6rem) clamp(1rem,3.4vw,2.6rem) clamp(2rem,4vw,3rem)}
+
+/* Layer 3: results found by meaning */
+.by-meaning{display:inline-flex;align-items:center;border:1px dashed var(--edge);border-radius:6px;padding:.05rem .45rem;font-size:.8125rem;font-weight:600;color:var(--mute)}
+.meaning-note{margin:.9rem 0;font-size:.9375rem;color:var(--mute)}
+.meaning-note .btn{margin-right:.5rem}

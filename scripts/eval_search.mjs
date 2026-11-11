@@ -15,7 +15,8 @@
 // A query passes when at least one record in expect_any is found
 //   expect_group: exact   -> in the first n "Exact matches"
 //   expect_group: related -> in the first n "Related results"
-//   expect_group: any     -> in the first n results overall (exact first, then related)
+//   expect_group: semantic -> among the records found only by meaning (Layer 3), within the first n related
+//   expect_group: any     -> in the first n results overall (exact, related, then by meaning)
 // An entry with expect_none: true passes when the page would show the honest
 // "We couldn't find a close match" fallback and no results at all.
 // Exit code: 0 all passed (or nothing to run), 1 failures, 2 cannot run.
@@ -24,6 +25,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createEngine } from '../site/js/search.js';
+import { loadSemantic } from '../site/js/semantic.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
@@ -43,6 +45,20 @@ if (!existsSync(indexPath)) {
 }
 const engine = createEngine(JSON.parse(readFileSync(indexPath, 'utf8')));
 
+// Layer 3 ("related by meaning"): loaded from site/data/l3 exactly as the page would, so every query here is
+// judged the way a visitor would see it. Skipped (with a note) when the vectors are missing.
+let semantic = null;
+const l3Dir = join(dataDir, 'l3') + '/';
+if (existsSync(join(l3Dir, 'records.json'))) {
+  const read = async (url, kind) => {
+    const b = readFileSync(url);
+    return kind === 'json' ? JSON.parse(b) : kind === 'text' ? b.toString('utf8') : b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
+  };
+  semantic = await loadSemantic(l3Dir, read);
+} else {
+  console.log('Note: no Layer 3 vectors found; evaluating keyword layers only.');
+}
+
 let queries = [];
 if (existsSync(evalPath)) {
   try {
@@ -59,11 +75,15 @@ if (!queries.length) {
 
 let failed = 0;
 for (const q of queries) {
-  const res = engine.search(q.query);
+  let res = engine.search(q.query);
+  if (semantic && engine.needsSemantic(res)) {
+    res = engine.addSemantic(res, semantic.rank(q.query, engine.config.layer3.candidates));
+  }
   const exact = engine.flatten(res.exact).map((r) => r.id);
   const related = engine.flatten(res.related).map((r) => r.id);
+  const meaning = res.meaningIds || [];
   const group = q.expect_group || 'any';
-  const pool = (group === 'exact' ? exact : group === 'related' ? related : [...exact, ...related]).slice(0, topN);
+  const pool = (group === 'exact' ? exact : group === 'related' ? related : group === 'semantic' ? meaning : [...exact, ...related]).slice(0, topN);
   const expected = q.expect_any || [];
   const found = expected.filter((id) => pool.includes(id));
   const ok = q.expect_none
@@ -71,7 +91,7 @@ for (const q of queries) {
     : expected.length === 0 ? true : found.length > 0;
   if (!ok) failed++;
 
-  const summary = `layer ${res.layer}, ${exact.length} exact, ${related.length} related`;
+  const summary = `layer ${res.layer}, ${exact.length} exact, ${related.length} related${meaning.length ? ` (${meaning.length} by meaning)` : ''}`;
   console.log(`${ok ? 'PASS' : 'FAIL'}  "${q.query}"  (${summary}${res.fallback ? ', fallback shown' : ''})`);
   if (!ok && q.expect_none) {
     console.log('      expected the "no close match" fallback with no results shown');
@@ -85,6 +105,7 @@ for (const q of queries) {
     if (q.note) console.log(`      note: ${q.note}`);
     console.log(`      exact:   ${exact.slice(0, 5).join(', ') || '(none)'}`);
     console.log(`      related: ${related.slice(0, 5).join(', ') || '(none)'}`);
+    if (meaning.length) console.log(`      meaning: ${meaning.slice(0, 5).join(', ')}`);
   }
 }
 
