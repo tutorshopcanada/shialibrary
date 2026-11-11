@@ -1023,3 +1023,8 @@ body.has .hero-art,body.has .cursor{display:none}
 .rs.page h1{font-size:clamp(1.9rem,4.4vw,2.9rem);margin:.5rem 0 .3rem;line-height:1.02}
 .rs.page .lede{font-size:.9375rem;max-width:40rem}
 .rs.page .refine{margin-top:.9rem}
+
+/* One sand frame around the whole page body: header, content panel, and back to the frame */
+#top.in{background:var(--frame);border:1px solid var(--edge);border-radius:22px;padding:clamp(10px,1.6vw,20px);margin-top:1rem;margin-bottom:1.6rem}
+#top .hero-frame{background:transparent;border:0;border-radius:0;padding:0;margin:0}
+#top .view{background:var(--ground);border-radius:12px;margin-top:clamp(10px,1.6vw,20px);padding:clamp(1.4rem,3.4vw,2.6rem) clamp(1rem,3.4vw,2.6rem) clamp(2rem,4vw,3rem)}

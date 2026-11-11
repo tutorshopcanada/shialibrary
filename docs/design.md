@@ -149,3 +149,7 @@ Tour slides carry the girih too, fixed behind the content at 10% (8% on phones),
 On results and question pages the search box sits inside the page header, under the count, instead of floating alone below it. The header and the box read as one block; the box is no longer sticky.
 
 Inner-page headers are flat: the back link and the kind label share one row, the title is smaller (about 30 to 46px), and the lede is one short line. Headers are 115 to 235px tall (results with the search box included) instead of about 300px. The home hero is unchanged.
+
+## One frame around the page
+
+The sand frame no longer wraps only the header. `#top` is one sand frame with a 10 to 20px inset all round; the nav strip and header sit inside it, and the page content sits in a cream panel below with the same inset, so the frame continues down the page and closes under the content. The footer sits outside on the cream ground.
