@@ -29,3 +29,19 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
 ## Level looks uniform (second-reader note)
 - The second-reader audit noted that nearly all sistani.org Q&A records are `intermediate`, which was a default for that area (no audience stated), not a per-question judgment. A reviewer may want to set very basic questions to beginner.
 - A few Q&A topics overlap (Qasam/Oath, Loan/Mortgage, Nafilah/Night Prayer, Movies/Films and Movies); each is cataloged as the site lists it.
+
+## Second-reader audit: level and heading suggestions (not applied; a reviewer decides)
+- al-islam-holy-month-ramadhan-poem (LEVEL, low): An eight-line poem by a young child is plainly beginner material, not intermediate.
+- sistani-laws-2206 (LEVEL, low): The record describes a general introduction to the importance of prayer, which suggests beginner rather than advanced; the page is probably an opening section, so this is worth a check.
+- sistani-qa-14989 (HEADING, low): The prayer heading is not supported by the description or sample questions, which concern perfume and modesty in public.
+- sistani-qa-15287 (HEADING, medium): The record is about blood money (diyyah) and gold equivalents, which has nothing to do with dress or appearance.
+- sistani-qa-15318 (HEADING, low): The question concerns men embracing and kissing other men, so the women-rulings heading does not fit.
+- sistani-qa-15559 (HEADING, low): The question is about draping a mosque with black cloth, which concerns decoration of a building rather than clothing or personal appearance.
+- sistani-qa-24574 (HEADING, medium): The question asks for Sayyid Sistani's view on a book of sayings, not a legal ruling; the vocabulary has a nahj-al-balagha heading that fits better, and the fiqh tag and marja setting would need revisiting if the heading changes.
+- sistani-qa-nahjul-balaghah (HEADING, medium): The record's own flag says the item may not be fiqh (a book of sayings), yet it sits under the generic fiqh heading; the nahj-al-balagha heading fits the subject.
+- sistani-qa-rules-of-say (LEVEL, low): Detailed procedural rules for sa'y (floors, laps, purity, layout) are better marked advanced for a newcomer under the level rules, not intermediate.
+- sistani-qa-rules-of-slaughtering-during-hajj (LEVEL, low): Detailed technical rules on slaughtering the hady are better marked advanced for a newcomer under the level rules, not intermediate.
+- sistani-worship-8478 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic, but the level is set to advanced.
+- sistani-worship-8501 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic (e.g. How do Shias pray?), but the level is set to advanced.
+- sistani-worship-8511 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic (e.g. What is Hajj?), but the level is set to advanced.
+- sistani-worship-8513 (LEVEL, low): The record describes itself as an introduction and its sample questions are basic (e.g. What is zakat?), but the level is set to advanced.

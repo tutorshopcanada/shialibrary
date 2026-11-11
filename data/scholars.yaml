@@ -766,3 +766,38 @@ scholars:
     alt_names: []
     notes: "Named as author of 'Justice as a Virtue of the Soul' on al-islam.org (read 2026-11-10)."
     needs_review: true
+
+  - id: mohammad-rasoul-ahangaran
+    name: "Mohammad Rasoul Ahangaran"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Boundless Peace and Friendship in the Qur'an' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: mohammad-hossein-faryab
+    name: "Mohammad Hossein Faryab"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'The Status of Knowledge in Islam' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: rasoul-imani-khoshkhu
+    name: "Rasoul Imani Khoshkhu"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Introduction to Islamic Sciences, Part 1' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: abdullah-jawadi-amuli
+    name: "Abdullah Jawadi Amuli"
+    role: author
+    alt_names: []
+    notes: "Named as author of 'Elements of Unity' on al-islam.org (read 2026-11-10)."
+    needs_review: true
+
+  - id: muhammad-shabdini-pashaki
+    name: "Muhammad Shabdini Pashaki"
+    role: author
+    alt_names: []
+    notes: "Labeled author of 'From Medina to Sham: Lady Zaynab's Commitment to Wilayah' on al-islam.org (read 2026-11-10)."
+    needs_review: true

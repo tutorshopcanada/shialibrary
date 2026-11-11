@@ -184,3 +184,99 @@ A second AI reader checked every record for ruling language, opinion, and format
 - sistani-worship-8512: the contents-page title stated a ruling ("thirteen actions are obligatory"); changed to a neutral "Actions of Hajj al-Tamattuʿ".
 - 75 Q&A titles that were cut short ended with four dots; now end with three.
 
+## sistani-laws-2186 (RULING, description)
+- Before: Covers how the ghusl for a corpse is performed: the three washes with different water, sidr leaves and camphor, and related cases such as who may give it.
+- After: Covers how the ghusl for a corpse is performed, including the washes and the materials used, and related cases such as who may give it.
+
+## sistani-laws-2190 (RULING, description)
+- Before: Describes how the funeral prayer (salat al-mayyit) is performed: its five takbirs and the words said after each, with Arabic text, transliteration and translation.
+- After: Describes how the funeral prayer (salat al-mayyit) is performed, including its takbirs and the words said after each, with Arabic text, transliteration and translation.
+
+## sistani-laws-2191 (RULING, description)
+- Before: Lists the recommended acts of the funeral prayer, such as ritual purity, who leads, praying bare-footed, raising the hands and standing positions.
+- After: Lists the recommended acts of the funeral prayer, with the rules on each, including ritual purity and who leads.
+
+## sistani-laws-2203 (RULING, description)
+- Before: Covers the things with which tayammum can be performed, such as soil, pebbles, stone, gypsum and limestone, and what applies when none is found.
+- After: Covers the things with which tayammum can be performed, and what applies when none of them is found.
+
+## sistani-laws-2207 (RULING, description)
+- Before: Lists the six obligatory prayers in this era: the daily prayers, prayer of signs, funeral prayer, prayers for tawaf, missed prayers of a person's father, and prayers made obligatory by hire, vow or similar commitments.
+- After: Covers the types of prayer that the book classifies as obligatory (wajib) in this era, and the conditions under which each arises.
+
+## sistani-laws-2208 (RULING, description)
+- Before: Introduces the five obligatory daily prayers (midday, afternoon, sunset, evening and morning) and mentions how the number of units (rakʿahs) is treated when travelling.
+- After: Introduces the obligatory daily prayers and mentions how the number of units (rakʿahs) is treated when travelling.
+
+## sistani-laws-2214 (RULING, description)
+- Before: Covers prayers that must be performed in a set order, such as asr after zuhr and isha after maghrib, and cases of mistakes, doubts or realizing the order afterward.
+- After: Covers the order of the daily prayers, such as asr in relation to zuhr and isha in relation to maghrib, and cases of mistakes, doubts or realizing the order afterward.
+
+## sistani-laws-2217 (RULING, description)
+- Before: Describes the ghufaylah prayer, a recommended prayer between maghrib and isha, with its two units and the Qur'anic verses and supplication recited.
+- After: Describes the ghufaylah prayer, its timing and form, and the Qur'anic verses and supplication recited in it.
+
+## sistani-laws-2224 (RULING, description)
+- Before: Covers the place where prayers are performed and the seven conditions it must meet, including lawful use of the place and related cases.
+- After: Covers the place where prayers are performed, the conditions that apply to it, and related cases.
+
+## sistani-laws-2226 (RULING, description)
+- Before: Lists places where praying is disapproved (makruh), such as a public bath, salty land, and facing a person.
+- After: Lists places where praying is disapproved (makruh), with the rules on each and related cases.
+
+## sistani-laws-2229 (RULING, description)
+- Before: Lists the eleven obligatory components of the prayer (such as intention, standing, recitation, bowing and prostration), which the next pages explain one by one.
+- After: Lists the components of the prayer that the book classifies as obligatory, which the next pages explain one by one.
+
+## sistani-laws-2232 (RULING, description)
+- Before: Rules on standing (qiyam) in prayer: standing during the takbir and before bowing, and cases such as forgetting to bow and sitting down.
+- After: Rules on standing (qiyam) in prayer, the places where standing applies, and cases such as forgetting to bow and sitting down.
+
+## sistani-laws-2233 (FORMAT, description)
+- Before: The long page on recitation (qiraʾah) in prayer: what is recited in the first and second rakʿahs and the later ones, the Qur'anic chapters, pronunciation, mistakes, and cases such as short time.
+- After: The long page on recitation (qiraʾah) in prayer: what is recited in the first and second rakʿahs and the later ones, the Qur'anic chapters, pronunciation, mistakes, and cases such as when time is short.
+
+## sistani-laws-2235 (RULING, description)
+- Before: Rules on prostration (sujud) in prayer: the two sajdahs in each rakʿah, what parts of the body touch the ground, what is said, and cases of mistakes, additions and omissions.
+- After: Rules on prostration (sujud) in prayer: the sajdahs in each rakʿah, which parts of the body touch the ground, what is said, and cases of mistakes, additions and omissions.
+
+## sistani-laws-2236 (RULING, description)
+- Before: Covers the things on which sajdah may be performed, such as earth and what grows from it, and cases such as leaves, paper and other materials.
+- After: Covers the things on which sajdah may be performed, and the cases that arise with different materials.
+
+## sistani-laws-2237 (RULING, description)
+- Before: Lists recommended and disapproved acts when performing sajdah, such as saying takbir before it and the way the hands are placed.
+- After: Lists the recommended and disapproved acts when performing sajdah, with the rules on each.
+
+## sistani-laws-2247 (RULING, description)
+- Before: The long page on the twelve things that invalidate prayers (mubtilat), such as losing a required condition or speaking, laughing, crying or doing unrelated actions during prayer.
+- After: The long page on the things that invalidate prayers (mubtilat), set out one by one with their conditions and related cases.
+
+## sistani-laws-2248 (RULING, description)
+- Before: Lists things disapproved (makruh) in prayers, such as turning the face, praying while drowsy or needing the toilet, and similar actions.
+- After: Lists things disapproved (makruh) in prayers, with the rules on each and on similar actions.
+
+## sistani-laws-2249 (RULING, description)
+- Before: Covers situations in which stopping an obligatory prayer part-way is addressed, such as danger, loss of property, a child, or ample time left.
+- After: Covers the situations in which stopping an obligatory prayer part-way is addressed, and the conditions attached to each.
+
+## sistani-laws-2252 (RULING, description)
+- Before: Lists the doubts in prayer that are to be dismissed, such as doubts about an act whose time has passed, after the salam, after the time, and others, each explained on following pages.
+- After: Introduces the doubts in prayer that the book addresses under the heading of dismissed doubts, with each category explained on the following pages.
+
+## sistani-laws-2260 (RULING, description)
+- Before: Covers the two prostrations for inadvertence (sajdatay al-sahw): the situations in which they come up, such as forgetting tashahhud or certain doubts, and related details.
+- After: Covers the two prostrations for inadvertence (sajdatay al-sahw): the situations in which they come up, and related details.
+
+## sistani-laws-2269 (RULING, description)
+- Before: Covers the qualifications of the imam (prayer leader) of a congregational prayer, including age, mind, character and creed, and rulings on following imams with excuses or illnesses.
+- After: Covers the qualifications of the imam (prayer leader) of a congregational prayer, and rulings on following imams with excuses or illnesses.
+
+## sistani-laws-2272 (RULING, description)
+- Before: A short page listing things that are disapproved (makruh, discouraged) in congregational prayers, such as gaps in rows and certain ways of reciting.
+- After: A short page listing things that are disapproved (makruh, discouraged) in congregational prayers, with the rules on each.
+
+## sistani-laws-2293 (RULING, description)
+- Before: Covers cases in which only a make-up (qada) of a fast is owed, including gargling, mistaking the time of maghrib (sunset), doubts about sunset, and putting things in the mouth.
+- After: Covers cases related to making up (qada) a fast, including gargling, mistaking the time of maghrib (sunset), doubts about sunset, and putting things in the mouth.
+
