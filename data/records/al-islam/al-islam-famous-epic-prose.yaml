@@ -1,0 +1,33 @@
+id: al-islam-famous-epic-prose
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Famous Epic Prose
+title_original: ''
+authors:
+- makarem-shirazi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/famous-epic-prose-naser-makarem-shirazi
+language: en
+date: ''
+description: An explanation of the sermon of Fadak delivered by Lady Fatimah al-Zahra,
+  with the Arabic text of the sermon. It covers tawhid, the Prophet's position, the
+  philosophy of religious commandments and the story of Fadak. Published by Naba Organization.
+sample_questions:
+- What is the sermon of Fadak?
+- What did Fatimah al-Zahra say in her sermon?
+- What is Fadak?
+- Where can I read a commentary on Lady Fatima's sermon?
+headings:
+- fatimah
+- ghadir-succession
+access: free
+location: ''
+needs_review: true
+review_note: Level not stated on the page; set to intermediate by default. Listed
+  on the Responses to Misconceptions hub. Fadak is a contested historical topic; human
+  review needed.
+cataloged_on: '2026-11-11'

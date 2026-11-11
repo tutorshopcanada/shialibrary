@@ -1,0 +1,36 @@
+id: al-islam-sects-of-islam-rizvi
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Sects of Islam
+title_original: ''
+authors:
+- saeed-akhtar-rizvi
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/sects-islam-sayyid-saeed-akhtar-rizvi
+language: en
+date: ''
+description: A short book that discusses, in the site's words, "briefly but very clearly"
+  the subjects on which Muslims are not agreed, such as the person and attributes
+  of God, seeing God, divine grace, human actions and fate, and prophethood and the
+  Imams. Published by W.O.F.I.S.
+sample_questions:
+- What do Shias and Sunnis disagree about?
+- Can Allah be seen?
+- What is the Shia view on the attributes of God?
+- What is infallibility of the prophets and Imams?
+- Do humans have free will in Islam?
+headings:
+- sunni-shia
+- beliefs
+- tawhid
+access: free
+location: ''
+needs_review: true
+review_note: Level not stated on the page; set to intermediate by default. Listed
+  on the Shia Beliefs Explained hub. Compares Muslim schools on doctrine; flagged
+  as a Shia-Sunni comparison for human review. Year not stated.
+cataloged_on: '2026-11-11'

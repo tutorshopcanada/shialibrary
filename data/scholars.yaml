@@ -985,3 +985,69 @@ scholars:
     alt_names: []
     notes: "Listed as author (an organization) of Nahj al-Balaghah for Children on https://al-islam.org/nahj-al-balaghah-children (read 2026-11-11)."
     needs_review: true
+
+  - id: muhammad-baqir-al-sadr
+    name: "Sayyid Muhammad Baqir al-Sadr"
+    role: author
+    alt_names:
+      - "Martyr Sayyid Muhammad Baqir as-Sadr"
+    notes: "Named as author of An Inquiry Concerning Al-Mahdi on https://al-islam.org/inquiry-concerning-al-mahdi-sayyid-muhammad-baqir-al-sadr and co-author of The Awaited Saviour (read 2026-11-11)."
+    needs_review: true
+
+  - id: ruhullah-khomeini
+    name: "Sayyid Ruhullah Musawi Khomeini"
+    role: author
+    alt_names:
+      - "Al-Khomeini, Ruhullah al-Musawi"
+      - "Ayatullah Ruhullah Khumayni"
+    notes: "Named as author of Forty Hadith, An Exposition on https://al-islam.org/forty-hadith-exposition-second-revised-edition-sayyid-ruhullah-musawi-khomeini (read 2026-11-11). Not assumed to be the same entry as the Imam Khumayni mentioned in other records."
+    needs_review: true
+
+  - id: muhammad-ali-chenarani
+    name: "Muhammad Ali Chenarani"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Prophet's Attitude towards Children and Youth on https://al-islam.org/prophets-attitude-towards-children-and-youth-muhammad-ali-chenarani (read 2026-11-11)."
+    needs_review: true
+
+  - id: mahnaz-heydarpoor
+    name: "Mahnaz Heydarpoor"
+    role: author
+    alt_names: []
+    notes: "Named as author of Perspectives on the Concept of Love in Islam on https://al-islam.org/perspectives-concept-love-islam-mahnaz-heydarpoor (read 2026-11-11)."
+    needs_review: true
+
+  - id: peermohammad-ebrahim-trust
+    name: "Peermohammad Ebrahim Trust"
+    role: author
+    alt_names: []
+    notes: "Listed as author (a trust) of Backbiting on https://al-islam.org/backbiting-peermohammad-ebrahim-trust (read 2026-11-11)."
+    needs_review: true
+
+  - id: sayyid-hasan-islami
+    name: "Sayyid Hasan Islami"
+    role: author
+    alt_names: []
+    notes: "Named as author of Imam Khomeini, Ethics and Politics on https://al-islam.org/imam-khomeini-ethics-and-politics-sayyid-hasan-islami (read 2026-11-11)."
+    needs_review: true
+
+  - id: muhammad-ridha-al-muzaffar
+    name: "Muhammad Ridha al-Muzaffar"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Faith of the Imamiyyah Shi'ah on https://al-islam.org/faith-imamiyyah-shiah-muhammad-ridha-al-muzaffar (read 2026-11-11)."
+    needs_review: true
+
+  - id: shahnaz-yousofi
+    name: "Shahnaz Yousofi"
+    role: author
+    alt_names: []
+    notes: "Named as co-author of The Concept of Abrogation (Naskh) in the Holy Qur'an on https://al-islam.org/concept-abrogation-naskh-holy-quran-abbas-ali-shameli-shahnaz-yousofi (read 2026-11-11)."
+    needs_review: true
+
+  - id: abbas-qummi
+    name: "Shaykh 'Abbas Qummi"
+    role: author
+    alt_names: []
+    notes: "Named as author of House of Sorrows on https://al-islam.org/house-sorrows-life-sayyidah-fatimah-al-zahra-and-her-grief-shaykh-abbas-qummi (read 2026-11-11)."
+    needs_review: true

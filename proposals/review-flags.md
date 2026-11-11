@@ -63,3 +63,12 @@ Records flagged in their own file carry `needs_review: true` and a `review_note`
 
 ## Skipped for lack of a description (not fiqh)
 - 2026-11-11 | Story of Sacrifice (Jalil Dorrani) | https://al-islam.org/story-sacrifice | not fiqh; skipped only because the page states no description, tags or audience to ground a record. Revisit if wanted.
+
+## Skipped for lack of a description (not fiqh)
+- 2026-11-11 | Story of Sacrifice (Jalil Dorrani) | https://al-islam.org/story-sacrifice | page states no summary, tags or audience (batch ai13)
+
+## Skipped (fiqh by other authors) - batch ai13
+- 2026-11-11 | How To Start Your Journey Of Religious Responsibility? (Al-Maaref Islamic Cultural Association) | https://al-islam.org/how-start-your-journey-religious-responsibility | guide for girls reaching religious maturity centred on religious rules and duties (prayer, veil, taqlid); borderline, main purpose appears to be legal duties
+
+## Skipped (polemical)
+- 2026-11-11 | Completion of Argument (Sayyid Sa'eed Akhtar Rizvi) | https://al-islam.org/completion-argument-sayyid-saeed-akhtar-rizvi | page describes it as answering objections of Ahlul Sunnat scholars against Shia beliefs; tag Debate (batch ai13)

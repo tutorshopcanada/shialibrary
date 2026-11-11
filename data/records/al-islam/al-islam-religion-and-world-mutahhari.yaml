@@ -1,0 +1,34 @@
+id: al-islam-religion-and-world-mutahhari
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: Religion and the World
+title_original: ''
+authors:
+- mutahhari
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/religion-and-world-murtadha-mutahhari
+language: en
+date: '1982'
+description: A book by Murtadha Mutahhari on how religion relates to worldly life,
+  covering misunderstandings of asceticism, attraction to the world, and the role
+  of justice and social rights in ethics and spirituality. The page notes that daily
+  life is filled with religious decisions.
+sample_questions:
+- What does Islam say about the world and asceticism?
+- Does religion mean giving up worldly life?
+- What is the role of justice in Islam?
+- How are ethics linked to a just society?
+headings:
+- ethics
+- spirituality
+access: free
+location: ''
+needs_review: true
+review_note: Level not stated on the page; set to intermediate by default. Listed
+  on the Introducing Islam hub. First edition 1982, Foreign Department of Bethat Foundation;
+  translator Mohammad Salman Tawheedi.
+cataloged_on: '2026-11-11'
