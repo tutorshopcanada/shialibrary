@@ -96,3 +96,26 @@ The owner also approved everything cataloged from sistani.org and thaqalayn ("an
 
 ## Skipped (polemical) - batch al-islam-s3 (2026-11-12)
 - 2026-11-12 | Beliefs: Twelve Successors (Ahlul Bayt DILP, no author stated) | https://al-islam.org/articles/beliefs-twelve-successors | the page's main purpose is to test Sunni scholars' readings of the twelve-successors hadith ("What the Sunni scholars say", "Confused?") and then present the Twelver view as the answer; it argues against another group. Owner decision needed on whether argument-style pieces on this hadith are in scope. Fetched 2026-11-12.
+
+## imam-us.org pilot (2026-11-12)
+Pilot records: `data/records/imam-us/` (14 records). Fiqh pages naming Sayyid Sistani were cataloged (Islamic Laws of Khums; Rules of Prayer and Fasting While Traveling), with `marja: sistani`. The site's own marja statement is not recorded elsewhere, so the owner should confirm that Sistani is the marja the site follows on its fiqh pages before more fiqh is added.
+
+Owner decisions needed:
+- Which marja does imam-us.org follow for its fiqh pages? Pages checked name Sayyid Sistani (see below), and a Marjaeya representative is named on one page only in truncated form ("Ayatullah Sayyid Ali..."). Do not assume.
+- The "What Should I Do?" (WSID) Q&A pages present rulings in a "Ruling" section. Two name Sistani and are held for the owner (see below). Should Q&A items be cataloged one per page, like sistani.org items, or is the site-level page enough?
+- "Expressions of Togetherness" (video page, 2023) is non-fiqh and in scope, but no vocabulary heading fits interfaith reflections. Not cataloged; see proposals/new-headings.md.
+- Authors: the WordPress feed credits pages to staff account names ("Huda Almuhaisen", "Syed Abidin", "asar"). These are not bylines on the pages, so `authors` is blank. Confirm whether account names count as authors.
+- Presenters: "Sr. Berak Hussain" presents the depression video, but she is not an author in scholars.yaml. Left without `authors`.
+
+## Skipped (fiqh, marja not stated)
+- 2026-11-12 | The Difference Between the Time of Imsak and the Time of Fajr Prayer | https://imam-us.org/the-difference-between-the-time-of-imsak-and-the-time-of-fajr-prayer | fiqh (fasting and prayer times, with precaution and "your marja" guidance). Names no marja. Its only named scholar is cited as a source (Ayatullah Abul Qasim al-Khoei, a footnote), so it is skipped.
+- 2026-11-12 | What Should I Do When the Jurist (faqih) Whom I Follow Passes Away? | https://imam-us.org/what-should-i-do-when-the-jurist-faqih-whom-i-follow-passes-away | fiqh (taqlid). The page names no marja in its text. A sidebar links to a Marjaeya representative and says "his Eminence Ayatullah Sayyid Ali…" (truncated), which could be either marja. Skipped until the owner confirms.
+- 2026-11-12 | Why Does Islam Have So Many Laws? | https://imam-us.org/why-does-islam-have-so-many-laws | borderline. It explains the purpose of Islamic law in general and lists everyday rulings as examples, with no marja named. Skipped; the owner should say whether this is fiqh (the rule would then require a marja) or non-fiqh explanatory material.
+- 2026-11-12 | What Should I Do? Praying on a Plane | https://imam-us.org/what-should-i-do-praying-on-a-plane | fiqh. Names Sayyid Ali al-Sistani as the source of "the rulings" in its Ruling section. Eligible under the fiqh rule but not cataloged in the pilot, held for the owner's decision on WSID format (see above).
+- 2026-11-12 | WSID: Can I Fast on the Day of Ashura? | https://imam-us.org/wsid-can-i-fast-on-the-day-of-ashura | fiqh. Its Ruling section says "According to Sayyid Sistani". Eligible but held for the same decision.
+- 2026-11-12 | Prepare for the Walk to Karbala and Journey to Karbala: Arbaeen Guide (2025) | https://imam-us.org/journey-to-karbala-arbaeen-guide-2 | not fiqh; the 2025 post is near-identical to the 2026 one. Only the 2026 post is cataloged. The owner may want to retire the older one on the site.
+- 2026-11-12 | Expressions of Togetherness | Pope Francis and Sayyid al-Sistani | https://imam-us.org/expressions-of-togetherness-pope-francis-and-sayyid-al-sistani | not fiqh and in scope, but no heading fits. Held pending a heading (proposals/new-headings.md).
+
+## Not fetched (titles only, fiqh-looking, decided from title)
+- 2026-11-12 | Clarification Regarding College Student Residence; Why Are There Varying Dates for Some Islamic Events?; Clarification on Exempting a Debtor from Khums; Rules of Doubt in Prayers; What Should I Do? Attending the Religious Commemorations of Other Religions (everyday-fiqh) | URLs under https://imam-us.org/ with the same slugs as the feed | fiqh; marja not checked
+- 2026-11-12 | Zakat al-Fitrah: Why It's Just $10 This Year; Marriage in Islam (about this book) | https://imam-us.org/its-only-10-00-how-is-zakat-al-fitrah-calculated_2026 ; https://imam-us.org/marriage-in-islam-about-this-book | fiqh-leaning; not fetched
