@@ -230,3 +230,36 @@ Note: the Islam Weekly series has 50 sitemap entries whose slug contains "islam-
 - 2026-11-12 | Munajat Shabaniyyah | (search of the index pages read) | Not found on the All Sections or Shaban index pages read. Not catalogued.
 - 2026-11-12 | Dua Nudba, Dua Faraj, Ziyarat of Imam Mahdi, Abu Hamza Thumali | see progress/failed-duas.org.txt | Dynamic stub pages with no data file found (or not checked). Owner may want to ask the site owner whether the English text is still published.
 - 2026-11-12 | Calendar, shop, forum, app and external links on duas.org | docs/duas-org-structure.md, section "Out of scope" | Not catalogued by design (scope).
+
+## imam-us.org batch 3 sitemap pass (2026-11-12)
+
+Records cataloged from the post sitemaps: 46 (see data/records/imam-us/, cataloged_on 2026-11-12, batch 3 sitemap pass). One fiqh record with Sistani as marja: The Day of Arafah (imam-us-day-of-arafah); one with Sistani's rulings: 3rd Rakat or 4th? (imam-us-rules-of-doubt-third-or-fourth-rakat).
+
+## Skipped (fiqh, marja not stated) - imam-us.org batch 3
+- 2022-03-14 | Islamic Laws of Fasting | https://imam-us.org/islamic-laws-of-fasting | Book page; Sistani is not named on the page text.
+- 2021-11-15 | What Should I Do? - Can I Play Cards With My Friends? | https://imam-us.org/what-should-i-do-can-i-play-cards-with-my-friends | Names only "a jurist"; no marja.
+- 2021-03-04 | What Should I Do? - Halal Meat | https://imam-us.org/what-should-i-do-halal-meat | Fiqh Q&A; no marja named.
+- 2021-09-20 | What Should I Do? - Ziyarat Arbaeen or Hajj? | https://imam-us.org/what-should-i-do-ziyarat-arbaeen-or-hajj | Names only "a jurist"; no marja.
+
+## Skipped (no free copy on the page) - imam-us.org batch 3
+- 2016-2023 | 100 Pearls: Advice from Grand Ayatullah al-Sayyid Ali al-Sistani | https://imam-us.org/100-pearls-advice-from-grand-ayatullah-al-sayyid-ali-al-sistani | Only an Arabic PDF is linked; no English copy found.
+- 2016-12-02 | Tajwid - A Guide to Quranic Recitation | https://imam-us.org/tajwid-a-guide-to-quranic-recitation | Book page with no free copy on the page.
+- 2016-06-04 | FASTING - A Haven from Hellfire | https://imam-us.org/fasting-a-haven-from-hellfire | Book page with no free copy on the page; author not named on the page.
+- 2023-07-04 | Shaykh Tusi: An Annotated Bibliography | https://imam-us.org/shaykh-tusi-an-annotated-bibliography | Book page with no free copy on the page.
+- 2016-09-01 | The Illuminating Lantern | https://imam-us.org/the-illuminating-lantern | Book page with no free copy on the page; author (Shaykh Habib al-Kadhimi) not in scholars.yaml.
+
+## Skipped (event notice or announcement) - imam-us.org batch 3
+- 2021-10-05 | Sayyid M.B. Kashmiri Participates in University of Nebraska-Lincoln Debate Series | https://imam-us.org/video-the-problem-of-pain-and-suffering | Event report.
+- 2021-02-24 | Video: Islam and Mental Health Psychology: Compatible or Incompatible? | https://imam-us.org/video-islam-and-mental-health-psychology-compatible-or-incompatible | Webinar promotion; little description on the page.
+- 2021-06-14 | Spiritual Abuse | Understanding & Healing as a Community | https://imam-us.org/spiritual-abuse-understanding-healing-as-a-community | Webinar notice.
+- 2020-02-03 | Let's Talk Religion - Join us for Episodes 2 & 3 | https://imam-us.org/lets-talk-religion-ep-2-3 | Announcement.
+- 2025-11-21 | The Hawzah Between Heritage and Modernity - MIT Sessions | https://imam-us.org/the-hawzah-between-heritage-and-modernity-mit-sessions | Event report.
+
+## Skipped (other worker's series or other marja) - imam-us.org batch 3
+- 2021-08-27 | Video - Imam Hussain (p) and Dignity | https://imam-us.org/imam-hussain-p-and-dignity | Islam Weekly series (another worker).
+- 2021-03-19 | Video - Islam Weekly: Istikhara and Making a Right Decision | https://imam-us.org/istikhara-and-making-a-right-decision | Islam Weekly series (another worker).
+- Advice from Ayatullah Shaykh Ishaq al-Fayyad to believers in the West (title only, not fetched) | Other marja, out of scope.
+
+## Skipped (too little text on the page) - imam-us.org batch 3
+- 2024-02-19 | 12 Signs Accompanying the Reappearance of the Awaited Mahdi (p) | https://imam-us.org/12-signs-accompanying-the-reappearance-of-the-awaited-mahdi-pbuh | The page body is only a shortcode; the list of signs is not in the HTML text.
+- 2021-09-19 | The Merits & Etiquette of Ziyarat Imam Hussain (p) | https://imam-us.org/the-merits-etiquette-of-ziyarat-imam-hussain-p | Body is a video embed and related-post links only.
