@@ -84,7 +84,7 @@ sources:
     name: "Tafsir al-Mizan in English (almizan.org)"
     type: library
     base_url: "https://almizan.org/"
-    status: active
+    status: blocked
     catalog_level: "To be decided after inspection (suggested: the commentary as a work, one section per surah or chapter page, plus its reader guides)."
     notes: >
       Supplied by the owner on 2026-11-12 (marked "new"). English Quran commentary of
@@ -92,6 +92,12 @@ sources:
       Disallow or signal rules; a sitemap exists at /sitemap.xml. The owner has not said how this
       relates to the "Academy for Learning Islam (ALI)" institute; it is treated as a library
       source, not an institute. Be polite: one request every 2 seconds at most.
+      BLOCKED 2026-11-12: the site's copyright page (https://almizan.org/copyright/) says that without
+      prior written permission nobody may copy, download or extract the commentary by hand or by
+      automated means (scraping, crawling, bulk downloading), or use it to build databases or AI
+      models. Nothing has been cataloged. Needs the owner to get written permission from the site's
+      publisher (contact form on the copyright page) or to decide on a manual approach. Structure
+      notes: docs/almizan-structure.md.
 
   - id: mizaninstitute.org
     name: "Mizan Institute"
