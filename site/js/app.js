@@ -60,7 +60,7 @@ const meaningNoteHtml = () => (MEANING.kind === 'loading'
   : MEANING.kind === 'ask'
     ? '<p class="meaning-note"><button class="btn line" type="button" data-meaning>Look for related results by meaning</button> This downloads about 1 MB once and runs on your device. Nothing you type is sent anywhere.</p>'
     : '');
-const ui = { fbkind: '', limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
+const ui = { tq: {}, fbkind: '', limit: 20, openG: {}, lm: {}, tl: {}, pathTheme: '', qtheme: '', qfilter: '' };
 
 // ---------------------------------------------------------------------------
 // URL state
@@ -518,7 +518,7 @@ const PG = {
 };
 
 function pageStage(m) {
-  return `<div class="rs page">${m.back ? `<div class="sl-top"><a class="back" href="${esc(m.back[0])}">← ${esc(m.back[1])}</a><span></span></div>` : ''}<div class="sl-body"><span class="kind">${esc(m.kind)}</span><h1 dir="auto">${esc(m.title)}</h1>${m.lede ? `<p class="lede" dir="auto">${esc(m.lede)}</p>` : ''}${m.search ? refineHtml(m.search) : ''}</div></div>`;
+  return `<div class="rs page">${m.back ? `<div class="sl-top"><a class="back" href="${esc(m.back[0])}">← ${esc(m.back[1])}</a><span></span></div>` : ''}<div class="sl-body"><span class="kind">${esc(m.kind)}</span><h1 dir="auto">${esc(m.title)}</h1>${m.lede ? `<p class="lede" dir="auto">${esc(m.lede)}</p>` : ''}${m.search ? refineHtml(m.search) : ''}${m.topicSearch ? topicSearchHtml(m.topicSearch) : ''}</div></div>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -670,16 +670,27 @@ function rowHtml(r, more, hl = 'h4') {
   ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<p class="lr-foot">${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></p></li>`;
 }
 const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('')}</ul>`;
-function topicHtml(id) {
-  const h = engine.headingById.get(id); if (!h) return '<p class="callout">That topic does not exist.</p>';
-  const res = engine.search('', { topic: id });
-  const kids = (h.children || []).map((c) => ({ c, n: RECS.filter((r) => r.all.includes(c)).length })).filter((s) => s.n > 0);
-  const levels = levelOrder().map((lv) => ({ lv, es: res.exact.filter((e) => entryLevel(e) === lv) }));
+const topicSearchHtml = (id) => `<form class="refine tsrch" id="tsearch" role="search" data-topic="${esc(id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="tq-top">Search within ${esc(TOPN(id))}</label><input id="tq-top" type="search" autocomplete="off" enterkeyhint="search" placeholder="Search within ${esc(TOPN(id))}" maxlength="200"><button class="btn solid" type="submit">Search</button></form>`;
+// The list under "Everything on this topic": the level switch and rows, narrowed by the small search box when it has words in it.
+function topicListHtml(id) {
+  const q = (ui.tq[id] || '').trim();
+  let all;
+  if (q) { const r = engine.search(q, { topic: id }); all = r.fallback ? [] : [...r.exact, ...r.related]; }
+  else all = engine.search('', { topic: id }).exact;
+  const levels = levelOrder().map((lv) => ({ lv, es: all.filter((e) => entryLevel(e) === lv) }));
   const have = levels.filter((l) => l.es.length);
   const cur = have.some((l) => l.lv === ui.tl[id]) ? ui.tl[id] : (have[0] || {}).lv;
-  const starters = RECS.filter((n) => n.all.includes(id) && n.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
   const es = (levels.find((l) => l.lv === cur) || { es: [] }).es, lim = ui.lm[id + cur] || 12;
   const rows = es.slice(0, lim).map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }, 'h3') : rowHtml(e.record, null, 'h3'))).join('');
+  const empty = q ? `Nothing on this topic matches “${esc(q)}”.` : 'Nothing at this level yet.';
+  return `<div class="seg" role="group" aria-label="Level">${levels.map((l) => `<button data-tl="${esc(id)}|${esc(l.lv)}" aria-pressed="${l.lv === cur}"${l.es.length ? '' : ' disabled'}>${esc(levelLabel(l.lv))}<i>${entryCount(l.es)}</i></button>`).join('')}</div>
+  <ul class="lrows">${rows || `<li class="callout">${empty}</li>`}</ul>
+  ${es.length > lim ? `<p style="margin:1rem 0 0"><button class="more2" data-lm="${esc(id)}|${esc(cur)}">Show ${Math.min(12, es.length - lim)} more of ${es.length - lim}</button></p>` : ''}`;
+}
+function topicHtml(id) {
+  const h = engine.headingById.get(id); if (!h) return '<p class="callout">That topic does not exist.</p>';
+  const kids = (h.children || []).map((c) => ({ c, n: RECS.filter((r) => r.all.includes(c)).length })).filter((s) => s.n > 0);
+  const starters = RECS.filter((n) => n.all.includes(id) && n.g === 'work').sort((a, b) => (LV(a.lv) - LV(b.lv)) || String(a.raw.title).localeCompare(b.raw.title)).slice(0, 3);
   const fam = new Set([id, ...engine.headings.filter((x) => (x.ancestors || []).includes(id)).map((x) => x.id)]);
   const inFam = (r) => [...(r.headings || []), ...(r.inherited_headings || [])].some((x) => fam.has(x));
   const paths = engine.paths.map((p) => ({ p, n: p.steps.filter((s) => { const r = rec(s.record); return r && inFam(r); }).length })).filter((x) => x.n).sort((x, y) => y.n - x.n).slice(0, 3).map((x) => x.p);
@@ -690,9 +701,8 @@ function topicHtml(id) {
   ${qs.length ? sec('Common questions', 'Each opens the pages chosen to answer it.', `<ul class="qrows">${qs.map((q) => qRow(q, '')).join('')}</ul>`) : ''}
   ${kids.length ? sec(`Subtopics`, `Smaller subjects within ${esc(TOPN(id))}.`, `<ul class="subs">${kids.map((s) => `<li><a class="subt" href="${esc(topicHref(s.c))}"><span class="subt-n">${esc(TOPN(s.c))}</span><span class="subt-c">${pl(s.n, 'page')}</span></a></li>`).join('')}</ul>`) : ''}
   <section class="tsec" id="everything"><h2>Everything on this topic</h2><p class="sub">Choose a level. Within each level, books and articles come before individual pages.</p>
-  <div class="seg" role="group" aria-label="Level">${levels.map((l) => `<button data-tl="${esc(id)}|${esc(l.lv)}" aria-pressed="${l.lv === cur}"${l.es.length ? '' : ' disabled'}>${esc(levelLabel(l.lv))}<i>${entryCount(l.es)}</i></button>`).join('')}</div>
-  <ul class="lrows">${rows || '<li class="callout">Nothing at this level yet.</li>'}</ul>
-  ${es.length > lim ? `<p style="margin:1rem 0 0"><button class="more2" data-lm="${esc(id)}|${esc(cur)}">Show ${Math.min(12, es.length - lim)} more of ${es.length - lim}</button></p>` : ''}</section>
+  <form class="refine mini-s" id="tfilterf" role="search" data-topic="${esc(id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="tfilter">Narrow this list</label><input id="tfilter" type="search" autocomplete="off" enterkeyhint="search" placeholder="Narrow this list by a word" maxlength="200" value="${esc(ui.tq[id] || '')}"></form>
+  <div id="tlist">${topicListHtml(id)}</div></section>
   ${nextBar('topic')}`;
 }
 
@@ -898,7 +908,7 @@ function render(opts = {}) {
     if (!m.noHide) { const h2 = view.querySelector('section.blk > h2'); if (h2) h2.classList.add('sr'); const sb = view.querySelector('section.blk > .sub'); if (sb) sb.remove(); }
     announceText = `${m.title} page`;
   } else if (t === 'topic') {
-    $('#routeStage').innerHTML = pageStage({ kind: 'Topic', title: TOPN(route.k), lede: statsText(route.k), back: [pageHref('topics'), 'All topics'] });
+    $('#routeStage').innerHTML = pageStage({ kind: 'Topic', title: TOPN(route.k), lede: statsText(route.k), back: [pageHref('topics'), 'All topics'], topicSearch: route.k });
     view.innerHTML = topicHtml(route.k); announceText = `Topic: ${TOPN(route.k)}`;
   } else if (t === 'path') {
     const p = engine.pathById.get(st.path);
@@ -970,7 +980,7 @@ view.addEventListener('click', (e) => {
   else if (b.dataset.jump) { const el = document.getElementById(b.dataset.jump); if (el) { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); } }
   else if (b.dataset.qt) { ui.qtheme = b.dataset.qt; ui.qfilter = ''; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-qt="${CSS.escape(b.dataset.qt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
 });
-view.addEventListener('input', (e) => { if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
+view.addEventListener('input', (e) => { if (e.target.id === 'tfilter') { const id = e.target.form.dataset.topic; ui.tq[id] = e.target.value; const l = $('#tlist'); if (l) l.innerHTML = topicListHtml(id); return; } if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
 view.addEventListener('change', (e) => {
   const t = e.target;
   if (t.dataset && t.dataset.filter) { const st = readState(); nav(searchHref({ ...st, [t.dataset.filter]: t.value })); return; }
@@ -986,6 +996,7 @@ view.addEventListener('change', (e) => {
   }
 });
 view.addEventListener('submit', (e) => {
+  if (e.target.id === 'tfilterf') { e.preventDefault(); return; }
   if (e.target.id === 'refine') { e.preventDefault(); const st = readState(); nav(searchHref({ ...blank(), q: $('#q2').value.trim(), order: st.order })); return; }
   if (e.target.id === 'qform') { e.preventDefault(); const v = ($('#qfilter').value || '').trim(); if (v) nav(qHref(v)); return; }
   if (e.target.id !== 'fbf') return;
@@ -1095,4 +1106,4 @@ async function start() {
 }
 start();
 
-$('#routeStage').addEventListener('submit', (e) => { if (e.target.id === 'refine') { e.preventDefault(); const st = readState(); nav(searchHref({ ...blank(), q: $('#q2').value.trim(), order: st.order })); } });
+$('#routeStage').addEventListener('submit', (e) => { if (e.target.id === 'tsearch') { e.preventDefault(); const v = $('#tq-top').value.trim(), st = readState(); nav(searchHref({ ...blank(), q: v, topic: e.target.dataset.topic, order: st.order })); return; } if (e.target.id === 'refine') { e.preventDefault(); const st = readState(); nav(searchHref({ ...blank(), q: $('#q2').value.trim(), order: st.order })); } });
