@@ -382,9 +382,7 @@ function sourcePanel(s) {
 }
 function sourcesHtml() {
   const active = engine.sources.filter((s) => s.status === 'active'), soon = engine.sources.filter((s) => s.status !== 'active');
-  const total = engine.records.length;
   return `<section class="blk" id="sources"><h2>Where our resources come from</h2><p class="sub">Every result comes from one of these trusted Shia sources.</p>
-  <ul class="sfacts"><li>Selected by hand</li><li>Twelver Shia only</li><li>English only</li><li><b>${total.toLocaleString()}</b> pages from <b>${active.length}</b> websites</li></ul>
   <div class="scards">${active.map(sourcePanel).join('')}</div>
   ${soon.length ? `<div class="tsec"><h2>Coming later</h2><p class="sub">Selected, but not in the catalog yet.</p><ul class="soon-list">${soon.map((s) => `<li><div><b dir="auto">${esc(srcName(s))}</b><span>${esc(WHAT[s.id] || s.catalog_level || '')}</span></div><span class="state">${esc(STATE_TEXT[s.status] || 'Coming later')}</span></li>`).join('')}</ul></div>` : ''}
   <div class="scope"><div><h3>Know a website that belongs here?</h3><p>Fiqh rulings come from two scholars, Sayyid Ali al-Sistani and Sayyid Ali Khamenei. Everything else is not limited by author. Tell us about a website, or read the full scope.</p></div>

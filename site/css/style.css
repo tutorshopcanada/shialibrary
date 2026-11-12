@@ -784,20 +784,17 @@ noscript .callout{margin-top:1rem}
 .sc-a{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.1rem}
 .sc-v{font-size:.875rem;font-weight:500;min-height:2.75rem;display:inline-flex;align-items:center;gap:.25rem}
 
-/* Sources cards: rows line up across the three cards */
-.scards{row-gap:0}
-.scard{gap:1.1rem}
+/* Sources cards: rows line up across the cards, with even space between and inside */
+.scards{gap:1rem}
+.scard{gap:1rem}
 .sc-n{margin-top:0}
 .sc-f em{font-style:normal;color:var(--mute)}
-.sc-a{align-self:end}
+.sc-a{flex-direction:column;align-items:flex-start;gap:.1rem;margin-top:auto}
 @supports (grid-template-rows:subgrid){
   @media (min-width:48rem){
-    .scard{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:1.1rem}
-    .scards{column-gap:10px}
+    .scard{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:1rem}
   }
 }
-@media (min-width:48rem){.scards{row-gap:0}}
-@media (max-width:47.99rem){.scards{row-gap:10px}}
 
 /* Questions: one input, theme tabs, a quiet list */
 .refine.qa{position:static;margin-bottom:1.1rem}
