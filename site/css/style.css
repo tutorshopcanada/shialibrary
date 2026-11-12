@@ -1039,3 +1039,7 @@ body.has .hero-art,body.has .cursor{display:none}
 .refine.mini-s{position:static;box-shadow:none;max-width:24rem;padding:.1rem .3rem .1rem .75rem;margin:.2rem 0 1rem}
 .refine.mini-s input{font-size:1rem;min-height:2.4rem}
 .refine.mini-s svg{width:1.1rem;height:1.1rem}
+/* Long descriptions: expandable */
+.mini p.open,.lrow .lr-d.open{-webkit-line-clamp:unset;display:block;overflow:visible}
+.lr-more{position:relative;z-index:2;background:none;border:0;padding:.35rem 0;margin:0;font:inherit;font-size:.8125rem;font-weight:500;color:var(--ink);text-decoration:underline;cursor:pointer;min-height:2rem}
+.mini .lr-more{align-self:flex-start}

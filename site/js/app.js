@@ -953,8 +953,19 @@ function render(opts = {}) {
 }
 const draftApplies = (k) => ({ questions: engine.questions.some((q) => q.draft), paths: engine.paths.some((p) => p.draft), topics: engine.vocabularyDraft || engine.questions.some((q) => q.draft), beginners: true }[k] ?? true);
 
+// Descriptions are cut at two or three lines; where that really hides text, offer "Show more".
+function markClamped() {
+  document.querySelectorAll('#view .lr-d, #view .mini > p').forEach((p) => {
+    const b = p.nextElementSibling && p.nextElementSibling.classList.contains('lr-more') ? p.nextElementSibling : null;
+    const cut = !p.classList.contains('open') && p.scrollHeight > p.clientHeight + 1;
+    if (cut && !b) { const x = document.createElement('button'); x.type = 'button'; x.className = 'lr-more'; x.setAttribute('aria-expanded', 'false'); x.textContent = 'Show more'; p.after(x); }
+    else if (!cut && b && !p.classList.contains('open')) b.remove();
+  });
+}
+addEventListener('resize', () => { clearTimeout(markClamped.t); markClamped.t = setTimeout(markClamped, 150); });
 function afterRender(opts) {
   const t = route.t;
+  requestAnimationFrame(markClamped);
   if (opts.quiet) { const q = $('#announce'); q.textContent = ''; setTimeout(() => { q.textContent = announceText; }, 60); return; }
   if (t !== 'slide' && opts.push !== false) scrollTo(0, 0);
   if (firstLoad) { firstLoad = false; return; }
@@ -971,6 +982,7 @@ function afterRender(opts) {
 // ---------------------------------------------------------------------------
 view.addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b) return;
+  if (b.classList.contains('lr-more')) { const p = b.previousElementSibling, open = p.classList.toggle('open'); b.textContent = open ? 'Show less' : 'Show more'; b.setAttribute('aria-expanded', String(open)); return; }
   const st = readState(), keep = (patch) => { const sel = b.dataset.tag != null ? `[data-tag="${CSS.escape(b.dataset.tag)}"]` : b.dataset.order ? `[data-order="${b.dataset.order}"]` : ''; navKeep(searchHref({ ...st, ...patch }), sel); };
   if ('meaning' in b.dataset) { MEANING.optIn = true; render({ push: false, quiet: true }); }
   else if ('tag' in b.dataset) keep({ tag: st.tag === b.dataset.tag ? '' : b.dataset.tag });
@@ -986,7 +998,7 @@ view.addEventListener('click', (e) => {
   else if (b.dataset.jump) { const el = document.getElementById(b.dataset.jump); if (el) { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); } }
   else if (b.dataset.qt) { ui.qtheme = b.dataset.qt; ui.qfilter = ''; const y = scrollY; render({ push: false }); scrollTo(0, y); const pressed = $(`[data-qt="${CSS.escape(b.dataset.qt)}"]`); if (pressed) pressed.focus({ preventScroll: true }); }
 });
-view.addEventListener('input', (e) => { if (e.target.id === 'tfilter') { const id = e.target.form.dataset.topic; ui.tq[id] = e.target.value; const l = $('#tlist'); if (l) l.innerHTML = topicListHtml(id); return; } if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
+view.addEventListener('input', (e) => { if (e.target.id === 'tfilter') { const id = e.target.form.dataset.topic; ui.tq[id] = e.target.value; const l = $('#tlist'); if (l) { l.innerHTML = topicListHtml(id); markClamped(); } return; } if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
 view.addEventListener('change', (e) => {
   const t = e.target;
   if (t.dataset && t.dataset.filter) { const st = readState(); navKeep(searchHref({ ...st, [t.dataset.filter]: t.value }), `#f-${t.dataset.filter}`); return; }
