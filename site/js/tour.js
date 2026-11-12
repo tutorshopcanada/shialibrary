@@ -73,11 +73,18 @@ export const TOUR = [
         { book: 'thaqalayn-nahj-al-balagha' }, { book: 'thaqalayn-risalat-al-huquq' },
         { book: 'thaqalayn-kitab-al-ghayba-numani' }, { book: 'thaqalayn-al-tawhid' }, { book: 'thaqalayn-kamal-al-din' }] },
       { label: 'The classical scholars', items: ['kulayni', 'saduq', 'mufid', 'sharif-al-radi', 'tusi', 'ibn-qulawayh', 'numani'].map((x) => ({ scholar: x })) }] },
-  { k: 'today', label: 'Today', title: 'Today', lede: 'The contemporary scholars, and where to go next.',
+  { k: 'today', label: 'Today', title: 'Today', lede: 'The major scholars of the 20th century and of today, and where to go next.',
     groups: [
-      { label: 'Contemporary scholars', lead: true, items: ['sistani', 'khamenei', 'ruhullah-khomeini', 'tabatabai', 'mutahhari', 'misbah-yazdi', 'makarem-shirazi', 'jafar-subhani', 'abdullah-jawadi-amuli', 'muhammad-baqir-al-sadr'].map((x) => ({ scholar: x })).concat([
-        { person: 'Sayyid Abu al-Qasim al-Khoei', sub: 'Scholar', as: 'scholar' }, { person: 'Sayyid Muhsin al-Hakim', sub: 'Scholar', as: 'scholar' },
-        { person: 'Sayyid Muhammad Husayn Fadlallah', sub: 'Scholar', as: 'scholar' }]) },
+      { label: 'Scholars of the 20th century', lead: true, items: [
+        { person: 'Sayyid Husayn Burujirdi', sub: 'Scholar', as: 'scholar' }, { person: 'Sayyid Muhsin al-Hakim', sub: 'Scholar', as: 'scholar' },
+        { person: 'Sayyid Abu al-Qasim al-Khoei', sub: 'Scholar', as: 'scholar' }, { scholar: 'ruhullah-khomeini' },
+        { scholar: 'tabatabai' }, { scholar: 'mutahhari' }, { scholar: 'muhammad-baqir-al-sadr' }, { scholar: 'ali-shariati' },
+        { person: 'Sayyid Muhammad Husayn Fadlallah', sub: 'Scholar', as: 'scholar' }, { person: 'Shaykh Muhammad Taqi Bahjat', sub: 'Scholar', as: 'scholar' }] },
+      { label: 'Scholars of today', items: [
+        { scholar: 'sistani' }, { scholar: 'khamenei' }, { scholar: 'makarem-shirazi' },
+        { person: 'Shaykh Husayn Vahid Khorasani', sub: 'Scholar', as: 'scholar' }, { person: 'Shaykh Hossein Nouri Hamadani', sub: 'Scholar', as: 'scholar' },
+        { person: 'Shaykh Muhammad Ishaq al-Fayyad', sub: 'Scholar', as: 'scholar' }, { person: 'Shaykh Bashir al-Najafi', sub: 'Scholar', as: 'scholar' },
+        { scholar: 'misbah-yazdi' }, { scholar: 'abdullah-jawadi-amuli' }, { scholar: 'jafar-subhani' }] },
       { label: 'Go further', items: [
         { href: '#beginners', name: 'Read the introductions', sub: 'Seven introductions, then a plan' },
         { href: '#topics', name: 'Browse by topic', sub: 'Eight subjects, easiest first' },
