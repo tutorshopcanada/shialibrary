@@ -13,7 +13,7 @@
 import { createEngine, normalize as textNorm } from './search.js';
 import { loadSemantic } from './semantic.js';
 import { createSuggester } from './suggest.js';
-import { SITE, START, reportConfigured, reportHref, feedbackHref, externalSearchHref } from './config.js';
+import { SITE, START, reportConfigured, reportHref, feedbackHref } from './config.js';
 import { TOUR, TOUR_DRAFT } from './tour.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -446,7 +446,7 @@ function aboutHtml() {
   <section class="tsec"><h2>What the catalog covers</h2><dl class="cells">${cells.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v.includes('<a ') ? v : esc(v)}</dd></div>`).join('')}</dl><p class="note">${scope}</p></section>
   <section class="tsec"><h2>How results are chosen</h2><p class="sub">Plain matching rules. <strong>No AI writes answers here:</strong> the search only finds and orders catalog entries. When we have nothing close, we point to ${SITE.aiTool ? esc(SITE.aiTool.name) : 'an outside AI tool'}, a separate AI tool we do not run and cannot vouch for.</p>
    <details class="more"><summary>See the six steps</summary><ol class="hsteps">${steps.map((p) => `<li><p>${esc(p)}</p></li>`).join('')}</ol></details></section>
-  <section class="tsec"><h2>Privacy</h2><ul class="ticks priv"><li>The search runs entirely in your browser. What you type is not sent to anyone and is not stored.</li><li>No cookies, no tracking, no accounts.</li><li>Pages you tick as read are saved only in your own browser.</li><li>When you follow a link you leave this site, and the other website’s own policies apply. The “Search Al-Islam.org” link under results sends your search words to that site only if you click it.</li></ul></section>
+  <section class="tsec"><h2>Privacy</h2><ul class="ticks priv"><li>The search runs entirely in your browser. What you type is not sent to anyone and is not stored.</li><li>No cookies, no tracking, no accounts.</li><li>Pages you tick as read are saved only in your own browser.</li><li>When you follow a link you leave this site, and the other website’s own policies apply. The “Browse Al-Islam.org questions” link under results opens that site’s question page. It sends nothing you typed.</li></ul></section>
   <section class="tsec"><div class="qask"><div><h3>Report a wrong or broken link</h3><p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. Include the title of the result and what is wrong.</p></div><div class="qask-b">${rep}</div></div></section>`;
 }
 
@@ -543,12 +543,12 @@ function aiToolHtml() {
   <p><a class="btn line" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">Try ${esc(a.name)} (AI) ↗</a></p>
   <small>This opens ${esc(a.name)} in a new tab. We are not affiliated with it. Nothing you typed here is sent to it.</small></div>`;
 }
-function externalHtml(q) {
-  const href = externalSearchHref(q); if (!href) return '';
+function externalHtml() {
+  const ask = SITE.externalSearch && SITE.externalSearch.askUrl; if (!ask) return '';
   const name = SITE.externalSearch.name;
-  return `<div class="callout extsearch" style="margin-top:2rem"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Have a question we don’t answer?</h2><p>We catalog books and articles, not individual questions and answers. ${esc(name)} has its own question-and-answer section and search, which may have your question.</p>
-  <p><a class="btn line" href="${esc(href)}" target="_blank" rel="noopener noreferrer">Search ${esc(name)} for “${esc(String(q).trim())}” ↗</a>${SITE.externalSearch.askUrl ? ` <a href="${esc(SITE.externalSearch.askUrl)}" target="_blank" rel="noopener noreferrer">Or browse its questions ↗</a>` : ''}</p>
-  <small>This opens ${esc(name)} in a new tab and sends your search words to that site. We are not affiliated with it and do not control its results.</small></div>`;
+  return `<div class="callout extsearch" style="margin-top:2rem"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Have a question we don’t answer?</h2><p>We catalog books and articles, not individual questions and answers. ${esc(name)} has its own question-and-answer section, which may have your question.</p>
+  <p><a class="btn line" href="${esc(ask)}" target="_blank" rel="noopener noreferrer">Browse ${esc(name)} questions ↗</a></p>
+  <small>This opens ${esc(name)} in a new tab. We are not affiliated with it and do not control its content. Nothing you typed here is sent to it.</small></div>`;
 }
 function fallbackHtml(result) {
   return `<div class="callout"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">We couldn’t find a close match</h2>
@@ -617,14 +617,14 @@ function questionPageHtml(st, result) {
   ${exs.length ? `<h3 class="gt">Exact matches <span>${ex.length}</span></h3><ul class="lrows">${rowsOf(exs)}</ul>` : ''}
   ${rels.length ? `<h3 class="gt">Related results <span>${rel.length}</span></h3><ul class="lrows">${rowsOf(rels)}</ul>` : ''}
   ${total > ui.limit ? `<p style="margin:1rem 0 0"><button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button></p>` : ''}</section>` : ''}
-  ${externalHtml(result.query)}${nextBar('question')}`;
+  ${externalHtml()}${nextBar('question')}`;
 }
 function resultsHtml(st, pre) {
   const result = pre || engine.search(st.q, st), browsing = result.mode === 'browse';
   const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
     announceText = `No close match for “${result.query}”.`;
-    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml(result.query)}${aiToolHtml()}<div style="height:3rem"></div>${topicsHtml()}`;
+    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml()}${aiToolHtml()}<div style="height:3rem"></div>${topicsHtml()}`;
   }
   const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
   let out = '';
@@ -650,7 +650,7 @@ function resultsHtml(st, pre) {
     if (rel) out += `<section class="grp frame"><div class="gh"><h3>Related results <span>${rel}</span></h3><p>${MEANING.ids.size ? 'These share some of your words or the same topic. Those marked “Found by meaning” were matched by meaning on your device, not by your words.' : 'These share some of your words or the same topic.'}</p></div>${list(rr)}</section>`;
   }
   if (total > ui.limit) out += `<button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button>`;
-  if (!browsing) out += externalHtml(result.query);
+  if (!browsing) out += externalHtml();
   return out;
 }
 const refineHtml = (st) => `<form class="refine" id="refine" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="q2">Refine your search</label><input id="q2" type="search" autocomplete="off" enterkeyhint="search" value="${esc(st.q)}" maxlength="200"><button class="btn solid" type="submit">Search</button></form>`;
