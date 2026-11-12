@@ -60,6 +60,9 @@
   {
    "query": "namaz",
    "expect_any": [
+    "imam-us-wsid-praying-on-a-plane",
+    "imam-us-rules-of-doubt-in-prayers",
+    "imam-us-travel-prayer-fasting-rules",
     "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
@@ -72,6 +75,9 @@
   {
    "query": "صلاة",
    "expect_any": [
+    "imam-us-wsid-praying-on-a-plane",
+    "imam-us-rules-of-doubt-in-prayers",
+    "imam-us-travel-prayer-fasting-rules",
     "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",

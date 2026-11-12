@@ -9,8 +9,8 @@ queries:
   - {query: "who can lead the prayer", expect_any: [sistani-qa-14997], expect_group: any, note: ""}
   - {query: "can a shia pray behind a sunni imam", expect_any: [sistani-qa-14998, sistani-qa-15488], expect_group: any, note: ""}
   - {query: "pray on a plane", expect_any: [sistani-west-salat-general-rules], expect_group: any, note: ""}
-  - {query: "namaz", expect_any: [sistani-qa-prayer, sistani-west-salat-general-rules, sistani-qa-congregational-prayers, sistani-west-salat-introduction], expect_group: any, note: "Persian/Urdu term maps to the Prayer heading"}
-  - {query: "صلاة", expect_any: [sistani-qa-prayer, sistani-west-salat-general-rules, sistani-qa-congregational-prayers, sistani-west-salat-introduction], expect_group: any, note: "Arabic term maps to the Prayer heading"}
+  - {query: "namaz", expect_any: [imam-us-wsid-praying-on-a-plane, imam-us-rules-of-doubt-in-prayers, imam-us-travel-prayer-fasting-rules, sistani-qa-prayer, sistani-west-salat-general-rules, sistani-qa-congregational-prayers, sistani-west-salat-introduction], expect_group: any, note: "Persian/Urdu term maps to the Prayer heading"}
+  - {query: "صلاة", expect_any: [imam-us-wsid-praying-on-a-plane, imam-us-rules-of-doubt-in-prayers, imam-us-travel-prayer-fasting-rules, sistani-qa-prayer, sistani-west-salat-general-rules, sistani-qa-congregational-prayers, sistani-west-salat-introduction], expect_group: any, note: "Arabic term maps to the Prayer heading"}
   - {query: "salat", expect_any: [sistani-west-salat-introduction, sistani-west-salat-general-rules], expect_group: any, note: ""}
   - {query: "qibla direction travelling", expect_any: [sistani-west-salat-general-rules], expect_group: any, note: ""}
   - {query: "sistani", expect_any: [sistani-qa, sistani-code-of-practice-west], expect_group: any, note: "scholar name"}
