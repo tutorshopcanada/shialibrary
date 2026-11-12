@@ -238,7 +238,8 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "parent heading returns child-heading records; any hadith volume in the top 30 passes (hadith volumes are advanced, so beginner-first ordering puts introductory hadith courses and books above them)"
+   "note": "parent heading returns child-heading records; any hadith volume in the top 30 passes (hadith volumes are advanced, so beginner-first ordering puts introductory hadith courses and books above them)",
+   "top": 30
   },
   {
    "query": "why do shia cry on ashura",

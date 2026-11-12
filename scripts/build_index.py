@@ -455,7 +455,8 @@ def build_eval(root: Path, record_ids, problems: Problems):
         if group not in ("exact", "related", "any"):
             problems.error(f"{path}: query '{raw['query']}' expect_group must be exact, related or any")
         out.append({"query": text(raw["query"]), "expect_any": expect, "expect_none": expect_none,
-                    "expect_group": group, "note": text(raw.get("note"))})
+                    "expect_group": group, "note": text(raw.get("note")),
+                    **({"top": int(raw["top"])} if raw.get("top") else {})})
     return out
 
 
