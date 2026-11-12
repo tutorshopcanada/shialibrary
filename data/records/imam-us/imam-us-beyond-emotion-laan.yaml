@@ -26,8 +26,6 @@ headings:
 - ethics
 access: free
 location: ''
-needs_review: true
-review_note: 'Sensitive topic: the article discusses cursing (laʿn) of figures from early Islamic history,
-  linked to Karbala commemorations, and presents a position on its meaning and limits. It is a Shia-Sunni
-  matter; a reviewer should confirm the description is neutral and that this is not a polemic.'
+needs_review: false
+review_note: ''
 cataloged_on: '2026-11-12'

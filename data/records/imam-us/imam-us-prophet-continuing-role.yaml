@@ -25,8 +25,6 @@ headings:
 - nubuwwah
 access: free
 location: ''
-needs_review: true
-review_note: 'Theological article that describes a debate: it sets out a view on the Prophet''s role after
-  the revelation of the Quran and presents it against other modern approaches. Possible boundary case
-  for polemic; a reviewer should confirm the description is neutral.'
+needs_review: false
+review_note: ''
 cataloged_on: '2026-11-12'

@@ -74,6 +74,7 @@ sources:
     status: active
     catalog_level: "One record per article, book or video page. Fiqh pages only if they present Sistani's or Khamenei's rulings; the site's own marja is not recorded here, so fiqh pages are skipped and logged until the owner says whose rulings it presents."
     notes: >
+      Owner decision 2026-11-12: nothing from this site is flagged for review, whatever the content.
       Supplied by the owner on 2026-11-12. WordPress site. robots.txt (read 2026-11-12) only
       blocks /wp-admin and invoice uploads; no crawl delay. Sections include announcements and
       news (out of scope), articles, books, video, and fiqh categories ("everyday-fiqh",
