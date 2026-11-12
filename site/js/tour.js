@@ -63,17 +63,23 @@ export const TOUR = [
     groups: [{ label: 'The Prophet and Lady Fatimah', lead: true, items: [muhammad, fatimah] },
       { label: 'The Twelve Imams', items: imams }] },
   { k: 'scholars', label: 'The traditions and the scholars', title: 'The traditions and the scholars',
-    lede: 'How knowledge was passed on: the collections, and the people who preserved them.',
-    groups: [{ label: 'The traditions', items: [{ auto: 'hadith-works', limit: 6 }] },
-      { label: 'The scholars', items: [{ auto: 'top-scholars', limit: 12 }] }] },
-  { k: 'today', label: 'Today', title: 'Today', lede: 'Where to go next.',
+    lede: 'The early works of Shia history, and the classical scholars who compiled and preserved them.',
     groups: [
-      { label: 'Go further', lead: true, items: [
+      { label: 'The four main books', lead: true, items: [
+        { concept: 'Al-Kafi', sub: 'Al-Kulayni · Hadith collection', as: 'book' },
+        { concept: 'Man La Yahduruhu al-Faqih', sub: 'Al-Saduq · Hadith collection', as: 'book' },
+        { concept: 'Tahdhib al-Ahkam', sub: 'Al-Tusi · Hadith collection', as: 'book' }] },
+      { label: 'Other early works', items: [
+        { book: 'thaqalayn-nahj-al-balagha' }, { book: 'thaqalayn-risalat-al-huquq' },
+        { book: 'thaqalayn-kitab-al-ghayba-numani' }, { book: 'thaqalayn-al-tawhid' }, { book: 'thaqalayn-kamal-al-din' }] },
+      { label: 'The classical scholars', items: ['kulayni', 'saduq', 'mufid', 'sharif-al-radi', 'tusi', 'ibn-qulawayh', 'numani'].map((x) => ({ scholar: x })) }] },
+  { k: 'today', label: 'Today', title: 'Today', lede: 'The contemporary scholars, and where to go next.',
+    groups: [
+      { label: 'Contemporary scholars', lead: true, items: ['sistani', 'khamenei', 'ruhullah-khomeini', 'tabatabai', 'mutahhari', 'misbah-yazdi', 'makarem-shirazi', 'jafar-subhani', 'abdullah-jawadi-amuli', 'muhammad-baqir-al-sadr'].map((x) => ({ scholar: x })) },
+      { label: 'Go further', items: [
         { href: '#beginners', name: 'Read the introductions', sub: 'Seven introductions, then a plan' },
         { href: '#topics', name: 'Browse by topic', sub: 'Eight subjects, easiest first' },
-        { href: '#home', ask: true, name: 'Ask a question', sub: 'Search the catalog' }] },
-      { label: 'Living today', items: [
-        { scholar: 'sistani' }, { scholar: 'khamenei' },
+        { href: '#home', ask: true, name: 'Ask a question', sub: 'Search the catalog' },
         { topic: 'taqlid', sub: 'Topic', name: 'Following a jurist' },
         { topic: 'muslims-in-west', sub: 'Topic', name: 'Muslims in the West' }] },
     ] },
