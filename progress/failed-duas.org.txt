@@ -2,3 +2,38 @@
 2026-11-12 | https://www.duas.org/mobile/dua-faraj.html | dynamic stub page (2.6 KB); data file data_v2/dua-faraj.json returns 404 at root and under /mobile/; no English text reachable
 2026-11-12 | https://www.duas.org/mobile/ziyarat-imam-mahdi.html | dynamic stub page (2.6 KB); no data file checked (request budget); not cataloged
 2026-11-12 | https://www.duas.org/mobile/ramadan-suhoor-dua-abu-hamza-thumali.html | dynamic stub page (2.6 KB); no data file checked (request budget); not cataloged
+2026-11-12 | https://www.duas.org/mobile/ramadan-amaal-first.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/ramadan-dua-eid.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/ramadan-shaaban-dua-first-night.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/safar-daily-dua.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/salaat-ghufaylah.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/ziarat-aleyasindua.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/zilhajj-10-days.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/zilhajj-8-arafah-eve.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/zilhajj-9-arafah-day.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/ziyarat-imam-hussain-arafah.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/ziyarat-ummulbaneen.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/dua-aliya-mazameen-postziarat.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/dua-alqama-after-ashura.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/dua-hazeen.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/dua-man-taabba-tahhaya.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/dua-quran.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/friday-duas-ziyarat.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/hareeq.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/isteghasa-imam.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/muharram-first.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); data_v2 JSON for the page is not present (404 on the probes made), so not cataloged
+2026-11-12 | https://www.duas.org/mobile/ramadan-laylatul-qadr.html | dynamic stub page (2.8 KB shell, no English text); not cataloged
+2026-11-12 | https://duas.org/mobile/monday-duas-ziyarat.html | dynamic stub page (2.8 KB, no English text); data_v2 JSON at root returns 404
+2026-11-12 | https://duas.org/mobile/thursday-night-duas.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://duas.org/mobile/thursday-duas-ziyarat.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://duas.org/mobile/tuesday-duas-ziyarat.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://duas.org/mobile/wednesday-duas-ziyarat.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://duas.org/mobile/saturday-duas-ziyarat.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://duas.org/mobile/sunday-duas-ziyarat.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://www.duas.org/mobile/dua-yashahida-kulle-najwa.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://www.duas.org/mobile/dua-yastashir.html | dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://www.duas.org/mobile/dua-nadali.html | Nad-e Ali: dynamic stub page (2.8 KB, no English text); no data file found
+2026-11-12 | https://www.duas.org/mobile/sahifasajjadia-dua44-coming-of-ramadhan.html | Sahifa dua 44: dynamic stub page (2.6 KB, no English text); not cataloged
+2026-11-12 | https://www.duas.org/mobile/sahifasajjadia-dua45-farewell-ramadhan.html | Sahifa dua 45: dynamic stub page (2.8 KB, no English text); not cataloged
+2026-11-12 | https://www.duas.org/mobile/sahifasajjadia-dua47-day-of-arafah.html | Sahifa dua 47: dynamic stub page (2.8 KB, no English text); not cataloged
+2026-11-12 | https://www.duas.org/Sahife%20Zehra/Index.htm | Sahifa Fatima (sa) index: page has no English text (0 English words found); not cataloged

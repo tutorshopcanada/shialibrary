@@ -1,0 +1,27 @@
+id: duas-hourly
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Duas for Each Time Period of the Day"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/duas-hourly.html
+language: en
+date: ''
+description: "A set of supplications for the twelve time periods (hours) of the day, each dedicated to one of the Twelve Imams, as set out by Shaykh al-Tusi, Sayyid Ibn Baqi and Shaykh al-Kaf'ami. Each supplication is shown with Arabic, transliteration and translation."
+sample_questions:
+- "Is there a dua for each hour of the day?"
+- "Which Imam is each hour of the day dedicated to?"
+- "What duas are recited at different times of day?"
+headings:
+- duas
+- ahl-al-bayt
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

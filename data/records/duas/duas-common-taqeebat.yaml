@@ -1,0 +1,27 @@
+id: duas-common-taqeebat
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Common Taqeebat"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/common-taqibat.html
+language: en
+date: ''
+description: "The taqibat, the supplications recited after the obligatory prayers, shown in sections. The page takes them from Shaykh al-Tusi's Misbah al-Mutahajjid and other reference books, with Arabic, transliteration and translation."
+sample_questions:
+- "What is a taqeeb?"
+- "What should I recite after the daily prayers?"
+- "Which book are the common taqeebat taken from?"
+- "Which taqeebat are the same after every prayer?"
+headings:
+- duas
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

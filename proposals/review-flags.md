@@ -314,3 +314,10 @@ Note: Islamic Laws of Death and Burial was cataloged because its PDF link is pub
 
 ## Not fetched (requests limit)
 - Other 2016-2026 "Reminder about Qada / Feed the Fasting" annual notices and the zakat al-Fitrah yearly guides: only the 2026 Qada reminder was cataloged; older years are near-duplicates.
+
+## Skipped (polemical) - batch al-islam-chapters (2026-11-12)
+- 2026-11-12 | An Introduction to the Glorious Quran, chapter 'Is there any Parallel to The Miraculous Qur'an?' | https://al-islam.org/introduction-glorious-quran-bahram-samii/there-any-parallel-miraculous-quran | Compares the Bible and the Qur'an to argue the Qur'an's uniqueness; treated as comparative polemic against another scripture, skipped.
+
+## Skipped (fiqh, marja not stated) - duas.org M-Z batch (2026-11-12)
+- Sajda Shukr / Thanksgiving Prostration | https://www.duas.org/mobile/sajda-shukr.html | the page is mainly a statement of rulings on the thanksgiving prostration (validity, how it may be done) and does not name Sistani or Khamenei as the source of those rulings. Not cataloged.
+- Recommended Recitations During Salaat and the salat pages (Salaat Layl, Salaat of Masumeen, Salat Jafar Tayyar) were not fetched in this batch; they are listed in the scratch unprocessed.txt for the next worker to check under the fiqh rule.

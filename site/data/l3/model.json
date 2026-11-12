@@ -7,9 +7,9 @@
   "unk_token": "[UNK]",
   "quantisation": "4-bit signed per row, float16 scale",
   "token_bits": 4,
-  "kept_rows": 11032,
+  "kept_rows": 11084,
   "low_ids_kept": 6000,
-  "pruned_noise": 2112.846,
+  "pruned_noise": 2113.721,
   "max_quantisation_error": 3.343792676925659,
   "how_it_works": "text -> lower-case word pieces -> average of their vectors -> unit length"
 }
