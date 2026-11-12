@@ -101,10 +101,10 @@ ranking:
   # Per-source overrides. thaqalayn chapters are narrow pages (one chapter of a hadith book), so they
   # count like single questions, not like whole chapters of a book.
   granularity_boost_by_source:
-    # imam-us.org lists every Q&A and video as a stand-alone work; these are narrow pages, so they get no book
+    # imam-us.org lists every Q&A, video and article as a stand-alone work; these are narrow pages, so they get no book
     # boost and a broad search ("prayer") leads with the overview.
     imam-us.org:
-      work_types: {qa: 1.0, video: 1.0}
+      work_types: {qa: 1.0, video: 1.0, article: 1.0}
     thaqalayn.net:
       section: 1.0
   # Exact matches: "boost" multiplies relevance by the level multipliers below, so a
