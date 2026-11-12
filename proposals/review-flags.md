@@ -136,3 +136,13 @@ Owner decisions needed:
 - 2026-11-12 | Death & Barzakh Online – May 2026 | https://mizaninstitute.org/courses/death-barzakh-online-may-2026/ | live dates (May 30-31, 2026) have passed; recording access only
 - 2026-11-12 | The Hour Part One Online – August 2026 | https://mizaninstitute.org/courses/the-hour-part-one-online-august-2026/ | live dates (Aug 29-30, 2026) have passed; recording access only
 - 2026-11-12 | The Spirit of God | https://mizaninstitute.org/courses/436/ | page says "This course is currently closed"; owner to decide whether closed enrolment counts as ended
+
+## imam-us.org batch 2 (2026-11-12)
+Owner decision 2026-11-12: every fiqh record from imam-us.org is `marja: sistani`, even where the page does not name him, and nothing from this site is flagged. The 28 records added here follow that rule. The items held back in the pilot are now cataloged: the WSID pages (plane, Ashura fast, jurist passes away), the imsak/fajr article (fiqh, fasting), and "Why Does Islam Have So Many Laws?" (non-fiqh, `article`). The earlier "Skipped (fiqh, marja not stated)" entries above are superseded by this decision.
+
+Points for the owner:
+- The three "Top 10 Advice from Sayyid al-Sistani" posts (2022) show only an introduction and an embedded Instagram post. The ten points are not in the fetched page or in the feed. Their records describe the topic only and are classed non-fiqh (`article`, `authors: sistani`). Check the ten points before relying on the classification. If any point is a ruling, the record must become fiqh.
+- "Regarding a Member of the Clergy Who Claims Strange Things..." (2022) is a question and reply from the office. It is classed fiqh (social conduct), with `authors: sistani`.
+- "Why Are There Varying Dates for Some Islamic Events?" is classed non-fiqh (calendar history).
+- "Expressions of Togetherness | Pope Francis and Sayyid al-Sistani" (video page, `/expressions-of-togetherness-pope-francis-and-sayyid-al-sistani`) is still not cataloged. It is separate from the letter record "Ayatullah Sayyid al-Sistani's Letter to Pope Francis".
+- Authors: letters, statements and advice by Sayyid al-Sistani are listed as `authors: sistani`. Reports and guides with no named author are left blank, and the UN Secretary-General's letter is left blank because no author entry exists for him.
