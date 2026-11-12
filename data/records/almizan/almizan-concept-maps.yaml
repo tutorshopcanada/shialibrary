@@ -1,0 +1,28 @@
+id: almizan-concept-maps
+type: other
+content_tag: other
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: advanced
+title: Concept Maps
+title_original: ''
+authors: []
+marja: ''
+source: almizan.org
+url: https://almizan.org/concept-maps/
+language: en
+date: ''
+description: Mind maps of nine major concepts in the commentary, including tawḥīd (God's oneness), wilāyah, intercession and the soul. Each map gathers what the commentator says about one concept across the whole work. Each point links to the place in the commentary where it appears.
+sample_questions:
+- What is tawhid in the Quran?
+- What does the commentary say about intercession?
+- What are the main concepts in Tafsir al-Mizan?
+- What does the Quran say about the soul?
+headings:
+- tawhid
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

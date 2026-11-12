@@ -1,0 +1,27 @@
+id: almizan-themes-index
+type: other
+content_tag: other
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Qur'anic Themes
+title_original: ''
+authors: []
+marja: ''
+source: almizan.org
+url: https://almizan.org/themes/
+language: en
+date: ''
+description: An index of the aim and theme of each chapter (surah) of the Qur'an, with a short summary for each and a link to the commentary on that chapter. It also points to the concept maps for ideas that run through the whole Qur'an.
+sample_questions:
+- What is the main theme of each surah in the Quran?
+- What is Surah al-Baqarah about?
+- Where can I find a summary of a chapter of the Quran?
+headings:
+- tafsir
+- quran
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

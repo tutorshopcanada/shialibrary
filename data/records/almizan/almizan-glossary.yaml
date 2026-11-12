@@ -1,0 +1,26 @@
+id: almizan-glossary
+type: other
+content_tag: other
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Glossary of Key Terms
+title_original: ''
+authors: []
+marja: ''
+source: almizan.org
+url: https://almizan.org/glossary/
+language: en
+date: ''
+description: An alphabetical glossary of Arabic and Qur'anic words that the commentary explains. Each entry gives the word's root and how the Qur'an uses it, and the glossary has a page for each letter. Readers can search for a term from the index.
+sample_questions:
+- What does a word in the Quran mean?
+- Where can I find explanations of Arabic terms in the Quran?
+- What does the Arabic word for a Quranic term mean?
+headings:
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'
