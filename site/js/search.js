@@ -615,8 +615,10 @@ export function createEngine(index) {
       const floor = top.score * (Number(L2.min_relative_score) || 0);
       hits = hits.filter((h) => h.exact || h.score >= floor);
     }
+    // Confident when one of the best few results scores well AND covers enough of the query. (Judging only the
+    // single top score let one page that repeats a common word hide better-covering pages beneath it.)
     const confident = hits.length >= L2.min_results && !!top &&
-      top.score >= L2.min_score && top.coverage >= L2.min_term_coverage;
+      hits.slice(0, 10).some((h) => h.score >= L2.min_score && h.coverage >= L2.min_term_coverage);
     hits = hits.slice(0, L2.max_results);
 
     // Curated top records always count as exact matches and lead the list.

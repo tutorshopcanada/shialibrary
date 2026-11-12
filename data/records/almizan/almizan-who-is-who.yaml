@@ -1,0 +1,26 @@
+id: almizan-who-is-who
+type: other
+content_tag: other
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Who's Who in al-Mizan
+title_original: ''
+authors: []
+marja: ''
+source: almizan.org
+url: https://almizan.org/people/
+language: en
+date: ''
+description: An index of the people named in the commentary. It covers the prophets and other figures of the Qur'an, the Prophet's family and the Imams, the Companions, and the earlier exegetes and scholars whose views the commentator quotes or answers. Each name links to the sections that mention it.
+sample_questions:
+- Who are the prophets mentioned in the Quran?
+- Who are the people named in Tafsir al-Mizan?
+- Which Quran commentators does al-Mizan refer to?
+headings:
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

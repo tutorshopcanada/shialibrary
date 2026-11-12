@@ -1,0 +1,30 @@
+id: almizan-tafsir-al-mizan
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: advanced
+title: Tafsir al-Mizan in English
+title_original: al-Mīzān fī Tafsīr al-Qurʾān
+authors:
+- tabatabai
+marja: ''
+source: almizan.org
+url: https://almizan.org/
+language: en
+date: ''
+description: Tafsir al-Mizan is a full commentary on the Qur'an by ʿAllāmah Muḥammad Ḥusayn al-Ṭabāṭabāʾī (1904–1981), a Shia scholar. This site presents its English text free to read online, verse by verse. The commentator's method is to explain the Qur'an through the Qur'an itself, alongside narrations from the Prophet and his family.
+sample_questions:
+- What is Tafsir al-Mizan?
+- Who wrote the Tafsir al-Mizan commentary on the Quran?
+- Is there an English commentary on the Quran I can read online?
+- What does tafsir mean?
+- How does Tafsir al-Mizan explain the Quran?
+headings:
+- tafsir
+- quran
+access: free
+location: ''
+needs_review: false
+review_note: The English translator of the commentary is not named on the pages read so far. The Quran text on the site is credited to Tanzil and a separate translation, not to this commentary's translator. Check the Publisher's Note before adding a translator.
+cataloged_on: '2026-11-12'

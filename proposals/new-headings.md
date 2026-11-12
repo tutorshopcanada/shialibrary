@@ -20,3 +20,5 @@ Suggestions from cataloging sessions. Nothing here is in `data/vocabulary.yaml` 
 > 2026-11-10: `legal-hadith` was added to the vocabulary following the owner's decision that hadith always carry the Hadith label. `intellect-knowledge` is still only a proposal.
 - 2026-11-10 | culture / social thought / philosophy of culture (al-islam.org Ja'fari and Shameli articles) | no suitable heading; closest ethics / family-social-ethics
 - 2026-11-10 | human rights / philosophy of religion (al-islam.org Legenhausen article on Hocking) | no suitable heading; closest ethics
+
+> 2026-11-12 (imam-us.org pilot): `arbaeen` (Arbaeen pilgrimage and walk to Karbala, under ziyarat or history) is suggested; the pilot used ziyarat and karbala-ashura instead. `interfaith-relations` (Shia engagement with other religions, such as the Pope Francis and Sistani video) is suggested under ethics or history; not cataloged yet.

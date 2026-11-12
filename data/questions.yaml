@@ -128,6 +128,12 @@ questions:
     top_records: [al-islam-brief-history-fourteen-infallibles, al-islam-discovering-islam]
     path: path-twelve-imams-in-turn
     draft: true
+  - id: q-why-twelve-imams
+    question: "Why are there twelve Imams?"
+    alt_phrasings: ["why are there 12 imams", "why 12 imams", "why do shias believe in twelve imams", "how many imams are there", "why did the prophet appoint successors", "why do we need an imam"]
+    headings: [twelve-imams, imamate]
+    top_records: [al-islam-imamate-chapter-3-arguments-for-imamate, al-islam-imamate-and-the-imams, al-islam-lets-learn-about-imamate, al-islam-twelve-successors-holy-prophet-askari]
+    draft: true
   - id: q-what-happened-at-karbala
     question: "What happened at Karbala?"
     alt_phrasings: ["what is ashura", "why do shias mourn", "why do shia cry on ashura", "why was imam hussain killed", "story of karbala", "muharram"]

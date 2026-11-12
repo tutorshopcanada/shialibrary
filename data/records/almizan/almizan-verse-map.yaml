@@ -1,0 +1,26 @@
+id: almizan-verse-map
+type: other
+content_tag: other
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Verse Map
+title_original: ''
+authors: []
+marja: ''
+source: almizan.org
+url: https://almizan.org/verse-map/
+language: en
+date: ''
+description: An interactive tool that shows, for any verse, the other verses the commentator uses to explain it and the verses it helps him explain. The connections are drawn as a flower diagram, and a list view shows each place where the verse is cited.
+sample_questions:
+- Which other verses explain this verse of the Quran?
+- How can I see where a verse is cited in the commentary?
+- Does the Quran explain itself?
+headings:
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

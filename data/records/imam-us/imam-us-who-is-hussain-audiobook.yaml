@@ -1,0 +1,30 @@
+id: imam-us-who-is-hussain-audiobook
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Who is Hussain?- Audiobook Edition
+title_original: ''
+authors: []
+marja: ''
+source: imam-us.org
+url: https://imam-us.org/who-is-hussain-audiobook
+language: en
+date: '2026-01-20'
+description: An audiobook edition of Who Is Hussain?, a book that introduces Imam Hussain, the son of
+  Ali, and his stand at Karbala. The page describes it as a clear introduction to his legacy.
+sample_questions:
+- Who is Imam Hussain?
+- Why did Imam Hussain stand at Karbala?
+- What is the story of Karbala?
+- Is there an audiobook about Imam Hussain?
+- Who was the son of Ali?
+headings:
+- imam-husayn
+- karbala-ashura
+access: login-required
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

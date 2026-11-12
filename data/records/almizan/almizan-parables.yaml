@@ -1,0 +1,27 @@
+id: almizan-parables
+type: other
+content_tag: other
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Qur'anic Parables
+title_original: ''
+authors: []
+marja: ''
+source: almizan.org
+url: https://almizan.org/parables/
+language: en
+date: ''
+description: An index of the parables (mathal, a comparison drawn from everyday things) that the commentary discusses. The parables are grouped by subject, such as God's oneness, faith and disbelief, and the life of this world. Each entry says what picture the verse draws and links to the commentary.
+sample_questions:
+- What are parables in the Quran?
+- Why does the Quran use comparisons?
+- Which parables in the Quran are about faith and disbelief?
+- Where can I find the commentary on a Quranic parable?
+headings:
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

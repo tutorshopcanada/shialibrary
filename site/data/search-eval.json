@@ -60,6 +60,9 @@
   {
    "query": "namaz",
    "expect_any": [
+    "imam-us-wsid-praying-on-a-plane",
+    "imam-us-rules-of-doubt-in-prayers",
+    "imam-us-travel-prayer-fasting-rules",
     "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
@@ -72,6 +75,9 @@
   {
    "query": "صلاة",
    "expect_any": [
+    "imam-us-wsid-praying-on-a-plane",
+    "imam-us-rules-of-doubt-in-prayers",
+    "imam-us-travel-prayer-fasting-rules",
     "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
     "sistani-qa-congregational-prayers",
@@ -165,6 +171,15 @@
    "expect_none": false,
    "expect_group": "any",
    "note": ""
+  },
+  {
+   "query": "why are there 12 imams",
+   "expect_any": [
+    "al-islam-imamate-chapter-3-arguments-for-imamate"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "reported by the owner; chapter-level record added"
   },
   {
    "query": "al kafi",

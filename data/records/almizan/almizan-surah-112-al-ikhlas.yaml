@@ -1,0 +1,29 @@
+id: almizan-surah-112-al-ikhlas
+type: book
+content_tag: book
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Al-Ikhlāṣ
+title_original: ''
+authors:
+- tabatabai
+marja: ''
+source: almizan.org
+url: https://almizan.org/themes/chapter-112-al-ikhlas
+language: en
+date: ''
+description: The landing page for Surah 112, al-Ikhlāṣ (Sincerity), which has 4 verses and was revealed in Mecca. Its theme summary says the chapter describes God through a set of qualities. It links to the commentary on the surah.
+sample_questions:
+- What is Surah al-Ikhlas about?
+- How many verses are in Surah al-Ikhlas?
+- What does the Quran say about the nature of God in Surah al-Ikhlas?
+- Where is Surah al-Ikhlas explained in this commentary?
+headings:
+- tawhid
+- quran
+access: free
+location: Chapter 112
+needs_review: false
+review_note: The landing link goes to the chapter's theme summary, which links to the commentary. The bare chapter URL shows verse commentary, so it was not used.
+cataloged_on: '2026-11-12'

@@ -1,0 +1,29 @@
+id: almizan-surah-2-al-baqarah
+type: book
+content_tag: book
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Al-Baqarah
+title_original: ''
+authors:
+- tabatabai
+marja: ''
+source: almizan.org
+url: https://almizan.org/themes/chapter-2-al-baqarah
+language: en
+date: ''
+description: The landing page for Surah 2, al-Baqarah (The Cow), which has 286 verses. Its theme summary says the chapter was revealed over time, so it has no single theme, but that most of it aims at belief in all the revelations sent through the messengers. It also names some of the topics the chapter covers, such as the direction of prayer and fasting, and links to the commentary.
+sample_questions:
+- What is Surah al-Baqarah about?
+- Why is Surah al-Baqarah called The Cow?
+- What is the main message of Surah al-Baqarah?
+- How many verses are in Surah al-Baqarah?
+headings:
+- quran
+- tafsir
+access: free
+location: Chapter 2
+needs_review: false
+review_note: The landing link goes to the chapter's theme summary, which links to the commentary. The bare chapter URL shows verse commentary, so it was not used.
+cataloged_on: '2026-11-12'

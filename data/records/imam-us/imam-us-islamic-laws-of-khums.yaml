@@ -1,0 +1,30 @@
+id: imam-us-islamic-laws-of-khums
+type: book
+content_tag: fiqh
+granularity: work
+parent: ''
+level: advanced
+title: Islamic Laws of Khums
+title_original: ''
+authors: []
+marja: sistani
+source: imam-us.org
+url: https://imam-us.org/islamic-laws-of-khums-book
+language: en
+date: '2026-07-01'
+description: A practical book on khums, a religious payment. The questions it covers include who it applies
+  to, what it applies to and what does not, how it is calculated, and where it is directed. The page says
+  the book follows the rulings of Sayyid Ali al-Sistani.
+sample_questions:
+- What is khums?
+- How is khums calculated?
+- What is subject to khums?
+- Where does khums go?
+- Who must pay khums?
+headings:
+- khums-zakat
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

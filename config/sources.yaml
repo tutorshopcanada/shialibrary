@@ -54,6 +54,64 @@ sources:
       cataloging: read robots.txt, inspect and report the structure (which section holds the
       English rulings, URL patterns, per-question links), and confirm with the owner.
 
+  - id: duas.org
+    name: "Duas.org"
+    type: duas
+    base_url: "https://www.duas.org/"
+    status: active
+    catalog_level: "To be decided after the site's structure is inspected (suggested: one record per dua or ziyarat page)."
+    notes: >
+      Approved by the owner on 2026-11-12. Reachable by plain requests (checked 2026-11-12);
+      /robots.txt returns 404 (no rules) and there is no sitemap.xml, so pages must be found by
+      following links from the home page. The home page is mostly an index of static .htm pages.
+      Structure not inspected yet: before cataloging, read the main sections, report the URL
+      patterns and what content type tags fit (not fiqh; use headings under duas-ziyarat).
+
+  - id: imam-us.org
+    name: "Imam Mahdi Association of Marjaeya (I.M.A.M.)"
+    type: library
+    base_url: "https://imam-us.org/"
+    status: active
+    catalog_level: "One record per article, book, video or Q&A page. Owner decision 2026-11-12: the site's fiqh pages present Sayyid Sistani's rulings, so every fiqh record from it has marja sistani."
+    notes: >
+      Owner decision 2026-11-12: nothing from this site is flagged for review, whatever the content.
+      Supplied by the owner on 2026-11-12. WordPress site. robots.txt (read 2026-11-12) only
+      blocks /wp-admin and invoice uploads; no crawl delay. Sections include announcements and
+      news (out of scope), articles, books, video, and fiqh categories ("everyday-fiqh",
+      "from-the-marja", "what-should-i-do"). The home page also lists /arabic and /farsi
+      (other languages: skip). Be polite: one request every 2 seconds at most.
+
+  - id: almizan.org
+    name: "Tafsir al-Mizan in English (almizan.org)"
+    type: library
+    base_url: "https://almizan.org/"
+    status: active
+    catalog_level: "To be decided after inspection (suggested: the commentary as a work, one section per surah or chapter page, plus its reader guides)."
+    notes: >
+      Supplied by the owner on 2026-11-12 (marked "new"). English Quran commentary of
+      Allamah Tabatabai. robots.txt (read 2026-11-12) has comments about content signals but no
+      Disallow or signal rules; a sitemap exists at /sitemap.xml. It is treated as a library source, not an
+      institute. (The Academy for Learning Islam was dropped by the owner on 2026-11-12.) Be polite: one request every 2 seconds at most.
+      2026-11-12: the site's copyright page (https://almizan.org/copyright/) forbids copying,
+      downloading or extracting the commentary, or using it to build databases or AI models,
+      without written permission. The owner decided on 2026-11-12 that a catalog of page titles,
+      links and our own short descriptions, which only sends readers to the site, is not that. To
+      stay inside it: catalog landing, chapter and reader-guide pages only (never the verse-group
+      commentary pages); read at most a page's title and its own introductory line; never store
+      page copies or quote commentary text; keep requests few and slow. The owner may still write
+      to the publisher (contact form on the copyright page) to confirm.
+
+  - id: mizaninstitute.org
+    name: "Mizan Institute"
+    type: courses
+    base_url: "https://mizaninstitute.org/"
+    status: active
+    crawl_delay_seconds: 10
+    catalog_level: "One record per course (type course, content_tag course, provider Mizan Institute). Not per lesson."
+    notes: >
+      Supplied by the owner on 2026-11-12; see the institutes list below. Fiqh-subject courses are
+      skipped and logged. Sitemap: https://mizaninstitute.org/sitemap.xml.
+
   - id: youtube
     name: "Whitelisted YouTube channels"
     type: video
@@ -63,6 +121,15 @@ sources:
     channels: []          # owner supplies channel IDs; nothing is harvested until then
     notes: "Backlog. No channel list yet."
 
-# Institutes offering courses. The owner named the Shia Research Institute and Tasneem
-# Institute as examples but has not supplied their websites. Do not guess addresses.
-institutes: []
+# The owner named the Shia Research Institute and Tasneem Institute as examples but has not
+# supplied their websites. Do not guess addresses.
+# Institutes offering courses. Every course record uses one of these names as its provider.
+institutes:
+  - name: "Mizan Institute"
+    base_url: "https://mizaninstitute.org/"
+    status: active
+    notes: >
+      Supplied by the owner on 2026-11-12. WordPress site; robots.txt (read 2026-11-12) asks for
+      a 10-second crawl delay and publishes a sitemap at /sitemap.xml. A separate fiqh site exists
+      at fiqh.mizaninstitute.org: courses whose subject is fiqh are skipped and logged (CLAUDE.md
+      section 3) unless the owner says otherwise.

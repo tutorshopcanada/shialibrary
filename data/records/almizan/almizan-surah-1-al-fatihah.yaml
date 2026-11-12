@@ -1,0 +1,29 @@
+id: almizan-surah-1-al-fatihah
+type: book
+content_tag: book
+granularity: section
+parent: almizan-tafsir-al-mizan
+level: intermediate
+title: Al-Fātiḥah
+title_original: ''
+authors:
+- tabatabai
+marja: ''
+source: almizan.org
+url: https://almizan.org/themes/chapter-1-al-fatihah
+language: en
+date: ''
+description: The landing page for Surah 1, al-Fātiḥah (The Opening), which has 7 verses. Its theme summary begins with the custom of starting a task in the name of a great figure. It links to the commentary on the surah.
+sample_questions:
+- What is Surah al-Fatiha?
+- How many verses are in Surah al-Fatiha?
+- What is the theme of the opening chapter of the Quran?
+- Where can I read the commentary on Surah al-Fatiha?
+headings:
+- quran
+- tafsir
+access: free
+location: Chapter 1
+needs_review: false
+review_note: The landing link goes to the chapter's theme summary, which links to the commentary. The bare chapter URL shows verse commentary, so it was not used.
+cataloged_on: '2026-11-12'
