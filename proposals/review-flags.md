@@ -119,3 +119,20 @@ Owner decisions needed:
 ## Not fetched (titles only, fiqh-looking, decided from title)
 - 2026-11-12 | Clarification Regarding College Student Residence; Why Are There Varying Dates for Some Islamic Events?; Clarification on Exempting a Debtor from Khums; Rules of Doubt in Prayers; What Should I Do? Attending the Religious Commemorations of Other Religions (everyday-fiqh) | URLs under https://imam-us.org/ with the same slugs as the feed | fiqh; marja not checked
 - 2026-11-12 | Zakat al-Fitrah: Why It's Just $10 This Year; Marriage in Islam (about this book) | https://imam-us.org/its-only-10-00-how-is-zakat-al-fitrah-calculated_2026 ; https://imam-us.org/marriage-in-islam-about-this-book | fiqh-leaning; not fetched
+
+## Skipped (fiqh course) - mizaninstitute.org pilot (2026-11-12)
+- 2026-11-12 | Women's Ahkam (sisters-only; hayd, istihadah, nifas) | https://mizaninstitute.org/courses/womens-ahkam/ | fiqh; page does not name Sistani or Khamenei
+- 2026-11-12 | Intermediate Rulings of Salat – For Teens | https://mizaninstitute.org/courses/rulingsforteens/ | fiqh (rulings of salat); no marja stated
+- 2026-11-12 | Ijtihad Unveiled | https://mizaninstitute.org/courses/ijtihad/ | fiqh methodology (ijtihad, the derivation of legal rulings); no marja stated
+- 2026-11-12 | Secrets of Hajj & Umrah | https://mizaninstitute.org/courses/hajj/ | borderline: the page frames it as the meanings and inner dimensions of hajj, but its topics are the rites of hajj and umrah (ritual law). Owner to decide whether ritual-meaning courses count as fiqh.
+- 2026-11-12 | Teens Secret of Salat | https://mizaninstitute.org/courses/teens-secret-of-salat/ | borderline, same question as Secrets of Hajj: the page presents the meanings of prayer, but covers wudhu, adhan, and the etiquette of prayer. Owner to decide.
+
+## Skipped (polemical) - mizaninstitute.org pilot (2026-11-12)
+- 2026-11-12 | Mu'awiyah: A Distortion of History | https://mizaninstitute.org/courses/muawiyah/ | title and synopsis frame the course as a critique of a TV series and of a historical figure's character; owner to decide
+- 2026-11-12 | Fall of the Elite | https://mizaninstitute.org/courses/fall-of-the-elite/ | presents the betrayal of Imam Ali (as) by early figures; sensitive early-history framing; owner to decide
+- 2026-11-12 | The Case for Shi'ism: An Analysis of Hadith al-Thaqalayn and Ithna Ashara Khalifah | https://mizaninstitute.org/courses/thaqalayn/ | apologetic framing ("the case for"); owner to decide whether it is polemic
+
+## Skipped (ended) - mizaninstitute.org pilot (2026-11-12)
+- 2026-11-12 | Death & Barzakh Online – May 2026 | https://mizaninstitute.org/courses/death-barzakh-online-may-2026/ | live dates (May 30-31, 2026) have passed; recording access only
+- 2026-11-12 | The Hour Part One Online – August 2026 | https://mizaninstitute.org/courses/the-hour-part-one-online-august-2026/ | live dates (Aug 29-30, 2026) have passed; recording access only
+- 2026-11-12 | The Spirit of God | https://mizaninstitute.org/courses/436/ | page says "This course is currently closed"; owner to decide whether closed enrolment counts as ended
