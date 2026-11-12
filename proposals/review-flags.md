@@ -93,3 +93,6 @@ The owner also approved everything cataloged from sistani.org and thaqalayn ("an
 - 2026-11-11 | Introduction to Islam (Islamic Humanitarian Service, 2001) | https://al-islam.org/introduction-islam/introduction-islam | a general 20-chapter introduction; the page does not state the school (Shia or other), so it is not catalogued. Owner to decide whether it is in scope.
 - 2026-11-11 | Lessons from the Tradition of the Cloak commentary (Abu Shahba) and Shiite Encyclopedia introduction | not fetched; advanced or comparative, left for a later batch.
 - 2026-11-11 | Files and booklets (Let's Learn About Imam Ali, Let's Learn About Imam Ridha, Let Me Learn About Aimmatiy, Let Us Learn About Sayyida Fatimah, The Father of Orphans) | the site's file pages showed only navigation text when fetched; not catalogued. See progress/failed-al-islam.txt.
+
+## Skipped (polemical) - batch al-islam-s3 (2026-11-12)
+- 2026-11-12 | Beliefs: Twelve Successors (Ahlul Bayt DILP, no author stated) | https://al-islam.org/articles/beliefs-twelve-successors | the page's main purpose is to test Sunni scholars' readings of the twelve-successors hadith ("What the Sunni scholars say", "Confused?") and then present the Twelver view as the answer; it argues against another group. Owner decision needed on whether argument-style pieces on this hadith are in scope. Fetched 2026-11-12.
