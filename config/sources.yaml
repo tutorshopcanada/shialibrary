@@ -72,7 +72,7 @@ sources:
     type: library
     base_url: "https://imam-us.org/"
     status: active
-    catalog_level: "One record per article, book or video page. Fiqh pages only if they present Sistani's or Khamenei's rulings; the site's own marja is not recorded here, so fiqh pages are skipped and logged until the owner says whose rulings it presents."
+    catalog_level: "One record per article, book, video or Q&A page. Owner decision 2026-11-12: the site's fiqh pages present Sayyid Sistani's rulings, so every fiqh record from it has marja sistani."
     notes: >
       Owner decision 2026-11-12: nothing from this site is flagged for review, whatever the content.
       Supplied by the owner on 2026-11-12. WordPress site. robots.txt (read 2026-11-12) only
@@ -90,9 +90,8 @@ sources:
     notes: >
       Supplied by the owner on 2026-11-12 (marked "new"). English Quran commentary of
       Allamah Tabatabai. robots.txt (read 2026-11-12) has comments about content signals but no
-      Disallow or signal rules; a sitemap exists at /sitemap.xml. The owner has not said how this
-      relates to the "Academy for Learning Islam (ALI)" institute; it is treated as a library
-      source, not an institute. Be polite: one request every 2 seconds at most.
+      Disallow or signal rules; a sitemap exists at /sitemap.xml. It is treated as a library source, not an
+      institute. (The Academy for Learning Islam was dropped by the owner on 2026-11-12.) Be polite: one request every 2 seconds at most.
       2026-11-12: the site's copyright page (https://almizan.org/copyright/) forbids copying,
       downloading or extracting the commentary, or using it to build databases or AI models,
       without written permission. The owner decided on 2026-11-12 that a catalog of page titles,
@@ -122,8 +121,8 @@ sources:
     channels: []          # owner supplies channel IDs; nothing is harvested until then
     notes: "Backlog. No channel list yet."
 
-# Institutes offering courses. The owner named the Shia Research Institute and Tasneem
-# Institute as examples but has not supplied their websites. Do not guess addresses.
+# The owner named the Shia Research Institute and Tasneem Institute as examples but has not
+# supplied their websites. Do not guess addresses.
 # Institutes offering courses. Every course record uses one of these names as its provider.
 institutes:
   - name: "Mizan Institute"
@@ -134,7 +133,3 @@ institutes:
       a 10-second crawl delay and publishes a sitemap at /sitemap.xml. A separate fiqh site exists
       at fiqh.mizaninstitute.org: courses whose subject is fiqh are skipped and logged (CLAUDE.md
       section 3) unless the owner says otherwise.
-  - name: "Academy for Learning Islam (ALI)"
-    base_url: ""
-    status: backlog
-    notes: "Approved by the owner on 2026-11-12, but no website has been supplied yet. Do not guess it."
