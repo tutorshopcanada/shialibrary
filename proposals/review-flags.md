@@ -203,3 +203,30 @@ Owner decision 2026-11-12: Mizan records are never flagged `needs_review`. The s
 - 2026-11-12 | Islam Weekly video series (about 90 "video-islam-weekly-..." and similar sitemap entries) | sitemap only | Not fetched in batch 4. Many of the titles are fiqh questions (for example permissibility, fasting, vaccines, leather, zakat al-Fitrah, divorce), which are skipped under the fiqh rule where no marja is named. Some titles look like non-fiqh talks (civic engagement, evolution, social pressure, thankfulness and giving). Owner to decide whether to harvest them in a later batch.
 - 2026-11-12 | Advice from Ayatullah Shaykh Ishaq al-Fayyad to Believers in the West (batch 3 note, unchanged) | still skipped: other marja.
 - 2026-11-12 | Missed the Hajj Webinar (video, 2025-05-14) and Zakat al-Fitrah 2026 price guide (blog, 2026-02-11) | Batch 3 holds are now cataloged as fiqh with marja sistani, per owner decision 2026-11-12. Neither page names Sistani; the record follows the site's fiqh marja. The zakat record's title is a page heading ("How Is the Monetary Value Calculated") rather than the page title, which states an amount.
+
+## Skipped (fiqh, marja not stated) - Islam Weekly batch (2026-11-12)
+
+Checked the body text of each page: none names Sayyid Sistani or Sayyid Khamenei as the source of the rulings (the only one that does is the COVID-19 vaccine rulings page, which is cataloged). Owner to decide whether any of these should be cataloged once the site confirms its marja.
+
+- 2020-11-20 | Islamic Rulings on the Use of Marijuana | https://imam-us.org/video-islam-weekly-islamic-rulings-on-the-use-of-marijuana | Fiqh question; marja not stated.
+- 2021-01-22 | Abortion and Morning-After Pills | https://imam-us.org/video-islam-weekly-abortion-and-morning-after-pills | Fiqh question; marja not stated.
+- 2021-02-12 | Is it Permissible to Celebrate Valentine's Day? | https://imam-us.org/video-islam-weekly-is-it-permissible-to-celebrate-valentines-day | Fiqh question; marja not stated.
+- 2021-03-05 | Can a Wife Divorce her Husband? | https://imam-us.org/video-islam-weekly-can-a-wife-divorce-her-husband | Fiqh question on divorce; marja not stated.
+- 2021-04-02 | Wiswas | https://imam-us.org/video-islam-weekly-wiswas | Fiqh question on doubts during prayer; marja not stated.
+- 2021-04-09 | Can I Receive the COVID-19 Vaccine While Fasting? | https://imam-us.org/video-islam-weekly-can-i-receive-the-covid-19-vaccine-while-fasting | Fiqh question; marja not stated.
+- 2021-04-23 | Is it Permissible for a Muslim to Attend Prom? | https://imam-us.org/video-is-it-permissible-for-a-muslim-to-attend-prom-islam-weekly | Fiqh question; marja not stated.
+- 2021-05-07 | Zakat al-Fitrah | https://imam-us.org/video-zakat-al-fitrah-islam-weekly | Fiqh (zakat al-fitra); marja not stated.
+- 2021-05-21 | Permissibility of Alcohol | https://imam-us.org/permissibility-of-alcohol-islam-weekly | Fiqh question; marja not stated.
+- 2021-05-28 | Do I Have To Go To Hajj? | https://imam-us.org/video-do-i-have-to-go-to-hajj-islam-weekly | Fiqh (obligation of Hajj); marja not stated.
+- 2021-06-18 | Is Birth Control Permissible in Islam? | https://imam-us.org/video-is-birth-control-permissible-in-islam-islam-weekly | Fiqh question; marja not stated.
+- 2021-06-25 | Is it Permissible to Perform Salat While Wearing Leather? | https://imam-us.org/video-is-it-permissible-to-perform-salat-while-wearing-leather-islam-weekly | Fiqh question; marja not stated.
+- 2021-11-12 | Difference Between Obligatory and Recommended Precautions | https://imam-us.org/video-difference-between-obligatory-and-recommended-precautions-islam-weekly | Explains fiqh terminology from a book of Islamic laws; the book and marja are not named on the page.
+
+Note: the Islam Weekly series has 50 sitemap entries whose slug contains "islam-weekly" (the batch brief expected about 90). Remaining unfetched entries from the sitemap: none; all 50 were read in this batch, 37 cataloged and 13 skipped as above.
+
+## duas.org pilot (2026-11-12): skipped, not cataloged
+- 2026-11-12 | Dua Ahad | https://www.duas.org/mobile/dua-ahad.html | The page's data file has an English description but no dua text segments, so the English text could not be confirmed. Skipped for now; the owner or a later pass can add it once the English text is checked on the page.
+- 2026-11-12 | Hadith Kisa | https://www.duas.org/mobile/hadith-kisa.html | A hadith narration rather than a dua or ziyarat. Under the hadith rules it would be `hadith`, not this site's `other` tag; left out of the duas pilot.
+- 2026-11-12 | Munajat Shabaniyyah | (search of the index pages read) | Not found on the All Sections or Shaban index pages read. Not catalogued.
+- 2026-11-12 | Dua Nudba, Dua Faraj, Ziyarat of Imam Mahdi, Abu Hamza Thumali | see progress/failed-duas.org.txt | Dynamic stub pages with no data file found (or not checked). Owner may want to ask the site owner whether the English text is still published.
+- 2026-11-12 | Calendar, shop, forum, app and external links on duas.org | docs/duas-org-structure.md, section "Out of scope" | Not catalogued by design (scope).

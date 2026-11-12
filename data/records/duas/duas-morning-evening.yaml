@@ -1,0 +1,27 @@
+id: duas-morning-evening
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Morning and Evening Duas"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/morning-evening-duas.html
+language: en
+date: ''
+description: "A set of supplications to recite at the start and end of the day, drawn from several sources including sayings of Imam al-Sadiq and the Sahifa Alawiya. The page also quotes a Quranic verse about the times before sunrise and sunset."
+sample_questions:
+- "Which duas should I recite in the morning and evening?"
+- "Which duas are for the start of the day?"
+- "Is there a dua for the evening?"
+- "What is recited in the morning and evening?"
+headings:
+- duas
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

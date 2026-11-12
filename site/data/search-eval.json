@@ -281,7 +281,10 @@
   {
    "query": "12 imams",
    "expect_any": [
-    "al-islam-brief-history-fourteen-infallibles"
+    "al-islam-brief-history-fourteen-infallibles",
+    "al-islam-imamate-chapter-3-arguments-for-imamate",
+    "al-islam-imamate-and-the-imams",
+    "al-islam-twelve-successors-holy-prophet-askari"
    ],
    "expect_none": false,
    "expect_group": "any",
