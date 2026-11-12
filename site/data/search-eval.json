@@ -167,6 +167,15 @@
    "note": ""
   },
   {
+   "query": "why are there 12 imams",
+   "expect_any": [
+    "al-islam-imamate-chapter-3-arguments-for-imamate"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "reported by the owner; chapter-level record added"
+  },
+  {
    "query": "al kafi",
    "expect_any": [
     "thaqalayn-al-kafi-vol-1"
