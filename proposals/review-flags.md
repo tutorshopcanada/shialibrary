@@ -263,3 +263,8 @@ Records cataloged from the post sitemaps: 46 (see data/records/imam-us/, catalog
 ## Skipped (too little text on the page) - imam-us.org batch 3
 - 2024-02-19 | 12 Signs Accompanying the Reappearance of the Awaited Mahdi (p) | https://imam-us.org/12-signs-accompanying-the-reappearance-of-the-awaited-mahdi-pbuh | The page body is only a shortcode; the list of signs is not in the HTML text.
 - 2021-09-19 | The Merits & Etiquette of Ziyarat Imam Hussain (p) | https://imam-us.org/the-merits-etiquette-of-ziyarat-imam-hussain-p | Body is a video embed and related-post links only.
+
+## Skipped (fiqh by other authors) - al-islam.org chapters batch (2026-11-12)
+
+2026-11-12 | Discovering Islam, "Islamic Practices" chapter (Moustafa Al-Qazwini) | https://al-islam.org/discovering-islam-sayyid-moustafa-al-qazwini/islamic-practices | Not cataloged: chapter's main purpose is the practices of prayer, fasting, zakat-khums, hajj and jihad, which is fiqh by an author other than Sistani or Khamenei.
+2026-11-12 | Discovering Shi'i Islam, "Chapter 4: Practices" (Mohammad Ali Shomali) | https://al-islam.org/discovering-shii-islam-mohammad-ali-shomali/chapter-4-practices | Not cataloged: chapter's main purpose is the Shia practices (daily prayers, fasting, pilgrimage, almsgiving), which is fiqh by an author other than Sistani or Khamenei.
