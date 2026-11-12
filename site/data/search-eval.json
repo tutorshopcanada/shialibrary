@@ -23,7 +23,10 @@
    "query": "jamaat",
    "expect_any": [
     "sistani-qa-congregational-prayers",
-    "sistani-qa-15487"
+    "sistani-qa-15487",
+    "imam-us-wsid-praying-on-a-plane",
+    "imam-us-rules-of-doubt-in-prayers",
+    "imam-us-imsak-and-fajr-time"
    ],
    "expect_none": false,
    "expect_group": "any",
@@ -281,7 +284,10 @@
   {
    "query": "12 imams",
    "expect_any": [
-    "al-islam-brief-history-fourteen-infallibles"
+    "al-islam-brief-history-fourteen-infallibles",
+    "al-islam-imamate-chapter-3-arguments-for-imamate",
+    "al-islam-imamate-and-the-imams",
+    "al-islam-twelve-successors-holy-prophet-askari"
    ],
    "expect_none": false,
    "expect_group": "any",

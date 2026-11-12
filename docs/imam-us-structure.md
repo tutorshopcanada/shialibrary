@@ -46,3 +46,11 @@ Other sections seen but not inspected: `/category/news` and `/category/announcem
 3. Whether the "From the Marja" letters and advice lists are in scope (they are not fiqh rulings as such, but they are Sistani's statements).
 4. Whether account names in feed `dc:creator` count as authors.
 5. Whether "Why Does Islam Have So Many Laws?" is fiqh (it explains the purpose of law and gives examples).
+
+## Batch 3 (2026-11-12): older posts and remaining categories
+
+- Category feeds ignore `?paged=2`: `/category/<slug>/feed/?paged=2` returns the same first 10 items. The HTML archive loads older posts by AJAX, so they cannot be listed from the category pages. The post sitemaps (`/post-sitemap.xml`, `/post-sitemap2.xml`, about 1,300 posts, mostly announcements from 2017-2021) are the only full list; they carry no category.
+- Cataloged in batch 3: 27 records (8 articles and blogs, 5 books, 14 videos). Sources: the feed items not yet cataloged in articles, blogs, books, rediscovering-faith and video, plus 10 video pages from the post sitemap (Let's Talk Religion and I.M.A.M. at Home series).
+- Requests used in batch 3: 44 (7 feeds, 1 archive page, 1 sitemap index, 2 sitemaps, 33 post pages). The limit was 60; spacing 2 s.
+- Still open: the other Let's Talk Religion episodes (2, 4, 6, 8, 9, 10, 11) and other I.M.A.M. at Home episodes seen only in the sitemap. Older /category/articles posts need a list the site does not serve as HTML or feed.
+- Fiqh held back for the owner: the Hajj rulings webinar (marja not stated), the zakat al-Fitrah price guide (marja not stated) and the Fayyad advice (not an approved marja). See `proposals/review-flags.md`.

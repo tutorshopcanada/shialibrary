@@ -1,0 +1,4 @@
+2026-11-12 | https://www.duas.org/mobile/dua-nudba.html | dynamic stub page (2.6 KB); data file data_v2/dua-nudba.json returns 404 at root and under /mobile/; no English text reachable
+2026-11-12 | https://www.duas.org/mobile/dua-faraj.html | dynamic stub page (2.6 KB); data file data_v2/dua-faraj.json returns 404 at root and under /mobile/; no English text reachable
+2026-11-12 | https://www.duas.org/mobile/ziyarat-imam-mahdi.html | dynamic stub page (2.6 KB); no data file checked (request budget); not cataloged
+2026-11-12 | https://www.duas.org/mobile/ramadan-suhoor-dua-abu-hamza-thumali.html | dynamic stub page (2.6 KB); no data file checked (request budget); not cataloged

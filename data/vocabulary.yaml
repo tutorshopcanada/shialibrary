@@ -287,3 +287,35 @@ headings:
     parent: duas-ziyarat
     alt_terms: ["islamic months", "eid", "eid al-fitr", "eid al-adha", "laylat al-qadr", "night of power", "shaban", "rajab", "important dates", "amaal", "a'mal"]
     notes: ""
+
+  # ── Added 2026-11-12 on the owner's approval (proposals/new-headings.md) ─────────
+  - id: intellect-knowledge
+    label: "Intellect and seeking knowledge"
+    parent: ethics
+    alt_terms: ["aql", "intelligence", "ilm", "knowledge", "virtue of knowledge", "ignorance", "jahl", "seeking knowledge", "reason", "عقل", "علم"]
+    notes: ""
+  - id: mental-health
+    label: "Mental health and emotional wellbeing"
+    parent: ethics
+    alt_terms: ["anxiety", "depression", "stress", "stigma", "feeling down", "self care", "therapy", "mental wellbeing", "overthinking", "bullying", "addiction", "social media addiction"]
+    notes: ""
+  - id: grief-bereavement
+    label: "Grief and loss"
+    parent: spirituality
+    alt_terms: ["grief", "bereavement", "losing a loved one", "coping with death", "mourning a death", "loss", "sadness", "sabr after loss", "condolence"]
+    notes: ""
+  - id: muslims-minority-life
+    label: "Muslims living as a minority (community life)"
+    parent: family-social-ethics
+    alt_terms: ["muslims in the west", "living in america", "community engagement", "being muslim in the west", "interfaith community", "civic engagement", "diaspora", "immigrants", "converts"]
+    notes: "Non-fiqh. Rulings for Muslims in the West are under muslims-in-west (Fiqh)."
+  - id: interfaith-relations
+    label: "Dialogue with other religions"
+    parent: ethics
+    alt_terms: ["interfaith", "interfaith dialogue", "christians", "pope francis", "other religions", "people of the book", "coexistence", "religious harmony", "peace between religions"]
+    notes: ""
+  - id: arbaeen
+    label: "Arbaeen and the walk to Karbala"
+    parent: ziyarat
+    alt_terms: ["arbaeen", "arbain", "arba'een", "chehlum", "walk to karbala", "arbaeen walk", "arbaeen guide", "forty days after ashura", "أربعين", "اربعین"]
+    notes: ""
