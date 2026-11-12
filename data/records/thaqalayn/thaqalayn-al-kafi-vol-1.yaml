@@ -13,12 +13,11 @@ source: thaqalayn.net
 url: https://thaqalayn.com/book/1
 language: en
 date: ''
-description: 'Al-Kafi is a collection of hadith (reported sayings of the Prophet and
-  the Imams) compiled by Shaykh al-Kulayni, shown here in Arabic with an English translation
-  by Muhammad Sarwar. Volume 1 of 8 has five books: an introduction, intelligence
-  and ignorance, the virtue of knowledge, the oneness of God, and those with divine
-  authority. This page also gives an overview of all eight volumes. It is a primary
-  source, best suited to readers who already know the basics.'
+description: 'Al-Kafi is a collection of hadith (reported sayings of the Prophet and the Imams) compiled
+  by Shaykh al-Kulayni, shown here in Arabic with an English translation by Muhammad Sarwar. Volume 1
+  of 8 has five books: an introduction, intelligence and ignorance, the virtue of knowledge, the oneness
+  of God, and those with divine authority. This page also gives an overview of all eight volumes. It is
+  a primary source, best suited to readers who already know the basics.'
 sample_questions:
 - What is Al-Kafi?
 - Who compiled Al-Kafi?
@@ -31,6 +30,7 @@ headings:
 - hadith-collections
 - tawhid
 - imamate
+- intellect-knowledge
 access: free
 location: Volume 1 of 8
 needs_review: false
