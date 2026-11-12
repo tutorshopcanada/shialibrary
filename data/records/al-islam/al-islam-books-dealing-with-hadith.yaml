@@ -1,0 +1,31 @@
+id: al-islam-books-dealing-with-hadith
+type: article
+content_tag: article
+granularity: work
+parent: ''
+level: intermediate
+title: Books dealing with Hadith (Traditions)
+title_original: ''
+authors: []
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/articles/books-dealing-hadith-traditions
+language: en
+date: ''
+description: A reference overview of al-Kulayni's hadith collection Al-Kafi, adapted from a study of early
+  Imami scholars. It explains the book's three parts (Usul, Furu' and Rawdah), their topics and how the
+  chapters are organised.
+sample_questions:
+- What is Al-Kafi?
+- How is Al-Kafi organised?
+- What are Usul al-Kafi and Furu al-Kafi?
+- What topics does Al-Kafi cover?
+headings:
+- hadith-collections
+- hadith
+access: free
+location: ''
+needs_review: false
+review_note: The page credits the text as adapted from The Early Imamiyah Shi'ite Thinkers by Syed Waheed
+  Akhtar but names no author for the page itself, so authors is left empty.
+cataloged_on: '2026-11-12'

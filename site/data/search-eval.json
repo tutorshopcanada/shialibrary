@@ -234,11 +234,13 @@
     "thaqalayn-al-kafi-vol-7",
     "thaqalayn-tahdhib-al-ahkam-vol-1",
     "thaqalayn-al-tawhid",
-    "thaqalayn-al-khisal"
+    "thaqalayn-al-khisal",
+    "al-islam-books-dealing-with-hadith",
+    "al-islam-great-works-al-kafi-howard"
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "parent heading returns child-heading records; any hadith volume near the top passes"
+   "note": "parent heading returns child-heading records; any hadith volume or an overview article on the hadith books near the top passes (2026-11-12: intermediate articles on the four books now outrank the advanced volumes)"
   },
   {
    "query": "why do shia cry on ashura",

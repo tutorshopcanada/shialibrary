@@ -1080,3 +1080,18 @@ scholars:
     alt_names: []
     notes: "Named as author of Story of the Holy Ka'aba And its People on https://al-islam.org/story-holy-kaaba-and-its-people-smr-shabbar (read 2026-11-11). Only this spelling was seen on that page."
     needs_review: true
+
+  - id: ian-keith-anderson-howard
+    name: "Ian Keith Anderson Howard"
+    role: author
+    alt_names:
+      - "Dr. I. K. A. Howard"
+    notes: "Named as author of Great Shi'i Works: Al-Kafi by Al-Kulayni and Great Shi'i Works: Man la yahduruh al-Faqih by Al-Saduq on al-islam.org (Al-Serat, vol. 2, 1976; read 2026-11-12). The article pages give the short form 'Dr. I. K. A. Howard' in places."
+    needs_review: true
+
+  - id: ali-naghi-zabihzadeh
+    name: "Ali Naghi Zabihzadeh"
+    role: author
+    alt_names: []
+    notes: "Named as author of the Message of Thaqalayn articles on Kulayni and Sheikh Tusi on al-islam.org (read 2026-11-12). Only this spelling was seen."
+    needs_review: true

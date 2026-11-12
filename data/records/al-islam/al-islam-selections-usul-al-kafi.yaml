@@ -1,0 +1,31 @@
+id: al-islam-selections-usul-al-kafi
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: advanced
+title: Selections From Usul Al Kafi
+title_original: ''
+authors:
+- kulayni
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/al-tawhid/general-al-tawhid/selections-usul-al-kafi-al-kulayni
+language: en
+date: ''
+description: An English selection of hadith from Usul al-Kafi, the first part of al-Kulayni's Al-Kafi.
+  It has a preface explaining the book and how its reports are graded, followed by the Book of Intellect
+  and Ignorance and the Book of the Merit of Knowledge.
+sample_questions:
+- What is Usul al-Kafi?
+- Is there an English translation of Al-Kafi?
+- What does Al-Kafi say about knowledge and intellect?
+- How are hadith in Al-Kafi graded?
+headings:
+- hadith-collections
+- hadith
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

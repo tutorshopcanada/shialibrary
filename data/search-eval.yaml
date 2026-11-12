@@ -26,7 +26,7 @@ queries:
   - {query: "sayings of imam ali", expect_any: [thaqalayn-nahj-al-balagha], expect_group: any, note: ""}
   - {query: "kulayni", expect_any: [thaqalayn-al-kafi-vol-1], expect_group: any, note: "author name"}
   - {query: "ziyarat imam hussain", expect_any: [thaqalayn-kamil-al-ziyarat], expect_group: any, note: "Hussain/Husayn variants"}
-  - {query: "hadith", expect_any: [thaqalayn-al-kafi-vol-1, thaqalayn-al-kafi-vol-6, thaqalayn-al-kafi-vol-7, thaqalayn-tahdhib-al-ahkam-vol-1, thaqalayn-al-tawhid, thaqalayn-al-khisal], expect_group: any, note: "parent heading returns child-heading records; any hadith volume near the top passes"}
+  - {query: "hadith", expect_any: [thaqalayn-al-kafi-vol-1, thaqalayn-al-kafi-vol-6, thaqalayn-al-kafi-vol-7, thaqalayn-tahdhib-al-ahkam-vol-1, thaqalayn-al-tawhid, thaqalayn-al-khisal, al-islam-books-dealing-with-hadith, al-islam-great-works-al-kafi-howard], expect_group: any, note: "parent heading returns child-heading records; any hadith volume or an overview article on the hadith books near the top passes (2026-11-12: intermediate articles on the four books now outrank the advanced volumes)"}
   - {query: "why do shia cry on ashura", expect_any: [al-islam-karbala-chain-of-events], expect_group: any, note: "curated phrasing"}
   - {query: "what is shia islam", expect_any: [al-islam-discovering-shii-islam, al-islam-discovering-islam], expect_group: any, note: "beginner record should lead"}
   - {query: "how do shias pray", expect_any: [al-islam-discovering-islam, sistani-west-salat-general-rules], expect_group: any, note: ""}
