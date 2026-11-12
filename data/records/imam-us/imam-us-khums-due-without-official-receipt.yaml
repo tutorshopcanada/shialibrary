@@ -1,0 +1,27 @@
+id: imam-us-khums-due-without-official-receipt
+type: qa
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: If an official receipt is not issued or conditions are not met, khums is still due
+title_original: ''
+authors: []
+marja: sistani
+source: imam-us.org
+url: https://imam-us.org/khums-conditions-and-receipt
+language: en
+date: '2014-08-14'
+description: A question put to the office of Sayyid al-Sistani about how khums dues are spent and handled, and whether an official religious receipt is needed. The page presents the questions and the reply on this topic.
+sample_questions:
+- Do I still have to pay khums if I do not get an official receipt?
+- How is khums spent?
+- Who is an authorized agent for khums?
+- What questions are asked about how khums is handled?
+headings:
+- khums-zakat
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

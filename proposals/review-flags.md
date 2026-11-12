@@ -268,3 +268,49 @@ Records cataloged from the post sitemaps: 46 (see data/records/imam-us/, catalog
 
 2026-11-12 | Discovering Islam, "Islamic Practices" chapter (Moustafa Al-Qazwini) | https://al-islam.org/discovering-islam-sayyid-moustafa-al-qazwini/islamic-practices | Not cataloged: chapter's main purpose is the practices of prayer, fasting, zakat-khums, hajj and jihad, which is fiqh by an author other than Sistani or Khamenei.
 2026-11-12 | Discovering Shi'i Islam, "Chapter 4: Practices" (Mohammad Ali Shomali) | https://al-islam.org/discovering-shii-islam-mohammad-ali-shomali/chapter-4-practices | Not cataloged: chapter's main purpose is the Shia practices (daily prayers, fasting, pilgrimage, almsgiving), which is fiqh by an author other than Sistani or Khamenei.
+
+## imam-us.org series 2 (2026-11-12): skipped
+Fiqh, marja not stated:
+- 2021-01-27 | ICYMI: How are Islamic Laws Produced? | https://imam-us.org/icymi-how-are-islamic-laws-produced (fiqh methodology; no marja named)
+- 2021-05-12 | The Etiquette of Eid & Crescent Sightings | Instagram Live | https://imam-us.org/the-etiquette-of-eid-crescent-sightings-instagram-live (covers Zakat al-Fitrah and Eid-night rules; no marja named)
+
+Event notices (live sessions or series sign-ups, no recorded content on the page):
+- 2020-08-19 | I.M.A.M. Presents I.M.A.M. at Home: The Muharram Edition | https://imam-us.org/imam-at-home-muharram-1442
+- 2020-08-25 | I.M.A.M. at Home: Muharram Edition - Inspirations from Ashura with Sayyid Muntadher Aljabery | https://imam-us.org/i-m-a-m-at-home-muharram-edition-inspirations-from-ashura-with-sayyid-muntadher-aljabery
+- 2020-08-20 | I.M.A.M. at Home: Muharram Edition - Timeless Lessons From Karbala with Shaykh Faiyaz Jaffer | https://imam-us.org/i-m-a-m-at-home-muharram-edition-timeless-lessons-from-karbala-with-shaykh-faiyaz-jaffer
+- 2020-04-27 | I.M.A.M. Presents I.M.A.M. at Home: The Month of Ramadan Edition | https://imam-us.org/imam-at-home-ramadan-edition
+- 2020-05-04 | This Week on I.M.A.M. at Home: The Month of Ramadan Edition (week 2) | https://imam-us.org/week-2-imam-at-home-ramadan-edition
+- 2020-05-18 | This Week on I.M.A.M. at Home: The Month of Ramadan Edition (week 4) | https://imam-us.org/week-4-imam-at-home-ramadan-edition
+- 2021-03-22 | The Inner Dimensions of Supplication (Instagram Live notice) | https://imam-us.org/the-inner-dimensions-of-supplication
+- 2021-10-23 | Live Webinar: The Contributions of Imam Jafar al-Sadiq (p) | https://imam-us.org/the-contributions-of-imam-jafar-al-sadiq-p
+- 2021-08-04 | Etiquette of Majlis | Instagram Live (notice) | https://imam-us.org/etiquette-of-majlis-instagram-live
+- 2021-09-19 | The Merits & Etiquette of Ziyarat Imam Hussain (p) (notice) | https://imam-us.org/the-merits-etiquette-of-ziyarat-imam-hussain-p
+- 2025-10-16 | Exploring the Holy Quran: Applied Lessons on Faith, Human Nature, and Navigating Life (10-week live series sign-up) | https://imam-us.org/exploring-the-holy-quran-applied-lessons-on-faith-human-nature-and-navigating-life
+- 2026-02-20 | Why Allah Repeats the Same Stories (live lecture notice) | https://imam-us.org/why-allah-repeats-the-same-stories
+- 2025-12-01 | Serve Your Community (volunteer recruitment) | https://imam-us.org/serve-your-community
+
+Login or paywall (book content not free):
+- 2016-12-02 | Tajwid - A Guide to Quranic Recitation (PDF and print/eBook behind login or purchase) | https://imam-us.org/tajwid-a-guide-to-quranic-recitation
+
+Not fetched (outside the requested list or not reviewed): the-night-prayer, meditate-your-mind, and similar pages in the sitemap.
+
+## imam-us.org batch, 2026-11-12 (fiqh Q&A, explainers, videos, free books)
+
+## Skipped (login-gated, imam-us.org)
+- 2023-10-27 | Islamic Laws of Food & Drink (PDF behind login) | https://imam-us.org/islamic-laws-of-food-drink
+- 2023-07-12 | Islamic Laws of Medicine (PDF behind login) | https://imam-us.org/islamic-laws-of-medicine
+- 2022-03-14 | Islamic Laws of Fasting (PDF behind login) | https://imam-us.org/islamic-laws-of-fasting
+- 2018-07-12 | Islamic Laws of Expiation (PDF behind login) | https://imam-us.org/islamic-laws-of-expiation-by-sayyid-sistani
+- 2018-09-07 | Islamic Laws of the Will (PDF behind login) | https://imam-us.org/islamic-laws-of-will-by-grand-ayatullah-sistani
+- 2024-10-04 | Islamic Laws of the Female Reproductive Cycle (PDF behind login) | https://imam-us.org/islamic-laws-of-the-female-reproductive-cycle-menstrual-postpartum-and-non-menstrual-bleeding
+Note: Islamic Laws of Death and Burial was cataloged because its PDF link is public (no login).
+
+## Skipped (contested, owner to decide)
+- 2017-09-25 | Clarification of Sayyid al-Sistani's Opinion on Tatbir (a reply to a public dispute over the marja's stated position; a sensitive ritual topic) | https://imam-us.org/clarification-sayyid-al-sistanis-opinion-tatbir
+
+## Skipped (duplicate)
+- 2022-04-19 | 3rd Rakat or 4th? Rules of Doubt in Four-Unit Prayer (second URL with the same title as imam-us-rules-of-doubt-third-or-fourth-rakat) | https://imam-us.org/rules-of-doubt-in-four-unit-prayers
+- undated (not fetched) | Should I Get the COVID-19 Vaccine While Fasting? (WSID; topic already cataloged as imam-us-can-i-receive-the-covid-19-vaccine-while-fasting; not fetched) | https://imam-us.org/what-should-i-do-should-i-get-the-covid-19-vaccine-while-fasting
+
+## Not fetched (requests limit)
+- Other 2016-2026 "Reminder about Qada / Feed the Fasting" annual notices and the zakat al-Fitrah yearly guides: only the 2026 Qada reminder was cataloged; older years are near-duplicates.
