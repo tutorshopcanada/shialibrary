@@ -28,6 +28,7 @@ delivery: ''
 duration: ''
 start_date: ''
 cost: $60.00
+price_tag: paid
 enrollment_url: ''
 needs_review: false
 review_note: ''

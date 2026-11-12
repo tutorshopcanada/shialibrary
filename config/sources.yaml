@@ -121,8 +121,6 @@ sources:
     channels: []          # owner supplies channel IDs; nothing is harvested until then
     notes: "Backlog. No channel list yet."
 
-# The owner named the Shia Research Institute and Tasneem Institute as examples but has not
-# supplied their websites. Do not guess addresses.
 # Institutes offering courses. Every course record uses one of these names as its provider.
 institutes:
   - name: "Mizan Institute"
@@ -133,3 +131,31 @@ institutes:
       a 10-second crawl delay and publishes a sitemap at /sitemap.xml. A separate fiqh site exists
       at fiqh.mizaninstitute.org: courses whose subject is fiqh are skipped and logged (CLAUDE.md
       section 3) unless the owner says otherwise.
+  - name: "Shia Research Institute"
+    base_url: "https://shiaresearch.ca/"
+    status: active
+    notes: >
+      Supplied by the owner on 2026-11-12 (Shia Research Institute, SRI, at the University of
+      Toronto). robots.txt (read 2026-11-12) allows everything except wpforms uploads and
+      publishes https://shiaresearch.ca/sitemap_index.xml. Plain scripted requests (curl) get HTTP
+      406 from the site's Mod_Security, so pages are read with the web-fetch tool, one at a time
+      and slowly, as for al-islam.org. Structure not inspected yet.
+  - name: "Tasneem Institute"
+    base_url: "https://tasneeminstitute.org/"
+    status: active
+    notes: >
+      Supplied by the owner on 2026-11-12. robots.txt (read 2026-11-12) allows everything and
+      publishes https://tasneeminstitute.org/sitemap.xml (one flat sitemap: about 40 pages under
+      /courses/, plus /in-person-courses/ and /learning-paths/). Be polite: one request every 2
+      seconds at most. Fiqh-subject courses (for example Introduction to Islamic Law, Laws of
+      Fasting, The Fiqh of Food) are skipped and logged under the open institute-fiqh question.
+  - name: "Hujjah Seminary"
+    base_url: "https://hujjahseminary.com/"
+    status: active
+    notes: >
+      Supplied by the owner on 2026-11-12. robots.txt returns 404 (no rules); no sitemap found.
+      An online course platform: courses at /Courses and /Course/<id>, teachers at /Teacher/<id>.
+      The owner expected a fiqh Q&A section (probably Sistani); the site's only Q&A page
+      (/Home/IndexFaqs) is a FAQ about enrolling, not rulings. Fiqh appears as ordinary
+      courses (for example "Islamic Law (Fiqh) - 01"), which are skipped and logged. Report to
+      the owner before cataloging anything.

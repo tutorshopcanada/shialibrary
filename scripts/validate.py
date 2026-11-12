@@ -252,6 +252,13 @@ def main():
                 rep.err(rel, "course must name its provider")
             elif r["provider"] not in institutes:
                 rep.err(rel, f"provider {r['provider']!r} is not an approved institute in config/sources.yaml")
+            pt = r.get("price_tag")
+            if pt not in ("free", "paid"):
+                rep.err(rel, "course must have price_tag free or paid (from the price the page states)")
+            elif pt == "free" and (r.get("access") != "free" or str(r.get("cost") or "").lower() != "free"):
+                rep.err(rel, "price_tag free needs access free and cost free")
+            elif pt == "paid" and r.get("access") != "paid":
+                rep.err(rel, "price_tag paid needs access paid")
             if fiqh and not r.get("needs_review"):
                 rep.err(rel, "fiqh-subject course must be flagged needs_review (scope question is open)")
             sd = r.get("start_date")
@@ -264,6 +271,8 @@ def main():
         else:
             if tag == "course":
                 rep.err(rel, "content_tag course is only for type course")
+            if r.get("price_tag"):
+                rep.err(rel, "price_tag is only for type course")
             if fiqh and tag != "fiqh":
                 rep.err(rel, "record has a Fiqh heading, so content_tag must be fiqh")
             if not fiqh and tag == "fiqh":

@@ -40,7 +40,7 @@ RECORD_FIELDS = (
     "id", "type", "content_tag", "granularity", "parent", "level", "title",
     "title_original", "authors", "marja", "source", "url", "language", "date",
     "description", "sample_questions", "headings", "access", "location",
-    "provider", "instructors", "delivery", "duration", "start_date", "cost",
+    "provider", "instructors", "delivery", "duration", "start_date", "cost", "price_tag",
     "enrollment_url", "needs_review",
 )
 

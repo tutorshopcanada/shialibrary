@@ -170,6 +170,7 @@ delivery: ""                   # online | in-person | hybrid | self-paced | live
 duration: ""                   # as stated, e.g., "8 weeks"
 start_date: ""                 # next start date if stated; blank for ongoing/self-paced
 cost: ""                       # free | paid | amount as stated | unknown
+price_tag: ""                  # REQUIRED on courses: free | paid. Shown as a badge. free only if the page says Free; anything with a price is paid
 enrollment_url: ""             # direct sign-up link if different from url
 needs_review: false            # true if classification is uncertain
 review_note: ""
