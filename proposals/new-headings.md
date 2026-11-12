@@ -22,3 +22,8 @@ Suggestions from cataloging sessions. Nothing here is in `data/vocabulary.yaml` 
 - 2026-11-10 | human rights / philosophy of religion (al-islam.org Legenhausen article on Hocking) | no suitable heading; closest ethics
 
 > 2026-11-12 (imam-us.org pilot): `arbaeen` (Arbaeen pilgrimage and walk to Karbala, under ziyarat or history) is suggested; the pilot used ziyarat and karbala-ashura instead. `interfaith-relations` (Shia engagement with other religions, such as the Pope Francis and Sistani video) is suggested under ethics or history; not cataloged yet.
+
+
+## Proposed in the institutes batch (2026-11-12)
+- `arabic-language` (Arabic language, grammar, morphology, tajweed-adjacent skills): would hold Tasneem "Introduction to Arabic Grammar" and Hujjah "Arabic Grammar" and "Arabic Morphology (Sarf)", currently skipped.
+- `islamic-study-skills` (logic, public speaking, study method): would hold Hujjah "Intro to Logic (Mantiq)" and "Islamic Speaking", currently skipped.

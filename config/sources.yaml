@@ -112,6 +112,30 @@ sources:
       Supplied by the owner on 2026-11-12; see the institutes list below. Fiqh-subject courses are
       skipped and logged. Sitemap: https://mizaninstitute.org/sitemap.xml.
 
+  - id: tasneeminstitute.org
+    name: "Tasneem Institute"
+    type: courses
+    base_url: "https://tasneeminstitute.org/"
+    status: active
+    catalog_level: "One record per online course (type course, content_tag course, provider Tasneem Institute). Not per lesson."
+    notes: "Supplied by the owner on 2026-11-12; see the institutes list below. Courses are on subscription (from $12/month), so price_tag is paid."
+
+  - id: shiaresearch.ca
+    name: "Shia Research Institute (University of Toronto)"
+    type: courses
+    base_url: "https://shiaresearch.ca/"
+    status: active
+    catalog_level: "One record per course or certificate programme (type course, content_tag course, provider Shia Research Institute)."
+    notes: "Supplied by the owner on 2026-11-12; see the institutes list below. Read with the web-fetch tool only."
+
+  - id: hujjahseminary.com
+    name: "Hujjah Seminary"
+    type: courses
+    base_url: "https://hujjahseminary.com/"
+    status: active
+    catalog_level: "One record per course (type course, content_tag course, provider Hujjah Seminary). The FAQ page at /Home/IndexFaqs is not cataloged (see proposals/review-flags.md)."
+    notes: "Supplied by the owner on 2026-11-12; see the institutes list below. Courses are $50 each, so price_tag is paid."
+
   - id: youtube
     name: "Whitelisted YouTube channels"
     type: video

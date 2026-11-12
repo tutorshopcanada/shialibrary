@@ -146,3 +146,54 @@ Points for the owner:
 - "Why Are There Varying Dates for Some Islamic Events?" is classed non-fiqh (calendar history).
 - "Expressions of Togetherness | Pope Francis and Sayyid al-Sistani" (video page, `/expressions-of-togetherness-pope-francis-and-sayyid-al-sistani`) is still not cataloged. It is separate from the letter record "Ayatullah Sayyid al-Sistani's Letter to Pope Francis".
 - Authors: letters, statements and advice by Sayyid al-Sistani are listed as `authors: sistani`. Reports and guides with no named author are left blank, and the UN Secretary-General's letter is left blank because no author entry exists for him.
+
+
+## Institutes batch (2026-11-12): Tasneem, Shia Research Institute, Hujjah Seminary
+
+Skipped, with reasons:
+
+- tasneeminstitute.org: Introduction to Islamic Law (https://tasneeminstitute.org/courses/introduction-to-islamic-law/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Fiqh Made Easy: Practical Principles (https://tasneeminstitute.org/courses/fiqh-made-easy-practical-principles/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Introduction to Arabic Grammar (https://tasneeminstitute.org/courses/introduction-to-arabic-grammar/): Arabic language course; no heading fits. Propose heading arabic-language.
+- tasneeminstitute.org: The Islamic Prayer (https://tasneeminstitute.org/courses/the-islamic-prayer/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Introduction to Islamic Legal Theory (https://tasneeminstitute.org/courses/introduction-to-islamic-legal-theory/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Ijtihad and Taqlid (https://tasneeminstitute.org/courses/ijtihad-and-taqlid/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: The Fiqh of Food (https://tasneeminstitute.org/courses/the-fiqh-of-food/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Laws of Fasting (https://tasneeminstitute.org/courses/laws-of-fasting/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Faith and Finance (https://tasneeminstitute.org/courses/faith-and-finance/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: The History of Du'a and Ziyarah (https://tasneeminstitute.org/courses/history-of-dua-and-ziyarah/): page states no price (only a "Start free" button), so price_tag cannot be set from the page.
+- tasneeminstitute.org: The Confident Muslim (https://tasneeminstitute.org/in-person-courses/confident-muslim/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Family Matters (https://tasneeminstitute.org/in-person-courses/family-matters/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Perfecting Noble Character (https://tasneeminstitute.org/in-person-courses/noble-character/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: The Case for the Creator (https://tasneeminstitute.org/in-person-courses/case-for-creator/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Self-Knowledge (https://tasneeminstitute.org/in-person-courses/self-knowledge/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Navigating the -isms of Our Time (https://tasneeminstitute.org/in-person-courses/isms/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: The Miraculous Qur'an (https://tasneeminstitute.org/in-person-courses/miraculous-quran/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- hujjahseminary.com: Islamic Law (Fiqh) - 01 (https://hujjahseminary.com/Course/1008): fiqh-subject course; page names no Sistani/Khamenei basis (Not a named marja. Page says rulings are based on the edicts of the majority of scholars.).
+- hujjahseminary.com: Legal Theory (Usul) (https://hujjahseminary.com/Course/1010): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; covers methods, not specific rulings of a named marja.).
+- hujjahseminary.com: Arabic Grammar (https://hujjahseminary.com/Course/1016): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Islamic Law (Fiqh) - 02 (https://hujjahseminary.com/Course/1017): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Arabic Morphology (Sarf) (https://hujjahseminary.com/Course/1027): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Rulings for Muslims in the West (https://hujjahseminary.com/Course/1025): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page does not say which school's rulings are presented. Number of students shown: 95.).
+- hujjahseminary.com: Islamic Law (Fiqh) - 03 (https://hujjahseminary.com/Course/1037): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Islamic Speaking (https://hujjahseminary.com/Course/1028): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Islamic Law (Fiqh) - 04 (https://hujjahseminary.com/Course/1050): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Contemporary Islamic Law (Fiqh) (https://hujjahseminary.com/Course/1022): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page does not name a school.).
+- hujjahseminary.com: Islamic Law (Fiqh) - 05 (https://hujjahseminary.com/Course/1059): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Family Law (Fiqh) (https://hujjahseminary.com/Course/1056): fiqh-subject course; page names no Sistani/Khamenei basis (Page says the rulings follow the edicts of the majority of scholars.).
+- hujjahseminary.com: Intro to Logic (Mantiq) (https://hujjahseminary.com/Course/1058): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Jurisprudential Maxims (Qawa'ed Fiqhiyya) (https://hujjahseminary.com/Course/1041): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page names no school.).
+- hujjahseminary.com: Islamic Dietary Laws (https://hujjahseminary.com/Course/1065): fiqh-subject course; page names no Sistani/Khamenei basis (Page says the rulings discussed are based on the edicts of the majority of scholars.).
+- hujjahseminary.com: Islamic Laws for Muslims in the West (https://hujjahseminary.com/Course/2089): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page does not say which school's rulings are presented.).
+- shiaresearch.ca: Contemporary Topics in Islamic Theology at the University of Toronto (https://shiaresearch.ca/courses/smt3810hs-contemporary-topics-in-islamic-theology/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page.
+- shiaresearch.ca: Islam, Christianity and Modernity at the University of Toronto (https://shiaresearch.ca/courses/smt6800hf-islam-christianity-and-modernity/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page.
+- shiaresearch.ca: Devotional Prayer in the Islamic Tradition, at the University of Toronto (https://shiaresearch.ca/courses/smt3367h-devotional-prayer/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page; its term (Fall 2025 to Winter 2026) has also passed.
+- shiaresearch.ca: Holiness and Sainthood in Islamic Thought, at the University of Toronto (https://shiaresearch.ca/courses/smt3378h-holiness-and-sainthood/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page; its term (Fall 2025 to Winter 2026) has also passed.
+
+Not cataloged, owner to decide:
+- hujjahseminary.com FAQ (`/Home/IndexFaqs`): one very large page of fiqh questions and answers. Almost all answers are unattributed ("scholars", "most scholars"); Sayyid Sistani is named in two answers, Ayatollah Shirazi in one, Sayyid Khamenei in none. It has no per-question links. It does not present one marja's rulings, so under the fiqh rule it is not cataloged. The owner expected a Sistani Q&A; please confirm.
+- shiaresearch.ca other item types: 34 Insight Interviews (`/insight-interviews/ep-N/`), conferences and lectures, publications and blog posts. Not cataloged; each type needs a scope decision.
+- SRI micro-certificate: four component courses sit on stmikes.utoronto.ca (another domain, not an approved source). Only the programme page is cataloged.
+- Instructors are named on many pages but `instructors` is left blank (as for Mizan) because scholars.yaml has no entries for them. Owner to decide whether to add them.
+- Hujjah `/AboutUs` shows info@hujjahseminary.com but the mailto link points to a different domain; worth checking before the owner contacts them.
+- Tasneem "Hell in the Quran" says "Class begins on June 10th 2023" but the page does not say it has ended, so it was cataloged.
