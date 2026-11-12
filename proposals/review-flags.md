@@ -340,3 +340,6 @@ Note: Islamic Laws of Death and Burial was cataloged because its PDF link is pub
 - News or event reports: https://imam-us.org/finding-unity-majalis-imam-hussain-p-photo-essay , https://imam-us.org/spiritual-journey-remember , https://imam-us.org/video-the-problem-of-pain-and-suffering
 - Instagram live recap and service promotion: https://imam-us.org/icymi-lets-talk-thanksgiving , https://imam-us.org/introducing-azwaja
 - No article text (only a widget and related-post links): https://imam-us.org/12-signs-accompanying-the-reappearance-of-the-awaited-mahdi-pbuh
+
+## Skipped (duplicate, city event) - mizaninstitute.org batch 3 (2026-11-12)
+- 2026-11-12 | Ethical Dilemmas, Ottawa (sisters only, Oct 7, $35 ticket) | https://mizaninstitute.org/ottawasisters/ | city event for the course already catalogued at https://mizaninstitute.org/ethical-dilemmas-godly-decision-making-and-moral-philosophy/ (mizan-ethical-dilemmas); not catalogued twice.
