@@ -90,6 +90,14 @@ function nav(url) {
   ui.limit = 20;
   render({ push: true });
 }
+// Changing a filter on a results page keeps the reader where they are instead of jumping to the top.
+function navKeep(url, focusSel) {
+  const y = scrollY;
+  if (url !== location.pathname + location.search + location.hash) { history.pushState(null, '', url); ui.limit = 20; }
+  render({ push: false });
+  scrollTo(0, y);
+  const f = focusSel && document.querySelector(focusSel); if (f) f.focus({ preventScroll: true });
+}
 document.addEventListener('click', (e) => {
   if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
   const a = e.target.closest('a[href]');
@@ -963,7 +971,7 @@ function afterRender(opts) {
 // ---------------------------------------------------------------------------
 view.addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b) return;
-  const st = readState(), keep = (patch) => nav(searchHref({ ...st, ...patch }));
+  const st = readState(), keep = (patch) => { const sel = b.dataset.tag != null ? `[data-tag="${CSS.escape(b.dataset.tag)}"]` : b.dataset.order ? `[data-order="${b.dataset.order}"]` : ''; navKeep(searchHref({ ...st, ...patch }), sel); };
   if ('meaning' in b.dataset) { MEANING.optIn = true; render({ push: false, quiet: true }); }
   else if ('tag' in b.dataset) keep({ tag: st.tag === b.dataset.tag ? '' : b.dataset.tag });
   else if ('order' in b.dataset) keep({ order: b.dataset.order === engine.config.ranking.default_order ? '' : b.dataset.order });
@@ -981,7 +989,7 @@ view.addEventListener('click', (e) => {
 view.addEventListener('input', (e) => { if (e.target.id === 'tfilter') { const id = e.target.form.dataset.topic; ui.tq[id] = e.target.value; const l = $('#tlist'); if (l) l.innerHTML = topicListHtml(id); return; } if (e.target.id === 'qfilter') { ui.qfilter = e.target.value; const l = $('#qlist'); if (l) l.innerHTML = qListHtml(); } });
 view.addEventListener('change', (e) => {
   const t = e.target;
-  if (t.dataset && t.dataset.filter) { const st = readState(); nav(searchHref({ ...st, [t.dataset.filter]: t.value })); return; }
+  if (t.dataset && t.dataset.filter) { const st = readState(); navKeep(searchHref({ ...st, [t.dataset.filter]: t.value }), `#f-${t.dataset.filter}`); return; }
   if (t.name === 'kind') { const f = FB[t.value] || FB.feedback; ui.fbkind = t.value; $('#fb-go').textContent = f.go; $('#fb-opt').textContent = f.need ? '' : '(optional)'; $('#fb-msg').placeholder = f.ph; $('#fb-desc').textContent = f.d; $('#fb-merr').hidden = true; return; }
   if (t.dataset && t.dataset.read) {
     if (t.checked) read[t.dataset.read] = 1; else delete read[t.dataset.read]; saveRead();
