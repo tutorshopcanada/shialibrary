@@ -54,6 +54,19 @@ sources:
       cataloging: read robots.txt, inspect and report the structure (which section holds the
       English rulings, URL patterns, per-question links), and confirm with the owner.
 
+  - id: duas.org
+    name: "Duas.org"
+    type: duas
+    base_url: "https://www.duas.org/"
+    status: active
+    catalog_level: "To be decided after the site's structure is inspected (suggested: one record per dua or ziyarat page)."
+    notes: >
+      Approved by the owner on 2026-11-12. Reachable by plain requests (checked 2026-11-12);
+      /robots.txt returns 404 (no rules) and there is no sitemap.xml, so pages must be found by
+      following links from the home page. The home page is mostly an index of static .htm pages.
+      Structure not inspected yet: before cataloging, read the main sections, report the URL
+      patterns and what content type tags fit (not fiqh; use headings under duas-ziyarat).
+
   - id: youtube
     name: "Whitelisted YouTube channels"
     type: video
@@ -65,4 +78,7 @@ sources:
 
 # Institutes offering courses. The owner named the Shia Research Institute and Tasneem
 # Institute as examples but has not supplied their websites. Do not guess addresses.
+# Approved by the owner on 2026-11-12 as institutes to catalog, but their websites have not
+# been supplied yet: IMAM Institute, Mizan Institute, Academy for Learning Islam (ALI).
+# Do not guess addresses; add each one here once the owner gives the exact URL.
 institutes: []
