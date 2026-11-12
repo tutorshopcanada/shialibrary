@@ -725,7 +725,7 @@ function buildTour() {
   const workCount = (id) => engine.records.filter((r) => (r.authors || []).includes(id)).length;
   const resolve = (it) => {
     if (it.person) return ent(it.person, it.sub, { prophet: 'Prophet', imam: 'Imam', infallible: 'Infallible', scholar: 'Scholar' }[it.as] || 'Person', 'person');
-    if (it.concept) return ent(it.concept, it.sub, it.as === 'book' ? 'Book' : 'Concept', it.as === 'book' ? 'book' : 'concept');
+    if (it.concept) return ent(it.concept, it.sub, it.as === 'book' ? 'Book' : 'Concept', it.as === 'book' ? 'book' : 'concept', it.match ? { match: it.match, q: it.q } : {});
     if (it.book) { const r = rec(it.book); return r ? ent(r.title, `${tagLabel(r.content_tag)} · ${levelLabel(r.level)}`, 'Book', 'book', { k: 'e-book-' + r.id, rid: r.id }) : null; }
     if (it.scholar) { const s = engine.scholarById.get(it.scholar); if (!s) return null; const w = workCount(s.id); return ent(s.name, w ? pl(w, 'page') : 'Author', 'Scholar', 'scholar', { k: 'e-scholar-' + s.id, sid: s.id }); }
     if (it.topic) return { href: topicHref(it.topic), name: it.name || TOPN(it.topic), sub: it.sub || 'Topic' };
@@ -781,7 +781,14 @@ function entityBodyHtml(e) {
   else if (e.type === 'book' && e.rid) { const r = rec(e.rid); rel = [r, ...RECS.filter((x) => x.id !== r.id && x.raw.headings.some((h) => (r.headings || []).includes(h))).slice(0, 5).map((x) => x.raw)]; head = 'This book, and related pages'; }
   else { head = `Pages about ${e.name.replace(/^The /, '').replace(/\s*\(.*\)/, '')}`; const sch = e.kind === 'Scholar', res = engine.search(sch ? e.name.split(' ').pop() : strip(e.name)); rel = (res.exact.length || sch ? firstRecords({ exact: res.exact, related: [] }) : firstRecords(res)).slice(0, 6); if (sch) empty = 'No pages mention this scholar in the catalog yet.'; }
   // Scholar pages also list books and articles about the scholar (pages that mention the name but are not by them).
-  let about = [];
+  let about = [], aboutHead = 'Books and articles about this scholar';
+  if (e.match) {
+    // A named catalog book: its own volumes first, then pages that talk about it.
+    const vols = engine.records.filter((r) => r.granularity === 'work' && textNorm(r.title).startsWith(e.match)).sort((a, b) => (parseInt((a.title.match(/Vol\. (\d+)/) || [])[1]) || 0) - (parseInt((b.title.match(/Vol\. (\d+)/) || [])[1]) || 0));
+    const ids = new Set(vols.map((r) => r.id)), res = engine.search(e.q);
+    rel = vols; head = 'The book itself'; empty = 'This book is not in the catalog yet.';
+    about = firstRecords({ exact: res.exact, related: [] }).filter((r) => !ids.has(r.id) && ['book', 'article', 'lecture'].includes(r.content_tag) && !textNorm(r.title).startsWith(e.match)).slice(0, 6); aboutHead = 'Articles and other books about it';
+  }
   if (e.type === 'scholar') {
     const sc = engine.scholarById.get(e.sid), names = [sc.name.split(' ').pop(), sc.name, ...(sc.alt_names || [])].filter((n) => n.length >= 5).sort((a, b) => a.length - b.length);
     const res = engine.search(names[0] || sc.name), mine = (r) => (r.authors || []).includes(e.sid) || r.marja === e.sid;
@@ -792,7 +799,7 @@ function entityBodyHtml(e) {
   return `<div class="egrid"><div><div class="bio"><h2 class="bh">Short bio <span class="pill">Placeholder</span></h2><p class="mute" style="margin:0">A short, sourced bio will go here once it has been written and reviewed.</p></div>
   <div style="margin-top:1rem"><a class="btn solid big" href="${esc(qHref(q))}" style="width:100%;justify-content:center">Search the catalog for “${esc(q)}”</a></div></div>
   <section><h2 class="eh">${head} <span>${rel.length}</span></h2>${rel.length ? `<ul class="lrows" style="margin-top:.8rem">${rel.map((r) => rowHtml(r, null, 'h3')).join('')}</ul>` : `<p class="mute">${empty}</p>`}</section>
-  ${about.length ? `<section style="margin-top:1.6rem"><h2 class="eh">Books and articles about this scholar <span>${about.length}</span></h2><ul class="lrows" style="margin-top:.8rem">${about.map((r) => rowHtml(r, null, 'h3')).join('')}</ul></section>` : ''}</div>
+  ${about.length ? `<section style="margin-top:1.6rem"><h2 class="eh">${aboutHead} <span>${about.length}</span></h2><ul class="lrows" style="margin-top:.8rem">${about.map((r) => rowHtml(r, null, 'h3')).join('')}</ul></section>` : ''}</div>
   ${g.length > 1 ? `<div class="enav"><a href="${esc(pageHref(p.k))}"><small>Previous</small>${esc(p.name)}</a><a class="nx" href="${esc(pageHref(n.k))}"><small>Next</small>${esc(n.name)}</a></div>` : ''}`;
 }
 

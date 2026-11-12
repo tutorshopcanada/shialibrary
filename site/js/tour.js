@@ -66,9 +66,9 @@ export const TOUR = [
     lede: 'The early works of Shia history, and the classical scholars who compiled and preserved them.',
     groups: [
       { label: 'The four main books', lead: true, items: [
-        { concept: 'Al-Kafi', sub: 'Al-Kulayni · Hadith collection', as: 'book' },
-        { concept: 'Man La Yahduruhu al-Faqih', sub: 'Al-Saduq · Hadith collection', as: 'book' },
-        { concept: 'Tahdhib al-Ahkam', sub: 'Al-Tusi · Hadith collection', as: 'book' }] },
+        { concept: 'Al-Kafi', sub: 'Al-Kulayni · Hadith collection', as: 'book', match: 'al kafi', q: 'Al-Kafi' },
+        { concept: 'Man La Yahduruhu al-Faqih', sub: 'Al-Saduq · Hadith collection', as: 'book', match: 'man la yahduruh', q: 'al-Faqih' },
+        { concept: 'Tahdhib al-Ahkam', sub: 'Al-Tusi · Hadith collection', as: 'book', match: 'tahdhib al ahkam', q: 'Tahdhib' }] },
       { label: 'Other early works', items: [
         { book: 'thaqalayn-nahj-al-balagha' }, { book: 'thaqalayn-risalat-al-huquq' },
         { book: 'thaqalayn-kitab-al-ghayba-numani' }, { book: 'thaqalayn-al-tawhid' }, { book: 'thaqalayn-kamal-al-din' }] },
