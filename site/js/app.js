@@ -444,7 +444,7 @@ function aboutHtml() {
    <div class="pil">${ICON.lock}<h3>No rulings, no positions</h3><p>This site describes, labels and links. It does not give religious rulings.</p></div></div>
    <p class="note">Catalog entries were prepared with the help of an AI assistant from the source pages, then checked by automatic rules. Items marked <span class="pill">Draft</span> have not yet been reviewed by a person.</p></section>
   <section class="tsec"><h2>What the catalog covers</h2><dl class="cells">${cells.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v.includes('<a ') ? v : esc(v)}</dd></div>`).join('')}</dl><p class="note">${scope}</p></section>
-  <section class="tsec"><h2>How results are chosen</h2><p class="sub">Plain matching rules. <strong>No AI writes answers here:</strong> the search only finds and orders catalog entries.</p>
+  <section class="tsec"><h2>How results are chosen</h2><p class="sub">Plain matching rules. <strong>No AI writes answers here:</strong> the search only finds and orders catalog entries. When we have nothing close, we point to ${SITE.aiTool ? esc(SITE.aiTool.name) : 'an outside AI tool'}, a separate AI tool we do not run and cannot vouch for.</p>
    <details class="more"><summary>See the six steps</summary><ol class="hsteps">${steps.map((p) => `<li><p>${esc(p)}</p></li>`).join('')}</ol></details></section>
   <section class="tsec"><h2>Privacy</h2><ul class="ticks priv"><li>The search runs entirely in your browser. What you type is not sent to anyone and is not stored.</li><li>No cookies, no tracking, no accounts.</li><li>Pages you tick as read are saved only in your own browser.</li><li>When you follow a link you leave this site, and the other website’s own policies apply. The “Search Al-Islam.org” link under results sends your search words to that site only if you click it.</li></ul></section>
   <section class="tsec"><div class="qask"><div><h3>Report a wrong or broken link</h3><p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. Include the title of the result and what is wrong.</p></div><div class="qask-b">${rep}</div></div></section>`;
@@ -537,6 +537,12 @@ function curatedHtml(result) {
 function stepsHtml(path, compact) {
   return `<ol class="hsteps">${path.steps.map((s) => { const r = rec(s.record); return r ? `<li><div>${s.why ? `<p class="why" dir="auto">${esc(s.why)}</p>` : ''}<ul class="cards">${cardHtml(r, { compact })}</ul></div></li>` : ''; }).join('')}</ol>`;
 }
+function aiToolHtml() {
+  const a = SITE.aiTool; if (!a || !a.url) return '';
+  return `<div class="callout aitool" style="margin-top:1.5rem"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Still looking?</h2><p>${esc(a.name)} is an independent AI tool for Shia questions. <strong>Its answers are written by AI. They are not part of this catalog and are not checked by us or by a scholar.</strong> For religious rulings, ask a qualified scholar or read the source texts.</p>
+  <p><a class="btn line" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">Try ${esc(a.name)} (AI) ↗</a></p>
+  <small>This opens ${esc(a.name)} in a new tab. We are not affiliated with it. Nothing you typed here is sent to it.</small></div>`;
+}
 function externalHtml(q) {
   const href = externalSearchHref(q); if (!href) return '';
   const name = SITE.externalSearch.name;
@@ -618,7 +624,7 @@ function resultsHtml(st, pre) {
   const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
     announceText = `No close match for “${result.query}”.`;
-    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml(result.query)}<div style="height:3rem"></div>${topicsHtml()}`;
+    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml(result.query)}${aiToolHtml()}<div style="height:3rem"></div>${topicsHtml()}`;
   }
   const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
   let out = '';

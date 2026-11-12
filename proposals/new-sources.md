@@ -3,7 +3,7 @@
 None proposed as catalog sources yet.
 
 ## Proposed: hyder.ai as an outbound "ask an AI" link (not a catalog source) - 2026-11-11
-Raised by the owner in chat. **Status: awaiting owner decision. Nothing built.**
+Raised by the owner in chat. **Status: approved by the owner 2026-11-12 (free to use; redirect what we do not have). Built on the "no close match" screen only. Still open: whether to hide it for fiqh-type queries.**
 
 What it is: a single link on the site to hyder.ai, a Shia AI tool, with a plain disclaimer
 that it is AI and not a human-vetted source. It would not be a catalog record, and the

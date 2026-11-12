@@ -28,6 +28,14 @@ export const SITE = {
     askUrl: 'https://al-islam.org/ask',
   },
 
+  // Outside AI tool offered only when the catalog has no close match (owner decision 2026-11-12:
+  // free to use, and "redirect what we don't have"). Not a catalog source. The link carries no
+  // search words because its address pattern for queries is not known. We do not run it or vouch for it.
+  aiTool: {
+    name: 'hyder.ai',
+    url: 'https://hyder.ai',
+  },
+
   // Where the full scope document is published (docs/scope.md in the repository).
   // TODO(owner): set to the public URL of docs/scope.md once the repository is public.
   scopeUrl: '',

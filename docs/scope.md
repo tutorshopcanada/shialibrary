@@ -31,6 +31,13 @@ itself only retrieves and ranks those records.
   is in English.
 - **Audience:** beginners first. Every record has a level (beginner, intermediate, advanced).
 
+## Outside tools we link to
+
+- **hyder.ai**, a free Shia AI tool (owner decision 2026-11-12). It is not a catalog source.
+  The site links to it only on the "no close match" screen, with a plain notice that its
+  answers are AI-written and are not checked by us or by a scholar. We do not run it, send it
+  anything, or show its output.
+
 ## Current sources
 
 | Source | What is cataloged | Status |
