@@ -75,7 +75,9 @@ export const TOUR = [
       { label: 'The classical scholars', items: ['kulayni', 'saduq', 'mufid', 'sharif-al-radi', 'tusi', 'ibn-qulawayh', 'numani'].map((x) => ({ scholar: x })) }] },
   { k: 'today', label: 'Today', title: 'Today', lede: 'The contemporary scholars, and where to go next.',
     groups: [
-      { label: 'Contemporary scholars', lead: true, items: ['sistani', 'khamenei', 'ruhullah-khomeini', 'tabatabai', 'mutahhari', 'misbah-yazdi', 'makarem-shirazi', 'jafar-subhani', 'abdullah-jawadi-amuli', 'muhammad-baqir-al-sadr'].map((x) => ({ scholar: x })) },
+      { label: 'Contemporary scholars', lead: true, items: ['sistani', 'khamenei', 'ruhullah-khomeini', 'tabatabai', 'mutahhari', 'misbah-yazdi', 'makarem-shirazi', 'jafar-subhani', 'abdullah-jawadi-amuli', 'muhammad-baqir-al-sadr'].map((x) => ({ scholar: x })).concat([
+        { person: 'Sayyid Abu al-Qasim al-Khoei', sub: 'Scholar', as: 'scholar' }, { person: 'Sayyid Muhsin al-Hakim', sub: 'Scholar', as: 'scholar' },
+        { person: 'Sayyid Muhammad Husayn Fadlallah', sub: 'Scholar', as: 'scholar' }]) },
       { label: 'Go further', items: [
         { href: '#beginners', name: 'Read the introductions', sub: 'Seven introductions, then a plan' },
         { href: '#topics', name: 'Browse by topic', sub: 'Eight subjects, easiest first' },
