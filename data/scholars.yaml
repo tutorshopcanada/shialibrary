@@ -1080,3 +1080,18 @@ scholars:
     alt_names: []
     notes: "Named as author of Story of the Holy Ka'aba And its People on https://al-islam.org/story-holy-kaaba-and-its-people-smr-shabbar (read 2026-11-11). Only this spelling was seen on that page."
     needs_review: true
+
+  - id: abdullah-yusuf-ali
+    name: "Abdullah Yusuf Ali"
+    role: author
+    alt_names:
+      - "A. Yusuf 'Ali"
+    notes: "Named as author on https://al-islam.org/articles/imam-husayn-and-his-martyrdom-abdullah-yusuf-ali (read 2026-11-12). Preface signed 'A. Yusuf 'Ali.'"
+    needs_review: true
+
+  - id: tahir-ridha-jaffer
+    name: "Tahir Ridha Jaffer"
+    role: author
+    alt_names: []
+    notes: "Named as author on https://al-islam.org/articles/comparative-study-death-afterlife-abrahamic-faiths-tahir-ridha-jaffer (read 2026-11-12). Not the same person as the 'jaffer' entry (Asgharali M. M. Jaffer)."
+    needs_review: true

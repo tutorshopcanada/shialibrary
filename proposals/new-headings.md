@@ -22,3 +22,5 @@ Suggestions from cataloging sessions. Nothing here is in `data/vocabulary.yaml` 
 - 2026-11-10 | human rights / philosophy of religion (al-islam.org Legenhausen article on Hocking) | no suitable heading; closest ethics
 
 > 2026-11-12 (imam-us.org pilot): `arbaeen` (Arbaeen pilgrimage and walk to Karbala, under ziyarat or history) is suggested; the pilot used ziyarat and karbala-ashura instead. `interfaith-relations` (Shia engagement with other religions, such as the Pope Francis and Sistani video) is suggested under ethics or history; not cataloged yet.
+
+> 2026-11-12 (imam-us.org batch 3): no new heading added. The Pope Francis and Sistani video uses `history`. Interfaith content is still only in `interfaith-relations` (above). Several imam-us.org non-fiqh records (Muslims in the community, the Albuquerque support video, the parenting videos) use `family-social-ethics`, because `muslims-in-west` sits under Fiqh and would make them fiqh records. A non-fiqh heading for minority-community life (for example `muslims-minority-life`) would help.

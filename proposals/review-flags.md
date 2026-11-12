@@ -146,3 +146,48 @@ Points for the owner:
 - "Why Are There Varying Dates for Some Islamic Events?" is classed non-fiqh (calendar history).
 - "Expressions of Togetherness | Pope Francis and Sayyid al-Sistani" (video page, `/expressions-of-togetherness-pope-francis-and-sayyid-al-sistani`) is still not cataloged. It is separate from the letter record "Ayatullah Sayyid al-Sistani's Letter to Pope Francis".
 - Authors: letters, statements and advice by Sayyid al-Sistani are listed as `authors: sistani`. Reports and guides with no named author are left blank, and the UN Secretary-General's letter is left blank because no author entry exists for him.
+
+## Skipped (polemical)
+- 2026-11-12 | Beliefs: Do the Shi'ah Believe in a Different Quran | https://al-islam.org/articles/beliefs-do-shiah-believe-different-quran | Mainly a rebuttal of accusations against Shia belief about the Quran (Sunni-Shi'a topic tag); skipped under the polemic rule, owner may review.
+
+## Skipped (fiqh by other authors) - al-islam.org articles batch (2026-11-12)
+- 2026-11-12 | Hijab, The Dress of Modesty in Islam | https://al-islam.org/articles/hijab-dress-modesty-islam-sayyid-saeed-akhtar-rizvi | Author Sayyid Saeed Akhtar Rizvi (not Sistani or Khamenei). Page is a booklet whose main purpose is stating the legal rules of hijab (what must be covered, what is allowed); fiqh rule applies.
+- 2026-11-12 | Laws and Practices: Why Do Muslims Have a Dress Code | https://al-islam.org/articles/laws-practices-why-do-muslims-have-dress-code | Not fetched; title and the site's 'Laws' grouping point to rulings. Skipped on the title alone (fiqh by other authors, marja not stated). Owner may review.
+
+## imam-us.org batch 3 (2026-11-12): skipped and not reached
+- 2026-11-12 | Missed the Hajj Webinar? Watch the Recording Now! (video, 2025-05-14) | https://imam-us.org/missed-the-hajj-webinar-watch-the-recording-now | Skipped (fiqh, marja not stated). The page is a video guide to "the most important rulings of Hajj" by Dr. Shaykh Faiyaz Jaffer; it names no marja. Owner may decide.
+- 2026-11-12 | Its Only $10.00: How Is Zakat al-Fitrah Calculated (blog, 2026-02-11) | https://imam-us.org/its-only-10-00-how-is-zakat-al-fitrah-calculated_2026 | Skipped (fiqh, marja not stated). A yearly price guide for zakat al-Fitrah; the page does not name Sistani or Khamenei.
+- 2026-11-12 | Advice from Ayatullah Shaykh Ishaq al-Fayyad to Believers in the West (video, 2022-09-03) | https://imam-us.org/advice-from-ayatullah-shaykh-ishaq-al-fayyad-to-believers-in-the-west | Skipped. Advice from the office of Ayatullah al-Fayyad, who is not an approved marja for fiqh. The page is a visit report whose advice may include rulings; owner to decide.
+- 2026-11-12 | Reflections on 2025 and Prayers for a Year of Justice and Peace in 2026 (blog, 2025-12-24) | https://imam-us.org/reflections-on-2025-and-prayers-for-a-year-of-justice-and-peace-in-2026 | Skipped as an announcement-type community letter (greetings and year-end message).
+- 2026-11-12 | Inspiration from Prophet Muhammad (pbuh&hp) (video, 2023-10-03) | https://imam-us.org/inspiration-from-prophet-muhammad-pbuhhp | Not cataloged. The page text is two sentences plus links to other posts, too little to describe.
+- 2026-11-12 | Video: Advice of the Supreme Religious Authority to the Preachers and Public Speakers (video, 2018-10-12) | https://imam-us.org/video-advice-of-the-supreme-religious-authority-to-the-preachers-and-public-speakers | Not cataloged. It appears to cover the same advice as the Top 10 speakers record (imam-us-top-10-advice-hussaini-speakers). Owner to decide whether the video is a separate record.
+- 2026-11-12 | Martyrdom anniversaries 1447 and 1448 AH; Congratulations on Eid al-Ghadir 1447 (blogs) | https://imam-us.org/martyrdom-anniversary-of-imam-hussain-ibn-ali-p-1448-a-h and the other two | Skipped as announcements. Not fetched.
+- 2026-11-12 | /category/rise (6 items: R-I-S-E workshop, training, conference, webinar and highlight posts) | https://imam-us.org/category/rise | Skipped by title as event and news reports (announcement rule). Not fetched.
+- 2026-11-12 | Get Your Copy of Spiritual Journeys... (books) | https://imam-us.org/get-your-copy-of-spiritual-journeys-through-the-daily-supplications-of-the-holy-month-of-ramadan-today | Skipped as a shop page.
+- 2026-11-12 | Older posts of /category/articles, /category/books, /category/video, /category/blogs | The category feeds stop at 10 items and ?paged=2 on the feed returns the same first 10 posts. The HTML archive loads older posts by AJAX, so they could not be listed. Not cataloged beyond the feed items.
+- 2026-11-12 | "Lets Talk Religion" episodes 2, 4, 6, 8, 9, 10, 11 and "I.M.A.M. at Home" other episodes (video) | https://imam-us.org/lets-talk-religion-ep-2-3 and similar sitemap entries | Seen in the post sitemap only, not fetched in batch 3. Category membership is inferred from the video- slug and "Video" title; still to do.
+
+## Mizan batch 2 (courses, 2026-11-12): skipped items
+Owner decision 2026-11-12: Mizan records are never flagged `needs_review`. The skips below follow the existing rules; the open owner questions from the pilot still apply.
+
+## Skipped (fiqh course) - mizaninstitute.org batch 2 (2026-11-12)
+- 2026-11-12 | Winter Camp Bundle for Teens ($100) | https://mizaninstitute.org/courses/winter-camp-bundle-for-teens/ | bundle whose sessions are "Teens Intermediate Rulings of Salat" (fiqh, no marja stated) plus Proofs of Prophethood sessions. Also dated April 2025 sessions. Skipped as fiqh.
+- 2026-11-12 | Women's Ahkam 2 (sisters-only) | https://mizaninstitute.org/courses/womens-ahkam-2/ | fiqh; page does not name Sistani or Khamenei (same as Women's Ahkam, batch 1)
+
+## Skipped (ended or dates passed) - mizaninstitute.org batch 2 (2026-11-12)
+- 2026-11-12 | The Mahdi Part 1, Online Recording June 2025 | https://mizaninstitute.org/courses/the-mahdi-part-1-online-recording-june-2025/ | live session with past dates, recording access only; same class as Death & Barzakh (owner decision 4). Not "closed" on the page.
+- 2026-11-12 | The Mahdi Part 2, Online September 2025 | https://mizaninstitute.org/courses/the-mahdi-part-2-online-september-2025/ | same class as Part 1. Page oddity for the owner: its Materials list has a Secrets of Salat booklet, and its session list includes "Teens Purpose of Creation - October 2025" sessions.
+- 2026-11-12 | The Mahdi Part 3, Online November 2025 | https://mizaninstitute.org/courses/the-mahdi-part-3-online-november-2025/ | live dates Nov 22-23 (2025) have passed; recording access only
+- 2026-11-12 | The Mahdi Part 4, Online February 2026 | https://mizaninstitute.org/courses/the-mahdi-part-4-online-february-2026/ | live dates Feb 7-8 (2026) have passed; recording access only
+- 2026-11-12 | Mizan Q&A For Teens (Teens Q&A) | https://mizaninstitute.org/courses/teensqna/ | live Q&A on December 6 (page dated 2025-11-17, so the session has passed)
+- 2026-11-12 | Teens Purpose of Creation Recording October 2025 | https://mizaninstitute.org/courses/teens-purpose-of-creation-recording-october-2025/ | page says "This course is currently closed"
+
+## Skipped (borderline ritual, owner to decide) - mizaninstitute.org batch 2 (2026-11-12)
+- 2026-11-12 | Teens Secret of Salat Online Recording July 2025 | https://mizaninstitute.org/courses/teens-secret-of-salat-recording-july-2025/ | title only, not fetched; same question as Secrets of Salat (ritual meanings; owner to decide)
+- 2026-11-12 | Secrets of Salat Online Recording November 2024 | https://mizaninstitute.org/courses/secrets-of-salat-online-recording-november-2024/ | title only, not fetched; same question; dated
+- 2026-11-12 | Secrets of Salat Online Recording April 2025 | https://mizaninstitute.org/courses/secrets-of-salat-online-recording-april-2025/ | title only, not fetched; same question; dated
+
+## Skipped (promotional or bundle) - mizaninstitute.org batch 2 (2026-11-12)
+- 2026-11-12 | Mizan Teens Webinar Recording (free) | https://mizaninstitute.org/courses/mizan-teens-webinar-recording/ | a recorded information webinar about the Mizan Teens program, not a teaching course; owner to decide whether such recordings count
+- 2026-11-12 | Lesson Per Page Bundle | https://mizaninstitute.org/courses/lesson-per-page-bundle/ | product bundle of series already cataloged as separate records; not fetched
+- 2026-11-12 | Lesson Per Page Seasons 1-4 Bundle | https://mizaninstitute.org/courses/lesson-per-page-seasons-1-4-bundle/ | product bundle of series already cataloged as separate records; not fetched
