@@ -24,7 +24,7 @@ REQUIRED = ["id", "type", "content_tag", "granularity", "level", "title", "sourc
             "language", "description", "sample_questions", "headings", "access", "cataloged_on"]
 KNOWN = set(REQUIRED) | {
     "parent", "title_original", "authors", "marja", "date", "location", "provider",
-    "instructors", "delivery", "duration", "start_date", "cost", "enrollment_url",
+    "instructors", "delivery", "duration", "start_date", "cost", "price_tag", "enrollment_url",
     "needs_review", "review_note"}
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 # A type's natural tag when the record is not fiqh.
