@@ -787,7 +787,7 @@ function entityBodyHtml(e) {
     const vols = engine.records.filter((r) => r.granularity === 'work' && textNorm(r.title).startsWith(e.match)).sort((a, b) => (parseInt((a.title.match(/Vol\. (\d+)/) || [])[1]) || 0) - (parseInt((b.title.match(/Vol\. (\d+)/) || [])[1]) || 0));
     const ids = new Set(vols.map((r) => r.id)), res = engine.search(e.q);
     rel = vols; head = 'The book itself'; empty = 'This book is not in the catalog yet.';
-    about = firstRecords({ exact: res.exact, related: [] }).filter((r) => !ids.has(r.id) && ['book', 'article', 'lecture'].includes(r.content_tag) && !textNorm(r.title).startsWith(e.match) && textNorm(`${r.title} ${r.description || ''}`).includes(textNorm(e.q))).slice(0, 6); aboutHead = 'Articles and other books about it';
+    about = firstRecords({ exact: res.exact, related: [] }).filter((r) => !ids.has(r.id) && ['book', 'article', 'lecture'].includes(r.content_tag) && !textNorm(r.title).startsWith(e.match) && textNorm(`${r.title} ${r.description || ''}`).includes(textNorm(e.q))).slice(0, 14); aboutHead = 'Articles and other books about it';
   }
   if (e.type === 'scholar') {
     const sc = engine.scholarById.get(e.sid), names = [sc.name.split(' ').pop(), sc.name, ...(sc.alt_names || [])].filter((n) => n.length >= 5).sort((a, b) => a.length - b.length);
