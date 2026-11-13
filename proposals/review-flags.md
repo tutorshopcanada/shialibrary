@@ -395,3 +395,22 @@ Fetched 42 pages (43 requests with robots.txt); 14 cataloged (imam-us-* records 
 ## Skipped (too little text on the page) - imam-us.org half1
 - https://imam-us.org/remembering-prophet-muhammad-pbuh-a-ssaf-shia-sunni-alliance-forum-presentation (2020-11-03): the page holds only a greeting; no description possible.
 - https://imam-us.org/advice-marjaeya-religious-scholars-speakers-holy-month-muharram-1441-h (2019-08-31): link-only page; the statement itself is not on the page.
+
+## Skipped (fiqh) - duas.org batch c (2026-11-13)
+Pages whose main content is how to perform a prayer, or that state rulings. Fiqh by authors other than Sistani or Khamenei (or with no marja stated), so not cataloged.
+- 2026-11-13 | Sajda Shukr (thanksgiving prostration) | https://www.duas.org/mobile/sajda-shukr.html | states rulings on when and how to perform the prostration
+- 2026-11-13 | Death related duas (includes rulings on care of the dying) | https://www.duas.org/death.htm | mixed page; ruling statements (wajib) on the dying person
+- 2026-11-13 | Tahajjud / Salaat Layl | https://www.duas.org/mobile/tahajjud-salat-shab.html | states rulings (obligatory and recommended status) with the procedure of the prayer
+- 2026-11-13 | Salaat of Masumeen | https://www.duas.org/mobile/salat-masumeen.html | prayer procedure with recommendations on when to pray it
+- 2026-11-13 | Sunday Zilqad Salaat | https://www.duas.org/mobile/zilqad-sunday-salat.html | states that the prayer is recommended, with rulings on ghusl and wudhu before it
+- 2026-11-13 | Rajab Month Daywise Salaahs | https://www.duas.org/mobile/rajab-daywise-salaahs.html | prayer procedures (rak'ahs) for each night
+- 2026-11-13 | Sha'ban Month Datewise Salaahs | https://www.duas.org/mobile/shaban-datewise-salaahs.html | prayer procedures (rak'ahs) for each night
+- 2026-11-13 | Dua During Salaat | https://www.duas.org/dua_during_salaat.htm | etiquette and procedure of recitation within the prayer
+
+## Skipped (other) - duas.org batch c (2026-11-13)
+- Invocation (dhikr with a narration about Imam Hasan): narration-based, treated as hadith. https://www.duas.org/Misc/invocation.htm
+- Seven Haykal: practice of blowing breath after recitation, meaning and use unclear from the page. https://www.duas.org/Misc/seven_haykal.htm
+- Spiritual healings from the diary of Ayatullah Behjat: practical spiritual guidance attributed to a marja not in the approved list; owner to decide. https://www.duas.org/Aytbehjatduas.htm
+- Hazrat Abbas (as) litany: Arabic only (14 English words). https://www.duas.org/hzabbasdua.htm
+- Dua's for the Month of Rajab: index page of other duas, not a dua. https://www.duas.org/kamil.htm
+- Sahifa dua 42 (completing the Quran): stub page, no English text. https://www.duas.org/mobile/sahifasajjadia-dua42-completing-quran.html
