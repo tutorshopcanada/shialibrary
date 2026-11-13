@@ -1095,3 +1095,10 @@ scholars:
     alt_names: []
     notes: "Named as author of the Message of Thaqalayn articles on Kulayni and Sheikh Tusi on al-islam.org (read 2026-11-12). Only this spelling was seen."
     needs_review: true
+
+  - id: rizwan-arastu
+    name: "Rizwan Arastu"
+    role: author
+    alt_names: []
+    notes: "Named as the speaker of the ten-part series An Introduction To Al-Kafi & Hadith Studies on https://al-islam.org/media/what-al-kafi-introduction-al-kafi-hadith-studies-1 (read 2026-11-13). Only this spelling was seen."
+    needs_review: true

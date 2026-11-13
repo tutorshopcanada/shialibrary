@@ -236,11 +236,12 @@
     "thaqalayn-al-tawhid",
     "thaqalayn-al-khisal",
     "al-islam-books-dealing-with-hadith",
-    "al-islam-great-works-al-kafi-howard"
+    "al-islam-great-works-al-kafi-howard",
+    "al-islam-al-kafi-hadith-studies-1"
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "parent heading returns child-heading records; any hadith volume or an overview article on the hadith books near the top passes (2026-11-12: intermediate articles on the four books now outrank the advanced volumes)"
+   "note": "parent heading returns child-heading records; any hadith volume, an overview article or the first Al-Kafi lecture near the top passes (2026-11-12/13: intermediate material on the four books now outranks the advanced volumes)"
   },
   {
    "query": "why do shia cry on ashura",
