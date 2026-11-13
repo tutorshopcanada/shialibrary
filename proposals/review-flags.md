@@ -343,3 +343,55 @@ Note: Islamic Laws of Death and Burial was cataloged because its PDF link is pub
 
 ## Skipped (duplicate, city event) - mizaninstitute.org batch 3 (2026-11-12)
 - 2026-11-12 | Ethical Dilemmas, Ottawa (sisters only, Oct 7, $35 ticket) | https://mizaninstitute.org/ottawasisters/ | city event for the course already catalogued at https://mizaninstitute.org/ethical-dilemmas-godly-decision-making-and-moral-philosophy/ (mizan-ethical-dilemmas); not catalogued twice.
+
+## Skipped (fiqh course) - mizaninstitute.org unprocessed batch (2026-11-13)
+- 2026-11-13 | Ijtihad Unveiled | https://mizaninstitute.org/courses/ijtihad/ | a course on ijtihad, the method of deriving legal rulings from the sources; its subject is fiqh methodology and the page does not name Sistani or Khamenei as the source of rulings. Owner to confirm.
+- 2026-11-13 | Intermediate Rulings of Salat - For Teens | https://mizaninstitute.org/courses/rulingsforteens/ | the subject is the rulings of salat itself (owner decision 2026-11-13: rulings courses are skipped).
+- 2026-11-13 | Women's Ahkam | https://mizaninstitute.org/courses/womens-ahkam/ | rulings on hayd, istihadah and nifas (owner decision 2026-11-13: skipped).
+- 2026-11-13 | Women's Ahkam Premium | https://mizaninstitute.org/courses/womens-ahkam-2/ | same course, premium version (owner decision 2026-11-13: skipped).
+
+## Skipped (bundle or promotion) - mizaninstitute.org unprocessed batch (2026-11-13)
+- 2026-11-13 | Lesson per Page Bundle (Seasons 1-3) | https://mizaninstitute.org/courses/lesson-per-page-bundle/ | bundle of earlier seasons, shown as closed.
+- 2026-11-13 | Lesson Per Page Seasons 1-4 Bundle | https://mizaninstitute.org/courses/lesson-per-page-seasons-1-4-bundle/ | bundle of earlier seasons, shown as closed.
+- 2026-11-13 | Winter Camp Bundle for Teens | https://mizaninstitute.org/courses/winter-camp-bundle-for-teens/ | bundle of two teens offerings sold together.
+
+## Skipped (closed, no way to enrol) - mizaninstitute.org unprocessed batch (2026-11-13)
+- 2026-11-13 | The Spirit of God | https://mizaninstitute.org/courses/436/ | the page shows "This course is currently closed", price "Closed", and no enrol or recording option (owner decision: skip).
+
+## Catalogued with owner-decided inclusions - mizaninstitute.org (2026-11-13)
+- Recordings and offerings shown as "Closed" with materials but no enrol button: mizan-secrets-of-salat-recording-april-2025, mizan-secrets-of-salat-recording-november-2024, mizan-teens-purpose-of-creation-recording-october-2025. Cost is recorded as "Closed" as shown. Owner to confirm these count as recording access.
+- mizan-the-mahdi-part-3-online-november-2025 and mizan-the-mahdi-part-4-online-february-2026 are online runs of courses whose in-person versions are already catalogued (mizan-the-mahdi-part-3-signs-of-reappearance, mizan-the-mahdi-part-4). Separate records, separate URLs.
+- mizan-teens-secret-of-salat and mizan-teens-secret-of-salat-recording-july-2025 are the course page and the July 2025 recording of the same teens course.
+
+## imam-us.org half1 sitemap triage (2026-11-13): skipped and logged
+Fetched 42 pages (43 requests with robots.txt); 14 cataloged (imam-us-* records added 2026-11-13). Most of the half1 slugs are announcements, moon-sighting and birthday or martyrdom notices, event sign-ups, competitions and fundraising, which the owner's skip list covers; those were dropped by slug without fetching.
+
+## Skipped (fiqh, marja not stated) - imam-us.org half1
+- https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-and-kaffarah-1442-2021 (2021-03-12): fiqh reminder; no marja named on the page. The 1439, 1440 and 1441 qada reminders were not fetched and are held on the same ground.
+- https://imam-us.org/what-should-i-do-should-i-get-the-covid-19-vaccine-while-fasting (2021-04-19): WSID fiqh Q&A; no marja named. Also the same question as the cataloged imam-us-can-i-receive-the-covid-19-vaccine-while-fasting.
+- https://imam-us.org/zakat-al-fitrah-2016 and the zakat-al-fitrah 2017, 2018, 2019 and 2020 pages: held as before (price guides, marja not stated); not fetched.
+
+## Skipped (boundary, owner to decide) - imam-us.org half1
+- https://imam-us.org/towards-greater-clarity-in-decision-making-part-iii-istikhara-terms-conditions-and-practical-application-in-contemporary-life (2019-03-13): sets out the terms and conditions of consultative istikhara and cites Sayyid al-Sistani's rulings (5 mentions). It reads as rules of practice, so it may be fiqh. Owner to say whether it is fiqh (marja sistani) or non-fiqh.
+- https://imam-us.org/guidelines-for-conducting-muharram-1442-programs (2020-08-10): COVID-era rules for organisers of Muharram programmes from Sayyid al-Sistani's office. Practical rules, not clearly fiqh and not clearly announcements. Owner to decide. The 1443 version was not fetched.
+
+## Skipped (duplicate) - imam-us.org half1
+- https://imam-us.org/is-salat-al-ayaat-obligatory-for-a-penumbral-lunar-eclipse-11-30-2020 (2020-11-29): same question as the cataloged imam-us-is-salat-al-ayaat... record (url .../is-salat-al-ayaat-obligatory-for-a-penumbral-lunar-eclipse-according-to-sayyid-al-sistani). Not cataloged twice.
+- https://imam-us.org/advice-public-speakers-muharram (2017-09-18): same advice as the cataloged video page video-advice-of-the-supreme-religious-authority-to-the-preachers-and-public-speakers.
+- https://imam-us.org/webinar-at-the-crossroads-of-religious-obligation-and-medicine-what-to-know-about-islamic-rules-covid-19-and-vaccinations (2021-04-21): same webinar as the cataloged video-at-the-crossroads record.
+
+## Skipped (event notice or announcement) - imam-us.org half1
+- I.M.A.M. at Home series pages (imam-at-home-muharram-1442, imam-at-home-ramadan-edition, week-2 and week-4 imam-at-home-ramadan-edition, the two Muharram 1442 episode pages): live-stream notices.
+- Instagram Live and live-event notices: the-merits-etiquette-of-ziyarat-imam-hussain-p, etiquette-of-majlis-instagram-live, preparing-for-the-month-of-ramadan, i-m-a-m-presents-school-work-and-beyond, i-m-a-m-presents-islam-and-mental-health-psychology, a-dialogue-with-cardinal-wilton-gregory-and-sayyid-m-b-kashmiri.
+- Webinar recap: pope-francis-grand-imam-al-tayyeb-and-ayatollah-al-sistani-what-do-their-relationships-mean-for-us (Georgetown panel page, mainly an event notice).
+- Welcome message for Ramadan by Sayyid M.B. Kashmiri (welcoming-holy-month-ramadan, 2018): welcome message, skipped as an announcement.
+- Death anniversary notice: death-holy-prophet-islam-muhammad (2016).
+
+## Skipped (news or report) - imam-us.org half1
+- https://imam-us.org/icymi-sayyid-kashmiri-speaks-at-the-marifa-conference (2020-04-10): news recap of a keynote speech.
+- https://imam-us.org/34916-2 (IMAM annual symposium report, 2019) and the 2016 self-enhancement competition highlights (1617-2): event reports and competition notices.
+- https://imam-us.org/qc (Quran tajwid competition, 2021): competition.
+
+## Skipped (too little text on the page) - imam-us.org half1
+- https://imam-us.org/remembering-prophet-muhammad-pbuh-a-ssaf-shia-sunni-alliance-forum-presentation (2020-11-03): the page holds only a greeting; no description possible.
+- https://imam-us.org/advice-marjaeya-religious-scholars-speakers-holy-month-muharram-1441-h (2019-08-31): link-only page; the statement itself is not on the page.
