@@ -19,14 +19,13 @@ The rules are in `CLAUDE.md` section 6. This page adds the working details.
 - `sample_questions`: 3-8 questions a beginner might type, based on what the page covers.
 - `level`: from what the page says about itself. If the page says nothing (Q&A items never do), use the
   Q&A test below. If still unsure, choose the more advanced level.
-  - **Q&A items (owner decision 2026-11-13):** level by what the reader must already know to follow the
-    question, not by whether it is fiqh.
-    - *beginner*: an everyday situation in plain words (food, pets, work, dress, family, media, money in daily
-      life, basic worship questions a newcomer would type). Everyday stuff is beginner even when the ruling is detailed.
-    - *intermediate*: assumes a basic term or a common worship topic with a twist (khums vs zakat, wudhu
-      barriers, travel, medical or interfaith edge cases).
-    - *advanced*: needs real fiqh vocabulary or a multi-step scenario (qadha/kaffarah chains, inheritance,
-      divorce validity, purification of objects, hajj and slaughter procedure, doubts during prayer).
+  - **Q&A items (owner decision 2026-11-13):** beginner means things people should know and that are easy
+    to digest. Fiqh Q&A is beginner across the board, however detailed the ruling.
+    - *intermediate* is only for contested or confusing topics a newcomer could misread without context:
+      Shia-Sunni matters (praying behind a Sunni imam, a Sunni spouse), the third testimony (shahadah
+      thalithah), la'nah and similar, mut'ah (temporary marriage), seeking help from the Imams, physical
+      mourning customs, and dealing with disbelievers (kafir) as a topic.
+    - *advanced* is not used for fiqh Q&A.
     - Topic (section) records take the level of the typical question inside them.
 - Anything the page does not state stays blank.
 

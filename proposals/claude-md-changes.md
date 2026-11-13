@@ -44,3 +44,7 @@ nearly all sistani.org Q&A defaulted to intermediate (935 of 953). Owner directi
 everyday-situation questions are beginner. The test is written in `docs/cataloging-guide.md`
 (Writing a record > level). Proposed CLAUDE.md edit: add one line to section 5 pointing to it. Pilot of
 100 sistani.org items re-leveled 2026-11-13 (41 beginner, 22 advanced); the rest is pending owner review.
+Superseded the same day: owner decision is that all fiqh Q&A is beginner, and only contested or confusing
+topics (Shia-Sunni matters, third testimony, la'nah, mut'ah, seeking help from the Imams, physical mourning
+customs, kafir topic) are intermediate. All 953 Q&A records re-leveled on that basis; the intermediate list is in
+the commit message of that change.
