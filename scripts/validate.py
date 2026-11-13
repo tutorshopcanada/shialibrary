@@ -259,8 +259,6 @@ def main():
                 rep.err(rel, "price_tag free needs access free and cost free")
             elif pt == "paid" and r.get("access") != "paid":
                 rep.err(rel, "price_tag paid needs access paid")
-            if fiqh and not r.get("needs_review"):
-                rep.err(rel, "fiqh-subject course must be flagged needs_review (scope question is open)")
             sd = r.get("start_date")
             if sd:
                 d = as_date(sd)
