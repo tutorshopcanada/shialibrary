@@ -199,4 +199,4 @@ Not cataloged, owner to decide:
 - Tasneem "Hell in the Quran" says "Class begins on June 10th 2023" but the page does not say it has ended, so it was cataloged.
 
 ### Update 2026-11-13
-Owner decisions on the institutes batch: fiqh-subject courses are in scope (taught by scholars), so the 8 Tasneem and 12 Hujjah fiqh courses listed above were cataloged after all, with `marja` blank. Fiqh questions and answers on al-islam.org are in scope on the same basis (none cataloged yet). The Hujjah FAQ page and the extra SRI item types stay uncataloged for now. Instructors are not added to `scholars.yaml` (authors only).
+Owner decisions on the institutes batch: fiqh-subject courses are in scope (taught by scholars), so the 8 Tasneem and 12 Hujjah fiqh courses listed above were cataloged after all, with `marja` blank. The fiqh questions and answers on al-islam.org are Sayyid Sistani's per the owner (2026-11-13), so they use marja sistani (none cataloged yet). The Hujjah FAQ page and the extra SRI item types stay uncataloged for now. Instructors are not added to `scholars.yaml` (authors only).

@@ -22,10 +22,10 @@ itself only retrieves and ranks those records.
   answers, and books or pages whose purpose is to state or explain legal rulings.
   A fiqh record names whose rulings it follows. Fiqh records describe what a page is
   about; they never restate the ruling.
-  **Exception (owner decision 2026-11-13):** fiqh-subject courses at approved institutes, and
-  fiqh questions and answers on al-islam.org, are in scope because they are taught or answered
-  by scholars. They do not need to follow Sayyid Sistani or Sayyid Khamenei, and `marja` stays
-  blank unless the page names one.
+  **Exception (owner decision 2026-11-13):** fiqh-subject courses at approved institutes are in scope
+  because scholars teach them. They do not need to follow Sayyid Sistani or Sayyid Khamenei, and
+  `marja` stays blank unless the page names one. The fiqh questions and answers on al-islam.org
+  are Sayyid Sistani's and are cataloged with `marja: sistani`.
 - **Hadith is never fiqh.** Anything that is a hadith collection carries the Hadith label,
   whatever its subject. Narrations about prayer, fasting or law are not rulings on their own,
   so they are not covered by the two-marja' restriction. They are tagged under the Hadith
@@ -64,7 +64,6 @@ itself only retrieves and ranks those records.
 ## What is not included
 
 - Other branches (Ismaili, Zaidi and others) and non-English material.
-- Fiqh books and rulings from scholars other than the two named above (courses and al-islam.org
-  questions and answers excepted, see Scope).
+- Fiqh books and rulings from scholars other than the two named above (institute courses excepted, see Scope).
 - Anything from a website not on the approved list.
 - Any generated answer, summary of a ruling, or religious opinion.
