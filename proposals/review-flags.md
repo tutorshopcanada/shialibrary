@@ -453,3 +453,6 @@ Pages whose main content is how to perform a prayer, or that state rulings. Fiqh
 - Skipped (same book as an existing record): https://imam-us.org/islamic-laws-of-food-drink
 - Not fetched (404): https://imam-us.org/zakat-al-fitrah-2016 and the istikhara Part III page (https://imam-us.org/towards-greater-clarity-in-decision-making-part-iii-istikhara-terms-conditions-and-practical-application-in-contemporary-life)
 - Statements from non-marja authors (I.M.A.M. or the council) and a message by Sayyid Mohammad Rida al-Sistani (not in scholars.yaml): see the list in the worker's scratch notes; owner to decide.
+
+## Skipped (fiqh, marja not stated) - held pages decision (2026-11-13)
+- https://imam-us.org/an-important-advice-regarding-misuses-of-the-power-of-religious-authority-talaq-al-hakim-al-shari (dated 2021-07-15). Owner asked for this page to be cataloged, but the page does not say that Sayyid Sistani or Sayyid Khamenei is the source of its guidance. It is issued by "The Internal Affairs Committee, The Council of Shia Muslim Scholars of North America", so the office-of-Sistani assumption in the brief does not hold. Its guidance covers the legal conditions for a divorce by a religious authority, which is fiqh, so it was skipped under the fiqh rule. Owner to decide: add a marja, or accept it as a non-fiqh advisory statement.
