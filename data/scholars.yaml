@@ -1113,3 +1113,29 @@ scholars:
       - "Shaykh Amin"
     notes: "Named as presenter on https://mizaninstitute.org/shia-islamic-belief-system/, https://mizaninstitute.org/a-commentary-on-nahj-al-balaghah/, https://mizaninstitute.org/sahifa/, https://mizaninstitute.org/reflections-on-ziyarat-ashura/ and https://mizaninstitute.org/the-stages-of-akhlaaq-in-the-quran/ (read 2026-11-12)."
     needs_review: true
+
+  - id: sayyid-mb-kashmiri
+    name: "Sayyid M.B. Kashmiri"
+    role: author
+    alt_names:
+      - "Sayyid M. B. Kashmiri"
+    notes: "Named as author of Shia Muslims: Our Identity, Our Vision, and the Way Forward on https://imam-us.org/shia-muslims-our-identity-our-vision-and-the-way-forward (read 2026-11-12). Described on that page as a Shia religious scholar and North American representative of Shia jurists."
+    needs_review: true
+
+  - id: shaykh-habib-al-kadhimi
+    name: "Shaykh Habib al-Kadhimi"
+    role: author
+    alt_names: []
+    notes: "Named as author of The Illuminating Lantern on https://imam-us.org/the-illuminating-lantern (read 2026-11-12)."
+    needs_review: true
+
+  - id: behjat
+    name: "Grand Ayatullah Mohammad Taqi Behjat"
+    role: author
+    alt_names:
+      - "Ayatullah Bahjat"
+      - "Ayatullah Taqi Behjat"
+      - "Ayatullah TAQI BEHJAT"
+      - "Late Ayatullah Bahjat"
+    notes: "Named on https://www.duas.org/Aytbehjatduas.htm as the source of the supplications (from his diary, compiled by Maulana Zaki Baqri) (read 2026-11-13). Added for a non-fiqh dua page; not an approved marja for fiqh."
+    needs_review: true
