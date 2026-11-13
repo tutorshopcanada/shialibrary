@@ -37,3 +37,10 @@
 13. **Build order.** The search page was scheduled after scaling up (step 9). It was built
     alongside the pilot instead, so pilot records can be reviewed in the real interface.
 14. Section 8 asks for 50-100 starter questions; step 7 asks for 20. Read as 20 for the pilot.
+
+## Proposed (2026-11-13): Q&A level rule
+Section 5 "Level rules" does not say how to level Q&A items, whose pages state no audience, so
+nearly all sistani.org Q&A defaulted to intermediate (935 of 953). Owner direction 2026-11-13:
+everyday-situation questions are beginner. The test is written in `docs/cataloging-guide.md`
+(Writing a record > level). Proposed CLAUDE.md edit: add one line to section 5 pointing to it. Pilot of
+100 sistani.org items re-leveled 2026-11-13 (41 beginner, 22 advanced); the rest is pending owner review.
