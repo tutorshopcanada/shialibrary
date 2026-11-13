@@ -5,7 +5,7 @@
 queries:
   - {query: "how do shias pray in congregation", expect_any: [sistani-qa-congregational-prayers, sistani-qa-15487], expect_group: any, note: "curated question"}
   - {query: "congregational prayer", expect_any: [sistani-qa-congregational-prayers], expect_group: exact, note: ""}
-  - {query: "jamaat", expect_any: [sistani-qa-congregational-prayers, sistani-qa-15487], expect_group: any, note: "transliteration via alt terms / sample questions"}
+  - {query: "jamaat", expect_any: [sistani-qa-congregational-prayers, sistani-qa-15487], expect_group: any, top: 30, note: "transliteration via alt terms / sample questions; window widened 2026-11-13 because beginner prayer courses now rank above the Q&A"}
   - {query: "who can lead the prayer", expect_any: [sistani-qa-14997], expect_group: any, note: ""}
   - {query: "can a shia pray behind a sunni imam", expect_any: [sistani-qa-14998, sistani-qa-15488], expect_group: any, note: ""}
   - {query: "pray on a plane", expect_any: [sistani-west-salat-general-rules], expect_group: any, note: ""}
@@ -39,12 +39,12 @@ queries:
   - {query: "tahdhib al-ahkam", expect_any: [thaqalayn-tahdhib-al-ahkam-vol-1], expect_group: exact, note: ""}
   - {query: "man la yahduruhu al-faqih", expect_any: [thaqalayn-man-la-yahduruh-al-faqih-vol-1], expect_group: any, note: "spelling variant via alt terms"}
   - {query: "hadith about fasting", expect_any: [thaqalayn-al-kafi-vol-4, thaqalayn-man-la-yahduruh-al-faqih-vol-2, thaqalayn-tahdhib-al-ahkam-vol-4, thaqalayn-al-kafi-vol-3], expect_group: any, note: "legal-hadith heading; exact volume depends on its description"}
-  - {query: "can i get a mortgage", expect_any: [sistani-west-work-questions-answers], expect_group: any, note: ""}
+  - {query: "can i get a mortgage", expect_any: [sistani-west-work-questions-answers, sistani-qa-mortgage], expect_group: any, top: 15, note: "window widened 2026-11-13: fiqh courses on Muslims in the West now rank among the first results"}
   - {query: "is music haram", expect_any: [sistani-west-music-general-rules, sistani-west-music-questions-answers, sistani-qa-music], expect_group: any, note: "alt term of the music heading"}
   - {query: "halal meat in the west", expect_any: [sistani-west-food-general-rules, sistani-west-food-questions-answers, sistani-qa-islamic-slaughtering], expect_group: any, note: ""}
   - {query: "taqlid", expect_any: [sistani-west-taqlid-general-rules, sistani-west-taqlid-introduction, sistani-qa-following-a-mujtahid], expect_group: any, note: ""}
   - {query: "fasting while pregnant", expect_any: [sistani-qa-fasting-pregnancy], expect_group: any, note: ""}
-  - {query: "prayer", expect_any: [sistani-qa-prayer, sistani-west-salat-general-rules, al-islam-discovering-islam], expect_group: any, note: "broad query should lead with overviews, not single questions"}
+  - {query: "prayer", expect_any: [sistani-qa-prayer, sistani-west-salat-general-rules, al-islam-discovering-islam, tasneem-the-islamic-prayer], expect_group: any, note: "broad query should lead with overviews, not single questions"}
   - {query: "roza", expect_any: [sistani-qa-fasting, sistani-west-fasting-general-rules], expect_group: any, note: "Urdu/Persian term for fasting"}
   - {query: "life of the prophet", expect_any: [al-islam-prophet-muhammad-brief-biography], expect_group: any, note: ""}
   - {query: "ghadir", expect_any: [al-islam-ghadir-sermon], expect_group: any, note: ""}

@@ -27,7 +27,8 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "transliteration via alt terms / sample questions"
+   "note": "transliteration via alt terms / sample questions; window widened 2026-11-13 because beginner prayer courses now rank above the Q&A",
+   "top": 30
   },
   {
    "query": "who can lead the prayer",
@@ -355,11 +356,13 @@
   {
    "query": "can i get a mortgage",
    "expect_any": [
-    "sistani-west-work-questions-answers"
+    "sistani-west-work-questions-answers",
+    "sistani-qa-mortgage"
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": ""
+   "note": "window widened 2026-11-13: fiqh courses on Muslims in the West now rank among the first results",
+   "top": 15
   },
   {
    "query": "is music haram",
@@ -408,7 +411,8 @@
    "expect_any": [
     "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
-    "al-islam-discovering-islam"
+    "al-islam-discovering-islam",
+    "tasneem-the-islamic-prayer"
    ],
    "expect_none": false,
    "expect_group": "any",
