@@ -314,3 +314,32 @@ Note: Islamic Laws of Death and Burial was cataloged because its PDF link is pub
 
 ## Not fetched (requests limit)
 - Other 2016-2026 "Reminder about Qada / Feed the Fasting" annual notices and the zakat al-Fitrah yearly guides: only the 2026 Qada reminder was cataloged; older years are near-duplicates.
+
+## Skipped (polemical) - batch al-islam-chapters (2026-11-12)
+- 2026-11-12 | An Introduction to the Glorious Quran, chapter 'Is there any Parallel to The Miraculous Qur'an?' | https://al-islam.org/introduction-glorious-quran-bahram-samii/there-any-parallel-miraculous-quran | Compares the Bible and the Qur'an to argue the Qur'an's uniqueness; treated as comparative polemic against another scripture, skipped.
+
+## Skipped (fiqh, marja not stated) - duas.org M-Z batch (2026-11-12)
+- Sajda Shukr / Thanksgiving Prostration | https://www.duas.org/mobile/sajda-shukr.html | the page is mainly a statement of rulings on the thanksgiving prostration (validity, how it may be done) and does not name Sistani or Khamenei as the source of those rulings. Not cataloged.
+- Recommended Recitations During Salaat and the salat pages (Salaat Layl, Salaat of Masumeen, Salat Jafar Tayyar) were not fetched in this batch; they are listed in the scratch unprocessed.txt for the next worker to check under the fiqh rule.
+
+## imam-us.org post-sitemap pass (2026-11-12): skipped and logged
+### Skipped (fiqh, marja not stated or not an approved marja)
+- 2026-11-12 | Fasting on the Day of Ashura | https://imam-us.org/fasting-on-ashura | response by Sayyid Mohammed Saeed al-Hakeem, who is not an approved marja. Owner to confirm.
+- 2026-11-12 | Why Is Taqlid Necessary in Islam? | https://imam-us.org/taqlid-necessary-islam | fiqh methodology (emulation); no marja named on the page.
+- 2026-11-12 | Principles of Emulation (Taqlid) | https://imam-us.org/principles-of-emulation-taqlid | fiqh methodology (conditions for a jurist); no marja named on the page.
+- 2026-11-12 | ICYMI: How are Islamic Laws Produced? | https://imam-us.org/icymi-how-are-islamic-laws-produced | fiqh methodology conversation; Sistani mentioned only in passing.
+- 2026-11-12 | The Hijab Meaning Explored | https://imam-us.org/hijab-meaning-explored | borders on dress rulings; Sistani named 5 times. Owner to decide whether it is fiqh.
+- 2026-11-12 | The Horizon in the School of al-Sayyid al-Sistani | https://imam-us.org/the-horizon-in-the-school-of-al-sayyid-al-sistani | marja named; only the opening was read, so its purpose is not established. Owner to decide.
+### Skipped (polemical)
+- 2026-11-12 | Questions from the BBC about some inappropriate practices, and the responses to them | https://imam-us.org/questions-bbc-inappropriate-practices-responses | a rebuttal to media criticism of religious practices. Owner to decide.
+### Skipped (duplicate)
+- 2026-11-12 | Journey to Karbala: Arbaeen Guide | https://imam-us.org/journey-to-karbala-arbaeen-guide | same title and content as the record for https://imam-us.org/journey-to-karbala-arbaeen-guide-2 (already cataloged).
+### Skipped (event notice, news, promotion or no text)
+- Let's Talk Religion "join us" live-session notices: https://imam-us.org/lets-talk-religion-ep-2-3 , https://imam-us.org/lets-talk-religion-ep-4-5 , https://imam-us.org/lets-talk-religion-ep-6-7 , https://imam-us.org/lets-talk-religion-ep-10-11 , https://imam-us.org/lets-talk-religion-ep-1-introduction-ubudiyyah , https://imam-us.org/m-m-presents-lets-talk-religion
+- Event or webinar notices: https://imam-us.org/connect-with-the-marjaeya-muharram-1440 , https://imam-us.org/the-inner-dimensions-of-supplication , https://imam-us.org/spiritual-abuse-understanding-healing-as-a-community , https://imam-us.org/the-contributions-of-imam-jafar-al-sadiq-p
+- News or event reports: https://imam-us.org/finding-unity-majalis-imam-hussain-p-photo-essay , https://imam-us.org/spiritual-journey-remember , https://imam-us.org/video-the-problem-of-pain-and-suffering
+- Instagram live recap and service promotion: https://imam-us.org/icymi-lets-talk-thanksgiving , https://imam-us.org/introducing-azwaja
+- No article text (only a widget and related-post links): https://imam-us.org/12-signs-accompanying-the-reappearance-of-the-awaited-mahdi-pbuh
+
+## Skipped (duplicate, city event) - mizaninstitute.org batch 3 (2026-11-12)
+- 2026-11-12 | Ethical Dilemmas, Ottawa (sisters only, Oct 7, $35 ticket) | https://mizaninstitute.org/ottawasisters/ | city event for the course already catalogued at https://mizaninstitute.org/ethical-dilemmas-godly-decision-making-and-moral-philosophy/ (mizan-ethical-dilemmas); not catalogued twice.
