@@ -48,3 +48,4 @@ Superseded the same day: owner decision is that all fiqh Q&A is beginner, and on
 topics (Shia-Sunni matters, third testimony, la'nah, mut'ah, seeking help from the Imams, physical mourning
 customs, kafir topic) are intermediate. All 953 Q&A records re-leveled on that basis; the intermediate list is in
 the commit message of that change.
+Narrowed again 2026-11-13: only mut'ah and la'nah Q&A are intermediate; every other fiqh Q&A is beginner.

@@ -21,10 +21,9 @@ The rules are in `CLAUDE.md` section 6. This page adds the working details.
   Q&A test below. If still unsure, choose the more advanced level.
   - **Q&A items (owner decision 2026-11-13):** beginner means things people should know and that are easy
     to digest. Fiqh Q&A is beginner across the board, however detailed the ruling.
-    - *intermediate* is only for contested or confusing topics a newcomer could misread without context:
-      Shia-Sunni matters (praying behind a Sunni imam, a Sunni spouse), the third testimony (shahadah
-      thalithah), la'nah and similar, mut'ah (temporary marriage), seeking help from the Imams, physical
-      mourning customs, and dealing with disbelievers (kafir) as a topic.
+    - *intermediate* is only for mut'ah (temporary marriage) and la'nah (cursing), which can confuse a
+      newcomer without context. Everything else, including Shia-Sunni matters, the third testimony and
+      mourning customs, is beginner.
     - *advanced* is not used for fiqh Q&A.
     - Topic (section) records take the level of the typical question inside them.
 - Anything the page does not state stays blank.
