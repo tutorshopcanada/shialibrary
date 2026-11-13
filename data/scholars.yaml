@@ -159,6 +159,7 @@ scholars:
     alt_names:
       - "Mulla Asgharali M M Jaffer"
       - "Asgharali M M Jaffer"
+      - "Asghar Ali M. M. Jaffer"
     notes: "Named as author on https://al-islam.org/nahjul-balagah-revisited-introducing-imam-ali-ibn-abu-talib-asgharali-m-m-jaffer (read 2026-11-10)."
     needs_review: true
 
@@ -1112,4 +1113,39 @@ scholars:
       - "Amin Rastani"
       - "Shaykh Amin"
     notes: "Named as presenter on https://mizaninstitute.org/shia-islamic-belief-system/, https://mizaninstitute.org/a-commentary-on-nahj-al-balaghah/, https://mizaninstitute.org/sahifa/, https://mizaninstitute.org/reflections-on-ziyarat-ashura/ and https://mizaninstitute.org/the-stages-of-akhlaaq-in-the-quran/ (read 2026-11-12)."
+    needs_review: true
+
+  - id: mujtaba-sabouri
+    name: "Mujtaba Sabouri"
+    role: author
+    alt_names: []
+    notes: "Named as author of Love And Hate For God's Sake on https://al-islam.org/love-and-hate-gods-sake-mujtaba-sabouri/meanings-cussing-sabb-and-malediction-lan-and-their (read 2026-11-13)."
+    needs_review: true
+
+  - id: dastghaib-shirazi
+    name: "Sayyid Abdul Husayn Dastaghaib Shirazi"
+    role: author
+    alt_names: []
+    notes: "Named as author of Greater Sins, Volume 3 on https://al-islam.org/greater-sins-volume-3-sayyid-abdul-husayn-dastghaib-shirazi/forty-third-greater-sin-insulting (read 2026-11-13); the page spells the name Dastaghaib."
+    needs_review: true
+
+  - id: imdad-imam
+    name: "Sayyid Imdad Imam"
+    role: author
+    alt_names: []
+    notes: "Named as author of Misbah-uz-Zulam, Roots of the Karbala' Tragedy on https://al-islam.org/misbah-uz-zulam-roots-karbala-tragedy-sayyid-imdad-imam/according-ahlul-sunnat-it-permitted-curse (read 2026-11-13)."
+    needs_review: true
+
+  - id: usama-al-atar
+    name: "Usama al-Atar"
+    role: author
+    alt_names: []
+    notes: "Named as speaker on https://al-islam.org/media/when-muawiya-cursed-imam-ali (read 2026-11-13)."
+    needs_review: true
+
+  - id: mohammad-al-musawi
+    name: "Sayyed Mohammad Al-Musawi"
+    role: author
+    alt_names: []
+    notes: "Named as the answerer on https://al-islam.org/ask/did-the-prophet-s-do-laana-on-the-hypocrites-and-disassociate-from-them-the-way-some-muslims-do-today/sayyed-mohammad-al-musawi (read 2026-11-13)."
     needs_review: true

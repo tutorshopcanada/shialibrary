@@ -49,3 +49,9 @@ topics (Shia-Sunni matters, third testimony, la'nah, mut'ah, seeking help from t
 customs, kafir topic) are intermediate. All 953 Q&A records re-leveled on that basis; the intermediate list is in
 the commit message of that change.
 Narrowed again 2026-11-13: only mut'ah and la'nah Q&A are intermediate; every other fiqh Q&A is beginner.
+
+## Applied 2026-11-13: no polemic flagging
+Owner decision: the "possible polemic" flag is removed for all sources (al-islam.org, sistani.org,
+imam-us.org and the rest). Polemic or contested pages are cataloged like any other, with neutral
+wording and no `needs_review`. CLAUDE.md rule 6 updated. The fiqh-boundary flag (a possible fiqh work
+by someone other than Sistani or Khamenei) and the "too little to describe" flag stay.
