@@ -291,6 +291,7 @@ Work in **batches of a manageable size** and stop to report. Do not try to do an
 
 - Check each site's **robots.txt and terms of use** before bulk fetching, and respect them. If a site disallows automated access, stop and tell the owner. Do not work around blocks.
 - Rate-limit: no more than about one request per second or two.
+- **al-islam.org concurrency trial (owner decision 2026-11-14):** its robots.txt asks for a 10-second delay. The owner authorized a trial of at most TWO fetching agents at once on al-islam.org (each still waiting at least 10 seconds between its own requests, so about one request per 5 seconds overall). Stop every agent at the first refusal, challenge page, HTTP 403/429 or sign of blocking, log it in `progress/failed-al-islam.txt`, tell the owner and do not retry. No other site, and no more than two agents, without a new owner decision. Contacting the site owners about the catalog is still advised.
 - Prefer **sitemaps, RSS feeds, and official APIs** over scraping.
 - Do not bypass logins, paywalls, CAPTCHAs, or other access controls.
 - If a fetch is refused or fails, log it and move on. Do not retry aggressively or try alternate routes around a block.
