@@ -456,3 +456,37 @@ Pages whose main content is how to perform a prayer, or that state rulings. Fiqh
 
 ## Skipped (fiqh, marja not stated) - held pages decision (2026-11-13)
 - https://imam-us.org/an-important-advice-regarding-misuses-of-the-power-of-religious-authority-talaq-al-hakim-al-shari (dated 2021-07-15). Owner asked for this page to be cataloged, but the page does not say that Sayyid Sistani or Sayyid Khamenei is the source of its guidance. It is issued by "The Internal Affairs Committee, The Council of Shia Muslim Scholars of North America", so the office-of-Sistani assumption in the brief does not hold. Its guidance covers the legal conditions for a divorce by a religious authority, which is fiqh, so it was skipped under the fiqh rule. Owner to decide: add a marja, or accept it as a non-fiqh advisory statement.
+
+## imam-us.org chunk 2 skips (2026-11-15)
+
+Fetched and skipped:
+- https://imam-us.org/week-2-imam-at-home-ramadan-edition | programme index page for a video series with no content of its own (event/programme notice)
+- https://imam-us.org/imam-at-home-ramadan-edition | programme index page for a video series with no content of its own (event/programme notice)
+- https://imam-us.org/icymi-sayyid-kashmiri-speaks-at-the-marifa-conference | news coverage of a student conference
+- https://imam-us.org/imam-presents-panel-discussion | event report and live-stream notice for a panel
+- https://imam-us.org/judeo-christian-relationships-early-muslims-panel-discussion | event announcement for a panel (live-stream notice)
+- https://imam-us.org/arbaeen-imam-hussain-ibn-ali-1440 | anniversary notice (the 40th day of the martyrdom of Imam Hussain)
+- https://imam-us.org/17th-annual-conference-shia-muslim-scholars-north-america | news recap of an annual conference
+
+Skipped by title without fetching (notices, news, fundraising, greetings, events; no content record):
+- https://imam-us.org/an-update-on-the-recovery-of-his-eminence-sayyid-al-sistani | news update
+- https://imam-us.org/letter-absence-students-going-arbaeen-pilgrimage | announcement
+- https://imam-us.org/support-people-nyc-ramadan-relief-fund | fundraising
+- https://imam-us.org/sayyid-sistani-resumes-daily-activities | news
+- https://imam-us.org/join-us-live-muharram-1441-ah | event sign-up
+- https://imam-us.org/eid-al-adha-1440 | greeting notice
+- https://imam-us.org/feed-fasting-report-2019 | fundraising/activity report
+- https://imam-us.org/ayatullah-sistani-un-representative-assistance-mission-iraq | news
+- https://imam-us.org/sayyid-sistani-meets-un-team-investigating-isis-crimes | news
+- https://imam-us.org/lunar-eclipse-north-america-january-2019 | notice
+- https://imam-us.org/m-m-s-board-directors-meets-grand-ayatullah-sayyid-ali-al-sistani | news
+- https://imam-us.org/grand-ayatullah-al-sistani-receives-un-special-representative-iraq | news
+- https://imam-us.org/holy-prophet-of-islam-death-anniversary-2 | anniversary notice
+- https://imam-us.org/m-m-chairman-visits-unity-islamic-center-cleveland | news
+- https://imam-us.org/lunar-eclipse-north-america-january-2018 | notice
+- https://imam-us.org/imam-delegation-attends-new-york-encounter-2018 | news
+- https://imam-us.org/new-york-encounter-2018 | event notice
+- https://imam-us.org/eid-al-adha-1439 | greeting notice
+- Birthday, martyrdom and Islamic-month notices (moon sighting, month greetings): birthday-of-imam-ali-al-hadi-1441, martyrdom-of-imam-ali-al-hadi-1441, birthday-of-imam-muhammad-al-baqir-1441, birthday-of-sayyida-fatimah-al-zahra-1441, martyrdom-sayyida-fatimah-al-zahra-1441-3, birthday-of-sayyida-zaynab-bint-ali-1441, martyrdom-sayyida-fatimah-al-zahra-1441-2, birthday-of-prophet-muhammad-and-imam-jafar-sadiq-1440, birthday-of-imam-hasan-al-askari-1440, martyrdom-imam-hasan-al-askari-1440, martyrdom-of-imam-jawad-copy, islamic-month-of-dhu-al-hjjah-1439-ah, martyrdom-of-imam-jawad-1439, birthday-of-imam-ridha-1439, islamic-month-of-dhu-al-qidah-2018, martyrdom-of-imam-jafar-sadiq, islamic-month-of-shawwal-2018, martyrdom-of-imam-ali-ramadan, birthday-of-imam-hasan-1439, islamic-month-of-ramadan-2018, birthday-of-imam-mahdi-1439, birthday-of-imam-zayn-al-abidin-1439, birthday-of-hadhrat-abbas-1439, birthday-of-imam-hussain-ibn-ali-1439, islamic-month-of-shaban-1439, martyrdom-of-imam-musa-kadhim-rajab, death-of-lady-zainab-al-kubra-rajab, birthday-of-imam-ali-ibn-abi-talib-1439, birthday-imam-muhammad-al-taqi-al-jawad-rajab, martyrdom-of-imam-ali-al-naqi-al-hadi-rajab, birthday-of-imam-ali-al-naqi-al-hadi, birthday-of-imam-muhammad-al-baqir, islamic-month-of-rajab-2018, birthday-of-lady-fatimah-bint-muhammad, martyrdom-of-fatima-the-daughter-of-muhammad-2018, birthday-of-zaynab-al-kubra-2018, birthday-of-imam-hassan-al-askari (all at https://imam-us.org/<slug>)
+
+Catalog result: 1 record (imam-us-statement-council-shia-scholars-george-floyd). No fiqh pages in this chunk. Requests used: 8 of 80.

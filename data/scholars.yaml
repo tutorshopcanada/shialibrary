@@ -1139,3 +1139,11 @@ scholars:
       - "Late Ayatullah Bahjat"
     notes: "Named on https://www.duas.org/Aytbehjatduas.htm as the source of the supplications (from his diary, compiled by Maulana Zaki Baqri) (read 2026-11-13). Added for a non-fiqh dua page; not an approved marja for fiqh."
     needs_review: true
+
+  - id: sayyid-sameer-ali
+    name: "Sayyid Sameer Ali"
+    role: author
+    alt_names:
+      - "Sayyid Sameer Ali"
+    notes: "Named on https://imam-us.org/r-i-s-e-leads-mental-health-wellness-workshop-on-islam-grief (read 2026-11-15) as the leader of a workshop on grief; also named on https://imam-us.org/r-i-s-e-attends-sacred-journeys-network-conference-2026 as a presenter. Name variants beyond this spelling not verified."
+    needs_review: true

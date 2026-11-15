@@ -46,3 +46,8 @@
 2026-11-13 | https://www.duas.org/mobile/new-month-dua-rights.html | stub page (2.8 KB shell, no English text); not cataloged
 2026-11-13 | https://www.duas.org/mobile/mubahila-zilhajj24.html | stub page (2.8 KB shell, no English text); not cataloged
 2026-11-13 | https://www.duas.org/mobile/sahifasajjadia-dua42-completing-quran.html | stub page (2.8 KB shell, no English text); Sahifa dua 42; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-ali-shrine.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-as-shrine.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-hazrat-abbas.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-ummulbaneen.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-third-jamea.html | stub page (2.8 KB shell, no English text); not cataloged
