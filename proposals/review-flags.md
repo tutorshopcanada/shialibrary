@@ -700,3 +700,86 @@ Skipped as not in scope (news, event reports, notices, listings, moon-sighting o
 - 2026-11-15 | https://imam-us.org/birthday-of-imam-ali-ibn-abi-talib-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
 
 Already cataloged in this chunk: welcoming-holy-month-ramadan, a-message-from-the-representative-of-the-jurist-on-the-eve-of-the-15th-of-shaban, video-an-important-message-regarding-coronavirus-covid-19-from-the-representative-of-the-jurist. eid-al-fitr was already in the done file.
+
+## imam-us.org chunk 4 skips (2026-11-15)
+
+Cataloged from this chunk (3): imam-us-video-3-bits-advice-better-ramadan, imam-us-video-preparing-nights-of-destiny, imam-us-arbaeen-visitor-recommendations-2021 (the 2021 edition of the Arbaeen visitor guide; the 1444 and 1445 editions were already cataloged). Everything else below was skipped.
+
+### Skipped (fiqh, marja not stated)
+- 2021-04-19 | What Should I Do? Should I Get the COVID-19 Vaccine While Fasting? | https://imam-us.org/what-should-i-do-should-i-get-the-covid-19-vaccine-while-fasting | the page names no marja.
+- 2026-04-27 | Going for Preparing for Hajj: a Spiritual and Legal Guide (Shaykh Faiyaz Jaffer) | https://imam-us.org/going-for-preparing-for-hajj-a-spiritual-legal-guide-dr-shaykh-faiyaz-jaffer | fiqh subject (Hajj rulings); no marja named; also a webinar page.
+
+### Skipped (fiqh, another or unapproved marja)
+- 2022-09-03 | Advice from Ayatullah Shaykh Ishaq al-Fayyad to Believers in the West | https://imam-us.org/advice-from-ayatullah-shaykh-ishaq-al-fayyad-to-believers-in-the-west | Fayyad is not an approved marja; held for owner, as with the earlier Fayyad advice.
+
+### Skipped (fiqh matter from Sistani's office, owner to decide)
+- 2014-11-24 | Clarification Regarding the Determination of Arbaeen | https://imam-us.org/clarification-regarding-the-determination-of-arbaeen | a calendar ruling-type statement from the office; not cataloged.
+- 2022-08-29 | Emergency Khums Authorization: Flood Relief in Pakistan and Afghanistan | https://imam-us.org/emergency-khums-authorization-flood-relief-in-pakistan-and-afghanistan | khums authorization attached to a relief appeal; fiqh matter and fundraising.
+
+### Skipped (duplicate of an existing record)
+- 2020-05-06 | The difference between imsak time and fajr time | https://imam-us.org/difference-time-imsak-fajr-prayer | same article as imam-us-imsak-and-fajr-time (other URL).
+- 2017-12-07 | Youth: Advice from Grand Ayatullah Sayyid Ali al-Sistani | https://imam-us.org/advice-to-youth-ayatullah-sayyed-sistani | same as imam-us-advice-to-youth-sayyid-al-sistani; the English PDF is also login-only.
+- 2022-08-19 | Reminder: Get Your Copy of "Who is Hussain?" and "Who is Zaynab?" Today | https://imam-us.org/get-your-copy-of-who-is-hussain-and-who-is-zaynab-today | promotional reminder for books already cataloged (imam-us-who-is-hussain-book, imam-us-who-is-zaynab-book).
+- 2023-08-17 | "Who is Hussain?" and "Who is Zaynab?" sales page | https://imam-us.org/get-your-copy-of-who-is-hussain-and-who-is-zaynab-today-2 | same two books.
+- 2026-06-12 | Discover the Lives of Imam Hussain (p) and Lady Zaynab (p) This Muharram | https://imam-us.org/discover-the-lives-of-imam-hussain-p-and-lady-zaynab-p-this-muharram | sales promotion for the same two books.
+- 2016-11-08 | God's Emissaries: Adam to Jesus | https://imam-us.org/gods-emissaries-adam-to-jesus | same book as imam-us-book-gods-emissaries-adam-to-jesus (its URL ends in -2).
+
+### Skipped (login-only PDF)
+- The English PDF of the Sistani youth booklet requires a login (see the duplicate entry above).
+
+### Skipped (news, event notices and sign-ups, announcements, fundraising, product or shop promotion, statements, other languages)
+- 2021-03-06 | His Holiness Pope Francis Meets Ayatullah Sayyid al-Sistani | https://imam-us.org/pope-francis-meets-ayatullah-sayyid-al-sistani | news report.
+- 2021-03-13 | A Dialogue with Cardinal Wilton Gregory and Sayyid M.B. Kashmiri | https://imam-us.org/a-dialogue-with-cardinal-wilton-gregory-and-sayyid-m-b-kashmiri | webinar notice.
+- 2021-03-30 | Mufid Academic Seminary Fall 2021 Registration Open | https://imam-us.org/62010-2 | admissions announcement.
+- 2021-04-07 | Preparing for the Month of Ramadan | https://imam-us.org/preparing-for-the-month-of-ramadan | Instagram live notice.
+- 2021-03-10 | Quran Tajwid Recitation Competition, Ramadan 1442 | https://imam-us.org/qc | competition.
+- 2021-04-16 | Clarification on the Beginning of the Holy Month of Ramadan 1442 A.H. | https://imam-us.org/clarification-on-the-beginning-of-the-holy-month-of-ramadan-1442-a-h | moon-sighting notice.
+- 2021-05-12 | Statement Regarding the Ongoing Confrontations in Occupied Palestine | https://imam-us.org/statement-regarding-the-ongoing-confrontations-in-occupied-palestine | statement on current events.
+- 2021 | Lunar and solar eclipse notices | https://imam-us.org/lunar-eclipse-in-north-america-on-wednesday-may-26-2021, https://imam-us.org/solar-eclipse-june-10-2021, https://imam-us.org/lunar-eclipse-over-north-america-on-friday-november-19th-2021 | calendar notices.
+- 2021-06-01 | Do The Right Thing: COVID-19 Vaccine PSA | https://imam-us.org/do-the-right-thing-covid-19-vaccine-psa | public service announcement.
+- 2021-06-04 | The Quest for Knowledge | https://imam-us.org/67488-2 | Instagram live notice.
+- 2021-07-26 | Dr. Hassan Abbas to Join Sr. Salimi | https://imam-us.org/dr-hassan-abbas-to-join-sr-salimi-to-talk-about-the-prophets-heir | event notice.
+- 2021-08-04 | Etiquette of Majlis, Instagram Live | https://imam-us.org/etiquette-of-majlis-instagram-live | event notice.
+- 2021-08-17 | Survey on Programs for Muharram 1443 | https://imam-us.org/survey-on-programs-for-the-sacred-month-of-muharram-in-north-america-1443-2021 | survey.
+- 2021-08-05 | Guidelines for Conducting Muharram 1443 Programs | https://imam-us.org/guidelines-for-conducting-muharram-1443-programs | COVID-era operational guidance for event organisers.
+- 2021-09-19 | The Merits & Etiquette of Ziyarat Imam Hussain (p) | https://imam-us.org/the-merits-etiquette-of-ziyarat-imam-hussain-p | Instagram live notice (its video recap is cataloged under imam-us-video-merits-etiquette-of-ziyarat-instagram-live).
+- 2021-09-28 | I.M.A.M. in Georgetown University Webinar | https://imam-us.org/pope-francis-grand-imam-al-tayyeb-and-ayatollah-al-sistani-what-do-their-relationships-mean-for-us | webinar report.
+- 2021-11-16 | Sayyid Kashmiri Meets Dr. al-Issa | https://imam-us.org/sayyid-kashmiri-meets-dr-al-issa-chairman-of-the-muslim-world-league | news.
+- 2016-11-27 | Death Anniversary of the Holy Prophet of Islam | https://imam-us.org/death-holy-prophet-islam-muhammad | anniversary notice.
+- 2021-12-16 | Sayyid al-Sistani Meets Young Cancer Patients | https://imam-us.org/sayyid-al-sistani-meets-young-cancer-patients | news.
+- 2021 | PSA: Free At-Home COVID-19 Test Kits | https://imam-us.org/psa-free-at-home-covid-19-test-kits | public service announcement.
+- 2022-09-20 | 2022 Annual MI Response to Hate Conference | https://imam-us.org/2022-annual-mi-response-to-hate-conference-imam-attends | event report.
+- undated | Al-Hawraa Institute celebrates the end of the school year | https://imam-us.org/al-hawraa-institute-celebrate-the-end-of-the-school-year | news.
+- 2023-02-03 | Al-Imam al-Muntadher Islamic Center of Dayton, Ohio | https://imam-us.org/al-imam-al-muntadher-islamic-center-of-dayton-ohio | visit report.
+- 2026-09-19 | An Educational & Spiritual Journey to Iraq | https://imam-us.org/an-educational-spiritual-journey-to-iraq | tour sign-up.
+- 2025-07-20 | Register today to embark on a Spiritual and Educational Journey to Iraq | https://imam-us.org/embark-on-a-transformative-spiritual-educational-journey-to-iraq | tour sign-up.
+- 2024-03-05 | An Important Message from the Office of Grand Ayatollah Sayyid al-Sistani | https://imam-us.org/an-important-message-from-the-office-of-grand-ayatollah-sayyid-al-sistani | message to seminary students; statement and news.
+- 2026-03-30 | An Urgent Call for Humanitarian Relief | https://imam-us.org/an-urgent-call-for-humanitarian-relief | fundraising appeal.
+- 2025-09-07 | Annual Commemoration of Sayyid Musa al-Sadr Held in Dearborn, MI | https://imam-us.org/annual-commemoration-of-sayyid-musa-al-sadr-held-in-dearborn-mi | event news.
+- 2022-08-13 | Aug 15th @8pm Shia-Sunni Alliance Forum Solidarity Gathering | https://imam-us.org/aug-15th-8pm-shia-sunni-alliance-forum-ssaf-solidarity-gathering-for-new-mexico-muslim-community | event notice.
+- 2025-06-25 | Ayatollah Sayyid Monir al-Khabbaz Meets Scholars in Dearborn | https://imam-us.org/ayatollah-sayyid-monir-al-khabbaz-meets-scholars-in-dearborn | visit news.
+- 2026-08-20 | Versiti, I.M.A.M. and Who is Hussain Michigan partner to support Arabic-speaking blood donors | https://imam-us.org/blood-drive-2026 | blood drive announcement.
+- 2025-04-27 | Book Launch in Colombia: Emisarios de Dios | https://imam-us.org/book-launch-in-colombia-emisarios-de-dios-la-vida-de-jesus | event report; Spanish.
+- 2025-11-28 | Boston's Community for a Better Future | https://imam-us.org/bostons-community-for-a-better-future | visit news.
+- 2026-06-13 | Bring Karbala Home This Muharram with Hujja Kids | https://imam-us.org/bring-karbala-home-this-muharram-with-hujja-kids | product promotion.
+- 2026-06-14 | Community Leaders Complete Mental Health First Aid Training | https://imam-us.org/community-leaders-complete-mental-health-first-aid-training | training news.
+- 2026-06-01 | Community Workshop: ACEs Awareness and Suicide Prevention | https://imam-us.org/community-workshop-highlights-the-importance-of-aces-awareness-and-suicide-prevention | workshop report.
+- 2026-06-26 | Contemporary Medical Ethics & Islamic Jurisprudence | https://imam-us.org/contemporary-medical-ethics-islamic-jurisprudence | forum sign-up.
+- 2022-09-28 | Delegation from the Imam Hussain Shrine visits Pope Francis | https://imam-us.org/delegation-from-the-imam-hussain-shrine-visits-pope-francis-at-the-vatican | news.
+- 2022-11-09 | ECOTHEE-22 Conference | https://imam-us.org/ecological-theology-and-environmental-ethics-ecothee-22-conference | conference news.
+- 2025-10-16 | Exploring the Holy Quran: Applied Lessons (live weekly series) | https://imam-us.org/exploring-the-holy-quran-applied-lessons-on-faith-human-nature-and-navigating-life | event sign-up; a 10-week live series, not a course listing.
+- 2025-09-24 | Empowering Preparedness: A Proactive Approach to Community Safety | https://imam-us.org/empowering-preparedness-a-proactive-approach-to-community-safety | session report.
+- 2026-05-02 | Empowering Our Community: 11 Certified as Youth Mental Health First Aiders | https://imam-us.org/empowering-our-community-11-certified-as-youth-mental-health-first-aiders | certification news.
+- 2025-04-26 | Empowering Our Community: Successful Certification in Youth Mental Health First Aid | https://imam-us.org/empowering-our-community-successful-certification-in-youth-mental-health-first-aid | certification news.
+- 2023-11-10 | Faith-Based Clergy Conversation at DWIHN | https://imam-us.org/faith-based-clergy-conversation-at-dwihn | event news.
+- 2023-03-08 | Feed the Fasting in Need | https://imam-us.org/fasting | fundraising appeal.
+- 2023-10-01 | Grand Opening of Al-Zahra Center, Albuquerque, NM | https://imam-us.org/grand-opening-of-al-zahra-center-albuquerque-nm | news.
+- 2022-08-11 | Global Blood Heroes | https://imam-us.org/global-blood-heroes | blood drive.
+
+## Skipped (fiqh) - duas.org discovery batch (2026-11-15)
+- 2026-11-15 | Special salaat for 7 Rajab (Lailatul Raghaib) | https://www.duas.org/rajab7.htm | prayer-performance page, not a dua record
+- 2026-11-15 | Rajab daily salaahs | https://www.duas.org/mobile/rajab-daywise-salaahs.html | prayer-performance guide (not fetched)
+- 2026-11-15 | Dua during salah | https://www.duas.org/mobile/dua-during-salah.html | prayer-performance (not fetched)
+- 2026-11-15 | Wudhu | https://www.duas.org/wadhu.htm | purity rulings (not fetched)
+- 2026-11-15 | Toilet use etiquette | https://www.duas.org/mobile/toiletuse.html | purity rulings (not fetched)
+- 2026-11-15 | Salat of Ziarat (ziaratsalat) | https://www.duas.org/ziaratsalat.htm | prayer-performance (not fetched)
