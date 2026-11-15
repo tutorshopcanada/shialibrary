@@ -800,3 +800,24 @@ Cataloged from this chunk (3): imam-us-video-3-bits-advice-better-ramadan, imam-
 - 2026-11-15 | Sajjadia index (sajjadiya/sajjadiya.htm) | https://www.duas.org/sajjadiya/sajjadiya.htm | Duplicate of the cataloged Sahifa Sajjadiyah index (duas-sahifa-sajjadiyya).
 - 2026-11-15 | Shaban month index variants and Ramadan pages | https://www.duas.org/mobile/ramadan-dua-first-night.html, ramadan-laylatul-qadr-19/21/23 | Dynamic stub pages with no English text.
 - 2026-11-15 | Index pages: ziyarat.html, mobile/iraq-ziarat.html, mobile/madina-mecca-rites.html, mobile/imam-mahdi-related.html, mobile/imam-taqi-duas-list.html, mobile/salawaat-list.html, rabiulawwal.htm | Navigation lists that link to pages (many already cataloged); not catalogued as records. Madina-Mecca page also covers Hajj and Umrah rites.
+
+## Skipped (fiqh) - duas.org g1 (2026-11-15)
+- 2026-11-15 | Etiquettes of Izn Dukhool, farewell and post-ziyarat rites | https://www.duas.org/mobile/izn-dukhool-etiquettes.html | Mixes etiquette with rulings and prayer instructions (recommended, obligatory, makruh) and salat after ziyarat; names no marja. Owner may decide.
+- 2026-11-15 | Routine duas and etiquettes (eating, sleep, mirror, walking, clothing) | https://www.duas.org/routine.htm | Etiquette lists stated as mustahab / makruh / haram, with no marja named. Same reason as the eating page logged above.
+
+## Skipped (other) - duas.org g1 (2026-11-15)
+- 2026-11-15 | Imam biography pages (Ali Naqi, Hasan Askari, Imam Ali, Ali Ridha, Zain al-Abidin, Hasan Mujtaba, Husayn, Mahdi) | https://duas.org/mobile/imam-ali-naqi-hadi-as.html ; https://www.duas.org/mobile/imam-hassan-askari-as.html ; https://www.duas.org/mobile/imam-ali-as.html ; https://www.duas.org/mobile/imam-ali-ridha-as.html ; https://www.duas.org/mobile/imam-ali-zainulabideen-as.html ; https://www.duas.org/mobile/imam-hassan-mujtaba-as.html ; https://www.duas.org/mobile/imam-hussain-as.html ; https://www.duas.org/mobile/imam-mahdi-ajtfs.html | Brief life sketches, not dua or ziyarat pages. Owner to decide whether biographies belong in this catalog.
+- 2026-11-15 | Baqi cemetery in Medina (history of its destruction) | https://www.duas.org/baqee.htm | History article, not a dua page. Owner to decide.
+- 2026-11-15 | Visiting Holy Places index | https://www.duas.org/mobile/visitholyplaces.html | Index of links, no dua text of its own.
+- 2026-11-15 | Muharram and Safar resources index | https://www.duas.org/mobile/muharram-home.html | Index of resources and apps, no dua text of its own.
+- 2026-11-15 | Ziyarat Aimatul Momineen (alternate page) | https://www.duas.org/mobile/ziarat-aimmat-momineen.html | Same text as the existing record duas-ziyarat-aimmat-momineen (mobile/ziyarat-aimmat-momineen.html); duplicate, not cataloged again.
+
+## Skipped (fiqh) - duas.org G2 batch (2026-11-15)
+- 2026-11-15 | Shaban datewise salaahs (night prayers) | https://www.duas.org/mobile/shaban-datewise-salaahs.html | Prayer-performance instructions (rak'at, surahs) with hadith-style reward narrations; marja not stated on the page.
+- 2026-11-15 | Sunday Zilqad salat | https://www.duas.org/mobile/zilqad-sunday-salat.html | Prayer-performance instructions (4 rak'at, surahs, istighfar) citing Mafatih al-Jinan; marja not stated on the page.
+
+## Skipped (polemical) - duas.org G2 batch (2026-11-15)
+- 2026-11-15 | Rabi al-Awwal 17 (birth of the Prophet and Imam Jafar al-Sadiq) | https://www.duas.org/mobile/rabiulawal-17.html | Date-amaal page that includes a passage attacking a Sunni-named group (Wahhabis) over Mawlid celebrations. Mixed; the owner should decide whether a calendar record without the polemic is acceptable.
+
+## Skipped (mixed, not cataloged) - duas.org G2 batch (2026-11-15)
+- 2026-11-15 | Letter to Reciters and Sponsors of Majalis (advice letters) | https://www.duas.org/lettermajalis.htm | A collection of advice from several authorities (Sistani and others). Mixed sources, and a record would need needs_review, which this batch does not allow.

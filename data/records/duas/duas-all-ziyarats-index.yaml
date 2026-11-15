@@ -1,0 +1,29 @@
+id: duas-all-ziyarats-index
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "All Ziyarats"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/ziarat-masumeen.html
+language: en
+date: ''
+description: "An index of ziyarat (visitation texts) on duas.org, grouped into the Prophet, Syeda Fatima and the Imams, ziyarat for particular days and occasions, and ziyarat for other personalities. Each entry links to its own page, and the index links to notes on the etiquettes of ziyarat."
+sample_questions:
+- "What is ziyarat?"
+- "Which ziyarat can I recite for Imam Ali?"
+- "Is there a ziyarat for the Prophet Muhammad?"
+- "Which ziyarat is recited on Fridays?"
+- "What are the etiquettes of ziyarat?"
+headings:
+- ziyarat
+- duas
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

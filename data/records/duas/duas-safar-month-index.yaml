@@ -1,0 +1,29 @@
+id: duas-safar-month-index
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Month of Safar"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/safar-home.html
+language: en
+date: ''
+description: "The index page for the month of Safar on duas.org. It lists the daily dua for the month, Ziyarat Warith and Ziyarat Ashura, and the commemorations for Arbaeen (20 Safar) and other dates in Safar, such as the death of the Prophet and the martyrdom of Imam Hasan. Each item links to its own page."
+sample_questions:
+- "What duas are recommended in the month of Safar?"
+- "What is Arbaeen?"
+- "Which dates in Safar are commemorated?"
+- "What is Ziyarat Warith?"
+- "Where can I find Ziyarat Ashura?"
+headings:
+- islamic-calendar
+- arbaeen
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'
