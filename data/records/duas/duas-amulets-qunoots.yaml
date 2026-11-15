@@ -1,0 +1,28 @@
+id: duas-amulets-qunoots
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Amulets of the Prophet and the Ahlulbayt"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/amulets.html
+language: en
+date: ''
+description: "A collection of supplications presented as amulets (written prayers for use), hijabs and qunoots (supplications recited with a qunoot) attributed to the Prophet and the Ahlulbayt. The page says they are taken from Tohfatul Hashmiya and gives the Arabic, transliteration and translation."
+sample_questions:
+- "What are amulets in duas?"
+- "What are the Qunoots of the Ahlulbayt?"
+- "Which amulets are attributed to the Prophet?"
+- "Is there an amulet attributed to Imam Ali?"
+headings:
+- duas
+- ahl-al-bayt
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'
