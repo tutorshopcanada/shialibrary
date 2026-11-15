@@ -456,3 +456,10 @@ Pages whose main content is how to perform a prayer, or that state rulings. Fiqh
 
 ## Skipped (fiqh, marja not stated) - held pages decision (2026-11-13)
 - https://imam-us.org/an-important-advice-regarding-misuses-of-the-power-of-religious-authority-talaq-al-hakim-al-shari (dated 2021-07-15). Owner asked for this page to be cataloged, but the page does not say that Sayyid Sistani or Sayyid Khamenei is the source of its guidance. It is issued by "The Internal Affairs Committee, The Council of Shia Muslim Scholars of North America", so the office-of-Sistani assumption in the brief does not hold. Its guidance covers the legal conditions for a divorce by a religious authority, which is fiqh, so it was skipped under the fiqh rule. Owner to decide: add a marja, or accept it as a non-fiqh advisory statement.
+
+## al-m.ca, first batch (2026-11-15)
+Skipped, with reasons:
+- Download pages with no descriptive text (title and PDF link only), so no grounded description is possible: An Introduction to Islam, An Introduction to Shi'a Islam, Discovering Islam (introductory booklet), Imam Husayn: The Savior of Islam (S M Rizvi), Mutual Respect and Peaceful Co-Existence Among Muslims, the Al-Furqan newsletter issues 1 to 15, and other worksheets and teaching packs. Owner could say whether to catalog them from the title alone, or the pages could be revisited if text is added.
+- Fiqh or practical rulings with no stated marja on the page (skipped under the fiqh rule): Salat Resources and Rulings, Marriage Guide, the zakat, khums, marijuana and cryptocurrency posts, Taharat un Nisa, Business Ethics in Islam, Adoption in Islam. The "2015 Edition: Ayatullah Sistani Risalah: Islamic Laws" download page (https://al-m.ca/download/2015-edition-ayatullah-sistani-risalah-islamic-laws/) is a Sistani book, but the page shows an empty file (0 KB) and no description, so it was not cataloged. Owner to decide.
+- Out of scope: donations, halal guides and restaurants, moon sighting, travel exemptions, newsletters, special-education worksheets for children.
+- Flagged needs_review (possible polemic): al-m-hadith-man-mata-lecture, al-m-wa-ajjil-farajahum-bidah.

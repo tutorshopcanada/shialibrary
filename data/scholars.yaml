@@ -266,14 +266,14 @@ scholars:
   - id: sayyid-muhammad-rizvi
     name: "Sayyid Muhammad Rizvi"
     role: author
-    alt_names: []
-    notes: "Named as compiler of Imam Husayn, The Saviour Of Islam on https://al-islam.org/imam-husayn-saviour-islam (read 2026-11-10)."
+    alt_names: ["Maulana Sayyid Muhammad Rizvi", "Maulana Syed Muhammad Rizvi", "S. M. Rizvi", "Maulana Rizvi"]
+    notes: "Named as compiler of Imam Husayn, The Saviour Of Islam on https://al-islam.org/imam-husayn-saviour-islam (read 2026-11-10). On al-m.ca (read 2026-11-15) the same book title is credited to S M Rizvi, and the Al-Maarif Foundation pages use the spellings in alt_names; treated as the same person, owner to confirm."
     needs_review: true
 
   - id: saeed-akhtar-rizvi
     name: "Sayyid Sa'eed Akhtar Rizvi"
     role: author
-    alt_names: []
+    alt_names: ["Allamah Sayyid Saeed Akhtar Rizvi"]
     notes: "Named as author of Day of Judgement on https://al-islam.org/day-of-judgement-sayyid-akhtar-rizvi (read 2026-11-10). Not assumed to be the same person as Sayyid Muhammad Rizvi."
     needs_review: true
 

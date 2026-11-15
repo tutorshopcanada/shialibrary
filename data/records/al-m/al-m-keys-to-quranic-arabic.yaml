@@ -1,0 +1,31 @@
+id: al-m-keys-to-quranic-arabic
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: Keys to Qur'anic Arabic
+title_original: ''
+authors:
+- sayyid-muhammad-rizvi
+marja: ''
+source: al-m.ca
+url: https://al-m.ca/keys-to-quranic-arabic/
+language: en
+date: '2020-04-10'
+description: A free booklet, now in its second edition, that introduces English speakers to Arabic for
+  reading the Quran. The page says it has 10 lessons and more than 50 worksheets. It is aimed at complete
+  beginners.
+sample_questions:
+- How can I learn Quranic Arabic?
+- Is there a free booklet for learning Arabic?
+- Where can I start reading the Quran in Arabic?
+- What are the basics of Quranic Arabic for English speakers?
+headings:
+- quran
+- quran-sciences
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'
