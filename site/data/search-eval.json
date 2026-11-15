@@ -23,10 +23,7 @@
    "query": "jamaat",
    "expect_any": [
     "sistani-qa-congregational-prayers",
-    "sistani-qa-15487",
-    "imam-us-wsid-praying-on-a-plane",
-    "imam-us-rules-of-doubt-in-prayers",
-    "imam-us-imsak-and-fajr-time"
+    "sistani-qa-15487"
    ],
    "expect_none": false,
    "expect_group": "any",

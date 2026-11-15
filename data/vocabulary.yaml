@@ -75,7 +75,7 @@ headings:
   - id: prayer
     label: "Prayer (Salah)"
     parent: fiqh
-    alt_terms: ["salah", "salat", "namaz", "how to pray", "how do shias pray", "praying", "daily prayers", "qibla", "adhan", "congregational prayer", "jamaat", "friday prayer", "qasr", "prayer while travelling", "صلاة", "نماز"]
+    alt_terms: ["salah", "salat", "namaz", "how to pray", "how do shias pray", "praying", "daily prayers", "qibla", "adhan", "friday prayer", "qasr", "prayer while travelling", "صلاة", "نماز"]
     notes: ""
   - id: fasting
     label: "Fasting (Sawm)"
@@ -319,3 +319,8 @@ headings:
     parent: ziyarat
     alt_terms: ["arbaeen", "arbain", "arba'een", "chehlum", "walk to karbala", "arbaeen walk", "arbaeen guide", "forty days after ashura", "أربعين", "اربعین"]
     notes: ""
+  - id: congregational-prayer
+    label: "Congregational prayer (praying in a group)"
+    parent: prayer
+    alt_terms: ["jamaat", "jama'at", "jamaah", "jama'ah", "congregational prayer", "congregation", "praying in a group", "praying behind an imam", "prayer leader", "imam of the prayer", "pesh namaz", "صلاة الجماعة", "نماز جماعت"]
+    notes: "Added 2026-11-12: moved the congregational terms out of the broad Prayer heading so these pages rank for them."

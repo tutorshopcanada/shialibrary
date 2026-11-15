@@ -1,0 +1,27 @@
+id: duas-marriage-family
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Duas for Marriage, Children and Family"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/marriage-family.html
+language: en
+date: ''
+description: "A large collection of numbered duas and recitations for marriage, children and family life, with the purpose the page gives for each."
+sample_questions:
+- "Is there a dua for marriage?"
+- "Which duas are for children?"
+- "Is there a dua for finding a spouse?"
+- "Which duas are for family life?"
+headings:
+- duas
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-13'

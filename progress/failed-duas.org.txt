@@ -37,3 +37,12 @@
 2026-11-12 | https://www.duas.org/mobile/sahifasajjadia-dua45-farewell-ramadhan.html | Sahifa dua 45: dynamic stub page (2.8 KB, no English text); not cataloged
 2026-11-12 | https://www.duas.org/mobile/sahifasajjadia-dua47-day-of-arafah.html | Sahifa dua 47: dynamic stub page (2.8 KB, no English text); not cataloged
 2026-11-12 | https://www.duas.org/Sahife%20Zehra/Index.htm | Sahifa Fatima (sa) index: page has no English text (0 English words found); not cataloged
+2026-11-13 | https://www.duas.org/ummedawood.htm | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/jamadiulawal-begin.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/jamadiulakhir-begin.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/rabialakher-begin.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/magrib-isha-taqibat.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/salaat-jafar-tayyar.html | stub page (2.6 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/new-month-dua-rights.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/mubahila-zilhajj24.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-13 | https://www.duas.org/mobile/sahifasajjadia-dua42-completing-quran.html | stub page (2.8 KB shell, no English text); Sahifa dua 42; not cataloged

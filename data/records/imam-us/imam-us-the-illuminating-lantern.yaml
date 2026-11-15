@@ -1,0 +1,29 @@
+id: imam-us-the-illuminating-lantern
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: intermediate
+title: The Illuminating Lantern
+title_original: ''
+authors:
+- shaykh-habib-al-kadhimi
+marja: ''
+source: imam-us.org
+url: https://imam-us.org/the-illuminating-lantern
+language: en
+date: '2016-09-01'
+description: A book that explains the thirtieth section of the Quran in short points linked to everyday
+  life. The author is Shaykh Habib al-Kadhimi.
+sample_questions:
+- What does the thirtieth part of the Quran teach?
+- What is Quran commentary for beginners?
+- How can the Quran guide daily life?
+- Which book explains short Quranic chapters?
+headings:
+- tafsir
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

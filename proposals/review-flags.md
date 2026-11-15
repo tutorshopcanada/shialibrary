@@ -343,3 +343,116 @@ Note: Islamic Laws of Death and Burial was cataloged because its PDF link is pub
 
 ## Skipped (duplicate, city event) - mizaninstitute.org batch 3 (2026-11-12)
 - 2026-11-12 | Ethical Dilemmas, Ottawa (sisters only, Oct 7, $35 ticket) | https://mizaninstitute.org/ottawasisters/ | city event for the course already catalogued at https://mizaninstitute.org/ethical-dilemmas-godly-decision-making-and-moral-philosophy/ (mizan-ethical-dilemmas); not catalogued twice.
+
+## Skipped (fiqh course) - mizaninstitute.org unprocessed batch (2026-11-13)
+- 2026-11-13 | Ijtihad Unveiled | https://mizaninstitute.org/courses/ijtihad/ | a course on ijtihad, the method of deriving legal rulings from the sources; its subject is fiqh methodology and the page does not name Sistani or Khamenei as the source of rulings. Owner to confirm.
+- 2026-11-13 | Intermediate Rulings of Salat - For Teens | https://mizaninstitute.org/courses/rulingsforteens/ | the subject is the rulings of salat itself (owner decision 2026-11-13: rulings courses are skipped).
+- 2026-11-13 | Women's Ahkam | https://mizaninstitute.org/courses/womens-ahkam/ | rulings on hayd, istihadah and nifas (owner decision 2026-11-13: skipped).
+- 2026-11-13 | Women's Ahkam Premium | https://mizaninstitute.org/courses/womens-ahkam-2/ | same course, premium version (owner decision 2026-11-13: skipped).
+
+## Skipped (bundle or promotion) - mizaninstitute.org unprocessed batch (2026-11-13)
+- 2026-11-13 | Lesson per Page Bundle (Seasons 1-3) | https://mizaninstitute.org/courses/lesson-per-page-bundle/ | bundle of earlier seasons, shown as closed.
+- 2026-11-13 | Lesson Per Page Seasons 1-4 Bundle | https://mizaninstitute.org/courses/lesson-per-page-seasons-1-4-bundle/ | bundle of earlier seasons, shown as closed.
+- 2026-11-13 | Winter Camp Bundle for Teens | https://mizaninstitute.org/courses/winter-camp-bundle-for-teens/ | bundle of two teens offerings sold together.
+
+## Skipped (closed, no way to enrol) - mizaninstitute.org unprocessed batch (2026-11-13)
+- 2026-11-13 | The Spirit of God | https://mizaninstitute.org/courses/436/ | the page shows "This course is currently closed", price "Closed", and no enrol or recording option (owner decision: skip).
+
+## Catalogued with owner-decided inclusions - mizaninstitute.org (2026-11-13)
+- Recordings and offerings shown as "Closed" with materials but no enrol button: mizan-secrets-of-salat-recording-april-2025, mizan-secrets-of-salat-recording-november-2024, mizan-teens-purpose-of-creation-recording-october-2025. Cost is recorded as "Closed" as shown. Owner to confirm these count as recording access.
+- mizan-the-mahdi-part-3-online-november-2025 and mizan-the-mahdi-part-4-online-february-2026 are online runs of courses whose in-person versions are already catalogued (mizan-the-mahdi-part-3-signs-of-reappearance, mizan-the-mahdi-part-4). Separate records, separate URLs.
+- mizan-teens-secret-of-salat and mizan-teens-secret-of-salat-recording-july-2025 are the course page and the July 2025 recording of the same teens course.
+
+## imam-us.org half1 sitemap triage (2026-11-13): skipped and logged
+Fetched 42 pages (43 requests with robots.txt); 14 cataloged (imam-us-* records added 2026-11-13). Most of the half1 slugs are announcements, moon-sighting and birthday or martyrdom notices, event sign-ups, competitions and fundraising, which the owner's skip list covers; those were dropped by slug without fetching.
+
+## Skipped (fiqh, marja not stated) - imam-us.org half1
+- https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-and-kaffarah-1442-2021 (2021-03-12): fiqh reminder; no marja named on the page. The 1439, 1440 and 1441 qada reminders were not fetched and are held on the same ground.
+- https://imam-us.org/what-should-i-do-should-i-get-the-covid-19-vaccine-while-fasting (2021-04-19): WSID fiqh Q&A; no marja named. Also the same question as the cataloged imam-us-can-i-receive-the-covid-19-vaccine-while-fasting.
+- https://imam-us.org/zakat-al-fitrah-2016 and the zakat-al-fitrah 2017, 2018, 2019 and 2020 pages: held as before (price guides, marja not stated); not fetched.
+
+## Skipped (boundary, owner to decide) - imam-us.org half1
+- https://imam-us.org/towards-greater-clarity-in-decision-making-part-iii-istikhara-terms-conditions-and-practical-application-in-contemporary-life (2019-03-13): sets out the terms and conditions of consultative istikhara and cites Sayyid al-Sistani's rulings (5 mentions). It reads as rules of practice, so it may be fiqh. Owner to say whether it is fiqh (marja sistani) or non-fiqh.
+- https://imam-us.org/guidelines-for-conducting-muharram-1442-programs (2020-08-10): COVID-era rules for organisers of Muharram programmes from Sayyid al-Sistani's office. Practical rules, not clearly fiqh and not clearly announcements. Owner to decide. The 1443 version was not fetched.
+
+## Skipped (duplicate) - imam-us.org half1
+- https://imam-us.org/is-salat-al-ayaat-obligatory-for-a-penumbral-lunar-eclipse-11-30-2020 (2020-11-29): same question as the cataloged imam-us-is-salat-al-ayaat... record (url .../is-salat-al-ayaat-obligatory-for-a-penumbral-lunar-eclipse-according-to-sayyid-al-sistani). Not cataloged twice.
+- https://imam-us.org/advice-public-speakers-muharram (2017-09-18): same advice as the cataloged video page video-advice-of-the-supreme-religious-authority-to-the-preachers-and-public-speakers.
+- https://imam-us.org/webinar-at-the-crossroads-of-religious-obligation-and-medicine-what-to-know-about-islamic-rules-covid-19-and-vaccinations (2021-04-21): same webinar as the cataloged video-at-the-crossroads record.
+
+## Skipped (event notice or announcement) - imam-us.org half1
+- I.M.A.M. at Home series pages (imam-at-home-muharram-1442, imam-at-home-ramadan-edition, week-2 and week-4 imam-at-home-ramadan-edition, the two Muharram 1442 episode pages): live-stream notices.
+- Instagram Live and live-event notices: the-merits-etiquette-of-ziyarat-imam-hussain-p, etiquette-of-majlis-instagram-live, preparing-for-the-month-of-ramadan, i-m-a-m-presents-school-work-and-beyond, i-m-a-m-presents-islam-and-mental-health-psychology, a-dialogue-with-cardinal-wilton-gregory-and-sayyid-m-b-kashmiri.
+- Webinar recap: pope-francis-grand-imam-al-tayyeb-and-ayatollah-al-sistani-what-do-their-relationships-mean-for-us (Georgetown panel page, mainly an event notice).
+- Welcome message for Ramadan by Sayyid M.B. Kashmiri (welcoming-holy-month-ramadan, 2018): welcome message, skipped as an announcement.
+- Death anniversary notice: death-holy-prophet-islam-muhammad (2016).
+
+## Skipped (news or report) - imam-us.org half1
+- https://imam-us.org/icymi-sayyid-kashmiri-speaks-at-the-marifa-conference (2020-04-10): news recap of a keynote speech.
+- https://imam-us.org/34916-2 (IMAM annual symposium report, 2019) and the 2016 self-enhancement competition highlights (1617-2): event reports and competition notices.
+- https://imam-us.org/qc (Quran tajwid competition, 2021): competition.
+
+## Skipped (too little text on the page) - imam-us.org half1
+- https://imam-us.org/remembering-prophet-muhammad-pbuh-a-ssaf-shia-sunni-alliance-forum-presentation (2020-11-03): the page holds only a greeting; no description possible.
+- https://imam-us.org/advice-marjaeya-religious-scholars-speakers-holy-month-muharram-1441-h (2019-08-31): link-only page; the statement itself is not on the page.
+
+## Skipped (fiqh) - duas.org batch c (2026-11-13)
+Pages whose main content is how to perform a prayer, or that state rulings. Fiqh by authors other than Sistani or Khamenei (or with no marja stated), so not cataloged.
+- 2026-11-13 | Sajda Shukr (thanksgiving prostration) | https://www.duas.org/mobile/sajda-shukr.html | states rulings on when and how to perform the prostration
+- 2026-11-13 | Death related duas (includes rulings on care of the dying) | https://www.duas.org/death.htm | mixed page; ruling statements (wajib) on the dying person
+- 2026-11-13 | Tahajjud / Salaat Layl | https://www.duas.org/mobile/tahajjud-salat-shab.html | states rulings (obligatory and recommended status) with the procedure of the prayer
+- 2026-11-13 | Salaat of Masumeen | https://www.duas.org/mobile/salat-masumeen.html | prayer procedure with recommendations on when to pray it
+- 2026-11-13 | Sunday Zilqad Salaat | https://www.duas.org/mobile/zilqad-sunday-salat.html | states that the prayer is recommended, with rulings on ghusl and wudhu before it
+- 2026-11-13 | Rajab Month Daywise Salaahs | https://www.duas.org/mobile/rajab-daywise-salaahs.html | prayer procedures (rak'ahs) for each night
+- 2026-11-13 | Sha'ban Month Datewise Salaahs | https://www.duas.org/mobile/shaban-datewise-salaahs.html | prayer procedures (rak'ahs) for each night
+- 2026-11-13 | Dua During Salaat | https://www.duas.org/dua_during_salaat.htm | etiquette and procedure of recitation within the prayer
+
+## Skipped (other) - duas.org batch c (2026-11-13)
+- Invocation (dhikr with a narration about Imam Hasan): narration-based, treated as hadith. https://www.duas.org/Misc/invocation.htm
+- Seven Haykal: practice of blowing breath after recitation, meaning and use unclear from the page. https://www.duas.org/Misc/seven_haykal.htm
+- Spiritual healings from the diary of Ayatullah Behjat: practical spiritual guidance attributed to a marja not in the approved list; owner to decide. https://www.duas.org/Aytbehjatduas.htm
+- Hazrat Abbas (as) litany: Arabic only (14 English words). https://www.duas.org/hzabbasdua.htm
+- Dua's for the Month of Rajab: index page of other duas, not a dua. https://www.duas.org/kamil.htm
+- Sahifa dua 42 (completing the Quran): stub page, no English text. https://www.duas.org/mobile/sahifasajjadia-dua42-completing-quran.html
+
+## Skipped (fiqh, marja not stated) - imam-us.org half2 (2026-11-13)
+- 2026-11-13 | https://imam-us.org/islamic-laws-of-medicine | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/can-i-buy-a-car-during-muharram | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/should-i-move-into-a-new-home-during-muharram | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/islamic-laws-of-the-female-reproductive-cycle-menstrual-postpartum-and-non-menstrual-bleeding | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/islamic-laws-of-fasting | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/reminder-get-your-copy-of-islamic-laws-of-fasting-today | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/can-muslims-invest-in-a-401k-plan | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/know-your-prayer-times | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/introducing-the-i-m-a-m-khums-calculator | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+- 2026-11-13 | https://imam-us.org/islamic-laws-of-food-drink | fiqh or fiqh-adjacent page; Sistani or Khamenei not named on the page (155 also duplicates the Food & Drink book at 311, which names Sistani).
+
+## Skipped (polemical or sensitive, owner to decide) - imam-us.org half2 (2026-11-13)
+- 2026-11-13 | https://imam-us.org/sayyid-sistanis-fatwa-about-the-companions-of-prophet-pbuhhp | a statement on the Companions or on the misuse of religious authority; owner to decide.
+- 2026-11-13 | https://imam-us.org/an-important-advice-regarding-misuses-of-the-power-of-religious-authority-talaq-al-hakim-al-shari | a statement on the Companions or on the misuse of religious authority; owner to decide.
+
+## Skipped (other marja, not approved) - imam-us.org half2 (2026-11-13)
+- 2026-11-13 | https://imam-us.org/advice-from-ayatullah-shaykh-ishaq-al-fayyad-to-believers-in-the-west | advice from Ayatollah Ishaq al-Fayyad, who is not an approved marja. Fayyad's condolence page (425) is also out of scope as a statement.
+
+## Skipped (duplicate of an existing record) - imam-us.org half2 (2026-11-13)
+- 2026-11-13 | https://imam-us.org/islamic-laws-of-food-drink | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+- 2026-11-13 | https://imam-us.org/our-duties-in-the-period-of-occultation-insights-from-sayyid-al-sistani | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+- 2026-11-13 | https://imam-us.org/new-book-release-islamic-laws-of-death-and-burial | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+- 2026-11-13 | https://imam-us.org/advice-to-youth-ayatullah-sayyed-sistani | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+- 2026-11-13 | https://imam-us.org/who-is-hussain-english-spanish | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+- 2026-11-13 | https://imam-us.org/get-your-copy-of-who-is-hussain-and-who-is-zaynab-today-2 | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+- 2026-11-13 | https://imam-us.org/get-your-copy-of-who-is-hussain-and-who-is-zaynab-today | same title or content as an existing imam-us-org record (see data/records/imam-us/).
+
+## Skipped (event, news, statement, fundraising, promotion) - imam-us.org half2 (2026-11-13)
+- Statements and news (not catalogued): https://imam-us.org/ayatullah-sistani-fatwa-concerning-isis-attack-in-iraq https://imam-us.org/a-letter-of-congratulations-to-his-eminence-pope-francis https://imam-us.org/secretary-general-of-oic-visits-his-eminence-grand-ayatollah-sayyid-sistani https://imam-us.org/united-nations-delegation-visits-grand-ayatullah-al-sistani https://imam-us.org/statement-regarding-the-current-tragedy-and-oppression-spreading-in-the-world https://imam-us.org/an-important-message-from-the-office-of-grand-ayatollah-sayyid-al-sistani https://imam-us.org/official-statement-from-sayyid-sistani-on-the-recent-attacks-on-lebanon https://imam-us.org/sayyid-sistani-addresses-the-heinous-crimes-in-parachinar https://imam-us.org/statement-from-council-on-recent-defamatory-comments https://imam-us.org/condolence-statement-on-the-passing-of-his-holiness-pope-francis https://imam-us.org/i-m-a-m-welcomes-his-holiness-pope-leo-xivs-call-for-peace-and-respect-for-international-law https://imam-us.org/statement-on-the-recent-plot-to-attack-a-shia-muslim-islamic-center-in-illinois https://imam-us.org/condolences-and-call-to-action-in-solidarity-with-the-people-of-afghanistan https://imam-us.org/official-statement-from-the-council-of-shia-muslim-scholars-of-north-america-concerning-the-tragic-hate-crime-at-the-islamic-center-of-san-diego-and-the-systemic-rise-of-islamophobia https://imam-us.org/international-day-of-innocent-children-victims-of-aggression https://imam-us.org/ayatollah-al-sistanis-condolences-on-the-passing-of-grand-ayatollah-al-fayyad https://imam-us.org/condolence-statement-from-his-eminence-sayyid-sistani-following-the-passing-of-ayatollah-sayyid-musa-shobeiri-zanjani 
+- Event, webinar, series and promo notices: https://imam-us.org/introducing-psyched4u-1 https://imam-us.org/fasting https://imam-us.org/our-childrens-protection-is-mandatory-not-recommended-sayyid-kashmiri https://imam-us.org/prepare-for-muharram-with-guidance-from-sayyid-al-sistani https://imam-us.org/serve-your-community https://imam-us.org/exploring-the-holy-quran-applied-lessons-on-faith-human-nature-and-navigating-life https://imam-us.org/how-to-file-and-save-big-a-wise-approach-to-tax-season https://imam-us.org/why-allah-repeats-the-same-stories https://imam-us.org/they-had-everything-then-god-took-it-overnight https://imam-us.org/discover-the-lives-of-imam-hussain-p-and-lady-zaynab-p-this-muharram https://imam-us.org/contemporary-medical-ethics-islamic-jurisprudence https://imam-us.org/global-blood-heroes https://imam-us.org/emergency-khums-authorization-flood-relief-in-pakistan-and-afghanistan 
+
+## imam-us.org fiqh and marja statements run (2026-11-13): skipped and logged
+- Skipped (login-gated book, owner rule): Islamic Laws of Medicine (https://imam-us.org/islamic-laws-of-medicine), Islamic Laws of the Female Reproductive Cycle (https://imam-us.org/islamic-laws-of-the-female-reproductive-cycle-menstrual-postpartum-and-non-menstrual-bleeding), Islamic Laws of Fasting book page (https://imam-us.org/islamic-laws-of-fasting). The PDF needs login. Owner to say whether the online-reading pages count as open.
+- Skipped (promotion): https://imam-us.org/reminder-get-your-copy-of-islamic-laws-of-fasting-today
+- Skipped (same book as an existing record): https://imam-us.org/islamic-laws-of-food-drink
+- Not fetched (404): https://imam-us.org/zakat-al-fitrah-2016 and the istikhara Part III page (https://imam-us.org/towards-greater-clarity-in-decision-making-part-iii-istikhara-terms-conditions-and-practical-application-in-contemporary-life)
+- Statements from non-marja authors (I.M.A.M. or the council) and a message by Sayyid Mohammad Rida al-Sistani (not in scholars.yaml): see the list in the worker's scratch notes; owner to decide.
+
+## Skipped (fiqh, marja not stated) - held pages decision (2026-11-13)
+- https://imam-us.org/an-important-advice-regarding-misuses-of-the-power-of-religious-authority-talaq-al-hakim-al-shari (dated 2021-07-15). Owner asked for this page to be cataloged, but the page does not say that Sayyid Sistani or Sayyid Khamenei is the source of its guidance. It is issued by "The Internal Affairs Committee, The Council of Shia Muslim Scholars of North America", so the office-of-Sistani assumption in the brief does not hold. Its guidance covers the legal conditions for a divorce by a religious authority, which is fiqh, so it was skipped under the fiqh rule. Owner to decide: add a marja, or accept it as a non-fiqh advisory statement.

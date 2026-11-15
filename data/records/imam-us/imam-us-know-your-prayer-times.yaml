@@ -1,0 +1,27 @@
+id: imam-us-know-your-prayer-times
+type: other
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: 'Know Your Prayer Times'
+title_original: ''
+authors: []
+marja: sistani
+source: imam-us.org
+url: https://imam-us.org/know-your-prayer-times
+language: en
+date: '2026-07-23'
+description: 'An introduction to the online prayer times portal of I.M.A.M., which shows prayer times for a chosen city and lets users print or download a monthly schedule. The page explains that the timings are those published by the Najaf office and calculated by an affiliated research centre.'
+sample_questions:
+- 'How do I find prayer times for my city?'
+- 'Where can I get a monthly prayer timetable?'
+- 'What are the prayer times for today?'
+- 'Can I download a prayer schedule?'
+headings:
+- 'prayer'
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-13'

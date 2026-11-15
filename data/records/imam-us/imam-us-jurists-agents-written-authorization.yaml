@@ -1,0 +1,30 @@
+id: imam-us-jurists-agents-written-authorization
+type: qa
+content_tag: fiqh
+granularity: work
+parent: ''
+level: advanced
+title: How the jurists' agents are verified to be authorized
+title_original: ''
+authors:
+- sistani
+marja: sistani
+source: imam-us.org
+url: https://imam-us.org/agents-have-written-ijaza
+language: en
+date: '2011-04-26'
+description: A legal opinion from Sayyid al-Sistani's office on how to check whether a person who says
+  they are a jurist's agent has the written authorization they claim. It is a question about agents and
+  authorization, and the opinion is on the page.
+sample_questions:
+- How can I tell if someone is really an agent of a jurist?
+- What proof of authorization does a jurist's agent need?
+- Do the agents of a marja need written authorization?
+- How is a jurist's representative verified?
+headings:
+- taqlid
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'
