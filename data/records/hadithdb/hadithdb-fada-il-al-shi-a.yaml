@@ -1,0 +1,29 @@
+id: hadithdb-fada-il-al-shi-a
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Faḍāʾil al-Shīʿa
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/fada-il-al-shi-a
+language: en
+date: ''
+description: A short collection of 45 hadith by Shaykh al-Saduq on the merits and rewards promised to
+  the Shia. The page presents it as a companion to Sifat al-Shia. Shown in Arabic with English translation;
+  a primary source for readers with some background.
+sample_questions:
+- What is Fadail al-Shia?
+- What do hadith say about the merits of the Shia?
+- Which short hadith books did Shaykh Saduq write?
+headings:
+- hadith-collections
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

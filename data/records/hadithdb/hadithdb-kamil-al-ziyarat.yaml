@@ -1,0 +1,31 @@
+id: hadithdb-kamil-al-ziyarat
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Kāmil al-Ziyārāt
+title_original: ''
+authors:
+- ibn-qulawayh
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/kamil-al-ziyarat
+language: en
+date: ''
+description: The earliest surviving book on ziyara (visiting the Prophet and the Imams, especially Imam
+  Husayn at Karbala), by Ibn Qulawayh. It gathers the merit and manner of visits and the standing of Karbala's
+  earth. Shown in Arabic with English translation.
+sample_questions:
+- What is ziyarat?
+- Where can I read hadith about visiting Imam Husayn?
+- What is Kamil al-Ziyarat?
+- What is the reward of visiting the Imams?
+headings:
+- hadith-collections
+- ziyarat
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

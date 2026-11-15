@@ -1,0 +1,31 @@
+id: hadithdb-kitab-al-du-afa
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Kitāb al-Ḍuʿafāʾ
+title_original: ''
+authors:
+- ghadairi
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/kitab-al-du-afa
+language: en
+date: ''
+description: A reference work on narrators judged weak, attributed to Ibn al-Ghada'iri, used when weighing
+  whether a chain of narrators can be relied on. The page notes that its attribution is doubted. It is
+  a specialist source about narrators rather than a hadith collection for general reading.
+sample_questions:
+- What is a weak narrator in hadith?
+- What is Kitab al-Du'afa?
+- How do scholars judge narrators of hadith?
+- Which books list unreliable narrators?
+headings:
+- hadith-collections
+- hadith-sciences
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

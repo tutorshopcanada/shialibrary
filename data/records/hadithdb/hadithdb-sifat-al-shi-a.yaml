@@ -1,0 +1,29 @@
+id: hadithdb-sifat-al-shi-a
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Ṣifāt al-Shīʿa
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/sifat-al-shi-a
+language: en
+date: ''
+description: A short collection of 71 hadith by Shaykh al-Saduq on the conduct and character the narrations
+  expect of a Shia. The page says it is usually read together with Fadail al-Shia. Shown in Arabic with
+  English translation; a primary source for readers with some background.
+sample_questions:
+- What is Sifat al-Shia?
+- What qualities should a Shia have according to hadith?
+- What do the Imams say about the conduct of their followers?
+headings:
+- hadith-collections
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

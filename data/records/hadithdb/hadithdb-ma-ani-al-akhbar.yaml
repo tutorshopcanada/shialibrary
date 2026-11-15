@@ -1,0 +1,31 @@
+id: hadithdb-ma-ani-al-akhbar
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Maʿānī al-ʾAkhbār
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/ma-ani-al-akhbar
+language: en
+date: ''
+description: A collection by Shaykh al-Saduq of narrations that explain hard words and puzzling statements
+  in other hadith, where the explanation is itself a narration from an Imam. Shown in Arabic with English
+  translation; a primary source for readers with some background.
+sample_questions:
+- What is Ma'ani al-Akhbar?
+- How are difficult hadith explained?
+- Where can I read the Imams' explanations of hadith?
+- What books did Shaykh Saduq write?
+headings:
+- hadith-collections
+- hadith-sciences
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

@@ -144,11 +144,24 @@ sources:
       and will writing (services are out of scope). Mostly English; some Quranic Reflections
       are in French (skip). The site never says "Twelver" but its content (Ma'sumin, Ahl al-Bayt,
       Sahifa Sajjadiyya) is Twelver Shia. The linked hadith database (hadith.academyofislam.org)
-      is a different host and is not approved. robots.txt (read 2026-11-15) disallows /wp-admin/
+      is a separate source (id hadith.academyofislam.org, approved by the owner 2026-11-15). robots.txt (read 2026-11-15) disallows /wp-admin/
       except admin-ajax and lists https://academyofislam.com/sitemap.xml (single urlset, about
       160k characters). Be polite: one request every 2 seconds at most. If its courses are cataloged,
-      each needs type course, content_tag course and provider "Academy for Learning Islam", which
-      must first be added to the institutes list; fiqh-subject courses are skipped and logged.
+      each needs type course, content_tag course and provider "Academy for Learning Islam"
+      (added to the institutes list). Owner decision 2026-11-15: only asynchronous (self-paced,
+      recorded) courses are cataloged; live or scheduled-term classes are skipped, because they
+      expire. Fiqh-subject courses are skipped and logged.
+
+  - id: hadith.academyofislam.org
+    name: "Hadith Database (Academy for Learning Islam)"
+    type: hadith-collections
+    base_url: "http://hadith.academyofislam.org/"
+    status: active
+    catalog_level: "One record per collection/book/volume. No per-hadith records (same rule as thaqalayn.net)."
+    notes: >
+      Approved by the owner on 2026-11-15 (linked from academyofislam.com). Every record is
+      content_tag hadith. robots.txt returned HTTP 530 on 2026-11-15 (no rules readable); the
+      home page loads. Structure not inspected yet. Be polite: one request every 2 seconds.
 
   - id: youtube
     name: "Whitelisted YouTube channels"
@@ -162,7 +175,15 @@ sources:
 # The owner named the Shia Research Institute and Tasneem Institute as examples but has not
 # supplied their websites. Do not guess addresses.
 # Institutes offering courses. Every course record uses one of these names as its provider.
+# Owner decision 2026-11-15: for every institute, only asynchronous (self-paced, recorded) courses
+# are cataloged. Live classes and scheduled terms are skipped because they expire.
 institutes:
+  - name: "Academy for Learning Islam"
+    base_url: "https://academyofislam.com/"
+    status: active
+    notes: >
+      Re-added by the owner on 2026-11-15. Only asynchronous courses; its per-term live courses
+      (/course-archives/) are skipped.
   - name: "Mizan Institute"
     base_url: "https://mizaninstitute.org/"
     status: active

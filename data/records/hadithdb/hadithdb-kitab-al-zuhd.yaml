@@ -1,0 +1,32 @@
+id: hadithdb-kitab-al-zuhd
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Kitāb al-Zuhd
+title_original: ''
+authors:
+- husayn-b-said-al-ahwazi
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/kitab-al-zuhd
+language: en
+date: ''
+description: An early hadith collection by al-Husayn b. Sa'id al-Ahwazi on zuhd (renunciation), covering
+  detachment from the world, restraint in speech and appetite, remembering death, and fear and hope before
+  God. Shown in Arabic with English translation; a primary source for readers with some background.
+sample_questions:
+- What is zuhd?
+- What do hadith say about leaving worldly attachment?
+- What is Kitab al-Zuhd?
+- What do hadith say about humility and arrogance?
+- Where can I read hadith about remembering death?
+headings:
+- hadith-collections
+- spirituality
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

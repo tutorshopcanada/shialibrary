@@ -1,0 +1,31 @@
+id: hadithdb-al-khisal
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Al-Khiṣāl
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/al-khisal
+language: en
+date: ''
+description: A hadith collection by Shaykh al-Saduq arranged by number, from sayings that list one thing,
+  then two, then three, and upward. The page says it spans ethics, law, cosmology and history, and includes
+  the treatise on rights attributed to Imam Zayn al-Abidin. Shown in Arabic with English translation;
+  a primary source for readers with some background.
+sample_questions:
+- What is Al-Khisal?
+- Is there a hadith book arranged by numbers?
+- Where can I read hadith on ethics and character?
+- What books did Shaykh Saduq write?
+headings:
+- hadith-collections
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

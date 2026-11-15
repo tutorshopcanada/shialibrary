@@ -1,0 +1,32 @@
+id: hadithdb-mishkat-al-anwar
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Mishkāt al-Anwār
+title_original: ''
+authors:
+- tabrisi-al-hasan
+- tabrisi-ali
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/mishkat-al-anwar
+language: en
+date: ''
+description: A 12th-century collection of sayings of the Prophets and Imams on faith and conduct, in ten
+  sections, begun by al-Hasan al-Tabrisi and finished by his son Ali. Its English edition is called The
+  Lamp Niche for the Best Traditions. Shown in Arabic with English translation.
+sample_questions:
+- What is Mishkat al-Anwar?
+- Where can I read hadith on faith and good character?
+- What does the Lamp Niche for the Best Traditions contain?
+- Where can I read hadith on how to treat other people?
+headings:
+- hadith-collections
+- ethics
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

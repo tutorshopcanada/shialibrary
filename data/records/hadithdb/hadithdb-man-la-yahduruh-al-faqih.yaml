@@ -1,0 +1,33 @@
+id: hadithdb-man-la-yahduruh-al-faqih
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Man Lā Yaḥḍuruh al-Faqīh
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/man-la-yahduruh-al-faqih
+language: en
+date: ''
+description: A legal hadith collection by Shaykh al-Saduq, one of the Four Books of Shia hadith, shown
+  in Arabic with English translation. It is arranged like a practical reference, from purity and prayer
+  through trade, marriage and inheritance, in 5 volumes. It is a primary source for readers with some
+  background.
+sample_questions:
+- What is Man La Yahduruh al-Faqih?
+- Which are the Four Books of Shia hadith?
+- Where can I read hadith on prayer and purity?
+- Who was Shaykh al-Saduq?
+- Where can I read hadith about marriage and inheritance?
+headings:
+- hadith-collections
+- legal-hadith
+access: free
+location: 5 volumes
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

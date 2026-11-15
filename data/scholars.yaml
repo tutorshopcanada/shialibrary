@@ -1139,3 +1139,31 @@ scholars:
       - "Late Ayatullah Bahjat"
     notes: "Named on https://www.duas.org/Aytbehjatduas.htm as the source of the supplications (from his diary, compiled by Maulana Zaki Baqri) (read 2026-11-13). Added for a non-fiqh dua page; not an approved marja for fiqh."
     needs_review: true
+
+  - id: al-amidi
+    name: "ʿAbd al-Wāḥid al-Āmidī"
+    role: author
+    alt_names: []
+    notes: "Named as compiler of Ghurar al-Ḥikam on https://rewayaat.info/books/ghurar-al-hikam (read 2026-11-15)."
+    needs_review: true
+
+  - id: tabrisi-al-hasan
+    name: "al-Ḥasan b. al-Faḍl al-Ṭabrisī"
+    role: author
+    alt_names: []
+    notes: "Named as the one who began Mishkāt al-Anwār on https://rewayaat.info/books/mishkat-al-anwar (read 2026-11-15)."
+    needs_review: true
+
+  - id: tabrisi-ali
+    name: "ʿAlī b. al-Ḥasan al-Ṭabrisī"
+    role: author
+    alt_names: []
+    notes: "Named as the son who finished Mishkāt al-Anwār on https://rewayaat.info/books/mishkat-al-anwar (read 2026-11-15)."
+    needs_review: true
+
+  - id: rayshahri
+    name: "Muḥammad Muḥammadī Rayshahrī"
+    role: author
+    alt_names: []
+    notes: "Named as compiler of Mīzān al-Ḥikma on https://rewayaat.info/books/mizan-al-hikma (read 2026-11-15)."
+    needs_review: true

@@ -1,0 +1,33 @@
+id: hadithdb-nahj-al-balagha
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Nahj al-Balāgha
+title_original: ''
+authors:
+- sharif-al-radi
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/nahj-al-balagha
+language: en
+date: ''
+description: The best-known selection of the sermons, letters and sayings of Imam Ali, chosen by al-Sharif
+  al-Radi around the 11th century for their eloquence. It includes the letter of instruction to Malik
+  al-Ashtar. Shown in Arabic with English translation.
+sample_questions:
+- What is Nahj al-Balagha?
+- Where can I read the sermons of Imam Ali?
+- What is the letter to Malik al-Ashtar?
+- Who compiled Nahj al-Balagha?
+- Where can I read Imam Ali's sayings?
+headings:
+- hadith-collections
+- nahj-al-balagha
+- imam-ali
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

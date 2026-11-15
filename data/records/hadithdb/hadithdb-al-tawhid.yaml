@@ -1,0 +1,31 @@
+id: hadithdb-al-tawhid
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Al-Tawḥīd
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/al-tawhid
+language: en
+date: ''
+description: A hadith collection by Shaykh al-Saduq on the oneness of God, His names, attributes, knowledge
+  and justice. Several chapters record debates with opponents of the time. Shown in Arabic with English
+  translation; a primary source for readers with some background.
+sample_questions:
+- What does Shia hadith say about the oneness of God?
+- What is the book Al-Tawhid?
+- Where can I read hadith about God's attributes?
+- Where can I read the Imams' debates with opponents?
+headings:
+- hadith-collections
+- tawhid
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

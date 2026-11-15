@@ -1,0 +1,31 @@
+id: hadithdb-uyun-akhbar-al-rida
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: ʿUyūn Akhbār al-Riḍā
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/uyun-akhbar-al-rida
+language: en
+date: ''
+description: 'A book by Shaykh al-Saduq collecting reports about Imam Ali al-Ridha, the eighth Imam: his
+  sayings, his journey to Khurasan, his appointment as heir by al-Ma''mun, his debates at court and his
+  death in Tus. It has 2 volumes. Shown in Arabic with English translation.'
+sample_questions:
+- Who was Imam Ali al-Ridha?
+- What is Uyun Akhbar al-Rida?
+- Where can I read about Imam Ridha's life in hadith?
+- Where can I read the Imam's debates with other religions?
+headings:
+- hadith-collections
+- twelve-imams
+access: free
+location: 2 volumes
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

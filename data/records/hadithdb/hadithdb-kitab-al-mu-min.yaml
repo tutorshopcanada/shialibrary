@@ -1,0 +1,31 @@
+id: hadithdb-kitab-al-mu-min
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Kitāb al-Muʾmin
+title_original: ''
+authors:
+- husayn-b-said-al-ahwazi
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/kitab-al-mu-min
+language: en
+date: ''
+description: 'An early hadith collection by al-Husayn b. Sa''id al-Ahwazi on the believer: their standing
+  before God, the trials they meet, and the rights believers hold over one another. Shown in Arabic with
+  English translation; a primary source for readers with some background.'
+sample_questions:
+- What are the rights of a believer over another believer?
+- What is Kitab al-Mu'min?
+- What do hadith say about helping other believers?
+- Where can I read hadith on trials of the believer?
+headings:
+- hadith-collections
+- family-social-ethics
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'
