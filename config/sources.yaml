@@ -112,6 +112,44 @@ sources:
       Supplied by the owner on 2026-11-12; see the institutes list below. Fiqh-subject courses are
       skipped and logged. Sitemap: https://mizaninstitute.org/sitemap.xml.
 
+  - id: al-m.ca
+    name: "Al-Ma'arif Foundation (al-m.ca)"
+    type: library
+    base_url: "https://al-m.ca/"
+    status: active
+    catalog_level: "To be decided after inspection (suggested: one record per publication or article)."
+    notes: >
+      Supplied by the owner on 2026-11-15. The page titles read "Al-Maarif Foundation" with
+      Publications and Humanitarian Aid sections (humanitarian pages are out of scope). WordPress
+      (Yoast, Avada, Download Manager). robots.txt (read 2026-11-15) disallows only
+      /wp-content/uploads/wpforms/, has no crawl delay, and lists https://al-m.ca/sitemap_index.xml
+      (sub-sitemaps: post, page, wpdmpro [downloadable publications], avada_faq, category,
+      author). Home page and About page text did not come back usable on 2026-11-15, so the
+      structure is not inspected yet and nothing is cataloged. Be polite: one request every 2
+      seconds at most. Fiqh rule applies. Never link to or record direct file downloads as the
+      record URL; use the publication's own page.
+
+  - id: academyofislam.com
+    name: "Academy for Learning Islam (ALI)"
+    type: library
+    base_url: "https://academyofislam.com/"
+    status: active
+    crawl_delay_seconds: 2
+    catalog_level: "To be decided after inspection (suggested: one record per publication or resource page; one per course, with provider Academy for Learning Islam)."
+    notes: >
+      Supplied by the owner on 2026-11-15. This is the Academy for Learning Islam, which the owner
+      dropped on 2026-11-12 and has now re-added. A registered charity (Toronto and Vancouver) with
+      courses (/course-archives/), publications (/publications/), Quran resources (/quran/),
+      Sahifa Sajjadiyya and duas (/sahifa/, /resources/duas/), and services such as marriage
+      and will writing (services are out of scope). Mostly English; some Quranic Reflections
+      are in French (skip). The site never says "Twelver" but its content (Ma'sumin, Ahl al-Bayt,
+      Sahifa Sajjadiyya) is Twelver Shia. The linked hadith database (hadith.academyofislam.org)
+      is a different host and is not approved. robots.txt (read 2026-11-15) disallows /wp-admin/
+      except admin-ajax and lists https://academyofislam.com/sitemap.xml (single urlset, about
+      160k characters). Be polite: one request every 2 seconds at most. If its courses are cataloged,
+      each needs type course, content_tag course and provider "Academy for Learning Islam", which
+      must first be added to the institutes list; fiqh-subject courses are skipped and logged.
+
   - id: youtube
     name: "Whitelisted YouTube channels"
     type: video
