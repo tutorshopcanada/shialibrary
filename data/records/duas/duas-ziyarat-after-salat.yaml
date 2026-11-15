@@ -1,0 +1,27 @@
+id: duas-ziyarat-after-salat
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Ziarat after Salat"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/ziarataftersalaat.htm
+language: en
+date: ''
+description: "Salutations (ziyarat) that the page says are recited after the prayer. The page gives the background of a report in which Imam al-Ridha was asked how to offer them, then the text in Arabic, transliteration and translation."
+sample_questions:
+- "What salutations are said after prayer?"
+- "What is ziyarat after salat?"
+- "Who was asked about the salutations after prayer?"
+- "Does the page give Arabic and translation for these salutations?"
+headings:
+- ziyarat
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'
