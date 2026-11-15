@@ -1,0 +1,27 @@
+id: duas-fajr-taqeebat
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Fajr Taqeebat"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/fajr-taqibat.html
+language: en
+date: ''
+description: "Recitations that the page says are read after the obligatory Fajr prayer, with transliteration and translation."
+sample_questions:
+- "What is recited after the Fajr prayer?"
+- "What are the Fajr taqeebat?"
+- "Which recitations come after the morning prayer?"
+- "Is there a list of recitations after Fajr?"
+headings:
+- duas
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-13'

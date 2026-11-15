@@ -1,0 +1,28 @@
+id: duas-after-adhan
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Recitations After Adhaan and During Salah"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/after-azaan-duas.html
+language: en
+date: ''
+description: "Supplications to recite after the call to prayer (adhan), during the prayer, and in the qunoot (a supplication within the prayer). The page gives the Arabic, transliteration and translation of each recitation, with notes on the source of each."
+sample_questions:
+- "What dua should I say after the adhan?"
+- "What is qunoot?"
+- "Which supplications are recited during prayer?"
+- "Is there a dua for the morning and evening adhan?"
+headings:
+- duas
+- spirituality
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

@@ -433,6 +433,7 @@ export function createEngine(index) {
   // chapters are narrow pages, so they must not get the boost that sistani.org chapter pages get.
   function granBoost(r) {
     const by = (config.ranking.granularity_boost_by_source || {})[r.source] || {};
+    if (r.granularity === 'work' && by.work_types && by.work_types[r.type] !== undefined) return Number(by.work_types[r.type]) || 1;
     return Number(by[r.granularity] ?? (config.ranking.granularity_boost || {})[r.granularity]) || 1;
   }
 

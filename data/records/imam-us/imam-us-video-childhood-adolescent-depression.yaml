@@ -1,6 +1,6 @@
 id: imam-us-video-childhood-adolescent-depression
 type: video
-content_tag: other
+content_tag: lecture
 granularity: work
 parent: ''
 level: intermediate
@@ -21,6 +21,7 @@ sample_questions:
 - Where can I get help for a child in emotional distress?
 headings:
 - family-social-ethics
+- mental-health
 access: free
 location: ''
 needs_review: false

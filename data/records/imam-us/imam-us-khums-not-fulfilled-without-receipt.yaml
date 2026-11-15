@@ -1,0 +1,27 @@
+id: imam-us-khums-not-fulfilled-without-receipt
+type: qa
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: Khums is not fulfilled without an official receipt
+title_original: ''
+authors: []
+marja: sistani
+source: imam-us.org
+url: https://imam-us.org/khums-needs-official-receipt
+language: en
+date: '2004-10-17'
+description: A question sent to Sayyid al-Sistani by his authorized agent (wakeel) about whether handing khums to the agent completes the obligation. The page presents the question and reply on this topic.
+sample_questions:
+- Is khums complete when I give it to an agent?
+- What is a khums receipt?
+- Who is an authorized agent for khums?
+- How do I show that I have paid khums?
+headings:
+- khums-zakat
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

@@ -1,0 +1,27 @@
+id: duas-sahifa-sajjadiyya
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Sahifa Sajjadia - Psalms of Islam"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/sahifa-sajjadia-index.html
+language: en
+date: ''
+description: "A collection of supplications by Imam Zain al-Abidin, the fourth Imam, sometimes called the Psalms of Islam. The index lists its numbered supplications, including fifteen munajat (intimate prayers) and duas for morning and evening."
+sample_questions:
+- "What is Sahifa Sajjadiyya?"
+- "Whose prayers are in Sahifa Sajjadiyya?"
+- "What is a munajat?"
+- "What is the Psalms of Islam?"
+headings:
+- duas
+access: free
+location: "Index of the whole collection"
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

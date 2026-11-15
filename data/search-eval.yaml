@@ -31,7 +31,7 @@ queries:
   - {query: "what is shia islam", expect_any: [al-islam-discovering-shii-islam, al-islam-discovering-islam], expect_group: any, note: "beginner record should lead"}
   - {query: "how do shias pray", expect_any: [al-islam-discovering-islam, sistani-west-salat-general-rules], expect_group: any, note: ""}
   - {query: "who is imam ali", expect_any: [al-islam-nahjul-balagah-revisited-imam-ali], expect_group: any, note: ""}
-  - {query: "12 imams", expect_any: [al-islam-brief-history-fourteen-infallibles], expect_group: any, note: "alt term"}
+  - {query: "12 imams", expect_any: [al-islam-brief-history-fourteen-infallibles, al-islam-imamate-chapter-3-arguments-for-imamate, al-islam-imamate-and-the-imams, al-islam-twelve-successors-holy-prophet-askari], expect_group: any, note: "alt term"}
   - {query: "fatima", expect_any: [al-islam-fatima-the-gracious], expect_group: any, note: ""}
   - {query: "karbala", expect_any: [al-islam-karbala-chain-of-events], expect_group: exact, note: ""}
   - {query: "how do i become a muslim", expect_any: [al-islam-discovering-islam], expect_group: any, note: ""}

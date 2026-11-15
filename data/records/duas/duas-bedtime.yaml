@@ -1,0 +1,27 @@
+id: duas-bedtime
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Bedtime and Waking Up Duas"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/bedtime-duas.html
+language: en
+date: ''
+description: "Recitations and etiquette for going to bed and for waking up, drawn from several sources including al-Kafi. The page covers the surahs it recommends before sleep and a dua for waking up."
+sample_questions:
+- "What should I recite before going to sleep?"
+- "Is there a dua for waking up?"
+- "Which surahs are recited at bedtime?"
+- "What are the etiquettes of sleep?"
+headings:
+- duas
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'

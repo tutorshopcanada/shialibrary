@@ -1,0 +1,27 @@
+id: imam-us-wsid-halal-meat-restaurant
+type: qa
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: What Should I Do? – Halal Meat
+title_original: ''
+authors: []
+marja: sistani
+source: imam-us.org
+url: https://imam-us.org/what-should-i-do-halal-meat
+language: en
+date: '2021-03-04'
+description: A situation about a man who wants to eat at a restaurant whose staff may not be Muslim and who is unsure whether the meat is Islamically slaughtered. The page covers how to check the meat served in restaurants and shops.
+sample_questions:
+- How do I know if the meat at a restaurant is halal?
+- Can I eat chicken at a restaurant run by non-Muslims?
+- What does Islamically slaughtered meat mean?
+- What should I ask about the meat I buy?
+headings:
+- food-drink
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-12'
