@@ -783,3 +783,20 @@ Cataloged from this chunk (3): imam-us-video-3-bits-advice-better-ramadan, imam-
 - 2026-11-15 | Wudhu | https://www.duas.org/wadhu.htm | purity rulings (not fetched)
 - 2026-11-15 | Toilet use etiquette | https://www.duas.org/mobile/toiletuse.html | purity rulings (not fetched)
 - 2026-11-15 | Salat of Ziarat (ziaratsalat) | https://www.duas.org/ziaratsalat.htm | prayer-performance (not fetched)
+
+## Skipped (fiqh) - duas.org pass (2026-11-15, Haiku worker f)
+- 2026-11-15 | Death related duas and info | https://www.duas.org/death.htm | Mainly funeral rulings (ghusl, kafan, burial, will, inheritance) citing Sistani.org. Main purpose is fiqh; no Fiqh heading may be used on duas records. Owner may decide.
+- 2026-11-15 | Sajda Shukr (thanksgiving prostration) | https://www.duas.org/mobile/sajda-shukr.html | Prostration with its rules and merits; a ritual performance page, not a dua record.
+- 2026-11-15 | Mealtime eating and drinking duas | https://www.duas.org/eating.htm | Includes eating etiquette rules, and the page names no marja.
+- 2026-11-15 | Duas to be recited during Wudhu | https://www.duas.org/wadhu.htm | Includes the steps of performing wudhu (purity rules); the page names no marja.
+- 2026-11-15 | Salaat of Masomeen | https://www.duas.org/mobile/salat-masumeen.html | Prayer-performance page. (Another worker has since cataloged a salaat-masumeen record; this entry only records this worker's skip.)
+
+## Skipped (other) - duas.org pass (2026-11-15, Haiku worker f)
+- 2026-11-15 | Invocation (superiority of tasbeehat and invocations) | https://www.duas.org/Misc/invocation.htm | Led by hadith narrations; hadith narrations are not catalogued as duas.
+- 2026-11-15 | Dua Taj / Battles | https://www.duas.org/dua-taj-battles.html | Duplicate of the cataloged Dua Taj (duas-taj, https://www.duas.org/Duataj.htm).
+- 2026-11-15 | Dua Ehtejab (ehtijab-dua) | https://www.duas.org/ehtijab-dua.html | Duplicate of the cataloged Dua Ehtejab (duas-ehtejab).
+- 2026-11-15 | Dua in obligatory sajda | https://www.duas.org/Misc/sajdadua.htm | Almost no English text (Arabic only).
+- 2026-11-15 | Qazai Hajat | https://www.duas.org/duaqazaihajat.htm | No English text (Arabic only).
+- 2026-11-15 | Sajjadia index (sajjadiya/sajjadiya.htm) | https://www.duas.org/sajjadiya/sajjadiya.htm | Duplicate of the cataloged Sahifa Sajjadiyah index (duas-sahifa-sajjadiyya).
+- 2026-11-15 | Shaban month index variants and Ramadan pages | https://www.duas.org/mobile/ramadan-dua-first-night.html, ramadan-laylatul-qadr-19/21/23 | Dynamic stub pages with no English text.
+- 2026-11-15 | Index pages: ziyarat.html, mobile/iraq-ziarat.html, mobile/madina-mecca-rites.html, mobile/imam-mahdi-related.html, mobile/imam-taqi-duas-list.html, mobile/salawaat-list.html, rabiulawwal.htm | Navigation lists that link to pages (many already cataloged); not catalogued as records. Madina-Mecca page also covers Hajj and Umrah rites.

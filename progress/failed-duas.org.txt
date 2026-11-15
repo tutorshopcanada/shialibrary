@@ -131,3 +131,5 @@
 2026-11-15 | https://www.duas.org/mobile/ziyarat-ummulbaneen.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
 2026-11-15 | https://www.duas.org/ummedawood.htm | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
 2026-11-15 | https://www.duas.org/mobile/syeda-fatima-sa.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/sahifa-alawia126-day3.html | Day 3 of Month, Sahifa Alavia: dynamic stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/ramadhan.htm | Ramadhan index: 1 English word, no English text on the page; not cataloged
