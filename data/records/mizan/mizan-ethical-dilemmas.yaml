@@ -29,6 +29,7 @@ delivery: in-person
 duration: 5 hours
 start_date: ''
 cost: ''
+price_tag: unknown
 enrollment_url: ''
 needs_review: false
 review_note: ''

@@ -84,7 +84,7 @@ for (const q of queries) {
   const related = engine.flatten(res.related).map((r) => r.id);
   const meaning = res.meaningIds || [];
   const group = q.expect_group || 'any';
-  const pool = (group === 'exact' ? exact : group === 'related' ? related : group === 'semantic' ? meaning : [...exact, ...related]).slice(0, topN);
+  const pool = (group === 'exact' ? exact : group === 'related' ? related : group === 'semantic' ? meaning : [...exact, ...related]).slice(0, q.top || topN);
   const expected = q.expect_any || [];
   const found = expected.filter((id) => pool.includes(id));
   const ok = q.expect_none
@@ -99,7 +99,7 @@ for (const q of queries) {
   } else if (!ok) {
     const where = (id) => exact.includes(id) ? `exact #${exact.indexOf(id) + 1}`
       : related.includes(id) ? `related #${related.indexOf(id) + 1}` : 'not returned';
-    console.log(`      expected one of [${expected.join(', ')}] in ${group === 'any' ? 'the' : group} top ${topN}`);
+    console.log(`      expected one of [${expected.join(', ')}] in ${group === 'any' ? 'the' : group} top ${q.top || topN}`);
     for (const id of expected) console.log(`        ${id}: ${where(id)}`);
   }
   if (!ok || verbose) {

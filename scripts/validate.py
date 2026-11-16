@@ -24,7 +24,7 @@ REQUIRED = ["id", "type", "content_tag", "granularity", "level", "title", "sourc
             "language", "description", "sample_questions", "headings", "access", "cataloged_on"]
 KNOWN = set(REQUIRED) | {
     "parent", "title_original", "authors", "marja", "date", "location", "provider",
-    "instructors", "delivery", "duration", "start_date", "cost", "enrollment_url",
+    "instructors", "delivery", "duration", "start_date", "cost", "price_tag", "enrollment_url",
     "needs_review", "review_note"}
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 # A type's natural tag when the record is not fiqh.
@@ -252,8 +252,16 @@ def main():
                 rep.err(rel, "course must name its provider")
             elif r["provider"] not in institutes:
                 rep.err(rel, f"provider {r['provider']!r} is not an approved institute in config/sources.yaml")
-            if fiqh and not r.get("needs_review"):
-                rep.err(rel, "fiqh-subject course must be flagged needs_review (scope question is open)")
+            pt = r.get("price_tag")
+            if pt == "unknown":
+                if r.get("access") != "unknown" or r.get("cost"):
+                    rep.err(rel, "price_tag unknown needs access unknown and a blank cost (the page states no price)")
+            elif pt not in ("free", "paid"):
+                rep.err(rel, "course must have price_tag free, paid or unknown (unknown only when the page states no price)")
+            elif pt == "free" and (r.get("access") != "free" or str(r.get("cost") or "").lower() != "free"):
+                rep.err(rel, "price_tag free needs access free and cost free")
+            elif pt == "paid" and r.get("access") != "paid":
+                rep.err(rel, "price_tag paid needs access paid")
             sd = r.get("start_date")
             if sd:
                 d = as_date(sd)
@@ -264,6 +272,8 @@ def main():
         else:
             if tag == "course":
                 rep.err(rel, "content_tag course is only for type course")
+            if r.get("price_tag"):
+                rep.err(rel, "price_tag is only for type course")
             if fiqh and tag != "fiqh":
                 rep.err(rel, "record has a Fiqh heading, so content_tag must be fiqh")
             if not fiqh and tag == "fiqh":

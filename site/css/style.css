@@ -1043,3 +1043,7 @@ body.has .hero-art,body.has .cursor{display:none}
 .mini p.open,.lrow .lr-d.open{-webkit-line-clamp:unset;display:block;overflow:visible}
 .lr-more{position:relative;z-index:2;background:none;border:0;padding:.35rem 0;margin:0;font:inherit;font-size:.8125rem;font-weight:500;color:var(--ink);text-decoration:underline;cursor:pointer;min-height:2rem}
 .mini .lr-more{align-self:flex-start}
+
+.price{font-size:.8125rem;font-weight:600;border-radius:22px;padding:.05rem .6rem;border:1px solid currentColor}
+.price.free{color:#1a6b3a}.price.paid{color:#8a5a00}
+@media (prefers-color-scheme:dark){.price.free{color:#6fd39a}.price.paid{color:#e6b45a}}

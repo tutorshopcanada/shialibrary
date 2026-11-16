@@ -31,6 +31,7 @@ delivery: ''
 duration: ''
 start_date: ''
 cost: free
+price_tag: free
 enrollment_url: ''
 needs_review: false
 review_note: ''

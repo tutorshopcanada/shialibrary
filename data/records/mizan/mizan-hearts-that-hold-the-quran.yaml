@@ -29,6 +29,7 @@ delivery: live
 duration: 4 months
 start_date: '2027-01-06'
 cost: $125 USD
+price_tag: paid
 enrollment_url: ''
 needs_review: false
 review_note: ''

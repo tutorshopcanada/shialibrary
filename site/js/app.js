@@ -153,6 +153,7 @@ function bestStart(id) {
   return RECS.filter((n) => n.all.includes(id)).sort((a, b) => (LV(a.lv) - LV(b.lv)) ||
     (a.g === 'work' ? 0 : 1) - (b.g === 'work' ? 0 : 1) || String(a.raw.title).localeCompare(b.raw.title))[0];
 }
+const priceBadge = (r) => (r.price_tag === 'free' || r.price_tag === 'paid') ? `<span class="price ${r.price_tag}">${r.price_tag === 'free' ? 'Free course' : 'Paid course'}</span>` : '';
 function levelDots(level) {
   const n = LV(level);
   return `<span class="lvl"><s aria-hidden="true">${levelOrder().map((_, i) => `<b class="${i < n ? 'on' : ''}"></b>`).join('')}</s>${esc(levelLabel(level))}</span>`;
@@ -200,7 +201,7 @@ function cardHtml(r, { compact = false, lean = false, tick = false, hideContextF
   if (lean) { context = ''; report = ''; }
   if (tick) actions += `<label class="stick"><input class="tick" type="checkbox" data-read="${esc(r.id)}" ${read[r.id] ? 'checked' : ''}> Mark as read</label>`;
   const det = clusterDetails(more);
-  return `<li class="card"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}</div>
+  return `<li class="card"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${priceBadge(r)}</div>
   ${title}${orig}<p class="meta">${by}<span dir="auto">${esc(src)}</span>${loc}${marja}</p>
   ${r.description ? `<p class="d" dir="auto">${esc(r.description)}</p>` : ''}${facts}
   ${actions}${context || report ? `<p class="cfoot">${context}${report}</p>` : ''}${det}</li>`;
@@ -663,7 +664,7 @@ const refineHtml = (st) => `<form class="refine" id="refine" role="search"><svg 
 
 function miniHtml(r) {
   const src = sourceName(r.source);
-  return `<article class="mini"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}</div>
+  return `<article class="mini"><div class="badges"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${priceBadge(r)}</div>
   <h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>
   ${r.description ? `<p dir="auto">${esc(r.description)}</p>` : ''}<span class="mute" style="font-size:.875rem;margin-top:auto">Opens on ${esc(sourceShort(r.source))} <span aria-hidden="true">↗</span></span></article>`;
 }
@@ -672,7 +673,7 @@ function rowHtml(r, more, hl = 'h4') {
   const ctx = parts.length ? `<span class="lr-ctx">In ${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')} · <a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a></span>` : (r.descendant_count ? `<span class="lr-ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>` : '');
   const rh = reportHref(r);
   return `<li class="lrow"><${hl}><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></${hl}>
-  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${MEANING.ids.has(r.id) ? '<span class="by-meaning" title="Matched by meaning on your device, not by your exact words">Found by meaning</span>' : ''}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
+  <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${priceBadge(r)}${MEANING.ids.has(r.id) ? '<span class="by-meaning" title="Matched by meaning on your device, not by your exact words">Found by meaning</span>' : ''}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
   ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<p class="lr-foot">${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></p></li>`;
 }
 const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('')}</ul>`;
