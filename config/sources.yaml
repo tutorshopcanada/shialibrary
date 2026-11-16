@@ -159,7 +159,9 @@ sources:
     status: active
     catalog_level: "One record per collection/book/volume. No per-hadith records (same rule as thaqalayn.net)."
     notes: >
-      Approved by the owner on 2026-11-15 (linked from academyofislam.com). Every record is
+      Approved by the owner on 2026-11-15 (linked from academyofislam.com). hadith.academyofislam.org redirects to https://rewayaat.info/ and its inner pages
+      fail on the old host, so record URLs use rewayaat.info (like thaqalayn.net / .com). rewayaat.info robots.txt
+      (read 2026-11-15) allows /books and disallows /v1/, /mcp and narrator filter queries. Every record is
       content_tag hadith. robots.txt returned HTTP 530 on 2026-11-15 (no rules readable); the
       home page loads. Structure not inspected yet. Be polite: one request every 2 seconds.
 

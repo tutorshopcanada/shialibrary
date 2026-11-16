@@ -463,3 +463,8 @@ Skipped, with reasons:
 - Fiqh or practical rulings with no stated marja on the page (skipped under the fiqh rule): Salat Resources and Rulings, Marriage Guide, the zakat, khums, marijuana and cryptocurrency posts, Taharat un Nisa, Business Ethics in Islam, Adoption in Islam. The "2015 Edition: Ayatullah Sistani Risalah: Islamic Laws" download page (https://al-m.ca/download/2015-edition-ayatullah-sistani-risalah-islamic-laws/) is a Sistani book, but the page shows an empty file (0 KB) and no description, so it was not cataloged. Owner to decide.
 - Out of scope: donations, halal guides and restaurants, moon sighting, travel exemptions, newsletters, special-education worksheets for children.
 - Flagged needs_review (possible polemic): al-m-hadith-man-mata-lecture, al-m-wa-ajjil-farajahum-bidah.
+
+## academyofislam.com, first batch (2026-11-15)
+- Courses: none cataloged. Every course on the site (/course-archives/, current term Fall 2026) is a live or scheduled-term class, which the owner excluded on 2026-11-15 because they expire. Several are also fiqh-subject (The Laws of Fasting, Simple Islamic Laws for Sisters, Islamic Laws Related to the Workplace).
+- Not cataloged: "Index to Chronicles to the Martyrdom of Imam Husayn" (product page has no description); the services pages (marriage, wills); the 114 individual surah pages (the work-level record "Introduction to Quranic Sūrahs" is cataloged; sections can follow if the owner wants them); remaining Knowing the Ma'sūmīn workbooks, Quranic Reflections Books 2 to 5 and devotions booklets (about 25 product pages, same pattern).
+- Hadith database: records are in data/records/hadithdb (21 books, work level). Volume and chapter sections were not created.
