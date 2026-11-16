@@ -253,8 +253,11 @@ def main():
             elif r["provider"] not in institutes:
                 rep.err(rel, f"provider {r['provider']!r} is not an approved institute in config/sources.yaml")
             pt = r.get("price_tag")
-            if pt not in ("free", "paid"):
-                rep.err(rel, "course must have price_tag free or paid (from the price the page states)")
+            if pt == "unknown":
+                if r.get("access") != "unknown" or r.get("cost"):
+                    rep.err(rel, "price_tag unknown needs access unknown and a blank cost (the page states no price)")
+            elif pt not in ("free", "paid"):
+                rep.err(rel, "course must have price_tag free, paid or unknown (unknown only when the page states no price)")
             elif pt == "free" and (r.get("access") != "free" or str(r.get("cost") or "").lower() != "free"):
                 rep.err(rel, "price_tag free needs access free and cost free")
             elif pt == "paid" and r.get("access") != "paid":
