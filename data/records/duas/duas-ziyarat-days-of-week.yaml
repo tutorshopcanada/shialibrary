@@ -1,0 +1,28 @@
+id: duas-ziyarat-days-of-week
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: intermediate
+title: "Days of the Week Ziyarat"
+title_original: ''
+authors: []
+marja: ''
+source: duas.org
+url: https://www.duas.org/mobile/days-week-ziyarat.html
+language: en
+date: ''
+description: "A page listing a ziyarat (a visitation text addressed to the Prophet or an Imam) for each day of the week. Friday is for Imam Mahdi and the Ahlulbayt, Saturday for the Holy Prophet, Sunday for Imam Ali and Lady Fatima, and the page lists the Imams for the remaining days."
+sample_questions:
+- "Which ziyarat is recited on Friday?"
+- "Is there a ziyarat for each day of the week?"
+- "Which ziyarat is for Saturday?"
+- "What ziyarat is recited on Wednesday?"
+- "What is a ziyarat?"
+headings:
+- ziyarat
+access: free
+location: ""
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

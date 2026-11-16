@@ -1,0 +1,27 @@
+id: "duas-salawaat-ahlulbayt-list"
+type: "other"
+content_tag: "other"
+granularity: "work"
+parent: ""
+level: "intermediate"
+title: "Salawaat on Ahlulbayt (list)"
+title_original: ""
+authors: []
+marja: ""
+source: "duas.org"
+url: "https://www.duas.org/mobile/salawaat-list.html"
+language: "en"
+date: ""
+description: "A list of salawat (blessings sent on the Prophet and his family) grouped by the person they are sent on, from the Prophet and Fatima to Imam Mahdi, with Friday salawat and hourly duas as well. Each entry links to its own page."
+sample_questions:
+- "What is a salawat?"
+- "Which salawat are there for Imam Ali al-Ridha?"
+- "Is there a salawat for Imam Mahdi on duas.org?"
+- "What salawat are recited on Fridays?"
+headings:
+- "duas"
+access: "free"
+location: ""
+needs_review: false
+review_note: ""
+cataloged_on: "2026-11-15"

@@ -46,3 +46,139 @@
 2026-11-13 | https://www.duas.org/mobile/new-month-dua-rights.html | stub page (2.8 KB shell, no English text); not cataloged
 2026-11-13 | https://www.duas.org/mobile/mubahila-zilhajj24.html | stub page (2.8 KB shell, no English text); not cataloged
 2026-11-13 | https://www.duas.org/mobile/sahifasajjadia-dua42-completing-quran.html | stub page (2.8 KB shell, no English text); Sahifa dua 42; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-ali-shrine.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-as-shrine.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-hazrat-abbas.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-ummulbaneen.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-third-jamea.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-habib-mazahir.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-muslim-ibn-aqeel.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-ibrahim-mujab.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-sayed-mohammed.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-ali-21-ramadan.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-laylatulqadr.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-night-15-shaban.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-rajab1-rajab15-shaban15.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-arafah.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/Lady-sharifa.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-laylatul-qadr-19.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-laylatul-qadr-21.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-laylatul-qadr-23.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-first-night.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-last-day-night.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-eid.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/muharram-first.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/zilhajj-10-days.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/zilhajj-8-arafah-eve.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/zilhajj-9-arafah-day.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/safar-daily-dua.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/jamadiulawal-begin.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-aliya-mazameen-postziarat.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/ummedawood.htm | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/15shaban.htm | stub page (2.6 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-quran.html | stub page (2.6 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan02.html | stub page (2.6 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan10.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/salawaat01-holyprophet.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/salawaat03-ladyfatima-sa.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-shaaban-dua-first-night.html | stub page (2.6 KB shell, no English text); not cataloged
+2026-11-15 | https://duas.org/mobile/monday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://duas.org/mobile/saturday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://duas.org/mobile/sunday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://duas.org/mobile/thursday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://duas.org/mobile/thursday-night-duas.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://duas.org/mobile/tuesday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://duas.org/mobile/wednesday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/Sahife%20Zehra/Index.htm | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-aliya-mazameen-postziarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-alqama-after-ashura.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-faraj.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-hazeen.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-man-taabba-tahhaya.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-nadali.html | retry: now 404 (no page); not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-nudba.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-quran.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-yashahida-kulle-najwa.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/dua-yastashir.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/friday-duas-ziyarat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/hareeq.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/isteghasa-imam.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/jamadiulakhir-begin.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/jamadiulawal-begin.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/magrib-isha-taqibat.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/mubahila-zilhajj24.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/muharram-first.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/new-month-dua-rights.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/rabialakher-begin.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-amaal-first.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-eid.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-laylatul-qadr.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-shaaban-dua-first-night.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-suhoor-dua-abu-hamza-thumali.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/safar-daily-dua.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/sahifasajjadia-dua42-completing-quran.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/sahifasajjadia-dua44-coming-of-ramadhan.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/sahifasajjadia-dua45-farewell-ramadhan.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/sahifasajjadia-dua47-day-of-arafah.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/salaat-ghufaylah.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/salaat-jafar-tayyar.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziarat-aleyasindua.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/zilhajj-10-days.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/zilhajj-8-arafah-eve.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/zilhajj-9-arafah-day.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-hussain-arafah.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-mahdi.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-ummulbaneen.html | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/ummedawood.htm | retry: still a 2.6-2.8 KB stub shell with no English text; not cataloged
+2026-11-15 | https://www.duas.org/mobile/syeda-fatima-sa.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/sahifa-alawia126-day3.html | Day 3 of Month, Sahifa Alavia: dynamic stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/ramadhan.htm | Ramadhan index: 1 English word, no English text on the page; not cataloged
+2026-11-15 | https://www.duas.org/mobile/imam-musa-kazim-as.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/TiflanMuslim.htm | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/holy-prophet-saw.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/imam-jafar-sadiq-as.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/imam-mohammed-baqer-as.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/imam-taqi-jawad-as.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/kufa.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/salawaat07-imammohammed-baqir-as.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/salawaat08-imamjafar-sadiq-as.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/sehla.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ziyarat-imam-ali-ameenallah.html | stub page (2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/salawaat10-imammali-ridha-as.html | HTTP 404 (page not found); not cataloged
+2026-11-15 | https://www.duas.org/zilhajj-9-arafah-day.html | HTTP 404 on re-fetch (earlier stub); not cataloged
+2026-11-15 | https://www.duas.org/mobile/specific-need-routine-time1.htm | HTTP 404 (page not found; the index names this page under specific needs); not cataloged
+2026-11-15 | https://www.duas.org/mobile/rabialakher-begin.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-amaal-first.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-begin.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-everyday-ramadan-26-30.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-everyday-ramadan-27-30.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-everyday-ramadan-28-30.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-everyday-ramadan-29-30.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-everyday-ramadan-30-30.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-dua-last-10-days.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadan-laylatul-qadr.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan00.html | 404 Not Found (page does not exist); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan03.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan04.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan05.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan06.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan07.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan08.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan11.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan12.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan13.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan14.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan15.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan16.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan17.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan18.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan19.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan20.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan21.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan22.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan23.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan24.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/ramadhan25.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/safar-third-salat.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/hadis-kisa-mobile.html | dynamic stub page (about 2.6-2.8 KB shell, no English text); not cataloged
+2026-11-15 | https://www.duas.org/mobile/imam-zainulabideen-as.html | 404 Not Found (page does not exist); not cataloged
