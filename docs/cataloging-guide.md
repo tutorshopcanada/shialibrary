@@ -17,7 +17,15 @@ The rules are in `CLAUDE.md` section 6. This page adds the working details.
   the page or question. Never say what the ruling is, in the description or the sample questions.
 - `authors` is who the page names as author. `marja` is whose rulings a fiqh record presents.
 - `sample_questions`: 3-8 questions a beginner might type, based on what the page covers.
-- `level`: from what the page says about itself. If unsure, choose the more advanced level and flag.
+- `level`: from what the page says about itself. If the page says nothing (Q&A items never do), use the
+  Q&A test below. If still unsure, choose the more advanced level.
+  - **Q&A items (owner decision 2026-11-13):** beginner means things people should know and that are easy
+    to digest. Fiqh Q&A is beginner across the board, however detailed the ruling.
+    - *intermediate* is only for mut'ah (temporary marriage) and la'nah (cursing), which can confuse a
+      newcomer without context. Everything else, including Shia-Sunni matters, the third testimony and
+      mourning customs, is beginner.
+    - *advanced* is not used for fiqh Q&A.
+    - Topic (section) records take the level of the typical question inside them.
 - Anything the page does not state stays blank.
 
 ## Hierarchy by source

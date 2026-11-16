@@ -1,0 +1,28 @@
+id: "duas-medina-mecca-ziyaraat"
+type: "other"
+content_tag: "other"
+granularity: "work"
+parent: ""
+level: "intermediate"
+title: "Medina-Mecca Ziyaraat"
+title_original: ""
+authors: []
+marja: ""
+source: "duas.org"
+url: "https://www.duas.org/mobile/madina-mecca-rites.html"
+language: "en"
+date: ""
+description: "Visitation (ziyarat) texts and supplications for holy places in Madina and Mecca, with short notes on what to recite at each place, as the page gives them. It also links to PDF guides for Madina ziyarat."
+sample_questions:
+- "What ziyarat can be recited in Madina?"
+- "What dua is said at the Prophet’s mosque in Madina?"
+- "What should I recite before drinking Zamzam?"
+- "Is there a dua for the Rawdah in Madina?"
+headings:
+- "ziyarat"
+- "duas"
+access: "free"
+location: ""
+needs_review: false
+review_note: ""
+cataloged_on: "2026-11-15"
