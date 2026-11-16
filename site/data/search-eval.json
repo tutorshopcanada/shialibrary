@@ -234,7 +234,10 @@
     "thaqalayn-al-kafi-vol-7",
     "thaqalayn-tahdhib-al-ahkam-vol-1",
     "thaqalayn-al-tawhid",
-    "thaqalayn-al-khisal"
+    "thaqalayn-al-khisal",
+    "hadithdb-al-kafi",
+    "hadithdb-al-tawhid",
+    "hadithdb-al-khisal"
    ],
    "expect_none": false,
    "expect_group": "any",
