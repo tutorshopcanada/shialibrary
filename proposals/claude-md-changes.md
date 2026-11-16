@@ -37,3 +37,21 @@
 13. **Build order.** The search page was scheduled after scaling up (step 9). It was built
     alongside the pilot instead, so pilot records can be reviewed in the real interface.
 14. Section 8 asks for 50-100 starter questions; step 7 asks for 20. Read as 20 for the pilot.
+
+## Proposed (2026-11-13): Q&A level rule
+Section 5 "Level rules" does not say how to level Q&A items, whose pages state no audience, so
+nearly all sistani.org Q&A defaulted to intermediate (935 of 953). Owner direction 2026-11-13:
+everyday-situation questions are beginner. The test is written in `docs/cataloging-guide.md`
+(Writing a record > level). Proposed CLAUDE.md edit: add one line to section 5 pointing to it. Pilot of
+100 sistani.org items re-leveled 2026-11-13 (41 beginner, 22 advanced); the rest is pending owner review.
+Superseded the same day: owner decision is that all fiqh Q&A is beginner, and only contested or confusing
+topics (Shia-Sunni matters, third testimony, la'nah, mut'ah, seeking help from the Imams, physical mourning
+customs, kafir topic) are intermediate. All 953 Q&A records re-leveled on that basis; the intermediate list is in
+the commit message of that change.
+Narrowed again 2026-11-13: only mut'ah and la'nah Q&A are intermediate; every other fiqh Q&A is beginner.
+
+## Applied 2026-11-13: no polemic flagging
+Owner decision: the "possible polemic" flag is removed for all sources (al-islam.org, sistani.org,
+imam-us.org and the rest). Polemic or contested pages are cataloged like any other, with neutral
+wording and no `needs_review`. CLAUDE.md rule 6 updated. The fiqh-boundary flag (a possible fiqh work
+by someone other than Sistani or Khamenei) and the "too little to describe" flag stay.
