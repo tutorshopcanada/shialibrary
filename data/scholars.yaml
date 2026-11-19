@@ -1174,3 +1174,10 @@ scholars:
     alt_names: []
     notes: "Named as co-compiler (with Liaket Dewji) on https://al-islam.org/shia-sunni-debate-answering-50-most-common-questions-liaket-dewji-baqerali-alidina (read 2026-11-19)."
     needs_review: true
+
+  - id: hasan-ibn-muhammad-al-daylami
+    name: "Hasan ibn Muhammad Al-Daylami"
+    role: author
+    alt_names: []
+    notes: "Named as author of the original work (Irshad al-Qulub) on https://al-islam.org/articles/narration-hadith-hudhayfah-ibn-al-yaman (read 2026-11-19)."
+    needs_review: true

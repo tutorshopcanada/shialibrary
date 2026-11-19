@@ -478,3 +478,8 @@ Skipped, with reasons:
 
 ## Owner decision 2026-11-19: polemical items are allowed
 Items skipped or flagged only for being polemical (history and Shia belief, not meant to start arguments) are now in scope and need no flag. The wording rules still apply: neutral, factual descriptions with no endorsement or criticism, and the fiqh rule. The two al-m.ca flags were cleared, and the items listed under the "Skipped (polemical)" headings above are being cataloged.
+
+## Third batch, 2026-11-19
+- al-m.ca fiqh (owner: Sayyid Muhammad Rizvi represents Sistani): 31 records (16 pages with text, 15 title-only downloads), all marja sistani, authors [sayyid-muhammad-rizvi], even where the page names only "Admin" or Al-Ma'arif. Owner to confirm authorship for pages with no named author, and that the gender and mixed-gathering items (Al-Furqan issues 11, 12, Gender Interactions) count as fiqh. Skipped: /course/jurisprudence/ (no description), semester 10 inheritance session notes (class notes; also no inheritance heading exists, propose one).
+- The same work now appears twice where a page and a download exist (Business Ethics, Taharat un Nisa, Zakat, Ramadan guide); both kept per owner.
+- Polemic backlog: 8 al-islam.org records and 1 imam-us.org record added. imam-us BBC statement is tagged article, not fiqh (one answer touches a marriage ruling): owner to confirm. Already recorded earlier: Twelve Successors (Askari) and the three Mizan courses (their live/ended status was not re-checked). Not cataloged: al-Tijani al-Samawi chapter (node/46853) because its parent book has no record.
