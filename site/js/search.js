@@ -84,6 +84,8 @@ export const DEFAULT_CONFIG = {
     max_related: 30,       // size of the fused "Related results" list
     fusion_k: 20,          // reciprocal-rank-fusion constant (higher = flatter blend of the two rankings)
     candidates: 80,        // how many nearest records the semantic layer hands over before filtering
+    min_word_coverage: 0,  // also consult it when the best keyword results contain less than this share of the words (0 = off)
+    min_terms_for_coverage: 3, // ...but only for queries with at least this many key words
   },
 };
 
@@ -660,6 +662,7 @@ export function createEngine(index) {
     const px = config.layer2.prefix;
     const score = new Float64Array(N);
     const mask = new Int32Array(N);
+    const wordMask = new Int32Array(N); // query words found as words (not only through a topic heading)
     const addPostings = (term, bit, factor) => {
       const p = postings.get(term);
       if (!p) return;
@@ -669,6 +672,7 @@ export function createEngine(index) {
         const norm = tf * (k1 + 1) / (tf + k1 * (1 - b + b * fieldLen[fi][d] / avgLen[fi]));
         score[d] += w * weights[fi] * norm;
         mask[d] |= bit;
+        wordMask[d] |= bit;
       }
     };
     qa.keyTerms.forEach((t, i) => {
@@ -702,7 +706,7 @@ export function createEngine(index) {
       }
       for (const d of touched) { score[d] += bonus * conceptBuf[d]; mask[d] |= bits; conceptBuf[d] = 0; }
     }
-    return { score, mask };
+    return { score, mask, wordMask };
   }
 
   function coverage(qa, mask) {
@@ -843,7 +847,7 @@ export function createEngine(index) {
     }
 
     const curated = layer1(qa);
-    const { score, mask } = keywordScores(qa);
+    const { score, mask, wordMask } = keywordScores(qa);
     const L2 = config.layer2;
 
     let hits = [];
@@ -863,9 +867,15 @@ export function createEngine(index) {
           qa.longWords.filter((x) => doc.titleKeys.some((t) => near(t, x))).length >= qa.longWords.length * 2 / 3) {
         s *= L2.title_match_boost;
       }
-      hits.push({ doc, record: doc.record, score: s, coverage: cov, exact: isExact(qa, doc) });
+      hits.push({ doc, record: doc.record, score: s, coverage: cov, wordCoverage: coverage(qa, wordMask[d]), exact: isExact(qa, doc) });
     }
     hits.sort((a, b) => b.score - a.score);
+    // How well the best few keyword results cover the query's own words (not counting matches made only through a
+    // topic heading). Layer 3 uses it to decide whether meaning search should be asked as well.
+    result.signals = {
+      keyTerms: qa.keyTerms.length,
+      topWordCoverage: hits.slice(0, 3).reduce((m, h) => Math.max(m, h.wordCoverage), 0),
+    };
     const top = hits[0];
     // Drop the long tail of results that only share a common word with the query.
     if (top) {
@@ -957,7 +967,11 @@ export function createEngine(index) {
   function needsSemantic(result) {
     const L3 = config.layer3;
     if (!L3 || !L3.enabled || result.mode !== 'search') return false;
-    return result.fallback || result.counts.exact < L3.max_exact;
+    if (result.fallback || result.counts.exact < L3.max_exact) return true;
+    // Also when the query is a longer question and even the best keyword results contain too few of its words.
+    const sig = result.signals || {};
+    return Number(L3.min_word_coverage) > 0 && sig.keyTerms >= (Number(L3.min_terms_for_coverage) || 3) &&
+      sig.topWordCoverage < Number(L3.min_word_coverage);
   }
 
   /**

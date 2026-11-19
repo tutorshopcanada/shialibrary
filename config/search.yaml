@@ -209,3 +209,8 @@ layer3:
   max_related: 30       # size of the fused "Related results" list
   fusion_k: 20          # reciprocal-rank-fusion constant (higher = flatter blend of keyword and meaning)
   candidates: 80        # nearest records handed over before filtering
+  # Also consult meaning search when the query has at least `min_terms_for_coverage` key words and even the best
+  # three keyword results contain less than this share of them as words (matches made only through a topic
+  # heading do not count). 0 = off. Tuned by scripts/tune_search.mjs. (2026-11-19)
+  min_word_coverage: 0
+  min_terms_for_coverage: 3
