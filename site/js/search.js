@@ -133,6 +133,8 @@ export function stem(tok) {
   return r;
 }
 function stemRaw(tok) {
+  // Arabic: drop the attached article "al-" (الأنبياء = أنبياء), keeping at least three letters.
+  if (tok.length >= 5 && tok.startsWith('ال') && /^[\u0621-\u064a]+$/.test(tok)) return tok.slice(2);
   if (tok.length < 4 || !/^[a-z]+$/.test(tok)) return tok;
   let t = tok;
   if (t.endsWith('ies') && t.length > 4) t = t.slice(0, -3) + 'y';
@@ -217,9 +219,13 @@ export function createEngine(index) {
   }
   for (const h of headings) {
     const keys = new Set();
-    for (const term of [...labelVariants(h.label), ...(h.alt_terms || [])]) {
+    const names = labelVariants(h.label);
+    for (const term of [...names, ...(h.alt_terms || [])]) {
       const key = addConcept(term, 'headings', h.id);
-      if (key) keys.add(' ' + key + ' ');
+      // Only the heading's own names ("Prayer", "Salah") may stand in for a query word in the exact-match rule.
+      // Its other alternate terms are related topics ("chess" under music and entertainment), not equivalents;
+      // true equivalents are listed in data/synonyms.yaml.
+      if (key && names.includes(term)) keys.add(' ' + key + ' ');
     }
     headingPhrases.set(h.id, [...keys]);
   }
@@ -231,6 +237,62 @@ export function createEngine(index) {
       if (bare !== normalize(name) && bare.length >= 4) addConcept(bare, 'scholars', s.id);
     }
   }
+
+  // ---- Synonyms and entities (data/synonyms.yaml, data/entities.yaml) ----
+  // A group of interchangeable terms becomes one extra index token ("~mutah") on every field that contains any
+  // of its terms, and a query naming any of them searches that token. Plain table lookup, no model.
+  const synByFirst = new Map(); // first word -> [{ toks, gid, notBefore }], longest first
+  const synWords = new Set();   // every word used in a synonym term (never "corrected" as a typo)
+  const synData = index.synonyms || {};
+  for (const g of synData.groups || []) {
+    const notBefore = new Set((g.not_before || []).flatMap((w) => tokenize(w)));
+    for (const term of g.terms || []) {
+      const toks = tokenize(term);
+      if (!toks.length || toks.length > 8) continue;
+      if (!synByFirst.has(toks[0])) synByFirst.set(toks[0], []);
+      const list = synByFirst.get(toks[0]);
+      if (!list.some((e) => e.toks.join(' ') === toks.join(' '))) list.push({ toks, gid: '~' + g.id, notBefore });
+      for (const t of toks) synWords.add(t);
+    }
+  }
+  for (const list of synByFirst.values()) list.sort((a, b) => b.toks.length - a.toks.length);
+  // Context rules (queries only): "stone" means the turbah when the query is about praying.
+  const synContexts = new Map(); // word -> [{ with:Set, gid }]
+  for (const c of synData.contexts || []) {
+    const w = tokenize(c.word)[0];
+    if (!w) continue;
+    if (!synContexts.has(w)) synContexts.set(w, []);
+    synContexts.get(w).push({ with: new Set((c.with || []).flatMap((x) => tokenize(x))), gid: '~' + c.means });
+  }
+  /** Greedy longest matches of synonym terms in a token list: [{ start, len, gid }]. */
+  // The word after a match, looking past an Arabic article ("imam ali al-ridha": the word after "al").
+  const ARTICLES = new Set(['al', 'el', 'ul', 'as', 'ash', 'ar', 'an', 'at', 'ad', 'az', 'ad']);
+  const blockedAfter = (set, toks, j) => j < toks.length &&
+    (set.has(toks[j]) || (ARTICLES.has(toks[j]) && j + 1 < toks.length && set.has(toks[j + 1])));
+  function synSpans(toks, withContexts) {
+    const out = [];
+    for (let i = 0; i < toks.length;) {
+      let m = 0;
+      for (const e of synByFirst.get(toks[i]) || []) {
+        const len = e.toks.length;
+        if (i + len > toks.length) continue;
+        let ok = true;
+        for (let j = 1; j < len && ok; j++) ok = toks[i + j] === e.toks[j];
+        if (!ok) continue;
+        if (e.notBefore.size && blockedAfter(e.notBefore, toks, i + len)) continue;
+        out.push({ start: i, len, gid: e.gid });
+        m = len;
+        break;
+      }
+      if (!m && withContexts && synContexts.has(toks[i])) {
+        const rule = synContexts.get(toks[i]).find((r) => toks.some((t, j) => j !== i && r.with.has(t)));
+        if (rule) { out.push({ start: i, len: 1, gid: rule.gid }); m = 1; }
+      }
+      i += m || 1;
+    }
+    return out;
+  }
+  const withSynonyms = (toks) => { const sp = synSpans(toks, false); return sp.length ? [...toks, ...sp.map((x) => x.gid)] : toks; };
 
   // ---- Per-record search documents ----
   const headingText = (ids) => ids.map((id) => {
@@ -260,7 +322,7 @@ export function createEngine(index) {
     // "tq": title + sample questions, the fields the exact-match rule looks at.
     const tqParts = [r.title || '', ...(r.sample_questions || [])].map(tokenize);
     const tqTokens = new Set();
-    for (const part of tqParts) for (const t of part) tqTokens.add(t);
+    for (const part of tqParts) for (const t of withSynonyms(part)) tqTokens.add(t);
     return {
       record: r,
       people: new Set(people),
@@ -287,7 +349,9 @@ export function createEngine(index) {
   const indexTokens = (text) => {
     let r = tokCache.get(text);
     if (!r) {
-      const toks = tokenize(text).filter((t) => !stopSet.has(t));
+      const all = tokenize(text);
+      const toks = all.filter((t) => !stopSet.has(t));
+      for (const sp of synSpans(all, false)) toks.push(sp.gid);
       const tf = new Map();
       for (const t of toks) tf.set(t, (tf.get(t) || 0) + 1);
       r = { len: toks.length, entries: [...tf] };
@@ -359,32 +423,62 @@ export function createEngine(index) {
   }
 
   // ---- Query analysis ----
-  // Spelling help: a query word the catalog has never seen ("prohets") is replaced by the single best known
-  // word one typo away (a missing, extra, wrong or swapped letter). Plain edit-distance rule, no model. Only
-  // words of 5+ letters; ties go to the word found on the most pages.
+  // Spelling help (SymSpell-style, plain rules, no model). A query word the catalog has never seen ("prohets",
+  // "infalibility") is replaced by the closest known word: at most 1 edit for words of 5-7 letters, 2 edits for
+  // longer words (a missing, extra, wrong or swapped letter each count as one edit). Ties go to the word found on
+  // the most pages. The lookup table (every known word with one letter removed) is built only when first needed.
   const termCache = new Map();
-  function oneTypo(a, b) {
-    if (Math.abs(a.length - b.length) > 1) return false;
-    let i = 0;
-    while (i < a.length && i < b.length && a[i] === b[i]) i++;
-    if (i === a.length && i === b.length) return false;
-    if (a.length === b.length) {
-      if (a.slice(i + 1) === b.slice(i + 1)) return true;                       // wrong letter
-      return a[i] === b[i + 1] && a[i + 1] === b[i] && a.slice(i + 2) === b.slice(i + 2); // swapped
+  let deletes = null, dict = null;
+  function buildDeletes() {
+    dict = new Set();
+    for (const w of terms) if (/^[a-z]+$/.test(w)) dict.add(w);
+    for (const w of synWords) if (/^[a-z]+$/.test(w)) dict.add(w);
+    for (const k of concepts.keys()) if (/^[a-z]+$/.test(k)) dict.add(k);
+    deletes = new Map();
+    for (const w of dict) {
+      if (w.length < 4) continue;
+      for (let i = 0; i < w.length; i++) {
+        const d = w.slice(0, i) + w.slice(i + 1);
+        let a = deletes.get(d);
+        if (!a) { a = []; deletes.set(d, a); }
+        if (a[a.length - 1] !== w) a.push(w);
+      }
     }
-    const [s, l] = a.length < b.length ? [a, b] : [b, a];
-    return s.slice(i) === l.slice(i + 1);                                          // missing / extra letter
+  }
+  function editDistance(a, b, max) { // optimal string alignment (Damerau-Levenshtein with adjacent swaps)
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    let p2 = null, p = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) {
+      const c = [i];
+      let low = i;
+      for (let j = 1; j <= b.length; j++) {
+        let v = Math.min(p[j] + 1, c[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (p2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) v = Math.min(v, p2[j - 2] + 1);
+        c.push(v);
+        if (v < low) low = v;
+      }
+      if (low > max) return max + 1;
+      p2 = p; p = c;
+    }
+    return p[b.length];
   }
   function correctTerm(t) {
-    if (t.length < 5 || !/^[a-z]+$/.test(t) || postings.has(t) || concepts.has(t) || stopSet.has(t)) return t;
+    if (t.length < 5 || !/^[a-z]+$/.test(t) || postings.has(t) || concepts.has(t) || stopSet.has(t) || synWords.has(t)) return t;
     if (termCache.has(t)) return termCache.get(t);
-    let best = t, bestDf = 0;
-    for (const c of terms) {
-      if (Math.abs(c.length - t.length) > 1 || !/^[a-z]+$/.test(c)) continue;
+    if (!deletes) buildDeletes();
+    const max = t.length >= 8 ? 2 : 1;
+    const cands = new Set();
+    const look = (k) => { if (dict.has(k)) cands.add(k); for (const w of deletes.get(k) || []) cands.add(w); };
+    look(t);
+    for (let i = 0; i < t.length; i++) look(t.slice(0, i) + t.slice(i + 1));
+    let best = t, bestD = max + 1, bestDf = -1;
+    for (const c of cands) {
+      const d = editDistance(t, c, max);
+      if (d > max) continue;
       const df = docFreq.get(c) || 0;
-      if (df > bestDf && oneTypo(t, c)) { best = c; bestDf = df; }
+      if (d < bestD || (d === bestD && df > bestDf)) { best = c; bestD = d; bestDf = df; }
     }
-    termCache.set(t, best);
+    if (termCache.size < 5000) termCache.set(t, best);
     return best;
   }
 
@@ -400,6 +494,10 @@ export function createEngine(index) {
     });
     const isStop = tokens.map((t) => stopSet.has(t));
     const allStop = isStop.every(Boolean);
+    // Synonym and entity groups named in the query (with context rules such as "stone" + "pray" = turbah).
+    const syn = synSpans(tokens, true);
+    const synOf = tokens.map(() => null);
+    for (const sp of syn) for (let j = sp.start; j < sp.start + sp.len; j++) synOf[j] = sp.gid;
 
     // Greedy longest-match of heading terms and scholar names in the query.
     const spans = [];
@@ -422,24 +520,28 @@ export function createEngine(index) {
     // Key terms: what ranking and the exact-match rule work with.
     const keyTerms = [];
     const keyIndex = new Map();
+    // A word inside a synonym group is searched as the group's token, so "temporary marriage" finds pages that
+    // say "mutah" and is not split into "temporary" + "marriage". tokenKey[i]: the key term standing for token i.
+    const tokenKey = tokens.map(() => undefined);
     tokens.forEach((t, i) => {
-      if (isStop[i] && !allStop) return;
-      if (!keyIndex.has(t) && keyTerms.length < MAX_KEY_TERMS) { keyIndex.set(t, keyTerms.length); keyTerms.push(t); }
+      if (isStop[i] && !allStop && !synOf[i]) return;
+      const k = synOf[i] || t;
+      if (!keyIndex.has(k) && keyTerms.length < MAX_KEY_TERMS) { keyIndex.set(k, keyTerms.length); keyTerms.push(k); }
+      tokenKey[i] = keyIndex.get(k);
     });
     const isGeneric = keyTerms.map((t) => genericSet.has(t));
     const hasSpecific = isGeneric.some((g) => !g);
 
     // Units for the exact-match rule: each concept span, and each remaining key term.
     let units = [];
+    const covered = new Set();
     spans.forEach((sp) => {
-      const toks = tokens.slice(sp.start, sp.start + sp.len).filter((t) => keyIndex.has(t));
-      units.push({ tokens: [...new Set(toks)], headings: sp.headings, scholars: sp.scholars });
+      const keys = [];
+      for (let j = sp.start; j < sp.start + sp.len; j++) if (tokenKey[j] !== undefined) keys.push(tokenKey[j]);
+      keys.forEach((k) => covered.add(k));
+      units.push({ tokens: [...new Set(keys)].map((k) => keyTerms[k]), headings: sp.headings, scholars: sp.scholars });
     });
-    tokens.forEach((t, i) => {
-      if (inSpan[i] === -1 && keyIndex.has(t) && !units.some((u) => !u.headings && u.tokens[0] === t)) {
-        units.push({ tokens: [t], headings: null, scholars: null });
-      }
-    });
+    keyTerms.forEach((k, i) => { if (!covered.has(i)) units.push({ tokens: [k], headings: null, scholars: null }); });
     // A heading's other terms may stand in for the query's words only when the heading is specific, or when the
     // whole query is the topic ("prayer"). Otherwise "temporary marriage" would make every marriage page exact.
     const topicQuery = spans.some((sp) => sp.headings.length &&
@@ -451,7 +553,8 @@ export function createEngine(index) {
     if (units.some((u) => !u.generic)) units = units.filter((u) => !u.generic);
 
     return {
-      raw, corrections, tokens, quoted, spans, keyTerms, keyIndex, isGeneric, hasSpecific, units,
+      longWords: tokens.filter((t) => t.length > 2 && !stopSet.has(t)),
+      raw, corrections, tokens, tokenKey, quoted, spans, keyTerms, keyIndex, isGeneric, hasSpecific, units,
       phrase: tokens.length >= 2 ? pad(tokens) : null,
     };
   }
@@ -544,7 +647,7 @@ export function createEngine(index) {
     qa.keyTerms.forEach((t, i) => {
       const bit = 1 << i;
       addPostings(t, bit, 1);
-      if (px.enabled && t.length >= px.min_length) {
+      if (px.enabled && t.length >= px.min_length && t[0] !== '~') {
         for (const longer of prefixTerms(t, px.max_expansions)) addPostings(longer, bit, px.weight);
       }
     });
@@ -553,7 +656,7 @@ export function createEngine(index) {
     for (const sp of qa.spans) {
       let bits = 0, n = 0;
       for (let j = sp.start; j < sp.start + sp.len; j++) {
-        const k = qa.keyIndex.get(qa.tokens[j]);
+        const k = qa.tokenKey[j];
         if (k !== undefined && !(bits & (1 << k))) { bits |= 1 << k; n++; }
       }
       const bonus = config.layer2.concept_weight * Math.max(1, n);
@@ -727,7 +830,12 @@ export function createEngine(index) {
       if (qa.phrase && (doc.tq.includes(qa.phrase) || doc.desc.includes(qa.phrase))) s *= L2.phrase_boost;
       s *= granBoost(doc.record);
       // Known-item search: every word of the page's title is in the query ("man la yahduruhu al-faqih").
-      if (doc.titleKeys.length && doc.titleKeys.every((t) => qa.tokens.some((x) => near(t, x)))) s *= L2.title_match_boost;
+      // Both ways: the query also has to be mostly the title, so a one-word title such as "Marriage" is not
+      // boosted for "temporary marriage".
+      if (doc.titleKeys.length && doc.titleKeys.every((t) => qa.tokens.some((x) => near(t, x))) &&
+          qa.longWords.filter((x) => doc.titleKeys.some((t) => near(t, x))).length >= qa.longWords.length * 2 / 3) {
+        s *= L2.title_match_boost;
+      }
       hits.push({ doc, record: doc.record, score: s, coverage: cov, exact: isExact(qa, doc) });
     }
     hits.sort((a, b) => b.score - a.score);

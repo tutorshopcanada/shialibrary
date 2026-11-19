@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -156,6 +157,40 @@ def add_arabic_terms(root: Path, by_id: dict, problems: Problems) -> None:
             have = set(by_id[hid]["alt_terms"])
             by_id[hid]["alt_terms"].extend(t for t in terms if t not in have)
             have.update(terms)
+
+
+def load_synonyms(root: Path, problems: Problems) -> dict:
+    """data/synonyms.yaml and data/entities.yaml: groups of interchangeable terms, plus context rules."""
+    groups, contexts, seen = [], [], set()
+    for name in ("synonyms.yaml", "entities.yaml"):
+        path = root / "data" / name
+        if not path.exists():
+            continue
+        doc = load_yaml(path, problems)
+        for n, raw in enumerate(top_level_list(doc, "groups", path, problems), 1):
+            gid = text(raw.get("id")) if isinstance(raw, dict) else ""
+            terms = [text(t) for t in as_list(raw.get("terms"))] if isinstance(raw, dict) else []
+            terms = [t for t in terms if t]
+            if not gid or not re.fullmatch(r"[a-z0-9-]+", gid) or len(terms) < 2:
+                problems.error(f"{path}: group {n} needs an id (lowercase letters, digits, hyphens) and at least 2 terms")
+                continue
+            if gid in seen:
+                problems.error(f"{path}: duplicate group id '{gid}'")
+                continue
+            seen.add(gid)
+            groups.append({"id": gid, "terms": terms,
+                           "not_before": [text(t) for t in as_list(raw.get("not_before")) if text(t)]})
+        if isinstance(doc, dict):
+            for n, raw in enumerate(as_list(doc.get("contexts")), 1):
+                if not isinstance(raw, dict) or not text(raw.get("word")) or not as_list(raw.get("with")):
+                    problems.error(f"{path}: context {n} needs word, with and means")
+                    continue
+                contexts.append({"word": text(raw["word"]), "with": [text(t) for t in as_list(raw["with"])],
+                                 "means": text(raw.get("means"))})
+    for c in contexts:
+        if c["means"] not in seen:
+            problems.error(f"synonyms: context for '{c['word']}' means unknown group '{c['means']}'")
+    return {"groups": groups, "contexts": contexts}
 
 
 def load_headings(root: Path, problems: Problems) -> tuple[list[dict], bool]:
@@ -505,6 +540,7 @@ def main(argv=None) -> int:
     headings, vocab_draft = load_headings(root, problems)
     scholars = load_scholars(root, problems)
     config = load_search_config(root, problems)
+    synonyms = load_synonyms(root, problems)
     records = build_records(load_records(root, problems), headings, scholars, sources, problems)
 
     record_ids = {r["id"] for r in records}
@@ -540,6 +576,7 @@ def main(argv=None) -> int:
         "sources": sources,
         "scholars": scholars,
         "headings": headings,
+        "synonyms": synonyms,
         "questions": questions,
         "paths": paths,
         "total_records": len(records),

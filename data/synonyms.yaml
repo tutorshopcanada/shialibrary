@@ -24,6 +24,9 @@ groups:
   - id: ismah
     meaning: "infallibility (ʿiṣmah): being protected from sin and error"
     terms: [ismah, ismat, isma, infallibility, infallible, infallibles, sinless, sinlessness, masum, masoom, maasum, masumin, masumeen, masoomeen, "free from sin", "free of sin", "عصمة", "عصمت", "معصوم", "معصومين"]
+  - id: prophets
+    meaning: "prophet(s) (nabī, plural anbiyāʾ)"
+    terms: [prophet, prophets, nabi, nabee, anbiya, anbiyaa, ambiya, "نبي", "أنبياء", "انبياء", "پیامبر", "پیامبران"]
   - id: tawhid
     meaning: "the oneness of God"
     terms: [tawhid, tawheed, tauheed, "oneness of god", "oneness of allah", "unity of god", "توحيد"]
@@ -131,6 +134,10 @@ groups:
   - id: masturbation
     meaning: "masturbation (istimna)"
     terms: [masturbation, masturbate, masturbating, istimna, "استمناء"]
+
+  - id: mosque
+    meaning: "a mosque"
+    terms: [mosque, mosques, masjid, masajid, masjed, "مسجد", "مساجد"]
 
   # ---- Ashura and mourning ----
   - id: matam

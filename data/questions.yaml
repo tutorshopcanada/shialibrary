@@ -468,7 +468,7 @@ questions:
     draft: true
   - id: q-marriage-rules
     question: "Where can I read about the basic rules of marriage?"
-    alt_phrasings: ["islamic marriage", "nikah rules", "muslim wedding", "temporary marriage and permanent marriage"]
+    alt_phrasings: ["islamic marriage", "nikah rules", "muslim wedding", "rules of permanent and temporary marriage"]
     headings: [marriage-family]
     top_records: [sistani-west-marriage-introduction, sistani-west-marriage-general-rules]
     path: path-family-and-parenting

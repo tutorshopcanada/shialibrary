@@ -40,5 +40,5 @@ jobs:
         # Minimums sit just under the measured scores; raise them when the search improves.
         run: >-
           node scripts/eval_metrics.mjs
-          --min judged.ndcg10=0.70 --min judged.hit1=0.65 --max judged.junk3=0.31
-          --min eval.mrr=0.69 --min holdout.mrr=0.43 --min holdout.hit10=0.68
+          --min judged.ndcg10=0.77 --min judged.hit1=0.69 --max judged.junk3=0.24
+          --min eval.mrr=0.70 --min holdout.mrr=0.44 --min holdout.hit10=0.68

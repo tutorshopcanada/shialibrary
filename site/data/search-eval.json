@@ -835,6 +835,83 @@
    "note": "typo (prohets) is corrected to prophets"
   },
   {
+   "query": "ismah of the prophets",
+   "expect_any": [
+    "tasneem-the-infallibility-of-the-prophets",
+    "al-islam-infallibility"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "synonym group (phase C)",
+   "top": 3
+  },
+  {
+   "query": "why do shias pray with a stone",
+   "expect_any": [
+    "al-islam-ask-70423",
+    "al-islam-ask-88796"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "context rule: stone + pray = turbah (phase C)",
+   "top": 3
+  },
+  {
+   "query": "can women go to the mosque during period",
+   "expect_any": [
+    "thaqalayn-al-kafi-vol-3-ch-2-20",
+    "sistani-laws-2172"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "synonyms: period = haydh, mosque = masjid (phase C)",
+   "top": 3
+  },
+  {
+   "query": "temporary marriage",
+   "expect_any": [
+    "sistani-qa-temporary-marriage-mutah",
+    "al-islam-ask-187197",
+    "sistani-laws-2370"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "synonym group mutah; must not lead with general marriage pages (phase C)",
+   "top": 3
+  },
+  {
+   "query": "who is the eighth imam",
+   "expect_any": [
+    "thaqalayn-uyun-akhbar-al-rida-vol-1",
+    "al-islam-brief-history-fourteen-infallibles"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "entity: eighth imam = Imam al-Rida (phase C)",
+   "top": 3
+  },
+  {
+   "query": "how to pay khumms",
+   "expect_any": [
+    "sistani-qa-khums"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "spelling correction (phase C)",
+   "top": 3
+  },
+  {
+   "query": "عصمة الأنبياء",
+   "expect_any": [
+    "al-islam-infallibility",
+    "tasneem-the-infallibility-of-the-prophets"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "Arabic article folded (phase C)",
+   "top": 3
+  },
+  {
    "query": "shurtat al khamis",
    "expect_any": [
     "al-islam-life-ali-qurashi-deputy-governors"

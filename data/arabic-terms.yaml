@@ -8,6 +8,10 @@
 # Rules for editing: `headings` must be existing heading ids (the build stops otherwise). `meaning` is the
 # English gloss, kept here so the owner or a scholar can check each entry. Add only words you can verify.
 # DRAFT: all entries are for owner / scholar review.
+#
+# Since search phase C (2026-11-19) this file is for TOPIC links only: a word that should lead to a heading.
+# Words that mean exactly the same thing as each other ("mutah" = "temporary marriage") belong in
+# data/synonyms.yaml, and different names for the same person in data/entities.yaml.
 entries:
   # ---- Beliefs ----
   - meaning: "ʿiṣmah: infallibility, being protected from sin and error (said of the prophets and the Imams); maʿṣūm: an infallible person"

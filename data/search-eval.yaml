@@ -80,7 +80,13 @@ queries:
   - {query: "woman bleeding after having a baby", expect_any: [sistani-qa-14855, sistani-women-8573, sistani-laws-2172, sistani-women], expect_group: any, note: "paraphrase; found by meaning when keywords miss"}
   - {query: "books about the quran for beginners", expect_any: [al-islam-holy-quran-some-basic-facts, al-islam-introduction-to-the-glorious-quran, al-islam-quran-in-islam-its-impact-and-influence, al-islam-quranic-lessons], expect_group: any, note: "paraphrase; found by meaning when keywords miss"}
   - {query: "can the prohets make mistakes", expect_any: [tasneem-the-infallibility-of-the-prophets], expect_group: exact, note: "typo (prohets) is corrected to prophets"}
-  # KNOWN GAP (needs the proposed `infallibility` heading): {query: "ismah of the prophets", expect_any: [tasneem-the-infallibility-of-the-prophets], expect_group: any, note: "found only at #18 until the heading is approved"}
+  - {query: "ismah of the prophets", expect_any: [tasneem-the-infallibility-of-the-prophets, al-islam-infallibility], expect_group: any, top: 3, note: "synonym group (phase C)"}
+  - {query: "why do shias pray with a stone", expect_any: [al-islam-ask-70423, al-islam-ask-88796], expect_group: any, top: 3, note: "context rule: stone + pray = turbah (phase C)"}
+  - {query: "can women go to the mosque during period", expect_any: [thaqalayn-al-kafi-vol-3-ch-2-20, sistani-laws-2172], expect_group: any, top: 3, note: "synonyms: period = haydh, mosque = masjid (phase C)"}
+  - {query: "temporary marriage", expect_any: [sistani-qa-temporary-marriage-mutah, al-islam-ask-187197, sistani-laws-2370], expect_group: exact, top: 3, note: "synonym group mutah; must not lead with general marriage pages (phase C)"}
+  - {query: "who is the eighth imam", expect_any: [thaqalayn-uyun-akhbar-al-rida-vol-1, al-islam-brief-history-fourteen-infallibles], expect_group: any, top: 3, note: "entity: eighth imam = Imam al-Rida (phase C)"}
+  - {query: "how to pay khumms", expect_any: [sistani-qa-khums], expect_group: any, top: 3, note: "spelling correction (phase C)"}
+  - {query: "عصمة الأنبياء", expect_any: [al-islam-infallibility, tasneem-the-infallibility-of-the-prophets], expect_group: any, top: 3, note: "Arabic article folded (phase C)"}
   - {query: "shurtat al khamis", expect_any: [al-islam-life-ali-qurashi-deputy-governors], expect_group: exact, note: "visitor search; chapter cataloged 2026-11-19"}
   - {query: "did imam ali have a police force", expect_any: [al-islam-life-ali-qurashi-deputy-governors], expect_group: any, note: ""}
   - {query: "إمامة", expect_any: [al-islam-imamate-and-the-imams], expect_group: exact, note: "Arabic script; hamza and ta marbuta are folded"}

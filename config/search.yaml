@@ -87,7 +87,7 @@ exact:
               would, will, may, i, we, you, they, he, she, it, my, our, your, their,
               me, us, what, why, how, who, whom, when, where, which, that, this,
               these, those, there, if, as, so, not, "no", any, some, have, has, had,
-              get, "one"]
+              get, "one", go, goes, going, went]
   # Words that describe the whole catalog. Every record is about Shia Islam, so
   # these are not required to appear in a title for a result to count as exact.
   # (They are still used for ranking.)
