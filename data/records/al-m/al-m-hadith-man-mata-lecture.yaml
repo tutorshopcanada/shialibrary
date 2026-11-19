@@ -26,7 +26,6 @@ headings:
 - hadith-sciences
 access: free
 location: ''
-needs_review: true
-review_note: The page presents itself as a response to those who deny this hadith, so it may be a polemic.
-  The owner should confirm it belongs.
+needs_review: false
+review_note: ''
 cataloged_on: '2026-11-15'

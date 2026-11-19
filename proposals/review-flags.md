@@ -462,7 +462,7 @@ Skipped, with reasons:
 - Download pages with no descriptive text (title and PDF link only), so no grounded description is possible: An Introduction to Islam, An Introduction to Shi'a Islam, Discovering Islam (introductory booklet), Imam Husayn: The Savior of Islam (S M Rizvi), Mutual Respect and Peaceful Co-Existence Among Muslims, the Al-Furqan newsletter issues 1 to 15, and other worksheets and teaching packs. Owner could say whether to catalog them from the title alone, or the pages could be revisited if text is added.
 - Fiqh or practical rulings with no stated marja on the page (skipped under the fiqh rule): Salat Resources and Rulings, Marriage Guide, the zakat, khums, marijuana and cryptocurrency posts, Taharat un Nisa, Business Ethics in Islam, Adoption in Islam. The "2015 Edition: Ayatullah Sistani Risalah: Islamic Laws" download page (https://al-m.ca/download/2015-edition-ayatullah-sistani-risalah-islamic-laws/) is a Sistani book, but the page shows an empty file (0 KB) and no description, so it was not cataloged. Owner to decide.
 - Out of scope: donations, halal guides and restaurants, moon sighting, travel exemptions, newsletters, special-education worksheets for children.
-- Flagged needs_review (possible polemic): al-m-hadith-man-mata-lecture, al-m-wa-ajjil-farajahum-bidah.
+- (Cleared 2026-11-19: owner allows polemic-flagged items; see decision below.)
 
 ## academyofislam.com, first batch (2026-11-15)
 - Courses: none cataloged. Every course on the site (/course-archives/, current term Fall 2026) is a live or scheduled-term class, which the owner excluded on 2026-11-15 because they expire. Several are also fiqh-subject (The Laws of Fasting, Simple Islamic Laws for Sisters, Islamic Laws Related to the Workplace).
@@ -475,3 +475,6 @@ Skipped, with reasons:
 - Possible overlaps (not URL duplicates): al-m Imam Husayn Savior of Islam = al-islam-imam-husayn-saviour-of-islam; al-m Bibi Zaynab's Sermon (English) vs the Sermons booklet record; al-m Rizvi biography PDF vs the biography page record.
 - Skipped on al-m.ca: Al-Furqan issues 6, 8, 9, 10 (fiqh topics), 11, 12 (gender-interaction rulings), the Sachedina report, ebook duplicate, the History of the Shi'a People excerpt. Authorship of the John the Baptist article rests on its file name ("SM Rizvi").
 - Academy: all courses skipped (live or term-based). 114 surah pages cataloged as sections of academy-surah-introductions.
+
+## Owner decision 2026-11-19: polemical items are allowed
+Items skipped or flagged only for being polemical (history and Shia belief, not meant to start arguments) are now in scope and need no flag. The wording rules still apply: neutral, factual descriptions with no endorsement or criticism, and the fiqh rule. The two al-m.ca flags were cleared, and the items listed under the "Skipped (polemical)" headings above are being cataloged.

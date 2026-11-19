@@ -37,3 +37,6 @@
 13. **Build order.** The search page was scheduled after scaling up (step 9). It was built
     alongside the pilot instead, so pilot records can be reviewed in the real interface.
 14. Section 8 asks for 50-100 starter questions; step 7 asks for 20. Read as 20 for the pilot.
+
+## 2026-11-19: polemical items allowed (owner decision)
+Section 6 rule 6 and section 3 ("possible polemic" as a boundary case) should say: polemical or apologetic items on history and Shia belief are in scope and get no needs_review flag; descriptions stay neutral. Owner to apply this to CLAUDE.md.
