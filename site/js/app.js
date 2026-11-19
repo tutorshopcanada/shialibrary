@@ -546,16 +546,17 @@ function stepsHtml(path, compact) {
 }
 function aiToolHtml() {
   const a = SITE.aiTool; if (!a || !a.url) return '';
-  return `<div class="callout aitool" style="margin-top:1.5rem"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Still looking?</h2><p>${esc(a.name)} is an independent AI tool for Shia questions. <strong>Its answers are written by AI. They are not part of this catalog and are not checked by us or by a scholar.</strong> For religious rulings, ask a qualified scholar or read the source texts.</p>
+  return `<div class="callout aitool"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Still looking?</h2><p>${esc(a.name)} is an independent AI tool for Shia questions. <strong>Its answers are written by AI. They are not part of this catalog and are not checked by us or by a scholar.</strong> For religious rulings, ask a qualified scholar or read the source texts.</p>
   <p><a class="btn line" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">Try ${esc(a.name)} (AI) ↗</a></p>
   <small>This opens ${esc(a.name)} in a new tab. We are not affiliated with it. Nothing you typed here is sent to it.</small></div>`;
 }
 function externalHtml() {
-  const ask = SITE.externalSearch && SITE.externalSearch.askUrl; if (!ask) return '';
+  const ask = SITE.externalSearch && SITE.externalSearch.askUrl, ai = aiToolHtml();
+  if (!ask) return ai ? `<div class="outside">${ai}</div>` : '';
   const name = SITE.externalSearch.name;
-  return `<div class="callout extsearch" style="margin-top:2rem"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Have a question we don’t answer?</h2><p>We catalog books and articles, not individual questions and answers. ${esc(name)} has its own question-and-answer section, which may have your question.</p>
+  return `<div class="outside"><div class="callout extsearch"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">Have a question we don’t answer?</h2><p>We catalog books and articles, not individual questions and answers. ${esc(name)} has its own question-and-answer section, which may have your question.</p>
   <p><a class="btn line" href="${esc(ask)}" target="_blank" rel="noopener noreferrer">Browse ${esc(name)} questions ↗</a></p>
-  <small>This opens ${esc(name)} in a new tab. We are not affiliated with it and do not control its content. Nothing you typed here is sent to it.</small></div>`;
+  <small>This opens ${esc(name)} in a new tab. We are not affiliated with it and do not control its content. Nothing you typed here is sent to it.</small></div>${ai}</div>`;
 }
 function fallbackHtml(result) {
   return `<div class="callout"><h2 class="ch" style="font-size:1.125rem;margin:0 0 .4rem">We couldn’t find a close match</h2>
@@ -654,7 +655,7 @@ function resultsHtml(st, pre) {
   const hasFilter = FILTERS.some((k) => st[k]);
   if (result.fallback) {
     announceText = `No close match for “${result.query}”.`;
-    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml()}${aiToolHtml()}<div style="height:3rem"></div>${topicsHtml()}`;
+    return `${fallbackHtml(result)}${meaningNoteHtml()}${externalHtml()}<div style="height:3rem"></div>${topicsHtml()}`;
   }
   const n = result.counts.total, ex = result.counts.exact, rel = result.counts.related;
   let out = '';
