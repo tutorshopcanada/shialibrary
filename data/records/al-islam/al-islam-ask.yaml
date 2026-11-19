@@ -1,0 +1,33 @@
+id: al-islam-ask
+type: other
+content_tag: other
+granularity: work
+parent: ''
+level: beginner
+title: Ask a Question (al-islam.org)
+title_original: ''
+authors: []
+marja: ''
+source: al-islam.org
+url: https://al-islam.org/ask
+language: en
+date: ''
+description: A question-and-answer service on al-islam.org where readers send questions about Islam and Shia belief and practice, and scholars answer them. This catalog lists the questions, grouped by topic, and links each one to its page.
+sample_questions:
+- Where can I ask a question about Shia Islam?
+- Can I find an answer to my question about Islam online?
+- Where do scholars answer beginner questions about Shia beliefs?
+headings:
+- new-to-shia-islam
+access: free
+location: ''
+provider: ''
+instructors: []
+delivery: ''
+duration: ''
+start_date: ''
+cost: ''
+enrollment_url: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-19'
