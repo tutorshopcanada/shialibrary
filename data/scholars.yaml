@@ -1167,3 +1167,10 @@ scholars:
     alt_names: []
     notes: "Named as compiler of Mīzān al-Ḥikma on https://rewayaat.info/books/mizan-al-hikma (read 2026-11-15)."
     needs_review: true
+
+  - id: baqerali-alidina
+    name: "Baqerali Alidina"
+    role: author
+    alt_names: []
+    notes: "Named as co-compiler (with Liaket Dewji) on https://al-islam.org/shia-sunni-debate-answering-50-most-common-questions-liaket-dewji-baqerali-alidina (read 2026-11-19)."
+    needs_review: true
