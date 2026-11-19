@@ -548,6 +548,8 @@
   {
    "query": "why do people beat their chests and cry for hussain",
    "expect_any": [
+    "sistani-qa-25191",
+    "sistani-qa-15003",
     "al-islam-quran-and-mourning-for-husayn",
     "sistani-qa-azadari",
     "al-islam-history-philosophy-aza-husayn",
@@ -557,7 +559,7 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "paraphrase; found by meaning when keywords miss"
+   "note": "2026-11-19: more specific answers accepted after the ranking change; paraphrase; found by meaning when keywords miss"
   },
   {
    "query": "is it ok to buy chicken from a supermarket in europe",
@@ -588,6 +590,8 @@
   {
    "query": "book to teach my kids about allah",
    "expect_any": [
+    "al-islam-islamic-teachings-book-2",
+    "al-islam-elements-of-islamic-studies-rizvi",
     "al-islam-lets-learn-about-god",
     "al-islam-once-upon-a-time-there-was-no-other-than-god",
     "al-islam-fifty-lessons-principles-belief-youth",
@@ -596,7 +600,7 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "paraphrase; found by meaning when keywords miss"
+   "note": "2026-11-19: more specific answers accepted after the ranking change; paraphrase; found by meaning when keywords miss"
   },
   {
    "query": "i just converted what should i read first",
@@ -628,6 +632,9 @@
   {
    "query": "can i pray in my car when i am late for work",
    "expect_any": [
+    "sistani-qa-prayer-timings",
+    "sistani-qa-14903",
+    "sistani-qa-14950",
     "sistani-west-salat-questions-answers",
     "sistani-qa-prayer",
     "sistani-west-salat-general-rules",
@@ -635,7 +642,7 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "paraphrase; found by meaning when keywords miss"
+   "note": "2026-11-19: more specific answers accepted after the ranking change; paraphrase; found by meaning when keywords miss"
   },
   {
    "query": "do i have to give a fifth of my savings",
@@ -709,6 +716,8 @@
   {
    "query": "someone who is a different religion wants to marry a muslim",
    "expect_any": [
+    "sistani-qa-14877",
+    "sistani-qa-15062",
     "sistani-qa-permanent-marriage",
     "sistani-qa-marriage",
     "sistani-qa-people-of-the-book",
@@ -716,7 +725,7 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "paraphrase; found by meaning when keywords miss"
+   "note": "2026-11-19: more specific answers accepted after the ranking change; paraphrase; found by meaning when keywords miss"
   },
   {
    "query": "battle where the prophets grandson was killed",
@@ -815,6 +824,119 @@
    "expect_none": false,
    "expect_group": "any",
    "note": "paraphrase; found by meaning when keywords miss"
+  },
+  {
+   "query": "can the prohets make mistakes",
+   "expect_any": [
+    "tasneem-the-infallibility-of-the-prophets"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "typo (prohets) is corrected to prophets"
+  },
+  {
+   "query": "ismah of the prophets",
+   "expect_any": [
+    "tasneem-the-infallibility-of-the-prophets",
+    "al-islam-infallibility"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "synonym group (phase C)",
+   "top": 3
+  },
+  {
+   "query": "why do shias pray with a stone",
+   "expect_any": [
+    "al-islam-ask-70423",
+    "al-islam-ask-88796"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "context rule: stone + pray = turbah (phase C)",
+   "top": 3
+  },
+  {
+   "query": "can women go to the mosque during period",
+   "expect_any": [
+    "thaqalayn-al-kafi-vol-3-ch-2-20",
+    "sistani-laws-2172"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "synonyms: period = haydh, mosque = masjid (phase C)",
+   "top": 3
+  },
+  {
+   "query": "temporary marriage",
+   "expect_any": [
+    "sistani-qa-temporary-marriage-mutah",
+    "al-islam-ask-187197",
+    "sistani-laws-2370"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "synonym group mutah; must not lead with general marriage pages (phase C)",
+   "top": 3
+  },
+  {
+   "query": "who is the eighth imam",
+   "expect_any": [
+    "thaqalayn-uyun-akhbar-al-rida-vol-1",
+    "al-islam-brief-history-fourteen-infallibles"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "entity: eighth imam = Imam al-Rida (phase C)",
+   "top": 3
+  },
+  {
+   "query": "how to pay khumms",
+   "expect_any": [
+    "sistani-qa-khums"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "spelling correction (phase C)",
+   "top": 3
+  },
+  {
+   "query": "عصمة الأنبياء",
+   "expect_any": [
+    "al-islam-infallibility",
+    "tasneem-the-infallibility-of-the-prophets"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": "Arabic article folded (phase C)",
+   "top": 3
+  },
+  {
+   "query": "shurtat al khamis",
+   "expect_any": [
+    "al-islam-life-ali-qurashi-deputy-governors"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "visitor search; chapter cataloged 2026-11-19"
+  },
+  {
+   "query": "did imam ali have a police force",
+   "expect_any": [
+    "al-islam-life-ali-qurashi-deputy-governors"
+   ],
+   "expect_none": false,
+   "expect_group": "any",
+   "note": ""
+  },
+  {
+   "query": "إمامة",
+   "expect_any": [
+    "al-islam-imamate-and-the-imams"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "Arabic script; hamza and ta marbuta are folded"
   },
   {
    "query": "how to fix my car engine",

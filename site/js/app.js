@@ -206,14 +206,17 @@ function cardHtml(r, { compact = false, lean = false, tick = false, hideContextF
   ${r.description ? `<p class="d" dir="auto">${esc(r.description)}</p>` : ''}${facts}
   ${actions}${context || report ? `<p class="cfoot">${context}${report}</p>` : ''}${det}</li>`;
 }
+// The rest of a grouped result: more questions from the same section, or near-identical pages from the same source.
+const moreOf = (e) => ({ items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section', similar: !!e.similar });
 function clusterDetails(more) {
   if (!more || !more.items.length) return '';
-  return `<details class="cl"><summary>${more.items.length} more in “${esc((more.title || '').toString())}”</summary><ul class="cl-list">${more.items.slice(0, 40).map((m) => `<li>${extLink(m.url, '', esc(m.title))}</li>`).join('')}${more.items.length > 40 ? `<li class="mute">and ${more.items.length - 40} more. Narrow your search to see them.</li>` : ''}</ul></details>`;
+  const n = more.items.length;
+  return `<details class="cl"><summary>${more.similar ? `${n} similar ${n === 1 ? 'page' : 'pages'} from the same source` : `${n} more in “${esc((more.title || '').toString())}”`}</summary><ul class="cl-list">${more.items.slice(0, 40).map((m) => `<li>${extLink(m.url, '', esc(m.title))}</li>`).join('')}${more.items.length > 40 ? `<li class="mute">and ${more.items.length - 40} more. Narrow your search to see them.</li>` : ''}</ul></details>`;
 }
 function entryHtml(e, opts) {
   if (e.kind === 'cluster') {
     const p = e.parent || {};
-    return cardHtml(e.items[0].record, { ...opts, more: { items: e.items.slice(1).map((i) => i.record), title: p.title || 'the same section' } });
+    return cardHtml(e.items[0].record, { ...opts, more: moreOf(e) });
   }
   return cardHtml(e.record, opts);
 }
@@ -615,7 +618,7 @@ function questionPageHtml(st, result) {
   const ex = rest(result.exact), rel = rest(result.related);
   let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
   const exs = take(ex), rels = take(rel), total = ex.length + rel.length;
-  const rowsOf = (es) => es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('');
+  const rowsOf = (es) => es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, moreOf(e)) : rowHtml(e.record))).join('');
   const related = (c.questions || []).filter((x) => x.id !== q.id);
   announceText = `${q.question}. ${pl(pins.length, 'page')} chosen, ${pl(total, 'more page')}.`;
   return `${q.draft ? draftBar('The pages chosen for this question are not yet reviewed by a person.') : ''}
@@ -640,12 +643,16 @@ function spread(list, per) {
   return list.filter((e, i) => pick.has(i));
 }
 function overviewHtml(result) {
-  const CT = engine.config.categories, per = Number(CT.overview_per_category) || 3, by = {};
-  for (const e of [...result.exact, ...result.related]) {
+  const CT = engine.config.categories, per = Number(CT.overview_per_category) || 3, by = {}, first = {};
+  [...result.exact, ...result.related].forEach((e, i) => {
     const c = engine.catOf(e.kind === 'cluster' ? e.items[0].record : e.record);
     (by[c] = by[c] || []).push(e);
-  }
-  return CT.order.filter((c) => (by[c] || []).length).map((c) => {
+    if (!(c in first)) first[c] = i;
+  });
+  // Groups appear in the order of their best result (owner decision 2026-11-19): the kind that holds the top
+  // match comes first. The configured tab order only breaks ties and orders the tab bar.
+  const order = CT.order.filter((c) => (by[c] || []).length).sort((a, b) => first[a] - first[b]);
+  return order.map((c) => {
     const n = result.counts.cats[c] || 0, label = CT.labels[c] || c;
     return `<section class="grp frame"><div class="gh"><h3>${esc(label)} <span>${n}</span></h3></div>${resultRows(spread(by[c], per))}${n > per ? `<button class="seeall" data-cat="${esc(c)}">See all ${n.toLocaleString()} in ${esc(label)} <span aria-hidden="true">→</span></button>` : ''}</section>`;
   }).join('');
@@ -669,7 +676,7 @@ function resultsHtml(st, pre) {
     return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'There are no pages here yet.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
   }
   if (!st.cat && engine.config.categories.order.length) {
-    announceText = browsing ? `${pl(n, 'page')}.` : `${pl(n, 'result')}, grouped by kind: Q&A first, then articles, books and hadith.`;
+    announceText = browsing ? `${pl(n, 'page')}.` : `${pl(n, 'result')}, grouped by kind, starting with the kind that has the best match.`;
     return out + overviewHtml(result) + (browsing ? '' : externalHtml());
   }
   let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
@@ -704,7 +711,7 @@ function rowHtml(r, more, hl = 'h4') {
   <div class="lm"><span class="tag" style="--c:var(--t-${esc(r.content_tag)})">${esc(tagLabel(r.content_tag))}</span>${levelDots(r.level)}${priceBadge(r)}${MEANING.ids.has(r.id) ? '<span class="by-meaning" title="Matched by meaning on your device, not by your exact words">Found by meaning</span>' : ''}${(r.authors || []).length ? `<span dir="auto">By ${esc((r.authors || []).map(scholarName).join(', '))}</span>` : ''}<span dir="auto">${esc(sourceShort(r.source))}</span>${r.marja ? `<span dir="auto">Rulings of ${esc(scholarName(r.marja))}</span>` : ''}</div>
   ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<p class="lr-foot">${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></p></li>`;
 }
-const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, { items: e.items.slice(1).map((i) => i.record), title: (e.parent || {}).title || 'the same section' }) : rowHtml(e.record))).join('')}</ul>`;
+const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, moreOf(e)) : rowHtml(e.record))).join('')}</ul>`;
 const topicSearchHtml = (id) => `<form class="refine tsrch" id="tsearch" role="search" data-topic="${esc(id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="tq-top">Search within ${esc(TOPN(id))}</label><input id="tq-top" type="search" autocomplete="off" enterkeyhint="search" placeholder="Search within ${esc(TOPN(id))}" maxlength="200"><button class="btn solid" type="submit">Search</button></form>`;
 // The list under "Everything on this topic": the level switch and rows, narrowed by the small search box when it has words in it.
 function topicListHtml(id) {
@@ -970,7 +977,7 @@ function render(opts = {}) {
         view.innerHTML = questionPageHtml(st, result);
       } else {
         const nn = result.counts && result.counts.total, capn = Number(engine.config.layer2.max_results) || 150;
-        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found.`), back: [BASE, 'Back to start'], search: st });
+        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found${result.corrected ? ` for “${result.corrected}”` : ''}.`), back: [BASE, 'Back to start'], search: st });
         view.innerHTML = resultsHtml(st, result);
         announceText = `Results for ${st.q}. ${announceText}`;
       }
@@ -1120,14 +1127,24 @@ document.addEventListener('click', (e) => { if (performance.now() < noClickUntil
 // ---------------------------------------------------------------------------
 // The big, repetitive part of the catalog (hadith chapters) arrives after the page is usable. When it is here the
 // engine is rebuilt with everything and the current view is drawn again. If it fails the page keeps working.
+const CHUNK = 250;
+const pause = () => new Promise((ok) => setTimeout(ok, 0));
+async function addInChunks(list) {
+  for (let i = 0; i < list.length; i += CHUNK) {
+    engine.addRecords(list.slice(i, i + CHUNK));
+    if (i + CHUNK < list.length) await pause();
+  }
+}
 async function loadMore(index) {
   try {
     await new Promise((ok) => (window.requestIdleCallback ? requestIdleCallback(ok, { timeout: 2500 }) : setTimeout(ok, 800)));
     const res = await fetch('data/' + index.more);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const more = await res.json();
-    const full = { ...index, records: index.records.concat(more.records) };
-    engine = createEngine(full); suggester = createSuggester(full);
+    // Added to the existing engine a few hundred records at a time, with a pause between chunks, so a slow phone
+    // stays responsive (rebuilding the whole engine in one go froze the page for seconds).
+    await addInChunks(more.records);
+    suggester = createSuggester({ ...index, records: engine.records });
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     render();
@@ -1140,7 +1157,9 @@ async function start() {
     const res = await fetch('data/index.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const index = await res.json();
-    engine = createEngine(index); suggester = createSuggester(index);
+    engine = createEngine({ ...index, records: [] });
+    await addInChunks(index.records);
+    suggester = createSuggester(index);
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';

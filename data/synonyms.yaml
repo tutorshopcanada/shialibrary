@@ -1,0 +1,189 @@
+# Search synonyms: words and phrases that mean the SAME thing (search proposal phase C).
+#
+# DRAFT for owner / scholar review. Written by the cataloging agent on 2026-11-19.
+#
+# How it differs from heading alternate terms (data/vocabulary.yaml, data/arabic-terms.yaml): a heading's terms
+# name a whole TOPIC, so typing one gives a small boost to every page under that topic. A synonym group says
+# that its terms are interchangeable WORDS: a page that says "temporary marriage" matches a search for "mutah"
+# exactly as if it had said "mutah", and nothing else is pulled in. Use a group only for real equivalents,
+# never for "related" words.
+#
+# Fields:
+#   id        short name (letters, digits, hyphens)
+#   meaning   plain-English gloss, for the reviewer
+#   terms     the equivalent spellings, transliterations, translations and plain-English phrasings
+#   not_before (optional) words that cancel a match when they come straight after it, e.g. "imam ali" must not
+#             match "Imam Ali al-Ridha"
+# contexts: an ambiguous word that means a group only next to certain other words in the same query
+#   ("stone" means the turbah only in a question about praying).
+#
+# scripts/build_index.py copies this file into the index; site/js/search.js applies it to records and queries.
+draft: true
+groups:
+  # ---- Beliefs ----
+  - id: ismah
+    meaning: "infallibility (ʿiṣmah): being protected from sin and error"
+    terms: [ismah, ismat, isma, infallibility, infallible, infallibles, sinless, sinlessness, masum, masoom, maasum, masumin, masumeen, masoomeen, "free from sin", "free of sin", "عصمة", "عصمت", "معصوم", "معصومين"]
+  - id: prophets
+    meaning: "prophet(s) (nabī, plural anbiyāʾ)"
+    terms: [prophet, prophets, nabi, nabee, anbiya, anbiyaa, ambiya, "نبي", "أنبياء", "انبياء", "پیامبر", "پیامبران"]
+  - id: tawhid
+    meaning: "the oneness of God"
+    terms: [tawhid, tawheed, tauheed, "oneness of god", "oneness of allah", "unity of god", "توحيد"]
+  - id: maad
+    meaning: "the Resurrection and the afterlife"
+    terms: [maad, "ma'ad", qiyamah, qiyamat, "day of judgement", "day of judgment", "day of resurrection", "judgement day", "judgment day", "معاد", "قيامة"]
+  - id: barzakh
+    meaning: "the state between death and resurrection"
+    terms: [barzakh, "life in the grave", "برزخ"]
+  - id: ghaybah
+    meaning: "the Occultation of the twelfth Imam"
+    terms: [ghaybah, ghaybat, ghayba, ghaibat, occultation, "غيبة"]
+  - id: taqiyyah
+    meaning: "taqiyyah: concealing one's belief to avoid harm"
+    terms: [taqiyyah, taqiyya, taqiyah, taqiya, taqqiya, dissimulation, "تقية"]
+  - id: wilayat-al-faqih
+    meaning: "guardianship of the jurist"
+    terms: ["wilayat al faqih", "wilayat e faqih", "velayat e faqih", "wilayat ul faqih", "vilayat e faqih", "guardianship of the jurist", "guardianship of the jurisconsult", "ولاية الفقيه", "ولایت فقیه"]
+  - id: tawassul
+    meaning: "seeking nearness to God through the Prophet and Imams"
+    terms: [tawassul, tawasul, "intercession through the imams", "توسل"]
+  - id: shafaah
+    meaning: "intercession"
+    terms: [shafaah, "shafa'ah", shafaat, intercession, "شفاعة"]
+
+  # ---- Worship and rulings ----
+  - id: wudu
+    meaning: "the ritual washing before prayer"
+    terms: [wudu, wudhu, wuzu, wudoo, vuzu, ablution, "minor ablution", "وضوء", "وضو"]
+  - id: ghusl
+    meaning: "the full ritual bath"
+    terms: [ghusl, ghusal, "major ablution", "ritual bath", "غسل"]
+  - id: tayammum
+    meaning: "dry ablution with earth"
+    terms: [tayammum, tayamum, tayammom, "dry ablution", "تيمم"]
+  - id: haydh
+    meaning: "menstruation"
+    terms: [haydh, hayd, hayz, haiz, haidh, menstruation, menstruating, menstrual, menses, "on her period", "on my period", "during period", "during her period", "during my period", "حيض", "حائض"]
+  - id: janabah
+    meaning: "the state that requires ghusl after intercourse or discharge"
+    terms: [janabah, janabat, janaba, "جنابة"]
+  - id: najis
+    meaning: "ritually impure"
+    terms: [najis, najas, najasah, najasat, "ritually impure", "نجس", "نجاسة"]
+  - id: turbah
+    meaning: "the piece of clay or earth Shia Muslims prostrate on in prayer"
+    terms: [turbah, turbat, turba, mohr, muhr, sajdagah, sajdah gah, "prayer stone", "prayer tablet", "clay tablet", "piece of clay", "تربة"]
+  - id: salat-al-layl
+    meaning: "the night prayer"
+    terms: ["salat al layl", "salatul layl", "salat ul layl", "salat al lail", "namaz e shab", "night prayer", "night prayers", tahajjud, "صلاة الليل", "نماز شب"]
+  - id: salat-al-ayat
+    meaning: "the prayer of signs (eclipse, earthquake)"
+    terms: ["salat al ayat", "salatul ayat", "salat al ayaat", "namaz e ayat", "prayer of signs", "eclipse prayer", "صلاة الآيات"]
+  - id: salat-al-jumuah
+    meaning: "the Friday prayer"
+    terms: ["salat al jumuah", "salatul jumua", "jumuah prayer", "jummah prayer", "friday prayer", "friday prayers", "namaz e juma", "صلاة الجمعة"]
+  - id: combining-prayers
+    meaning: "praying two daily prayers one after the other"
+    terms: ["combining prayers", "combine prayers", "combine the prayers", "joining prayers", "join prayers", "join the prayers", "jam bayn al salatayn", "combining salat", "praying together zuhr and asr"]
+  - id: taraweeh
+    meaning: "the congregational night prayers of Ramadan in Sunni practice"
+    terms: [taraweeh, tarawih, taraveeh, tarawee, "تراويح"]
+  - id: qasr
+    meaning: "shortening the prayer when travelling"
+    terms: [qasr, "shortened prayer", "shortening prayer", "shortening the prayer", "traveller prayer", "travellers prayer", "قصر"]
+  - id: qada
+    meaning: "making up a missed prayer or fast"
+    terms: [qada, qadha, qaza, qazaa, "make up fast", "make up fasts", "make up prayer", "make up prayers", "missed prayer", "missed prayers", "missed fast", "missed fasts", "قضاء"]
+  - id: kaffarah
+    meaning: "expiation for a broken fast or oath"
+    terms: [kaffarah, kaffara, kaffarat, kafara, expiation, "كفارة"]
+  - id: fidyah
+    meaning: "compensation paid for fasts that cannot be made up"
+    terms: [fidyah, fidya, fidia, "فدية"]
+  - id: itikaf
+    meaning: "spiritual retreat in a mosque"
+    terms: [itikaf, "i'tikaf", aitekaf, etikaf, "اعتكاف"]
+  - id: mutah
+    meaning: "temporary marriage"
+    terms: [mutah, "mut'ah", muta, mutaa, muttah, mutta, "temporary marriage", "fixed term marriage", "nikah mutah", "sigheh", sigha, "متعة", "صيغه"]
+  - id: iddah
+    meaning: "the waiting period after divorce or a husband's death"
+    terms: [iddah, idda, iddat, "waiting period", "عدة"]
+  - id: mahr
+    meaning: "the marriage gift from the husband to the wife"
+    terms: [mahr, mehr, "haq mehr", dower, dowry, "مهر"]
+  - id: dhabiha
+    meaning: "meat slaughtered by the Islamic method"
+    terms: [dhabiha, dhabihah, zabiha, zabihah, zabeeha, "halal meat", "halal slaughter", "islamic slaughter", "ذبيحة"]
+  - id: riba
+    meaning: "interest or usury"
+    terms: [riba, usury, "bank interest", "interest on loans", "ربا"]
+  - id: ihram
+    meaning: "the pilgrim's sacred state and dress"
+    terms: [ihram, ehram, "احرام", "إحرام"]
+  - id: sadaqah
+    meaning: "voluntary charity"
+    terms: [sadaqah, sadaqa, sadqa, sadqah, "voluntary charity", "صدقة"]
+  - id: zakat-al-fitr
+    meaning: "the charity given at the end of Ramadan"
+    terms: ["zakat al fitr", "zakat al fitrah", "zakatul fitr", fitrah, fitra, fitrana, "زكاة الفطرة"]
+  - id: smoking
+    meaning: "smoking tobacco"
+    terms: [smoking, cigarette, cigarettes, cigar, vaping, vape, hookah, shisha, "tobacco"]
+  - id: masturbation
+    meaning: "masturbation (istimna)"
+    terms: [masturbation, masturbate, masturbating, istimna, "استمناء"]
+
+  - id: mosque
+    meaning: "a mosque"
+    terms: [mosque, mosques, masjid, masajid, masjed, "مسجد", "مساجد"]
+
+  # ---- Ashura and mourning ----
+  - id: matam
+    meaning: "beating the chest in mourning for Imam Husayn"
+    terms: [matam, maatam, latm, latmiya, latmiyah, "chest beating", "beating the chest", "beat their chests", "beating their chests", "beat our chests", "sina zani", "sinezani", "لطم", "ماتم", "سینه زنی"]
+  - id: azadari
+    meaning: "mourning for Imam Husayn"
+    terms: [azadari, azadaari, "mourning for imam husayn", "mourning for imam hussain", "mourning for husayn", "mourning for hussain", "عزاداري", "عزاداری"]
+  - id: majlis
+    meaning: "a mourning or religious gathering"
+    terms: [majlis, majalis, majles, "مجلس"]
+
+  # ---- Hadith and Quran ----
+  - id: nahj-al-balagha
+    meaning: "the collection of Imam Ali's sermons, letters and sayings"
+    terms: ["nahj al balagha", "nahj al balaghah", "nahjul balagha", "nahjul balaghah", "nahjul balagah", "nahj ul balagha", "peak of eloquence", "نهج البلاغة"]
+  - id: sahifa-sajjadiya
+    meaning: "the supplications of Imam Zayn al-Abidin"
+    terms: ["sahifa sajjadiya", "sahifah sajjadiyyah", "sahifa e sajjadia", "sahifa al sajjadiyya", "psalms of islam", "الصحيفة السجادية"]
+  - id: dua-kumayl
+    meaning: "the supplication of Kumayl"
+    terms: ["dua kumayl", "dua kumail", "dua e kumail", "dua e kumayl", "duaa kumayl", "دعاء كميل"]
+  - id: tafsir
+    meaning: "commentary on the Quran"
+    terms: [tafsir, tafseer, "quran commentary", "commentary on the quran", "exegesis", "تفسير"]
+
+  # ---- Everyday words ----
+  - id: forbidden
+    meaning: "forbidden in Islamic law"
+    terms: [haram, haraam, forbidden, prohibited, impermissible, "not allowed", "not permissible", "حرام"]
+  - id: permissible
+    meaning: "allowed in Islamic law"
+    terms: [halal, permissible, permitted, "allowed", lawful, jaiz, "حلال", "جائز"]
+  - id: convert
+    meaning: "becoming Muslim or Shia"
+    terms: [convert, converting, revert, reverting, "become shia", "becoming shia", "become a shia", "become muslim", "becoming muslim", "become a muslim", "embrace islam", "embracing islam"]
+
+contexts:
+  # "stone" in a question about praying means the turbah, not the Black Stone of the Kaaba.
+  - word: stone
+    with: [pray, prays, prayer, prayers, praying, sajdah, sajda, sujud, prostrate, prostration, namaz, salat, salah]
+    means: turbah
+  - word: stones
+    with: [pray, prays, prayer, prayers, praying, sajdah, sajda, sujud, prostrate, prostration, namaz, salat, salah]
+    means: turbah
+  # "period" next to a woman, mosque, prayer or fasting means menstruation, not a period of time.
+  - word: period
+    with: [woman, women, girl, girls, mosque, masjid, pray, prayer, fast, fasting, quran, touch, wudu, ghusl, her, she]
+    means: haydh

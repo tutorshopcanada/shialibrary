@@ -1,0 +1,60 @@
+# Search entities: different ways of naming the SAME person (search proposal phase C).
+#
+# DRAFT for owner / scholar review. Written by the cataloging agent on 2026-11-19. These rows state facts
+# ("the first Imam is Imam Ali"), so they are reviewed like the vocabulary before they are relied on.
+#
+# Same format and behaviour as data/synonyms.yaml: a page that names a person in any of these ways matches a
+# search that names them in any other way. `not_before` stops a match when one of those words comes straight
+# after it, so "imam ali" does not match "Imam Ali al-Ridha" and "imam hasan" does not match "Imam Hasan al-Askari".
+draft: true
+groups:
+  - id: prophet-muhammad
+    meaning: "the Prophet Muhammad"
+    terms: ["prophet muhammad", "the holy prophet", "holy prophet", "rasulullah", "rasul allah", "messenger of god", "messenger of allah", "last prophet", "final prophet", "seal of the prophets", "محمد رسول الله", "رسول الله"]
+  - id: imam-ali
+    meaning: "Imam Ali ibn Abi Talib, the first Imam"
+    terms: ["imam ali", "first imam", "1st imam", "ali ibn abi talib", "ali bin abi talib", "ali ibn abu talib", "ali b abi talib", "amir al muminin", "amirul muminin", "ameerul momineen", "amir ul momineen", "commander of the faithful", "maula ali", "mola ali", "mawla ali", "hazrat ali", "علي بن أبي طالب", "أمير المؤمنين"]
+    not_before: [ridha, rida, reza, hadi, naqi, zayn, zaynul, zainul, zain, sajjad, akbar, asghar, ibn, bin]
+  - id: imam-hasan
+    meaning: "Imam Hasan ibn Ali, the second Imam"
+    terms: ["imam hasan", "imam hassan", "second imam", "2nd imam", "hasan ibn ali", "hassan ibn ali", "hasan al mujtaba", "imam mujtaba", "الإمام الحسن", "الحسن المجتبى"]
+    not_before: [askari, askary, "al", ibn]
+  - id: imam-husayn
+    meaning: "Imam Husayn ibn Ali, the third Imam"
+    terms: ["imam husayn", "imam hussain", "imam hussein", "imam husain", "third imam", "3rd imam", "husayn ibn ali", "hussain ibn ali", "sayyid al shuhada", "syed ul shohada", "master of martyrs", "الإمام الحسين", "سيد الشهداء"]
+  - id: imam-sajjad
+    meaning: "Imam Ali ibn al-Husayn Zayn al-Abidin, the fourth Imam"
+    terms: ["imam sajjad", "fourth imam", "4th imam", "zayn al abidin", "zaynul abidin", "zain ul abideen", "zainul abideen", "ali ibn al husayn", "ali ibn husayn", "imam zayn al abidin", "الإمام السجاد", "زين العابدين"]
+  - id: imam-baqir
+    meaning: "Imam Muhammad al-Baqir, the fifth Imam"
+    terms: ["imam baqir", "imam al baqir", "fifth imam", "5th imam", "muhammad al baqir", "muhammad ibn ali al baqir", "الإمام الباقر"]
+  - id: imam-sadiq
+    meaning: "Imam Jafar al-Sadiq, the sixth Imam"
+    terms: ["imam sadiq", "imam al sadiq", "sixth imam", "6th imam", "jafar al sadiq", "jafar sadiq", "jafar ibn muhammad", "imam jafar", "الإمام الصادق", "جعفر الصادق"]
+  - id: imam-kazim
+    meaning: "Imam Musa al-Kazim, the seventh Imam"
+    terms: ["imam kazim", "imam al kazim", "imam kadhim", "seventh imam", "7th imam", "musa al kazim", "musa al kadhim", "musa ibn jafar", "imam musa", "الإمام الكاظم", "موسى الكاظم"]
+  - id: imam-rida
+    meaning: "Imam Ali al-Rida, the eighth Imam"
+    terms: ["imam rida", "imam ridha", "imam reza", "imam al rida", "eighth imam", "8th imam", "ali al rida", "ali al ridha", "ali ibn musa", "imam raza", "الإمام الرضا", "امام رضا"]
+  - id: imam-jawad
+    meaning: "Imam Muhammad al-Jawad (al-Taqi), the ninth Imam"
+    terms: ["imam jawad", "imam al jawad", "imam taqi", "imam al taqi", "ninth imam", "9th imam", "muhammad al jawad", "muhammad al taqi", "الإمام الجواد"]
+  - id: imam-hadi
+    meaning: "Imam Ali al-Hadi (al-Naqi), the tenth Imam"
+    terms: ["imam hadi", "imam al hadi", "imam naqi", "imam al naqi", "tenth imam", "10th imam", "ali al hadi", "ali al naqi", "الإمام الهادي"]
+  - id: imam-askari
+    meaning: "Imam Hasan al-Askari, the eleventh Imam"
+    terms: ["imam askari", "imam al askari", "eleventh imam", "11th imam", "hasan al askari", "hassan al askari", "الإمام العسكري"]
+  - id: imam-mahdi
+    meaning: "Imam Muhammad al-Mahdi, the twelfth Imam"
+    terms: ["imam mahdi", "imam al mahdi", "twelfth imam", "12th imam", "hidden imam", "awaited imam", "imam of our time", "imam of the age", "imam e zamana", "imam e zaman", "imam zaman", "sahib al zaman", "sahib al amr", "imam al asr", "baqiyatullah", "الإمام المهدي", "صاحب الزمان", "امام زمان"]
+  - id: fatimah
+    meaning: "Sayyidah Fatimah al-Zahra, daughter of the Prophet"
+    terms: ["fatimah al zahra", "fatima zahra", "fatimah zahra", "lady fatimah", "lady fatima", "sayyida fatima", "sayyidah fatimah", "bibi fatima", "bibi fatimah", "daughter of the prophet", "prophets daughter", "the prophet's daughter", "فاطمة الزهراء"]
+  - id: zaynab
+    meaning: "Sayyidah Zaynab, daughter of Imam Ali"
+    terms: ["sayyida zaynab", "sayyidah zaynab", "lady zaynab", "bibi zainab", "zaynab bint ali", "zainab bint ali", "السيدة زينب"]
+  - id: abbas
+    meaning: "al-Abbas ibn Ali, the standard-bearer at Karbala"
+    terms: ["abbas ibn ali", "abbas bin ali", "hazrat abbas", "abul fadl", "abu al fadl", "abul fazl", "abu fadl al abbas", "العباس بن علي"]
