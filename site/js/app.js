@@ -1123,14 +1123,24 @@ document.addEventListener('click', (e) => { if (performance.now() < noClickUntil
 // ---------------------------------------------------------------------------
 // The big, repetitive part of the catalog (hadith chapters) arrives after the page is usable. When it is here the
 // engine is rebuilt with everything and the current view is drawn again. If it fails the page keeps working.
+const CHUNK = 250;
+const pause = () => new Promise((ok) => setTimeout(ok, 0));
+async function addInChunks(list) {
+  for (let i = 0; i < list.length; i += CHUNK) {
+    engine.addRecords(list.slice(i, i + CHUNK));
+    if (i + CHUNK < list.length) await pause();
+  }
+}
 async function loadMore(index) {
   try {
     await new Promise((ok) => (window.requestIdleCallback ? requestIdleCallback(ok, { timeout: 2500 }) : setTimeout(ok, 800)));
     const res = await fetch('data/' + index.more);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const more = await res.json();
-    const full = { ...index, records: index.records.concat(more.records) };
-    engine = createEngine(full); suggester = createSuggester(full);
+    // Added to the existing engine a few hundred records at a time, with a pause between chunks, so a slow phone
+    // stays responsive (rebuilding the whole engine in one go froze the page for seconds).
+    await addInChunks(more.records);
+    suggester = createSuggester({ ...index, records: engine.records });
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     render();
@@ -1143,7 +1153,9 @@ async function start() {
     const res = await fetch('data/index.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const index = await res.json();
-    engine = createEngine(index); suggester = createSuggester(index);
+    engine = createEngine({ ...index, records: [] });
+    await addInChunks(index.records);
+    suggester = createSuggester(index);
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';

@@ -1,6 +1,6 @@
 # Search v2: evaluation of the current search and a proposed redesign
 
-Status: **proposal, for owner decision.** Nothing here is built yet. Written 2026-11-19.
+Status: **phases A–D built on 2026-11-19** (results in section 8). Phases E and F still need the owner decisions in section 6.
 
 Constraints kept from CLAUDE.md: static site, free to run, no server, nothing typed leaves the device,
 **no text generation anywhere in the search path**, beginner-first, results are human-vetted catalog records only.
@@ -180,3 +180,38 @@ before the next one starts.
 
 **Not recommended:** an in-browser cross-encoder re-ranker. It is the most accurate kind of ranker, but it is
 20–30 MB and slow on phones, which conflicts with the slow-phone requirement.
+
+## 8. Results of phases A–D (built 2026-11-19)
+
+| Measure (scripts/eval_metrics.mjs) | Before | After A–D |
+|---|---|---|
+| Judged queries nDCG@10 (26 draft graded queries) | 0.684 | 0.792 |
+| Judged hit@1 (first result good or ideal) | 65 % | 73 % |
+| Judged junk@3 (wrong results in the first 3, per query) | 0.39 | 0.19 |
+| Evaluation set MRR / hit@1 | 0.65 / 49 % | 0.72 / 59 % |
+| Hold-out MRR / hit@1 / hit@10 | 0.29 / 16 % / 59 % | 0.46 / 35 % / 70 % |
+| Query time p50 / p95 (server CPU) | 7 / 47 ms | 3 / 16 ms |
+| Longest page freeze, 4× CPU slow-down | 2.7 s | 0.23 s |
+
+What was built:
+- **A** `data/search-judgments.yaml` (draft), `scripts/eval_metrics.mjs`, CI minimums in `.github/workflows/site.yml`.
+- **B** Topic bonus scaled by topic size; broad headings no longer make pages "exact"; book boost 3.0 → 1.4 and
+  beginner boost 1.5 → 1.25 (chosen by a measured sweep); known-item title match; Related capped at 40;
+  near-duplicate pages from one source grouped ("7 similar pages from the same source").
+- **C** `data/synonyms.yaml` and `data/entities.yaml` (drafts), context rules, spelling correction up to 2 edits,
+  Arabic "al-" folded; only a heading's own names stand in for a query word in the exact rule.
+- **D** Changed from the plan after measuring (see below): records are added to the engine in chunks of 250
+  with a pause between them, per-record exact-match data is computed lazily, and the rest of the catalog is
+  appended instead of rebuilding the engine.
+
+Two planned items were dropped on evidence:
+- **Pre-built binary index**: it would add about 300–500 KB (gzip) to the first download, on top of 635 KB.
+  `scripts/perf_check.mjs` shows time-to-ready on a throttled connection is dominated by download (5.5 s
+  before and after), so on a slow phone the extra file would cost more than the CPU it saves.
+- **Web Worker**: after chunking, no task blocks the page for longer than about 0.23 s at 4× slow-down, so
+  moving the engine to a worker (which would make every search call asynchronous across the whole page) is
+  not worth its complexity now.
+
+Still open: the owner should review the drafts (`search-judgments.yaml`, `synonyms.yaml`, `entities.yaml`),
+and decide section 6 before phases E and F. More beginner phrasings per record (from cataloging agents)
+would raise the hold-out numbers further, since sample questions are the strongest signal.

@@ -5,9 +5,13 @@
 // It only RETRIEVES and RANKS human-written catalog records. Nothing here
 // writes text. Layers (CLAUDE.md section 11):
 //   1. curated starter questions and topic headings
-//   2. keyword search (BM25-style, hand-built synonyms from the vocabulary)
+//   2. keyword search: BM25 over weighted fields, with hand-built tables (no model) for
+//      topic headings (vocabulary + arabic-terms), synonyms and entities, context rules
+//      ("stone" + "pray" = turbah) and spelling correction; topic bonuses scaled by how
+//      specific the topic is; near-duplicate pages grouped
+//   3. related by meaning: fused in by addSemantic() from site/js/semantic.js
 //   4. graceful fallback
-// (Layer 3, vector search, is Phase 2 and deliberately absent.)
+// Measured with scripts/eval_metrics.mjs (proposals/search-v2.md).
 
 // ---------------------------------------------------------------------------
 // Defaults. config/search.yaml (copied into index.json) overrides these.
@@ -183,14 +187,14 @@ export function createEngine(index) {
   const stopSet = new Set(config.exact.stopwords.map((w) => stem(normalize(w))));
   const genericSet = new Set(config.exact.generic_terms.map((w) => stem(normalize(w))));
 
-  const records = index.records || [];
+  const records = []; // filled by addRecords(); grows when the rest of the catalog arrives
   const headings = index.headings || [];
   const scholars = index.scholars || [];
   const sources = index.sources || [];
   const questions = index.questions || [];
   const paths = index.paths || [];
 
-  const recordById = new Map(records.map((r) => [r.id, r]));
+  const recordById = new Map();
   const headingById = new Map(headings.map((h) => [h.id, h]));
   const scholarById = new Map(scholars.map((s) => [s.id, s]));
   const sourceById = new Map(sources.map((s) => [s.id, s]));
@@ -304,45 +308,62 @@ export function createEngine(index) {
     return s ? [s.name, ...(s.alt_names || [])].join(' . ') : '';
   }).join(' . ');
 
-  const docs = records.map((r) => {
-    const people = [...new Set([...(r.authors || []), ...(r.instructors || []), ...(r.marja ? [r.marja] : [])])];
-    const ctx = r.context || {};
-    const src = sourceById.get(r.source);
-    const fieldText = {
-      title: r.title || '',
-      sample_questions: (r.sample_questions || []).join(' . '),
-      headings: headingText(r.headings || []),
-      scholars: scholarText(people),
-      description: r.description || '',
-      ancestor_headings: headingText(r.inherited_headings || []),
-      context: [ctx.section && ctx.section.title, ctx.work && ctx.work.title].filter(Boolean).join(' . '),
-      other: [r.source, src && src.name, r.location, r.title_original, r.provider,
-        config.tags.labels[r.content_tag], r.type].filter(Boolean).join(' . '),
-    };
-    // "tq": title + sample questions, the fields the exact-match rule looks at.
-    const tqParts = [r.title || '', ...(r.sample_questions || [])].map(tokenize);
-    const tqTokens = new Set();
-    for (const part of tqParts) for (const t of withSynonyms(part)) tqTokens.add(t);
-    return {
-      record: r,
-      people: new Set(people),
-      ownHeadings: new Set(r.headings || []),
-      allHeadings: new Set([...(r.headings || []), ...(r.inherited_headings || [])]),
-      ancestors: new Set(r.ancestors || []),
-      fieldText,
-      tq: tqParts.map(pad).join('|'),
-      tqTokens: [...tqTokens],
-      desc: pad(tokenize(r.description || '')),
+  // One search document per record. The parts used only by the exact-match and title rules (tq, desc, ...)
+  // are worked out the first time a query touches the record, not for all 8,000+ records at start-up.
+  const MAIN_TITLE = (r) => String(r.title || '').split(/[:»|]/)[0].replace(/\([^)]*\)/g, ' ');
+  class Doc {
+    constructor(r) {
+      const people = [...new Set([...(r.authors || []), ...(r.instructors || []), ...(r.marja ? [r.marja] : [])])];
+      this.record = r;
+      this.people = new Set(people);
+      this.ownHeadings = new Set(r.headings || []);
+      this.allHeadings = new Set([...(r.headings || []), ...(r.inherited_headings || [])]);
+      this.ancestors = new Set(r.ancestors || []);
+      this._tq = null;
+    }
+    fieldText() {
+      const r = this.record, ctx = r.context || {}, src = sourceById.get(r.source);
+      return {
+        title: r.title || '',
+        sample_questions: (r.sample_questions || []).join(' . '),
+        headings: headingText(r.headings || []),
+        scholars: scholarText([...this.people]),
+        description: r.description || '',
+        ancestor_headings: headingText(r.inherited_headings || []),
+        context: [ctx.section && ctx.section.title, ctx.work && ctx.work.title].filter(Boolean).join(' . '),
+        other: [r.source, src && src.name, r.location, r.title_original, r.provider,
+          config.tags.labels[r.content_tag], r.type].filter(Boolean).join(' . '),
+      };
+    }
+    lazy() {
+      if (this._tq) return;
+      const r = this.record;
+      // "tq": title + sample questions, the fields the exact-match rule looks at.
+      const tqParts = [r.title || '', ...(r.sample_questions || [])].map(tokenize);
+      const tqTokens = new Set();
+      for (const part of tqParts) for (const t of withSynonyms(part)) tqTokens.add(t);
+      this._tq = tqParts.map(pad).join('|');
+      this._tqTokens = [...tqTokens];
+      this._desc = pad(tokenize(r.description || ''));
       // Main title words (before a colon, without "(Vol. 1)" or one- and two-letter words such as "al").
-      titleKeys: [...new Set(tokenize(String(r.title || '').split(/[:»|]/)[0].replace(/\([^)]*\)/g, ' '))
-        .filter((t) => !stopSet.has(t) && t.length > 2 && !/^[0-9]+$/.test(t)))],
-    };
-  });
+      this._titleKeys = [...new Set(tokenize(MAIN_TITLE(r)).filter((t) => !stopSet.has(t) && t.length > 2 && !/^[0-9]+$/.test(t)))];
+      // Near-duplicate key: same source and the same title words, ignoring numbers, years and common words.
+      const dt = [...new Set(tokenize(r.title || '').filter((t) => !stopSet.has(t) && !/^[0-9]+$/.test(t)))].sort();
+      this._dupKey = dt.length >= 3 ? r.source + '|' + dt.join(' ') : null;
+    }
+    get tq() { this.lazy(); return this._tq; }
+    get tqTokens() { this.lazy(); return this._tqTokens; }
+    get desc() { this.lazy(); return this._desc; }
+    get titleKeys() { this.lazy(); return this._titleKeys; }
+    get dupKey() { this.lazy(); return this._dupKey; }
+  }
+  const docs = [];
 
   // ---- Inverted index (BM25 over fields) ----
   const postings = new Map(); // term -> [docIdx, fieldIdx, tf, ...] flat array
-  const fieldLen = FIELDS.map(() => new Float32Array(docs.length));
-  const avgLen = FIELDS.map(() => 0);
+  const fieldLen = FIELDS.map(() => []);
+  const lenSum = FIELDS.map(() => 0);
+  const avgLen = FIELDS.map(() => 1);
   const docFreq = new Map();
   // Many records share the same heading, scholar, context and source text: tokenize each distinct string once.
   const tokCache = new Map();
@@ -355,62 +376,68 @@ export function createEngine(index) {
       const tf = new Map();
       for (const t of toks) tf.set(t, (tf.get(t) || 0) + 1);
       r = { len: toks.length, entries: [...tf] };
-      tokCache.set(text, r);
+      if (tokCache.size < 60000) tokCache.set(text, r);
     }
     return r;
   };
-  docs.forEach((doc, d) => {
-    const seen = new Set();
-    FIELDS.forEach((f, fi) => {
-      const { len, entries } = indexTokens(doc.fieldText[f]);
-      fieldLen[fi][d] = len;
-      avgLen[fi] += len;
-      for (let e = 0; e < entries.length; e++) {
-        const t = entries[e][0];
-        let p = postings.get(t);
-        if (!p) { p = []; postings.set(t, p); }
-        p.push(d, fi, entries[e][1]);
-        seen.add(t);
-      }
-    });
-    for (const t of seen) docFreq.set(t, (docFreq.get(t) || 0) + 1);
-    delete doc.fieldText;
-  });
-  for (let i = 0; i < FIELDS.length; i++) avgLen[i] = docs.length ? avgLen[i] / docs.length || 1 : 1;
-  const terms = [...postings.keys()].sort();
-  const N = docs.length;
+  const weights = FIELDS.map((f) => Number(config.layer2.field_weights[f]) || 0);
+  // Records per heading (own and inherited) and per person, so a topic or scholar bonus touches only its records.
+  const headingOwnDocs = new Map(), headingAllDocs = new Map(), personDocs = new Map();
+  const pushTo = (m, k, d) => { let a = m.get(k); if (!a) { a = []; m.set(k, a); } a.push(d); };
+  const docIdx = new Map();
+
+  // Totals that depend on the whole catalog; recomputed after each addRecords() call.
+  let N = 0, terms = [], specRef = 1, conceptBuf = new Float32Array(0);
   const idf = (t) => {
     const df = docFreq.get(t) || 0;
     return Math.log(1 + (N - df + 0.5) / (df + 0.5));
   };
-  const weights = FIELDS.map((f) => Number(config.layer2.field_weights[f]) || 0);
-
-  // Records per heading (own and inherited) and per person, so a topic or scholar bonus touches only its records.
-  const headingOwnDocs = new Map(), headingAllDocs = new Map(), personDocs = new Map();
-  const pushTo = (m, k, d) => { let a = m.get(k); if (!a) { a = []; m.set(k, a); } a.push(d); };
-  docs.forEach((doc, d) => {
-    for (const h of doc.ownHeadings) pushTo(headingOwnDocs, h, d);
-    for (const h of doc.allHeadings) pushTo(headingAllDocs, h, d);
-    for (const p of doc.people) pushTo(personDocs, p, d);
-  });
   // How specific a heading (or scholar) is: 1 for one covering at most `concept_full_weight_max_records`
   // records, falling with the log of its size. "Temporary marriage" should count for more than "Marriage and family".
-  const specRef = Math.log(1 + N / Math.max(1, Number(config.layer2.concept_full_weight_max_records) || 50));
   const specificity = (count) => Math.min(1, Math.log(1 + N / Math.max(1, count)) / specRef);
-  const conceptBuf = new Float32Array(N);
   const headingCount = (h) => (headingOwnDocs.get(h) || []).length;
   const subMax = Number(config.exact.heading_substitution_max_records) || Infinity;
 
-  // Near-duplicate pages: same source and the same title words (ignoring numbers, years and common words),
-  // e.g. one yearly reminder per year, or one question listed twice. Shown as one result with "similar pages".
-  const dupKeyOf = new Array(N);
-  if (config.grouping.collapse_duplicates) {
-    docs.forEach((doc, d) => {
-      const toks = [...new Set(tokenize(doc.record.title || '').filter((t) => !stopSet.has(t) && !/^[0-9]+$/.test(t)))].sort();
-      dupKeyOf[d] = toks.length >= 3 ? doc.record.source + '|' + toks.join(' ') : null;
-    });
+  /**
+   * Add records to the engine (start-up, and again when the rest of the catalog arrives). Records already present
+   * are skipped. The page can call this with small chunks between paints so it never freezes.
+   */
+  function addRecords(list) {
+    for (const r of list || []) {
+      if (!r || recordById.has(r.id)) continue;
+      const d = docs.length;
+      const doc = new Doc(r);
+      records.push(r);
+      recordById.set(r.id, r);
+      docs.push(doc);
+      docIdx.set(r.id, d);
+      const ft = doc.fieldText();
+      const seen = new Set();
+      for (let fi = 0; fi < FIELDS.length; fi++) {
+        const { len, entries } = indexTokens(ft[FIELDS[fi]]);
+        fieldLen[fi][d] = len;
+        lenSum[fi] += len;
+        for (let e = 0; e < entries.length; e++) {
+          const t = entries[e][0];
+          let p = postings.get(t);
+          if (!p) { p = []; postings.set(t, p); }
+          p.push(d, fi, entries[e][1]);
+          seen.add(t);
+        }
+      }
+      for (const t of seen) docFreq.set(t, (docFreq.get(t) || 0) + 1);
+      for (const h of doc.ownHeadings) pushTo(headingOwnDocs, h, d);
+      for (const h of doc.allHeadings) pushTo(headingAllDocs, h, d);
+      for (const p of doc.people) pushTo(personDocs, p, d);
+    }
+    N = docs.length;
+    for (let i = 0; i < FIELDS.length; i++) avgLen[i] = N ? lenSum[i] / N || 1 : 1;
+    terms = [...postings.keys()].sort();
+    specRef = Math.log(1 + N / Math.max(1, Number(config.layer2.concept_full_weight_max_records) || 50));
+    if (conceptBuf.length < N) conceptBuf = new Float32Array(N);
+    deletes = null; dict = null; termCache.clear(); // the spelling table is rebuilt from the new word list when needed
+    return N;
   }
-  const docIdx = new Map(docs.map((doc, d) => [doc.record.id, d]));
 
   function prefixTerms(prefix, max) {
     let lo = 0, hi = terms.length;
@@ -735,7 +762,7 @@ export function createEngine(index) {
     // 1. Near-duplicates join the best-ranked page with the same key.
     const leaders = [], byKey = new Map();
     for (const h of hits) {
-      const key = h.pinned ? null : dupKeyOf[docIdx.get(h.record.id)];
+      const key = h.pinned || !config.grouping.collapse_duplicates ? null : docs[docIdx.get(h.record.id)].dupKey;
       const lead = key ? byKey.get(key) : null;
       if (lead) { lead.dups.push(h); continue; }
       const l = { ...h, dups: [] };
@@ -855,7 +882,7 @@ export function createEngine(index) {
     const pinned = [];
     if (curated && curated.question) {
       for (const id of curated.question.top_records || []) {
-        const idx = docs.findIndex((x) => x.record.id === id);
+        const idx = docIdx.has(id) ? docIdx.get(id) : -1;
         if (idx === -1) continue;
         const existing = hits.find((h) => h.record.id === id);
         if (existing) hits.splice(hits.indexOf(existing), 1);
@@ -1004,8 +1031,10 @@ export function createEngine(index) {
     return out;
   }
 
+  addRecords(index.records || []);
+
   return {
-    config, records, headings, scholars, sources, questions, paths,
+    config, records, headings, scholars, sources, questions, paths, addRecords,
     recordById, headingById, scholarById, sourceById, pathById,
     search, flatten, analyze, needsSemantic, addSemantic, catOf,
     buildDate: index.build_date || '',
