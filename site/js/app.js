@@ -629,6 +629,15 @@ function questionPageHtml(st, result) {
 }
 // "All" tab: the best few results of each kind, in the tab order (Q&A, articles, books, hadith, the rest),
 // each with a button that opens that tab. Matches within a kind keep their order: exact before related.
+// Preview picks: the best result from each source first (so sistani.org's many topic pages do not fill every
+// Q&A slot and hide al-islam.org's questions), then the next best overall. Shown in ranking order.
+function spread(list, per) {
+  const src = (e) => (e.kind === 'cluster' ? e.items[0].record : e.record).source;
+  const pick = new Set(), seen = new Set();
+  list.forEach((e, i) => { if (pick.size < per && !seen.has(src(e))) { seen.add(src(e)); pick.add(i); } });
+  list.forEach((e, i) => { if (pick.size < per) pick.add(i); });
+  return list.filter((e, i) => pick.has(i));
+}
 function overviewHtml(result) {
   const CT = engine.config.categories, per = Number(CT.overview_per_category) || 3, by = {};
   for (const e of [...result.exact, ...result.related]) {
@@ -637,7 +646,7 @@ function overviewHtml(result) {
   }
   return CT.order.filter((c) => (by[c] || []).length).map((c) => {
     const n = result.counts.cats[c] || 0, label = CT.labels[c] || c;
-    return `<section class="grp frame"><div class="gh"><h3>${esc(label)} <span>${n}</span></h3></div>${resultRows(by[c].slice(0, per))}${n > per ? `<button class="seeall" data-cat="${esc(c)}">See all ${n.toLocaleString()} in ${esc(label)} <span aria-hidden="true">→</span></button>` : ''}</section>`;
+    return `<section class="grp frame"><div class="gh"><h3>${esc(label)} <span>${n}</span></h3></div>${resultRows(spread(by[c], per))}${n > per ? `<button class="seeall" data-cat="${esc(c)}">See all ${n.toLocaleString()} in ${esc(label)} <span aria-hidden="true">→</span></button>` : ''}</section>`;
   }).join('');
 }
 function resultsHtml(st, pre) {
