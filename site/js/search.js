@@ -22,13 +22,16 @@ export const DEFAULT_CONFIG = {
     bm25: { k1: 1.2, b: 0.75 },
     prefix: { enabled: true, min_length: 3, weight: 0.4, max_expansions: 40 },
     concept_weight: 2.5,
+    concept_full_weight_max_records: 50,
     phrase_boost: 1.6,
+    title_match_boost: 2.0,
     min_score: 1.0,
     min_term_coverage: 0.5,
     min_results: 1,
     min_result_coverage: 0.34,
     min_relative_score: 0.15,
     max_results: 150,
+    max_related: 40,
   },
   exact: {
     stopwords: ['a', 'an', 'the', 'of', 'in', 'on', 'at', 'to', 'for', 'from', 'by', 'with',
@@ -39,6 +42,7 @@ export const DEFAULT_CONFIG = {
       'if', 'as', 'so', 'not', 'no', 'any', 'some', 'have', 'has', 'had', 'get', 'one'],
     generic_terms: ['shia', 'shias', "shi'a", 'shiite', 'shiites', 'shii', 'shiism', 'islam',
       'islamic', 'muslim', 'muslims', 'twelver', 'twelvers'],
+    heading_substitution_max_records: 120,
   },
   ranking: {
     default_order: 'beginner',
@@ -65,7 +69,7 @@ export const DEFAULT_CONFIG = {
     order: ['beginner', 'intermediate', 'advanced'],
     labels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },
   },
-  grouping: { min_items: 3 },
+  grouping: { min_items: 3, collapse_duplicates: true },
   // Layer 3: "related by meaning" (site/js/semantic.js). It is consulted only when keyword search is weak.
   layer3: {
     enabled: true,
@@ -267,6 +271,9 @@ export function createEngine(index) {
       tq: tqParts.map(pad).join('|'),
       tqTokens: [...tqTokens],
       desc: pad(tokenize(r.description || '')),
+      // Main title words (before a colon, without "(Vol. 1)" or one- and two-letter words such as "al").
+      titleKeys: [...new Set(tokenize(String(r.title || '').split(/[:»|]/)[0].replace(/\([^)]*\)/g, ' '))
+        .filter((t) => !stopSet.has(t) && t.length > 2 && !/^[0-9]+$/.test(t)))],
     };
   });
 
@@ -313,6 +320,33 @@ export function createEngine(index) {
     return Math.log(1 + (N - df + 0.5) / (df + 0.5));
   };
   const weights = FIELDS.map((f) => Number(config.layer2.field_weights[f]) || 0);
+
+  // Records per heading (own and inherited) and per person, so a topic or scholar bonus touches only its records.
+  const headingOwnDocs = new Map(), headingAllDocs = new Map(), personDocs = new Map();
+  const pushTo = (m, k, d) => { let a = m.get(k); if (!a) { a = []; m.set(k, a); } a.push(d); };
+  docs.forEach((doc, d) => {
+    for (const h of doc.ownHeadings) pushTo(headingOwnDocs, h, d);
+    for (const h of doc.allHeadings) pushTo(headingAllDocs, h, d);
+    for (const p of doc.people) pushTo(personDocs, p, d);
+  });
+  // How specific a heading (or scholar) is: 1 for one covering at most `concept_full_weight_max_records`
+  // records, falling with the log of its size. "Temporary marriage" should count for more than "Marriage and family".
+  const specRef = Math.log(1 + N / Math.max(1, Number(config.layer2.concept_full_weight_max_records) || 50));
+  const specificity = (count) => Math.min(1, Math.log(1 + N / Math.max(1, count)) / specRef);
+  const conceptBuf = new Float32Array(N);
+  const headingCount = (h) => (headingOwnDocs.get(h) || []).length;
+  const subMax = Number(config.exact.heading_substitution_max_records) || Infinity;
+
+  // Near-duplicate pages: same source and the same title words (ignoring numbers, years and common words),
+  // e.g. one yearly reminder per year, or one question listed twice. Shown as one result with "similar pages".
+  const dupKeyOf = new Array(N);
+  if (config.grouping.collapse_duplicates) {
+    docs.forEach((doc, d) => {
+      const toks = [...new Set(tokenize(doc.record.title || '').filter((t) => !stopSet.has(t) && !/^[0-9]+$/.test(t)))].sort();
+      dupKeyOf[d] = toks.length >= 3 ? doc.record.source + '|' + toks.join(' ') : null;
+    });
+  }
+  const docIdx = new Map(docs.map((doc, d) => [doc.record.id, d]));
 
   function prefixTerms(prefix, max) {
     let lo = 0, hi = terms.length;
@@ -406,7 +440,14 @@ export function createEngine(index) {
         units.push({ tokens: [t], headings: null, scholars: null });
       }
     });
-    units.forEach((u) => { u.generic = u.tokens.every((t) => genericSet.has(t)); });
+    // A heading's other terms may stand in for the query's words only when the heading is specific, or when the
+    // whole query is the topic ("prayer"). Otherwise "temporary marriage" would make every marriage page exact.
+    const topicQuery = spans.some((sp) => sp.headings.length &&
+      tokens.every((t, i) => stopSet.has(t) || (i >= sp.start && i < sp.start + sp.len)));
+    units.forEach((u) => {
+      u.generic = u.tokens.every((t) => genericSet.has(t));
+      if (u.headings) u.headings = u.headings.filter((h) => topicQuery || headingCount(h) <= subMax);
+    });
     if (units.some((u) => !u.generic)) units = units.filter((u) => !u.generic);
 
     return {
@@ -507,7 +548,8 @@ export function createEngine(index) {
         for (const longer of prefixTerms(t, px.max_expansions)) addPostings(longer, bit, px.weight);
       }
     });
-    // Concepts: a heading or scholar named by any of its alternate terms.
+    // Concepts: a heading or scholar named by any of its alternate terms. The bonus is scaled by how
+    // specific the heading or scholar is, so a broad topic cannot flood the results.
     for (const sp of qa.spans) {
       let bits = 0, n = 0;
       for (let j = sp.start; j < sp.start + sp.len; j++) {
@@ -515,16 +557,20 @@ export function createEngine(index) {
         if (k !== undefined && !(bits & (1 << k))) { bits |= 1 << k; n++; }
       }
       const bonus = config.layer2.concept_weight * Math.max(1, n);
-      for (let d = 0; d < N; d++) {
-        const doc = docs[d];
-        let f = 0;
-        for (const h of sp.headings) {
-          if (doc.ownHeadings.has(h)) { f = 1; break; }
-          if (doc.allHeadings.has(h)) f = Math.max(f, 0.5);
-        }
-        if (f < 1 && sp.scholars.some((s) => doc.people.has(s))) f = 1;
-        if (f) { score[d] += bonus * f; mask[d] |= bits; }
+      const touched = [];
+      const give = (d, f) => { if (f > conceptBuf[d]) { if (!conceptBuf[d]) touched.push(d); conceptBuf[d] = f; } };
+      for (const h of sp.headings) {
+        const all = headingAllDocs.get(h) || [];
+        const sp1 = specificity(all.length);
+        for (const d of headingOwnDocs.get(h) || []) give(d, sp1);
+        for (const d of all) give(d, 0.5 * sp1);
       }
+      for (const p of sp.scholars) {
+        const ds = personDocs.get(p) || [];
+        const sp1 = specificity(ds.length);
+        for (const d of ds) give(d, sp1);
+      }
+      for (const d of touched) { score[d] += bonus * conceptBuf[d]; mask[d] |= bits; conceptBuf[d] = 0; }
     }
     return { score, mask };
   }
@@ -583,23 +629,38 @@ export function createEngine(index) {
   }
   function cluster(hits, skipParent) {
     const min = Math.max(2, Number(config.grouping.min_items) || 3);
-    const byParent = new Map();
+    // 1. Near-duplicates join the best-ranked page with the same key.
+    const leaders = [], byKey = new Map();
     for (const h of hits) {
+      const key = h.pinned ? null : dupKeyOf[docIdx.get(h.record.id)];
+      const lead = key ? byKey.get(key) : null;
+      if (lead) { lead.dups.push(h); continue; }
+      const l = { ...h, dups: [] };
+      if (key) byKey.set(key, l);
+      leaders.push(l);
+    }
+    const withDups = (l) => { const { dups, ...h } = l; return [h, ...dups]; };
+    // 2. Several questions from one section are grouped under it.
+    const byParent = new Map();
+    for (const h of leaders) {
       const r = h.record;
       if (h.pinned || r.granularity !== 'item' || !r.parent || r.parent === skipParent) continue;
       if (!byParent.has(r.parent)) byParent.set(r.parent, []);
       byParent.get(r.parent).push(h);
     }
     const out = [], done = new Set();
-    for (const h of hits) {
+    for (const h of leaders) {
       const p = h.record.parent;
       const group = !h.pinned && h.record.granularity === 'item' && p !== skipParent ? byParent.get(p) : null;
       if (group && group.length >= min) {
         if (done.has(p)) continue;
         done.add(p);
-        out.push({ kind: 'cluster', parent: recordById.get(p) || h.record.context.section, items: group });
+        out.push({ kind: 'cluster', parent: recordById.get(p) || h.record.context.section, items: group.flatMap(withDups) });
+      } else if (h.dups.length) {
+        out.push({ kind: 'cluster', similar: true, parent: null, items: withDups(h) });
       } else {
-        out.push({ kind: 'record', ...h });
+        const { dups, ...rest } = h;
+        out.push({ kind: 'record', ...rest });
       }
     }
     return out;
@@ -665,6 +726,8 @@ export function createEngine(index) {
       let s = score[d];
       if (qa.phrase && (doc.tq.includes(qa.phrase) || doc.desc.includes(qa.phrase))) s *= L2.phrase_boost;
       s *= granBoost(doc.record);
+      // Known-item search: every word of the page's title is in the query ("man la yahduruhu al-faqih").
+      if (doc.titleKeys.length && doc.titleKeys.every((t) => qa.tokens.some((x) => near(t, x)))) s *= L2.title_match_boost;
       hits.push({ doc, record: doc.record, score: s, coverage: cov, exact: isExact(qa, doc) });
     }
     hits.sort((a, b) => b.score - a.score);
@@ -740,6 +803,9 @@ export function createEngine(index) {
         strict ? (levelRank(a.record.level, order) - levelRank(b.record.level, order)) || nearTie(a, b)
           : nearTie(a, b, boosted)));
     related.sort((a, b) => boosted(b) - boosted(a));
+    // Related results are capped: past a few dozen they share little with the query.
+    const relCap = Number(L2.max_related) || Infinity;
+    if (related.length > relCap) related.length = relCap;
 
     result.exact = cluster(exact, f.section);
     result.related = cluster(related, f.section);
@@ -750,7 +816,7 @@ export function createEngine(index) {
     return result;
   }
 
-  const docIndex = new Map(docs.map((d, i) => [d.record.id, i]));
+  const docIndex = docIdx;
 
   /** True when keyword search is weak enough that Layer 3 (meaning) should be consulted. */
   function needsSemantic(result) {

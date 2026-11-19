@@ -19,6 +19,7 @@
 //   --json             print the metrics as JSON only
 //   --show             print the top 5 results for every judged query
 //   --skip-holdout     faster run
+//   --set path=value   try a setting without editing config/search.yaml, e.g. --set ranking.level_boost.beginner=1.2
 
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -38,8 +39,19 @@ const pairs = (n) => args.flatMap((a, i) => (a === n && args[i + 1] ? [args[i + 
 const yaml = (p) => JSON.parse(execFileSync('python3', ['-c',
   'import json,sys,yaml; print(json.dumps(yaml.safe_load(open(sys.argv[1], encoding="utf-8"))))', p], { encoding: 'utf8' }));
 
+function applySets(idx) {
+  idx.config = idx.config || {};
+  for (const [path, raw] of pairs('--set')) {
+    const keys = path.split('.');
+    let o = idx.config;
+    for (const k of keys.slice(0, -1)) o = o[k] = o[k] && typeof o[k] === 'object' ? o[k] : {};
+    let v; try { v = JSON.parse(raw); } catch { v = raw; }
+    o[keys[keys.length - 1]] = v;
+  }
+  return idx;
+}
 const t0 = performance.now();
-const index = loadFullIndex(dataDir);
+const index = applySets(loadFullIndex(dataDir));
 const engine = createEngine(index);
 const startMs = performance.now() - t0;
 
@@ -120,7 +132,7 @@ if (existsSync(evalPath)) {
 
 // ---- Hold-out: unseen beginner phrasings ----
 if (!flag('--skip-holdout')) {
-  const idx = loadFullIndex(dataDir);
+  const idx = applySets(loadFullIndex(dataDir));
   let seed = 7;
   const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
   const pool = idx.records.filter((r) => (r.sample_questions || []).length >= 3);

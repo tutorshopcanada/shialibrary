@@ -50,9 +50,16 @@ layer2:
   # query words the alternate term covers. (Raised from 2.5 on 2026-11-11: word-hit scores
   # grow with catalog size, so the bonus must keep pace or topic tags stop leading.)
   concept_weight: 3.5
+  # A topic heading (or scholar) gives its full bonus only when it covers at most this many records; broader
+  # headings give less, falling with the log of their size, so "Marriage and family" (291 records) cannot flood a
+  # search for "temporary marriage". (Phase B, 2026-11-19.)
+  concept_full_weight_max_records: 50
   # Score multiplier when the whole query appears word-for-word in the title,
   # sample questions or description.
   phrase_boost: 1.6
+  # Score multiplier when every word of a page's main title (before a colon, ignoring "(Vol. 1)" and "al") is in
+  # the query: someone typing a book's name gets that book. (Phase B, 2026-11-19.)
+  title_match_boost: 2.0
   # Pass rule. Layer 2 is "confident" only when BOTH hold for the best result;
   # otherwise the page falls through to Layer 4 (graceful fallback).
   min_score: 1.0            # lowest acceptable score for the best result
@@ -67,6 +74,8 @@ layer2:
   min_relative_score: 0.15
   # Never show more than this many results for one query.
   max_results: 150
+  # Never keep more than this many related results (exact matches are not capped by this).
+  max_related: 40
 
 # ---------------------------------------------------------------------------
 # Exact matches vs related results (plain rules, no model)
@@ -84,6 +93,9 @@ exact:
   # (They are still used for ranking.)
   generic_terms: [shia, shias, "shi'a", shiite, shiites, shii, shiism, islam,
                   islamic, muslim, muslims, twelver, twelvers]
+  # A heading's other terms may stand in for a query word in the exact-match rule only for headings with at most
+  # this many records, or when the whole query is that topic. (Phase B, 2026-11-19.)
+  heading_substitution_max_records: 120
 
 # ---------------------------------------------------------------------------
 # Ranking: beginner-first ordering
@@ -95,8 +107,8 @@ ranking:
   # Whole books and topic pages rank above single questions of equal relevance, so a broad
   # search ("prayer", "khums") leads with the overview and not with one narrow question.
   granularity_boost:
-    work: 3.0   # raised from 2.0: thaqalayn chapters (sections) must not outrank their own volume
-    section: 1.8
+    work: 1.4   # 2026-11-19: lowered from 3.0 (measured: books outranked the specific page people wanted;
+    section: 1.16  # hold-out MRR 0.30 -> 0.42). Broad topic searches still lead with overviews via Layer 1.
     item: 1.0
   # Per-source overrides. thaqalayn chapters are narrow pages (one chapter of a hadith book), so they
   # count like single questions, not like whole chapters of a book.
@@ -114,9 +126,9 @@ ranking:
   exact_group_order: boost
   # Related results always use multipliers, so a loosely related beginner item
   # cannot jump over a closely related advanced one by level alone.
-  level_boost:              # used when the order is "beginner"
-    beginner: 1.5
-    intermediate: 1.2
+  level_boost:              # used when the order is "beginner" (2026-11-19: 1.5/1.2 -> 1.25/1.1, measured)
+    beginner: 1.25
+    intermediate: 1.1
     advanced: 1.0
   deeper_boost:             # used when the order is "deeper"
     beginner: 1.0
@@ -179,6 +191,9 @@ grouping:
   # When at least this many items (e.g. Q&A) from the same section match, they
   # are collapsed under the section, best match first, with an expand control.
   min_items: 3
+  # Pages from the same source whose titles have the same words (ignoring numbers and common words) are shown as
+  # one result with "N similar pages from the same source", e.g. one yearly reminder per year. (Phase B.)
+  collapse_duplicates: true
 
 # ---------------------------------------------------------------------------
 # Layer 3: "related by meaning" (site/js/semantic.js). Consulted only when keyword search is weak.
