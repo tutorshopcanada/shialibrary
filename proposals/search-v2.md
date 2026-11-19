@@ -215,3 +215,14 @@ Two planned items were dropped on evidence:
 Still open: the owner should review the drafts (`search-judgments.yaml`, `synonyms.yaml`, `entities.yaml`),
 and decide section 6 before phases E and F. More beginner phrasings per record (from cataloging agents)
 would raise the hold-out numbers further, since sample questions are the strongest signal.
+
+### Re-tuning (added 2026-11-19)
+`scripts/tune_search.mjs` re-tunes the ranking numbers after big cataloging batches (coordinate search over
+the settings in `config/search.yaml`; a value is kept only if the combined score rises, no evaluation query
+starts failing, and neither graded nDCG nor evaluation MRR drops). First run: phrase boost 1.6 → 1.2 and
+intermediate level boost 1.1 → 1.05 (objective 0.641 → 0.646). The hold-out test alone rewards weakening the
+sample-question field (it hides the target's own questions), so that weight is not tuned.
+
+The wider Layer 3 trigger (`layer3.min_word_coverage`) is built but stays off: none of the values tried
+improved the measurements. Re-test it after the al-islam.org Q&As and the beginner-phrasing pass, and after
+retraining the meaning model on the catalog's own words.

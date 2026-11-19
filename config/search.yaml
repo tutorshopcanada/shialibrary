@@ -56,7 +56,7 @@ layer2:
   concept_full_weight_max_records: 50
   # Score multiplier when the whole query appears word-for-word in the title,
   # sample questions or description.
-  phrase_boost: 1.6
+  phrase_boost: 1.2         # 2026-11-19: 1.6 -> 1.2 (scripts/tune_search.mjs)
   # Score multiplier when every word of a page's main title (before a colon, ignoring "(Vol. 1)" and "al") is in
   # the query: someone typing a book's name gets that book. (Phase B, 2026-11-19.)
   title_match_boost: 2.0
@@ -126,9 +126,9 @@ ranking:
   exact_group_order: boost
   # Related results always use multipliers, so a loosely related beginner item
   # cannot jump over a closely related advanced one by level alone.
-  level_boost:              # used when the order is "beginner" (2026-11-19: 1.5/1.2 -> 1.25/1.1, measured)
+  level_boost:              # used when the order is "beginner" (2026-11-19: 1.5/1.2 -> 1.25/1.05, measured; scripts/tune_search.mjs)
     beginner: 1.25
-    intermediate: 1.1
+    intermediate: 1.05
     advanced: 1.0
   deeper_boost:             # used when the order is "deeper"
     beginner: 1.0
