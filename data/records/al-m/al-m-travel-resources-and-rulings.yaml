@@ -1,0 +1,30 @@
+id: al-m-travel-resources-and-rulings
+type: other
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: Travel Resources & Rulings
+title_original: ''
+authors:
+- sayyid-muhammad-rizvi
+marja: sistani
+source: al-m.ca
+url: https://al-m.ca/travel-resources/
+language: en
+date: '2018-11-04'
+description: A notice about online tools for travel questions in Shi'a practice. The tools include a fasting-while-travelling
+  form, a qibla and prayer-time finder for flights, and an explanation of shortened prayers.
+sample_questions:
+- Do I have to fast while travelling?
+- How do I pray on a plane?
+- What is qasr, the shortened prayer?
+- Are there tools for travel and prayer questions?
+headings:
+- prayer
+- fasting
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-19'

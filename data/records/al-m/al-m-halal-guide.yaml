@@ -1,0 +1,29 @@
+id: al-m-halal-guide
+type: other
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: Halal Guide
+title_original: ''
+authors:
+- sayyid-muhammad-rizvi
+marja: sistani
+source: al-m.ca
+url: https://al-m.ca/halalguide/
+language: en
+date: '2021-07-06'
+description: A searchable alphabetical list of food ingredients, additives and products, with notes on
+  their sources. It also links to a seminar on halal and haram items and to a separate list of restaurants.
+sample_questions:
+- Is this food ingredient halal?
+- What is gelatin made from?
+- How do I check E-numbers in food?
+- Where can I find a list of halal ingredients?
+headings:
+- food-drink
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-19'

@@ -1,0 +1,31 @@
+id: al-m-moonsighting-north-america
+type: other
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: Moonsighting
+title_original: ''
+authors:
+- sayyid-muhammad-rizvi
+marja: sistani
+source: al-m.ca
+url: https://al-m.ca/moonsighting/
+language: en
+date: '2026-11-06'
+description: A page for reporting a sighting of the new moon in North America, with an explanation of
+  how sightings are confirmed for the Islamic month. It links to the Crescent Committee declarations and
+  a video on the topic.
+sample_questions:
+- How is the start of an Islamic month decided?
+- How do I report a moon sighting?
+- What is the Crescent Committee?
+- Why do dates for Ramadan differ between countries?
+headings:
+- fasting
+- islamic-calendar
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-19'

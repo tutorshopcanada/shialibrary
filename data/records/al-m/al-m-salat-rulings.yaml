@@ -1,0 +1,30 @@
+id: al-m-salat-rulings
+type: other
+content_tag: fiqh
+granularity: work
+parent: ''
+level: intermediate
+title: Salat Rulings
+title_original: ''
+authors:
+- sayyid-muhammad-rizvi
+marja: sistani
+source: al-m.ca
+url: https://al-m.ca/salat/
+language: en
+date: '2026-09-24'
+description: A hub of tools about salat (prayer) from the Al-Ma'arif Foundation. It includes a guide to
+  the night prayer, forms for doubts during prayer, remedies for doubts, a condensed method of prayer
+  and links to prayer while travelling.
+sample_questions:
+- How do I pray the night prayer?
+- What do I do if I doubt my prayer?
+- What is the condensed method of prayer?
+- How do I make up a missed prayer?
+headings:
+- prayer
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-19'
