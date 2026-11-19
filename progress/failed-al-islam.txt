@@ -6,3 +6,4 @@
 2026-11-11 | https://al-islam.org/node/41779 | node page shows only site navigation, no title body or author; not cataloged
 2026-11-11 | https://al-islam.org/articles/beliefs-did-prophet-s-appoint-successor | WebFetch returned HTTP 403 Forbidden; not retried
 2026-11-12 | https://al-islam.org/articles/su | HTTP 403 Forbidden; not retried
+2026-11-19 | https://al-islam.org/node/47326 | HTTP 403 Forbidden from WebFetch at 03:43:42Z during the four-agent Ask-forum run (about 13 fetches in). Node 47326 was not in any shard (shard 3 typed it by mistake), so it may be an unpublished or restricted page rather than a block, but under CLAUDE.md section 10 all agents stopped, a STOP file was written and nothing was retried. Owner to decide whether to resume.
