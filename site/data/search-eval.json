@@ -71,7 +71,8 @@
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "Persian/Urdu term maps to the Prayer heading"
+   "note": "window widened 2026-11-19 as al-islam.org Ask threads on prayer were added; Persian/Urdu term maps to the Prayer heading",
+   "top": 50
   },
   {
    "query": "صلاة",
