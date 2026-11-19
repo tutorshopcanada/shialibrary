@@ -970,7 +970,7 @@ function render(opts = {}) {
         view.innerHTML = questionPageHtml(st, result);
       } else {
         const nn = result.counts && result.counts.total, capn = Number(engine.config.layer2.max_results) || 150;
-        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found.`), back: [BASE, 'Back to start'], search: st });
+        $('#routeStage').innerHTML = pageStage({ kind: 'Search results', title: `“${st.q}”`, lede: result.fallback || !nn ? '' : (nn >= capn ? `Showing the best ${nn} pages. Narrow it down with the filters.` : `${pl(nn, 'page')} found${result.corrected ? ` for “${result.corrected}”` : ''}.`), back: [BASE, 'Back to start'], search: st });
         view.innerHTML = resultsHtml(st, result);
         announceText = `Results for ${st.q}. ${announceText}`;
       }

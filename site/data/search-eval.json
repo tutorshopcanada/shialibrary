@@ -817,6 +817,15 @@
    "note": "paraphrase; found by meaning when keywords miss"
   },
   {
+   "query": "can the prohets make mistakes",
+   "expect_any": [
+    "tasneem-the-infallibility-of-the-prophets"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "typo (prohets) is corrected to prophets"
+  },
+  {
    "query": "how to fix my car engine",
    "expect_any": [],
    "expect_none": true,

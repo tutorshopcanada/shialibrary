@@ -79,6 +79,7 @@ queries:
   - {query: "life of the seventh imam", expect_any: [al-islam-infallibles-musa-al-kazim-mufid, al-islam-brief-history-fourteen-infallibles, al-islam-survey-lives-infallible-imams], expect_group: any, note: "paraphrase; found by meaning when keywords miss"}
   - {query: "woman bleeding after having a baby", expect_any: [sistani-qa-14855, sistani-women-8573, sistani-laws-2172, sistani-women], expect_group: any, note: "paraphrase; found by meaning when keywords miss"}
   - {query: "books about the quran for beginners", expect_any: [al-islam-holy-quran-some-basic-facts, al-islam-introduction-to-the-glorious-quran, al-islam-quran-in-islam-its-impact-and-influence, al-islam-quranic-lessons], expect_group: any, note: "paraphrase; found by meaning when keywords miss"}
+  - {query: "can the prohets make mistakes", expect_any: [tasneem-the-infallibility-of-the-prophets], expect_group: exact, note: "typo (prohets) is corrected to prophets"}
   - {query: "how to fix my car engine", expect_none: true, note: "off-topic or gibberish; nothing should be shown"}
   - {query: "asdf ghjk", expect_none: true, note: "off-topic or gibberish; nothing should be shown"}
   - {query: "cheap flights to paris", expect_none: true, note: "off-topic; nothing should be shown"}

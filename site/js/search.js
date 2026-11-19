@@ -322,11 +322,45 @@ export function createEngine(index) {
   }
 
   // ---- Query analysis ----
+  // Spelling help: a query word the catalog has never seen ("prohets") is replaced by the single best known
+  // word one typo away (a missing, extra, wrong or swapped letter). Plain edit-distance rule, no model. Only
+  // words of 5+ letters; ties go to the word found on the most pages.
+  const termCache = new Map();
+  function oneTypo(a, b) {
+    if (Math.abs(a.length - b.length) > 1) return false;
+    let i = 0;
+    while (i < a.length && i < b.length && a[i] === b[i]) i++;
+    if (i === a.length && i === b.length) return false;
+    if (a.length === b.length) {
+      if (a.slice(i + 1) === b.slice(i + 1)) return true;                       // wrong letter
+      return a[i] === b[i + 1] && a[i + 1] === b[i] && a.slice(i + 2) === b.slice(i + 2); // swapped
+    }
+    const [s, l] = a.length < b.length ? [a, b] : [b, a];
+    return s.slice(i) === l.slice(i + 1);                                          // missing / extra letter
+  }
+  function correctTerm(t) {
+    if (t.length < 5 || !/^[a-z]+$/.test(t) || postings.has(t) || concepts.has(t) || stopSet.has(t)) return t;
+    if (termCache.has(t)) return termCache.get(t);
+    let best = t, bestDf = 0;
+    for (const c of terms) {
+      if (Math.abs(c.length - t.length) > 1 || !/^[a-z]+$/.test(c)) continue;
+      const df = docFreq.get(c) || 0;
+      if (df > bestDf && oneTypo(t, c)) { best = c; bestDf = df; }
+    }
+    termCache.set(t, best);
+    return best;
+  }
+
   function analyze(rawQuery) {
     const raw = String(rawQuery || '').slice(0, 300);
     const quoted = [];
     raw.replace(/"([^"]+)"/g, (_, p) => { const t = tokenize(p); if (t.length) quoted.push(pad(t)); return ''; });
-    const tokens = tokenize(raw);
+    const corrections = [];
+    const tokens = tokenize(raw).map((t) => {
+      const c = correctTerm(t);
+      if (c !== t) corrections.push({ from: t, to: c });
+      return c;
+    });
     const isStop = tokens.map((t) => stopSet.has(t));
     const allStop = isStop.every(Boolean);
 
@@ -373,7 +407,7 @@ export function createEngine(index) {
     if (units.some((u) => !u.generic)) units = units.filter((u) => !u.generic);
 
     return {
-      raw, tokens, quoted, spans, keyTerms, keyIndex, isGeneric, hasSpecific, units,
+      raw, corrections, tokens, quoted, spans, keyTerms, keyIndex, isGeneric, hasSpecific, units,
       phrase: tokens.length >= 2 ? pad(tokens) : null,
     };
   }
@@ -586,6 +620,7 @@ export function createEngine(index) {
     const result = {
       query: qa.raw.trim(), mode: 'search', layer: 4, order, filters: f, curated: null,
       exact: [], related: [], fallback: false, emptyTopic: null,
+      corrected: qa.corrections.length ? qa.corrections.map((c) => c.to).join(' ') : '',
       counts: { exact: 0, related: 0, total: 0, unfiltered: 0, tags: {}, cats: newCatCounts() },
     };
     for (const t of config.tags.order) result.counts.tags[t] = 0;
