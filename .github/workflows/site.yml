@@ -36,3 +36,9 @@ jobs:
           node scripts/test_semantic.mjs
       - name: Run search evaluation
         run: node scripts/eval_search.mjs
+      - name: Search quality metrics (fail if ranking gets worse)
+        # Minimums sit just under the measured scores; raise them when the search improves.
+        run: >-
+          node scripts/eval_metrics.mjs
+          --min judged.ndcg10=0.66 --min judged.hit1=0.6 --max judged.junk3=0.42
+          --min eval.mrr=0.62 --min holdout.mrr=0.28 --min holdout.hit10=0.56
