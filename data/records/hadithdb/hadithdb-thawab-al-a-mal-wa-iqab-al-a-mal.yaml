@@ -1,0 +1,30 @@
+id: hadithdb-thawab-al-a-mal-wa-iqab-al-a-mal
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Thawāb al-Aʿmāl wa ʿIqāb al-Aʿmāl
+title_original: ''
+authors:
+- saduq
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/thawab-al-a-mal-wa-iqab-al-a-mal
+language: en
+date: ''
+description: Two paired books by Shaykh al-Saduq, one on the rewards promised for particular good acts
+  and one on the punishments warned of for particular sins, printed together. Entries are short and concrete.
+  Shown in Arabic with English translation.
+sample_questions:
+- What is the reward for good deeds in hadith?
+- What are the punishments for sins in hadith?
+- What is Thawab al-A'mal?
+- Where can I read hadith on rewards and punishments?
+headings:
+- hadith-collections
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

@@ -1,0 +1,31 @@
+id: hadithdb-mu-jam-al-ahadith-al-mu-tabara
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Muʿjam al-Aḥādīth al-Muʿtabara
+title_original: ''
+authors:
+- muhsini
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/mu-jam-al-ahadith-al-mu-tabara
+language: en
+date: ''
+description: A modern collection by Shaykh Muhammad Asif al-Muhsini that gathers only the narrations he
+  judged reliable, in sections on intellect and knowledge, divine unity, the Quran, narrators and the
+  principles of jurisprudence. Shown in Arabic with English translation; a specialist source.
+sample_questions:
+- What is Mu'jam al-Ahadith al-Mu'tabara?
+- Which hadith are considered reliable?
+- Where can I read only authentic hadith?
+- Who was Shaykh Asif al-Muhsini?
+headings:
+- hadith-collections
+- hadith-sciences
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

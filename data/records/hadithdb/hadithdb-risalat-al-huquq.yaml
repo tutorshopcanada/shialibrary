@@ -1,0 +1,33 @@
+id: hadithdb-risalat-al-huquq
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: intermediate
+title: Risālat al-Ḥuqūq
+title_original: ''
+authors:
+- imam-zayn-al-abidin
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/risalat-al-huquq
+language: en
+date: ''
+description: A treatise on rights attributed to Imam Zayn al-Abidin, preserved by Shaykh al-Saduq. It
+  lists around fifty rights one owes, starting with the rights of God and one's own body and moving outward
+  to teachers, family and neighbours. Shown in Arabic with English translation; shorter than most collections,
+  so a good starting point.
+sample_questions:
+- What is the Treatise on Rights?
+- What rights do I owe to others in Islam?
+- What did Imam Zayn al-Abidin write?
+- What are the rights of parents, teachers and neighbours?
+headings:
+- hadith-collections
+- ethics
+- twelve-imams
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

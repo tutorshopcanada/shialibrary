@@ -1,0 +1,36 @@
+type: book
+content_tag: book
+granularity: work
+parent: ''
+title_original: ''
+marja: ''
+source: al-islam.org
+language: en
+date: ''
+location: ''
+access: free
+needs_review: false
+review_note: Page lists Sayyid Sa'eed Akhtar Rizvi and Sayyid Athar Husayn S.H. Rizvi; only the first
+  is recorded as author. Level chosen as advanced because the text is a scholarly point-by-point response.
+cataloged_on: '2026-11-19'
+id: al-islam-completion-of-argument-saeed-akhtar-rizvi
+level: advanced
+title: Completion of Argument
+authors:
+- saeed-akhtar-rizvi
+url: https://al-islam.org/completion-argument-sayyid-saeed-akhtar-rizvi
+description: A book, presented as a translation, that discusses questions raised by Sunni scholars about
+  Shia beliefs and customs, including the Quran, the Mahdi, the Mut'ah marriage and events after the Prophet.
+  It is written point by point for readers already familiar with these debates.
+sample_questions:
+- What do Shias believe about the Quran?
+- What is taqiyyah?
+- What is mut'ah marriage in Shia Islam?
+- Who is the Mahdi in Shia belief?
+- Why do Shias and Sunnis disagree about the companions?
+- What are the main objections Sunni scholars raise against Shia beliefs?
+headings:
+- sunni-shia
+- quran-sciences
+- imamate
+- companions-scholars

@@ -1,0 +1,32 @@
+id: hadithdb-kitab-al-ghayba
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Kitāb al-Ghayba (Nuʿmānī and Ṭūsī)
+title_original: ''
+authors:
+- numani
+- tusi
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/kitab-al-ghayba
+language: en
+date: ''
+description: This page holds two early books on the Imam's occultation (ghayba), one by al-Nu'mani and
+  one by al-Tusi. They collect reports that foretold the concealment and, in al-Tusi's book, answer objections
+  to it. Shown in Arabic with English translation; a primary source for readers with some background.
+sample_questions:
+- What is the occultation of the Twelfth Imam?
+- Where can I read hadith about Imam Mahdi's concealment?
+- What is Kitab al-Ghayba?
+- Who were the four deputies of the Imam?
+headings:
+- hadith-collections
+- imam-mahdi
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

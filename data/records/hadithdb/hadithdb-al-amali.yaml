@@ -1,0 +1,32 @@
+id: hadithdb-al-amali
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: advanced
+title: Al-Amālī (Saduq and Mufid)
+title_original: ''
+authors:
+- saduq
+- mufid
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/al-amali
+language: en
+date: ''
+description: 'This page holds two books of recorded teaching sessions (called amali, or dictations) under
+  one name: one by Shaykh al-Saduq and one by Shaykh al-Mufid. Each session moves between ethics, the
+  lives of the Prophet and the Imams and points of belief, and several relate to Karbala. Shown in Arabic
+  with English translation; a primary source for readers with some background.'
+sample_questions:
+- What is Al-Amali?
+- Where can I read hadith from Shaykh Mufid's teaching sessions?
+- What did Shaykh Saduq teach in his sessions?
+- Where can I find hadith about Karbala?
+headings:
+- hadith-collections
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

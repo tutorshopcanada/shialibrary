@@ -1,0 +1,32 @@
+id: hadithdb-mizan-al-hikma
+type: hadith-collection
+content_tag: hadith
+granularity: work
+parent: ''
+level: intermediate
+title: Mīzān al-Ḥikma (The Scale of Wisdom)
+title_original: ''
+authors:
+- rayshahri
+marja: ''
+source: hadith.academyofislam.org
+url: https://rewayaat.info/books/mizan-al-hikma
+language: en
+date: ''
+description: An abridged English edition of Rayshahri's topical hadith collection, listing sayings of
+  the Prophet and the Imams by subject (more than 270 topics), mainly on ethics, society and belief, with
+  Quran verses beside each topic. It is easy to browse by theme.
+sample_questions:
+- Where can I find hadith by topic?
+- What is Mizan al-Hikma?
+- What do hadith say about anger?
+- Where can I read hadith on ethics in English?
+- What is The Scale of Wisdom?
+headings:
+- hadith-collections
+- ethics
+access: free
+location: ''
+needs_review: false
+review_note: ''
+cataloged_on: '2026-11-15'

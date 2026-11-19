@@ -510,6 +510,38 @@ Pages whose main content is how to perform a prayer, or that state rulings. Fiqh
 ## Skipped (fiqh, marja not stated) - held pages decision (2026-11-13)
 - https://imam-us.org/an-important-advice-regarding-misuses-of-the-power-of-religious-authority-talaq-al-hakim-al-shari (dated 2021-07-15). Owner asked for this page to be cataloged, but the page does not say that Sayyid Sistani or Sayyid Khamenei is the source of its guidance. It is issued by "The Internal Affairs Committee, The Council of Shia Muslim Scholars of North America", so the office-of-Sistani assumption in the brief does not hold. Its guidance covers the legal conditions for a divorce by a religious authority, which is fiqh, so it was skipped under the fiqh rule. Owner to decide: add a marja, or accept it as a non-fiqh advisory statement.
 
+## al-m.ca, first batch (2026-11-15)
+Skipped, with reasons:
+- Download pages with no descriptive text (title and PDF link only), so no grounded description is possible: An Introduction to Islam, An Introduction to Shi'a Islam, Discovering Islam (introductory booklet), Imam Husayn: The Savior of Islam (S M Rizvi), Mutual Respect and Peaceful Co-Existence Among Muslims, the Al-Furqan newsletter issues 1 to 15, and other worksheets and teaching packs. Owner could say whether to catalog them from the title alone, or the pages could be revisited if text is added.
+- Fiqh or practical rulings with no stated marja on the page (skipped under the fiqh rule): Salat Resources and Rulings, Marriage Guide, the zakat, khums, marijuana and cryptocurrency posts, Taharat un Nisa, Business Ethics in Islam, Adoption in Islam. The "2015 Edition: Ayatullah Sistani Risalah: Islamic Laws" download page (https://al-m.ca/download/2015-edition-ayatullah-sistani-risalah-islamic-laws/) is a Sistani book, but the page shows an empty file (0 KB) and no description, so it was not cataloged. Owner to decide.
+- Out of scope: donations, halal guides and restaurants, moon sighting, travel exemptions, newsletters, special-education worksheets for children.
+- (Cleared 2026-11-19: owner allows polemic-flagged items; see decision below.)
+
+## academyofislam.com, first batch (2026-11-15)
+- Courses: none cataloged. Every course on the site (/course-archives/, current term Fall 2026) is a live or scheduled-term class, which the owner excluded on 2026-11-15 because they expire. Several are also fiqh-subject (The Laws of Fasting, Simple Islamic Laws for Sisters, Islamic Laws Related to the Workplace).
+- Not cataloged: "Index to Chronicles to the Martyrdom of Imam Husayn" (product page has no description); the services pages (marriage, wills); the 114 individual surah pages (the work-level record "Introduction to Quranic Sūrahs" is cataloged; sections can follow if the owner wants them); remaining Knowing the Ma'sūmīn workbooks, Quranic Reflections Books 2 to 5 and devotions booklets (about 25 product pages, same pattern).
+- Hadith database: records are in data/records/hadithdb (21 books, work level). Volume and chapter sections were not created.
+
+## Second batch, 2026-11-19 (al-m.ca, academyofislam.com)
+- Cataloged from the title alone (needs_review true, level advanced unless the title says introduction): al-m.ca Al-Furqan issues 1 to 5, 7, 13 to 15, Mutual Respect, An Introduction to Islam / to Shi'a Islam, Discovering Islam, Imam Husayn: The Savior of Islam, Bibi Zaynab's Sermon (English), Saeed Akhtar Rizvi biography PDF, Parallels between Imam Husayn and John the Baptist; Academy: Index to Chronicles to the Martyrdom of Imam Husayn.
+- al-m-2015-edition-ayatullah-sistani-risalah-islamic-laws: fiqh record (marja sistani) whose download file is empty (0 KB). Owner to confirm it should stay.
+- Possible overlaps (not URL duplicates): al-m Imam Husayn Savior of Islam = al-islam-imam-husayn-saviour-of-islam; al-m Bibi Zaynab's Sermon (English) vs the Sermons booklet record; al-m Rizvi biography PDF vs the biography page record.
+- Skipped on al-m.ca: Al-Furqan issues 6, 8, 9, 10 (fiqh topics), 11, 12 (gender-interaction rulings), the Sachedina report, ebook duplicate, the History of the Shi'a People excerpt. Authorship of the John the Baptist article rests on its file name ("SM Rizvi").
+- Academy: all courses skipped (live or term-based). 114 surah pages cataloged as sections of academy-surah-introductions.
+
+## Owner decision 2026-11-19: polemical items are allowed
+Items skipped or flagged only for being polemical (history and Shia belief, not meant to start arguments) are now in scope and need no flag. The wording rules still apply: neutral, factual descriptions with no endorsement or criticism, and the fiqh rule. The two al-m.ca flags were cleared, and the items listed under the "Skipped (polemical)" headings above are being cataloged.
+
+## Third batch, 2026-11-19
+- al-m.ca fiqh (owner: Sayyid Muhammad Rizvi represents Sistani): 31 records (16 pages with text, 15 title-only downloads), all marja sistani, authors [sayyid-muhammad-rizvi], even where the page names only "Admin" or Al-Ma'arif. Owner to confirm authorship for pages with no named author, and that the gender and mixed-gathering items (Al-Furqan issues 11, 12, Gender Interactions) count as fiqh. Skipped: /course/jurisprudence/ (no description), semester 10 inheritance session notes (class notes; also no inheritance heading exists, propose one).
+- The same work now appears twice where a page and a download exist (Business Ethics, Taharat un Nisa, Zakat, Ramadan guide); both kept per owner.
+- Polemic backlog: 8 al-islam.org records and 1 imam-us.org record added. imam-us BBC statement is tagged article, not fiqh (one answer touches a marriage ruling): owner to confirm. Already recorded earlier: Twelve Successors (Askari) and the three Mizan courses (their live/ended status was not re-checked). Not cataloged: al-Tijani al-Samawi chapter (node/46853) because its parent book has no record.
+
+## Mizan Institute audit, 2026-11-19 (owner: only asynchronous courses)
+Removed 22 course records, 13 live and 9 ended: becoming-bani-adam-course, beyond-control, death-and-barzakh (+ online-may-2026), ethical-dilemmas, hearts-that-hold-the-quran, introduction-science-of-tafsir, opening-our-eyes-quran, rediscovering-femininity, teens-qa, the-hour (+ part-one-online-august-2026), the-mahdi-birth-to-occultation, the-mahdi-part-3 (+ online-november-2025), the-mahdi-part-4 (+ online-february-2026), tadabbur-guide, teens-secret-of-salat (+ recording-july-2025), the-mahdi-part-1-online-recording-june-2025, the-mahdi-part-2-online-september-2025. Full audit: kept 38 asynchronous.
+Left in place, owner to decide (7 unclear): mizan-becoming-bani-adam (a book pre-order, not a course), mizan-from-the-prophet-to-yazid (podcast and video links only), Lesson Per Page seasons 3, 4, 5 and season 3 episode 1 (episodes released on a Ramadan schedule), mizan-teens-purpose-of-creation (looks like a one-time live event with a recording).
+Note: nine podcast and audio series records (type lecture) are classed asynchronous and kept.
+Owner decision 2026-11-19: the 7 unclear Mizan records were also removed (becoming-bani-adam, from-the-prophet-to-yazid, lesson-per-page seasons 3, 4, 5 and season 3 episode 1, teens-purpose-of-creation). Mizan courses now total 38.
 ## imam-us.org chunk 2 skips (2026-11-15)
 
 Fetched and skipped:

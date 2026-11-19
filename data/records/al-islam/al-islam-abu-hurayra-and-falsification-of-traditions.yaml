@@ -1,0 +1,34 @@
+type: article
+content_tag: article
+granularity: work
+parent: ''
+title_original: ''
+marja: ''
+source: al-islam.org
+language: en
+date: ''
+location: ''
+access: free
+needs_review: false
+review_note: Page also offered at a second URL (articles/abu-hurayra-and-falsification-traditions-yasin-al-jibouri)
+  with a different slug; the brief treats the two as one page, so only this URL is recorded. No date stated.
+  Level not stated; chosen as advanced under the cautious rule.
+cataloged_on: '2026-11-19'
+id: al-islam-abu-hurayra-and-falsification-of-traditions
+level: advanced
+title: Abu Hurayra and the Falsification of Traditions (Hadith)
+authors:
+- yasin-t-al-jibouri
+url: https://al-islam.org/articles/abu-hurayra-and-falsification-traditions-hadith-yasin-t-al-jibouri
+description: A short book, hosted as an article, that discusses the reliability of Abu Hurayra as a narrator
+  of hadith. It covers his background, the disputed number of narrations attributed to him, and criticisms
+  raised by other companions and scholars. It is written for readers interested in hadith scholarship.
+sample_questions:
+- Who was Abu Hurayra?
+- Is Abu Hurayra a reliable hadith narrator?
+- Why are some hadith questioned in Shia scholarship?
+- What is hadith falsification?
+- What did other companions say about Abu Hurayra?
+headings:
+- hadith-sciences
+- companions-scholars

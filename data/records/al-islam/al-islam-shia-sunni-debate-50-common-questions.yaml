@@ -1,0 +1,38 @@
+type: book
+content_tag: book
+granularity: work
+parent: ''
+title_original: ''
+marja: ''
+source: al-islam.org
+language: en
+date: ''
+location: ''
+access: free
+needs_review: false
+review_note: Authors listed as compilers on the page. Copyright year 2012 is stated but no publication
+  date, so date left blank. Level chosen as advanced because the book is a point-by-point debate.
+cataloged_on: '2026-11-19'
+id: al-islam-shia-sunni-debate-50-common-questions
+level: advanced
+title: 'The Shia-Sunni Debate: Answering the 50 Most Common Questions'
+authors:
+- liaket-dewji
+- baqerali-alidina
+url: https://al-islam.org/shia-sunni-debate-answering-50-most-common-questions-liaket-dewji-baqerali-alidina
+description: A book that discusses 50 common questions raised in the Shia-Sunni debate, drawing on the
+  Quran and books of Sunni tradition. It covers topics such as Imam Ali, the Ahl al-Bayt, the Companions,
+  the Quran and Karbala. It is written for readers who want to understand the arguments on both sides
+  of these questions.
+sample_questions:
+- What is the Shia-Sunni debate about?
+- Who was Imam Ali in Shia belief?
+- Who are the Ahl al-Bayt?
+- Why do Shias mourn at Karbala?
+- What do Shias and Sunnis say about the Companions of the Prophet?
+- What are the common questions asked in Shia-Sunni debates?
+headings:
+- sunni-shia
+- imamate
+- companions-scholars
+- karbala-ashura

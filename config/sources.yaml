@@ -114,6 +114,62 @@ sources:
       Supplied by the owner on 2026-11-12; see the institutes list below. Fiqh-subject courses are
       skipped and logged. Sitemap: https://mizaninstitute.org/sitemap.xml.
 
+  - id: al-m.ca
+    name: "Al-Ma'arif Foundation (al-m.ca)"
+    type: library
+    base_url: "https://al-m.ca/"
+    status: active
+    catalog_level: "To be decided after inspection (suggested: one record per publication or article)."
+    notes: >
+      Supplied by the owner on 2026-11-15. The page titles read "Al-Maarif Foundation" with
+      Publications and Humanitarian Aid sections (humanitarian pages are out of scope). WordPress
+      (Yoast, Avada, Download Manager). robots.txt (read 2026-11-15) disallows only
+      /wp-content/uploads/wpforms/, has no crawl delay, and lists https://al-m.ca/sitemap_index.xml
+      (sub-sitemaps: post, page, wpdmpro [downloadable publications], avada_faq, category,
+      author). Home page and About page text did not come back usable on 2026-11-15, so the
+      structure is not inspected yet and nothing is cataloged. Be polite: one request every 2
+      seconds at most. Owner decision 2026-11-19: Sayyid Muhammad Rizvi, the author of al-m.ca's material, is
+      a representative of Sayyid Sistani, so fiqh pages on al-m.ca are in scope with marja sistani and
+      authors [sayyid-muhammad-rizvi] (skip a fiqh page only if it names a different author). Fiqh
+      records still describe the topic and never restate a ruling. When a work is also on another approved
+      source (for example al-islam.org), keep both records, each linking to its own source. Never link to or record direct file downloads as the
+      record URL; use the publication's own page.
+
+  - id: academyofislam.com
+    name: "Academy for Learning Islam (ALI)"
+    type: library
+    base_url: "https://academyofislam.com/"
+    status: active
+    crawl_delay_seconds: 2
+    catalog_level: "To be decided after inspection (suggested: one record per publication or resource page; one per course, with provider Academy for Learning Islam)."
+    notes: >
+      Supplied by the owner on 2026-11-15. This is the Academy for Learning Islam, which the owner
+      dropped on 2026-11-12 and has now re-added. A registered charity (Toronto and Vancouver) with
+      courses (/course-archives/), publications (/publications/), Quran resources (/quran/),
+      Sahifa Sajjadiyya and duas (/sahifa/, /resources/duas/), and services such as marriage
+      and will writing (services are out of scope). Mostly English; some Quranic Reflections
+      are in French (skip). The site never says "Twelver" but its content (Ma'sumin, Ahl al-Bayt,
+      Sahifa Sajjadiyya) is Twelver Shia. The linked hadith database (hadith.academyofislam.org)
+      is a separate source (id hadith.academyofislam.org, approved by the owner 2026-11-15). robots.txt (read 2026-11-15) disallows /wp-admin/
+      except admin-ajax and lists https://academyofislam.com/sitemap.xml (single urlset, about
+      160k characters). Be polite: one request every 2 seconds at most. If its courses are cataloged,
+      each needs type course, content_tag course and provider "Academy for Learning Islam"
+      (added to the institutes list). Owner decision 2026-11-15: only asynchronous (self-paced,
+      recorded) courses are cataloged; live or scheduled-term classes are skipped, because they
+      expire. Fiqh-subject courses are skipped and logged.
+
+  - id: hadith.academyofislam.org
+    name: "Hadith Database (Academy for Learning Islam)"
+    type: hadith-collections
+    base_url: "http://hadith.academyofislam.org/"
+    status: active
+    catalog_level: "One record per collection/book/volume. No per-hadith records (same rule as thaqalayn.net)."
+    notes: >
+      Approved by the owner on 2026-11-15 (linked from academyofislam.com). hadith.academyofislam.org redirects to https://rewayaat.info/ and its inner pages
+      fail on the old host, so record URLs use rewayaat.info (like thaqalayn.net / .com). rewayaat.info robots.txt
+      (read 2026-11-15) allows /books and disallows /v1/, /mcp and narrator filter queries. Every record is
+      content_tag hadith. robots.txt returned HTTP 530 on 2026-11-15 (no rules readable); the
+      home page loads. Structure not inspected yet. Be polite: one request every 2 seconds.
   - id: tasneeminstitute.org
     name: "Tasneem Institute"
     type: courses
@@ -148,7 +204,15 @@ sources:
     notes: "Backlog. No channel list yet."
 
 # Institutes offering courses. Every course record uses one of these names as its provider.
+# Owner decision 2026-11-15: for every institute, only asynchronous (self-paced, recorded) courses
+# are cataloged. Live classes and scheduled terms are skipped because they expire.
 institutes:
+  - name: "Academy for Learning Islam"
+    base_url: "https://academyofislam.com/"
+    status: active
+    notes: >
+      Re-added by the owner on 2026-11-15. Only asynchronous courses; its per-term live courses
+      (/course-archives/) are skipped.
   - name: "Mizan Institute"
     base_url: "https://mizaninstitute.org/"
     status: active
