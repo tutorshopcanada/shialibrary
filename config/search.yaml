@@ -139,6 +139,31 @@ tags:
     lecture: Lecture
     other: Other
 
+# ---------------------------------------------------------------------------
+# Result tabs on the search page (owner request, 2026-11-19)
+# ---------------------------------------------------------------------------
+# Tab order is the priority order: Q&A first, then articles, books, hadith, then everything else.
+# A record's tab comes from its format (`type`), then its content tag; anything left goes to `fallback`.
+# (Q&A covers sistani.org and al-islam.org questions and answers alike.)
+categories:
+  order: [qa, article, book, hadith, more]
+  labels:
+    qa: "Q&A"
+    article: Articles
+    book: Books
+    hadith: Hadith
+    more: Courses and more
+  by_type:
+    qa: qa
+    article: article
+    book: book
+    hadith-collection: hadith
+  by_tag:
+    hadith: hadith
+  fallback: more
+  # On the "All" tab, how many results to show for each kind before "See all".
+  overview_per_category: 3
+
 # Text shown on the level badge.
 levels:
   order: [beginner, intermediate, advanced]

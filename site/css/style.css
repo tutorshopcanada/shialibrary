@@ -1057,3 +1057,16 @@ body.has .hero-art,body.has .cursor{display:none}
   #top .hero-frame .site{border-radius:0}
   #top .hero-frame .strip{padding-left:max(clamp(.8rem,2.4vw,1.3rem),env(safe-area-inset-left,0px));padding-right:max(clamp(.8rem,2.4vw,1.3rem),env(safe-area-inset-right,0px))}
 }
+
+/* Result tabs (Q&A, Articles, Books, Hadith, more): one tap instead of scrolling */
+.rtabs{display:flex;gap:.25rem;overflow-x:auto;margin:0 0 1.2rem;border-bottom:1px solid var(--edge);position:sticky;top:0;z-index:6;background:var(--ground);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rtabs::-webkit-scrollbar{display:none}
+.rtab{flex:none;border:0;background:transparent;color:var(--mute);padding:.7rem 1rem;min-height:2.75rem;cursor:pointer;font-size:.9375rem;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.rtab i{font-style:normal;opacity:.65;font-variant-numeric:tabular-nums;margin-left:.2rem}
+.rtab[aria-pressed=true]{color:var(--ink);font-weight:600;border-bottom-color:var(--btn)}
+.rtab:disabled{opacity:.4;cursor:default}
+.rtab:focus-visible,.seeall:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+@media (hover:hover) and (pointer:fine){.rtab:not(:disabled):not([aria-pressed=true]):hover{color:var(--ink);background:var(--hi)}}
+.seeall{display:block;width:100%;margin-top:6px;padding:.75rem 1rem;min-height:2.75rem;border:1px dashed var(--edge);border-radius:12px;background:transparent;color:var(--ink);font-size:.9375rem;font-weight:500;cursor:pointer;text-align:center}
+@media (hover:hover) and (pointer:fine){.seeall:hover{background:var(--hi)}}
+.seeall:active{transform:scale(.99)}
