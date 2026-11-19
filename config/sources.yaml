@@ -126,7 +126,11 @@ sources:
       (sub-sitemaps: post, page, wpdmpro [downloadable publications], avada_faq, category,
       author). Home page and About page text did not come back usable on 2026-11-15, so the
       structure is not inspected yet and nothing is cataloged. Be polite: one request every 2
-      seconds at most. Fiqh rule applies. Never link to or record direct file downloads as the
+      seconds at most. Owner decision 2026-11-19: Sayyid Muhammad Rizvi, the author of al-m.ca's material, is
+      a representative of Sayyid Sistani, so fiqh pages on al-m.ca are in scope with marja sistani and
+      authors [sayyid-muhammad-rizvi] (skip a fiqh page only if it names a different author). Fiqh
+      records still describe the topic and never restate a ruling. When a work is also on another approved
+      source (for example al-islam.org), keep both records, each linking to its own source. Never link to or record direct file downloads as the
       record URL; use the publication's own page.
 
   - id: academyofislam.com

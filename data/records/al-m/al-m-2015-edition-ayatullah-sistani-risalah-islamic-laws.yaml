@@ -25,7 +25,5 @@ headings:
 access: free
 location: ''
 needs_review: true
-review_note: Page gives only a title and file link, so the description is based on the title. The attached
-  file is listed as 0 KB, so the download may be empty. Cataloged as fiqh of Sayyid Sistani, which needs
-  owner confirmation of the file and the record.
+review_note: 'Page gives only a title and a download button. The button (shown as 0 KB) redirects to a file on Google Drive (https://drive.google.com/file/d/0B9ZL7aYXaVJvT0xFMTRrcTVOaTA/view), which was not opened. Owner to verify the file.'
 cataloged_on: '2026-11-19'
