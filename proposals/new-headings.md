@@ -34,3 +34,17 @@ Suggestions from cataloging sessions. Nothing here is in `data/vocabulary.yaml` 
 > 2026-11-12: approved by the owner and added to the vocabulary: `intellect-knowledge`, `mental-health`, `grief-bereavement`, `muslims-minority-life`, `interfaith-relations`, `arbaeen`. Existing records that fit were updated.
 
 > 2026-11-12 (imam-us.org fiqh batch): `sacrifice` (the animal sacrifice on Eid al-Adha, under Fiqh). Until it exists, imam-us-wsid-eid-al-adha-sacrifice uses the top-level `fiqh` heading.
+
+
+## Proposed 2026-11-19 (search review: "can the prophets make mistakes")
+- **id:** `infallibility`
+  - **label:** "Infallibility (ʿIṣmah)"
+  - **suggested parent:** `beliefs`
+  - **alt_terms (draft):** "ismah", "ismat", "isma", "masum", "masoom", "masumin", "infallible", "infallibility", "sinless", "are prophets sinless", "can prophets sin", "can the prophets make mistakes", "do prophets make mistakes", "are the imams infallible", "عصمة", "عصمت", "معصوم", "معصومين"
+  - **why:** A beginner asking whether prophets can make mistakes has no heading to land on. Only `nubuwwah` and `imamate` exist, so the page "The Infallibility of the Prophets" is found only by luck of its title words, and questions about the infallibility of the Imams have no home at all.
+  - **would hold:** `tasneem-the-infallibility-of-the-prophets` (now tagged `nubuwwah` only), and any record on the infallibility of the Prophets, the Imams or Sayyidah Fatimah that is found when cataloging continues.
+  - **until approved:** `data/arabic-terms.yaml` maps these words to `nubuwwah` only, so the search works for prophets without touching the vocabulary. Once this heading exists, move the entry's `headings` to `infallibility` and retag the records.
+
+## Content gap noted 2026-11-19 (a visitor's search for "Shurtat al-Khamis")
+- A visitor searched "shurtat al khamis" and found nothing. No cataloged record mentions it, so the empty result was correct; the search now lands on the companions of Imam Ali instead of on Surat al-Shura.
+- The description given by the owner (literally "the Thursday police", a group of companions of Imam Ali) is not checked against any cataloged page. Do not write a record or a description until an approved-site page about it is found and read (al-islam.org or another approved source). If one exists, catalog it under `companions-scholars` (and `imam-ali` if the page ties it to him).

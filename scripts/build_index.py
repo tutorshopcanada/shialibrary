@@ -134,6 +134,30 @@ def load_sources(root: Path, problems: Problems) -> list[dict]:
     return out
 
 
+def add_arabic_terms(root: Path, by_id: dict, problems: Problems) -> None:
+    """Merge data/arabic-terms.yaml (search-only synonyms) into the headings' alternate terms, in the index only."""
+    path = root / "data" / "arabic-terms.yaml"
+    if not path.exists():
+        return
+    doc = load_yaml(path, problems)
+    for n, raw in enumerate(top_level_list(doc, "entries", path, problems), 1):
+        if not isinstance(raw, dict):
+            problems.error(f"{path}: entry {n} must be a mapping")
+            continue
+        terms = [text(t) for t in as_list(raw.get("terms")) if text(t)]
+        hids = [text(h) for h in as_list(raw.get("headings"))]
+        if not terms or not hids or not text(raw.get("meaning")):
+            problems.error(f"{path}: entry {n} needs terms, headings and a meaning")
+            continue
+        for hid in hids:
+            if hid not in by_id:
+                problems.error(f"{path}: entry {n} names unknown heading '{hid}'")
+                continue
+            have = set(by_id[hid]["alt_terms"])
+            by_id[hid]["alt_terms"].extend(t for t in terms if t not in have)
+            have.update(terms)
+
+
 def load_headings(root: Path, problems: Problems) -> tuple[list[dict], bool]:
     path = root / "data" / "vocabulary.yaml"
     if not path.exists():
@@ -158,6 +182,7 @@ def load_headings(root: Path, problems: Problems) -> tuple[list[dict], bool]:
             "alt_terms": [text(t) for t in as_list(raw.get("alt_terms"))],
         })
     by_id = {h["id"]: h for h in out}
+    add_arabic_terms(root, by_id, problems)
     for h in out:
         if h["parent"] and h["parent"] not in by_id:
             problems.error(f"{path}: heading '{h['id']}' has unknown parent '{h['parent']}'")

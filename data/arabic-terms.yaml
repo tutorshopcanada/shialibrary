@@ -1,0 +1,113 @@
+# Search-only synonym table: Arabic (and a few Persian/Urdu) words, their transliterations and plain-English
+# meanings, each pointed at headings that ALREADY exist in data/vocabulary.yaml.
+#
+# This file does not change the vocabulary. scripts/build_index.py adds each entry's `terms` to the alternate
+# terms of its `headings` inside site/data/index.json only, so a query in any of these forms behaves like the
+# heading's own alternate terms. It is a hand-built table, not a model.
+#
+# Rules for editing: `headings` must be existing heading ids (the build stops otherwise). `meaning` is the
+# English gloss, kept here so the owner or a scholar can check each entry. Add only words you can verify.
+# DRAFT: all entries are for owner / scholar review.
+entries:
+  # ---- Beliefs ----
+  - meaning: "ʿiṣmah: infallibility, being protected from sin and error (said of the prophets and the Imams); maʿṣūm: an infallible person"
+    terms: ["ismah", "ismat", "isma", "ismah of the prophets", "masum", "masoom", "maasum", "masumin", "masoomeen", "عصمة", "عصمت", "معصوم", "معصومين", "can prophets sin", "do prophets make mistakes", "prophets make mistakes", "are prophets sinless", "sinless prophets", "infallible", "infallibility"]
+    headings: [nubuwwah]   # interim: the proposed infallibility heading (proposals/new-headings.md) would replace this
+  - meaning: "tawḥīd: the oneness of God"
+    terms: ["tawheed", "توحيد"]
+    headings: [tawhid]
+  - meaning: "ʿadl: divine justice"
+    terms: ["adl", "adalat", "عدل", "عدالة"]
+    headings: [adl]
+  - meaning: "nubuwwah: prophethood; nabī: prophet; rasūl: messenger"
+    terms: ["nabi", "nabee", "rasul", "rasool", "anbiya", "anbiyaa", "نبي", "رسول", "أنبياء", "انبیا"]
+    headings: [nubuwwah]
+  - meaning: "imāmah: leadership after the Prophet; wilāyah: guardianship/authority of the Imams"
+    terms: ["wilaya", "walayah", "walaya", "wilayat", "ولاية", "ولایت", "إمامة", "امامة", "امام", "الإمام"]
+    headings: [imamate]
+  - meaning: "maʿād: the return to God, the afterlife; qiyāmah: the Day of Resurrection; barzakh: the state between death and resurrection"
+    terms: ["qiyamah", "qiyama", "qiyamat", "barzakh", "afterlife", "life after death", "معاد", "قيامة", "قیامت", "برزخ", "آخرة", "آخرت"]
+    headings: [maad]
+
+  # ---- Early history and the companions ----
+  - meaning: "Shurṭat al-Khamīs: literally 'the Thursday police'; as described by the owner, a group of companions of Imam Ali. NOT yet checked against a cataloged page"
+    terms: ["shurtat al khamis", "shurtah al khamis", "shurta al khamis", "shurtatul khamis", "shurtat ul khamis", "shurtat khamis", "shurtat al-khamis", "shurta khamis", "shurtat alkhamis", "shortat al khamis", "thursday police", "police of thursday", "شرطة الخميس", "شرطه الخميس"]
+    headings: [companions-scholars]
+  - meaning: "ṣaḥābah: companions of the Prophet; aṣḥāb: companions (of the Prophet or an Imam); aṣḥāb al-Imam ʿAlī: companions of Imam Ali"
+    terms: ["sahaba", "sahabah", "ashab", "ashaab", "ashab al imam ali", "companions of imam ali", "companions of the imams", "صحابة", "أصحاب", "اصحاب", "أصحاب الإمام علي"]
+    headings: [companions-scholars]
+  - meaning: "Names of well-known companions of Imam Ali and the earlier companions: Mālik al-Ashtar, ʿAmmār ibn Yāsir, Abū Dharr, Salmān al-Fārsī, al-Miqdād, Ḥujr ibn ʿAdī, Rushayd al-Hajarī, Qanbar"
+    terms: ["malik al ashtar", "malik ashtar", "مالك الأشتر", "ammar ibn yasir", "ammar bin yasir", "عمار بن ياسر", "abu dharr", "abu zarr", "أبو ذر", "salman al farsi", "salman farsi", "سلمان الفارسي", "miqdad", "al miqdad", "المقداد", "hujr ibn adi", "hujr bin adi", "حجر بن عدي", "rushayd al hajari", "rashid al hajari", "رشيد الهجري", "qanbar", "قنبر"]
+    headings: [companions-scholars]
+  - meaning: "Saqīfah: the gathering at Saqifa after the Prophet's death; khilāfah: the caliphate; ghadīr: Ghadir Khumm"
+    terms: ["saqifa", "saqifah", "سقيفة", "khilafa", "خلافة", "خلافت", "غدير", "غدیر", "wilayat of ali"]
+    headings: [ghadir-succession]
+  - meaning: "Ahl al-Bayt: the Prophet's family and household; ʿitrah: the Prophet's close family; Thaqalayn: 'the two weighty things' (Quran and the Ahl al-Bayt)"
+    terms: ["itrah", "ithrah", "hadith al thaqalayn", "thaqalayn", "al muhammad", "aal muhammad", "أهل البيت", "عترة", "آل محمد", "حديث الثقلين"]
+    headings: [ahl-al-bayt]
+  - meaning: "ghaybah: the Occultation of the twelfth Imam; Ṣāḥib al-Zamān: 'Master of the Age'; al-Qāʾim: 'the one who will rise'; ẓuhūr: his appearance"
+    terms: ["ghayba", "ghaibat", "ghaybat", "sahib al zaman", "sahibuz zaman", "qaim", "al qaim", "zuhur", "zuhoor", "imam e zaman", "مهدي", "مهدی", "غيبة", "غیبت", "صاحب الزمان", "قائم", "ظهور"]
+    headings: [imam-mahdi]
+  - meaning: "Shīʿah: followers of the Ahl al-Bayt; Sunnī: the other major branch of Islam"
+    terms: ["shia", "shiah", "shiite", "shiism", "sunni", "sunnism", "شيعة", "شیعه", "سني"]
+    headings: [sunni-shia]
+
+  # ---- Ashura and mourning ----
+  - meaning: "ʿĀshūrāʾ: the tenth of Muharram; ʿazāʾ / ʿazādārī: mourning; majlis: a gathering; laṭm: chest-beating in mourning; maqtal: account of the killing of Imam Husayn"
+    terms: ["aza", "azaa", "azadari", "azadari", "latm", "latmiya", "matam", "matam", "majlis", "majalis", "maqtal", "maktal", "noha", "nauha", "marthiya", "مجلس", "عزاء", "عزاداري", "عزاداری", "لطم", "مقتل", "ماتم", "نوحه"]
+    headings: [karbala-ashura]
+  - meaning: "Muḥarram, Ṣafar, Rajab, Shaʿbān, Ramaḍān, Rabīʿ al-Awwal: Islamic months; ʿĪd al-Fiṭr, ʿĪd al-Aḍḥā, ʿĪd al-Ghadīr: festivals"
+    terms: ["muharram", "safar", "rajab", "shaban", "shabaan", "ramadan", "ramazan", "rabi al awwal", "eid al fitr", "eid al adha", "eid ul adha", "eid al ghadir", "eid", "عيد", "عيد الفطر", "عيد الأضحى", "عيد الغدير", "محرم", "صفر", "رجب", "شعبان", "رمضان", "ربيع الأول"]
+    headings: [islamic-calendar]
+
+  # ---- Worship and rulings ----
+  - meaning: "wuḍūʾ: ritual washing before prayer; ghusl: full ritual bath; tayammum: dry ablution; najāsah: ritual impurity; ṭahārah: purity"
+    terms: ["wudu", "wudhu", "wuzu", "tayammum", "taharah", "najasa", "وضوء", "وضو", "غسل", "تيمم", "نجاسة", "طهارة", "وضو کرنا"]
+    headings: [purity]
+  - meaning: "ṣalāh: the daily prayer; adhān: call to prayer; iqāmah: the second call just before prayer; qiblah: direction of prayer; rukūʿ: bowing; sujūd/sajdah: prostration; qunūt: supplication in prayer; tashahhud: the testimony recited in prayer; taslīm: the closing salutation; namāz: Persian/Urdu for prayer"
+    terms: ["adhan", "azan", "iqama", "iqamah", "qibla", "qiblah", "ruku", "sujud", "sajdah", "sajda", "qunut", "tashahhud", "tashahud", "taslim", "namaz", "namaaz", "أذان", "اذان", "إقامة", "قبلة", "ركوع", "سجود", "سجدة", "قنوت", "تشهد", "تسليم", "صلاة", "نماز"]
+    headings: [prayer]
+  - meaning: "ṣawm / ṣiyām: fasting; iftār: breaking the fast; suḥūr: the pre-dawn meal; kaffārah: expiation; rozah/roza: Persian/Urdu for fasting"
+    terms: ["sawm", "siyam", "saum", "roza", "rozah", "roze", "iftar", "suhoor", "suhur", "sehri", "kaffara", "kaffarah", "صوم", "صيام", "روزه", "إفطار", "سحور", "كفارة"]
+    headings: [fasting]
+  - meaning: "ḥajj: the pilgrimage to Mecca; ʿumrah: the lesser pilgrimage; ṭawāf: circling the Kaʿbah; saʿy: walking between Safa and Marwa; iḥrām: the pilgrim's state and dress; ʿArafah: the plain where pilgrims gather"
+    terms: ["umrah", "umra", "tawaf", "sai", "ihram", "arafah", "arafat", "hajj e tamattu", "حج", "عمرة", "طواف", "سعي", "إحرام", "احرام", "عرفة", "عرفات"]
+    headings: [hajj]
+  - meaning: "khums: a religious payment of one fifth on certain savings; zakāt: the obligatory charity; ṣadaqah: voluntary charity; fiṭrah: the charity given at the end of Ramadan; sahm al-imām: the Imam's share of khums"
+    terms: ["zakat", "zakah", "sadaqah", "sadaqa", "sadaqat", "fitrah", "fitra", "zakat al fitr", "sahm al imam", "sahme imam", "خمس", "زكاة", "زکات", "صدقة", "فطرة", "سهم الإمام"]
+    headings: [khums-zakat]
+  - meaning: "taqlīd: following a qualified scholar in religious rulings; marjaʿ: the scholar followed; mujtahid: a scholar qualified to derive rulings; fatwā: a ruling"
+    terms: ["marja", "marja e taqlid", "marjaiyyah", "marjaiya", "mujtahid", "fatwa", "fatawa", "istifta", "تقليد", "تقلید", "مرجع", "مجتهد", "فتوى", "استفتاء"]
+    headings: [taqlid]
+  - meaning: "nikāḥ / zawāj: marriage; mutʿah: temporary marriage; ṭalāq: divorce; mahr: the marriage gift from husband to wife"
+    terms: ["nikah", "nikaah", "zawaj", "mutah", "mutaa", "mutah marriage", "talaq", "talaaq", "mahr", "mehr", "نكاح", "زواج", "متعة", "طلاق", "مهر"]
+    headings: [marriage-family]
+  - meaning: "ḥijāb: modest covering; libās: clothing"
+    terms: ["hijab", "hejab", "libas", "chador", "chadar", "حجاب", "لباس"]
+    headings: [dress-appearance]
+  - meaning: "dhabīḥah: meat slaughtered by the Islamic method; ṭaʿām: food; ḥalāl: permitted"
+    terms: ["dhabiha", "zabiha", "zabihah", "dhabihah", "halal meat", "ذبيحة", "ذبیحه", "طعام"]
+    headings: [food-drink]
+  - meaning: "mayyit: a deceased person; kafan: the shroud; dafn: burial; janāzah: funeral; ghusl al-mayyit: washing of the deceased"
+    terms: ["mayyit", "mayyat", "mayit", "kafan", "kafn", "dafn", "janaza", "janazah", "janazah prayer", "ghusl al mayyit", "ميت", "كفن", "دفن", "جنازة", "جنازه"]
+    headings: [death-burial]
+  - meaning: "ribā: interest/usury; bayʿ: sale; muʿāmalāt: transactions"
+    terms: ["riba", "ribaa", "buyu", "muamalat", "معاملات", "ربا", "بيع"]
+    headings: [transactions-work]
+
+  # ---- Hadith, Quran, ethics, supplications ----
+  - meaning: "ḥadīth: a narration; sunnah: the practice of the Prophet; isnād: chain of narrators; rijāl: science of narrators; ṣaḥīḥ: sound; ḍaʿīf: weak"
+    terms: ["hadeeth", "ahadith", "sunnah", "sunna", "isnad", "sanad", "rijal", "ilm al rijal", "sahih", "daif", "dhaif", "thiqah", "thiqa", "حديث", "حدیث", "سنة", "إسناد", "سند", "رجال", "صحيح", "ضعيف"]
+    headings: [hadith-sciences]
+  - meaning: "al-Kāfī: the hadith collection of al-Kulaynī; Nahj al-Balāghah: sermons, letters and sayings of Imam Ali"
+    terms: ["al kafi", "kafi", "usul al kafi", "الكافي", "نهج البلاغة", "نهج البلاغه"]
+    headings: [hadith-collections]
+  - meaning: "qurʾān: the Quran; sūrah: a chapter; āyah: a verse; tafsīr: commentary on the Quran; tajwīd: rules of recitation"
+    terms: ["quran", "qur an", "koran", "surah", "sura", "ayah", "ayat", "tafsir", "tafseer", "tajwid", "tajweed", "قرآن", "قرآن كريم", "سورة", "آية", "تفسير", "تجويد"]
+    headings: [quran]
+  - meaning: "duʿāʾ: supplication; munājāt: intimate prayer to God; ziyārah: visiting a shrine, or the text recited there; Duʿāʾ Kumayl and Ṣaḥīfah Sajjādiyyah: well-known supplications"
+    terms: ["dua", "duaa", "doa", "dua kumayl", "dua e kumayl", "munajat", "munajat shabaniyyah", "sahifa sajjadiyya", "sahifah sajjadiyyah", "ziyarah", "ziyara", "دعاء", "دعا", "مناجاة", "دعاء كميل", "الصحيفة السجادية", "زيارة", "زیارت"]
+    headings: [duas-ziyarat]
+  - meaning: "akhlāq: ethics and character; tazkiyah: purification of the self; ʿirfān: spiritual knowledge; tawbah: repentance; ṣabr: patience; ikhlāṣ: sincerity"
+    terms: ["akhlaq", "akhlaaq", "tazkiyah", "tazkiya", "irfan", "tawba", "tawbah", "sabr", "sabar", "ikhlas", "اخلاق", "أخلاق", "تزكية", "عرفان", "توبة", "صبر", "إخلاص"]
+    headings: [ethics, spirituality]

@@ -111,6 +111,9 @@ export function normalize(input) {
     .replace(/\p{M}+/gu, '')            // combining marks: Latin diacritics, Arabic vowel signs
     .replace(/ـ/g, '')             // Arabic tatweel
     .replace(/[یى]/g, 'ي') // Persian/Urdu yeh, alef maksura -> Arabic yeh
+    .replace(/[أإآٱ]/g, 'ا')  // alef with hamza / madda / wasla -> bare alef (إمامة = امامة)
+    .replace(/ؤ/g, 'و').replace(/ئ/g, 'ي') // hamza on waw / yeh
+    .replace(/[ةھہۀ]/g, 'ه') // ta marbuta and heh forms -> heh (صلاة = صلاه)
     .replace(/ک/g, 'ك')       // Persian kaf -> Arabic kaf
     .toLowerCase()
     .replace(/['‘’ʻʼʿʾ`´]/g, '') // apostrophes, ayn/hamza marks
