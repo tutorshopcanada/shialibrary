@@ -874,3 +874,6 @@ Cataloged from this chunk (3): imam-us-video-3-bits-advice-better-ramadan, imam-
 
 ## Skipped (mixed, not cataloged) - duas.org G2 batch (2026-11-15)
 - 2026-11-15 | Letter to Reciters and Sponsors of Majalis (advice letters) | https://www.duas.org/lettermajalis.htm | A collection of advice from several authorities (Sistani and others). Mixed sources, and a record would need needs_review, which this batch does not allow.
+
+## al-islam.org Ask a Question (2026-11-19)
+Partly cataloged: 936 threads so far out of about 5,650 found across 96 topics (items under topic sections under one work record). Drafted by Haiku agents, one fetch per thread page, with titles read in segments so they are the page's own wording; descriptions and sample questions are written from the question title only, never from the answer. Fiqh threads carry `marja: sistani` per the owner (2026-11-13/19), with no author listed. Skipped so far: rows without a complete title (the fetch tool sometimes returns answer text or cuts the title), one thread outside Twelver scope (Ismaili), and threads naming another marja. The rest of the run resumes later; the drafts and shard files are kept outside the repository.
