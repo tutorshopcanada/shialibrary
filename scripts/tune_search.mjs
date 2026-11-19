@@ -5,13 +5,19 @@
 // They were first set by hand; as the catalog grows the best values move. This script searches them one at a
 // time (coordinate search): for each setting it tries the candidate values below, keeps a value only if the
 // combined score (scripts/lib_metrics.mjs objective: graded nDCG, evaluation MRR and hold-out MRR) improves by
-// at least --min-gain AND no evaluation query that passed starts failing. Two rounds by default.
+// at least --min-gain, no evaluation query that passed starts failing, and neither the graded nDCG nor the
+// evaluation MRR drops by more than --tolerance. Two rounds by default.
+//
+// Why the guard: the hold-out test hides the target page's own sample questions, so on its own it rewards
+// weakening the sample-question field for every page, which hurts real searches (every real page has its
+// questions). The sample-question weight is therefore not tuned here, and the graded and evaluation scores
+// must not get worse.
 //
 // Run it after a big cataloging batch, not on every build:
 //   python3 scripts/build_index.py && node scripts/tune_search.mjs            # report only
 //   node scripts/tune_search.mjs --write                                      # also update config/search.yaml
 // then rebuild the index, run node scripts/eval_search.mjs and commit the change with the printed numbers.
-// Options: --rounds N (2), --min-gain X (0.002), --only path1,path2 (tune just these)
+// Options: --rounds N (2), --min-gain X (0.002), --tolerance X (0.003), --only path1,path2 (tune just these)
 //
 // The result is still a set of human-readable numbers in config/search.yaml, reviewed in git. Nothing learned
 // runs in the browser and nothing generates text.
@@ -27,12 +33,12 @@ const opt = (n, d) => { const i = args.indexOf(n); return i !== -1 && args[i + 1
 const rounds = Number(opt('--rounds', 2));
 const minGain = Number(opt('--min-gain', 0.002));
 const only = opt('--only', '') ? opt('--only', '').split(',') : null;
+const tolerance = Number(opt('--tolerance', 0.003));
 
 // The settings tuned, with the values tried. Keep candidate lists short and sensible: every value costs a full
 // measurement (a few seconds).
 const SPACE = {
   'layer2.field_weights.title': [2, 2.5, 3, 4],
-  'layer2.field_weights.sample_questions': [1.5, 2, 2.5, 3],
   'layer2.field_weights.description': [0.6, 1, 1.4],
   'layer2.field_weights.headings': [1, 1.5, 2],
   'layer2.concept_weight': [2, 2.5, 3.5, 5],
@@ -69,7 +75,9 @@ for (let r = 1; r <= rounds; r++) {
       if (v === current) continue;
       const M = evaluate(ctx, { ...chosen, [key]: v }).metrics;
       const s = objective(M);
-      const ok = !M.eval || M.eval.passed >= basePassed;
+      const ok = (!M.eval || M.eval.passed >= basePassed) &&
+        (!M.judged || M.judged.ndcg10 >= best.judged.ndcg10 - tolerance) &&
+        (!M.eval || M.eval.mrr >= best.eval.mrr - tolerance);
       if (ok && s >= bestScore + minGain) {
         chosen[key] = v; best = M; bestScore = s; changed = true;
         console.log(`round ${r} ${key} ${fmt(current)} -> ${v}   ${line(M)}`);
