@@ -65,8 +65,8 @@ const ui = { tq: {}, fbkind: '', limit: 20, openG: {}, lm: {}, tl: {}, pathTheme
 // ---------------------------------------------------------------------------
 // URL state
 // ---------------------------------------------------------------------------
-const PARAMS = ['q', 'tag', 'level', 'source', 'scholar', 'topic', 'section', 'order', 'path'];
-const FILTERS = ['tag', 'level', 'source', 'scholar', 'topic', 'section'];
+const PARAMS = ['q', 'cat', 'tag', 'level', 'source', 'scholar', 'topic', 'section', 'order', 'path'];
+const FILTERS = ['cat', 'tag', 'level', 'source', 'scholar', 'topic', 'section'];
 const blank = () => Object.fromEntries(PARAMS.map((k) => [k, '']));
 function readState() {
   const sp = new URLSearchParams(location.search), s = {};
@@ -563,10 +563,11 @@ function fallbackHtml(result) {
   <p class="mute" style="margin:0">Try a shorter search, a different spelling, or start from a topic or question below.</p></div>`;
 }
 function controlsHtml(st, result) {
-  const total = Object.values(result.counts.tags).reduce((a, b) => a + b, 0);
   const seg = `<div class="seg" role="group" aria-label="Which results come first"><button data-order="beginner" aria-pressed="${result.order === 'beginner'}">I’m new: simpler first</button><button data-order="deeper" aria-pressed="${result.order === 'deeper'}">Show deeper material first</button></div>`;
-  const chip = (tag, label, n) => `<button class="chip" data-tag="${esc(tag)}" aria-pressed="${(st.tag || '') === tag}"${n === 0 && st.tag !== tag ? ' disabled' : ''}>${esc(label)} <i>${n}</i></button>`;
-  const chips = `<div class="chips" role="group" aria-label="Filter by type of content">${chip('', 'All', total)}${engine.config.tags.order.filter((t) => (result.counts.tags[t] || 0) || st.tag === t).map((t) => chip(t, tagLabel(t), result.counts.tags[t] || 0)).join('')}</div>`;
+  const CT = engine.config.categories, cc = result.counts.cats || {};
+  const tab = (cat, label, n) => `<button class="rtab" data-cat="${esc(cat)}" aria-pressed="${(st.cat || '') === cat}"${n === 0 && st.cat !== cat ? ' disabled' : ''}>${esc(label)} <i>${n}</i></button>`;
+  const allN = CT.order.reduce((a, c) => a + (cc[c] || 0), 0);
+  const tabs = `<div class="rtabs" role="group" aria-label="Kind of result">${tab('', 'All', allN)}${CT.order.filter((c) => (cc[c] || 0) || st.cat === c).map((c) => tab(c, CT.labels[c] || c, cc[c] || 0)).join('')}</div>`;
   const sel = (key, label, opts) => `<div class="fld"><label for="f-${key}">${label}</label><select id="f-${key}" data-filter="${key}">${opts.map(([v, t]) => `<option value="${esc(v)}"${v === (st[key] || '') ? ' selected' : ''}>${esc(t)}</option>`).join('')}</select></div>`;
   const f = facets(), active = ['level', 'source', 'scholar', 'topic'].filter((k) => st[k]).length;
   const panel = `<details class="filters"${active ? ' open' : ''}><summary>${active ? `More filters (${active} on)` : 'More filters'}</summary><div class="filter-grid">
@@ -580,7 +581,7 @@ function controlsHtml(st, result) {
   if (st.scholar) af.push(['scholar', `By: ${scholarName(st.scholar)}`]);
   if (st.tag) af.push(['tag', `Type: ${tagLabel(st.tag)}`]);
   const pills = af.length ? `<ul class="apills" aria-label="Filters in use">${af.map(([k, l]) => `<li><button class="apill" data-clear="${k}" aria-label="Remove filter: ${esc(l)}"><span dir="auto">${esc(l)}</span> ×</button></li>`).join('')}</ul>` : '';
-  return `<div class="ctl">${seg}${chips}</div>${panel}${pills}`;
+  return `${tabs}<div class="ctl">${seg}</div>${panel}${pills}`;
 }
 let facetCache = null;
 function facets() {
@@ -626,6 +627,28 @@ function questionPageHtml(st, result) {
   ${total > ui.limit ? `<p style="margin:1rem 0 0"><button class="more2" data-more>Show ${Math.min(20, total - ui.limit)} more</button></p>` : ''}</section>` : ''}
   ${externalHtml()}${nextBar('question')}`;
 }
+// "All" tab: the best few results of each kind, in the tab order (Q&A, articles, books, hadith, the rest),
+// each with a button that opens that tab. Matches within a kind keep their order: exact before related.
+// Preview picks: the best result from each source first (so sistani.org's many topic pages do not fill every
+// Q&A slot and hide al-islam.org's questions), then the next best overall. Shown in ranking order.
+function spread(list, per) {
+  const src = (e) => (e.kind === 'cluster' ? e.items[0].record : e.record).source;
+  const pick = new Set(), seen = new Set();
+  list.forEach((e, i) => { if (pick.size < per && !seen.has(src(e))) { seen.add(src(e)); pick.add(i); } });
+  list.forEach((e, i) => { if (pick.size < per) pick.add(i); });
+  return list.filter((e, i) => pick.has(i));
+}
+function overviewHtml(result) {
+  const CT = engine.config.categories, per = Number(CT.overview_per_category) || 3, by = {};
+  for (const e of [...result.exact, ...result.related]) {
+    const c = engine.catOf(e.kind === 'cluster' ? e.items[0].record : e.record);
+    (by[c] = by[c] || []).push(e);
+  }
+  return CT.order.filter((c) => (by[c] || []).length).map((c) => {
+    const n = result.counts.cats[c] || 0, label = CT.labels[c] || c;
+    return `<section class="grp frame"><div class="gh"><h3>${esc(label)} <span>${n}</span></h3></div>${resultRows(spread(by[c], per))}${n > per ? `<button class="seeall" data-cat="${esc(c)}">See all ${n.toLocaleString()} in ${esc(label)} <span aria-hidden="true">→</span></button>` : ''}</section>`;
+  }).join('');
+}
 function resultsHtml(st, pre) {
   const result = pre || engine.search(st.q, st), browsing = result.mode === 'browse';
   const hasFilter = FILTERS.some((k) => st[k]);
@@ -643,6 +666,10 @@ function resultsHtml(st, pre) {
   if (!n) {
     announceText = 'No results with these filters.';
     return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'There are no pages here yet.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
+  }
+  if (!st.cat && engine.config.categories.order.length) {
+    announceText = browsing ? `${pl(n, 'page')}.` : `${pl(n, 'result')}, grouped by kind: Q&A first, then articles, books and hadith.`;
+    return out + overviewHtml(result) + (browsing ? '' : externalHtml());
   }
   let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
   const ee = take(result.exact), rr = take(result.related), total = result.exact.length + result.related.length;
@@ -984,8 +1011,9 @@ function afterRender(opts) {
 view.addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b) return;
   if (b.classList.contains('lr-more')) { const p = b.previousElementSibling, open = p.classList.toggle('open'); b.textContent = open ? 'Show less' : 'Show more'; b.setAttribute('aria-expanded', String(open)); return; }
-  const st = readState(), keep = (patch) => { const sel = b.dataset.tag != null ? `[data-tag="${CSS.escape(b.dataset.tag)}"]` : b.dataset.order ? `[data-order="${b.dataset.order}"]` : ''; navKeep(searchHref({ ...st, ...patch }), sel); };
+  const st = readState(), keep = (patch) => { const sel = b.dataset.cat != null ? `.rtab[data-cat="${CSS.escape(b.dataset.cat)}"]` : b.dataset.tag != null ? `[data-tag="${CSS.escape(b.dataset.tag)}"]` : b.dataset.order ? `[data-order="${b.dataset.order}"]` : ''; navKeep(searchHref({ ...st, ...patch }), sel); };
   if ('meaning' in b.dataset) { MEANING.optIn = true; render({ push: false, quiet: true }); }
+  else if ('cat' in b.dataset) keep({ cat: b.dataset.cat === st.cat ? '' : b.dataset.cat });
   else if ('tag' in b.dataset) keep({ tag: st.tag === b.dataset.tag ? '' : b.dataset.tag });
   else if ('order' in b.dataset) keep({ order: b.dataset.order === engine.config.ranking.default_order ? '' : b.dataset.order });
   else if (b.dataset.clear) keep({ [b.dataset.clear]: '' });

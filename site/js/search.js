@@ -52,6 +52,15 @@ export const DEFAULT_CONFIG = {
     labels: { fiqh: 'Fiqh', hadith: 'Hadith', book: 'Book', article: 'Article',
       course: 'Course', lecture: 'Lecture', other: 'Other' },
   },
+  // Result tabs, in display order. A record's category comes from its format (`type`), then its content tag.
+  categories: {
+    order: ['qa', 'article', 'book', 'hadith', 'more'],
+    labels: { qa: 'Q&A', article: 'Articles', book: 'Books', hadith: 'Hadith', more: 'Courses and more' },
+    by_type: { qa: 'qa', article: 'article', book: 'book', 'hadith-collection': 'hadith' },
+    by_tag: { hadith: 'hadith' },
+    fallback: 'more',
+    overview_per_category: 3,
+  },
   levels: {
     order: ['beginner', 'intermediate', 'advanced'],
     labels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },
@@ -511,10 +520,18 @@ export function createEngine(index) {
     return qa.units.length > 0 && qa.units.every((u) => unitSatisfied(u, doc));
   }
 
+  // ---- Result categories (the tabs on the results page) ----
+  const CATS = config.categories || DEFAULT_CONFIG.categories;
+  function catOf(r) {
+    return (CATS.by_type || {})[r.type] || (CATS.by_tag || {})[r.content_tag] || CATS.fallback || 'more';
+  }
+  const newCatCounts = () => Object.fromEntries((CATS.order || []).map((c) => [c, 0]));
+
   // ---- Filters, ordering, grouping ----
   function passesFilters(doc, f, skipTag) {
     const r = doc.record;
     if (!skipTag && f.tag && r.content_tag !== f.tag) return false;
+    if (!skipTag && f.cat && catOf(r) !== f.cat) return false;
     if (f.level && r.level !== f.level) return false;
     if (f.source && r.source !== f.source) return false;
     if (f.scholar && !doc.people.has(f.scholar)) return false;
@@ -560,6 +577,7 @@ export function createEngine(index) {
     const f = {
       tag: options.tag || '', level: options.level || '', source: options.source || '',
       scholar: options.scholar || '', topic: options.topic || '', section: options.section || '',
+      cat: options.cat || '',
     };
     const order = options.order === 'deeper' || options.order === 'beginner'
       ? options.order : config.ranking.default_order;
@@ -568,7 +586,7 @@ export function createEngine(index) {
     const result = {
       query: qa.raw.trim(), mode: 'search', layer: 4, order, filters: f, curated: null,
       exact: [], related: [], fallback: false, emptyTopic: null,
-      counts: { exact: 0, related: 0, total: 0, unfiltered: 0, tags: {} },
+      counts: { exact: 0, related: 0, total: 0, unfiltered: 0, tags: {}, cats: newCatCounts() },
     };
     for (const t of config.tags.order) result.counts.tags[t] = 0;
 
@@ -580,8 +598,10 @@ export function createEngine(index) {
       docs.forEach((doc) => {
         if (!passesFilters(doc, f, true)) return;
         result.counts.tags[doc.record.content_tag] = (result.counts.tags[doc.record.content_tag] || 0) + 1;
+        const cat = catOf(doc.record);
+        result.counts.cats[cat] = (result.counts.cats[cat] || 0) + 1;
         result.counts.unfiltered++;
-        if (!f.tag || doc.record.content_tag === f.tag) hits.push({ record: doc.record, score: 0 });
+        if ((!f.tag || doc.record.content_tag === f.tag) && (!f.cat || cat === f.cat)) hits.push({ record: doc.record, score: 0 });
       });
       hits.sort((a, b) =>
         levelRank(a.record.level, order) - levelRank(b.record.level, order) ||
@@ -657,7 +677,9 @@ export function createEngine(index) {
       if (!passesFilters(h.doc, f, true)) continue;
       const tag = h.record.content_tag;
       result.counts.tags[tag] = (result.counts.tags[tag] || 0) + 1;
-      if (!f.tag || tag === f.tag) kept.push(h);
+      const cat = catOf(h.record);
+      result.counts.cats[cat] = (result.counts.cats[cat] || 0) + 1;
+      if ((!f.tag || tag === f.tag) && (!f.cat || cat === f.cat)) kept.push(h);
     }
 
     const boost = order === 'deeper' ? config.ranking.deeper_boost : config.ranking.level_boost;
@@ -722,15 +744,17 @@ export function createEngine(index) {
     const kwRank = new Map(keyword.map((h, i) => [h.record.id, i + 1]));
 
     const sem = [];
-    out.counts = { ...result.counts, tags: { ...result.counts.tags } };
+    out.counts = { ...result.counts, tags: { ...result.counts.tags }, cats: { ...result.counts.cats } };
     for (const { id, score } of ranked.slice(0, L3.candidates)) {
       if (score < floor) break;
       if (exactIds.has(id)) continue;
       const doc = docs[docIndex.get(id)];
       if (!doc || !passesFilters(doc, f, true)) continue;
       const tag = doc.record.content_tag;
-      if (!kwRank.has(id)) out.counts.tags[tag] = (out.counts.tags[tag] || 0) + 1;
+      const cat = catOf(doc.record);
+      if (!kwRank.has(id)) { out.counts.tags[tag] = (out.counts.tags[tag] || 0) + 1; out.counts.cats[cat] = (out.counts.cats[cat] || 0) + 1; }
       if (f.tag && tag !== f.tag) continue;
+      if (f.cat && cat !== f.cat) continue;
       sem.push({ record: doc.record, similarity: score, exact: false, coverage: 0, viaMeaning: true,
         score: score * (1 + strength * ((Number(boost[doc.record.level]) || 1) * (granBoost(doc.record)) - 1)) });
     }
@@ -771,7 +795,7 @@ export function createEngine(index) {
   return {
     config, records, headings, scholars, sources, questions, paths,
     recordById, headingById, scholarById, sourceById, pathById,
-    search, flatten, analyze, needsSemantic, addSemantic,
+    search, flatten, analyze, needsSemantic, addSemantic, catOf,
     buildDate: index.build_date || '',
     vocabularyDraft: !!index.vocabulary_draft,
   };
