@@ -828,12 +828,20 @@
   {
    "query": "shurtat al khamis",
    "expect_any": [
-    "al-islam-maytham-al-tammar",
-    "al-islam-kumayl-bin-ziyad"
+    "al-islam-life-ali-qurashi-deputy-governors"
+   ],
+   "expect_none": false,
+   "expect_group": "exact",
+   "note": "visitor search; chapter cataloged 2026-11-19"
+  },
+  {
+   "query": "did imam ali have a police force",
+   "expect_any": [
+    "al-islam-life-ali-qurashi-deputy-governors"
    ],
    "expect_none": false,
    "expect_group": "any",
-   "note": "no page on it is cataloged yet; lands on companions of Imam Ali, not on Sura al-Shura"
+   "note": ""
   },
   {
    "query": "إمامة",

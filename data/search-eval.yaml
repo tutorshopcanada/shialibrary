@@ -81,7 +81,8 @@ queries:
   - {query: "books about the quran for beginners", expect_any: [al-islam-holy-quran-some-basic-facts, al-islam-introduction-to-the-glorious-quran, al-islam-quran-in-islam-its-impact-and-influence, al-islam-quranic-lessons], expect_group: any, note: "paraphrase; found by meaning when keywords miss"}
   - {query: "can the prohets make mistakes", expect_any: [tasneem-the-infallibility-of-the-prophets], expect_group: exact, note: "typo (prohets) is corrected to prophets"}
   # KNOWN GAP (needs the proposed `infallibility` heading): {query: "ismah of the prophets", expect_any: [tasneem-the-infallibility-of-the-prophets], expect_group: any, note: "found only at #18 until the heading is approved"}
-  - {query: "shurtat al khamis", expect_any: [al-islam-maytham-al-tammar, al-islam-kumayl-bin-ziyad], expect_group: any, note: "no page on it is cataloged yet; lands on companions of Imam Ali, not on Sura al-Shura"}
+  - {query: "shurtat al khamis", expect_any: [al-islam-life-ali-qurashi-deputy-governors], expect_group: exact, note: "visitor search; chapter cataloged 2026-11-19"}
+  - {query: "did imam ali have a police force", expect_any: [al-islam-life-ali-qurashi-deputy-governors], expect_group: any, note: ""}
   - {query: "إمامة", expect_any: [al-islam-imamate-and-the-imams], expect_group: exact, note: "Arabic script; hamza and ta marbuta are folded"}
   - {query: "how to fix my car engine", expect_none: true, note: "off-topic or gibberish; nothing should be shown"}
   - {query: "asdf ghjk", expect_none: true, note: "off-topic or gibberish; nothing should be shown"}
