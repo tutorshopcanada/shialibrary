@@ -643,12 +643,16 @@ function spread(list, per) {
   return list.filter((e, i) => pick.has(i));
 }
 function overviewHtml(result) {
-  const CT = engine.config.categories, per = Number(CT.overview_per_category) || 3, by = {};
-  for (const e of [...result.exact, ...result.related]) {
+  const CT = engine.config.categories, per = Number(CT.overview_per_category) || 3, by = {}, first = {};
+  [...result.exact, ...result.related].forEach((e, i) => {
     const c = engine.catOf(e.kind === 'cluster' ? e.items[0].record : e.record);
     (by[c] = by[c] || []).push(e);
-  }
-  return CT.order.filter((c) => (by[c] || []).length).map((c) => {
+    if (!(c in first)) first[c] = i;
+  });
+  // Groups appear in the order of their best result (owner decision 2026-11-19): the kind that holds the top
+  // match comes first. The configured tab order only breaks ties and orders the tab bar.
+  const order = CT.order.filter((c) => (by[c] || []).length).sort((a, b) => first[a] - first[b]);
+  return order.map((c) => {
     const n = result.counts.cats[c] || 0, label = CT.labels[c] || c;
     return `<section class="grp frame"><div class="gh"><h3>${esc(label)} <span>${n}</span></h3></div>${resultRows(spread(by[c], per))}${n > per ? `<button class="seeall" data-cat="${esc(c)}">See all ${n.toLocaleString()} in ${esc(label)} <span aria-hidden="true">→</span></button>` : ''}</section>`;
   }).join('');
@@ -672,7 +676,7 @@ function resultsHtml(st, pre) {
     return out + `<div class="callout"><p>${hasFilter ? 'Nothing matches with these filters switched on.' : 'There are no pages here yet.'}</p>${hasFilter ? `<p><a class="btn line" href="${esc(searchHref({ ...blank(), q: st.q, order: st.order }))}">Clear all filters</a></p>` : ''}</div>`;
   }
   if (!st.cat && engine.config.categories.order.length) {
-    announceText = browsing ? `${pl(n, 'page')}.` : `${pl(n, 'result')}, grouped by kind: Q&A first, then articles, books and hadith.`;
+    announceText = browsing ? `${pl(n, 'page')}.` : `${pl(n, 'result')}, grouped by kind, starting with the kind that has the best match.`;
     return out + overviewHtml(result) + (browsing ? '' : externalHtml());
   }
   let shown = 0; const take = (l) => { const o = l.slice(0, Math.max(0, ui.limit - shown)); shown += o.length; return o; };
