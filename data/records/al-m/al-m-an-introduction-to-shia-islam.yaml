@@ -1,0 +1,27 @@
+id: al-m-an-introduction-to-shia-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: An Introduction to Shi’a Islam
+title_original: ''
+authors: []
+marja: ''
+source: al-m.ca
+url: https://al-m.ca/download/an-introduction-to-shia-islam/
+language: en
+date: '2019-10-31'
+description: A pamphlet titled 'An Introduction to Shi'a Islam', listed under Downloads on the Al-Ma'arif
+  Foundation website and offered as a free PDF. The page gives no summary.
+sample_questions:
+- What is Shia Islam?
+- Who are the Shias?
+- Is there a free introduction to Shia Islam?
+headings:
+- new-to-shia-islam
+access: free
+location: ''
+needs_review: true
+review_note: Page gives only a title and file link, so the description is based on the title.
+cataloged_on: '2026-11-19'

@@ -1,0 +1,27 @@
+id: al-m-an-introduction-to-islam
+type: book
+content_tag: book
+granularity: work
+parent: ''
+level: beginner
+title: An Introduction to Islam
+title_original: ''
+authors: []
+marja: ''
+source: al-m.ca
+url: https://al-m.ca/download/an-introduction-to-islam/
+language: en
+date: '2019-10-31'
+description: A pamphlet titled 'An Introduction to Islam', listed under Downloads on the Al-Ma'arif Foundation
+  website and offered as a free PDF. The page gives no summary.
+sample_questions:
+- What is Islam?
+- Where can I find a free introduction to Islam?
+- I am new to Islam, where should I start?
+headings:
+- new-to-shia-islam
+access: free
+location: ''
+needs_review: true
+review_note: Page gives only a title and file link, so the description is based on the title.
+cataloged_on: '2026-11-19'
