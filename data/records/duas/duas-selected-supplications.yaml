@@ -1,0 +1,27 @@
+id: "duas-selected-supplications"
+type: "other"
+content_tag: "other"
+granularity: "work"
+parent: ""
+level: "intermediate"
+title: "Selected Supplications"
+title_original: ""
+authors: []
+marja: ""
+source: "duas.org"
+url: "https://www.duas.org/selectedduasyasin.htm"
+language: "en"
+date: ""
+description: "A page of selected supplications in English translation, with a short introduction on the value of supplication. The page title credits the selection to Yasin Jibouri. The duas ask God for guidance, forgiveness, provision and protection."
+sample_questions:
+- "What are the selected supplications on duas.org?"
+- "Is there a collection of general duas in English on duas.org?"
+- "What duas ask God for guidance and protection?"
+- "Which duas are for the days and nights?"
+headings:
+- "duas"
+access: "free"
+location: ""
+needs_review: false
+review_note: ""
+cataloged_on: "2026-11-15"

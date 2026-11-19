@@ -147,6 +147,59 @@ Points for the owner:
 - "Expressions of Togetherness | Pope Francis and Sayyid al-Sistani" (video page, `/expressions-of-togetherness-pope-francis-and-sayyid-al-sistani`) is still not cataloged. It is separate from the letter record "Ayatullah Sayyid al-Sistani's Letter to Pope Francis".
 - Authors: letters, statements and advice by Sayyid al-Sistani are listed as `authors: sistani`. Reports and guides with no named author are left blank, and the UN Secretary-General's letter is left blank because no author entry exists for him.
 
+
+## Institutes batch (2026-11-12): Tasneem, Shia Research Institute, Hujjah Seminary
+
+Skipped, with reasons:
+
+- tasneeminstitute.org: Introduction to Islamic Law (https://tasneeminstitute.org/courses/introduction-to-islamic-law/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Fiqh Made Easy: Practical Principles (https://tasneeminstitute.org/courses/fiqh-made-easy-practical-principles/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Introduction to Arabic Grammar (https://tasneeminstitute.org/courses/introduction-to-arabic-grammar/): Arabic language course; no heading fits. Propose heading arabic-language.
+- tasneeminstitute.org: The Islamic Prayer (https://tasneeminstitute.org/courses/the-islamic-prayer/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Introduction to Islamic Legal Theory (https://tasneeminstitute.org/courses/introduction-to-islamic-legal-theory/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Ijtihad and Taqlid (https://tasneeminstitute.org/courses/ijtihad-and-taqlid/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: The Fiqh of Food (https://tasneeminstitute.org/courses/the-fiqh-of-food/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Laws of Fasting (https://tasneeminstitute.org/courses/laws-of-fasting/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: Faith and Finance (https://tasneeminstitute.org/courses/faith-and-finance/): fiqh-subject course; page names no marja. Skipped under the open institute-fiqh question.
+- tasneeminstitute.org: The History of Du'a and Ziyarah (https://tasneeminstitute.org/courses/history-of-dua-and-ziyarah/): page states no price (only a "Start free" button), so price_tag cannot be set from the page.
+- tasneeminstitute.org: The Confident Muslim (https://tasneeminstitute.org/in-person-courses/confident-muslim/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Family Matters (https://tasneeminstitute.org/in-person-courses/family-matters/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Perfecting Noble Character (https://tasneeminstitute.org/in-person-courses/noble-character/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: The Case for the Creator (https://tasneeminstitute.org/in-person-courses/case-for-creator/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Self-Knowledge (https://tasneeminstitute.org/in-person-courses/self-knowledge/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: Navigating the -isms of Our Time (https://tasneeminstitute.org/in-person-courses/isms/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- tasneeminstitute.org: The Miraculous Qur'an (https://tasneeminstitute.org/in-person-courses/miraculous-quran/): in-person course: page gives no price and no dates (only "Next dates: To be announced"), so price_tag cannot be set from the page.
+- hujjahseminary.com: Islamic Law (Fiqh) - 01 (https://hujjahseminary.com/Course/1008): fiqh-subject course; page names no Sistani/Khamenei basis (Not a named marja. Page says rulings are based on the edicts of the majority of scholars.).
+- hujjahseminary.com: Legal Theory (Usul) (https://hujjahseminary.com/Course/1010): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; covers methods, not specific rulings of a named marja.).
+- hujjahseminary.com: Arabic Grammar (https://hujjahseminary.com/Course/1016): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Islamic Law (Fiqh) - 02 (https://hujjahseminary.com/Course/1017): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Arabic Morphology (Sarf) (https://hujjahseminary.com/Course/1027): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Rulings for Muslims in the West (https://hujjahseminary.com/Course/1025): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page does not say which school's rulings are presented. Number of students shown: 95.).
+- hujjahseminary.com: Islamic Law (Fiqh) - 03 (https://hujjahseminary.com/Course/1037): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Islamic Speaking (https://hujjahseminary.com/Course/1028): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Islamic Law (Fiqh) - 04 (https://hujjahseminary.com/Course/1050): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Contemporary Islamic Law (Fiqh) (https://hujjahseminary.com/Course/1022): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page does not name a school.).
+- hujjahseminary.com: Islamic Law (Fiqh) - 05 (https://hujjahseminary.com/Course/1059): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated.).
+- hujjahseminary.com: Family Law (Fiqh) (https://hujjahseminary.com/Course/1056): fiqh-subject course; page names no Sistani/Khamenei basis (Page says the rulings follow the edicts of the majority of scholars.).
+- hujjahseminary.com: Intro to Logic (Mantiq) (https://hujjahseminary.com/Course/1058): Arabic language / logic / speaking skills course; no heading fits. Propose headings arabic-language and islamic-study-skills.
+- hujjahseminary.com: Jurisprudential Maxims (Qawa'ed Fiqhiyya) (https://hujjahseminary.com/Course/1041): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page names no school.).
+- hujjahseminary.com: Islamic Dietary Laws (https://hujjahseminary.com/Course/1065): fiqh-subject course; page names no Sistani/Khamenei basis (Page says the rulings discussed are based on the edicts of the majority of scholars.).
+- hujjahseminary.com: Islamic Laws for Muslims in the West (https://hujjahseminary.com/Course/2089): fiqh-subject course; page names no Sistani/Khamenei basis (Not stated; page does not say which school's rulings are presented.).
+- shiaresearch.ca: Contemporary Topics in Islamic Theology at the University of Toronto (https://shiaresearch.ca/courses/smt3810hs-contemporary-topics-in-islamic-theology/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page.
+- shiaresearch.ca: Islam, Christianity and Modernity at the University of Toronto (https://shiaresearch.ca/courses/smt6800hf-islam-christianity-and-modernity/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page.
+- shiaresearch.ca: Devotional Prayer in the Islamic Tradition, at the University of Toronto (https://shiaresearch.ca/courses/smt3367h-devotional-prayer/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page; its term (Fall 2025 to Winter 2026) has also passed.
+- shiaresearch.ca: Holiness and Sainthood in Islamic Thought, at the University of Toronto (https://shiaresearch.ca/courses/smt3378h-holiness-and-sainthood/): credit course at the University of Toronto; the page states no price, so price_tag cannot be set from the page; its term (Fall 2025 to Winter 2026) has also passed.
+
+Not cataloged, owner to decide:
+- hujjahseminary.com FAQ (`/Home/IndexFaqs`): one very large page of fiqh questions and answers. Almost all answers are unattributed ("scholars", "most scholars"); Sayyid Sistani is named in two answers, Ayatollah Shirazi in one, Sayyid Khamenei in none. It has no per-question links. It does not present one marja's rulings, so under the fiqh rule it is not cataloged. The owner expected a Sistani Q&A; please confirm.
+- shiaresearch.ca other item types: 34 Insight Interviews (`/insight-interviews/ep-N/`), conferences and lectures, publications and blog posts. Not cataloged; each type needs a scope decision.
+- SRI micro-certificate: four component courses sit on stmikes.utoronto.ca (another domain, not an approved source). Only the programme page is cataloged.
+- Instructors are named on many pages but `instructors` is left blank (as for Mizan) because scholars.yaml has no entries for them. Owner to decide whether to add them.
+- Hujjah `/AboutUs` shows info@hujjahseminary.com but the mailto link points to a different domain; worth checking before the owner contacts them.
+- Tasneem "Hell in the Quran" says "Class begins on June 10th 2023" but the page does not say it has ended, so it was cataloged.
+
+### Update 2026-11-13
+Owner decisions on the institutes batch: fiqh-subject courses are in scope (taught by scholars), so the 8 Tasneem and 12 Hujjah fiqh courses listed above were cataloged after all, with `marja` blank. The fiqh questions and answers on al-islam.org are Sayyid Sistani's per the owner (2026-11-13), so they use marja sistani (none cataloged yet). The Hujjah FAQ page and the extra SRI item types stay uncataloged for now. Instructors are not added to `scholars.yaml` (authors only).
 ## Skipped (polemical)
 - 2026-11-12 | Beliefs: Do the Shi'ah Believe in a Different Quran | https://al-islam.org/articles/beliefs-do-shiah-believe-different-quran | Mainly a rebuttal of accusations against Shia belief about the Quran (Sunni-Shi'a topic tag); skipped under the polemic rule, owner may review.
 
@@ -489,3 +542,370 @@ Removed 22 course records, 13 live and 9 ended: becoming-bani-adam-course, beyon
 Left in place, owner to decide (7 unclear): mizan-becoming-bani-adam (a book pre-order, not a course), mizan-from-the-prophet-to-yazid (podcast and video links only), Lesson Per Page seasons 3, 4, 5 and season 3 episode 1 (episodes released on a Ramadan schedule), mizan-teens-purpose-of-creation (looks like a one-time live event with a recording).
 Note: nine podcast and audio series records (type lecture) are classed asynchronous and kept.
 Owner decision 2026-11-19: the 7 unclear Mizan records were also removed (becoming-bani-adam, from-the-prophet-to-yazid, lesson-per-page seasons 3, 4, 5 and season 3 episode 1, teens-purpose-of-creation). Mizan courses now total 38.
+## imam-us.org chunk 2 skips (2026-11-15)
+
+Fetched and skipped:
+- https://imam-us.org/week-2-imam-at-home-ramadan-edition | programme index page for a video series with no content of its own (event/programme notice)
+- https://imam-us.org/imam-at-home-ramadan-edition | programme index page for a video series with no content of its own (event/programme notice)
+- https://imam-us.org/icymi-sayyid-kashmiri-speaks-at-the-marifa-conference | news coverage of a student conference
+- https://imam-us.org/imam-presents-panel-discussion | event report and live-stream notice for a panel
+- https://imam-us.org/judeo-christian-relationships-early-muslims-panel-discussion | event announcement for a panel (live-stream notice)
+- https://imam-us.org/arbaeen-imam-hussain-ibn-ali-1440 | anniversary notice (the 40th day of the martyrdom of Imam Hussain)
+- https://imam-us.org/17th-annual-conference-shia-muslim-scholars-north-america | news recap of an annual conference
+
+Skipped by title without fetching (notices, news, fundraising, greetings, events; no content record):
+- https://imam-us.org/an-update-on-the-recovery-of-his-eminence-sayyid-al-sistani | news update
+- https://imam-us.org/letter-absence-students-going-arbaeen-pilgrimage | announcement
+- https://imam-us.org/support-people-nyc-ramadan-relief-fund | fundraising
+- https://imam-us.org/sayyid-sistani-resumes-daily-activities | news
+- https://imam-us.org/join-us-live-muharram-1441-ah | event sign-up
+- https://imam-us.org/eid-al-adha-1440 | greeting notice
+- https://imam-us.org/feed-fasting-report-2019 | fundraising/activity report
+- https://imam-us.org/ayatullah-sistani-un-representative-assistance-mission-iraq | news
+- https://imam-us.org/sayyid-sistani-meets-un-team-investigating-isis-crimes | news
+- https://imam-us.org/lunar-eclipse-north-america-january-2019 | notice
+- https://imam-us.org/m-m-s-board-directors-meets-grand-ayatullah-sayyid-ali-al-sistani | news
+- https://imam-us.org/grand-ayatullah-al-sistani-receives-un-special-representative-iraq | news
+- https://imam-us.org/holy-prophet-of-islam-death-anniversary-2 | anniversary notice
+- https://imam-us.org/m-m-chairman-visits-unity-islamic-center-cleveland | news
+- https://imam-us.org/lunar-eclipse-north-america-january-2018 | notice
+- https://imam-us.org/imam-delegation-attends-new-york-encounter-2018 | news
+- https://imam-us.org/new-york-encounter-2018 | event notice
+- https://imam-us.org/eid-al-adha-1439 | greeting notice
+- Birthday, martyrdom and Islamic-month notices (moon sighting, month greetings): birthday-of-imam-ali-al-hadi-1441, martyrdom-of-imam-ali-al-hadi-1441, birthday-of-imam-muhammad-al-baqir-1441, birthday-of-sayyida-fatimah-al-zahra-1441, martyrdom-sayyida-fatimah-al-zahra-1441-3, birthday-of-sayyida-zaynab-bint-ali-1441, martyrdom-sayyida-fatimah-al-zahra-1441-2, birthday-of-prophet-muhammad-and-imam-jafar-sadiq-1440, birthday-of-imam-hasan-al-askari-1440, martyrdom-imam-hasan-al-askari-1440, martyrdom-of-imam-jawad-copy, islamic-month-of-dhu-al-hjjah-1439-ah, martyrdom-of-imam-jawad-1439, birthday-of-imam-ridha-1439, islamic-month-of-dhu-al-qidah-2018, martyrdom-of-imam-jafar-sadiq, islamic-month-of-shawwal-2018, martyrdom-of-imam-ali-ramadan, birthday-of-imam-hasan-1439, islamic-month-of-ramadan-2018, birthday-of-imam-mahdi-1439, birthday-of-imam-zayn-al-abidin-1439, birthday-of-hadhrat-abbas-1439, birthday-of-imam-hussain-ibn-ali-1439, islamic-month-of-shaban-1439, martyrdom-of-imam-musa-kadhim-rajab, death-of-lady-zainab-al-kubra-rajab, birthday-of-imam-ali-ibn-abi-talib-1439, birthday-imam-muhammad-al-taqi-al-jawad-rajab, martyrdom-of-imam-ali-al-naqi-al-hadi-rajab, birthday-of-imam-ali-al-naqi-al-hadi, birthday-of-imam-muhammad-al-baqir, islamic-month-of-rajab-2018, birthday-of-lady-fatimah-bint-muhammad, martyrdom-of-fatima-the-daughter-of-muhammad-2018, birthday-of-zaynab-al-kubra-2018, birthday-of-imam-hassan-al-askari (all at https://imam-us.org/<slug>)
+
+Catalog result: 1 record (imam-us-statement-council-shia-scholars-george-floyd). No fiqh pages in this chunk. Requests used: 8 of 80.
+
+## imam-us.org chunk 5 skips (2026-11-15)
+Fiqh held (marja not named on the page; fiqh rule):
+- https://imam-us.org/how-is-zakat-al-fitrah-calculated (zakat al-Fitrah guide; page says "religious authority (Marja)" without naming Sistani or Khamenei)
+- https://imam-us.org/how-is-zakat-al-fitrah-calculated-for-2023 (same guide, 2023 price note)
+- https://imam-us.org/how-is-zakat-al-fitrah-calculated-for-2024 (same guide, 2024 price note)
+- https://imam-us.org/how-is-zakat-alfitrah-calculated (same guide, 2025 price note, titled "It's Only $10.00")
+- https://imam-us.org/lunar-eclipse-over-north-america-on-sunday-may-15th-2022 (Salat al-Ayat ruling notice; no marja named)
+- https://imam-us.org/lunar-eclipse-over-north-america-on-tuesday-november-8th-2022 (same, Nov 2022)
+- https://imam-us.org/partial-lunar-eclipse-2024 (same, Sept 2024)
+- https://imam-us.org/partial-lunar-eclipse-august-28th-2026 (same, Aug 2026)
+- https://imam-us.org/partial-solar-eclipse-march-29-2025 (same, Mar 2025)
+
+Duplicates (same book or sermon already cataloged under another URL):
+- https://imam-us.org/islamic-laws-of-food-drink (same book as imam-us-islamic-laws-of-food-drink, url new-book-release-islamic-laws-food-drink)
+- https://imam-us.org/new-book-release-islamic-laws-of-death-and-burial (same book as imam-us-islamic-laws-of-death-and-burial)
+- https://imam-us.org/prophet-muhammads-sermon-welcoming-the-holy-month-of-ramadan-2 , -2024 and -3 (same sermon as imam-us-prophet-sermon-welcoming-ramadan; the base URL /prophet-muhammads-sermon-welcoming-the-holy-month-of-ramadan was also not cataloged separately)
+- https://imam-us.org/prepare-for-muharram-with-guidance-from-sayyid-al-sistani and -1447 (promotion of the 100 Pearls book, already imam-us-100-pearls-advice-of-sistani)
+
+News, reports, statements on current events, or event notices (skipped):
+- grand-opening-of-masjid-al-nabi-p-chantelly-virginia; grandsons-of-late-grand-ayatullah-sayyid-al-khoei-visit-i-m-a-m; ground-breaking-of-the-ali-center-houston; groundbreaking-of-the-zainabiya-center-st-louis-missouri; highlights-from-i-m-a-m-s-participation-at-the-2024-aar-sbl-annual-meeting; highlights-from-i-m-a-m-s-participation-at-the-2025-aar-sbl-annual-meeting; his-eminence-sayyid-monir-al-khabbaz-visits-the-united-states-itinerary-and-programs (2015 announcement); honoring-dr-shaykh-mehdi-s-hazari; honoring-sayyid-muntadher-al-jaberi (recognition news)
+- hurricane-ida-disaster-relief (fundraising appeal); help-share-their-message-this-muharram-safar-who-is-hussain-who-is-zaynab (book bulk-order promotion)
+- how-to-file-and-save-big-a-wise-approach-to-tax-season (webinar sign-up)
+- i-m-a-m-at-filbo-2026-a-journey-of-spiritual-and-cultural-exchange; i-m-a-m-at-the-international-book-fair-of-cali-colombia; i-m-a-m-at-the-parliament-of-the-worlds-religions; i-m-a-m-hosts-the-imams-council-of-michigan-with-imam-magid-and-dr-sayyid-sulayman-hassan; i-m-a-m-joins-corewell-health-in-chna-initiative; i-m-a-m-participates-at-civil-rights-summit; imam-hosts-the-imams-council-of-michigan; imam-participates-in-the-2023-michigan-response-to-hate-conference; imam-takleef-course-and-ceremony; imi-conference-youth-session-with-sayyid-kashmiri; interfaith (event reports)
+- i-m-a-m-welcomes-his-holiness-pope-leo-xivs-call-for-peace-and-respect-for-international-law (statement reacting to a news event; owner to decide if statements like this are in scope)
+- introducing-psyched4u-1 (launch announcement with survey giveaway)
+- join-i-m-a-m-s-creative-digital-team (job advertisement)
+- join-us-live-on-instagram-for-the-ssaf-solidarity-gathering-for-the-new-mexico-community; join-us-live-on-youtube-imam-hussain-love-giving-and-sacrifice; join-us-live-on-youtube-prophetic-community-passion-tolerance-and-solidarity (live event notices)
+- marifa-conference-2024-join-sayyid-kashmiri-shaykh-dr-hazari (event notice); marjaeya-fiqh-concepts-at-mica (event report)
+- martyrdom-imam-musa-al-kadhim-p (martyrdom notice)
+- muslim-and-christian-leaders-discuss-the-issue-of-christians-in-the-middle-east; naacp-loudon-branch-marks-juneteenth-sayyid-kashmiri-attends (news)
+- national-open-mosque-masjid-day (event announcement)
+- official-statement-from-the-council-of-shia-muslim-scholars-of-north-america-concerning-the-tragic-hate-crime-at-the-islamic-center-of-san-diego (statement on a news event; owner to decide)
+- one-day-shia-youth-conference-at-nyu; opening-words-of-the-first-imi-youth-professional-conference (event reports)
+- our-childrens-protection-is-mandatory-not-recommended-sayyid-kashmiri (school opening speech report)
+- participation-of-i-m-a-m-in-the-conference-religious-resistance-to-authoritarianism (event report)
+- predictions-for-the-beginning-of-the-holy-month-of-ramadan-1444-a-h; preliminary-statement-about-the-beginning-of-the-holy-month-of-ramadan-1445-a-h; preliminary-statement-regarding-the-expected-beginning-of-the-month-of-muharram-1447-a-h (moon-sighting)
+- promoting-wellness-r-i-s-e-trains-new-mental-health-first-aiders (news)
+
+## imam-us.org chunk 6 skips (2026-11-15)
+Cataloged from this chunk: psyched4u-conference-sayyid-kashmiris-remarks (article) and r-i-s-e-leads-mental-health-wellness-workshop-on-islam-grief (article, new scholar sayyid-sameer-ali added with needs_review: true). Everything else below was skipped.
+
+### Skipped (fiqh, marja not stated) - chunk 6
+- 2021-2023 Qada (make-up) fasts, fidyah and kaffarah reminders for 1443/2022, 1444/2023, 1445/2024 and 1446/2025: https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-and-kaffarah-1443-2022 , https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-and-kaffarah-1444-2023 , https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-and-kaffarah-1445-2024 , https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-and-kaffarah-1446-2025 . The pages set out rulings and name no marja in the body (only a sidebar link to Sistani's book). Owner to decide.
+- Zakat al-Fitrah price and rules pages for 2021, 2022, 2023, 2024, 2025 and 2026: https://imam-us.org/zakat-al-fitrah-for-2021 , https://imam-us.org/zakat-al-fitrah-2023 , https://imam-us.org/zakat-al-fitrah-for-2022 , https://imam-us.org/zakat-al-fitrah-for-2024 , https://imam-us.org/zakat-al-fitrah-for-2025 , https://imam-us.org/zakat-al-fitrah-for-2026 . They refer only to "the religious authority (Marja)" in general terms, so no marja is named. Same decision as the held zakat guide in batch half2; owner to decide.
+
+### Skipped (announcement, notice, prayer-time or moon-sighting notice) - chunk 6
+- Ramadan prayer timetable and fajr/imsak notice: https://imam-us.org/ramadan-prayer-timetable (notice; it says a timetable was adopted by Sistani's office. It is fiqh-leaning. Owner may want to decide whether such notices count.)
+- Solar and lunar eclipse Salat al-Ayat notices: https://imam-us.org/solar-eclipse-over-north-america-on-monday-april-8th-2024 , https://imam-us.org/solar-eclipse-over-north-america-on-saturday-october-14th-2023 , https://imam-us.org/total-lunar-eclipse-march-13-14-2025 , https://imam-us.org/total-lunar-eclipse-march-3-2026 , https://imam-us.org/total-solar-eclipse-august-12th-2026
+- Moon-sighting and Eid date notices: https://imam-us.org/when-is-eid-al-fitr-1443 , https://imam-us.org/when-is-the-first-of-ramadan-the-why-and-the-how
+- Martyrdom anniversary notice: https://imam-us.org/thank-supporting-needy-fasting-people-holy-month (the fetched page is a martyrdom-anniversary notice for Imam Ali, not the thanks message its slug suggests; owner may want to check the URL)
+- Other notices: https://imam-us.org/serve-your-community (volunteer call), https://imam-us.org/reminder-get-your-copy-of-islamic-laws-of-fasting-today (promotion)
+
+### Skipped (statement, condolence, thanks, appeal) - chunk 6
+- Statements: https://imam-us.org/statement-from-council-on-recent-defamatory-comments , https://imam-us.org/statement-on-the-recent-plot-to-attack-a-shia-muslim-islamic-center-in-illinois , https://imam-us.org/statement-on-the-targeted-killing-of-shia-muslims-in-new-mexico , https://imam-us.org/statement-regarding-the-current-tragedy-and-oppression-spreading-in-the-world , https://imam-us.org/statement-regarding-the-mosque-attack-in-peshawar-pakistan , https://imam-us.org/the-closing-statement-of-the-19th-annual-conference , https://imam-us.org/united-nations-delegation-visits-grand-ayatullah-al-sistani , https://imam-us.org/words-of-thanks-from-the-marjaeyas-office-in-najaf
+- Urgent appeals and fundraising: https://imam-us.org/urgent-appeal-colombia-earthquake-relief , https://imam-us.org/urgent-appeal-to-support-our-fellow-believers-in-philadelphia , https://imam-us.org/thank-supporting-needy-fasting-people-holy-month
+
+### Skipped (event news, visit report, conference report, or event sign-up) - chunk 6
+- Event reports with no more than attendance or visit news: https://imam-us.org/r-i-s-e-attends-sacred-journeys-network-conference-2026 , https://imam-us.org/r-i-s-e-empowers-dearborn-educators-with-islam-integrated-mental-health-first-aid-training , https://imam-us.org/r-i-s-e-hosts-ramadan-iftar-honoring-muslim-chaplains-and-advancing-spiritual-care , https://imam-us.org/sayyid-al-khabbaz-visit-a-lecture-at-western-michigan-university-kalamazoo , https://imam-us.org/sayyid-al-khabbaz-visit-discussion-at-the-catholic-university-of-america-in-washington-d-c , https://imam-us.org/sayyid-al-khabbaz-visit-discussion-with-professor-juan-cole-at-u-of-m-ann-arbor , https://imam-us.org/sayyid-al-khabbaz-visit-study-and-discussion-at-sais-of-johns-hopkins-university , https://imam-us.org/sayyid-kashmiri-lecturing-at-iowa-university-about-religion-and-violence , https://imam-us.org/sayyid-kashmiri-visits-iec-orlando , https://imam-us.org/sayyid-m-b-kashmiri-leads-united-islamic-centers-eid-prayers-in-denver-co , https://imam-us.org/sayyid-m-b-kashmiri-visits-imam-hussain-p-center-st-louis-mo , https://imam-us.org/sayyid-m-b-kashmiri-visits-the-dare-zehra-islamic-center-of-cincinnati-ohio , https://imam-us.org/sayyid-mohammed-baqir-kashmiri-at-51th-annual-isna-convention , https://imam-us.org/shaykh-amjed-riyadh-visit-to-the-united-states-itinerary-and-programs , https://imam-us.org/shia-and-sunni-scholars-work-toward-unity-at-ssaf-retreat , https://imam-us.org/the-5th-marifa-conference-a-look-back , https://imam-us.org/the-hawzah-between-heritage-and-modernity-mit-sessions , https://imam-us.org/the-resident-scholars-receive-marjaeya-remarks , https://imam-us.org/the-sbl-aar-annual-meeting , https://imam-us.org/the-umaa-conference-celebrates-20-years-with-blueprint-for-shia-muslims , https://imam-us.org/youth-participate-in-transformative-ziyarah-journey-to-iraq-in-partnership-with-the-imam-hussain-holy-shrine , https://imam-us.org/secretary-general-of-oic-visits-his-eminence-grand-ayatollah-sayyid-sistani
+  Owner to decide: several of these hold short talk summaries (e.g., the MIT hawzah lecture, the Ma'rifa keynote). The chunk-6 rule was to catalog event reports only where the page summarizes substantive teaching, and the two cataloged here (PSYCHED4U remarks, grief workshop) are the only ones that did.
+- Webinar and workshop sign-ups or promos: https://imam-us.org/they-had-everything-then-god-took-it-overnight , https://imam-us.org/why-allah-repeats-the-same-stories , https://imam-us.org/workshop-islamic-laws-of-purity-%d8%a3%d8%ad%d9%83%d8%a7%d9%85-%d8%a7%d9%84%d8%b7%d9%87%d8%a7%d8%b1%d8%a9-dearborn-mi , https://imam-us.org/workshop-pre-marriage-dearborn-mi , https://imam-us.org/youre-not-just-starving-yourself
+
+### Skipped (duplicate of an existing record) - chunk 6
+- https://imam-us.org/what-should-i-do-music-at-a-religious-gathering (same title and situation as imam-us-wsid-music-religious-gathering, whose URL is ...-gathering-2; dated 2025-12-12 here, 2026-08-27 there. Owner to check whether it is one page or two.)
+- https://imam-us.org/who-is-hussain-english-spanish (already listed as a duplicate in the half2 skips)
+
+## imam-us.org chunk 3 skips (2026-11-15)
+
+Fetched 63 pages (one cataloged: imam-us-concept-of-a-savior-part-1). Skipped:
+
+Birthday, martyrdom and anniversary notices (owner rule):
+- https://imam-us.org/birthday-of-prophet-muhammad-and-imam-jafar-sadiq-1439 | birthday notice (Rabi al-Awwal)
+- https://imam-us.org/holy-prophet-of-islam-death-anniversary | anniversary notice
+- https://imam-us.org/arbaeen-imam-hussain-ibn-ali-p-1439 | Arbaeen notice
+- https://imam-us.org/martyrdom-imam-ali-1438 | martyrdom notice
+- https://imam-us.org/martyrdom-sayyida-fatimah-al-zahra | martyrdom notice
+- https://imam-us.org/martyrdom-imam-ali-ibn-musa-al-ridha | martyrdom notice
+- https://imam-us.org/birth-anniversaries-prophet-muhammad-pbuh-imam-jafar-al-sadiq-p | birthday notice
+- https://imam-us.org/arbaeen-imam-hussain-ibn-ali-p | Arbaeen notice
+- https://imam-us.org/martyrdom-imam-husayn-ibn-ali | Ashura notice
+- https://imam-us.org/martyrdom-imam-muhammad-al-baqir | martyrdom notice
+- https://imam-us.org/martyrdom-imam-jafar-al-sadiq | martyrdom notice
+- https://imam-us.org/martyrdom-imam-muhammad-al-jawad | martyrdom notice
+- https://imam-us.org/1536-2 | birthday notice (Imam Ali al-Hadi)
+- https://imam-us.org/1527-2 | birthday notice (Sayyidah Fatimah al-Zahra)
+
+Moon-sighting, eclipse and Eid notices (owner rule):
+- https://imam-us.org/islamic-month-of-rabi-al-awwal-2017 | moon-sighting announcement
+- https://imam-us.org/solar-eclipse-north-america | eclipse notice
+- https://imam-us.org/penumbral-lunar-eclipse-north-america | eclipse notice
+- https://imam-us.org/is-salat-al-ayaat-obligatory-for-a-penumbral-lunar-eclipse-11-30-2020 | dated eclipse ruling notice naming Sistani (2020-11-29). Same kind as the moon-sighting notices, so skipped; owner to decide whether dated ruling notices count (see imam-us-salat-al-ayaat-lunar-eclipse)
+- https://imam-us.org/clarification-beginning-holy-month-ramadhan-1437-ah | moon-sighting clarification
+- https://imam-us.org/1529-2 | moon-sighting announcement (crescent moon, Rajab 1437)
+- https://imam-us.org/predicting-eid-tolerance | Eid moon-sighting prediction, mixed with a reflection; treated as a moon-sighting notice
+- https://imam-us.org/imam-celebrates-eid-ghadir-mubahalah-dearborn-2017 | event report (Eid celebration)
+- https://imam-us.org/eid-al-adha-1438 | Eid greeting
+
+Fiqh, marja not named on the page (fiqh rule):
+- https://imam-us.org/coming-month-ramadhan | Ramadan rulings (Qadha, Fidyah, Kaffarah); no marja named on the page
+- https://imam-us.org/zakat-ul-fitrah-2016 | zakat al-Fitrah payment guide; no marja named
+- https://imam-us.org/toward-greater-clarity-in-decision-making-part-iii-istikhara-terms-conditions-and-practical-application-in-contemporary-life | rules and conditions of istikhara (jurisprudential terms); no marja named. Part 2 (cataloged) is the non-fiqh philosophy piece. Owner to decide whether Part 3 counts as fiqh
+- https://imam-us.org/fasting-students-letter | template letter to schools on fasting accommodations; religious rulings referenced, no marja named
+
+Duplicates:
+- https://imam-us.org/advice-public-speakers-muharram | same advice text as imam-us-video-advice-preachers-public-speakers (video page with the same text)
+
+Statements from councils or non-marja bodies (owner to decide):
+- https://imam-us.org/closing-statement-of-the-18th-annual-conference-of-the-council-of-shia-muslim-scholars-of-north-america | conference statement by the Council of Shia Muslim Scholars of North America (not a marja)
+
+Announcements, news, event reports and sign-ups (owner rule):
+- https://imam-us.org/connect-with-the-marjaeya | visit schedule for Muharram
+- https://imam-us.org/sayyid-m-b-kashmiri-visits-durham-north-carolina | visit news
+- https://imam-us.org/sayyid-m-b-kashmiri-visits-jafaria-islamic-society-miami | visit news
+- https://imam-us.org/sayyid-m-b-kashmiri-visits-american-islamic-center-florida-subject-islamophobia | visit news
+- https://imam-us.org/sayyid-kashmiri-visits-iowa-community | lecture-series event report
+- https://imam-us.org/sayyid-m-b-kashmiri-visits-centers-in-california-july-28-30-2016 | lecture-series event report
+- https://imam-us.org/sayyid-m-b-kashmiri-visits-minnesota-september-17-21-2016 | visit news
+- https://imam-us.org/sayyid-m-b-kashmiri-attends-interfaith-gathering-governor-ali-hassan-joho-kenya | event news
+- https://imam-us.org/m-m-participates-faith-fear-panel | event news
+- https://imam-us.org/delegation-visits-islamic-centers-georgia | visit news
+- https://imam-us.org/celebrating-successorship-imam-mahdi-p-dar-e-panjatan-miami-florida | event news
+- https://imam-us.org/sayyid-khabbaz-archbishop-washington | meeting news
+- https://imam-us.org/sayyid-m-b-kashmiri-delivers-keynote-imam-hussain-p-islamic-center-grand-opening-boise-idaho | event news
+- https://imam-us.org/sayyid-kashmiri-meets-students-at-al-murtada-institute | event news
+- https://imam-us.org/grand-ayatullah-sayyid-ali-al-sistani-meets-medicines-sans-frontiers-msf-delegation | news
+- https://imam-us.org/birth-imam-mahdi-p-celebration-held-m-m-dearborn-mi | event report
+- https://imam-us.org/community-members-remember-officer-anthony-dia | news
+- https://imam-us.org/i-m-a-m-hosts-a-luncheon-for-young-participants | event report
+- https://imam-us.org/i-m-a-m-gives-haj-jasim-al-hassani-an-award-of-appreciation | event report
+- https://imam-us.org/i-m-a-m-commemorates-arbaeen-during-a-3-night-event | event report
+- https://imam-us.org/video-imi-organizes-a-virtual-forum-to-plan-for-a-safe-muharram | news report (video)
+- https://imam-us.org/imam-at-home-muharram-1442 | live-stream programme notice
+- https://imam-us.org/i-m-a-m-at-home-muharram-edition-timeless-lessons-from-karbala-with-shaykh-faiyaz-jaffer | live-stream event notice
+- https://imam-us.org/i-m-a-m-at-home-muharram-edition-inspirations-from-ashura-with-sayyid-muntadher-aljabery | live-stream event notice
+- https://imam-us.org/i-m-a-m-presents-school-work-and-beyond | webinar sign-up
+- https://imam-us.org/i-m-a-m-presents-islam-and-mental-health-psychology | webinar sign-up
+- https://imam-us.org/remembering-prophet-muhammad-pbuh-a-ssaf-shia-sunni-alliance-forum-presentation | event promotion (SSAF forum)
+- https://imam-us.org/hurricane-aid-appeal | fundraising appeal
+- https://imam-us.org/feed-fasting-report-thank | fundraising report
+- https://imam-us.org/reminder-feed-fasting-in-need | fundraising
+- https://imam-us.org/feed-fasting-in-need | fundraising
+- https://imam-us.org/sec2017-submissions | competition
+- https://imam-us.org/1617-2 | competition highlights (2016 Self-Enhancement Competition)
+
+
+## imam-us.org chunk 1 skips (2026-11-15)
+Fiqh with no marja named in the page body (owner to confirm whether these should be cataloged):
+- 2026-11-15 | https://imam-us.org/reminder-coming-holy-month-ramadhan-1438-h | Fiqh (qada, fidyah, kaffarah), 2017. The body names no marja; Sistani appears only in the sidebar.
+- 2026-11-15 | https://imam-us.org/qada-fasts-kaffarah-1439 | Fiqh (qada, fidyah, kaffarah), 2018. No marja named.
+- 2026-11-15 | https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-kaffarah-1440 | Fiqh (qada, fidyah, kaffarah), 2019. No marja named.
+- 2026-11-15 | https://imam-us.org/reminder-about-qada-make-up-fasts-fidyah-kaffarah-1441 | Fiqh (qada, fidyah, kaffarah), 2020. No marja named.
+
+Skipped as not in scope (news, event reports, notices, listings, moon-sighting or Eid-date messages):
+- 2026-11-15 | https://imam-us.org/islamic-awareness/blog-posts | Listing page, not content.
+- 2026-11-15 | https://imam-us.org/predicting-eid-tolerance-respect-differences | Eid date and moon-sighting message (notice).
+- 2026-11-15 | https://imam-us.org/closing-statement-16th-annual-conference-council-shia-muslim-scholars-north-america | Conference closing statement (event report). Owner to decide whether conference statements are in scope.
+- 2026-11-15 | https://imam-us.org/martyrdom-imam-hassan-al-askari-1439 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/ayatullah-al-sistani-receives-un-special-representative-iraq | News report of a meeting.
+- 2026-11-15 | https://imam-us.org/closing-statement-17th-annual-conference-council-shia-muslim-scholars-north-america | Conference report with a link to the full statement. Same question as the 16th conference.
+- 2026-11-15 | https://imam-us.org/imam-hosts-sayyid-moneer-al-khabbaz | Visit report (news).
+- 2026-11-15 | https://imam-us.org/imam-honors-sayyida-fatimah-p-3-day-event | Event report.
+- 2026-11-15 | https://imam-us.org/martyrdom-sayyida-fatimah-al-zahra-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-sayyida-fatimah-al-zahra-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-sayyida-zaynab-bint-ali-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-hasan-ibn-ali-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-ali-ibn-abi-talib-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/34916-2 | Event report (annual symposium).
+- 2026-11-15 | https://imam-us.org/imam-honors-prophet-muhammad-pbuhhp-imam-jafar-al-sadiq-p | Event report.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-hasan-askari-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-prophet-muhamma-imam-sadiq-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-hasan-al-mujtaba-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/arbaeen-imam-hussain-ibn-ali-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-zayn-al-abidin-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-ali-al-rida-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/holy-prophet-of-islam-death-anniversary-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-hasan-al-askari-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-muhammad-al-baqir-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/advice-marjaeya-religious-scholars-speakers-holy-month-muharram-1441-h | Notice linking to advice for speakers; the advice is covered by existing records (imam-us-top-10-advice-hussaini-speakers, imam-us-video-advice-preachers-public-speakers).
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-hussain-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-muhammad-al-jawad-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-naqi-al-hadi-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-jafar-al-sadiq-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-ali-ibn-abi-talib-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-ali-ibn-musa-rida-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-muhammad-al-mahdi-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/25012-2 | Organization news (graduation ceremony).
+- 2026-11-15 | https://imam-us.org/25007-2 | Organization news (youth camp).
+- 2026-11-15 | https://imam-us.org/iabat-hosts-a-groundbreaking-ceremony | Organization news (groundbreaking).
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-hasan-ibn-ali-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/imam-hosts-inter-organizational-seminar | Event report (seminar).
+- 2026-11-15 | https://imam-us.org/24041-2 | Fundraising dinner.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-musa-al-kadhim-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-hussain-ibn-ali-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/members-imam-board-attend-symposium-rutgers-university | Event report (news).
+- 2026-11-15 | https://imam-us.org/birthday-of-hadhrat-abbas-ibn-ali-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-zayn-al-abidin-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/24045-2 | Event report (birth anniversary celebration).
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-muhammad-al-baqir-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-ali-al-hadi-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-ali-ibn-abi-talib-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/martyrdom-of-imam-ali-al-hadi-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/24037-2 | Organization news (visit).
+- 2026-11-15 | https://imam-us.org/birthday-of-sayyida-fatimah-al-zahra-1440 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/week-4-imam-at-home-ramadan-edition | Weekly events roundup.
+- 2026-11-15 | https://imam-us.org/mufid-academic-seminary-launches-its-ba-in-hawzah-studies-program | Program announcement.
+- 2026-11-15 | https://imam-us.org/19th-night-month-ramadan | Date notice with no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-muhammad-al-mahdi-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+- 2026-11-15 | https://imam-us.org/birthday-of-imam-ali-ibn-abi-talib-1441 | Martyrdom or birth anniversary notice (a date and a quote); no substantive content.
+
+Already cataloged in this chunk: welcoming-holy-month-ramadan, a-message-from-the-representative-of-the-jurist-on-the-eve-of-the-15th-of-shaban, video-an-important-message-regarding-coronavirus-covid-19-from-the-representative-of-the-jurist. eid-al-fitr was already in the done file.
+
+## imam-us.org chunk 4 skips (2026-11-15)
+
+Cataloged from this chunk (3): imam-us-video-3-bits-advice-better-ramadan, imam-us-video-preparing-nights-of-destiny, imam-us-arbaeen-visitor-recommendations-2021 (the 2021 edition of the Arbaeen visitor guide; the 1444 and 1445 editions were already cataloged). Everything else below was skipped.
+
+### Skipped (fiqh, marja not stated)
+- 2021-04-19 | What Should I Do? Should I Get the COVID-19 Vaccine While Fasting? | https://imam-us.org/what-should-i-do-should-i-get-the-covid-19-vaccine-while-fasting | the page names no marja.
+- 2026-04-27 | Going for Preparing for Hajj: a Spiritual and Legal Guide (Shaykh Faiyaz Jaffer) | https://imam-us.org/going-for-preparing-for-hajj-a-spiritual-legal-guide-dr-shaykh-faiyaz-jaffer | fiqh subject (Hajj rulings); no marja named; also a webinar page.
+
+### Skipped (fiqh, another or unapproved marja)
+- 2022-09-03 | Advice from Ayatullah Shaykh Ishaq al-Fayyad to Believers in the West | https://imam-us.org/advice-from-ayatullah-shaykh-ishaq-al-fayyad-to-believers-in-the-west | Fayyad is not an approved marja; held for owner, as with the earlier Fayyad advice.
+
+### Skipped (fiqh matter from Sistani's office, owner to decide)
+- 2014-11-24 | Clarification Regarding the Determination of Arbaeen | https://imam-us.org/clarification-regarding-the-determination-of-arbaeen | a calendar ruling-type statement from the office; not cataloged.
+- 2022-08-29 | Emergency Khums Authorization: Flood Relief in Pakistan and Afghanistan | https://imam-us.org/emergency-khums-authorization-flood-relief-in-pakistan-and-afghanistan | khums authorization attached to a relief appeal; fiqh matter and fundraising.
+
+### Skipped (duplicate of an existing record)
+- 2020-05-06 | The difference between imsak time and fajr time | https://imam-us.org/difference-time-imsak-fajr-prayer | same article as imam-us-imsak-and-fajr-time (other URL).
+- 2017-12-07 | Youth: Advice from Grand Ayatullah Sayyid Ali al-Sistani | https://imam-us.org/advice-to-youth-ayatullah-sayyed-sistani | same as imam-us-advice-to-youth-sayyid-al-sistani; the English PDF is also login-only.
+- 2022-08-19 | Reminder: Get Your Copy of "Who is Hussain?" and "Who is Zaynab?" Today | https://imam-us.org/get-your-copy-of-who-is-hussain-and-who-is-zaynab-today | promotional reminder for books already cataloged (imam-us-who-is-hussain-book, imam-us-who-is-zaynab-book).
+- 2023-08-17 | "Who is Hussain?" and "Who is Zaynab?" sales page | https://imam-us.org/get-your-copy-of-who-is-hussain-and-who-is-zaynab-today-2 | same two books.
+- 2026-06-12 | Discover the Lives of Imam Hussain (p) and Lady Zaynab (p) This Muharram | https://imam-us.org/discover-the-lives-of-imam-hussain-p-and-lady-zaynab-p-this-muharram | sales promotion for the same two books.
+- 2016-11-08 | God's Emissaries: Adam to Jesus | https://imam-us.org/gods-emissaries-adam-to-jesus | same book as imam-us-book-gods-emissaries-adam-to-jesus (its URL ends in -2).
+
+### Skipped (login-only PDF)
+- The English PDF of the Sistani youth booklet requires a login (see the duplicate entry above).
+
+### Skipped (news, event notices and sign-ups, announcements, fundraising, product or shop promotion, statements, other languages)
+- 2021-03-06 | His Holiness Pope Francis Meets Ayatullah Sayyid al-Sistani | https://imam-us.org/pope-francis-meets-ayatullah-sayyid-al-sistani | news report.
+- 2021-03-13 | A Dialogue with Cardinal Wilton Gregory and Sayyid M.B. Kashmiri | https://imam-us.org/a-dialogue-with-cardinal-wilton-gregory-and-sayyid-m-b-kashmiri | webinar notice.
+- 2021-03-30 | Mufid Academic Seminary Fall 2021 Registration Open | https://imam-us.org/62010-2 | admissions announcement.
+- 2021-04-07 | Preparing for the Month of Ramadan | https://imam-us.org/preparing-for-the-month-of-ramadan | Instagram live notice.
+- 2021-03-10 | Quran Tajwid Recitation Competition, Ramadan 1442 | https://imam-us.org/qc | competition.
+- 2021-04-16 | Clarification on the Beginning of the Holy Month of Ramadan 1442 A.H. | https://imam-us.org/clarification-on-the-beginning-of-the-holy-month-of-ramadan-1442-a-h | moon-sighting notice.
+- 2021-05-12 | Statement Regarding the Ongoing Confrontations in Occupied Palestine | https://imam-us.org/statement-regarding-the-ongoing-confrontations-in-occupied-palestine | statement on current events.
+- 2021 | Lunar and solar eclipse notices | https://imam-us.org/lunar-eclipse-in-north-america-on-wednesday-may-26-2021, https://imam-us.org/solar-eclipse-june-10-2021, https://imam-us.org/lunar-eclipse-over-north-america-on-friday-november-19th-2021 | calendar notices.
+- 2021-06-01 | Do The Right Thing: COVID-19 Vaccine PSA | https://imam-us.org/do-the-right-thing-covid-19-vaccine-psa | public service announcement.
+- 2021-06-04 | The Quest for Knowledge | https://imam-us.org/67488-2 | Instagram live notice.
+- 2021-07-26 | Dr. Hassan Abbas to Join Sr. Salimi | https://imam-us.org/dr-hassan-abbas-to-join-sr-salimi-to-talk-about-the-prophets-heir | event notice.
+- 2021-08-04 | Etiquette of Majlis, Instagram Live | https://imam-us.org/etiquette-of-majlis-instagram-live | event notice.
+- 2021-08-17 | Survey on Programs for Muharram 1443 | https://imam-us.org/survey-on-programs-for-the-sacred-month-of-muharram-in-north-america-1443-2021 | survey.
+- 2021-08-05 | Guidelines for Conducting Muharram 1443 Programs | https://imam-us.org/guidelines-for-conducting-muharram-1443-programs | COVID-era operational guidance for event organisers.
+- 2021-09-19 | The Merits & Etiquette of Ziyarat Imam Hussain (p) | https://imam-us.org/the-merits-etiquette-of-ziyarat-imam-hussain-p | Instagram live notice (its video recap is cataloged under imam-us-video-merits-etiquette-of-ziyarat-instagram-live).
+- 2021-09-28 | I.M.A.M. in Georgetown University Webinar | https://imam-us.org/pope-francis-grand-imam-al-tayyeb-and-ayatollah-al-sistani-what-do-their-relationships-mean-for-us | webinar report.
+- 2021-11-16 | Sayyid Kashmiri Meets Dr. al-Issa | https://imam-us.org/sayyid-kashmiri-meets-dr-al-issa-chairman-of-the-muslim-world-league | news.
+- 2016-11-27 | Death Anniversary of the Holy Prophet of Islam | https://imam-us.org/death-holy-prophet-islam-muhammad | anniversary notice.
+- 2021-12-16 | Sayyid al-Sistani Meets Young Cancer Patients | https://imam-us.org/sayyid-al-sistani-meets-young-cancer-patients | news.
+- 2021 | PSA: Free At-Home COVID-19 Test Kits | https://imam-us.org/psa-free-at-home-covid-19-test-kits | public service announcement.
+- 2022-09-20 | 2022 Annual MI Response to Hate Conference | https://imam-us.org/2022-annual-mi-response-to-hate-conference-imam-attends | event report.
+- undated | Al-Hawraa Institute celebrates the end of the school year | https://imam-us.org/al-hawraa-institute-celebrate-the-end-of-the-school-year | news.
+- 2023-02-03 | Al-Imam al-Muntadher Islamic Center of Dayton, Ohio | https://imam-us.org/al-imam-al-muntadher-islamic-center-of-dayton-ohio | visit report.
+- 2026-09-19 | An Educational & Spiritual Journey to Iraq | https://imam-us.org/an-educational-spiritual-journey-to-iraq | tour sign-up.
+- 2025-07-20 | Register today to embark on a Spiritual and Educational Journey to Iraq | https://imam-us.org/embark-on-a-transformative-spiritual-educational-journey-to-iraq | tour sign-up.
+- 2024-03-05 | An Important Message from the Office of Grand Ayatollah Sayyid al-Sistani | https://imam-us.org/an-important-message-from-the-office-of-grand-ayatollah-sayyid-al-sistani | message to seminary students; statement and news.
+- 2026-03-30 | An Urgent Call for Humanitarian Relief | https://imam-us.org/an-urgent-call-for-humanitarian-relief | fundraising appeal.
+- 2025-09-07 | Annual Commemoration of Sayyid Musa al-Sadr Held in Dearborn, MI | https://imam-us.org/annual-commemoration-of-sayyid-musa-al-sadr-held-in-dearborn-mi | event news.
+- 2022-08-13 | Aug 15th @8pm Shia-Sunni Alliance Forum Solidarity Gathering | https://imam-us.org/aug-15th-8pm-shia-sunni-alliance-forum-ssaf-solidarity-gathering-for-new-mexico-muslim-community | event notice.
+- 2025-06-25 | Ayatollah Sayyid Monir al-Khabbaz Meets Scholars in Dearborn | https://imam-us.org/ayatollah-sayyid-monir-al-khabbaz-meets-scholars-in-dearborn | visit news.
+- 2026-08-20 | Versiti, I.M.A.M. and Who is Hussain Michigan partner to support Arabic-speaking blood donors | https://imam-us.org/blood-drive-2026 | blood drive announcement.
+- 2025-04-27 | Book Launch in Colombia: Emisarios de Dios | https://imam-us.org/book-launch-in-colombia-emisarios-de-dios-la-vida-de-jesus | event report; Spanish.
+- 2025-11-28 | Boston's Community for a Better Future | https://imam-us.org/bostons-community-for-a-better-future | visit news.
+- 2026-06-13 | Bring Karbala Home This Muharram with Hujja Kids | https://imam-us.org/bring-karbala-home-this-muharram-with-hujja-kids | product promotion.
+- 2026-06-14 | Community Leaders Complete Mental Health First Aid Training | https://imam-us.org/community-leaders-complete-mental-health-first-aid-training | training news.
+- 2026-06-01 | Community Workshop: ACEs Awareness and Suicide Prevention | https://imam-us.org/community-workshop-highlights-the-importance-of-aces-awareness-and-suicide-prevention | workshop report.
+- 2026-06-26 | Contemporary Medical Ethics & Islamic Jurisprudence | https://imam-us.org/contemporary-medical-ethics-islamic-jurisprudence | forum sign-up.
+- 2022-09-28 | Delegation from the Imam Hussain Shrine visits Pope Francis | https://imam-us.org/delegation-from-the-imam-hussain-shrine-visits-pope-francis-at-the-vatican | news.
+- 2022-11-09 | ECOTHEE-22 Conference | https://imam-us.org/ecological-theology-and-environmental-ethics-ecothee-22-conference | conference news.
+- 2025-10-16 | Exploring the Holy Quran: Applied Lessons (live weekly series) | https://imam-us.org/exploring-the-holy-quran-applied-lessons-on-faith-human-nature-and-navigating-life | event sign-up; a 10-week live series, not a course listing.
+- 2025-09-24 | Empowering Preparedness: A Proactive Approach to Community Safety | https://imam-us.org/empowering-preparedness-a-proactive-approach-to-community-safety | session report.
+- 2026-05-02 | Empowering Our Community: 11 Certified as Youth Mental Health First Aiders | https://imam-us.org/empowering-our-community-11-certified-as-youth-mental-health-first-aiders | certification news.
+- 2025-04-26 | Empowering Our Community: Successful Certification in Youth Mental Health First Aid | https://imam-us.org/empowering-our-community-successful-certification-in-youth-mental-health-first-aid | certification news.
+- 2023-11-10 | Faith-Based Clergy Conversation at DWIHN | https://imam-us.org/faith-based-clergy-conversation-at-dwihn | event news.
+- 2023-03-08 | Feed the Fasting in Need | https://imam-us.org/fasting | fundraising appeal.
+- 2023-10-01 | Grand Opening of Al-Zahra Center, Albuquerque, NM | https://imam-us.org/grand-opening-of-al-zahra-center-albuquerque-nm | news.
+- 2022-08-11 | Global Blood Heroes | https://imam-us.org/global-blood-heroes | blood drive.
+
+## Skipped (fiqh) - duas.org discovery batch (2026-11-15)
+- 2026-11-15 | Special salaat for 7 Rajab (Lailatul Raghaib) | https://www.duas.org/rajab7.htm | prayer-performance page, not a dua record
+- 2026-11-15 | Rajab daily salaahs | https://www.duas.org/mobile/rajab-daywise-salaahs.html | prayer-performance guide (not fetched)
+- 2026-11-15 | Dua during salah | https://www.duas.org/mobile/dua-during-salah.html | prayer-performance (not fetched)
+- 2026-11-15 | Wudhu | https://www.duas.org/wadhu.htm | purity rulings (not fetched)
+- 2026-11-15 | Toilet use etiquette | https://www.duas.org/mobile/toiletuse.html | purity rulings (not fetched)
+- 2026-11-15 | Salat of Ziarat (ziaratsalat) | https://www.duas.org/ziaratsalat.htm | prayer-performance (not fetched)
+
+## Skipped (fiqh) - duas.org pass (2026-11-15, Haiku worker f)
+- 2026-11-15 | Death related duas and info | https://www.duas.org/death.htm | Mainly funeral rulings (ghusl, kafan, burial, will, inheritance) citing Sistani.org. Main purpose is fiqh; no Fiqh heading may be used on duas records. Owner may decide.
+- 2026-11-15 | Sajda Shukr (thanksgiving prostration) | https://www.duas.org/mobile/sajda-shukr.html | Prostration with its rules and merits; a ritual performance page, not a dua record.
+- 2026-11-15 | Mealtime eating and drinking duas | https://www.duas.org/eating.htm | Includes eating etiquette rules, and the page names no marja.
+- 2026-11-15 | Duas to be recited during Wudhu | https://www.duas.org/wadhu.htm | Includes the steps of performing wudhu (purity rules); the page names no marja.
+- 2026-11-15 | Salaat of Masomeen | https://www.duas.org/mobile/salat-masumeen.html | Prayer-performance page. (Another worker has since cataloged a salaat-masumeen record; this entry only records this worker's skip.)
+
+## Skipped (other) - duas.org pass (2026-11-15, Haiku worker f)
+- 2026-11-15 | Invocation (superiority of tasbeehat and invocations) | https://www.duas.org/Misc/invocation.htm | Led by hadith narrations; hadith narrations are not catalogued as duas.
+- 2026-11-15 | Dua Taj / Battles | https://www.duas.org/dua-taj-battles.html | Duplicate of the cataloged Dua Taj (duas-taj, https://www.duas.org/Duataj.htm).
+- 2026-11-15 | Dua Ehtejab (ehtijab-dua) | https://www.duas.org/ehtijab-dua.html | Duplicate of the cataloged Dua Ehtejab (duas-ehtejab).
+- 2026-11-15 | Dua in obligatory sajda | https://www.duas.org/Misc/sajdadua.htm | Almost no English text (Arabic only).
+- 2026-11-15 | Qazai Hajat | https://www.duas.org/duaqazaihajat.htm | No English text (Arabic only).
+- 2026-11-15 | Sajjadia index (sajjadiya/sajjadiya.htm) | https://www.duas.org/sajjadiya/sajjadiya.htm | Duplicate of the cataloged Sahifa Sajjadiyah index (duas-sahifa-sajjadiyya).
+- 2026-11-15 | Shaban month index variants and Ramadan pages | https://www.duas.org/mobile/ramadan-dua-first-night.html, ramadan-laylatul-qadr-19/21/23 | Dynamic stub pages with no English text.
+- 2026-11-15 | Index pages: ziyarat.html, mobile/iraq-ziarat.html, mobile/madina-mecca-rites.html, mobile/imam-mahdi-related.html, mobile/imam-taqi-duas-list.html, mobile/salawaat-list.html, rabiulawwal.htm | Navigation lists that link to pages (many already cataloged); not catalogued as records. Madina-Mecca page also covers Hajj and Umrah rites.
+
+## Skipped (fiqh) - duas.org g1 (2026-11-15)
+- 2026-11-15 | Etiquettes of Izn Dukhool, farewell and post-ziyarat rites | https://www.duas.org/mobile/izn-dukhool-etiquettes.html | Mixes etiquette with rulings and prayer instructions (recommended, obligatory, makruh) and salat after ziyarat; names no marja. Owner may decide.
+- 2026-11-15 | Routine duas and etiquettes (eating, sleep, mirror, walking, clothing) | https://www.duas.org/routine.htm | Etiquette lists stated as mustahab / makruh / haram, with no marja named. Same reason as the eating page logged above.
+
+## Skipped (other) - duas.org g1 (2026-11-15)
+- 2026-11-15 | Imam biography pages (Ali Naqi, Hasan Askari, Imam Ali, Ali Ridha, Zain al-Abidin, Hasan Mujtaba, Husayn, Mahdi) | https://duas.org/mobile/imam-ali-naqi-hadi-as.html ; https://www.duas.org/mobile/imam-hassan-askari-as.html ; https://www.duas.org/mobile/imam-ali-as.html ; https://www.duas.org/mobile/imam-ali-ridha-as.html ; https://www.duas.org/mobile/imam-ali-zainulabideen-as.html ; https://www.duas.org/mobile/imam-hassan-mujtaba-as.html ; https://www.duas.org/mobile/imam-hussain-as.html ; https://www.duas.org/mobile/imam-mahdi-ajtfs.html | Brief life sketches, not dua or ziyarat pages. Owner to decide whether biographies belong in this catalog.
+- 2026-11-15 | Baqi cemetery in Medina (history of its destruction) | https://www.duas.org/baqee.htm | History article, not a dua page. Owner to decide.
+- 2026-11-15 | Visiting Holy Places index | https://www.duas.org/mobile/visitholyplaces.html | Index of links, no dua text of its own.
+- 2026-11-15 | Muharram and Safar resources index | https://www.duas.org/mobile/muharram-home.html | Index of resources and apps, no dua text of its own.
+- 2026-11-15 | Ziyarat Aimatul Momineen (alternate page) | https://www.duas.org/mobile/ziarat-aimmat-momineen.html | Same text as the existing record duas-ziyarat-aimmat-momineen (mobile/ziyarat-aimmat-momineen.html); duplicate, not cataloged again.
+
+## Skipped (fiqh) - duas.org G2 batch (2026-11-15)
+- 2026-11-15 | Shaban datewise salaahs (night prayers) | https://www.duas.org/mobile/shaban-datewise-salaahs.html | Prayer-performance instructions (rak'at, surahs) with hadith-style reward narrations; marja not stated on the page.
+- 2026-11-15 | Sunday Zilqad salat | https://www.duas.org/mobile/zilqad-sunday-salat.html | Prayer-performance instructions (4 rak'at, surahs, istighfar) citing Mafatih al-Jinan; marja not stated on the page.
+
+## Skipped (polemical) - duas.org G2 batch (2026-11-15)
+- 2026-11-15 | Rabi al-Awwal 17 (birth of the Prophet and Imam Jafar al-Sadiq) | https://www.duas.org/mobile/rabiulawal-17.html | Date-amaal page that includes a passage attacking a Sunni-named group (Wahhabis) over Mawlid celebrations. Mixed; the owner should decide whether a calendar record without the polemic is acceptable.
+
+## Skipped (mixed, not cataloged) - duas.org G2 batch (2026-11-15)
+- 2026-11-15 | Letter to Reciters and Sponsors of Majalis (advice letters) | https://www.duas.org/lettermajalis.htm | A collection of advice from several authorities (Sistani and others). Mixed sources, and a record would need needs_review, which this batch does not allow.
+
+## al-islam.org Ask a Question (2026-11-19)
+Partly cataloged: 936 threads so far out of about 5,650 found across 96 topics (items under topic sections under one work record). Drafted by Haiku agents, one fetch per thread page, with titles read in segments so they are the page's own wording; descriptions and sample questions are written from the question title only, never from the answer. Fiqh threads carry `marja: sistani` per the owner (2026-11-13/19), with no author listed. Skipped so far: rows without a complete title (the fetch tool sometimes returns answer text or cuts the title), one thread outside Twelver scope (Ismaili), and threads naming another marja. The rest of the run resumes later; the drafts and shard files are kept outside the repository.
