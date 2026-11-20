@@ -22,15 +22,7 @@ body.home .stage>.hero-shade{position:absolute;inset:0;z-index:-1;background:lin
 body.home .stage h1{font-family:var(--j-display);font-weight:300;font-size:clamp(2.7rem,6.4vw,5.2rem);line-height:1;letter-spacing:-.016em;max-width:52rem;text-shadow:0 2px 30px rgba(7,19,30,.6)}
 body.home .stage .lede{margin-bottom:0;max-width:28rem;font-size:1.1rem;text-shadow:0 1px 16px rgba(7,19,30,.7)}
 body.home .stage .pal-wrap{margin:clamp(1.5rem,4.5vh,3rem) auto 0;width:100%}
-/* Starter searches and "Surprise me", shown at the top of the dropdown when the empty search box is clicked. */
-.pal-list .hchips{display:flex;flex-wrap:wrap;gap:.5rem;padding:.35rem .35rem .7rem;margin:0 0 .35rem;border-bottom:1px solid var(--line)}
-.pal-list .hchip{display:inline-flex;align-items:center;gap:.45rem;min-height:2.5rem;padding:.4rem .9rem;border:1px solid var(--edge);border-radius:999px;background:var(--hi);color:var(--ink);font:500 .875rem/1.2 var(--sans);text-decoration:none;transition:background-color .16s,border-color .16s,transform .16s}
-.pal-list .hchip:hover{background:var(--line)}
-.pal-list .hchip:active{transform:scale(.97)}
-.pal-list .hchip.surprise{background:var(--gold-btn);border-color:var(--gold-btn);color:var(--on-gold);font-weight:600}
-.pal-list .hchip.surprise:hover{filter:brightness(1.05)}
-.pal-list .hchip svg{width:1rem;height:1rem;flex:none}
-/* The suggestions float under the search box as their own card, over the chips, so nothing on the page moves. */
+/* The suggestions float under the search box as their own card,, so nothing on the page moves. */
 body.home .pal-wrap{position:relative;z-index:3}
 body.home .pal{overflow:visible}
 body.home .pal.pcl:focus-within .pal-in{border-bottom:0}
@@ -165,8 +157,5 @@ body.home .stage h1,body.home .stage .lede{transform:translate3d(0,calc(var(--hs
 .j-failed .j-stage{display:none}
 @media (prefers-reduced-motion:reduce){.j-cue::after,.j-cue svg,.j-scan::after,.j-map,.j-vig,.j-labels,.j-hud,.j-play,.j-ask,.j-tl{animation:none}}
 
-/* Phones: keep the dropdown's pills compact so Surprise me and the suggestions stay in view. */
 @media (max-width:600px){
-  .pal-list .hchips{gap:.4rem;padding:.2rem .2rem .55rem}
-  .pal-list .hchip{min-height:2.25rem;padding:.3rem .7rem;font-size:.8125rem}
 }
