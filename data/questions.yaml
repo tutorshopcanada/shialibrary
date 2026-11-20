@@ -1,12 +1,6 @@
 # Starter questions in plain language. ALL DRAFTS: written by the cataloging agent, not yet
 # reviewed by the owner or a scholar. Each maps to headings and to records that exist.
 questions:
-  - id: q-shurtat-al-khamis
-    question: "What was Shurtat al-Khamis?"
-    alt_phrasings: ["shurtat al khamis", "shurtat al khamees", "shurtatul khamis", "shurtat ul khamis", "shurta al khamis", "shurtah al khamis", "shurta khamis", "shurtat khamis", "thursday police", "police of imam ali", "did imam ali have a police force", "شرطة الخميس"]
-    headings: [imam-ali, companions-scholars]
-    top_records: [al-islam-life-ali-qurashi-deputy-governors]
-    draft: true
   - id: q-pray-in-congregation
     question: "How do Shias pray in congregation?"
     alt_phrasings: ["how to pray jamaat", "congregational prayer", "praying together in a group", "how does jamaah prayer work"]
