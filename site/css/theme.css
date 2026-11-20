@@ -49,16 +49,9 @@ body:not(.home) .mnav a{color:#fff}
 body:not(.home) #top .view{max-width:64rem;margin:0 auto;background:transparent;border-radius:0;padding:clamp(1.8rem,4vw,2.8rem) 0 clamp(2.4rem,5vw,3.6rem)}
 
 /* ---------- navy panels and sand buttons, as on the home page ---------- */
-.stage,.tour{background-image:var(--stageg)}
-.tour2{background-color:var(--h-navy);background-image:radial-gradient(rgba(111,224,210,.14) 1px,transparent 1.5px),radial-gradient(90% 130% at 100% 100%,rgba(14,124,128,.6) 0,rgba(14,124,128,0) 65%);background-size:22px 22px,auto;box-shadow:inset 0 0 0 1px rgba(111,224,210,.18)}
+.stage{background-image:var(--stageg)}
 .fb-l{background-image:radial-gradient(100% 120% at 100% 100%,rgba(14,124,128,.6) 0,rgba(14,124,128,0) 65%),linear-gradient(160deg,#0b1e2a,#0c2733)}
-.show{background:var(--h-deep);background-image:radial-gradient(120% 90% at 85% 0%,rgba(14,124,128,.55) 0,rgba(14,124,128,0) 55%),linear-gradient(180deg,#0b1e2a,#05141f)}
-.show::before{background:var(--h-gold)}
-.sh-bot{background:linear-gradient(rgba(5,20,31,0),var(--h-deep) 45%)}
-.tour .btn.white,.tour2 .btn.white,.rs .btn.white,.fb-l .btn.white,.show .btn.white{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
-.pn{background:var(--h-sand);color:var(--h-ink)}
-@media (hover:hover) and (pointer:fine){.pn:hover{background:#fff}}
-.tabs a[aria-current=page]{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
+.rs .btn.white,.fb-l .btn.white{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
 .cta{background:var(--h-navy);background-image:radial-gradient(80% 140% at 100% 100%,rgba(14,124,128,.55) 0,rgba(14,124,128,0) 65%);color:var(--h-sand)}
 .cta .btn,.cta .btn.solid{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
 .cta :focus-visible{outline-color:#fff}
