@@ -150,3 +150,7 @@ Inner-page headers are flat: the back link and the kind label share one row, the
 ## One frame around the page
 
 The sand frame no longer wraps only the header. `#top` is one sand frame with a 10 to 20px inset all round; the nav strip and header sit inside it, and the page content sits in a cream panel below with the same inset, so the frame continues down the page and closes under the content. The footer sits outside on the cream ground.
+
+## Result cards (2026-11-20)
+
+One card per result, in this order of weight: a kicker row (content-type tag tinted in its own colour, free/paid and "found by meaning" badges, level dots at the right); the title; one quiet line for author and whose rulings; the description (two lines); and a footer band that always names the website the card opens on, with the section/book links and "Report a problem". A thin bar on the left edge and the footer tint take the tag's colour. The whole card is the link (the title link stretches over it); the footer links sit above it. "Report a problem" shows on hover at 1100px and wider, and always below that. Styles are at the end of `site/css/theme.css`; the markup is `rowHtml` in `site/js/app.js`.

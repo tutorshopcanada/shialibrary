@@ -83,3 +83,37 @@ footer b{color:var(--h-sand)}
 footer a{color:#dcefeb}
 footer .fl a{color:var(--h-sand)}
 footer :focus-visible{outline-color:#fff}
+
+/* ---------- result cards ----------
+   Order of weight: the title first; then what kind of page it is (a colour-coded kicker, level at the right);
+   then who wrote it and what it covers; and last, always, the website it opens on. The whole card is the link. */
+.lrows{gap:12px}
+.lrow{--c:var(--t-other);position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.05rem 1.35rem 0;box-shadow:0 1px 0 rgba(11,30,42,.03);transition:border-color .16s,box-shadow .16s,transform .16s}
+.lrow::before{content:"";position:absolute;left:0;top:1rem;bottom:3.4rem;width:3px;border-radius:0 3px 3px 0;background:var(--c);opacity:.65;transition:opacity .16s}
+.lrow .lk{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .7rem;margin:0 0 .55rem}
+.lrow .tag{display:inline-flex;align-items:center;gap:.4rem;padding:.12rem .65rem;border-radius:999px;background:color-mix(in srgb,var(--c) 13%,transparent);color:color-mix(in srgb,var(--c) 82%,#000);font-size:.75rem;font-weight:600;letter-spacing:.02em}
+.lrow .lk .lvl{margin-left:auto}
+.lrow h3,.lrow h4{margin:0;font-size:1.125rem;font-weight:600;line-height:1.3;letter-spacing:-.015em;color:var(--ink)}
+.lrow h3 a::after,.lrow h4 a::after{border-radius:16px}
+.lrow .lby{display:flex;flex-wrap:wrap;margin:.3rem 0 0;font-size:.875rem;color:var(--mute)}
+.lrow .lby span+span::before{content:"·";margin:0 .55rem;opacity:.6}
+.lrow .lr-d{margin-top:.5rem;font-size:.9375rem;line-height:1.5}
+.lrow .lr-foot{display:flex;flex-wrap:wrap;align-items:center;gap:.15rem 1.1rem;margin:1rem -1.35rem 0;padding:.65rem 1.35rem;border-top:1px solid var(--line);border-radius:0 0 15px 15px;background:color-mix(in srgb,var(--c) 5%,var(--paper));font-size:.8125rem;color:var(--mute)}
+.lrow .lr-src{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;color:var(--ink)}
+.lrow .lr-out{width:.9rem;height:.9rem;flex:none;color:color-mix(in srgb,var(--c) 85%,#000);transition:transform .16s}
+.lrow .lr-foot .lr-rep{margin-left:auto}
+@media (hover:hover) and (pointer:fine){
+  .lrow:hover{background:var(--paper);border-color:color-mix(in srgb,var(--c) 40%,var(--line));box-shadow:0 14px 30px -18px rgba(11,30,42,.4);transform:translateY(-1px)}
+  .lrow:hover::before{opacity:1}
+  .lrow:hover h3 a,.lrow:hover h4 a{color:var(--h-teal-d)}
+  .lrow:hover .lr-out{transform:translate(2px,-2px)}
+}
+/* "Report a problem" appears on hover only where there is room for it beside the links; elsewhere it simply sits in the footer. */
+@media (hover:hover) and (pointer:fine) and (min-width:1100px){
+  .lrow .lr-foot .lr-rep{position:absolute;right:1.35rem;bottom:.65rem;margin:0;opacity:0}
+  .lrow:hover .lr-foot .lr-rep,.lrow:focus-within .lr-foot .lr-rep{opacity:1}
+}
+@media (hover:hover) and (pointer:fine) and (max-width:1099px){.lrow .lr-foot .lr-rep{opacity:1}}
+@media (max-width:640px){.lrow .lby{flex-direction:column}.lrow .lby span+span::before{display:none}}
+@media (max-width:640px){.lrow{padding:.95rem 1.05rem 0}.lrow .lr-foot{margin:.9rem -1.05rem 0;padding:.6rem 1.05rem}.lrow h3,.lrow h4{font-size:1.0625rem}}
+@media (prefers-reduced-motion:reduce){.lrow,.lrow .lr-out{transition:none}.lrow:hover{transform:none}}
