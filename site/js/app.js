@@ -930,7 +930,7 @@ function ensureJourney() {
   el.dataset.mounted = '1';
   const go = () => import('./journey.js').then((m) => m.mountJourney(el, { link: journeyLink, onAsk: goAsk })).catch((err) => { el.dataset.mounted = ''; console.error(err); });
   // Nothing heavy runs while the visitor is still reading the hero: the map and its photographs are set up on the
-  // first scroll or touch, or once the page has been quiet for a few seconds. Until then a plain panel stands in.
+  // first scroll or touch, or once the page has been quiet for a couple of seconds. Until then a plain panel stands in.
   const evs = ['scroll', 'wheel', 'touchstart', 'keydown', 'pointerdown'];
   let started = false;
   const start = () => {
@@ -939,7 +939,7 @@ function ensureJourney() {
     if (window.requestIdleCallback) requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
   };
   evs.forEach((ev) => addEventListener(ev, start, { passive: true }));
-  setTimeout(start, 6000);
+  setTimeout(start, 2500);
 }
 // Starter searches under the hero search box, and "Surprise me": one random beginner page, opened on its own website.
 function renderHeroChips() {

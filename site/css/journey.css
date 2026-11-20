@@ -1,9 +1,7 @@
 /* Home page: the photograph hero, the rising panel, and the "Places of the Prophet and the Imams" journey.
    Loaded after style.css. Everything here is scoped to body.home or to .jrn / .j-*, so no other page changes. */
 
-@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("../fonts/fraunces-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;src:url("../fonts/fraunces-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--j-display:"Fraunces","Iowan Old Style",Georgia,serif}
+:root{--j-display:var(--serif)}
 
 /* ---------- hero: a photograph behind the search ---------- */
 /* The site frames every page in a tan card (#top.in). On the home page the hero and the journey run edge to edge instead. */
@@ -19,7 +17,7 @@ body.home .mnav a{color:#fff}
 body.home #heroStage:not([hidden]){display:flex;flex-direction:column;min-height:max(720px,100vh);min-height:max(720px,100svh);padding:clamp(5rem,11vh,7rem) clamp(1rem,4vw,3rem) 178px;background:#0b1e2a;background-image:none;isolation:isolate;overflow:hidden}
 body.home .stage>.hero-photo{position:absolute;inset:-3% 0;width:100%;height:106%;object-fit:cover;object-position:50% 66%;z-index:-2;opacity:0;transition:opacity .9s ease}
 body.home .stage>.hero-photo.ok{opacity:1}
-body.home .stage>.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,19,30,.84) 0,rgba(7,19,30,.62) 24%,rgba(7,19,30,.14) 46%,rgba(7,19,30,.08) 58%,rgba(7,19,30,.5) 80%,rgba(7,19,30,.88) 100%)}
+body.home .stage>.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,19,30,.84) 0,rgba(7,19,30,.62) 24%,rgba(7,19,30,.14) 46%,rgba(7,19,30,.08) 58%,rgba(7,19,30,.5) 76%,rgba(5,20,31,.94) 92%,#05141f 100%)}
 @keyframes j-breathe{from{transform:scale(1)}to{transform:scale(1.06)}}
 body.home .stage h1{font-family:var(--j-display);font-weight:300;font-size:clamp(2.7rem,6.4vw,5.2rem);line-height:1;letter-spacing:-.016em;max-width:52rem;text-shadow:0 2px 30px rgba(7,19,30,.6)}
 body.home .stage .lede{margin-bottom:0;max-width:28rem;font-size:1.1rem;text-shadow:0 1px 16px rgba(7,19,30,.7)}
@@ -46,6 +44,7 @@ body.home .pal-list{position:absolute;left:0;right:0;top:calc(100% + 8px);z-inde
 .jrn{--j-gold:#e6bd6a;--j-sand:#f7f0e0;--j-ink:#16203a;position:relative;z-index:2;margin-top:-150px;height:calc(var(--j-units,9.2) * 118vh + 100vh);color:var(--j-sand);font-family:var(--sans)}
 .jrn[hidden]{display:none}
 .jrn *{box-sizing:border-box}
+.j-peek,.j-stage{box-shadow:0 -28px 56px -14px rgba(2,8,15,.6)}
 .j-peek{position:sticky;top:0;height:100vh;height:100svh;border-radius:40px 40px 0 0;background:radial-gradient(ellipse 95% 85% at 64% 46%,#0b2b3b 0,#05141f 60%,#02080f 100%);overflow:hidden}
 .j-peek .j-pk{position:absolute;left:max(16px,calc(50vw - 32rem + 1rem));top:58px;margin:0;font:300 clamp(1.25rem,2.2vw,1.75rem)/1.2 var(--j-display);color:#e8f6f3;text-shadow:0 2px 20px #02080f}
 .j-peek .j-cue{pointer-events:none}
@@ -67,12 +66,15 @@ body.home .pal-list{position:absolute;left:0;right:0;top:calc(100% + 8px);z-inde
 .j-lbl.on b{background:var(--j-gold);border-color:#fff2cf;color:#2a1c04;width:26px;height:26px;font-size:12px}
 .j-lbl.on span{display:block;font-family:var(--j-display);font-size:24px;color:#fff;font-weight:400}
 .j-hud{position:absolute;left:max(16px,calc(50vw - 32rem + 1rem));top:max(58px,calc(env(safe-area-inset-top,0px) + 50px));z-index:4}
+.j-hud .j-k,.j-peek .j-pk{text-shadow:0 0 16px #02080f,0 0 5px #02080f}
 .j-hud .j-k{margin:0;font:300 clamp(1.25rem,2.2vw,1.75rem)/1.2 var(--j-display);color:#e8f6f3;text-shadow:0 2px 20px #02080f;pointer-events:none}
 .j-hud .j-c{margin:6px 0 0;font-size:13px;color:#7fd8cd;font-variant-numeric:tabular-nums;letter-spacing:.04em;pointer-events:none}
 .j-play{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:calc(max(16px,calc(50vw - 32rem + 1rem)) + 184px);z-index:6;display:inline-flex;align-items:center;gap:8px;background:rgba(2,8,15,.72);color:#f7f0e0;border:1px solid rgba(247,240,224,.5);border-radius:999px;min-height:2.75rem;padding:0 16px 0 14px;font:500 .875rem var(--sans);cursor:pointer}
 .j-play:hover{background:rgba(247,240,224,.2)}
 .j-play .i-pause{display:none}.j-play.playing .i-pause{display:block}.j-play.playing .i-play{display:none}
 .j-ask{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:max(16px,calc(50vw - 32rem + 1rem));z-index:6;display:flex;align-items:center;gap:8px;background:var(--j-sand);color:var(--j-ink);border:0;border-radius:999px;min-height:2.75rem;padding:0 20px 0 16px;font:600 .9rem var(--sans);cursor:pointer;box-shadow:0 10px 30px -8px rgba(0,0,0,.6)}
+@keyframes j-fade{from{opacity:0}}
+.j-map,.j-vig,.j-labels,.j-hud,.j-play,.j-ask,.j-tl{animation:j-fade .8s ease-out both}
 .j-imms{position:absolute;inset:0;pointer-events:none}
 .j-imm{position:absolute;inset:0;display:none;overflow:hidden;will-change:clip-path}
 .j-imm img{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;display:block}
@@ -151,4 +153,4 @@ body.home .pal-list{position:absolute;left:0;right:0;top:calc(100% + 8px);z-inde
 .j-calm .j-btn.ghost{display:inline-flex}
 .jrn.j-failed{height:auto;margin-top:0}
 .j-failed .j-stage{display:none}
-@media (prefers-reduced-motion:reduce){.j-cue svg,.j-scan::after{animation:none}}
+@media (prefers-reduced-motion:reduce){.j-cue svg,.j-scan::after,.j-map,.j-vig,.j-labels,.j-hud,.j-play,.j-ask,.j-tl{animation:none}}

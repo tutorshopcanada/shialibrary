@@ -15,6 +15,7 @@ The home page has two parts that sit on top of the search.
 | File | What it is |
 |---|---|
 | `site/js/journey.js` | The module: stops and their text, the map renderer, the photo zoom, autoplay |
+| `site/css/type.css` | Site-wide typography: Fraunces for headings and display text, Inter for reading text and controls (replaces Instrument Serif) |
 | `site/css/journey.css` | Home-only styles (everything is scoped to `body.home`, `.jrn` or `.j-*`) |
 | `site/journey/geo.json` | Map data, built by `scripts/journey_geo/` |
 | `site/journey/img/` | The home photograph and the nine stop photographs |
