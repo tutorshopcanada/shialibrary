@@ -92,12 +92,12 @@ export function mountJourney(root, opts = {}) {
   };
   root.classList.add('jrn');
   root.style.setProperty('--j-units', String(N + .2));
-  root.setAttribute('aria-label', 'A journey through the shrines of the Prophet and the Imams, from Mecca to Samarra and on to Toronto');
-  root.innerHTML = `<button class="j-cue" type="button" aria-label="Play the journey">Follow the shrines <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+  root.setAttribute('aria-label', 'The Ark of Salvation: From the Kaaba to Khorasan. A journey through the shrines of the Prophet and the Imams, from Mecca to Samarra and on to Toronto');
+  root.innerHTML = `<button class="j-cue" type="button" aria-label="Play the journey">Legacy of Islam <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
     <div class="j-stage" id="jStage">
       <canvas class="j-map" aria-hidden="true"></canvas><div class="j-vig" aria-hidden="true"></div><div class="j-scan" aria-hidden="true"></div>
       <div class="j-labels" aria-hidden="true"></div>
-      <div class="j-hud"><p class="j-k" aria-hidden="true">Places of the Prophet and the Imams</p><p class="j-c" aria-hidden="true">21.42° N · 39.83° E</p>
+      <div class="j-hud"><p class="j-k" aria-hidden="true">The Ark of Salvation: From the Kaaba to Khorasan</p><p class="j-c" aria-hidden="true">21.42° N · 39.83° E</p>
 </div>
       <button class="j-play" type="button" aria-label="Play the journey"><svg class="i-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><svg class="i-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5h4.2v15H6zM13.8 4.5H18v15h-4.2z"/></svg><span>Play</span></button>
       <button class="j-ask" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>Ask a question</button>
@@ -375,7 +375,7 @@ export function mountJourney(root, opts = {}) {
 
   // ---- autoplay -----------------------------------------------------------------------------------------------
   // Starts by itself once the visitor arrives at the journey and stops scrolling. Any wheel, touch, key press or
-  // manual scroll pauses it at once; the Play button (or the "Follow the shrines" tab) starts it again.
+  // manual scroll pauses it at once; the Play button (or the "Legacy of Islam" tab) starts it again.
   const auto = { on: false, started: false, done: false, q: QMIN, expectY: -1, idleTimer: 0 };
   const speedAt = (q) => {
     if (q < 0) return .3;

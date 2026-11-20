@@ -821,12 +821,27 @@ function entityBodyHtml(e) {
 // Hero search box (suggestions as you type)
 // ---------------------------------------------------------------------------
 let rows = [], hi = 0;
+// Starter searches and "Surprise me" live at the top of the search dropdown, which opens when the empty box is clicked.
+function chipsHtml() {
+  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 3);
+  return `<div class="hchips" role="presentation">${starters.map((q) => `<a class="hchip" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a>`).join('')}`
+    + '<a class="hchip surprise" id="surprise" href="#" target="_blank" rel="noopener noreferrer" aria-label="Surprise me: open a random beginner page on its own website, in a new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor"/></svg>Surprise me</a></div>';
+}
+// "Surprise me": one random free beginner page, opened on its own website (the click then follows the link we set here).
+$('#list').addEventListener('click', (e) => {
+  const sa = e.target.closest('#surprise'); if (!sa) return;
+  const pool = RECS.filter((n) => n.lv === 'beginner' && n.g === 'work' && n.raw.access === 'free' && n.raw.type !== 'course' && safeUrl(n.raw.url));
+  if (!pool.length) { e.preventDefault(); return; }
+  sa.href = safeUrl(pool[Math.floor(Math.random() * pool.length)].raw.url);
+});
+
 const RET = '<kbd aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3v5a2 2 0 0 1-2 2H3M5.5 7.5L3 10l2.5 2.5"/></svg></kbd>';
 function buildRows() {
   const q = input.value.trim(), out = [];
   // One letter is too vague to match anything useful ("d" matched a section titled "D) ..."),
   // so below two characters we keep showing the starter questions instead of results.
   if (q.length < 2) {
+    out.push({ chips: true });
     if (engine.questions.length) {
       out.push({ lab: `Suggested questions (${engine.questions.length})` });
       engine.questions.forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) }));
@@ -858,9 +873,10 @@ function buildRows() {
 }
 function buildList() {
   if (!engine) return;
-  const items = buildRows(); rows = items.filter((x) => !x.lab); if (hi >= rows.length) hi = 0;
+  const items = buildRows(); rows = items.filter((x) => !x.lab && !x.chips); if (hi >= rows.length) hi = 0;
   let i = -1;
   $('#list').innerHTML = items.map((x) => {
+    if (x.chips) return chipsHtml();
     if (x.lab) return `<div class="lab" role="presentation">${esc(x.lab)}</div>`;
     i++; const sel = i === hi, id = 'opt' + i;
     if (x.k === 'r') { const r = x.r; return `<a class="row" id="${id}" role="option" aria-selected="${sel}" data-i="${i}" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer"><span class="t" dir="auto">${esc(r.title)}</span><span class="r">${sel ? 'Open ' + RET : esc(tagLabel(r.content_tag))}</span></a>`; }
@@ -946,19 +962,6 @@ function ensureJourney() {
   if (catalogSettled) later(); else document.addEventListener('catalog-settled', later, { once: true });
   setTimeout(start, 9000);
 }
-// Starter searches under the hero search box, and "Surprise me": one random beginner page, opened on its own website.
-function renderHeroChips() {
-  const box = $('#heroChips'); if (!box || !engine) return;
-  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 3);
-  box.innerHTML = starters.map((q) => `<a class="hchip" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a>`).join('')
-    + '<a class="hchip surprise" id="surprise" href="#" target="_blank" rel="noopener noreferrer" aria-label="Surprise me: open a random beginner page on its own website, in a new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor"/></svg>Surprise me</a>';
-}
-$('#heroChips').addEventListener('click', (e) => {
-  const a = e.target.closest('#surprise'); if (!a) return;
-  const pool = RECS.filter((n) => n.lv === 'beginner' && n.g === 'work' && n.raw.access === 'free' && n.raw.type !== 'course' && safeUrl(n.raw.url));
-  if (!pool.length) { e.preventDefault(); return; }
-  a.href = safeUrl(pool[Math.floor(Math.random() * pool.length)].raw.url);   // the click then opens it
-});
 // Scrolling away from the hero: the photograph drifts and zooms a little, cools toward the map's colours, and the
 // headline lifts away (--hs runs from 0 to 1 over the first two thirds of a screen).
 const heroPhoto = $('.hero-photo'), heroStage = $('#heroStage');
@@ -991,7 +994,7 @@ function render(opts = {}) {
   });
   $('#heroStage').hidden = !heroOn; $('#routeStage').hidden = heroOn || t === 'slide';
   document.body.classList.toggle('home', heroOn);
-  const jr = $('#journey'); if (jr) { jr.hidden = !heroOn; if (heroOn) { renderHeroChips(); ensureJourney(); } }
+  const jr = $('#journey'); if (jr) { jr.hidden = !heroOn; if (heroOn) ensureJourney(); }
   const sh = $('#show'); sh.hidden = t !== 'slide';
   announceText = '';
   if (t === 'slide') {
