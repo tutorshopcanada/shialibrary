@@ -47,8 +47,8 @@ body.home .pal-list{position:absolute;left:0;right:0;top:calc(100% + 8px);z-inde
 .j-peek,.j-stage{box-shadow:0 -28px 56px -14px rgba(2,8,15,.6)}
 .j-peek{position:sticky;top:0;height:100vh;height:100svh;border-radius:40px 40px 0 0;background:radial-gradient(ellipse 95% 85% at 64% 46%,#0b2b3b 0,#05141f 60%,#02080f 100%);overflow:hidden}
 .j-peek .j-pk{position:absolute;left:max(16px,calc(50vw - 32rem + 1rem));top:58px;margin:0;font:300 clamp(1.25rem,2.2vw,1.75rem)/1.2 var(--j-display);color:#e8f6f3;text-shadow:0 2px 20px #02080f}
-.j-peek .j-cue{pointer-events:none}
-.j-cue{position:absolute;left:50%;top:0;z-index:7;transform:translateX(-50%);background:var(--j-sand);color:#0e1f46;border:0;border-radius:0 0 999px 999px;padding:10px 22px 13px;font:400 .95rem var(--j-display);display:flex;gap:8px;align-items:center;white-space:nowrap;cursor:pointer;min-height:2.75rem}
+.jrn > span.j-cue{pointer-events:none}
+.j-cue{position:absolute;left:50%;top:-22px;z-index:7;transform:translateX(-50%);background:var(--j-sand);color:#0e1f46;border:0;border-radius:999px;padding:0 22px;height:44px;font:400 .95rem var(--j-display);display:flex;gap:8px;align-items:center;white-space:nowrap;cursor:pointer;box-shadow:0 10px 28px -8px rgba(2,8,15,.65)}
 .j-cue svg{animation:j-bob 1.8s ease-in-out infinite}
 @keyframes j-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 .j-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;border-radius:var(--rad,40px) var(--rad,40px) 0 0;background:radial-gradient(ellipse 95% 85% at 64% 46%,#0b2b3b 0,#05141f 60%,#02080f 100%)}
