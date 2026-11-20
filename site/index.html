@@ -11,14 +11,20 @@
   <meta name="referrer" content="no-referrer">
   <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/journey.css">
   <noscript><style>.loading{display:none}html:not(.art) .stage>.hero-art,html:not(.art) .rs::before{display:block}</style></noscript>
   <link rel="preload" href="data/index.json" as="fetch" crossorigin="anonymous">
   <script>
     /* Show the decorative artwork only after the catalog has loaded (or after 6 s at the latest). */
     (function () {
       var d = document.documentElement, done = false;
-      function go() { if (done) return; done = true; if (mo) mo.disconnect(); d.classList.add('art'); }
+      function go() {
+        if (done) return; done = true; if (mo) mo.disconnect(); d.classList.add('art');
+        var im = document.querySelector('.hero-photo');
+        if (im && im.dataset.src) { im.onload = function () { im.classList.add('ok'); }; im.src = im.dataset.src; if (im.complete) im.classList.add('ok'); }
+      }
       var mo = window.MutationObserver && new MutationObserver(function () { var n = document.getElementById('n'); if (n && n.textContent.trim()) go(); });
       if (mo) mo.observe(d, { childList: true, subtree: true, characterData: true });
       setTimeout(go, 6000);
@@ -43,11 +49,11 @@
         <nav class="mnav" id="mnav" aria-label="Menu" hidden></nav>
 
         <div class="stage" id="heroStage">
-          <div class="hero-art" aria-hidden="true"><i class="ha-girih"></i><i class="ha-shrine"></i></div>
+          <img class="hero-photo" alt="" width="2000" height="1268" data-src="journey/img/hero.jpg" decoding="async" aria-hidden="true">
+          <div class="hero-shade" aria-hidden="true"></div>
           <h1>Find where to learn about Shia Islam</h1>
           <p class="lede">Ask a question or type a topic. ShiaLib shows you where to read about it on trusted Shia sources.</p>
-          <div class="pal-wrap"><svg class="cursor" viewBox="0 0 60 70" aria-hidden="true"><path d="M6 6l44 28-18 5 10 24-9 4-10-24-14 12z" fill="#6fe0d2" stroke="#6fe0d2" stroke-width="2" stroke-linejoin="round"/></svg>
-          <div class="pal pcl" id="pal">
+          <div class="pal-wrap">          <div class="pal pcl" id="pal">
             <form class="pal-in" id="form" role="search">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
               <label class="sr" for="q">Search topics and questions</label>
@@ -55,12 +61,13 @@
             </form>
             <div class="pal-list" id="list" role="listbox" aria-label="Suggestions"></div>
           </div></div>
-          <svg class="wave" viewBox="0 0 1000 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 52C120 40 220 14 380 18c150 4 230 40 380 34 90-4 170-22 240-34v62H0z"/></svg>
           
         </div>
         <div id="routeStage" hidden></div>
       </div>
     </section>
+
+    <section id="journey" class="jrn" hidden></section>
 
     <main id="view" class="view" tabindex="-1">
       <p class="loading">Loading the catalog…</p>
@@ -72,6 +79,7 @@
     <p><b data-site-name>ShiaLib</b> is a catalog. Every result links to the website where the original is published. We are not the author or publisher of any of it.</p>
     <p>Starter questions, learning paths, the plan and the tour are drafts awaiting review. No answers are written by AI; results are catalog entries chosen by plain matching rules.</p>
     <p>Searching all <span id="n"></span> pages in the catalog, right in your browser. Nothing you type leaves this page. <span id="bd"></span></p>
+    <p class="fcredit">Home page photographs: Al-Kafeel photo archive (pic.alkafeel.net) and, for Toronto, Jchmrt (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, via Wikimedia Commons, cropped). Map outlines: Natural Earth. The map and photographs are illustrations; each shrine page remains the work of its own website.</p>
     <nav class="fl" aria-label="More"><a href="#about">About and scope</a><a href="#guide">How to read search results</a><a href="#sources">Sources</a><a href="#feedback">Feedback</a></nav>
   </div></footer>
 

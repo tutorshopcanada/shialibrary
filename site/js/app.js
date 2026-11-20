@@ -914,6 +914,35 @@ function titleFor(r) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Home page: the photograph hero and the "Places of the Prophet and the Imams" journey (journey.js).
+// The journey is a separate module, fetched only when its section is close to the screen. Its buttons use the
+// site's own links, so each one opens real catalog results.
+// ---------------------------------------------------------------------------
+const journeyLink = (s) => (s.q ? qHref(s.q) : s.path ? searchHref({ ...blank(), path: s.path }) : pageHref(s.page));
+function goAsk() {
+  scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  setTimeout(() => input.focus({ preventScroll: true }), reduce ? 0 : 650);
+}
+function ensureJourney() {
+  const el = $('#journey');
+  if (!el || el.dataset.mounted) return;
+  el.dataset.mounted = '1';
+  const go = () => import('./journey.js').then((m) => m.mountJourney(el, { link: journeyLink, onAsk: goAsk })).catch((err) => { el.dataset.mounted = ''; console.error(err); });
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((en) => { if (en[0].isIntersecting) { io.disconnect(); go(); } }, { rootMargin: '150% 0px' });
+    io.observe(el);
+  } else go();
+}
+// The hero photograph drifts slightly as you scroll away from it.
+const heroPhoto = $('.hero-photo');
+if (heroPhoto && !reduce) {
+  addEventListener('scroll', () => {
+    const y = scrollY, h = innerHeight;
+    if (y < h * 1.3 && route.t === 'home') heroPhoto.style.translate = `0 ${(y * .2).toFixed(1)}px`;
+  }, { passive: true });
+}
+
 function render(opts = {}) {
   if (!engine) return;
   lastHref = location.href;
@@ -927,6 +956,8 @@ function render(opts = {}) {
     if ((t === 'page' && route.k === h) || (t === 'topic' && h === 'topics')) a.setAttribute('aria-current', 'page');
   });
   $('#heroStage').hidden = !heroOn; $('#routeStage').hidden = heroOn || t === 'slide';
+  document.body.classList.toggle('home', heroOn);
+  const jr = $('#journey'); if (jr) { jr.hidden = !heroOn; if (heroOn) ensureJourney(); }
   const sh = $('#show'); sh.hidden = t !== 'slide';
   announceText = '';
   if (t === 'slide') {
