@@ -929,11 +929,31 @@ function ensureJourney() {
   if (!el || el.dataset.mounted) return;
   el.dataset.mounted = '1';
   const go = () => import('./journey.js').then((m) => m.mountJourney(el, { link: journeyLink, onAsk: goAsk })).catch((err) => { el.dataset.mounted = ''; console.error(err); });
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((en) => { if (en[0].isIntersecting) { io.disconnect(); go(); } }, { rootMargin: '150% 0px' });
-    io.observe(el);
-  } else go();
+  // Nothing heavy runs while the visitor is still reading the hero: the map and its photographs are set up on the
+  // first scroll or touch, or once the page has been quiet for a few seconds. Until then a plain panel stands in.
+  const evs = ['scroll', 'wheel', 'touchstart', 'keydown', 'pointerdown'];
+  let started = false;
+  const start = () => {
+    if (started) return; started = true;
+    evs.forEach((ev) => removeEventListener(ev, start));
+    if (window.requestIdleCallback) requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
+  };
+  evs.forEach((ev) => addEventListener(ev, start, { passive: true }));
+  setTimeout(start, 6000);
 }
+// Starter searches under the hero search box, and "Surprise me": one random beginner page, opened on its own website.
+function renderHeroChips() {
+  const box = $('#heroChips'); if (!box || !engine) return;
+  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 3);
+  box.innerHTML = starters.map((q) => `<a class="hchip" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a>`).join('')
+    + '<a class="hchip surprise" id="surprise" href="#" target="_blank" rel="noopener noreferrer" aria-label="Surprise me: open a random beginner page on its own website, in a new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor"/></svg>Surprise me</a>';
+}
+$('#heroChips').addEventListener('click', (e) => {
+  const a = e.target.closest('#surprise'); if (!a) return;
+  const pool = RECS.filter((n) => n.lv === 'beginner' && n.g === 'work' && n.raw.access === 'free' && n.raw.type !== 'course' && safeUrl(n.raw.url));
+  if (!pool.length) { e.preventDefault(); return; }
+  a.href = safeUrl(pool[Math.floor(Math.random() * pool.length)].raw.url);   // the click then opens it
+});
 // The hero photograph drifts slightly as you scroll away from it.
 const heroPhoto = $('.hero-photo');
 if (heroPhoto && !reduce) {
@@ -957,7 +977,7 @@ function render(opts = {}) {
   });
   $('#heroStage').hidden = !heroOn; $('#routeStage').hidden = heroOn || t === 'slide';
   document.body.classList.toggle('home', heroOn);
-  const jr = $('#journey'); if (jr) { jr.hidden = !heroOn; if (heroOn) ensureJourney(); }
+  const jr = $('#journey'); if (jr) { jr.hidden = !heroOn; if (heroOn) { renderHeroChips(); ensureJourney(); } }
   const sh = $('#show'); sh.hidden = t !== 'slide';
   announceText = '';
   if (t === 'slide') {

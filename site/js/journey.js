@@ -98,7 +98,8 @@ export function mountJourney(root, opts = {}) {
       <canvas class="j-map" aria-hidden="true"></canvas><div class="j-vig" aria-hidden="true"></div><div class="j-scan" aria-hidden="true"></div>
       <div class="j-labels" aria-hidden="true"></div>
       <div class="j-hud"><p class="j-k" aria-hidden="true">Places of the Prophet and the Imams</p><p class="j-c" aria-hidden="true">21.42° N · 39.83° E</p>
-        <button class="j-play" type="button" aria-label="Play the journey"><svg class="i-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><svg class="i-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5h4.2v15H6zM13.8 4.5H18v15h-4.2z"/></svg><span>Play</span></button></div>
+</div>
+      <button class="j-play" type="button" aria-label="Play the journey"><svg class="i-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><svg class="i-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5h4.2v15H6zM13.8 4.5H18v15h-4.2z"/></svg><span>Play</span></button>
       <button class="j-ask" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>Ask a question</button>
       <div class="j-imms" aria-hidden="true"></div>
       <div class="j-cards">${STOPS.map(cardHtml).join('')}</div>
@@ -366,7 +367,7 @@ export function mountJourney(root, opts = {}) {
   const storyTop = () => root.getBoundingClientRect().top + window.scrollY;
   const storyTotal = () => root.offsetHeight - window.innerHeight;
   const yForQ = (q) => storyTop() + storyTotal() * ((q - QMIN) / (QMAX - QMIN));
-  function scrollQ() { const r = root.getBoundingClientRect(); stage.style.setProperty('--rad', (cl(r.top / 50, 0, 1) * 40).toFixed(1) + 'px'); return QMIN + cl(-r.top / storyTotal(), 0, 1) * (QMAX - QMIN); }
+  function scrollQ(r0) { const r = r0 || root.getBoundingClientRect(); stage.style.setProperty('--rad', (cl(r.top / 50, 0, 1) * 40).toFixed(1) + 'px'); return QMIN + cl(-r.top / storyTotal(), 0, 1) * (QMAX - QMIN); }
   function jumpTo(i) { window.scrollTo({ top: yForQ(i) + 1, behavior: reduce ? 'auto' : 'smooth' }); }
 
   // ---- autoplay -----------------------------------------------------------------------------------------------
@@ -416,12 +417,15 @@ export function mountJourney(root, opts = {}) {
   }
 
   // ---- loop -----------------------------------------------------------------------------------------------------
-  let target = QMIN, qCur = QMIN, vis = false, raf = 0, lastT = 0, t0 = performance.now();
+  let target = QMIN, qCur = QMIN, vis = false, raf = 0, lastT = 0, lastDraw = 0, t0 = performance.now();
   function loop(now) {
     raf = 0; if (!vis || !GEO || destroyed) return;
-    const dt = Math.min(.05, (now - lastT) / 1000 || .016); lastT = now;
+    const r = root.getBoundingClientRect();
+    // While only the top of the panel shows under the hero, redraw a few times a second instead of every frame.
+    if (r.top > window.innerHeight * .25 && !auto.on && now - lastDraw < 220) { raf = requestAnimationFrame(loop); return; }
+    const dt = Math.min(.05, (now - lastT) / 1000 || .016); lastT = now; lastDraw = now;
     autoStep(dt);
-    target = scrollQ(); qCur += (target - qCur) * (1 - Math.exp(-dt * 8)); if (Math.abs(target - qCur) < .0004) qCur = target;
+    target = scrollQ(auto.on ? null : r); qCur += (target - qCur) * (1 - Math.exp(-dt * 8)); if (Math.abs(target - qCur) < .0004) qCur = target;
     draw(qCur, (now - t0) / 1000); raf = requestAnimationFrame(loop);
   }
   function kick() { if (!raf && vis && GEO && !destroyed) { lastT = performance.now(); raf = requestAnimationFrame(loop); } }
