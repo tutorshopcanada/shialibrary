@@ -11,7 +11,7 @@
 import { createEngine, normalize as textNorm } from './search.js';
 import { loadSemantic } from './semantic.js';
 import { createSuggester } from './suggest.js';
-import { SITE, START, reportConfigured, reportHref, feedbackHref, REPORT_KINDS } from './config.js';
+import { SITE, START, SUGGESTED, reportConfigured, reportHref, feedbackHref, REPORT_KINDS } from './config.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"'`]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '`': '&#96;' }[c]));
@@ -268,6 +268,12 @@ function planHtml(sd) {
   }).join('')}</ol></div>`;
 }
 
+// The curated "common questions" (config.js SUGGESTED), in order; the first questions in the data file if none match.
+function suggestedQs() {
+  const by = new Map(engine.questions.map((q) => [q.id, q]));
+  const list = SUGGESTED.map((id) => by.get(id)).filter(Boolean);
+  return list.length ? list : engine.questions.slice(0, 8);
+}
 function qGroups() {
   const g = {};
   engine.questions.forEach((q) => { (g[topOf((q.headings || [])[0] || 'new-to-shia-islam')] ||= []).push(q); });
@@ -480,7 +486,7 @@ function startHtml() {
 
 function homeHtml() {
   const sd = startData(), sn = sd.shelf.filter((r) => read[r.id]).length, pd = sd.all.filter((id) => read[id]).length;
-  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 6);
+  const starters = suggestedQs().slice(0, 6);
   const tops = topHeadings().map((h) => ({ h, n: RECS.filter((r) => r.all.includes(h.id)).length })).filter((x) => x.n);
   const active = engine.sources.filter((s) => s.status === 'active'), counts = {};
   for (const r of engine.records) counts[r.source] = (counts[r.source] || 0) + 1;
@@ -759,8 +765,8 @@ function buildRows() {
   // so below two characters we keep showing the starter questions instead of results.
   if (q.length < 2) {
     if (engine.questions.length) {
-      out.push({ lab: `Suggested questions (${engine.questions.length})` });
-      engine.questions.forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) }));
+      out.push({ lab: 'Common questions' });
+      suggestedQs().forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) }));
       out.push({ k: 'q', text: `See all ${engine.questions.length} questions, grouped by theme`, go: () => nav(pageHref('questions')) });
     }
   } else {

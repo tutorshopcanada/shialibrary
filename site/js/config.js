@@ -106,6 +106,23 @@ export function feedbackHref(kind, message) {
 }
 
 /**
+ * The questions shown when the empty search box is clicked, and as "Common questions" on the home page, in this order.
+ * Each id is a question in data/questions.yaml (all of those are still drafts awaiting review). Chosen as the things
+ * newcomers and everyday Muslims most often ask: what Shia Islam is, how it differs from Sunni Islam, how to start,
+ * how Shias pray and why they mourn, who the Imams are, khums, Ramadan fasting. Missing ids are skipped.
+ */
+export const SUGGESTED = [
+  'q-what-is-shia-islam',
+  'q-how-to-become-muslim',
+  'q-shia-sunni-difference',
+  'q-how-do-shias-pray',
+  'q-why-mourn-husayn',
+  'q-who-are-the-twelve-imams',
+  'q-what-is-khums',
+  'q-fasting-ramadan',
+];
+
+/**
  * "Start here" curation. Owner-editable. Every id must be a record in the catalog; missing ids are
  * skipped (and logged in the browser console) so a rename never breaks the page.
  * Wording on the page that comes from these lists is a draft until the owner reviews it.

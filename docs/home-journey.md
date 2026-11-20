@@ -26,3 +26,5 @@ The home page has two parts that sit on top of the search.
 
 - The photographer credit for the home photograph (see `site/journey/CREDITS.md`). The owner has confirmed permission for the Al-Kafeel photographs. The About page says the site "never hosts, copies or writes" others' content; a line about decorative photographs would keep that accurate.
 - The wording of the nine cards is a draft. Like the starter questions and paths, a person the owner trusts should read it before it goes live.
+
+**Suggested questions.** The empty search box and the home page's "Common questions" show the list `SUGGESTED` in `site/js/config.js` (owner-editable, in order): what Shia Islam is, where to start, Shia and Sunni, how Shias pray, why they mourn, the Twelve Imams, khums, Ramadan fasting. Every id is a question in `data/questions.yaml` (still drafts). The full set stays under "See all questions".
