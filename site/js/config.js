@@ -14,7 +14,7 @@ export const SITE = {
   // If `target` is blank or still contains "TODO", the site shows "reporting is not set up yet".
   report: {
     kind: 'form',
-    target: 'TODO: paste the Google Form link (ending in /viewform) here',
+    target: 'https://docs.google.com/forms/d/e/1FAIpQLSd_w-XsFp9zWK4H7BQAS7B3Vc0TR8ygHaBrI-0NHkjbzcTnng/viewform',
     fields: {
       subject: '',   // e.g. 'entry.1111111111': receives the report type ("Link problem", ...)
       message: '',   // e.g. 'entry.2222222222': receives the full message (record id, title, link, words typed)
