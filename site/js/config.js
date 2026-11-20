@@ -7,15 +7,13 @@ export const SITE = {
   // "Report a wrong or broken link". Needs no server: it opens the visitor's
   // email app or a pre-filled GitHub issue.
   //
-  // TODO(owner): set ONE of these, then delete the other.
-  //   kind: 'mailto', target: 'someone@example.org'
+  // Set by the owner on 2026-11-20: reports and feedback arrive by email. To use GitHub issues instead:
   //   kind: 'github', target: 'https://github.com/OWNER/REPO'   (issues must be enabled)
-  //
-  // While the target still contains "TODO", the site shows "reporting is not
-  // set up yet" instead of a link that goes nowhere.
+  // If the target ever contains "TODO", the site shows "reporting is not set up yet"
+  // instead of a link that goes nowhere.
   report: {
     kind: 'mailto',
-    target: 'TODO-OWNER-EMAIL@example.org',
+    target: 'aliasgharjivraj@gmail.com',
   },
 
   // For questions we have no catalog entry for, link to the source site's own question page.
