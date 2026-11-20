@@ -828,12 +828,27 @@ function entityBodyHtml(e) {
 // Hero search box (suggestions as you type)
 // ---------------------------------------------------------------------------
 let rows = [], hi = 0;
+// Starter searches and "Surprise me" live at the top of the search dropdown, which opens when the empty box is clicked.
+function chipsHtml() {
+  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 3);
+  return `<div class="hchips" role="presentation">${starters.map((q) => `<a class="hchip" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a>`).join('')}`
+    + '<a class="hchip surprise" id="surprise" href="#" target="_blank" rel="noopener noreferrer" aria-label="Surprise me: open a random beginner page on its own website, in a new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor"/></svg>Surprise me</a></div>';
+}
+// "Surprise me": one random free beginner page, opened on its own website (the click then follows the link we set here).
+$('#list').addEventListener('click', (e) => {
+  const sa = e.target.closest('#surprise'); if (!sa) return;
+  const pool = RECS.filter((n) => n.lv === 'beginner' && n.g === 'work' && n.raw.access === 'free' && n.raw.type !== 'course' && safeUrl(n.raw.url));
+  if (!pool.length) { e.preventDefault(); return; }
+  sa.href = safeUrl(pool[Math.floor(Math.random() * pool.length)].raw.url);
+});
+
 const RET = '<kbd aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3v5a2 2 0 0 1-2 2H3M5.5 7.5L3 10l2.5 2.5"/></svg></kbd>';
 function buildRows() {
   const q = input.value.trim(), out = [];
   // One letter is too vague to match anything useful ("d" matched a section titled "D) ..."),
   // so below two characters we keep showing the starter questions instead of results.
   if (q.length < 2) {
+    out.push({ chips: true });
     if (engine.questions.length) {
       out.push({ lab: `Suggested questions (${engine.questions.length})` });
       engine.questions.forEach((x) => out.push({ k: 'q', text: x.question, go: () => nav(qHref(x.question)) }));
@@ -865,9 +880,10 @@ function buildRows() {
 }
 function buildList() {
   if (!engine) return;
-  const items = buildRows(); rows = items.filter((x) => !x.lab); if (hi >= rows.length) hi = 0;
+  const items = buildRows(); rows = items.filter((x) => !x.lab && !x.chips); if (hi >= rows.length) hi = 0;
   let i = -1;
   $('#list').innerHTML = items.map((x) => {
+    if (x.chips) return chipsHtml();
     if (x.lab) return `<div class="lab" role="presentation">${esc(x.lab)}</div>`;
     i++; const sel = i === hi, id = 'opt' + i;
     if (x.k === 'r') { const r = x.r; return `<a class="row" id="${id}" role="option" aria-selected="${sel}" data-i="${i}" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer"><span class="t" dir="auto">${esc(r.title)}</span><span class="r">${sel ? 'Open ' + RET : esc(tagLabel(r.content_tag))}</span></a>`; }
@@ -921,6 +937,56 @@ function titleFor(r) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Home page: the photograph hero and the "The Ark of Salvation: From the Kaaba to Khorasan" journey (journey.js).
+// The journey is a separate module, fetched only when its section is close to the screen. Its buttons use the
+// site's own links, so each one opens real catalog results.
+// ---------------------------------------------------------------------------
+const journeyLink = (s) => (s.q ? qHref(s.q) : s.path ? searchHref({ ...blank(), path: s.path }) : pageHref(s.page));
+function goAsk() {
+  scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  setTimeout(() => input.focus({ preventScroll: true }), reduce ? 0 : 650);
+}
+let catalogSettled = false;
+function settleCatalog() { catalogSettled = true; document.dispatchEvent(new Event('catalog-settled')); }
+function ensureJourney() {
+  const el = $('#journey');
+  if (!el || el.dataset.mounted) return;
+  el.dataset.mounted = '1';
+  const go = () => import('./journey.js').then((m) => m.mountJourney(el, { link: journeyLink, onAsk: goAsk })).catch((err) => { el.dataset.mounted = ''; console.error(err); });
+  // Nothing heavy runs while the visitor is still reading the hero: the map and its photographs are set up on the
+  // first scroll or touch, or once the catalog has finished loading. Until then a plain panel stands in.
+  const evs = ['scroll', 'wheel', 'touchstart', 'keydown', 'pointerdown'];
+  const later = () => setTimeout(start, 400);
+  let started = false;
+  const start = () => {
+    if (started) return; started = true;
+    evs.forEach((ev) => removeEventListener(ev, start));
+    if (window.requestIdleCallback) requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
+  };
+  evs.forEach((ev) => addEventListener(ev, start, { passive: true }));
+  // ...or once the catalog has finished loading, so the two never compete for the same moment.
+  if (catalogSettled) later(); else document.addEventListener('catalog-settled', later, { once: true });
+  setTimeout(start, 9000);
+}
+// Scrolling away from the hero: the photograph drifts and zooms a little, cools toward the map's colours, and the
+// headline lifts away (--hs runs from 0 to 1 over the first two thirds of a screen).
+const heroPhoto = $('.hero-photo'), heroStage = $('#heroStage');
+if (heroPhoto && !reduce) {
+  let ticking = false;
+  const heroFrame = () => {
+    ticking = false;
+    if (route.t !== 'home') return;
+    const y = scrollY, h = innerHeight;
+    if (y > h * 1.3) return;
+    const hs = Math.min(1, y / (h * .7));
+    heroStage.style.setProperty('--hs', hs.toFixed(3));
+    heroPhoto.style.translate = `0 ${(y * .2).toFixed(1)}px`;
+    heroPhoto.style.scale = (1 + hs * .08).toFixed(3);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(heroFrame); } }, { passive: true });
+}
+
 function render(opts = {}) {
   if (!engine) return;
   lastHref = location.href;
@@ -934,6 +1000,8 @@ function render(opts = {}) {
     if ((t === 'page' && route.k === h) || (t === 'topic' && h === 'topics')) a.setAttribute('aria-current', 'page');
   });
   $('#heroStage').hidden = !heroOn; $('#routeStage').hidden = heroOn || t === 'slide';
+  document.body.classList.toggle('home', heroOn);
+  const jr = $('#journey'); if (jr) { jr.hidden = !heroOn; if (heroOn) ensureJourney(); }
   const sh = $('#show'); sh.hidden = t !== 'slide';
   announceText = '';
   if (t === 'slide') {
@@ -1148,7 +1216,8 @@ async function loadMore(index) {
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     render();
-  } catch (err) { console.error('The rest of the catalog could not be loaded.', err); }
+    settleCatalog();
+  } catch (err) { console.error('The rest of the catalog could not be loaded.', err); settleCatalog(); }
 }
 
 async function start() {
@@ -1165,7 +1234,7 @@ async function start() {
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';
     if (index.total_records) $('#n').textContent = index.total_records.toLocaleString();
     buildTour(); buildNav(); render();
-    if (index.more) loadMore(index);
+    if (index.more) loadMore(index); else settleCatalog();
   } catch (err) {
     view.innerHTML = '<p class="callout">The catalog could not be loaded. Please check your connection and reload the page.</p>';
     announceText = 'The catalog could not be loaded.'; console.error(err);
