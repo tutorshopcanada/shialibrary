@@ -375,11 +375,11 @@ export function mountJourney(root, opts = {}) {
   // manual scroll pauses it at once; the Play button (or the "Follow the shrines" tab) starts it again.
   const auto = { on: false, started: false, done: false, q: QMIN, expectY: -1, idleTimer: 0 };
   const speedAt = (q) => {
-    if (q < 0) return .22;
+    if (q < 0) return .3;
     const d = Math.abs(q - Math.round(q)), last = q > N - 2.5;
-    if (d < .3) return .115;          // the photograph fills the screen: unhurried
-    if (d < .34) return .17;
-    return last ? .13 : .2;           // the camera travelling to the next stop
+    if (d < .3) return .17;           // the photograph fills the screen: still unhurried
+    if (d < .34) return .24;
+    return last ? .2 : .3;            // the camera travelling to the next stop
   };
   function setPlayUi() {
     const playing = auto.on, label = playing ? 'Pause' : (auto.done ? 'Replay' : (auto.started ? 'Resume' : 'Play'));
