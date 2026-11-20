@@ -47,7 +47,7 @@ How the static site in `site/` is put together, and where to change things. No b
 
 ## Not set up yet
 
-- `SITE.report` in `config.js` is still a placeholder, so the Feedback page and "Report a problem with this link" say reporting is not set up. Set an email address or a GitHub repository and both start working (the visitor's own email app or a pre-filled issue; no server).
+- `SITE.report` in `config.js` is still a placeholder, so the Feedback page and "Report a problem with this link" say reporting is not set up. Set the Google Form link in `SITE.report.target` and both start working (the form opens in a new tab; no server, no email address on the page).
 
 ## Checks
 
@@ -156,4 +156,4 @@ One card per result, in this order of weight: a kicker row (content-type tag tin
 
 ## Reporting a problem on a result (2026-11-20)
 
-"Report a problem" on a card opens a small menu: "This does not match “<search>”" (on a topic page, "This does not belong in <topic>"), "The link is broken or opens the wrong page", "The description or level is wrong". Each opens the visitor's email app or a pre-filled GitHub issue (`SITE.report` in `site/js/config.js`; `reportHref` builds it) with the record id, title and link, and for a mismatch the search words. Nothing is sent by the page. GitHub issues get a label (`search-mismatch`, `link-problem`, `description`). The site cannot change its own search results: a mismatch report is a queue for the owner. To act on one, add a synonym or heading alt-term, fix the record's headings or description, or add the query to `data/search-eval.yaml` so it cannot regress. The waitlist was removed on the same day. Reports go by email to the address in `SITE.report` (set 2026-11-20). If it is ever blank or a placeholder, the link on a card goes to the About page.
+"Report a problem" on a card opens a small menu: "This does not match “<search>”" (on a topic page, "This does not belong in <topic>"), "The link is broken or opens the wrong page", "The description or level is wrong". Each opens a Google Form in a new tab (`SITE.report` in `site/js/config.js`; `reportHref` builds it) with the record id, title and link, and for a mismatch the search words. Nothing is sent by the page; the visitor submits the form. Pre-filling the message needs the form's entry IDs in `SITE.report.fields`. The site cannot change its own search results: a mismatch report is a queue for the owner. To act on one, add a synonym or heading alt-term, fix the record's headings or description, or add the query to `data/search-eval.yaml` so it cannot regress. The waitlist was removed on the same day. Reports and feedback go to the Google Form in `SITE.report.target` (replaced the email address on 2026-11-20, so no personal address appears on the site). If it is blank or still a placeholder, the link on a card goes to the About page.
