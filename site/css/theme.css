@@ -101,19 +101,32 @@ footer :focus-visible{outline-color:#fff}
 .lrow .lr-foot{display:flex;flex-wrap:wrap;align-items:center;gap:.15rem 1.1rem;margin:1rem -1.35rem 0;padding:.65rem 1.35rem;border-top:1px solid var(--line);border-radius:0 0 15px 15px;background:color-mix(in srgb,var(--c) 5%,var(--paper));font-size:.8125rem;color:var(--mute)}
 .lrow .lr-src{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;color:var(--ink)}
 .lrow .lr-out{width:.9rem;height:.9rem;flex:none;color:color-mix(in srgb,var(--c) 85%,#000);transition:transform .16s}
-.lrow .lr-foot .lr-rep{margin-left:auto}
 @media (hover:hover) and (pointer:fine){
   .lrow:hover{background:var(--paper);border-color:color-mix(in srgb,var(--c) 40%,var(--line));box-shadow:0 14px 30px -18px rgba(11,30,42,.4);transform:translateY(-1px)}
   .lrow:hover::before{opacity:1}
   .lrow:hover h3 a,.lrow:hover h4 a{color:var(--h-teal-d)}
   .lrow:hover .lr-out{transform:translate(2px,-2px)}
 }
-/* "Report a problem" appears on hover only where there is room for it beside the links; elsewhere it simply sits in the footer. */
-@media (hover:hover) and (pointer:fine) and (min-width:1100px){
-  .lrow .lr-foot .lr-rep{position:absolute;right:1.35rem;bottom:.65rem;margin:0;opacity:0}
-  .lrow:hover .lr-foot .lr-rep,.lrow:focus-within .lr-foot .lr-rep{opacity:1}
-}
-@media (hover:hover) and (pointer:fine) and (max-width:1099px){.lrow .lr-foot .lr-rep{opacity:1}}
 @media (max-width:640px){.lrow .lby{flex-direction:column}.lrow .lby span+span::before{display:none}}
 @media (max-width:640px){.lrow{padding:.95rem 1.05rem 0}.lrow .lr-foot{margin:.9rem -1.05rem 0;padding:.6rem 1.05rem}.lrow h3,.lrow h4{font-size:1.0625rem}}
 @media (prefers-reduced-motion:reduce){.lrow,.lrow .lr-out{transition:none}.lrow:hover{transform:none}}
+
+/* "Report a problem": a small menu that opens above the footer. */
+.lrow .lr-foot .lr-rep,.lrow .lr-foot .lr-rp{margin-left:auto;opacity:1}
+.lrow .lr-foot .lr-rep{position:static}
+.lr-rp{position:relative}
+.lr-rp summary{list-style:none;cursor:pointer;color:var(--mute);text-decoration:underline;text-underline-offset:.2em;min-height:1.5rem;display:inline-flex;align-items:center}
+.lr-rp summary::-webkit-details-marker{display:none}
+.lr-rp summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.lr-rp[open] summary{color:var(--ink)}
+.lr-rpm{position:absolute;right:0;bottom:calc(100% + 10px);z-index:8;width:min(23rem,calc(100vw - 3.5rem));padding:.9rem;background:var(--paper);border:1px solid var(--edge);border-radius:14px;box-shadow:0 18px 40px -16px rgba(11,30,42,.45);color:var(--ink);font-size:.875rem}
+.lr-rpm p{margin:0 0 .6rem;color:var(--mute);font-size:.8125rem;line-height:1.45}
+.lr-rpm ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.lr-rpm a{display:block;padding:.55rem .7rem;border-radius:10px;color:var(--ink);text-decoration:none;font-weight:500;line-height:1.35;background:var(--hi)}
+.lr-rpm a small{display:block;margin-top:.1rem;font-weight:400;font-size:.75rem;color:var(--mute)}
+.lr-rpm li:first-child a{background:var(--h-navy);color:var(--h-sand)}
+.lr-rpm li:first-child a small{color:rgba(247,240,224,.75)}
+@media (hover:hover) and (pointer:fine){.lr-rpm a:hover{background:var(--line)}.lr-rpm li:first-child a:hover{background:var(--h-teal-d)}}
+.lr-rpm a:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+/* An open menu sits above everything in its card, including "Show more". */
+.lrow .lr-foot:has(.lr-rp[open]){z-index:10}

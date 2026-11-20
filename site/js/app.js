@@ -11,7 +11,7 @@
 import { createEngine, normalize as textNorm } from './search.js';
 import { loadSemantic } from './semantic.js';
 import { createSuggester } from './suggest.js';
-import { SITE, START, reportConfigured, reportHref, feedbackHref } from './config.js';
+import { SITE, START, reportConfigured, reportHref, feedbackHref, REPORT_KINDS } from './config.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"'`]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '`': '&#96;' }[c]));
@@ -447,19 +447,18 @@ function aboutHtml() {
   <section class="tsec"><h2>What the catalog covers</h2><dl class="cells">${cells.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v.includes('<a ') ? v : esc(v)}</dd></div>`).join('')}</dl><p class="note">${scope}</p></section>
   <section class="tsec"><h2>How results are chosen</h2><p class="sub">Plain matching rules. <strong>No AI writes answers here:</strong> the search only finds and orders catalog entries. When we have nothing close, we point to ${SITE.aiTool ? esc(SITE.aiTool.name) : 'an outside AI tool'}, a separate AI tool we do not run and cannot vouch for.</p>
    <details class="more"><summary>See the six steps</summary><ol class="hsteps">${steps.map((p) => `<li><p>${esc(p)}</p></li>`).join('')}</ol></details></section>
-  <section class="tsec"><h2>Privacy</h2><ul class="ticks priv"><li>The search runs entirely in your browser. What you type is not sent to anyone and is not stored.</li><li>No cookies, no tracking, no accounts.</li><li>Pages you tick as read are saved only in your own browser.</li><li>When you follow a link you leave this site, and the other website’s own policies apply. The “Browse Al-Islam.org questions” link under results opens that site’s question page. It sends nothing you typed.</li></ul></section>
+  <section class="tsec"><h2>Privacy</h2><ul class="ticks priv"><li>The search runs entirely in your browser. What you type is not sent to anyone and is not stored. The one exception is a report you choose to send: “This does not match my search” puts your search words in a message that you send yourself.</li><li>No cookies, no tracking, no accounts.</li><li>Pages you tick as read are saved only in your own browser.</li><li>When you follow a link you leave this site, and the other website’s own policies apply. The “Browse Al-Islam.org questions” link under results opens that site’s question page. It sends nothing you typed.</li></ul></section>
   <section class="tsec"><div class="qask"><div><h3>Report a wrong or broken link</h3><p>If a link is broken, goes to the wrong page, or a description is wrong, please tell us. Include the title of the result and what is wrong.</p></div><div class="qask-b">${rep}</div></div></section>`;
 }
 
 const FB = {
-  waitlist: { tab: 'Waitlist', d: 'Hear when new sources and features arrive. A message is optional.', go: 'Join the waitlist', need: false, ph: 'Anything you would like us to know? (optional)' },
   source: { tab: 'Suggest a website', d: 'Tell us about a Shia website that belongs in the catalog, and what it offers.', go: 'Send suggestion', need: true, ph: 'The website address, and what it offers.' },
   feedback: { tab: 'Topic or feedback', d: 'Something missing, confusing or wrong? A topic you would like covered?', go: 'Send feedback', need: true, ph: 'What would help?' },
   link: { tab: 'Broken link', d: 'A link that fails or opens the wrong page. Include the title of the result.', go: 'Send report', need: true, ph: 'The title of the result and what is wrong.' },
 };
 function feedbackHtml() {
   const ok = reportConfigured(), via = SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app';
-  const k0 = ui.fbkind && FB[ui.fbkind] ? ui.fbkind : 'waitlist';
+  const k0 = ui.fbkind && FB[ui.fbkind] ? ui.fbkind : 'source';
   if (!ok) {
     try { console.info('ShiaLib: feedback is switched off. Set SITE.report in site/js/config.js to turn it on.'); } catch { /* ignore */ }
     return `<section class="blk" id="feedback"><div class="fbc fbc-off"><h2>Feedback opens soon</h2><p>We have not connected a way to receive notes yet. Please check back, or use the links in the footer for now.</p><a class="btn line" href="${esc(BASE)}">Back to the start</a></div></section>`;
@@ -498,7 +497,7 @@ function homeHtml() {
   <section class="blk"><div class="inside"><div><h2>What is in the catalog</h2><p>${engine.records.length.toLocaleString()} pages from ${active.length} trusted Shia sources. Every one links out; nothing is copied.</p></div>
    <ul class="in-l">${active.map((s) => `<li><b dir="auto">${esc(srcName(s))}</b><span>${(counts[s.id] || 0).toLocaleString()} pages</span></li>`).join('')}</ul>
    <a class="btn line" href="${esc(pageHref('sources'))}">See the websites</a></div></section>
-  <p class="quietfb">Missing something? <a href="${esc(pageHref('feedback'))}">Join the waitlist or send feedback</a>.</p>`;
+  <p class="quietfb">Missing something? <a href="${esc(pageHref('feedback'))}">Send feedback</a>.</p>`;
 }
 
 const PG = {
@@ -509,7 +508,7 @@ const PG = {
   sources: { kind: 'Sources', title: 'Where our resources come from', lede: 'Every result comes from one of these trusted Shia sources. Nothing else appears.', next: true, body: sourcesHtml },
   guide: { kind: 'Guide', title: 'How to read search results', lede: 'See what each part of a result tells you.', next: true, body: guideHtml },
   about: { kind: 'About', title: 'About and scope', lede: 'What the catalog covers, and what it leaves to the original websites.', next: true, body: aboutHtml, noHide: true },
-  feedback: { kind: 'Contact', title: 'Send feedback', lede: 'Report a broken link, suggest a website or a topic, or join the waitlist.', next: false, body: feedbackHtml },
+  feedback: { kind: 'Contact', title: 'Send feedback', lede: 'Report a broken link, or suggest a website or a topic.', next: false, body: feedbackHtml },
 };
 
 function pageStage(m) {
@@ -688,17 +687,29 @@ function miniHtml(r) {
   <h3><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></h3>
   ${r.description ? `<p dir="auto">${esc(r.description)}</p>` : ''}<span class="mute" style="font-size:.875rem;margin-top:auto">Opens on ${esc(sourceShort(r.source))} <span aria-hidden="true">↗</span></span></article>`;
 }
+// "Report a problem" on a result: a small menu. The first choice is "this does not match": it carries the visitor's
+// search words (or the topic) into the message so the owner can see what was searched and what came back. Nothing is
+// sent by the page; the email app or GitHub opens with the message ready and the visitor sends it.
+function reportMenu(r) {
+  if (!reportConfigured()) return `<a class="lr-rep" href="${esc(pageHref('about'))}">Report a problem<span class="sr"> with ${esc(r.title)}</span></a>`;
+  const q = route.t === 'results' ? ((route.st || {}).q || '').trim() : '';
+  const topic = route.t === 'topic' ? TOPN(route.k) : (route.t === 'results' && (route.st || {}).topic ? TOPN(route.st.topic) : '');
+  const ext = SITE.report.kind === 'github' ? ' target="_blank" rel="noopener noreferrer"' : '';
+  const opt = (kind, label, note = '') => `<li><a href="${esc(reportHref(r, kind, { q, topic }))}"${ext}>${label}${note ? `<small>${esc(note)}</small>` : ''}</a></li>`;
+  const first = q ? opt('mismatch', `This does not match “${esc(q.length > 40 ? q.slice(0, 40) + '…' : q)}”`, 'Sends your search words, so we can improve the results')
+    : topic ? opt('mismatch', `This does not belong in ${esc(topic)}`, 'Tells us which topic you were in') : '';
+  return `<details class="lr-rp"><summary>Report a problem<span class="sr"> with ${esc(r.title)}</span></summary><div class="lr-rpm"><p>What is wrong? Your ${SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app'} opens with a message ready. Nothing is sent until you send it.</p><ul>${first}${opt('link', esc(REPORT_KINDS.link.label))}${opt('info', esc(REPORT_KINDS.info.label))}</ul></div></details>`;
+}
 function rowHtml(r, more, hl = 'h4') {
   const c = r.context || {}, parts = [c.section, c.work].filter(Boolean), sid = (c.section || c.work || {}).id;
   const ctx = parts.length ? `<span class="lr-ctx">In ${parts.map((p) => extLink(p.url, '', esc(p.title))).join(' · ')} · <a href="${esc(searchHref({ ...blank(), section: sid }))}">${c.section ? 'More in this section' : 'More in this book'}</a></span>` : (r.descendant_count ? `<span class="lr-ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>` : '');
-  const rh = reportHref(r);
   const by = [(r.authors || []).length ? `By ${(r.authors || []).map(scholarName).join(', ')}` : '', r.marja ? `Rulings of ${scholarName(r.marja)}` : ''].filter(Boolean);
   const arrow = '<svg class="lr-out" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 3.5h7v7M12.5 3.5l-9 9"/></svg>';
   return `<li class="lrow" style="--c:var(--t-${esc(r.content_tag)})">
   <div class="lk"><span class="tag">${esc(tagLabel(r.content_tag))}</span>${priceBadge(r)}${MEANING.ids.has(r.id) ? '<span class="by-meaning" title="Matched by meaning on your device, not by your exact words">Found by meaning</span>' : ''}${levelDots(r.level)}</div>
   <${hl}><a href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer" dir="auto">${esc(r.title)}<span class="sr"> (opens in a new tab)</span></a></${hl}>
   ${by.length ? `<p class="lby" dir="auto">${by.map((b) => `<span>${esc(b)}</span>`).join('')}</p>` : ''}
-  ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<div class="lr-foot"><span class="lr-src" dir="auto">${arrow}<span class="sr">Opens on </span>${esc(sourceShort(r.source))}</span>${ctx}<a class="lr-rep" href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem<span class="sr"> with ${esc(r.title)}</span></a></div></li>`;
+  ${r.description ? `<p class="lr-d" dir="auto">${esc(r.description)}</p>` : ''}${clusterDetails(more)}<div class="lr-foot"><span class="lr-src" dir="auto">${arrow}<span class="sr">Opens on </span>${esc(sourceShort(r.source))}</span>${ctx}${reportMenu(r)}</div></li>`;
 }
 const resultRows = (es) => `<ul class="lrows">${es.map((e) => (e.kind === 'cluster' ? rowHtml(e.items[0].record, moreOf(e)) : rowHtml(e.record))).join('')}</ul>`;
 const topicSearchHtml = (id) => `<form class="refine tsrch" id="tsearch" role="search" data-topic="${esc(id)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><label class="sr" for="tq-top">Search within ${esc(TOPN(id))}</label><input id="tq-top" type="search" autocomplete="off" enterkeyhint="search" placeholder="Search within ${esc(TOPN(id))}" maxlength="200"><button class="btn solid" type="submit">Search</button></form>`;
@@ -1029,6 +1040,8 @@ view.addEventListener('submit', (e) => {
   const href = feedbackHref(k, msg); if (!href) return;
   if (SITE.report.kind === 'github') window.open(href, '_blank', 'noopener'); else location.href = href;
 });
+document.addEventListener('click', (e) => { document.querySelectorAll('details.lr-rp[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; }); });
+document.addEventListener('keydown', (e) => { if (e.key !== 'Escape') return; const d = document.querySelector('details.lr-rp[open]'); if (d) { d.open = false; d.querySelector('summary').focus(); } });
 $('#skip').addEventListener('click', (e) => { e.preventDefault(); view.setAttribute('tabindex', '-1'); view.focus(); view.scrollIntoView({ block: 'start' }); });
 $('#ask').addEventListener('click', () => {
   if (route.t === 'results' && route.st.q) { const r = $('#q2'); if (r) { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); r.focus(); r.select(); return; } }

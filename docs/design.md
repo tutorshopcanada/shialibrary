@@ -48,7 +48,6 @@ How the static site in `site/` is put together, and where to change things. No b
 ## Not set up yet
 
 - `SITE.report` in `config.js` is still a placeholder, so the Feedback page and "Report a problem with this link" say reporting is not set up. Set an email address or a GitHub repository and both start working (the visitor's own email app or a pre-filled issue; no server).
-- The waitlist is a message to that same address. There is no list or database.
 
 ## Checks
 
@@ -69,7 +68,7 @@ python3 -m http.server 8000 --directory site   # then open http://localhost:8000
 ## About and feedback
 
 - **About** is split into scannable sections with an on-page jump row (`data-jump` buttons, so the hash stays a route): three principle cards, a "what is included" fact list, the website list, numbered "how results are chosen" steps, a privacy checklist, and a report-a-link card.
-- **Feedback** is a four-card chooser (waitlist, suggest a website, topic or feedback, broken link) with a short form beside a three-step explainer. The button label, placeholder and required message follow the choice (`FB` in `app.js`). "Suggest a source" on the Sources page opens it with the website option selected. Until the owner sets `SITE.report` in `site/js/config.js`, the form is replaced by a notice.
+- **Feedback** is a three-tab chooser (suggest a website, topic or feedback, broken link) with a short form beside a three-step explainer. The button label, placeholder and required message follow the choice (`FB` in `app.js`). "Suggest a source" on the Sources page opens it with the website option selected. Until the owner sets `SITE.report` in `site/js/config.js`, the form is replaced by a notice.
 
 ## Calmer cards
 
@@ -105,7 +104,7 @@ Removed on 2026-11-20 at the owner's request: the "What is Islam?" slideshow, it
 
 ## Feedback (second pass)
 
-One narrow card instead of a side column plus four boxed options. Four underlined tabs (Waitlist, Suggest a website, Topic or feedback, Broken link) pick the kind; one sentence under the tabs says what that kind is for, then a message box and a single button. The button label, placeholder and whether a message is required follow the tab. The explainer is one muted note under the button. Until the owner sets `SITE.report` in `site/js/config.js`, visitors see a plain "Feedback opens soon" card (no developer wording) and the console logs a one-line hint for the owner.
+One narrow card instead of a side column plus four boxed options. Three underlined tabs (Suggest a website, Topic or feedback, Broken link) pick the kind; one sentence under the tabs says what that kind is for, then a message box and a single button. The button label, placeholder and whether a message is required follow the tab. The explainer is one muted note under the button. Until the owner sets `SITE.report` in `site/js/config.js`, visitors see a plain "Feedback opens soon" card (no developer wording) and the console logs a one-line hint for the owner.
 
 ## About (second pass)
 
@@ -154,3 +153,7 @@ The sand frame no longer wraps only the header. `#top` is one sand frame with a 
 ## Result cards (2026-11-20)
 
 One card per result, in this order of weight: a kicker row (content-type tag tinted in its own colour, free/paid and "found by meaning" badges, level dots at the right); the title; one quiet line for author and whose rulings; the description (two lines); and a footer band that always names the website the card opens on, with the section/book links and "Report a problem". A thin bar on the left edge and the footer tint take the tag's colour. The whole card is the link (the title link stretches over it); the footer links sit above it. "Report a problem" shows on hover at 1100px and wider, and always below that. Styles are at the end of `site/css/theme.css`; the markup is `rowHtml` in `site/js/app.js`.
+
+## Reporting a problem on a result (2026-11-20)
+
+"Report a problem" on a card opens a small menu: "This does not match “<search>”" (on a topic page, "This does not belong in <topic>"), "The link is broken or opens the wrong page", "The description or level is wrong". Each opens the visitor's email app or a pre-filled GitHub issue (`SITE.report` in `site/js/config.js`; `reportHref` builds it) with the record id, title and link, and for a mismatch the search words. Nothing is sent by the page. GitHub issues get a label (`search-mismatch`, `link-problem`, `description`). The site cannot change its own search results: a mismatch report is a queue for the owner. To act on one, add a synonym or heading alt-term, fix the record's headings or description, or add the query to `data/search-eval.yaml` so it cannot regress. The waitlist was removed on the same day. Until `SITE.report` is set, the link on a card goes to the About page.
