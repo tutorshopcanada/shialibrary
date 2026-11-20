@@ -347,11 +347,14 @@ export function mountJourney(root, opts = {}) {
   }
   function expand(rows, step) { const xs = [], ys = []; rows.forEach((r) => { const j = r[0], v = r[1]; for (let k = 0; k < v.length; k += 2) for (let i = v[k]; i <= v[k + 1]; i++) { xs.push(i * step); ys.push(j * step); } }); return { xs: new Float32Array(xs), ys: new Float32Array(ys) }; }
   function byRow(rows) { const m = {}; rows.forEach((r) => { m[r[0]] = r[1]; }); return m; }
-  function buildGeo(g) {
+  // The map is set up in small steps, handing the page back between them, so a slow device never freezes for long.
+  const tick = () => new Promise((ok) => (window.requestIdleCallback ? requestIdleCallback(() => ok(), { timeout: 250 }) : setTimeout(ok, 30)));
+  async function buildGeo(g) {
     GEO = g;
     STOPS.forEach((s) => { const c = g.cities[s.k]; s.x = c[0]; s.y = c[1]; });
-    cHi = expand(g.hi, g.step); cLo = expand(g.lo, g.step); STEPF = g.stepF; fHi = byRow(g.hiF); fLo = byRow(g.loF);
-    wDots = expand(g.wd, g.wstep); naMid = expand(g.nam, g.nastep); naFine = byRow(g.naf);
+    cHi = expand(g.hi, g.step); await tick(); cLo = expand(g.lo, g.step); await tick();
+    STEPF = g.stepF; fHi = byRow(g.hiF); fLo = byRow(g.loF); await tick();
+    wDots = expand(g.wd, g.wstep); await tick(); naMid = expand(g.nam, g.nastep); naFine = byRow(g.naf); await tick();
     for (let i = 0; i < N - 1; i++) { const a = STOPS[i], b = STOPS[i + 1], dist = Math.hypot(b.x - a.x, b.y - a.y), lift = i === N - 2 ? dist * .09 : cl(dist * .18, 18, 120); for (let s = 0; s < ARC; s++) { const t = s / ARC; routePts.push(lerp(a.x, b.x, t), lerp(a.y, b.y, t), lift * Math.sin(Math.PI * t)); } }
     const e = STOPS[N - 1]; routePts.push(e.x, e.y, 0);
     halo = document.createElement('canvas'); halo.width = halo.height = 64; const hc = halo.getContext('2d'), gr = hc.createRadialGradient(32, 32, 0, 32, 32, 32);
@@ -367,7 +370,7 @@ export function mountJourney(root, opts = {}) {
   const storyTop = () => root.getBoundingClientRect().top + window.scrollY;
   const storyTotal = () => root.offsetHeight - window.innerHeight;
   const yForQ = (q) => storyTop() + storyTotal() * ((q - QMIN) / (QMAX - QMIN));
-  function scrollQ(r0) { const r = r0 || root.getBoundingClientRect(); stage.style.setProperty('--rad', (cl(r.top / 50, 0, 1) * 40).toFixed(1) + 'px'); return QMIN + cl(-r.top / storyTotal(), 0, 1) * (QMAX - QMIN); }
+  function scrollQ(r0) { const r = r0 || root.getBoundingClientRect(); stage.style.setProperty('--bl', cl(r.top / 70, 0, 1).toFixed(3)); return QMIN + cl(-r.top / storyTotal(), 0, 1) * (QMAX - QMIN); }
   function jumpTo(i) { window.scrollTo({ top: yForQ(i) + 1, behavior: reduce ? 'auto' : 'smooth' }); }
 
   // ---- autoplay -----------------------------------------------------------------------------------------------
@@ -405,28 +408,34 @@ export function mountJourney(root, opts = {}) {
   }
   function onUserInput() { if (auto.on) pauseAuto(); }
   function onScroll() {
+    peekDrawn = false; kick();
     if (auto.on && auto.expectY >= 0 && Math.abs(window.scrollY - auto.expectY) > 3) pauseAuto();   // the visitor moved the page
     clearTimeout(auto.idleTimer);
-    if (!auto.started && !calm) auto.idleTimer = setTimeout(maybeAutoStart, 900);
+    if (!auto.started && !calm) auto.idleTimer = setTimeout(maybeAutoStart, 350);
   }
   function maybeAutoStart() {
     if (auto.started || calm || destroyed || document.hidden || !vis) return;
     const a = document.activeElement; if (a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return;
     const r = root.getBoundingClientRect();
-    if (r.top <= 4 && r.bottom > window.innerHeight * .8 && scrollQ() < N - 1.05) startAuto(false);
+    // As soon as the panel has risen into the screen and the visitor pauses, the page glides down to the map and plays.
+    if (r.top < window.innerHeight * .62 && r.bottom > window.innerHeight * .8 && scrollQ() < N - 1.05) startAuto(false);
   }
 
   // ---- loop -----------------------------------------------------------------------------------------------------
-  let target = QMIN, qCur = QMIN, vis = false, raf = 0, lastT = 0, lastDraw = 0, t0 = performance.now();
+  let target = QMIN, qCur = QMIN, vis = false, raf = 0, lastT = 0, peekDrawn = false, t0 = performance.now();
   function loop(now) {
     raf = 0; if (!vis || !GEO || destroyed) return;
     const r = root.getBoundingClientRect();
-    // While only the top of the panel shows under the hero, redraw a few times a second instead of every frame.
-    if (r.top > window.innerHeight * .25 && !auto.on && now - lastDraw < 220) { raf = requestAnimationFrame(loop); return; }
-    const dt = Math.min(.05, (now - lastT) / 1000 || .016); lastT = now; lastDraw = now;
+    // While only the top edge of the panel shows under the hero, draw the map once and then rest completely.
+    // Scrolling, resizing or Play wakes it again (kick).
+    const peek = r.top > window.innerHeight * .25 && !auto.on;
+    if (peek && peekDrawn) return;
+    const dt = Math.min(.05, (now - lastT) / 1000 || .016); lastT = now;
     autoStep(dt);
     target = scrollQ(auto.on ? null : r); qCur += (target - qCur) * (1 - Math.exp(-dt * 8)); if (Math.abs(target - qCur) < .0004) qCur = target;
-    draw(qCur, (now - t0) / 1000); raf = requestAnimationFrame(loop);
+    draw(qCur, (now - t0) / 1000);
+    peekDrawn = peek && qCur === target;
+    raf = requestAnimationFrame(loop);
   }
   function kick() { if (!raf && vis && GEO && !destroyed) { lastT = performance.now(); raf = requestAnimationFrame(loop); } }
 
@@ -435,7 +444,7 @@ export function mountJourney(root, opts = {}) {
   $('.j-cue').addEventListener('click', () => { if (calm) { root.scrollIntoView({ behavior: 'smooth' }); return; } startAuto(true); });
   $('.j-ask').addEventListener('click', () => { pauseAuto(); onAsk(); });
   root.addEventListener('click', (e) => { const a = e.target.closest('a[data-ask]'); if (a) { e.preventDefault(); pauseAuto(); onAsk(); } });
-  const onResize = () => { if (!GEO) return; size(); if (calm) draw(QMIN, 0); else kick(); };
+  const onResize = () => { if (!GEO) return; size(); peekDrawn = false; if (calm) draw(QMIN, 0); else kick(); };
   const onVis = () => { if (document.hidden) pauseAuto(); };
   const onKey = (e) => { if (/^(ArrowUp|ArrowDown|PageUp|PageDown|Home|End| )$/.test(e.key)) onUserInput(); };
   const onFocusIn = (e) => { if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) pauseAuto(); };
@@ -448,15 +457,16 @@ export function mountJourney(root, opts = {}) {
     io = new IntersectionObserver((en) => { vis = en[0].isIntersecting; if (!vis) pauseAuto(); kick(); }, { rootMargin: '100px' }); io.observe(root);
   }
 
-  fetch(U('geo.json')).then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then((g) => {
+  fetch(U('geo.json')).then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(async (g) => {
     if (destroyed) return;
-    buildGeo(g); size();
+    await buildGeo(g); if (destroyed) return; size();
     if (calm) {
       root.classList.add('j-calm'); size(); draw(QMIN, 0);
       cards.forEach((c) => { c.style.setProperty('--v', 1); const img = c.querySelector('.j-ph img'); img.loading = 'lazy'; img.src = img.dataset.src; });
       window.addEventListener('resize', onResize); return;
     }
     buildImms(); qCur = target = scrollQ(); draw(qCur, 0); setPlayUi(); activate();
+    auto.idleTimer = setTimeout(maybeAutoStart, 450);   // the visitor may already be waiting at the panel
   }).catch((err) => { console.error('The journey could not be loaded.', err); root.classList.add('j-failed'); });
   if (calm) root.classList.add('j-calm');
   setPlayUi();

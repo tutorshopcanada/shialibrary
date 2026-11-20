@@ -924,14 +924,17 @@ function goAsk() {
   scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
   setTimeout(() => input.focus({ preventScroll: true }), reduce ? 0 : 650);
 }
+let catalogSettled = false;
+function settleCatalog() { catalogSettled = true; document.dispatchEvent(new Event('catalog-settled')); }
 function ensureJourney() {
   const el = $('#journey');
   if (!el || el.dataset.mounted) return;
   el.dataset.mounted = '1';
   const go = () => import('./journey.js').then((m) => m.mountJourney(el, { link: journeyLink, onAsk: goAsk })).catch((err) => { el.dataset.mounted = ''; console.error(err); });
   // Nothing heavy runs while the visitor is still reading the hero: the map and its photographs are set up on the
-  // first scroll or touch, or once the page has been quiet for a couple of seconds. Until then a plain panel stands in.
+  // first scroll or touch, or once the catalog has finished loading. Until then a plain panel stands in.
   const evs = ['scroll', 'wheel', 'touchstart', 'keydown', 'pointerdown'];
+  const later = () => setTimeout(start, 400);
   let started = false;
   const start = () => {
     if (started) return; started = true;
@@ -939,7 +942,9 @@ function ensureJourney() {
     if (window.requestIdleCallback) requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
   };
   evs.forEach((ev) => addEventListener(ev, start, { passive: true }));
-  setTimeout(start, 2500);
+  // ...or once the catalog has finished loading, so the two never compete for the same moment.
+  if (catalogSettled) later(); else document.addEventListener('catalog-settled', later, { once: true });
+  setTimeout(start, 9000);
 }
 // Starter searches under the hero search box, and "Surprise me": one random beginner page, opened on its own website.
 function renderHeroChips() {
@@ -954,13 +959,22 @@ $('#heroChips').addEventListener('click', (e) => {
   if (!pool.length) { e.preventDefault(); return; }
   a.href = safeUrl(pool[Math.floor(Math.random() * pool.length)].raw.url);   // the click then opens it
 });
-// The hero photograph drifts slightly as you scroll away from it.
-const heroPhoto = $('.hero-photo');
+// Scrolling away from the hero: the photograph drifts and zooms a little, cools toward the map's colours, and the
+// headline lifts away (--hs runs from 0 to 1 over the first two thirds of a screen).
+const heroPhoto = $('.hero-photo'), heroStage = $('#heroStage');
 if (heroPhoto && !reduce) {
-  addEventListener('scroll', () => {
+  let ticking = false;
+  const heroFrame = () => {
+    ticking = false;
+    if (route.t !== 'home') return;
     const y = scrollY, h = innerHeight;
-    if (y < h * 1.3 && route.t === 'home') heroPhoto.style.translate = `0 ${(y * .2).toFixed(1)}px`;
-  }, { passive: true });
+    if (y > h * 1.3) return;
+    const hs = Math.min(1, y / (h * .7));
+    heroStage.style.setProperty('--hs', hs.toFixed(3));
+    heroPhoto.style.translate = `0 ${(y * .2).toFixed(1)}px`;
+    heroPhoto.style.scale = (1 + hs * .08).toFixed(3);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(heroFrame); } }, { passive: true });
 }
 
 function render(opts = {}) {
@@ -1182,7 +1196,8 @@ async function loadMore(index) {
     RECS = engine.records.map(normalize); N = new Map(RECS.map((n) => [n.id, n]));
     $('#n').textContent = engine.records.length.toLocaleString();
     render();
-  } catch (err) { console.error('The rest of the catalog could not be loaded.', err); }
+    settleCatalog();
+  } catch (err) { console.error('The rest of the catalog could not be loaded.', err); settleCatalog(); }
 }
 
 async function start() {
@@ -1197,7 +1212,7 @@ async function start() {
     $('#bd').textContent = engine.buildDate ? `Catalog updated ${engine.buildDate}.` : '';
     if (index.total_records) $('#n').textContent = index.total_records.toLocaleString();
     buildTour(); buildNav(); render();
-    if (index.more) loadMore(index);
+    if (index.more) loadMore(index); else settleCatalog();
   } catch (err) {
     view.innerHTML = '<p class="callout">The catalog could not be loaded. Please check your connection and reload the page.</p>';
     announceText = 'The catalog could not be loaded.'; console.error(err);
