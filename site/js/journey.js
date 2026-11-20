@@ -103,10 +103,11 @@ export function mountJourney(root, opts = {}) {
       <button class="j-ask" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>Ask a question</button>
       <div class="j-imms" aria-hidden="true"></div>
       <div class="j-cards">${STOPS.map(cardHtml).join('')}</div>
-      <div class="j-tl"><div class="j-track"><i class="j-fill"></i><i class="j-dot"></i></div><div class="j-stops"></div></div>
+      <div class="j-tl"><button class="j-nav j-prev" type="button" aria-label="Previous stop"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><div class="j-tlm"><div class="j-track"><i class="j-fill"></i><i class="j-dot"></i></div><div class="j-stops"></div></div><button class="j-nav j-next" type="button" aria-label="Next stop"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
     </div>`;
   const $ = (s) => root.querySelector(s);
   const stage = $('.j-stage'), cv = $('.j-map'), ctx = cv.getContext('2d'), labelsEl = $('.j-labels'), immsEl = $('.j-imms'), stopsEl = $('.j-stops');
+  const prevBtn = $('.j-prev'), nextBtn = $('.j-next');
   const cardsEl = $('.j-cards'), cards = [].slice.call(root.querySelectorAll('.j-card')), playBtn = $('.j-play'), coords = $('.j-c');
 
   // ---- state ---------------------------------------------------------------------------------------
@@ -325,7 +326,7 @@ export function mountJourney(root, opts = {}) {
     const c = camAt(q); setCam(c);
     drawGrat(); drawCountries(); drawDots(t); drawCountryNames(); drawRoute(c.rp, t); drawMarkers(q, c.rp, t);
     const near = cl(Math.round(q), 0, N - 1); let maxE = 0, mv = 0;
-    if (near !== lastIdx) { lastIdx = near; const s = STOPS[near]; coords.textContent = s.lat.toFixed(2) + '° N · ' + Math.abs(s.lon).toFixed(2) + '° ' + (s.lon < 0 ? 'W' : 'E'); tlBtns.forEach((b, k) => { b.classList.toggle('on', k === near); if (k === near) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }); }
+    if (near !== lastIdx) { lastIdx = near; const s = STOPS[near]; coords.textContent = s.lat.toFixed(2) + '° N · ' + Math.abs(s.lon).toFixed(2) + '° ' + (s.lon < 0 ? 'W' : 'E'); prevBtn.disabled = near === 0; nextBtn.disabled = near === N - 1; tlBtns.forEach((b, k) => { b.classList.toggle('on', k === near); if (k === near) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); }); }
     for (let i = 0; i < N; i++) {
       const v = sm(cl((.42 - Math.abs(q - i)) / .14, 0, 1)), cd = cards[i]; if (v > mv) mv = v;
       cd.style.setProperty('--v', v.toFixed(3));
@@ -362,7 +363,7 @@ export function mountJourney(root, opts = {}) {
     STOPS.forEach((s, i) => {
       const L = document.createElement('div'); L.className = 'j-lbl'; L.innerHTML = '<b>' + (i + 1) + '</b><span>' + esc(s.n) + '</span>'; labelsEl.appendChild(L); lbls.push(L);
       const b = document.createElement('button'); b.type = 'button'; b.innerHTML = '<b>' + esc(s.n) + '</b><span>' + esc(s.c) + '</span>'; b.setAttribute('aria-label', 'Go to ' + s.n);
-      b.addEventListener('click', () => { pauseAuto('user'); jumpTo(i); }); stopsEl.appendChild(b); tlBtns.push(b);
+      b.addEventListener('click', () => goTo(i)); stopsEl.appendChild(b); tlBtns.push(b);
     });
   }
 
@@ -371,7 +372,6 @@ export function mountJourney(root, opts = {}) {
   const storyTotal = () => root.offsetHeight - window.innerHeight;
   const yForQ = (q) => storyTop() + storyTotal() * ((q - QMIN) / (QMAX - QMIN));
   function scrollQ(r0) { const r = r0 || root.getBoundingClientRect(); stage.style.setProperty('--bl', cl(r.top / 70, 0, 1).toFixed(3)); return QMIN + cl(-r.top / storyTotal(), 0, 1) * (QMAX - QMIN); }
-  function jumpTo(i) { window.scrollTo({ top: yForQ(i) + 1, behavior: reduce ? 'auto' : 'smooth' }); }
 
   // ---- autoplay -----------------------------------------------------------------------------------------------
   // Starts by itself once the visitor arrives at the journey and stops scrolling. Any wheel, touch, key press or
@@ -422,6 +422,72 @@ export function mountJourney(root, opts = {}) {
     if (r.top < window.innerHeight * .62 && r.bottom > window.innerHeight * .8 && scrollQ() < N - 1.05) startAuto(false);
   }
 
+  // ---- stepping -------------------------------------------------------------------------------------------------
+  // Inside the journey, one swipe, one wheel gesture, one arrow key or one arrow button plays the whole move from
+  // the current city to the next (photo shrinks, camera travels, next photo grows) and then rests there.
+  // Before the first stop and after the last one the page scrolls normally, so the visitor is never trapped.
+  const step = { on: false, from: 0, to: 0, t0: 0, dur: 0 };
+  const STEP_MS = 2800;
+  const pinned = () => { const r = root.getBoundingClientRect(); return r.top <= 2 && r.bottom >= window.innerHeight - 2; };
+  function nextStop(dir) {
+    const q = step.on ? step.to : scrollQ();
+    const t = dir > 0 ? (q < -.02 ? 0 : Math.floor(q + .02) + 1) : Math.ceil(q - .02) - 1;
+    return t < 0 || t > N - 1 ? null : t;
+  }
+  const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  function goTo(i) {
+    if (destroyed || !GEO) return;
+    pauseAuto(); clearTimeout(auto.idleTimer);
+    if (!auto.started) { auto.started = true; setPlayUi(); }   // the visitor has taken the wheel: no autoplay surprise
+    const from = scrollQ(), dist = Math.abs(i - from);
+    if (dist < .005) return;
+    if (calm) { window.scrollTo({ top: yForQ(i) + 1, behavior: 'auto' }); return; }
+    step.from = from; step.to = i; step.t0 = performance.now(); step.on = true;
+    step.dur = STEP_MS * (dist <= 1.05 ? Math.max(.45, dist) : Math.min(1 + (dist - 1) * .2, 1.9));
+    kick();
+  }
+  function stepTick(now) {
+    if (!step.on) return;
+    const k = cl((now - step.t0) / step.dur, 0, 1), q = step.from + (step.to - step.from) * ease(k);
+    window.scrollTo({ top: yForQ(q) + (k >= 1 ? 1 : 0), behavior: 'instant' });
+    if (k >= 1) step.on = false;
+  }
+  const typing = () => { const a = document.activeElement; return !!a && (/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName) || a.isContentEditable); };
+  // Wheel: a trackpad sends a long tail of events for one flick, so one gesture moves one stop. Events are swallowed
+  // while a move plays and until the wheel has been quiet for a moment.
+  let wheelLast = 0, wheelHeld = false;
+  function onWheel(e) {
+    onUserInput();
+    if (e.ctrlKey || !pinned()) return;
+    const now = performance.now(), gap = now - wheelLast; wheelLast = now;
+    const d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    if (step.on || (wheelHeld && gap < 220)) { e.preventDefault(); return; }
+    wheelHeld = false;
+    if (Math.abs(d) < 2) return;
+    const t = nextStop(d > 0 ? 1 : -1); if (t === null) return;
+    e.preventDefault(); wheelHeld = true; goTo(t);
+  }
+  // Touch: the first movement decides. If there is a stop that way, the page does not scroll and the move plays.
+  const tch = { x: 0, y: 0, live: false, mine: false, done: false };
+  function onTouchStart(e) {
+    onUserInput();
+    tch.live = e.touches.length === 1 && pinned(); tch.mine = false; tch.done = false;
+    if (tch.live) { tch.x = e.touches[0].clientX; tch.y = e.touches[0].clientY; }
+  }
+  function onTouchMove(e) {
+    if (!tch.live) return;
+    const dx = tch.x - e.touches[0].clientX, dy = tch.y - e.touches[0].clientY, d = Math.abs(dy) >= Math.abs(dx) ? dy : dx;
+    if (!tch.mine) {
+      if (Math.abs(d) < 3) return;
+      if (step.on) tch.mine = tch.done = true;
+      else if (nextStop(d > 0 ? 1 : -1) === null) { tch.live = false; return; }
+      else tch.mine = true;
+    }
+    if (e.cancelable) e.preventDefault();
+    if (!tch.done && Math.abs(d) > 28) { tch.done = true; const t = nextStop(d > 0 ? 1 : -1); if (t !== null) goTo(t); }
+  }
+  function onTouchEnd() { tch.live = false; }
+
   // ---- loop -----------------------------------------------------------------------------------------------------
   let target = QMIN, qCur = QMIN, vis = false, raf = 0, lastT = 0, peekDrawn = false, t0 = performance.now();
   function loop(now) {
@@ -429,11 +495,11 @@ export function mountJourney(root, opts = {}) {
     const r = root.getBoundingClientRect();
     // While only the top edge of the panel shows under the hero, draw the map once and then rest completely.
     // Scrolling, resizing or Play wakes it again (kick).
-    const peek = r.top > window.innerHeight * .25 && !auto.on;
+    const peek = r.top > window.innerHeight * .25 && !auto.on && !step.on;
     if (peek && peekDrawn) return;
     const dt = Math.min(.05, (now - lastT) / 1000 || .016); lastT = now;
-    autoStep(dt);
-    target = scrollQ(auto.on ? null : r); qCur += (target - qCur) * (1 - Math.exp(-dt * 8)); if (Math.abs(target - qCur) < .0004) qCur = target;
+    autoStep(dt); stepTick(now);
+    target = scrollQ(auto.on || step.on ? null : r); qCur += (target - qCur) * (1 - Math.exp(-dt * 8)); if (Math.abs(target - qCur) < .0004) qCur = target;
     draw(qCur, (now - t0) / 1000);
     peekDrawn = peek && qCur === target;
     raf = requestAnimationFrame(loop);
@@ -443,16 +509,29 @@ export function mountJourney(root, opts = {}) {
   // ---- controls -----------------------------------------------------------------------------------------------------
   playBtn.addEventListener('click', () => { if (auto.on) pauseAuto(); else startAuto(auto.done); });
   $('.j-cue').addEventListener('click', () => { if (calm) { root.scrollIntoView({ behavior: 'smooth' }); return; } startAuto(true); });
+  prevBtn.addEventListener('click', () => { const t = nextStop(-1); if (t !== null) goTo(t); });
+  nextBtn.addEventListener('click', () => { const t = nextStop(1); if (t !== null) goTo(t); });
   $('.j-ask').addEventListener('click', () => { pauseAuto(); onAsk(); });
   root.addEventListener('click', (e) => { const a = e.target.closest('a[data-ask]'); if (a) { e.preventDefault(); pauseAuto(); onAsk(); } });
   const onResize = () => { if (!GEO) return; size(); peekDrawn = false; if (calm) draw(QMIN, 0); else kick(); };
   const onVis = () => { if (document.hidden) pauseAuto(); };
-  const onKey = (e) => { if (/^(ArrowUp|ArrowDown|PageUp|PageDown|Home|End| )$/.test(e.key)) onUserInput(); };
+  const onKey = (e) => {
+    if (!/^(ArrowUp|ArrowDown|ArrowLeft|ArrowRight|PageUp|PageDown|Home|End| )$/.test(e.key)) return;
+    onUserInput();
+    if (e.altKey || e.ctrlKey || e.metaKey || typing() || !pinned() || /^(Home|End)$/.test(e.key)) return;
+    if (/^(ArrowLeft|ArrowRight)$/.test(e.key) && e.target && e.target.closest && e.target.closest('input,textarea,select,[role=slider],[role=tablist]')) return;
+    const dir = /^(ArrowDown|ArrowRight|PageDown)$/.test(e.key) || (e.key === ' ' && !e.shiftKey) ? 1 : -1;
+    if (e.key === ' ' && e.target && e.target.closest && e.target.closest('button,a,summary')) return;
+    if (step.on) { e.preventDefault(); return; }
+    const t = nextStop(dir); if (t === null) return;
+    e.preventDefault(); goTo(t);
+  };
   const onFocusIn = (e) => { if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) pauseAuto(); };
 
   let io = null;
   function activate() {
-    window.addEventListener('wheel', onUserInput, { passive: true }); window.addEventListener('touchstart', onUserInput, { passive: true });
+    window.addEventListener('wheel', onWheel, { passive: false }); window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: false }); window.addEventListener('touchend', onTouchEnd, { passive: true }); window.addEventListener('touchcancel', onTouchEnd, { passive: true });
     window.addEventListener('keydown', onKey); window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onResize);
     document.addEventListener('visibilitychange', onVis); document.addEventListener('focusin', onFocusIn);
     io = new IntersectionObserver((en) => { vis = en[0].isIntersecting; if (!vis) pauseAuto(); kick(); }, { rootMargin: '100px' }); io.observe(root);
@@ -475,7 +554,7 @@ export function mountJourney(root, opts = {}) {
   return {
     destroy() {
       destroyed = true; cancelAnimationFrame(raf); if (io) io.disconnect();
-      window.removeEventListener('wheel', onUserInput); window.removeEventListener('touchstart', onUserInput); window.removeEventListener('keydown', onKey);
+      window.removeEventListener('wheel', onWheel); window.removeEventListener('touchstart', onTouchStart); window.removeEventListener('touchmove', onTouchMove); window.removeEventListener('touchend', onTouchEnd); window.removeEventListener('touchcancel', onTouchEnd); window.removeEventListener('keydown', onKey);
       window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize); document.removeEventListener('visibilitychange', onVis); document.removeEventListener('focusin', onFocusIn);
     },
     pause: pauseAuto,
