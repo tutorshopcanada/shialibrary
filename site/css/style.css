@@ -934,7 +934,7 @@ body.has .hero-art,body.has .cursor{display:none}
 }
 
 /* Result tabs (Q&A, Articles, Books, Hadith, more): one tap instead of scrolling */
-.rtabs{display:flex;gap:.25rem;overflow-x:auto;margin:0 0 1.2rem;border-bottom:1px solid var(--edge);position:sticky;top:0;z-index:6;background:var(--ground);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rtabs{display:flex;gap:.25rem;overflow-x:auto;overflow-y:hidden;margin:0 0 1.2rem;border-bottom:1px solid var(--edge);position:sticky;top:0;z-index:6;background:var(--ground);scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .rtabs::-webkit-scrollbar{display:none}
 .rtab{flex:none;border:0;background:transparent;color:var(--mute);padding:.7rem 1rem;min-height:2.75rem;cursor:pointer;font-size:.9375rem;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .rtab i{font-style:normal;opacity:.65;font-variant-numeric:tabular-nums;margin-left:.2rem}
