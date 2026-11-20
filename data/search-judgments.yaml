@@ -1,0 +1,141 @@
+# Graded search judgments (search proposal phase A, proposals/search-v2.md section 5).
+#
+# DRAFT: first set written by the cataloging agent on 2026-11-19, judged from each record's title and
+# description only. The owner (or a reviewer they trust) should check and extend it; keep `draft: true` until
+# then. Records were pooled from the keyword results, the meaning results and a title/description search, so
+# the best page is usually listed even when the search missed it.
+#
+# Grades:  ideal = 3 (exactly what the person wants)   good = 2 (clearly useful)
+#          partial = 1 (related, worth seeing)          wrong = 0 (should not be near the top)
+# Records not listed are "unjudged" and ignored by the metrics (condensed nDCG), except that `junk@3` counts
+# only records graded wrong.
+#
+# Run:  node scripts/eval_metrics.mjs     (also run in CI with minimum scores, see .github/workflows/site.yml)
+draft: true
+queries:
+  - query: "can the prophets make mistakes"
+    ideal: [tasneem-the-infallibility-of-the-prophets, al-islam-infallibility]
+    good: [al-islam-ask-60369, al-islam-prophethood-and-prophet-of-islam-amini, al-islam-islamic-doctrines-simplified-prophethood, al-islam-discovering-islam-prophethood]
+    partial: [al-islam-lets-learn-about-prophet-of-islam, al-islam-fifty-lessons-principles-belief-youth, al-islam-lessons-about-allah-prophethood-justice-imamate-resurrection, al-islam-stories-of-the-prophets, imam-us-book-gods-emissaries-adam-to-jesus, al-islam-immunity-prophets-imams-deficiencies]
+    wrong: [al-m-jesus-in-christianity-and-islam, al-islam-islam-first-and-last-religion, mizan-proofs-of-prophethood-for-teens, imam-us-video-the-last-words-of-the-prophet-pbuhhp, sistani-qa-14934, al-islam-raising-children, imam-us-islamic-laws-of-expiation, thaqalayn-al-kafi-vol-4-ch-3-143]
+  - query: "can the prohets make mistakes"
+    note: "the visitor's misspelling from the 2026-11-19 screenshot"
+    ideal: [tasneem-the-infallibility-of-the-prophets, al-islam-infallibility]
+    good: [al-islam-ask-60369, al-islam-prophethood-and-prophet-of-islam-amini, al-islam-islamic-doctrines-simplified-prophethood, al-islam-discovering-islam-prophethood]
+    partial: [al-islam-lets-learn-about-prophet-of-islam, al-islam-fifty-lessons-principles-belief-youth, al-islam-stories-of-the-prophets]
+    wrong: [sistani-qa-14934, al-islam-raising-children, imam-us-islamic-laws-of-expiation, thaqalayn-al-kafi-vol-4-ch-3-143, al-m-jesus-in-christianity-and-islam]
+  - query: "why do shias pray with a stone"
+    ideal: [al-islam-ask-70423, al-islam-ask-88796]
+    good: [mizan-turbah-of-imam-hussain, sistani-laws-2236]
+    partial: [al-islam-mystery-of-the-shia, al-islam-ask-51207]
+    wrong: [thaqalayn-al-kafi-vol-4-ch-3-120, thaqalayn-al-kafi-vol-4-ch-3-140, sistani-qa-eid-prayer, al-m-travel-resources-and-rulings, sistani-qa-congregational-prayers, al-islam-ask-101862, al-islam-ask-113013]
+  - query: "why do shia combine prayers"
+    ideal: [al-islam-ask-135097, al-islam-ask-134111]
+    good: [al-islam-ask-142331, al-islam-ask-60150, al-islam-ask-60929]
+    partial: [al-islam-ask-169239, al-islam-ask-119589, al-islam-ask-128456, al-islam-ask-68030]
+    wrong: [al-islam-ask-131516, al-islam-ask-99274, sistani-qa-15414, thaqalayn-al-kafi-vol-3-ch-4-57]
+  - query: "is smoking haram"
+    ideal: [al-islam-ask-116544, imam-us-is-smoking-haram]
+    partial: [sistani-west-medical-questions-answers]
+    wrong: [hujjah-1065-islamic-dietary-laws, sistani-qa-halal-haram-foods, sistani-hajj-rituals-2095, sistani-hajj-rituals-2094, thaqalayn-al-kafi-vol-4-ch-3-20, sistani-qa-forbidden-acts-ihram, sistani-qa-15272, sistani-qa-15355]
+  - query: "can i pray with nail polish"
+    ideal: [sistani-qa-nail-polish, sistani-qa-14965, sistani-qa-26531]
+    good: [sistani-women-8601]
+    partial: [sistani-qa-wudhu, sistani-women-8587, sistani-qa-14942, sistani-qa-14931, al-islam-ask-110701, sistani-laws-2168, sistani-west-salat-questions-answers]
+    wrong: [al-islam-ask-50569, sistani-qa-15375, thaqalayn-al-kafi-vol-3-ch-3-27, thaqalayn-al-kafi-vol-6-ch-7-38, thaqalayn-al-kafi-vol-6-ch-7-40]
+  - query: "what happens if i miss a fast"
+    ideal: [sistani-laws-2294, sistani-qa-qaza-prayers-and-fasts, sistani-qa-14831, imam-us-reminder-make-up-fasts-fidyah-kaffarah-2026]
+    good: [sistani-laws-2292, sistani-qa-fast-broken-intentionally, imam-us-reminder-qada-fidyah-kaffarah-1446-2025, imam-us-reminder-qada-fidyah-kaffarah-1445-2024]
+    partial: [sistani-qa-fasting, tasneem-laws-of-fasting, al-m-ramadhan-guide, sistani-qa-fasting-illness, sistani-qa-fasting-pregnancy, sistani-qa-fasting-working, sistani-laws-2289, sistani-laws-2279]
+    wrong: [al-islam-ask-124324, al-islam-ask-49107, sistani-qa-14833, sistani-qa-25378, al-islam-ask-145497]
+  - query: "why do shias do matam"
+    ideal: [sistani-qa-15603, al-islam-ask-90798, al-islam-philosophy-husayn-sacrifice-azadari, al-islam-quran-and-mourning-for-husayn]
+    good: [al-islam-our-husayn-mourning-karbala, sistani-qa-azadari, sistani-qa-15004, sistani-qa-15003, mizan-understanding-muharram-for-teens]
+    partial: [sistani-qa-25191, sistani-qa-25193, sistani-qa-25195, sistani-qa-25196, sistani-qa-25192, imam-us-wsid-musical-instruments-latmiyah, sistani-qa-15116]
+    wrong: [sistani-qa-25198, mizan-shia-islamic-belief-system, thaqalayn-sifat-al-shia-ch-1-71, thaqalayn-sifat-al-shia-ch-1-68, thaqalayn-sifat-al-shia-ch-1-20, thaqalayn-sifat-al-shia-ch-1-22, thaqalayn-sifat-al-shia-ch-1-41, al-islam-ask-117024, imam-us-shia-muslims-our-identity-vision, thaqalayn-man-la-yahduruh-al-faqih-vol-4-ch-1-107]
+  - query: "who was the first imam"
+    ideal: [academy-knowing-the-masumin-imam-ali]
+    good: [al-islam-nahjul-balagah-revisited-imam-ali, al-islam-life-ali-ibn-abi-talib-qurashi, al-islam-life-commander-faithful-mufid, al-islam-what-non-muslims-say-about-ali, al-islam-brief-history-fourteen-infallibles, al-islam-discovering-islam-succession-imama, al-islam-imam-ali-whose-imam-is-he]
+    partial: [al-islam-ali-and-allegiance, al-islam-survey-lives-infallible-imams, al-islam-imamate-and-the-imams]
+    wrong: [al-islam-muawiyah-historical-stories-children-6, thaqalayn-kamal-al-din-ch-1-15, al-islam-imam-hasan-what-a-baby, thaqalayn-kitab-al-ghayba-tusi-ch-1-3, al-islam-ask-62464, academy-knowing-the-masumin-imam-ali-al-hadi, academy-knowing-the-masumin-imam-ali-al-ridha, academy-knowing-the-masumin-imam-ali-zaynul-abidin, al-islam-imam-hasan-bin-ali, al-islam-imam-hasan-character]
+  - query: "how many imams are there"
+    good: [al-islam-twelve-successors-holy-prophet-askari, al-islam-imamate-and-the-imams, al-islam-lets-learn-about-imamate, al-islam-brief-history-fourteen-infallibles, al-islam-concise-treatise-traditions-imamate-twelve-imams, al-islam-imamate-chapter-4-brief-biographies-of-infallible-imams, al-islam-survey-lives-infallible-imams]
+    partial: [al-islam-imamate-chapter-3-arguments-for-imamate, al-islam-imamate-chapter-1-characteristics-of-imam]
+    wrong: [duas-ziyarat-imamzadeh-descendants, al-islam-ask-103555, al-islam-ask-134010, al-islam-ask-63188, al-islam-ask-63694, al-islam-ask-67547, al-islam-ask-74934, thaqalayn-fadail-al-shia, thaqalayn-uyun-akhbar-al-rida-vol-2]
+  - query: "what does sistani say about shaving beard"
+    ideal: [sistani-qa-beard, sistani-qa-15550, sistani-qa-15549, sistani-qa-15552]
+    good: [sistani-qa-15551, sistani-qa-15282]
+    partial: [sistani-qa, sistani-islamic-laws, imam-us-islamic-laws-according-to-fatwas-sistani-4th-edition, thaqalayn-al-kafi-vol-6-ch-7-35]
+    wrong: [imam-us-100-pearls-advice-of-sistani, sistani-laws-8244, imam-us-sistani-fatwa-companions-of-prophet, imam-us-sistani-condolences-passing-zanjani, sistani-laws-8246, sistani-hajj-rituals-2109, sistani-qa-15253, thaqalayn-al-kafi-vol-6-ch-1-17]
+  - query: "can women go to the mosque during period"
+    ideal: [thaqalayn-al-kafi-vol-3-ch-2-20, sistani-laws-2172]
+    good: [sistani-women, al-m-taharat-un-nisa, sistani-west-women-questions-answers]
+    partial: [sistani-qa-mosque, sistani-laws-2227]
+    wrong: [sistani-qa-15132, sistani-qa-14984, sistani-qa-iddah-waiting-period, sistani-qa-15379, al-islam-adolescence-examination-and-success, al-islam-ask-124299, al-islam-ask-194173]
+  - query: "what is taqiyya"
+    ideal: [thaqalayn-al-kafi-vol-2-ch-1-97]
+    good: [al-islam-inquiries-about-shia-islam, thaqalayn-sifat-al-shia-ch-1-3, al-islam-shia-sunni-debate-chapter-3-companions]
+    partial: [al-islam-completion-of-argument-saeed-akhtar-rizvi, thaqalayn-al-kafi-vol-6-ch-6-23]
+    wrong: [al-islam-globe-advent-imam-mahdi-part-6, tasneem-ijtihad-and-taqlid, thaqalayn-man-la-yahduruh-al-faqih-vol-5-mashaykha-ch-1-171, thaqalayn-al-kafi-vol-6-ch-1-18]
+  - query: "why do shias not pray taraweeh"
+    ideal: [al-islam-ask-124759]
+    partial: [al-islam-mystery-of-the-shia, sistani-qa-congregational-prayers]
+    wrong: [al-m-travel-resources-and-rulings, al-islam-ask-64213, al-islam-ask-109107]
+  - query: "how do i convert to shia islam"
+    ideal: [al-islam-ask-70823, al-islam-ask-109107]
+    good: [al-islam-discovering-shii-islam, al-islam-how-i-found-right-path, al-islam-ask-117024]
+    partial: [al-islam-brief-introduction-to-islam, al-islam-discovering-islam, al-islam-seeking-the-straight-path, al-islam-how-i-became-muslim-diana-beatty, al-islam-my-story-kathy-kooshesh, sistani-worship-8494, al-islam-ask-103188]
+    wrong: [al-islam-ask-58346, al-islam-ask-109471, al-islam-ask-150741, al-islam-ask-184877, al-islam-ask-53260]
+  - query: "what is the turbah"
+    ideal: [mizan-turbah-of-imam-hussain, al-islam-ask-70423]
+    good: [al-islam-ask-88796, sistani-laws-2236, al-islam-ask-51207]
+    partial: [al-islam-mystery-of-the-shia]
+    wrong: [al-islam-ask-119480, sistani-qa-15488, thaqalayn-man-la-yahduruh-al-faqih-vol-5-mashaykha-ch-1-361, mizan-journey-of-husayns-caravan, thaqalayn-al-kafi-vol-6-ch-7-15, al-islam-ask-101862, al-islam-ask-113013]
+  - query: "did imam ali fight in the battle of jamal"
+    ideal: [thaqalayn-al-amali-mufid-ch-3-8]
+    good: [tasneem-the-caliphate-of-imam-ali, al-islam-causes-enmity-imam-ali-nahj, al-islam-life-ali-ibn-abi-talib-qurashi]
+    partial: [hujjah-2071-biography-of-imam-ali-a-03, hujjah-1072-biography-of-imam-ali-a-02, hujjah-2081-biography-of-imam-ali-a-05, hujjah-1069-biography-of-imam-ali-a-01, al-islam-nahjul-balagah-revisited-imam-ali]
+    wrong: [imam-us-advice-to-humanity-imam-ali-will, sistani-laws-2319, sistani-laws-2320, al-islam-ask-113609, sistani-laws-8221]
+  - query: "why is ali not mentioned in the quran"
+    good: [al-islam-ask-177846, al-islam-ask-114623]
+    partial: [al-islam-do-shia-believe-in-a-different-quran, al-islam-ask-52070]
+    wrong: [academy-quranic-reflections-book-5, al-islam-quran-basic-facts-introduction-to-basic-facts, al-islam-quran-basic-facts-exegesis-tafsir, al-islam-ask-102498, al-islam-ask-70763, al-islam-ask-76529, al-islam-ask-173669]
+  - query: "what is mutah marriage"
+    ideal: [sistani-qa-temporary-marriage-mutah, al-islam-ask-187197, sistani-laws-2370]
+    good: [al-islam-ask-111234, al-islam-ask-107163, al-islam-ask-193694, sistani-qa-14878]
+    partial: [al-islam-ask-94683, al-islam-ask-116483, al-islam-ask-108738, al-m-marriage-guide, hujjah-1056-family-law-fiqh]
+    wrong: [al-islam-ask-48646, al-m-getting-married]
+  - query: "dua for anxiety"
+    ideal: [duas-overcome-worries]
+    good: [duas-relief-distress-grief-fear, al-islam-ask-102714]
+    partial: [duas-short-powerful, al-islam-ask-125735, al-islam-ask-189749]
+    wrong: [duas-short-imam-mahdi, duas-black-magic, duas-travel-duas, al-islam-ask-115811, al-islam-ask-172515, al-islam-ask-171949]
+  - query: "how to pray salat al layl"
+    ideal: [imam-us-how-to-pray-tahajjud, sistani-qa-night-prayer, academy-nightly-devotions-tahajjud-salat]
+    good: [academy-tahajjud-salat-spiritual-ladder, al-islam-ask-163606, sistani-qa-14964, sistani-qa-14963, al-islam-ask-75578]
+    partial: [sistani-qa-nafilah-prayer, al-m-salat-resources-and-rulings]
+    wrong: [academy-surah-surat-al-layl, al-islam-ask-120958, al-islam-ask-141848]
+  - query: "what is khums"
+    ideal: [sistani-qa-khums, al-m-khums-in-islam, imam-us-brief-look-at-khums, sistani-jme-2411]
+    good: [imam-us-islamic-laws-of-khums, sistani-worship-8521, sistani-laws-2305]
+    partial: [imam-us-introducing-the-i-m-a-m-khums-calculator, tasneem-faith-and-finance, sistani-qa-25644, sistani-laws-2312]
+    wrong: [imam-us-khums-not-fulfilled-without-receipt, imam-us-debtor-exempt-khums]
+  - query: "how to do wudu"
+    ideal: [sistani-jme-2402, sistani-worship-8479, sistani-laws-2154]
+    good: [sistani-laws-2157, al-m-taharat-un-nisa, sistani-laws-8295, sistani-laws-2155]
+    partial: [sistani-laws-2159, sistani-laws-2158, sistani-laws-2160, imam-us-wsid-wudhu-with-a-cast]
+    wrong: [sistani-women-8604, imam-us-wsid-wudhu-broken-during-tawaf, sistani-laws-2195]
+  - query: "who is imam mahdi"
+    ideal: [academy-knowing-the-masumin-imam-muhammad-al-mahdi, al-islam-the-last-luminary, al-islam-promised-savior-al-milani]
+    good: [al-islam-fazail-ul-mahdi, imam-us-video-what-do-we-mean-by-imam-of-our-time, imam-us-building-a-relationship-with-imam-mahdi, thaqalayn-kitab-al-ghayba-tusi, al-islam-globe-advent-imam-mahdi-part-1]
+    partial: [al-islam-connection-imam-mahdi-imam-husayn-part-1, al-islam-globe-advent-imam-mahdi-part-2]
+    wrong: [duas-short-imam-mahdi, al-islam-ask-134839, al-islam-ask-195273]
+  - query: "what happened at ghadir"
+    ideal: [al-islam-ghadir-khumm-best-kept-secrets, imam-us-event-of-ghadir-khumm-according-to-quran, al-islam-ghadir-sermon]
+    good: [imam-us-importance-of-ghadir-khum, imam-us-the-day-of-al-ghadir, al-m-issue-1-ghadir-khumm, al-islam-orientalists-and-event-of-ghadir-khumm]
+    partial: [al-islam-ali-and-allegiance, al-islam-imamate-vicegerency-prophet, al-islam-al-ghadir-relevance-islamic-unity, al-islam-ask-90825, imam-us-ghadir-khumm-path-of-perfection]
+    wrong: [al-islam-glance-life-holy-prophet, imam-us-spirituality-of-eid-al-ghadir]
+  - query: "shurtat al khamis"
+    ideal: [al-islam-life-ali-qurashi-deputy-governors]
+    partial: [al-islam-life-ali-ibn-abi-talib-qurashi]
+    wrong: [academy-surah-surat-al-shura, al-islam-ask-133007]

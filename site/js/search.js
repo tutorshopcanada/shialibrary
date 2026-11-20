@@ -5,9 +5,13 @@
 // It only RETRIEVES and RANKS human-written catalog records. Nothing here
 // writes text. Layers (CLAUDE.md section 11):
 //   1. curated starter questions and topic headings
-//   2. keyword search (BM25-style, hand-built synonyms from the vocabulary)
+//   2. keyword search: BM25 over weighted fields, with hand-built tables (no model) for
+//      topic headings (vocabulary + arabic-terms), synonyms and entities, context rules
+//      ("stone" + "pray" = turbah) and spelling correction; topic bonuses scaled by how
+//      specific the topic is; near-duplicate pages grouped
+//   3. related by meaning: fused in by addSemantic() from site/js/semantic.js
 //   4. graceful fallback
-// (Layer 3, vector search, is Phase 2 and deliberately absent.)
+// Measured with scripts/eval_metrics.mjs (proposals/search-v2.md).
 
 // ---------------------------------------------------------------------------
 // Defaults. config/search.yaml (copied into index.json) overrides these.
@@ -22,13 +26,16 @@ export const DEFAULT_CONFIG = {
     bm25: { k1: 1.2, b: 0.75 },
     prefix: { enabled: true, min_length: 3, weight: 0.4, max_expansions: 40 },
     concept_weight: 2.5,
+    concept_full_weight_max_records: 50,
     phrase_boost: 1.6,
+    title_match_boost: 2.0,
     min_score: 1.0,
     min_term_coverage: 0.5,
     min_results: 1,
     min_result_coverage: 0.34,
     min_relative_score: 0.15,
     max_results: 150,
+    max_related: 40,
   },
   exact: {
     stopwords: ['a', 'an', 'the', 'of', 'in', 'on', 'at', 'to', 'for', 'from', 'by', 'with',
@@ -39,6 +46,7 @@ export const DEFAULT_CONFIG = {
       'if', 'as', 'so', 'not', 'no', 'any', 'some', 'have', 'has', 'had', 'get', 'one'],
     generic_terms: ['shia', 'shias', "shi'a", 'shiite', 'shiites', 'shii', 'shiism', 'islam',
       'islamic', 'muslim', 'muslims', 'twelver', 'twelvers'],
+    heading_substitution_max_records: 120,
   },
   ranking: {
     default_order: 'beginner',
@@ -65,7 +73,7 @@ export const DEFAULT_CONFIG = {
     order: ['beginner', 'intermediate', 'advanced'],
     labels: { beginner: 'Beginner', intermediate: 'Intermediate', advanced: 'Advanced' },
   },
-  grouping: { min_items: 3 },
+  grouping: { min_items: 3, collapse_duplicates: true },
   // Layer 3: "related by meaning" (site/js/semantic.js). It is consulted only when keyword search is weak.
   layer3: {
     enabled: true,
@@ -76,6 +84,8 @@ export const DEFAULT_CONFIG = {
     max_related: 30,       // size of the fused "Related results" list
     fusion_k: 20,          // reciprocal-rank-fusion constant (higher = flatter blend of the two rankings)
     candidates: 80,        // how many nearest records the semantic layer hands over before filtering
+    min_word_coverage: 0,  // also consult it when the best keyword results contain less than this share of the words (0 = off)
+    min_terms_for_coverage: 3, // ...but only for queries with at least this many key words
   },
 };
 
@@ -111,6 +121,9 @@ export function normalize(input) {
     .replace(/\p{M}+/gu, '')            // combining marks: Latin diacritics, Arabic vowel signs
     .replace(/ـ/g, '')             // Arabic tatweel
     .replace(/[یى]/g, 'ي') // Persian/Urdu yeh, alef maksura -> Arabic yeh
+    .replace(/[أإآٱ]/g, 'ا')  // alef with hamza / madda / wasla -> bare alef (إمامة = امامة)
+    .replace(/ؤ/g, 'و').replace(/ئ/g, 'ي') // hamza on waw / yeh
+    .replace(/[ةھہۀ]/g, 'ه') // ta marbuta and heh forms -> heh (صلاة = صلاه)
     .replace(/ک/g, 'ك')       // Persian kaf -> Arabic kaf
     .toLowerCase()
     .replace(/['‘’ʻʼʿʾ`´]/g, '') // apostrophes, ayn/hamza marks
@@ -126,6 +139,8 @@ export function stem(tok) {
   return r;
 }
 function stemRaw(tok) {
+  // Arabic: drop the attached article "al-" (الأنبياء = أنبياء), keeping at least three letters.
+  if (tok.length >= 5 && tok.startsWith('ال') && /^[\u0621-\u064a]+$/.test(tok)) return tok.slice(2);
   if (tok.length < 4 || !/^[a-z]+$/.test(tok)) return tok;
   let t = tok;
   if (t.endsWith('ies') && t.length > 4) t = t.slice(0, -3) + 'y';
@@ -174,14 +189,14 @@ export function createEngine(index) {
   const stopSet = new Set(config.exact.stopwords.map((w) => stem(normalize(w))));
   const genericSet = new Set(config.exact.generic_terms.map((w) => stem(normalize(w))));
 
-  const records = index.records || [];
+  const records = []; // filled by addRecords(); grows when the rest of the catalog arrives
   const headings = index.headings || [];
   const scholars = index.scholars || [];
   const sources = index.sources || [];
   const questions = index.questions || [];
   const paths = index.paths || [];
 
-  const recordById = new Map(records.map((r) => [r.id, r]));
+  const recordById = new Map();
   const headingById = new Map(headings.map((h) => [h.id, h]));
   const scholarById = new Map(scholars.map((s) => [s.id, s]));
   const sourceById = new Map(sources.map((s) => [s.id, s]));
@@ -210,9 +225,13 @@ export function createEngine(index) {
   }
   for (const h of headings) {
     const keys = new Set();
-    for (const term of [...labelVariants(h.label), ...(h.alt_terms || [])]) {
+    const names = labelVariants(h.label);
+    for (const term of [...names, ...(h.alt_terms || [])]) {
       const key = addConcept(term, 'headings', h.id);
-      if (key) keys.add(' ' + key + ' ');
+      // Only the heading's own names ("Prayer", "Salah") may stand in for a query word in the exact-match rule.
+      // Its other alternate terms are related topics ("chess" under music and entertainment), not equivalents;
+      // true equivalents are listed in data/synonyms.yaml.
+      if (key && names.includes(term)) keys.add(' ' + key + ' ');
     }
     headingPhrases.set(h.id, [...keys]);
   }
@@ -225,6 +244,62 @@ export function createEngine(index) {
     }
   }
 
+  // ---- Synonyms and entities (data/synonyms.yaml, data/entities.yaml) ----
+  // A group of interchangeable terms becomes one extra index token ("~mutah") on every field that contains any
+  // of its terms, and a query naming any of them searches that token. Plain table lookup, no model.
+  const synByFirst = new Map(); // first word -> [{ toks, gid, notBefore }], longest first
+  const synWords = new Set();   // every word used in a synonym term (never "corrected" as a typo)
+  const synData = index.synonyms || {};
+  for (const g of synData.groups || []) {
+    const notBefore = new Set((g.not_before || []).flatMap((w) => tokenize(w)));
+    for (const term of g.terms || []) {
+      const toks = tokenize(term);
+      if (!toks.length || toks.length > 8) continue;
+      if (!synByFirst.has(toks[0])) synByFirst.set(toks[0], []);
+      const list = synByFirst.get(toks[0]);
+      if (!list.some((e) => e.toks.join(' ') === toks.join(' '))) list.push({ toks, gid: '~' + g.id, notBefore });
+      for (const t of toks) synWords.add(t);
+    }
+  }
+  for (const list of synByFirst.values()) list.sort((a, b) => b.toks.length - a.toks.length);
+  // Context rules (queries only): "stone" means the turbah when the query is about praying.
+  const synContexts = new Map(); // word -> [{ with:Set, gid }]
+  for (const c of synData.contexts || []) {
+    const w = tokenize(c.word)[0];
+    if (!w) continue;
+    if (!synContexts.has(w)) synContexts.set(w, []);
+    synContexts.get(w).push({ with: new Set((c.with || []).flatMap((x) => tokenize(x))), gid: '~' + c.means });
+  }
+  /** Greedy longest matches of synonym terms in a token list: [{ start, len, gid }]. */
+  // The word after a match, looking past an Arabic article ("imam ali al-ridha": the word after "al").
+  const ARTICLES = new Set(['al', 'el', 'ul', 'as', 'ash', 'ar', 'an', 'at', 'ad', 'az', 'ad']);
+  const blockedAfter = (set, toks, j) => j < toks.length &&
+    (set.has(toks[j]) || (ARTICLES.has(toks[j]) && j + 1 < toks.length && set.has(toks[j + 1])));
+  function synSpans(toks, withContexts) {
+    const out = [];
+    for (let i = 0; i < toks.length;) {
+      let m = 0;
+      for (const e of synByFirst.get(toks[i]) || []) {
+        const len = e.toks.length;
+        if (i + len > toks.length) continue;
+        let ok = true;
+        for (let j = 1; j < len && ok; j++) ok = toks[i + j] === e.toks[j];
+        if (!ok) continue;
+        if (e.notBefore.size && blockedAfter(e.notBefore, toks, i + len)) continue;
+        out.push({ start: i, len, gid: e.gid });
+        m = len;
+        break;
+      }
+      if (!m && withContexts && synContexts.has(toks[i])) {
+        const rule = synContexts.get(toks[i]).find((r) => toks.some((t, j) => j !== i && r.with.has(t)));
+        if (rule) { out.push({ start: i, len: 1, gid: rule.gid }); m = 1; }
+      }
+      i += m || 1;
+    }
+    return out;
+  }
+  const withSynonyms = (toks) => { const sp = synSpans(toks, false); return sp.length ? [...toks, ...sp.map((x) => x.gid)] : toks; };
+
   // ---- Per-record search documents ----
   const headingText = (ids) => ids.map((id) => {
     const h = headingById.get(id);
@@ -235,81 +310,136 @@ export function createEngine(index) {
     return s ? [s.name, ...(s.alt_names || [])].join(' . ') : '';
   }).join(' . ');
 
-  const docs = records.map((r) => {
-    const people = [...new Set([...(r.authors || []), ...(r.instructors || []), ...(r.marja ? [r.marja] : [])])];
-    const ctx = r.context || {};
-    const src = sourceById.get(r.source);
-    const fieldText = {
-      title: r.title || '',
-      sample_questions: (r.sample_questions || []).join(' . '),
-      headings: headingText(r.headings || []),
-      scholars: scholarText(people),
-      description: r.description || '',
-      ancestor_headings: headingText(r.inherited_headings || []),
-      context: [ctx.section && ctx.section.title, ctx.work && ctx.work.title].filter(Boolean).join(' . '),
-      other: [r.source, src && src.name, r.location, r.title_original, r.provider,
-        config.tags.labels[r.content_tag], r.type].filter(Boolean).join(' . '),
-    };
-    // "tq": title + sample questions, the fields the exact-match rule looks at.
-    const tqParts = [r.title || '', ...(r.sample_questions || [])].map(tokenize);
-    const tqTokens = new Set();
-    for (const part of tqParts) for (const t of part) tqTokens.add(t);
-    return {
-      record: r,
-      people: new Set(people),
-      ownHeadings: new Set(r.headings || []),
-      allHeadings: new Set([...(r.headings || []), ...(r.inherited_headings || [])]),
-      ancestors: new Set(r.ancestors || []),
-      fieldText,
-      tq: tqParts.map(pad).join('|'),
-      tqTokens: [...tqTokens],
-      desc: pad(tokenize(r.description || '')),
-    };
-  });
+  // One search document per record. The parts used only by the exact-match and title rules (tq, desc, ...)
+  // are worked out the first time a query touches the record, not for all 8,000+ records at start-up.
+  const MAIN_TITLE = (r) => String(r.title || '').split(/[:»|]/)[0].replace(/\([^)]*\)/g, ' ');
+  class Doc {
+    constructor(r) {
+      const people = [...new Set([...(r.authors || []), ...(r.instructors || []), ...(r.marja ? [r.marja] : [])])];
+      this.record = r;
+      this.people = new Set(people);
+      this.ownHeadings = new Set(r.headings || []);
+      this.allHeadings = new Set([...(r.headings || []), ...(r.inherited_headings || [])]);
+      this.ancestors = new Set(r.ancestors || []);
+      this._tq = null;
+    }
+    fieldText() {
+      const r = this.record, ctx = r.context || {}, src = sourceById.get(r.source);
+      return {
+        title: r.title || '',
+        sample_questions: (r.sample_questions || []).join(' . '),
+        headings: headingText(r.headings || []),
+        scholars: scholarText([...this.people]),
+        description: r.description || '',
+        ancestor_headings: headingText(r.inherited_headings || []),
+        context: [ctx.section && ctx.section.title, ctx.work && ctx.work.title].filter(Boolean).join(' . '),
+        other: [r.source, src && src.name, r.location, r.title_original, r.provider,
+          config.tags.labels[r.content_tag], r.type].filter(Boolean).join(' . '),
+      };
+    }
+    lazy() {
+      if (this._tq) return;
+      const r = this.record;
+      // "tq": title + sample questions, the fields the exact-match rule looks at.
+      const tqParts = [r.title || '', ...(r.sample_questions || [])].map(tokenize);
+      const tqTokens = new Set();
+      for (const part of tqParts) for (const t of withSynonyms(part)) tqTokens.add(t);
+      this._tq = tqParts.map(pad).join('|');
+      this._tqTokens = [...tqTokens];
+      this._desc = pad(tokenize(r.description || ''));
+      // Main title words (before a colon, without "(Vol. 1)" or one- and two-letter words such as "al").
+      this._titleKeys = [...new Set(tokenize(MAIN_TITLE(r)).filter((t) => !stopSet.has(t) && t.length > 2 && !/^[0-9]+$/.test(t)))];
+      // Near-duplicate key: same source and the same title words, ignoring numbers, years and common words.
+      const dt = [...new Set(tokenize(r.title || '').filter((t) => !stopSet.has(t) && !/^[0-9]+$/.test(t)))].sort();
+      this._dupKey = dt.length >= 3 ? r.source + '|' + dt.join(' ') : null;
+    }
+    get tq() { this.lazy(); return this._tq; }
+    get tqTokens() { this.lazy(); return this._tqTokens; }
+    get desc() { this.lazy(); return this._desc; }
+    get titleKeys() { this.lazy(); return this._titleKeys; }
+    get dupKey() { this.lazy(); return this._dupKey; }
+  }
+  const docs = [];
 
   // ---- Inverted index (BM25 over fields) ----
   const postings = new Map(); // term -> [docIdx, fieldIdx, tf, ...] flat array
-  const fieldLen = FIELDS.map(() => new Float32Array(docs.length));
-  const avgLen = FIELDS.map(() => 0);
+  const fieldLen = FIELDS.map(() => []);
+  const lenSum = FIELDS.map(() => 0);
+  const avgLen = FIELDS.map(() => 1);
   const docFreq = new Map();
   // Many records share the same heading, scholar, context and source text: tokenize each distinct string once.
   const tokCache = new Map();
   const indexTokens = (text) => {
     let r = tokCache.get(text);
     if (!r) {
-      const toks = tokenize(text).filter((t) => !stopSet.has(t));
+      const all = tokenize(text);
+      const toks = all.filter((t) => !stopSet.has(t));
+      for (const sp of synSpans(all, false)) toks.push(sp.gid);
       const tf = new Map();
       for (const t of toks) tf.set(t, (tf.get(t) || 0) + 1);
       r = { len: toks.length, entries: [...tf] };
-      tokCache.set(text, r);
+      if (tokCache.size < 60000) tokCache.set(text, r);
     }
     return r;
   };
-  docs.forEach((doc, d) => {
-    const seen = new Set();
-    FIELDS.forEach((f, fi) => {
-      const { len, entries } = indexTokens(doc.fieldText[f]);
-      fieldLen[fi][d] = len;
-      avgLen[fi] += len;
-      for (let e = 0; e < entries.length; e++) {
-        const t = entries[e][0];
-        let p = postings.get(t);
-        if (!p) { p = []; postings.set(t, p); }
-        p.push(d, fi, entries[e][1]);
-        seen.add(t);
-      }
-    });
-    for (const t of seen) docFreq.set(t, (docFreq.get(t) || 0) + 1);
-    delete doc.fieldText;
-  });
-  for (let i = 0; i < FIELDS.length; i++) avgLen[i] = docs.length ? avgLen[i] / docs.length || 1 : 1;
-  const terms = [...postings.keys()].sort();
-  const N = docs.length;
+  const weights = FIELDS.map((f) => Number(config.layer2.field_weights[f]) || 0);
+  // Records per heading (own and inherited) and per person, so a topic or scholar bonus touches only its records.
+  const headingOwnDocs = new Map(), headingAllDocs = new Map(), personDocs = new Map();
+  const pushTo = (m, k, d) => { let a = m.get(k); if (!a) { a = []; m.set(k, a); } a.push(d); };
+  const docIdx = new Map();
+
+  // Totals that depend on the whole catalog; recomputed after each addRecords() call.
+  let N = 0, terms = [], specRef = 1, conceptBuf = new Float32Array(0);
   const idf = (t) => {
     const df = docFreq.get(t) || 0;
     return Math.log(1 + (N - df + 0.5) / (df + 0.5));
   };
-  const weights = FIELDS.map((f) => Number(config.layer2.field_weights[f]) || 0);
+  // How specific a heading (or scholar) is: 1 for one covering at most `concept_full_weight_max_records`
+  // records, falling with the log of its size. "Temporary marriage" should count for more than "Marriage and family".
+  const specificity = (count) => Math.min(1, Math.log(1 + N / Math.max(1, count)) / specRef);
+  const headingCount = (h) => (headingOwnDocs.get(h) || []).length;
+  const subMax = Number(config.exact.heading_substitution_max_records) || Infinity;
+
+  /**
+   * Add records to the engine (start-up, and again when the rest of the catalog arrives). Records already present
+   * are skipped. The page can call this with small chunks between paints so it never freezes.
+   */
+  function addRecords(list) {
+    for (const r of list || []) {
+      if (!r || recordById.has(r.id)) continue;
+      const d = docs.length;
+      const doc = new Doc(r);
+      records.push(r);
+      recordById.set(r.id, r);
+      docs.push(doc);
+      docIdx.set(r.id, d);
+      const ft = doc.fieldText();
+      const seen = new Set();
+      for (let fi = 0; fi < FIELDS.length; fi++) {
+        const { len, entries } = indexTokens(ft[FIELDS[fi]]);
+        fieldLen[fi][d] = len;
+        lenSum[fi] += len;
+        for (let e = 0; e < entries.length; e++) {
+          const t = entries[e][0];
+          let p = postings.get(t);
+          if (!p) { p = []; postings.set(t, p); }
+          p.push(d, fi, entries[e][1]);
+          seen.add(t);
+        }
+      }
+      for (const t of seen) docFreq.set(t, (docFreq.get(t) || 0) + 1);
+      for (const h of doc.ownHeadings) pushTo(headingOwnDocs, h, d);
+      for (const h of doc.allHeadings) pushTo(headingAllDocs, h, d);
+      for (const p of doc.people) pushTo(personDocs, p, d);
+    }
+    N = docs.length;
+    for (let i = 0; i < FIELDS.length; i++) avgLen[i] = N ? lenSum[i] / N || 1 : 1;
+    terms = [...postings.keys()].sort();
+    specRef = Math.log(1 + N / Math.max(1, Number(config.layer2.concept_full_weight_max_records) || 50));
+    if (conceptBuf.length < N) conceptBuf = new Float32Array(N);
+    deletes = null; dict = null; termCache.clear(); // the spelling table is rebuilt from the new word list when needed
+    return N;
+  }
 
   function prefixTerms(prefix, max) {
     let lo = 0, hi = terms.length;
@@ -322,13 +452,81 @@ export function createEngine(index) {
   }
 
   // ---- Query analysis ----
+  // Spelling help (SymSpell-style, plain rules, no model). A query word the catalog has never seen ("prohets",
+  // "infalibility") is replaced by the closest known word: at most 1 edit for words of 5-7 letters, 2 edits for
+  // longer words (a missing, extra, wrong or swapped letter each count as one edit). Ties go to the word found on
+  // the most pages. The lookup table (every known word with one letter removed) is built only when first needed.
+  const termCache = new Map();
+  let deletes = null, dict = null;
+  function buildDeletes() {
+    dict = new Set();
+    for (const w of terms) if (/^[a-z]+$/.test(w)) dict.add(w);
+    for (const w of synWords) if (/^[a-z]+$/.test(w)) dict.add(w);
+    for (const k of concepts.keys()) if (/^[a-z]+$/.test(k)) dict.add(k);
+    deletes = new Map();
+    for (const w of dict) {
+      if (w.length < 4) continue;
+      for (let i = 0; i < w.length; i++) {
+        const d = w.slice(0, i) + w.slice(i + 1);
+        let a = deletes.get(d);
+        if (!a) { a = []; deletes.set(d, a); }
+        if (a[a.length - 1] !== w) a.push(w);
+      }
+    }
+  }
+  function editDistance(a, b, max) { // optimal string alignment (Damerau-Levenshtein with adjacent swaps)
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    let p2 = null, p = Array.from({ length: b.length + 1 }, (_, j) => j);
+    for (let i = 1; i <= a.length; i++) {
+      const c = [i];
+      let low = i;
+      for (let j = 1; j <= b.length; j++) {
+        let v = Math.min(p[j] + 1, c[j - 1] + 1, p[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (p2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) v = Math.min(v, p2[j - 2] + 1);
+        c.push(v);
+        if (v < low) low = v;
+      }
+      if (low > max) return max + 1;
+      p2 = p; p = c;
+    }
+    return p[b.length];
+  }
+  function correctTerm(t) {
+    if (t.length < 5 || !/^[a-z]+$/.test(t) || postings.has(t) || concepts.has(t) || stopSet.has(t) || synWords.has(t)) return t;
+    if (termCache.has(t)) return termCache.get(t);
+    if (!deletes) buildDeletes();
+    const max = t.length >= 8 ? 2 : 1;
+    const cands = new Set();
+    const look = (k) => { if (dict.has(k)) cands.add(k); for (const w of deletes.get(k) || []) cands.add(w); };
+    look(t);
+    for (let i = 0; i < t.length; i++) look(t.slice(0, i) + t.slice(i + 1));
+    let best = t, bestD = max + 1, bestDf = -1;
+    for (const c of cands) {
+      const d = editDistance(t, c, max);
+      if (d > max) continue;
+      const df = docFreq.get(c) || 0;
+      if (d < bestD || (d === bestD && df > bestDf)) { best = c; bestD = d; bestDf = df; }
+    }
+    if (termCache.size < 5000) termCache.set(t, best);
+    return best;
+  }
+
   function analyze(rawQuery) {
     const raw = String(rawQuery || '').slice(0, 300);
     const quoted = [];
     raw.replace(/"([^"]+)"/g, (_, p) => { const t = tokenize(p); if (t.length) quoted.push(pad(t)); return ''; });
-    const tokens = tokenize(raw);
+    const corrections = [];
+    const tokens = tokenize(raw).map((t) => {
+      const c = correctTerm(t);
+      if (c !== t) corrections.push({ from: t, to: c });
+      return c;
+    });
     const isStop = tokens.map((t) => stopSet.has(t));
     const allStop = isStop.every(Boolean);
+    // Synonym and entity groups named in the query (with context rules such as "stone" + "pray" = turbah).
+    const syn = synSpans(tokens, true);
+    const synOf = tokens.map(() => null);
+    for (const sp of syn) for (let j = sp.start; j < sp.start + sp.len; j++) synOf[j] = sp.gid;
 
     // Greedy longest-match of heading terms and scholar names in the query.
     const spans = [];
@@ -351,29 +549,41 @@ export function createEngine(index) {
     // Key terms: what ranking and the exact-match rule work with.
     const keyTerms = [];
     const keyIndex = new Map();
+    // A word inside a synonym group is searched as the group's token, so "temporary marriage" finds pages that
+    // say "mutah" and is not split into "temporary" + "marriage". tokenKey[i]: the key term standing for token i.
+    const tokenKey = tokens.map(() => undefined);
     tokens.forEach((t, i) => {
-      if (isStop[i] && !allStop) return;
-      if (!keyIndex.has(t) && keyTerms.length < MAX_KEY_TERMS) { keyIndex.set(t, keyTerms.length); keyTerms.push(t); }
+      if (isStop[i] && !allStop && !synOf[i]) return;
+      const k = synOf[i] || t;
+      if (!keyIndex.has(k) && keyTerms.length < MAX_KEY_TERMS) { keyIndex.set(k, keyTerms.length); keyTerms.push(k); }
+      tokenKey[i] = keyIndex.get(k);
     });
     const isGeneric = keyTerms.map((t) => genericSet.has(t));
     const hasSpecific = isGeneric.some((g) => !g);
 
     // Units for the exact-match rule: each concept span, and each remaining key term.
     let units = [];
+    const covered = new Set();
     spans.forEach((sp) => {
-      const toks = tokens.slice(sp.start, sp.start + sp.len).filter((t) => keyIndex.has(t));
-      units.push({ tokens: [...new Set(toks)], headings: sp.headings, scholars: sp.scholars });
+      const keys = [];
+      for (let j = sp.start; j < sp.start + sp.len; j++) if (tokenKey[j] !== undefined) keys.push(tokenKey[j]);
+      keys.forEach((k) => covered.add(k));
+      units.push({ tokens: [...new Set(keys)].map((k) => keyTerms[k]), headings: sp.headings, scholars: sp.scholars });
     });
-    tokens.forEach((t, i) => {
-      if (inSpan[i] === -1 && keyIndex.has(t) && !units.some((u) => !u.headings && u.tokens[0] === t)) {
-        units.push({ tokens: [t], headings: null, scholars: null });
-      }
+    keyTerms.forEach((k, i) => { if (!covered.has(i)) units.push({ tokens: [k], headings: null, scholars: null }); });
+    // A heading's other terms may stand in for the query's words only when the heading is specific, or when the
+    // whole query is the topic ("prayer"). Otherwise "temporary marriage" would make every marriage page exact.
+    const topicQuery = spans.some((sp) => sp.headings.length &&
+      tokens.every((t, i) => stopSet.has(t) || (i >= sp.start && i < sp.start + sp.len)));
+    units.forEach((u) => {
+      u.generic = u.tokens.every((t) => genericSet.has(t));
+      if (u.headings) u.headings = u.headings.filter((h) => topicQuery || headingCount(h) <= subMax);
     });
-    units.forEach((u) => { u.generic = u.tokens.every((t) => genericSet.has(t)); });
     if (units.some((u) => !u.generic)) units = units.filter((u) => !u.generic);
 
     return {
-      raw, tokens, quoted, spans, keyTerms, keyIndex, isGeneric, hasSpecific, units,
+      longWords: tokens.filter((t) => t.length > 2 && !stopSet.has(t)),
+      raw, corrections, tokens, tokenKey, quoted, spans, keyTerms, keyIndex, isGeneric, hasSpecific, units,
       phrase: tokens.length >= 2 ? pad(tokens) : null,
     };
   }
@@ -452,6 +662,7 @@ export function createEngine(index) {
     const px = config.layer2.prefix;
     const score = new Float64Array(N);
     const mask = new Int32Array(N);
+    const wordMask = new Int32Array(N); // query words found as words (not only through a topic heading)
     const addPostings = (term, bit, factor) => {
       const p = postings.get(term);
       if (!p) return;
@@ -461,35 +672,41 @@ export function createEngine(index) {
         const norm = tf * (k1 + 1) / (tf + k1 * (1 - b + b * fieldLen[fi][d] / avgLen[fi]));
         score[d] += w * weights[fi] * norm;
         mask[d] |= bit;
+        wordMask[d] |= bit;
       }
     };
     qa.keyTerms.forEach((t, i) => {
       const bit = 1 << i;
       addPostings(t, bit, 1);
-      if (px.enabled && t.length >= px.min_length) {
+      if (px.enabled && t.length >= px.min_length && t[0] !== '~') {
         for (const longer of prefixTerms(t, px.max_expansions)) addPostings(longer, bit, px.weight);
       }
     });
-    // Concepts: a heading or scholar named by any of its alternate terms.
+    // Concepts: a heading or scholar named by any of its alternate terms. The bonus is scaled by how
+    // specific the heading or scholar is, so a broad topic cannot flood the results.
     for (const sp of qa.spans) {
       let bits = 0, n = 0;
       for (let j = sp.start; j < sp.start + sp.len; j++) {
-        const k = qa.keyIndex.get(qa.tokens[j]);
+        const k = qa.tokenKey[j];
         if (k !== undefined && !(bits & (1 << k))) { bits |= 1 << k; n++; }
       }
       const bonus = config.layer2.concept_weight * Math.max(1, n);
-      for (let d = 0; d < N; d++) {
-        const doc = docs[d];
-        let f = 0;
-        for (const h of sp.headings) {
-          if (doc.ownHeadings.has(h)) { f = 1; break; }
-          if (doc.allHeadings.has(h)) f = Math.max(f, 0.5);
-        }
-        if (f < 1 && sp.scholars.some((s) => doc.people.has(s))) f = 1;
-        if (f) { score[d] += bonus * f; mask[d] |= bits; }
+      const touched = [];
+      const give = (d, f) => { if (f > conceptBuf[d]) { if (!conceptBuf[d]) touched.push(d); conceptBuf[d] = f; } };
+      for (const h of sp.headings) {
+        const all = headingAllDocs.get(h) || [];
+        const sp1 = specificity(all.length);
+        for (const d of headingOwnDocs.get(h) || []) give(d, sp1);
+        for (const d of all) give(d, 0.5 * sp1);
       }
+      for (const p of sp.scholars) {
+        const ds = personDocs.get(p) || [];
+        const sp1 = specificity(ds.length);
+        for (const d of ds) give(d, sp1);
+      }
+      for (const d of touched) { score[d] += bonus * conceptBuf[d]; mask[d] |= bits; conceptBuf[d] = 0; }
     }
-    return { score, mask };
+    return { score, mask, wordMask };
   }
 
   function coverage(qa, mask) {
@@ -546,23 +763,38 @@ export function createEngine(index) {
   }
   function cluster(hits, skipParent) {
     const min = Math.max(2, Number(config.grouping.min_items) || 3);
-    const byParent = new Map();
+    // 1. Near-duplicates join the best-ranked page with the same key.
+    const leaders = [], byKey = new Map();
     for (const h of hits) {
+      const key = h.pinned || !config.grouping.collapse_duplicates ? null : docs[docIdx.get(h.record.id)].dupKey;
+      const lead = key ? byKey.get(key) : null;
+      if (lead) { lead.dups.push(h); continue; }
+      const l = { ...h, dups: [] };
+      if (key) byKey.set(key, l);
+      leaders.push(l);
+    }
+    const withDups = (l) => { const { dups, ...h } = l; return [h, ...dups]; };
+    // 2. Several questions from one section are grouped under it.
+    const byParent = new Map();
+    for (const h of leaders) {
       const r = h.record;
       if (h.pinned || r.granularity !== 'item' || !r.parent || r.parent === skipParent) continue;
       if (!byParent.has(r.parent)) byParent.set(r.parent, []);
       byParent.get(r.parent).push(h);
     }
     const out = [], done = new Set();
-    for (const h of hits) {
+    for (const h of leaders) {
       const p = h.record.parent;
       const group = !h.pinned && h.record.granularity === 'item' && p !== skipParent ? byParent.get(p) : null;
       if (group && group.length >= min) {
         if (done.has(p)) continue;
         done.add(p);
-        out.push({ kind: 'cluster', parent: recordById.get(p) || h.record.context.section, items: group });
+        out.push({ kind: 'cluster', parent: recordById.get(p) || h.record.context.section, items: group.flatMap(withDups) });
+      } else if (h.dups.length) {
+        out.push({ kind: 'cluster', similar: true, parent: null, items: withDups(h) });
       } else {
-        out.push({ kind: 'record', ...h });
+        const { dups, ...rest } = h;
+        out.push({ kind: 'record', ...rest });
       }
     }
     return out;
@@ -586,6 +818,7 @@ export function createEngine(index) {
     const result = {
       query: qa.raw.trim(), mode: 'search', layer: 4, order, filters: f, curated: null,
       exact: [], related: [], fallback: false, emptyTopic: null,
+      corrected: qa.corrections.length ? qa.corrections.map((c) => c.to).join(' ') : '',
       counts: { exact: 0, related: 0, total: 0, unfiltered: 0, tags: {}, cats: newCatCounts() },
     };
     for (const t of config.tags.order) result.counts.tags[t] = 0;
@@ -614,7 +847,7 @@ export function createEngine(index) {
     }
 
     const curated = layer1(qa);
-    const { score, mask } = keywordScores(qa);
+    const { score, mask, wordMask } = keywordScores(qa);
     const L2 = config.layer2;
 
     let hits = [];
@@ -627,9 +860,22 @@ export function createEngine(index) {
       let s = score[d];
       if (qa.phrase && (doc.tq.includes(qa.phrase) || doc.desc.includes(qa.phrase))) s *= L2.phrase_boost;
       s *= granBoost(doc.record);
-      hits.push({ doc, record: doc.record, score: s, coverage: cov, exact: isExact(qa, doc) });
+      // Known-item search: every word of the page's title is in the query ("man la yahduruhu al-faqih").
+      // Both ways: the query also has to be mostly the title, so a one-word title such as "Marriage" is not
+      // boosted for "temporary marriage".
+      if (doc.titleKeys.length && doc.titleKeys.every((t) => qa.tokens.some((x) => near(t, x))) &&
+          qa.longWords.filter((x) => doc.titleKeys.some((t) => near(t, x))).length >= qa.longWords.length * 2 / 3) {
+        s *= L2.title_match_boost;
+      }
+      hits.push({ doc, record: doc.record, score: s, coverage: cov, wordCoverage: coverage(qa, wordMask[d]), exact: isExact(qa, doc) });
     }
     hits.sort((a, b) => b.score - a.score);
+    // How well the best few keyword results cover the query's own words (not counting matches made only through a
+    // topic heading). Layer 3 uses it to decide whether meaning search should be asked as well.
+    result.signals = {
+      keyTerms: qa.keyTerms.length,
+      topWordCoverage: hits.slice(0, 3).reduce((m, h) => Math.max(m, h.wordCoverage), 0),
+    };
     const top = hits[0];
     // Drop the long tail of results that only share a common word with the query.
     if (top) {
@@ -646,7 +892,7 @@ export function createEngine(index) {
     const pinned = [];
     if (curated && curated.question) {
       for (const id of curated.question.top_records || []) {
-        const idx = docs.findIndex((x) => x.record.id === id);
+        const idx = docIdx.has(id) ? docIdx.get(id) : -1;
         if (idx === -1) continue;
         const existing = hits.find((h) => h.record.id === id);
         if (existing) hits.splice(hits.indexOf(existing), 1);
@@ -702,6 +948,9 @@ export function createEngine(index) {
         strict ? (levelRank(a.record.level, order) - levelRank(b.record.level, order)) || nearTie(a, b)
           : nearTie(a, b, boosted)));
     related.sort((a, b) => boosted(b) - boosted(a));
+    // Related results are capped: past a few dozen they share little with the query.
+    const relCap = Number(L2.max_related) || Infinity;
+    if (related.length > relCap) related.length = relCap;
 
     result.exact = cluster(exact, f.section);
     result.related = cluster(related, f.section);
@@ -712,13 +961,17 @@ export function createEngine(index) {
     return result;
   }
 
-  const docIndex = new Map(docs.map((d, i) => [d.record.id, i]));
+  const docIndex = docIdx;
 
   /** True when keyword search is weak enough that Layer 3 (meaning) should be consulted. */
   function needsSemantic(result) {
     const L3 = config.layer3;
     if (!L3 || !L3.enabled || result.mode !== 'search') return false;
-    return result.fallback || result.counts.exact < L3.max_exact;
+    if (result.fallback || result.counts.exact < L3.max_exact) return true;
+    // Also when the query is a longer question and even the best keyword results contain too few of its words.
+    const sig = result.signals || {};
+    return Number(L3.min_word_coverage) > 0 && sig.keyTerms >= (Number(L3.min_terms_for_coverage) || 3) &&
+      sig.topWordCoverage < Number(L3.min_word_coverage);
   }
 
   /**
@@ -792,8 +1045,10 @@ export function createEngine(index) {
     return out;
   }
 
+  addRecords(index.records || []);
+
   return {
-    config, records, headings, scholars, sources, questions, paths,
+    config, records, headings, scholars, sources, questions, paths, addRecords,
     recordById, headingById, scholarById, sourceById, pathById,
     search, flatten, analyze, needsSemantic, addSemantic, catOf,
     buildDate: index.build_date || '',
