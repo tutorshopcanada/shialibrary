@@ -7,15 +7,13 @@ export const SITE = {
   // "Report a wrong or broken link". Needs no server: it opens the visitor's
   // email app or a pre-filled GitHub issue.
   //
-  // TODO(owner): set ONE of these, then delete the other.
-  //   kind: 'mailto', target: 'someone@example.org'
+  // Set by the owner on 2026-11-20: reports and feedback arrive by email. To use GitHub issues instead:
   //   kind: 'github', target: 'https://github.com/OWNER/REPO'   (issues must be enabled)
-  //
-  // While the target still contains "TODO", the site shows "reporting is not
-  // set up yet" instead of a link that goes nowhere.
+  // If the target ever contains "TODO", the site shows "reporting is not set up yet"
+  // instead of a link that goes nowhere.
   report: {
     kind: 'mailto',
-    target: 'TODO-OWNER-EMAIL@example.org',
+    target: 'aliasgharjivraj@gmail.com',
   },
 
   // For questions we have no catalog entry for, link to the source site's own question page.
@@ -44,16 +42,62 @@ export function reportConfigured() {
   return !!t && !/TODO/i.test(t);
 }
 
+/** What a report can be about. `label` is the choice the visitor sees; `title` and `ask` go into the message. */
+export const REPORT_KINDS = {
+  mismatch: { title: 'Search mismatch', label: null, ask: 'What were you looking for? (optional)', github: 'search-mismatch' },
+  link: { title: 'Link problem', label: 'The link is broken or opens the wrong page', ask: 'What is wrong (broken link, wrong page, other)?', github: 'link-problem' },
+  info: { title: 'Wrong description or level', label: 'The description or level is wrong', ask: 'What is wrong with the description or level?', github: 'description' },
+};
+
 /**
- * Link for reporting a problem, optionally about one record.
- * Returns '' when reporting is not set up.
+ * Link for reporting a problem, optionally about one record. Returns '' when reporting is not set up.
+ * @param {object|null} record  the result being reported
+ * @param {'link'|'info'|'mismatch'} [kind]
+ * @param {{q?: string, topic?: string}} [ctx]  for 'mismatch': what the visitor searched for. These words are
+ *   only ever put in the message the visitor chooses to send; nothing is sent from the page itself.
  */
-export function reportHref(record) {
+export function reportHref(record, kind = 'link', ctx = {}) {
   if (!reportConfigured()) return '';
-  const subject = record ? `Link problem: ${record.id}` : 'Problem with a link';
-  const body = record
-    ? `Record: ${record.id}\nTitle: ${record.title}\nLink: ${record.url}\n\nWhat is wrong (broken link, wrong page, wrong description, other):\n`
-    : 'Which result, and what is wrong (broken link, wrong page, wrong description, other):\n';
+  const k = REPORT_KINDS[kind] || REPORT_KINDS.link;
+  const q = String(ctx.q || '').trim().slice(0, 200), topic = String(ctx.topic || '').trim().slice(0, 120);
+  let subject, body;
+  if (!record) {
+    subject = 'Problem with a link';
+    body = 'Which result, and what is wrong (broken link, wrong page, wrong description, other):\n';
+  } else if (kind === 'mismatch') {
+    subject = q ? `Search mismatch: "${q}" -> ${record.id}` : `Topic mismatch: ${topic} -> ${record.id}`;
+    body = [
+      q ? 'This result does not match my search.' : 'This result does not belong in this topic.',
+      '',
+      q ? `Search words: ${q}` : `Topic: ${topic}`,
+      `Record: ${record.id}`,
+      `Title: ${record.title}`,
+      `Link: ${record.url}`,
+      '',
+      k.ask,
+      '',
+    ].join('\n');
+  } else {
+    subject = `${k.title}: ${record.id}`;
+    body = `Record: ${record.id}\nTitle: ${record.title}\nLink: ${record.url}\n\n${k.ask}\n`;
+  }
+  if (SITE.report.kind === 'github') {
+    const base = SITE.report.target.replace(/\/+$/, '');
+    return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&labels=${encodeURIComponent(k.github)}`;
+  }
+  return `mailto:${SITE.report.target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+/**
+ * Link for general feedback. Same no-server approach as reportHref:
+ * the visitor's email app, or a pre-filled GitHub issue. Returns '' when not set up.
+ * @param {'feedback'|'link'|'source'} kind
+ * @param {string} message  what the visitor typed (may be empty)
+ */
+export function feedbackHref(kind, message) {
+  if (!reportConfigured()) return '';
+  const subject = { feedback: `${SITE.name}: feedback`, link: `${SITE.name}: link problem`, source: `${SITE.name}: website suggestion` }[kind] || `${SITE.name}: feedback`;
+  const body = String(message || '').trim();
   if (SITE.report.kind === 'github') {
     const base = SITE.report.target.replace(/\/+$/, '');
     return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -62,21 +106,21 @@ export function reportHref(record) {
 }
 
 /**
- * Link for general feedback or a waitlist request. Same no-server approach as reportHref:
- * the visitor's email app, or a pre-filled GitHub issue. Returns '' when not set up.
- * @param {'waitlist'|'feedback'|'link'} kind
- * @param {string} message  what the visitor typed (may be empty)
+ * The questions shown when the empty search box is clicked, and as "Common questions" on the home page, in this order.
+ * Each id is a question in data/questions.yaml (all of those are still drafts awaiting review). Chosen as the things
+ * newcomers and everyday Muslims most often ask: what Shia Islam is, how it differs from Sunni Islam, how to start,
+ * how Shias pray and why they mourn, who the Imams are, khums, Ramadan fasting. Missing ids are skipped.
  */
-export function feedbackHref(kind, message) {
-  if (!reportConfigured()) return '';
-  const subject = { waitlist: `${SITE.name}: add me to the waitlist`, feedback: `${SITE.name}: feedback`, link: `${SITE.name}: link problem`, source: `${SITE.name}: website suggestion` }[kind] || `${SITE.name}: feedback`;
-  const body = String(message || '').trim() || (kind === 'waitlist' ? 'Please add me to the waitlist.' : '');
-  if (SITE.report.kind === 'github') {
-    const base = SITE.report.target.replace(/\/+$/, '');
-    return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
-  return `mailto:${SITE.report.target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
+export const SUGGESTED = [
+  'q-what-is-shia-islam',
+  'q-how-to-become-muslim',
+  'q-shia-sunni-difference',
+  'q-how-do-shias-pray',
+  'q-why-mourn-husayn',
+  'q-who-are-the-twelve-imams',
+  'q-what-is-khums',
+  'q-fasting-ramadan',
+];
 
 /**
  * "Start here" curation. Owner-editable. Every id must be a record in the catalog; missing ids are

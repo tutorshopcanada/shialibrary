@@ -1222,3 +1222,19 @@ scholars:
       - "Sayyid Sameer Ali"
     notes: "Named on https://imam-us.org/r-i-s-e-leads-mental-health-wellness-workshop-on-islam-grief (read 2026-11-15) as the leader of a workshop on grief; also named on https://imam-us.org/r-i-s-e-attends-sacred-journeys-network-conference-2026 as a presenter. Name variants beyond this spelling not verified."
     needs_review: true
+
+  - id: abu-mikhnaf
+    name: "Abu Mikhnaf"
+    role: author
+    alt_names:
+      - "Abu-Mikhnaf"
+    notes: "Named as author of The Event of Taff on https://al-islam.org/event-taff-earliest-historical-account-tragedy-karbala-abu-mikhnaf (read 2026-11-20); the metadata gives 'Abu-Mikhnaf', the header and person link 'Abu Mikhnaf'."
+    needs_review: true
+
+  - id: muhammad-hadi-yusufi-gharawi
+    name: "Muhammad Hadi Yusufi Gharawi"
+    role: author
+    alt_names:
+      - "Shaikh Muhammad Hadi al-Yusufi al-Gharawi"
+    notes: "Named as reviser (research and editing) of The Event of Taff on https://al-islam.org/event-taff-earliest-historical-account-tragedy-karbala-abu-mikhnaf (read 2026-11-20); the translator there is 'Umar Kumo."
+    needs_review: true
