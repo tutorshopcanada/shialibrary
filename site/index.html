@@ -32,6 +32,7 @@
   </script>
 </head>
 <body>
+  <script>/* Paint the home layout from the first frame (app.js confirms the route once the catalog loads), so the old plain page never flashes. */if(!location.search&&(location.hash===""||location.hash==="#"))document.body.classList.add("home");</script>
   <a class="skip" href="#top" id="skip">Skip to content</a>
 
   <div class="in" id="top">
