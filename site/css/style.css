@@ -18,16 +18,6 @@
   --serif:"Instrument Serif","Iowan Old Style",Georgia,serif;
   --sans:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#0b1422; --frame:#192d4a; --panel:#172d49; --paper:#0f1c2f; --stage:#0a2142; --ink:#eef2f7; --mute:#a9b9cf; --line:#22364f; --edge:#2c4260; --hi:#243b5c;
-  --focus:#ffb86b; --on-ink:#0b1422; --strip:#102139; --wave:#192d4a;
-  --btn:#3cc4b8; --on-btn:#04201e; --gold:#d9a86d; --gold-btn:#f0c58f; --on-gold:#2a1a08; --turq:#5fc2b9; --brick:#d49a62; --sky:#98c5fd;
-  --t-fiqh:#5fc2b9; --t-hadith:#d9a86d; --t-book:#7db4e0; --t-article:#d49a62; --t-course:#8fb2ee; --t-lecture:#8fb2ee; --t-other:#9fb0c6; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --ground:#0b1422; --frame:#192d4a; --panel:#172d49; --paper:#0f1c2f; --stage:#0a2142; --ink:#eef2f7; --mute:#a9b9cf; --line:#22364f; --edge:#2c4260; --hi:#243b5c;
-  --focus:#ffb86b; --on-ink:#0b1422; --strip:#102139; --wave:#192d4a;
-  --btn:#3cc4b8; --on-btn:#04201e; --gold:#d9a86d; --gold-btn:#f0c58f; --on-gold:#2a1a08; --turq:#5fc2b9; --brick:#d49a62; --sky:#98c5fd;
-  --t-fiqh:#5fc2b9; --t-hadith:#d9a86d; --t-book:#7db4e0; --t-article:#d49a62; --t-course:#8fb2ee; --t-lecture:#8fb2ee; --t-other:#9fb0c6; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--ground);color:var(--ink);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased;letter-spacing:-.006em;
@@ -191,8 +181,6 @@ section.blk{scroll-margin-top:1rem}
 .fld input:focus,.fld textarea:focus,.fld select:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
 .fld .hint{font-size:0.875rem;color:var(--mute)}
 .fld .err{font-size:0.875rem;color:#b3261e}
-:root[data-theme="dark"] .fld .err{color:#ff8a80}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fld .err{color:#ff8a80}}
 .kinds{display:flex;gap:.4rem;flex-wrap:wrap}
 .kinds label{cursor:pointer}
 .kinds input{position:absolute;opacity:0;width:1px;height:1px}
@@ -334,7 +322,6 @@ h1:focus,h2:focus{outline:0}
 .refine:focus-within{border-color:var(--ink)}
 .btn.icon{width:2.75rem;padding:0;justify-content:center}
 .btn.icon svg{width:1.2rem;height:1.2rem}
-.btn.icon .i-sun{display:none}.btn.icon.is-dark .i-sun{display:block}.btn.icon.is-dark .i-moon{display:none}
 .btn{min-height:2.75rem}
 .btn.big{min-height:3rem}
 .chip,.seg button,.kinds span,.open,.qc .more{min-height:2.75rem}
@@ -932,7 +919,6 @@ body.has .hero-art,body.has .cursor{display:none}
 
 .price{font-size:.8125rem;font-weight:600;border-radius:22px;padding:.05rem .6rem;border:1px solid currentColor}
 .price.free{color:#1a6b3a}.price.paid{color:#8a5a00}
-@media (prefers-color-scheme:dark){.price.free{color:#6fd39a}.price.paid{color:#e6b45a}}
 
 /* Phone: no bezel. The sand frame around the page is removed, and the hero runs edge to edge
    (the body gutter is cancelled for it) with square corners. The content panel keeps its own inset. */

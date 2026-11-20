@@ -7,7 +7,8 @@ How the static site in `site/` is put together, and where to change things. No b
 | File | What |
 |---|---|
 | `site/index.html` | Page shell: nav strip, hero search, page area, footer, the full-screen tour |
-| `site/css/style.css` | All styling. Colours and radii are tokens at the top (`:root`), with a dark theme |
+| `site/css/style.css` | All styling. Colours and radii are tokens at the top (`:root`). Light only |
+| `site/css/theme.css` | The one look, loaded last: navy chrome, sand reading area, gold-to-turquoise line, one button, one heading face. Its header lists the rules |
 | `site/js/app.js` | Drawing and routing only. Every search decision lives in `site/js/search.js` |
 | `site/js/search.js` | The search engine, shared with `scripts/eval_search.mjs` (untouched by the redesign) |
 | `site/js/config.js` | Site name, report/feedback target, external search, and the "Start here" lists |
@@ -132,7 +133,7 @@ Built to scan. The page stage carries the query and the count ("150 pages found"
 
 ## Verification pass
 
-Checked with axe-core (WCAG 2.1 A and AA plus best-practice) on 16 pages at desktop and phone width, in light and dark: no contrast, label, landmark or heading-order violations remain. The one finding left is axe's "skip link" note on the tour slides, which flags in-app tile links like `#e-the-psalms`; they are route links, not skip links, so it is a false positive. Fixed from the audit: low-contrast count badges on chips and tabs, heading levels on topic, name and About pages, missing keyboard focus ring on path cards and search bars, a stray "Loading the catalog…" line with JavaScript off, and 44px hit areas on footer links, back links, shelf titles and report links on touch. Load time (Chromium, gzip, local server): on slow 4G with a 4x slower CPU the hero shows at about 0.3 s and search is ready at about 4 s; on slow 3G with a 6x slower CPU, about 0.7 s and 11.5 s. About a third of that is building the search index on the main thread. Not covered: a real phone, Safari and Firefox.
+Checked with axe-core (WCAG 2.1 A and AA plus best-practice) on 16 pages at desktop and phone width (before dark mode was removed on 2026-11-20): no contrast, label, landmark or heading-order violations remain. The one finding left is axe's "skip link" note on the tour slides, which flags in-app tile links like `#e-the-psalms`; they are route links, not skip links, so it is a false positive. Fixed from the audit: low-contrast count badges on chips and tabs, heading levels on topic, name and About pages, missing keyboard focus ring on path cards and search bars, a stray "Loading the catalog…" line with JavaScript off, and 44px hit areas on footer links, back links, shelf titles and report links on touch. Load time (Chromium, gzip, local server): on slow 4G with a 4x slower CPU the hero shows at about 0.3 s and search is ready at about 4 s; on slow 3G with a 6x slower CPU, about 0.7 s and 11.5 s. About a third of that is building the search index on the main thread. Not covered: a real phone, Safari and Firefox.
 
 ## Hero artwork
 

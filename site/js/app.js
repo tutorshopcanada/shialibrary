@@ -1036,10 +1036,6 @@ $('#mnav').addEventListener('click', (e) => { if (e.target.closest('a')) setMenu
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && !$('#mnav').hidden) { setMenu(false); $('#menuBtn').focus(); return; }
 });
-const curTheme = () => document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-function themeBtn() { const d = curTheme() === 'dark', b = $('#theme'); b.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme'); b.classList.toggle('is-dark', d); }
-$('#theme').addEventListener('click', () => { document.documentElement.dataset.theme = curTheme() === 'dark' ? 'light' : 'dark'; themeBtn(); });
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', themeBtn); themeBtn();
 
 // ---------------------------------------------------------------------------
 // Start

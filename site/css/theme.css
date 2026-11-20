@@ -1,66 +1,85 @@
-/* One look for the whole site, taken from the home page: deep navy, turquoise light, gold, sand.
-   Loaded last (after style.css, type.css and journey.css). It re-colours the shared tokens and gives every other
-   page the home page's chrome: an edge-to-edge navy header with the transparent nav, no tan frame, and a navy footer.
-   Light and dark themes both stay; only the reading area changes between them, the chrome is navy in both. */
+/* One look for the whole site, taken from the home page. Light only (there is no dark mode).
+   Loaded last, after style.css, type.css and journey.css.
+
+   The rules of the look, so new pages stay in it:
+   - Colour: deep navy (#0b1e2a) for chrome, warm sand for reading, turquoise for lines and links, gold for small accents.
+   - One signature: a thin gold-to-turquoise line, the same one that fills the journey's timeline. It closes every navy
+     band (page header, journey, footer).
+   - One button: navy with sand text on sand; sand with navy text on navy. The outline button is the quiet version.
+   - One heading face: Fraunces, light. Catalog record titles stay in Inter because they are data, not headings.
+   - One radius for cards (16px) and pills (999px). */
 
 :root{
-  --h-navy:#0b1e2a; --h-deep:#05141f; --h-teal:#6fe0d2; --h-teal-d:#0e7c80; --h-gold:#e6bd6a; --h-sand:#f7f0e0; --h-ink:#16203a;
+  --h-navy:#0b1e2a; --h-deep:#08192a; --h-teal:#6fe0d2; --h-teal-d:#0e7c80; --h-gold:#e6bd6a; --h-sand:#f7f0e0; --h-ink:#16203a;
+  --h-line:linear-gradient(90deg,#6fe0d2,#e6bd6a);
   --gut:max(16px,env(safe-area-inset-left,0px));
   --ground:#f7f1e3; --frame:#ebe1cb; --panel:#fbf7ee; --paper:#fffdf8; --stage:var(--h-navy); --ink:#16203a; --mute:#4a5466;
   --line:#e7dcc5; --edge:#d4c3a0; --hi:#f0e5cc; --strip:var(--h-navy); --wave:#ebe1cb;
   --focus:#b4530a; --on-ink:#ffffff;
   --btn:#0e7c80; --on-btn:#ffffff; --gold:#b98a3a; --gold-btn:#e6bd6a; --on-gold:#16203a; --turq:#0e7c80; --turq-deep:#0e7c80;
   --stageg:radial-gradient(90% 140% at 88% 115%,rgba(14,124,128,.55) 0,rgba(14,124,128,0) 62%),linear-gradient(180deg,#0b1e2a 0,#08192a 100%);
+  color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ground:#05141f; --frame:#12303d; --panel:#0f2633; --paper:#0b1e2a; --stage:var(--h-navy); --ink:#eef4f2; --mute:#a3bcc2;
-  --line:#163240; --edge:#23495a; --hi:#123441; --strip:var(--h-navy); --wave:#12303d;
-  --focus:#ffb86b; --on-ink:#05141f;
-  --btn:#6fe0d2; --on-btn:#05141f; --gold:#e6bd6a; --gold-btn:#e6bd6a; --on-gold:#16203a; --turq:#6fe0d2; --turq-deep:#6fe0d2;
-  --t-fiqh:#6fe0d2; --t-hadith:#e6bd6a; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --ground:#05141f; --frame:#12303d; --panel:#0f2633; --paper:#0b1e2a; --stage:var(--h-navy); --ink:#eef4f2; --mute:#a3bcc2;
-  --line:#163240; --edge:#23495a; --hi:#123441; --strip:var(--h-navy); --wave:#12303d;
-  --focus:#ffb86b; --on-ink:#05141f;
-  --btn:#6fe0d2; --on-btn:#05141f; --gold:#e6bd6a; --gold-btn:#e6bd6a; --on-gold:#16203a; --turq:#6fe0d2; --turq-deep:#6fe0d2;
-  --t-fiqh:#6fe0d2; --t-hadith:#e6bd6a; color-scheme:dark}
+body{margin:0}
+/* The phone status area is navy on every page, like the header under it. */
+body::before{background:var(--h-navy)}
 
 /* ---------- page chrome: edge to edge, like the home page ---------- */
-body{margin:0}
 body:not(.home) #top.in{max-width:none;background:transparent;border:0;border-radius:0;padding:0;margin:0 0 1.6rem}
 body:not(.home) #top .hero-frame{margin:0 calc(-1 * var(--gut));padding:0;background:transparent;border:0;border-radius:0}
-body:not(.home) #top .hero-frame .site{border-radius:0;background:var(--h-navy);box-shadow:inset 0 -1px 0 rgba(111,224,210,.22)}
+body:not(.home) #top .hero-frame .site{border-radius:0;background:var(--h-navy)}
 body:not(.home) #top .strip{--ink:#fff;--on-ink:var(--h-navy);background:transparent;border-bottom:0;padding-inline:max(16px,calc(50vw - 32rem + 1rem))}
 body:not(.home) .strip .btn.line{border-color:rgba(255,255,255,.55)}
 body:not(.home) .strip .links a[aria-current]{color:var(--h-gold)}
 body:not(.home) .mnav{background:#102139;color:#fff}
 body:not(.home) .mnav a{color:#fff}
 
-/* Page header band: navy with the turquoise glow the hero takes on as it turns into the map, and a faint dot grid. */
+/* Page header band: navy, a faint dot grid, the turquoise glow the hero takes on as it turns into the map. */
 .rs,.rs.page{padding-left:max(16px,calc(50vw - 32rem + 1rem));padding-right:max(16px,calc(50vw - 32rem + 1rem))}
 .rs{background-color:var(--h-navy);background-image:radial-gradient(rgba(111,224,210,.16) 1px,transparent 1.5px),var(--stageg);background-size:22px 22px,auto}
 .rs::before{background:var(--h-gold);opacity:.1}
+.rs::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--h-line);z-index:2}
 .rs h1{font-weight:300;letter-spacing:-.016em}
 .rs .lede{color:rgba(247,240,224,.9)}
 .rs .kind{border-color:rgba(230,189,106,.55);color:var(--h-gold)}
-.rs .btn.solid{background:var(--h-teal-d);color:#fff;border-color:var(--h-teal-d)}
 
-/* Reading area: the content sits on the page itself, centred like the home page, without the inner panel. */
+/* The journey closes with the same line, so the hand-off to the sand is not a hard cut. */
+.jrn::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--h-line);z-index:7}
+
+/* Reading area: the content sits on the page itself, centred like the home page. */
 body:not(.home) #top .view{max-width:64rem;margin:0 auto;background:transparent;border-radius:0;padding:clamp(1.8rem,4vw,2.8rem) 0 clamp(2.4rem,5vw,3.6rem)}
 
-/* ---------- navy panels and sand buttons, as on the home page ---------- */
+/* ---------- one button ---------- */
+#view .btn.solid,.rs .btn.solid{background:var(--h-navy);color:var(--h-sand);border-color:var(--h-navy)}
+@media (hover:hover) and (pointer:fine){#view .btn.solid:hover,.rs .btn.solid:hover{background:var(--h-teal-d);border-color:var(--h-teal-d);filter:none}}
+#view .btn.line{border-color:var(--h-navy);color:var(--h-navy)}
+@media (hover:hover) and (pointer:fine){#view .btn.line:hover{background:var(--h-navy);color:var(--h-sand)}}
+.chip{background:var(--paper);border:1px solid var(--edge)}
+.chip[aria-pressed=true],.seg [aria-pressed=true]{background:var(--h-navy);color:var(--h-sand);border-color:var(--h-navy)}
+.skip{background:var(--h-navy);color:var(--h-sand)}
+/* On navy the button is sand. */
+.fb-l .btn,.cta .btn,.cta .btn.solid,.btn.white{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
+.pn{background:var(--h-sand);color:var(--h-ink)}
+.cta{background:var(--h-navy);background-image:radial-gradient(80% 140% at 100% 100%,rgba(14,124,128,.55) 0,rgba(14,124,128,0) 65%);color:var(--h-sand)}
+.cta :focus-visible{outline-color:#fff}
 .stage{background-image:var(--stageg)}
 .fb-l{background-image:radial-gradient(100% 120% at 100% 100%,rgba(14,124,128,.6) 0,rgba(14,124,128,0) 65%),linear-gradient(160deg,#0b1e2a,#0c2733)}
-.rs .btn.white,.fb-l .btn.white{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
-.cta{background:var(--h-navy);background-image:radial-gradient(80% 140% at 100% 100%,rgba(14,124,128,.55) 0,rgba(14,124,128,0) 65%);color:var(--h-sand)}
-.cta .btn,.cta .btn.solid{background:var(--h-sand);color:var(--h-ink);border-color:var(--h-sand)}
-.cta :focus-visible{outline-color:#fff}
 
-/* ---------- footer: a navy band on every page ---------- */
-footer{background:var(--h-deep);color:#a3bcc2;margin:0 calc(-1 * var(--gut));padding:2.2rem var(--gut) 3rem}
+/* ---------- one heading face ---------- */
+h2,.tsec h2{font-family:var(--serif);font-weight:360}
+h2.ch,.callout h2,.curated h2.ch{font-family:var(--serif);font-weight:400;letter-spacing:-.012em}
+.pcard h3,.sc-top h3,.tile h3,.gh h3,.qask h3,.scope h3,.stg-t h3,.pil h3,.demo h3{font-family:var(--serif);font-weight:420;letter-spacing:-.01em}
+.sn,.jn,.sn2{background:var(--h-navy);color:var(--h-sand)}
+
+/* ---------- cards: one radius ---------- */
+.pcard,.tile,.sc,.sp,.scope,.callout,.qask,.stg,.shelf,.pil,.demo{border-radius:16px}
+.pill{background:rgba(230,189,106,.28);color:#6b4a12;border:0}
+
+/* ---------- footer: navy, opened from the sand by the same line ---------- */
+footer{position:relative;background-color:var(--h-navy);background-image:radial-gradient(90% 160% at 100% 100%,rgba(14,124,128,.35) 0,rgba(14,124,128,0) 60%);color:#a3bcc2;margin:0 calc(-1 * var(--gut));padding:2.6rem var(--gut) 3rem}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--h-line)}
 footer .in{border-top:0;padding-top:0}
 footer b{color:var(--h-sand)}
 footer a{color:#dcefeb}
 footer .fl a{color:var(--h-sand)}
 footer :focus-visible{outline-color:#fff}
-body.home footer{margin-top:0}
