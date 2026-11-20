@@ -191,7 +191,7 @@ function cardHtml(r, { compact = false, lean = false, tick = false, hideContextF
       context = `<span class="ctx"><a href="${esc(searchHref({ ...blank(), section: r.id }))}">Browse the ${pl(r.descendant_count, 'entry', 'entries')} inside</a></span>`;
     }
     const rh = reportHref(r);
-    report = `<span class="report"><a href="${esc(rh || pageHref('about'))}"${rh ? ' rel="noopener noreferrer"' : ''}>Report a problem</a></span>`;
+    report = `<span class="report"><a href="${esc(rh || pageHref('about'))}"${rh ? ' target="_blank" rel="noopener noreferrer"' : ''}>Report a problem</a></span>`;
   }
   if (lean) { context = ''; report = ''; }
   if (tick) actions += `<label class="stick"><input class="tick" type="checkbox" data-read="${esc(r.id)}" ${read[r.id] ? 'checked' : ''}> Mark as read</label>`;
@@ -431,7 +431,7 @@ const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 const ICON = { link: ico('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'), list: ico('<path d="M5 6h14M5 12h14M5 18h9"/>'), lock: ico('<rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>') };
 function aboutHtml() {
   const rep = reportConfigured()
-    ? `<a class="btn solid" href="${esc(reportHref(null))}" rel="noopener noreferrer">${SITE.report.kind === 'github' ? 'Report a problem (opens GitHub)' : 'Report a problem by email'}</a>`
+    ? `<a class="btn solid" href="${esc(reportHref(null))}" target="_blank" rel="noopener noreferrer">Report a problem</a>`
     : `<a class="btn solid" href="${esc(pageHref('feedback'))}">Tell us about it</a>`;
   const scope = safeUrl(SITE.scopeUrl) ? `<a href="${esc(SITE.scopeUrl)}" rel="noopener noreferrer">Read the full scope and inclusion criteria ↗</a>` : 'A fuller written scope is kept with the project and will be linked here once it is public.';
   const cells = [['Who it is for', 'Twelver (Ithna ‘Ashari) Shia resources, in English, with beginners first. Searching with Arabic, Persian or Urdu terms and common spellings still works: they match the same topics.'],
@@ -463,7 +463,7 @@ const FB = {
   link: { tab: 'Broken link', d: 'A link that fails or opens the wrong page. Include the title of the result.', go: 'Send report', need: true, ph: 'The title of the result and what is wrong.' },
 };
 function feedbackHtml() {
-  const ok = reportConfigured(), via = SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app';
+  const ok = reportConfigured();
   const k0 = ui.fbkind && FB[ui.fbkind] ? ui.fbkind : 'source';
   if (!ok) {
     try { console.info('ShiaLib: feedback is switched off. Set SITE.report in site/js/config.js to turn it on.'); } catch { /* ignore */ }
@@ -473,7 +473,7 @@ function feedbackHtml() {
    <fieldset class="fbtabs"><legend class="sr">What is this about?</legend>${Object.entries(FB).map(([k, v]) => `<label class="fbtab"><input type="radio" name="kind" value="${k}"${k === k0 ? ' checked' : ''}><span>${esc(v.tab)}</span></label>`).join('')}</fieldset>
    <p class="fb-d" id="fb-desc">${esc(FB[k0].d)}</p>
    <div class="fld" id="fb-msgw"><label for="fb-msg">Your message <span class="mute" id="fb-opt">${FB[k0].need ? '' : '(optional)'}</span></label><textarea id="fb-msg" placeholder="${esc(FB[k0].ph)}" aria-describedby="fb-merr"></textarea><span class="err" id="fb-merr" role="alert" hidden>Add a short message so we know what to look at.</span></div>
-   <div class="fb-a"><button class="btn solid big" type="submit" id="fb-go">${esc(FB[k0].go)}</button><p class="fb-n">Your ${via} opens with the message ready. Nothing is sent until you send it. No account is needed, and this site stores nothing you type.</p></div></form></section>`;
+   <div class="fb-a"><button class="btn solid big" type="submit" id="fb-go">${esc(FB[k0].go)}</button><p class="fb-n">A form opens in a new tab. Nothing is sent until you submit the form. No account is needed, and this site stores nothing you type.</p></div></form></section>`;
 }
 
 function startHtml() {
@@ -695,16 +695,16 @@ function miniHtml(r) {
 }
 // "Report a problem" on a result: a small menu. The first choice is "this does not match": it carries the visitor's
 // search words (or the topic) into the message so the owner can see what was searched and what came back. Nothing is
-// sent by the page; the email app or GitHub opens with the message ready and the visitor sends it.
+// sent by the page; a Google Form opens in a new tab with the message ready and the visitor submits it.
 function reportMenu(r) {
   if (!reportConfigured()) return `<a class="lr-rep" href="${esc(pageHref('about'))}">Report a problem<span class="sr"> with ${esc(r.title)}</span></a>`;
   const q = route.t === 'results' ? ((route.st || {}).q || '').trim() : '';
   const topic = route.t === 'topic' ? TOPN(route.k) : (route.t === 'results' && (route.st || {}).topic ? TOPN(route.st.topic) : '');
-  const ext = SITE.report.kind === 'github' ? ' target="_blank" rel="noopener noreferrer"' : '';
+  const ext = ' target="_blank" rel="noopener noreferrer"';
   const opt = (kind, label, note = '') => `<li><a href="${esc(reportHref(r, kind, { q, topic }))}"${ext}>${label}${note ? `<small>${esc(note)}</small>` : ''}</a></li>`;
   const first = q ? opt('mismatch', `This does not match “${esc(q.length > 40 ? q.slice(0, 40) + '…' : q)}”`, 'Sends your search words, so we can improve the results')
     : topic ? opt('mismatch', `This does not belong in ${esc(topic)}`, 'Tells us which topic you were in') : '';
-  return `<details class="lr-rp"><summary>Report a problem<span class="sr"> with ${esc(r.title)}</span></summary><div class="lr-rpm"><p>What is wrong? Your ${SITE.report.kind === 'github' ? 'GitHub issue form' : 'email app'} opens with a message ready. Nothing is sent until you send it.</p><ul>${first}${opt('link', esc(REPORT_KINDS.link.label))}${opt('info', esc(REPORT_KINDS.info.label))}</ul></div></details>`;
+  return `<details class="lr-rp"><summary>Report a problem<span class="sr"> with ${esc(r.title)}</span></summary><div class="lr-rpm"><p>What is wrong? A form opens in a new tab. Nothing is sent until you submit it.</p><ul>${first}${opt('link', esc(REPORT_KINDS.link.label))}${opt('info', esc(REPORT_KINDS.info.label))}</ul></div></details>`;
 }
 function rowHtml(r, more, hl = 'h4') {
   const c = r.context || {}, parts = [c.section, c.work].filter(Boolean), sid = (c.section || c.work || {}).id;
@@ -1029,7 +1029,7 @@ view.addEventListener('submit', (e) => {
   const need = (FB[k] || FB.feedback).need && !msg; $('#fb-merr').hidden = !need; $('#fb-msg').setAttribute('aria-invalid', String(need));
   if (need) { $('#fb-msg').focus(); return; }
   const href = feedbackHref(k, msg); if (!href) return;
-  if (SITE.report.kind === 'github') window.open(href, '_blank', 'noopener'); else location.href = href;
+  window.open(href, '_blank', 'noopener');
 });
 document.addEventListener('click', (e) => { document.querySelectorAll('details.lr-rp[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; }); });
 document.addEventListener('keydown', (e) => { if (e.key !== 'Escape') return; const d = document.querySelector('details.lr-rp[open]'); if (d) { d.open = false; d.querySelector('summary').focus(); } });

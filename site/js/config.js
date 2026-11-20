@@ -4,16 +4,21 @@ export const SITE = {
   // Shown in the header and page titles.
   name: 'ShiaLib',
 
-  // "Report a wrong or broken link". Needs no server: it opens the visitor's
-  // email app or a pre-filled GitHub issue.
-  //
-  // Set by the owner on 2026-11-20: reports and feedback arrive by email. To use GitHub issues instead:
-  //   kind: 'github', target: 'https://github.com/OWNER/REPO'   (issues must be enabled)
-  // If the target ever contains "TODO", the site shows "reporting is not set up yet"
-  // instead of a link that goes nowhere.
+  // "Report a problem" and "Send feedback" both open a Google Form in a new tab. No server and no
+  // email address on the page. Setup (owner):
+  //   1. Create a Google Form with a long-answer question for the message, and optionally a short-answer
+  //      question for the report type.
+  //   2. Copy its link ending in /viewform and set `target` below.
+  //   3. Optional: to pre-fill the message, open the form, click ⋮ > "Get pre-filled link", type anything
+  //      in each box, click "Get link", and read the entry.NNNNN names from the URL. Put them in `fields`.
+  // If `target` is blank or still contains "TODO", the site shows "reporting is not set up yet".
   report: {
-    kind: 'mailto',
-    target: 'aliasgharjivraj@gmail.com',
+    kind: 'form',
+    target: 'https://docs.google.com/forms/d/e/1FAIpQLSd_w-XsFp9zWK4H7BQAS7B3Vc0TR8ygHaBrI-0NHkjbzcTnng/viewform',
+    fields: {
+      subject: '',   // e.g. 'entry.1111111111': receives the report type ("Link problem", ...)
+      message: '',   // e.g. 'entry.2222222222': receives the full message (record id, title, link, words typed)
+    },
   },
 
   // For questions we have no catalog entry for, link to the source site's own question page.
@@ -39,22 +44,34 @@ export const SITE = {
 /** True once the owner has replaced the placeholder above. */
 export function reportConfigured() {
   const t = SITE.report && SITE.report.target;
-  return !!t && !/TODO/i.test(t);
+  return !!t && !/TODO/i.test(t) && /^https:\/\//.test(t.trim());
 }
 
 /** What a report can be about. `label` is the choice the visitor sees; `title` and `ask` go into the message. */
 export const REPORT_KINDS = {
-  mismatch: { title: 'Search mismatch', label: null, ask: 'What were you looking for? (optional)', github: 'search-mismatch' },
-  link: { title: 'Link problem', label: 'The link is broken or opens the wrong page', ask: 'What is wrong (broken link, wrong page, other)?', github: 'link-problem' },
-  info: { title: 'Wrong description or level', label: 'The description or level is wrong', ask: 'What is wrong with the description or level?', github: 'description' },
+  mismatch: { title: 'Search mismatch', label: null, ask: 'What were you looking for? (optional)' },
+  link: { title: 'Link problem', label: 'The link is broken or opens the wrong page', ask: 'What is wrong (broken link, wrong page, other)?' },
+  info: { title: 'Wrong description or level', label: 'The description or level is wrong', ask: 'What is wrong with the description or level?' },
 };
+
+/** Google Form URL with any configured pre-fill fields added. Returns '' when reporting is not set up. */
+function formHref(subject, body) {
+  if (!reportConfigured()) return '';
+  const base = SITE.report.target.trim();
+  const f = SITE.report.fields || {};
+  const p = new URLSearchParams();
+  if (f.subject) p.set(f.subject, subject);
+  if (f.message) p.set(f.message, body);
+  const qs = p.toString();
+  return qs ? `${base}${base.includes('?') ? '&' : '?'}${qs}` : base;
+}
 
 /**
  * Link for reporting a problem, optionally about one record. Returns '' when reporting is not set up.
  * @param {object|null} record  the result being reported
  * @param {'link'|'info'|'mismatch'} [kind]
  * @param {{q?: string, topic?: string}} [ctx]  for 'mismatch': what the visitor searched for. These words are
- *   only ever put in the message the visitor chooses to send; nothing is sent from the page itself.
+ *   only ever put in the form the visitor chooses to send; nothing is sent from the page itself.
  */
 export function reportHref(record, kind = 'link', ctx = {}) {
   if (!reportConfigured()) return '';
@@ -81,30 +98,19 @@ export function reportHref(record, kind = 'link', ctx = {}) {
     subject = `${k.title}: ${record.id}`;
     body = `Record: ${record.id}\nTitle: ${record.title}\nLink: ${record.url}\n\n${k.ask}\n`;
   }
-  if (SITE.report.kind === 'github') {
-    const base = SITE.report.target.replace(/\/+$/, '');
-    return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&labels=${encodeURIComponent(k.github)}`;
-  }
-  return `mailto:${SITE.report.target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return formHref(subject, body);
 }
 
 /**
- * Link for general feedback. Same no-server approach as reportHref:
- * the visitor's email app, or a pre-filled GitHub issue. Returns '' when not set up.
+ * Link for general feedback: the same Google Form. Returns '' when reporting is not set up.
  * @param {'feedback'|'link'|'source'} kind
  * @param {string} message  what the visitor typed (may be empty)
  */
 export function feedbackHref(kind, message) {
   if (!reportConfigured()) return '';
   const subject = { feedback: `${SITE.name}: feedback`, link: `${SITE.name}: link problem`, source: `${SITE.name}: website suggestion` }[kind] || `${SITE.name}: feedback`;
-  const body = String(message || '').trim();
-  if (SITE.report.kind === 'github') {
-    const base = SITE.report.target.replace(/\/+$/, '');
-    return `${base}/issues/new?title=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
-  return `mailto:${SITE.report.target}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  return formHref(subject, String(message || '').trim());
 }
-
 /**
  * The questions shown when the empty search box is clicked, and as "Common questions" on the home page, in this order.
  * Each id is a question in data/questions.yaml (all of those are still drafts awaiting review). Chosen as the things
