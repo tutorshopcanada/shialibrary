@@ -32,6 +32,9 @@ body.home .hchip:active{transform:scale(.97)}
 body.home .hchip.surprise{background:#e6bd6a;border-color:#e6bd6a;color:#2a1c04;font-weight:600}
 body.home .hchip.surprise:hover{background:#f1cf86}
 body.home .hchip svg{width:1rem;height:1rem;flex:none}
+/* While the suggestions are open the chips step aside, so nothing shows through behind the list. */
+body.home .hchips{transition:opacity .15s,visibility .15s}
+body.home .pal-wrap:focus-within ~ .hchips{opacity:0;visibility:hidden;pointer-events:none}
 /* The suggestions float under the search box as their own card, over the chips, so nothing on the page moves. */
 body.home .pal-wrap{position:relative;z-index:3}
 body.home .pal{overflow:visible}
