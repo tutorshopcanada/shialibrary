@@ -830,8 +830,7 @@ function entityBodyHtml(e) {
 let rows = [], hi = 0;
 // Starter searches and "Surprise me" live at the top of the search dropdown, which opens when the empty box is clicked.
 function chipsHtml() {
-  const starters = (qGroups().g['new-to-shia-islam'] || engine.questions).slice(0, 3);
-  return `<div class="hchips" role="presentation">${starters.map((q) => `<a class="hchip" href="${esc(qHref(q.question))}" dir="auto">${esc(q.question)}</a>`).join('')}`
+  return '<div class="hchips" role="presentation">'
     + '<a class="hchip surprise" id="surprise" href="#" target="_blank" rel="noopener noreferrer" aria-label="Surprise me: open a random beginner page on its own website, in a new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor"/></svg>Surprise me</a></div>';
 }
 // "Surprise me": one random free beginner page, opened on its own website (the click then follows the link we set here).
