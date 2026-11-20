@@ -1,4 +1,4 @@
-// "Places of the Prophet and the Imams": a scroll-driven holographic map that visits the shrines one by
+// "The Ark of Salvation: From the Kaaba to Khorasan": a scroll-driven holographic map that visits the shrines one by
 // one and ends in Toronto, where the catalog "comes to you". Decorative and navigational only: it draws
 // a map and photographs, and links into the catalog. It never writes text at run time.
 //

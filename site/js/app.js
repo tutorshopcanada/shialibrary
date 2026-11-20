@@ -931,7 +931,7 @@ function titleFor(r) {
 }
 
 // ---------------------------------------------------------------------------
-// Home page: the photograph hero and the "Places of the Prophet and the Imams" journey (journey.js).
+// Home page: the photograph hero and the "The Ark of Salvation: From the Kaaba to Khorasan" journey (journey.js).
 // The journey is a separate module, fetched only when its section is close to the screen. Its buttons use the
 // site's own links, so each one opens real catalog results.
 // ---------------------------------------------------------------------------

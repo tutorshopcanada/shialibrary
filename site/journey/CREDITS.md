@@ -1,6 +1,6 @@
 # Journey photographs and map data
 
-These files belong to the home page journey ("Places of the Prophet and the Imams"). They are **decorative illustrations**: the catalog itself never copies other sites' pages. Permissions are noted in the table below.
+These files belong to the home page journey ("The Ark of Salvation: From the Kaaba to Khorasan"). They are **decorative illustrations**: the catalog itself never copies other sites' pages. Permissions are noted in the table below.
 
 ## Photographs
 
