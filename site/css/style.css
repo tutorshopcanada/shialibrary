@@ -687,7 +687,7 @@ noscript .callout{margin-top:1rem}
 
 /* Questions: one input, theme tabs, a quiet list */
 .refine.qa{position:static;margin-bottom:1.1rem}
-.qtabs{display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin-bottom:.4rem;padding-bottom:0}
+.qtabs{display:flex;gap:.2rem;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:.4rem;padding-bottom:0}
 .qtabs::-webkit-scrollbar{display:none}
 .qtab{flex:none;border:0;background:transparent;color:var(--mute);font:inherit;font-size:.9375rem;padding:.6rem .85rem;min-height:2.75rem;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .qtab i{font-style:normal;font-size:.8125rem;margin-left:.35rem;opacity:.7;font-variant-numeric:tabular-nums}
@@ -706,7 +706,6 @@ noscript .callout{margin-top:1rem}
 .ql:active{background:var(--hi)}
 .qalt{margin:1.8rem 0 0;font-size:.875rem;color:var(--mute)}
 @media (max-width:640px){.ql{flex-direction:column;gap:.15rem}.ql-m::after{display:none}}
-@media (min-width:48rem){.qtabs{flex-wrap:wrap;overflow:visible}}
 
 /* Home */
 .pal.pcl .pal-list{display:none}
